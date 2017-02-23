@@ -1,4 +1,13 @@
 html, body {
   font-family: 'Ubuntu', monospace;
-  color: #333
+  color: #333;
+}
+
+h2 {
+  padding: 4vw;
+  position: absolute;
+}
+
+canvas {
+  position: absolute;
 }
