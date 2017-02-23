@@ -1,0 +1,2999 @@
+state	year	county	precinct	g2006_REG_tv	g2006_GOV_tv	g2006_GOV_rv	g2006_GOV_dv
+"GA"	2006	"Appling County"	"1A"	222	106	77	27
+"GA"	2006	"Appling County"	"1A1"	226	126	80	45
+"GA"	2006	"Appling County"	"1B"	979	403	278	119
+"GA"	2006	"Appling County"	"1C"	646	306	208	96
+"GA"	2006	"Appling County"	"1D"	108	44	27	16
+"GA"	2006	"Appling County"	"2"	1567	458	195	252
+"GA"	2006	"Appling County"	"3A"	248	101	82	18
+"GA"	2006	"Appling County"	"3B"	314	123	45	77
+"GA"	2006	"Appling County"	"3C"	1188	393	269	111
+"GA"	2006	"Appling County"	"4A"	313	140	92	41
+"GA"	2006	"Appling County"	"4B"	370	161	129	28
+"GA"	2006	"Appling County"	"4C"	327	161	128	31
+"GA"	2006	"Appling County"	"4D"	737	346	260	75
+"GA"	2006	"Appling County"	"5A"	800	288	214	73
+"GA"	2006	"Appling County"	"5B"	312	129	98	26
+"GA"	2006	"Appling County"	"5B1"	138	44	14	29
+"GA"	2006	"Appling County"	"5C"	289	134	91	38
+"GA"	2006	"Atkinson County"	"Axson"	186	185	131	49
+"GA"	2006	"Atkinson County"	"Pearson City"	183	178	78	95
+"GA"	2006	"Atkinson County"	"Pearson County"	382	379	223	145
+"GA"	2006	"Atkinson County"	"Willacoochee"	406	401	186	206
+"GA"	2006	"Augusta-Richmond County"	"101"	471	469	289	161
+"GA"	2006	"Augusta-Richmond County"	"102"	308	302	158	138
+"GA"	2006	"Augusta-Richmond County"	"103"	419	408	55	345
+"GA"	2006	"Augusta-Richmond County"	"104"	787	767	117	641
+"GA"	2006	"Augusta-Richmond County"	"105"	187	180	30	145
+"GA"	2006	"Augusta-Richmond County"	"106"	172	170	93	72
+"GA"	2006	"Augusta-Richmond County"	"107"	703	694	409	264
+"GA"	2006	"Augusta-Richmond County"	"108"	161	158	44	113
+"GA"	2006	"Augusta-Richmond County"	"109"	100	99	41	53
+"GA"	2006	"Augusta-Richmond County"	"110"	65	63	22	39
+"GA"	2006	"Augusta-Richmond County"	"111"	271	268	114	145
+"GA"	2006	"Augusta-Richmond County"	"112"	239	227	125	97
+"GA"	2006	"Augusta-Richmond County"	"113"	199	195	46	143
+"GA"	2006	"Augusta-Richmond County"	"201"	402	395	62	325
+"GA"	2006	"Augusta-Richmond County"	"202"	926	914	366	529
+"GA"	2006	"Augusta-Richmond County"	"203"	432	423	46	375
+"GA"	2006	"Augusta-Richmond County"	"204"	327	323	211	101
+"GA"	2006	"Augusta-Richmond County"	"205"	352	341	53	284
+"GA"	2006	"Augusta-Richmond County"	"206"	235	230	142	77
+"GA"	2006	"Augusta-Richmond County"	"207"	507	491	61	420
+"GA"	2006	"Augusta-Richmond County"	"208"	390	385	111	261
+"GA"	2006	"Augusta-Richmond County"	"209"	294	290	111	176
+"GA"	2006	"Augusta-Richmond County"	"301"	977	971	713	229
+"GA"	2006	"Augusta-Richmond County"	"302"	187	187	84	99
+"GA"	2006	"Augusta-Richmond County"	"303"	567	564	474	78
+"GA"	2006	"Augusta-Richmond County"	"304"	6	6	4	1
+"GA"	2006	"Augusta-Richmond County"	"305"	193	192	163	29
+"GA"	2006	"Augusta-Richmond County"	"306"	662	659	366	283
+"GA"	2006	"Augusta-Richmond County"	"307"	681	672	492	160
+"GA"	2006	"Augusta-Richmond County"	"308"	236	235	120	113
+"GA"	2006	"Augusta-Richmond County"	"309"	222	222	102	113
+"GA"	2006	"Augusta-Richmond County"	"310"	1132	1127	408	702
+"GA"	2006	"Augusta-Richmond County"	"401"	949	947	171	767
+"GA"	2006	"Augusta-Richmond County"	"402"	560	555	94	455
+"GA"	2006	"Augusta-Richmond County"	"403"	561	558	141	407
+"GA"	2006	"Augusta-Richmond County"	"404"	935	933	245	672
+"GA"	2006	"Augusta-Richmond County"	"405"	641	637	124	504
+"GA"	2006	"Augusta-Richmond County"	"406"	571	567	106	453
+"GA"	2006	"Augusta-Richmond County"	"407"	20	20	9	11
+"GA"	2006	"Augusta-Richmond County"	"408"	124	123	48	75
+"GA"	2006	"Augusta-Richmond County"	"501"	417	407	97	305
+"GA"	2006	"Augusta-Richmond County"	"502"	65	63	30	33
+"GA"	2006	"Augusta-Richmond County"	"503"	808	800	213	575
+"GA"	2006	"Augusta-Richmond County"	"504"	406	397	101	290
+"GA"	2006	"Augusta-Richmond County"	"505"	360	356	57	295
+"GA"	2006	"Augusta-Richmond County"	"506"	849	842	166	668
+"GA"	2006	"Augusta-Richmond County"	"507"	274	272	127	135
+"GA"	2006	"Augusta-Richmond County"	"508"	143	141	73	65
+"GA"	2006	"Augusta-Richmond County"	"509"	74	74	37	37
+"GA"	2006	"Augusta-Richmond County"	"601"	812	808	294	497
+"GA"	2006	"Augusta-Richmond County"	"602"	775	770	523	233
+"GA"	2006	"Augusta-Richmond County"	"603"	663	663	452	202
+"GA"	2006	"Augusta-Richmond County"	"604"	364	362	157	198
+"GA"	2006	"Augusta-Richmond County"	"605"	565	558	252	295
+"GA"	2006	"Augusta-Richmond County"	"606"	629	624	379	240
+"GA"	2006	"Augusta-Richmond County"	"701"	948	940	686	229
+"GA"	2006	"Augusta-Richmond County"	"702"	790	789	561	207
+"GA"	2006	"Augusta-Richmond County"	"703"	1190	1180	715	434
+"GA"	2006	"Augusta-Richmond County"	"704"	100	100	59	40
+"GA"	2006	"Augusta-Richmond County"	"705"	648	645	485	150
+"GA"	2006	"Augusta-Richmond County"	"706"	963	958	695	234
+"GA"	2006	"Augusta-Richmond County"	"707"	609	608	375	215
+"GA"	2006	"Augusta-Richmond County"	"801"	153	153	100	50
+"GA"	2006	"Augusta-Richmond County"	"801B"	190	189	134	50
+"GA"	2006	"Augusta-Richmond County"	"802"	386	381	233	137
+"GA"	2006	"Augusta-Richmond County"	"803"	9	9	2	6
+"GA"	2006	"Augusta-Richmond County"	"804"	532	531	306	219
+"GA"	2006	"Augusta-Richmond County"	"804H"	865	851	497	336
+"GA"	2006	"Augusta-Richmond County"	"805"	330	330	179	146
+"GA"	2006	"Augusta-Richmond County"	"806"	855	852	626	215
+"GA"	2006	"Augusta-Richmond County"	"807"	371	368	123	239
+"GA"	2006	"Augusta-Richmond County"	"808"	774	768	518	241
+"GA"	2006	"Augusta-Richmond County"	"809"	484	480	343	124
+"GA"	2006	"Bacon County"	"Douglas"	2864	825	415	398
+"GA"	2006	"Bacon County"	"New Lacy"	834	346	165	177
+"GA"	2006	"Bacon County"	"Taylor"	609	275	165	104
+"GA"	2006	"Bacon County"	"Ware"	400	148	97	49
+"GA"	2006	"Bacon County"	"Warnock"	308	132	75	53
+"GA"	2006	"Baker County"	"Anna"	72	72	38	34
+"GA"	2006	"Baker County"	"Elmodel"	106	103	39	61
+"GA"	2006	"Baker County"	"Hoggards Mill"	115	111	33	78
+"GA"	2006	"Baker County"	"Milford"	136	134	68	59
+"GA"	2006	"Baker County"	"Newton"	374	371	137	230
+"GA"	2006	"Baldwin County"	"Boddie"	228	226	76	139
+"GA"	2006	"Baldwin County"	"City Hall Annex"	221	218	85	125
+"GA"	2006	"Baldwin County"	"Coopers"	524	515	313	182
+"GA"	2006	"Baldwin County"	"Courthouse"	220	219	98	107
+"GA"	2006	"Baldwin County"	"East Baldwin"	1158	1149	558	548
+"GA"	2006	"Baldwin County"	"East Hardwick"	304	300	75	215
+"GA"	2006	"Baldwin County"	"Fire Dept"	393	392	126	254
+"GA"	2006	"Baldwin County"	"Meriweather"	711	707	444	231
+"GA"	2006	"Baldwin County"	"North Baldwin"	1167	1160	755	366
+"GA"	2006	"Baldwin County"	"North Milledgeville"	664	660	350	283
+"GA"	2006	"Baldwin County"	"Scottsboro"	313	310	171	131
+"GA"	2006	"Baldwin County"	"South Milledgeville"	383	383	117	258
+"GA"	2006	"Baldwin County"	"West Baldwin"	554	549	256	276
+"GA"	2006	"Baldwin County"	"West Hardwick"	966	957	256	688
+"GA"	2006	"Banks County"	"Anderson"	345	344	250	77
+"GA"	2006	"Banks County"	"Baldwin"	256	255	196	50
+"GA"	2006	"Banks County"	"Berlin"	123	121	84	31
+"GA"	2006	"Banks County"	"Bushville"	226	225	170	48
+"GA"	2006	"Banks County"	"Columbia"	129	129	90	37
+"GA"	2006	"Banks County"	"Davids"	448	446	341	82
+"GA"	2006	"Banks County"	"Golden Hill"	255	250	180	59
+"GA"	2006	"Banks County"	"Grove River"	185	185	153	28
+"GA"	2006	"Banks County"	"Hollingsworth"	231	228	159	60
+"GA"	2006	"Banks County"	"Homer"	382	379	264	108
+"GA"	2006	"Banks County"	"Poplar Springs"	470	468	338	115
+"GA"	2006	"Banks County"	"Washington"	246	246	159	78
+"GA"	2006	"Banks County"	"Wilmonts"	151	150	107	39
+"GA"	2006	"Barrow County"	"001 Bethlehem Community Center"	652	649	449	158
+"GA"	2006	"Barrow County"	"002 Fire Station 5 (County Line)"	657	656	569	69
+"GA"	2006	"Barrow County"	"003 Bramlett Elementary School"	544	544	440	80
+"GA"	2006	"Barrow County"	"004 Westside Middle School"	552	547	374	141
+"GA"	2006	"Barrow County"	"005 Fire Station 1 (Statham)"	772	770	568	165
+"GA"	2006	"Barrow County"	"006 Winder Barrow High School"	460	457	332	101
+"GA"	2006	"Barrow County"	"007 Statham Elementary School"	505	504	330	153
+"GA"	2006	"Barrow County"	"008 Holsenbeck Elementary School"	527	525	402	97
+"GA"	2006	"Barrow County"	"009 Lions Club"	637	635	479	131
+"GA"	2006	"Barrow County"	"010 Leisure Services Center"	476	473	263	187
+"GA"	2006	"Barrow County"	"011 Apalachee High School"	387	386	277	84
+"GA"	2006	"Barrow County"	"012 Fire Station 4 (Auburn)"	607	603	474	94
+"GA"	2006	"Barrow County"	"013 Winder Community Center"	569	567	386	149
+"GA"	2006	"Barrow County"	"014 Cedar Creek Baptist Church"	239	238	184	44
+"GA"	2006	"Barrow County"	"015 County Line Elementary School"	559	558	442	94
+"GA"	2006	"Barrow County"	"016 Bethlehem First Baptist Church"	889	887	610	236
+"GA"	2006	"Bartow County"	"ADAIRSVILLE"	3930	1302	878	369
+"GA"	2006	"Bartow County"	"ALLATOONA"	2965	956	687	212
+"GA"	2006	"Bartow County"	"BEAVERS"	3300	1200	882	269
+"GA"	2006	"Bartow County"	"CARTERSVILLE EAST"	4188	1329	874	389
+"GA"	2006	"Bartow County"	"CARTERSVILLE WEST"	4598	1724	1183	456
+"GA"	2006	"Bartow County"	"CASSVILLE"	3458	1021	697	286
+"GA"	2006	"Bartow County"	"CENTER"	2335	936	707	182
+"GA"	2006	"Bartow County"	"EMERSON"	1989	696	482	170
+"GA"	2006	"Bartow County"	"EUHARLEE"	2269	810	562	212
+"GA"	2006	"Bartow County"	"FOLSOM"	897	370	254	95
+"GA"	2006	"Bartow County"	"KINGSTON"	1771	650	422	195
+"GA"	2006	"Bartow County"	"MISSION RD"	3822	1402	992	364
+"GA"	2006	"Bartow County"	"PINE LOG"	1449	622	440	137
+"GA"	2006	"Bartow County"	"TAYLORSVILLE"	1759	691	511	146
+"GA"	2006	"Bartow County"	"WHITE"	1690	676	497	143
+"GA"	2006	"Bartow County"	"WOODLAND"	975	328	237	76
+"GA"	2006	"Bartow County"	"ZENA"	3453	943	616	298
+"GA"	2006	"Ben Hill County"	"East"	2425	614	249	356
+"GA"	2006	"Ben Hill County"	"Special East"	691	124	58	62
+"GA"	2006	"Ben Hill County"	"Special West"	1728	518	315	195
+"GA"	2006	"Ben Hill County"	"West"	2660	871	558	287
+"GA"	2006	"Ben Hill County"	"Williamson Mill"	151	71	36	32
+"GA"	2006	"Berrien County"	"Alapaha"	912	384	203	170
+"GA"	2006	"Berrien County"	"Enigma"	765	313	182	124
+"GA"	2006	"Berrien County"	"Jordan"	483	240	157	70
+"GA"	2006	"Berrien County"	"Lois"	215	108	73	31
+"GA"	2006	"Berrien County"	"Lower Tenth"	212	107	68	33
+"GA"	2006	"Berrien County"	"Nashville"	3919	1339	720	580
+"GA"	2006	"Berrien County"	"New River"	184	106	66	33
+"GA"	2006	"Berrien County"	"Ray City"	1080	365	185	174
+"GA"	2006	"Berrien County"	"Upper Tenth"	159	85	59	24
+"GA"	2006	"Bibb County"	"EAST MACON 1"	1574	437	48	380
+"GA"	2006	"Bibb County"	"EAST MACON 2"	1364	584	89	482
+"GA"	2006	"Bibb County"	"EAST MACON 3"	1445	595	84	497
+"GA"	2006	"Bibb County"	"EAST MACON 4"	2152	901	415	435
+"GA"	2006	"Bibb County"	"EAST MACON 5"	1795	734	78	646
+"GA"	2006	"Bibb County"	"EAST MACON 6"	1703	724	181	525
+"GA"	2006	"Bibb County"	"GODFREY 1"	2199	639	108	505
+"GA"	2006	"Bibb County"	"GODFREY 2"	1461	400	70	323
+"GA"	2006	"Bibb County"	"GODFREY 3"	2009	686	65	614
+"GA"	2006	"Bibb County"	"GODFREY 4"	1416	351	111	236
+"GA"	2006	"Bibb County"	"GODFREY 5"	1480	585	147	426
+"GA"	2006	"Bibb County"	"GODFREY 6"	2124	662	134	518
+"GA"	2006	"Bibb County"	"GODFREY 7"	1643	571	157	405
+"GA"	2006	"Bibb County"	"HAZZARD 1"	1743	655	107	533
+"GA"	2006	"Bibb County"	"HAZZARD 2"	2790	1077	619	398
+"GA"	2006	"Bibb County"	"HAZZARD 3"	2888	1096	578	489
+"GA"	2006	"Bibb County"	"HAZZARD 4"	1351	667	499	147
+"GA"	2006	"Bibb County"	"HAZZARD 5"	1272	406	77	326
+"GA"	2006	"Bibb County"	"HAZZARD 6"	1260	473	126	336
+"GA"	2006	"Bibb County"	"HAZZARD 7"	1511	700	488	192
+"GA"	2006	"Bibb County"	"HOWARD 1"	1276	644	474	140
+"GA"	2006	"Bibb County"	"HOWARD 2"	3135	1366	1008	289
+"GA"	2006	"Bibb County"	"HOWARD 3"	3251	1293	802	432
+"GA"	2006	"Bibb County"	"HOWARD 4"	1256	683	486	161
+"GA"	2006	"Bibb County"	"HOWARD 5"	1238	610	420	154
+"GA"	2006	"Bibb County"	"HOWARD 6"	1147	521	324	167
+"GA"	2006	"Bibb County"	"HOWARD 7"	1828	826	583	215
+"GA"	2006	"Bibb County"	"HOWARD 8"	2096	1014	748	222
+"GA"	2006	"Bibb County"	"HOWARD 9"	2154	1149	906	181
+"GA"	2006	"Bibb County"	"RUTLAND 1"	3588	1587	1108	429
+"GA"	2006	"Bibb County"	"RUTLAND 2"	2377	1016	723	266
+"GA"	2006	"Bibb County"	"VINEVILLE 1"	1295	457	185	233
+"GA"	2006	"Bibb County"	"VINEVILLE 2"	1569	616	227	358
+"GA"	2006	"Bibb County"	"VINEVILLE 3"	1959	659	133	510
+"GA"	2006	"Bibb County"	"VINEVILLE 4"	1429	586	103	469
+"GA"	2006	"Bibb County"	"VINEVILLE 5"	1040	330	56	266
+"GA"	2006	"Bibb County"	"VINEVILLE 6"	1780	905	659	196
+"GA"	2006	"Bibb County"	"VINEVILLE 7"	1118	464	286	152
+"GA"	2006	"Bibb County"	"VINEVILLE 8"	1042	438	259	147
+"GA"	2006	"Bibb County"	"WARRIOR 1"	1792	853	544	284
+"GA"	2006	"Bibb County"	"WARRIOR 2"	2180	949	600	319
+"GA"	2006	"Bleckley County"	"FAIRGROUND"	2522	2497	1706	710
+"GA"	2006	"Brantley County"	"Atkinson"	925	285	184	93
+"GA"	2006	"Brantley County"	"Calvary"	980	396	271	114
+"GA"	2006	"Brantley County"	"Hickox"	742	243	138	97
+"GA"	2006	"Brantley County"	"Hoboken"	921	330	209	114
+"GA"	2006	"Brantley County"	"Hortense"	641	255	179	74
+"GA"	2006	"Brantley County"	"Lulaton"	466	136	72	60
+"GA"	2006	"Brantley County"	"Nahunta"	1283	408	193	204
+"GA"	2006	"Brantley County"	"Schlatterville"	398	180	125	50
+"GA"	2006	"Brantley County"	"Waynesville"	1454	388	282	100
+"GA"	2006	"Brooks County"	"Barney"	546	211	114	90
+"GA"	2006	"Brooks County"	"Briggs"	1327	519	335	168
+"GA"	2006	"Brooks County"	"Dixie"	490	202	92	109
+"GA"	2006	"Brooks County"	"Dry Lake"	282	119	78	38
+"GA"	2006	"Brooks County"	"Grooverville"	342	137	76	56
+"GA"	2006	"Brooks County"	"Morven"	845	328	151	174
+"GA"	2006	"Brooks County"	"Nankin"	537	234	155	72
+"GA"	2006	"Brooks County"	"Quitman"	2734	902	380	505
+"GA"	2006	"Brooks County"	"Williams"	379	141	82	53
+"GA"	2006	"Bryan County"	"Blitchton Fire Station"	753	300	177	113
+"GA"	2006	"Bryan County"	"Daniel Siding"	903	325	199	118
+"GA"	2006	"Bryan County"	"Ellabell"	1720	634	428	195
+"GA"	2006	"Bryan County"	"Hwy 144 East"	1387	572	431	125
+"GA"	2006	"Bryan County"	"J.F. Gregory Park"	1084	297	190	98
+"GA"	2006	"Bryan County"	"Keller"	2196	783	617	149
+"GA"	2006	"Bryan County"	"Pembroke East"	1263	505	310	183
+"GA"	2006	"Bryan County"	"Pembroke West"	755	314	158	150
+"GA"	2006	"Bryan County"	"RH Rec Center"	1827	665	513	133
+"GA"	2006	"Bryan County"	"Ways Station"	2089	683	486	184
+"GA"	2006	"Bulloch County"	"Bay"	431	429	322	100
+"GA"	2006	"Bulloch County"	"Blitch"	636	631	459	153
+"GA"	2006	"Bulloch County"	"Brooklet"	710	706	511	172
+"GA"	2006	"Bulloch County"	"Church"	1403	1389	803	547
+"GA"	2006	"Bulloch County"	"Emit"	621	617	423	181
+"GA"	2006	"Bulloch County"	"Fair"	1493	1486	1011	434
+"GA"	2006	"Bulloch County"	"Hagin"	595	590	372	199
+"GA"	2006	"Bulloch County"	"Leefield"	215	213	158	45
+"GA"	2006	"Bulloch County"	"Lockhart"	203	200	133	61
+"GA"	2006	"Bulloch County"	"Nevils"	312	310	209	95
+"GA"	2006	"Bulloch County"	"Pittman Park"	911	906	483	384
+"GA"	2006	"Bulloch County"	"Portal"	538	532	334	186
+"GA"	2006	"Bulloch County"	"Register"	294	291	181	102
+"GA"	2006	"Bulloch County"	"Sinkhole"	170	169	130	33
+"GA"	2006	"Bulloch County"	"Statesboro"	1254	1233	626	592
+"GA"	2006	"Bulloch County"	"Stilson"	537	534	397	124
+"GA"	2006	"Burke County"	"Alexander"	400	175	83	91
+"GA"	2006	"Burke County"	"Four Points"	1178	430	283	140
+"GA"	2006	"Burke County"	"Girard"	556	241	101	136
+"GA"	2006	"Burke County"	"Gough"	379	145	48	91
+"GA"	2006	"Burke County"	"Greens Cut"	1204	409	202	200
+"GA"	2006	"Burke County"	"Keysville"	620	226	102	122
+"GA"	2006	"Burke County"	"Midville"	453	180	73	105
+"GA"	2006	"Burke County"	"Munnerlyn"	245	97	51	43
+"GA"	2006	"Burke County"	"North Waynesboro"	1926	539	197	335
+"GA"	2006	"Burke County"	"Sardis"	822	288	167	118
+"GA"	2006	"Burke County"	"Scotts Cross Rd"	241	103	27	75
+"GA"	2006	"Burke County"	"South Waynesboro"	2437	839	516	312
+"GA"	2006	"Burke County"	"St Clair"	302	132	46	84
+"GA"	2006	"Burke County"	"Telfair"	550	192	113	73
+"GA"	2006	"Burke County"	"Vidette"	275	130	72	53
+"GA"	2006	"Butts County"	"BUTTS CO COMM CENTER"	959	947	390	539
+"GA"	2006	"Butts County"	"JENKINSBURG"	614	608	325	257
+"GA"	2006	"Butts County"	"LIBRARY"	907	898	615	243
+"GA"	2006	"Butts County"	"STARK"	751	748	588	126
+"GA"	2006	"Butts County"	"WORTHVILLE"	518	517	376	117
+"GA"	2006	"Calhoun County"	"Arlington"	1132	205	61	137
+"GA"	2006	"Calhoun County"	"Edison"	580	213	63	146
+"GA"	2006	"Calhoun County"	"Edison-Arlington"	1653	195	95	95
+"GA"	2006	"Calhoun County"	"Leary"	1206	302	93	206
+"GA"	2006	"Calhoun County"	"Morgan"	990	202	86	112
+"GA"	2006	"Camden County"	"Browntown"	523	152	106	40
+"GA"	2006	"Camden County"	"Gross Road"	2792	844	593	229
+"GA"	2006	"Camden County"	"Harrietts Bluff"	1289	542	384	147
+"GA"	2006	"Camden County"	"Kingsland"	1374	396	268	120
+"GA"	2006	"Camden County"	"Mary Lee Clark"	1962	568	398	158
+"GA"	2006	"Camden County"	"Mush Bluff"	1730	541	369	157
+"GA"	2006	"Camden County"	"North Kingsland"	1328	422	223	195
+"GA"	2006	"Camden County"	"North St Marys"	1459	270	168	92
+"GA"	2006	"Camden County"	"South St Marys"	1621	597	372	211
+"GA"	2006	"Camden County"	"Tarboro"	686	236	126	109
+"GA"	2006	"Camden County"	"Waverly"	880	293	157	129
+"GA"	2006	"Camden County"	"West Kingsland"	1721	508	358	138
+"GA"	2006	"Camden County"	"West St Marys"	2128	840	619	203
+"GA"	2006	"Camden County"	"Woodbine"	1313	467	257	199
+"GA"	2006	"Candler County"	"Candler -1736"	2378	789	504	268
+"GA"	2006	"Candler County"	"Metter -1685"	2899	858	522	321
+"GA"	2006	"Carroll County"	"AG. ED. CENTER (714-BS)"	764	324	229	86
+"GA"	2006	"Carroll County"	"BETHANY (501)"	1543	552	390	134
+"GA"	2006	"Carroll County"	"BONNER (714-A3)"	1978	783	536	210
+"GA"	2006	"Carroll County"	"BOWDON (1111)"	2142	850	558	260
+"GA"	2006	"Carroll County"	"BOWDON JCT (1496)"	836	344	215	114
+"GA"	2006	"Carroll County"	"BURWELL (1371)"	1007	441	314	102
+"GA"	2006	"Carroll County"	"CENTERPOINT (1152)"	1127	547	423	110
+"GA"	2006	"Carroll County"	"CLEM (1483)"	1692	738	516	189
+"GA"	2006	"Carroll County"	"CO ADMIN (714-A5)"	1526	535	322	181
+"GA"	2006	"Carroll County"	"EMC (714-BN)"	987	395	260	116
+"GA"	2006	"Carroll County"	"FAIRFIELD (1540)"	2213	1037	745	250
+"GA"	2006	"Carroll County"	"HULETT (1542)"	1520	634	474	132
+"GA"	2006	"Carroll County"	"KANSAS (1006)"	772	313	225	75
+"GA"	2006	"Carroll County"	"LAKESHORE (714-A)"	1085	407	263	133
+"GA"	2006	"Carroll County"	"LOWELL (1163)"	992	419	324	79
+"GA"	2006	"Carroll County"	"MT ZION (1240)"	1188	481	331	133
+"GA"	2006	"Carroll County"	"NEW HOPE (716)"	845	299	203	81
+"GA"	2006	"Carroll County"	"OAK GROVE (715)"	1026	469	349	110
+"GA"	2006	"Carroll County"	"OLD CAMP (717-BW)"	1626	780	547	191
+"GA"	2006	"Carroll County"	"ROOPVILLE (713)"	1068	532	395	107
+"GA"	2006	"Carroll County"	"SANDHILL (1122)"	2437	943	632	261
+"GA"	2006	"Carroll County"	"TABERNACLE (714-A6)"	975	403	238	131
+"GA"	2006	"Carroll County"	"TEMPLE CITY (650)"	1889	694	463	206
+"GA"	2006	"Carroll County"	"TEMPLE COUNTY (649)"	2301	821	582	199
+"GA"	2006	"Carroll County"	"TYUS (1533)"	1247	551	378	138
+"GA"	2006	"Carroll County"	"V RICA NORTH (641)"	3082	1065	730	290
+"GA"	2006	"Carroll County"	"V RICA SOUTH (640)"	1837	760	519	208
+"GA"	2006	"Carroll County"	"VICTORIOUS BELIEVERS CHURCH (714-BE)"	1217	394	201	182
+"GA"	2006	"Carroll County"	"VILLA RICA CITY (642)"	2860	910	533	352
+"GA"	2006	"Carroll County"	"W CRLTON (714-A1)"	1705	399	113	270
+"GA"	2006	"Carroll County"	"W GA CLG (714-A4)"	2024	616	379	194
+"GA"	2006	"Carroll County"	"WHITESBURG (682)"	1393	642	432	182
+"GA"	2006	"Catoosa County"	"BLACKSTOCK"	418	416	308	102
+"GA"	2006	"Catoosa County"	"BOYNTON"	1329	1325	1077	236
+"GA"	2006	"Catoosa County"	"CATOOSA KEITH"	600	597	451	139
+"GA"	2006	"Catoosa County"	"CHAMBERS"	628	624	510	101
+"GA"	2006	"Catoosa County"	"DUNCAN PARK"	459	452	349	96
+"GA"	2006	"Catoosa County"	"FORT OGLETHORPE"	987	980	801	175
+"GA"	2006	"Catoosa County"	"GRAYSVILLE"	850	844	683	148
+"GA"	2006	"Catoosa County"	"LAKEVIEW"	717	711	525	174
+"GA"	2006	"Catoosa County"	"POPLAR SPRINGS"	823	822	668	140
+"GA"	2006	"Catoosa County"	"RINGGOLD"	1216	1213	1007	190
+"GA"	2006	"Catoosa County"	"WESTSIDE"	720	714	587	120
+"GA"	2006	"Catoosa County"	"WOODSTATION"	743	741	598	130
+"GA"	2006	"Charlton County"	"Bend Fire Station"	379	71	46	20
+"GA"	2006	"Charlton County"	"Folkston"	877	204	96	101
+"GA"	2006	"Charlton County"	"Folkston Library"	758	204	96	106
+"GA"	2006	"Charlton County"	"Folston Fire Station"	1071	305	203	96
+"GA"	2006	"Charlton County"	"Homeland"	980	294	161	125
+"GA"	2006	"Charlton County"	"Racepond"	91	33	14	18
+"GA"	2006	"Charlton County"	"St. George"	552	135	94	37
+"GA"	2006	"Charlton County"	"Traders Hill"	381	141	105	30
+"GA"	2006	"Charlton County"	"Winokur"	228	78	48	25
+"GA"	2006	"Chatham County"	"1st African Baptist Church"	925	333	66	262
+"GA"	2006	"Chatham County"	"Aldersgate Youth Center"	1086	448	195	239
+"GA"	2006	"Chatham County"	"American Legion Post #135"	459	181	55	108
+"GA"	2006	"Chatham County"	"Bamboo Farms"	1514	511	284	223
+"GA"	2006	"Chatham County"	"Baptist Student Center"	709	352	233	112
+"GA"	2006	"Chatham County"	"Bartlett Middle School"	629	236	110	121
+"GA"	2006	"Chatham County"	"Beach High School"	400	141	15	125
+"GA"	2006	"Chatham County"	"Bethesda Museum"	1245	593	426	158
+"GA"	2006	"Chatham County"	"Bible Baptist Church"	1346	478	94	377
+"GA"	2006	"Chatham County"	"Bloomingdale Comm. Center"	2756	770	563	185
+"GA"	2006	"Chatham County"	"Bull Street Baptist Church"	1226	311	79	217
+"GA"	2006	"Chatham County"	"Butler Pres. Ed Building"	803	254	32	218
+"GA"	2006	"Chatham County"	"Butler School"	1210	568	65	498
+"GA"	2006	"Chatham County"	"Chatham County Health Dept"	630	293	212	78
+"GA"	2006	"Chatham County"	"Civic Center"	627	107	43	55
+"GA"	2006	"Chatham County"	"Cokesbury Methodist Church"	552	320	237	77
+"GA"	2006	"Chatham County"	"Cresthill Baptist Church"	1014	496	345	134
+"GA"	2006	"Chatham County"	"Derenne Middle School"	585	222	28	194
+"GA"	2006	"Chatham County"	"Eli Whitney School"	520	269	138	129
+"GA"	2006	"Chatham County"	"Elks Lodge"	1160	423	196	217
+"GA"	2006	"Chatham County"	"Faith Lutheran"	1584	823	576	225
+"GA"	2006	"Chatham County"	"Ferguson Ave Baptist Church"	957	502	369	121
+"GA"	2006	"Chatham County"	"First Baptist Church of Island"	1673	810	593	196
+"GA"	2006	"Chatham County"	"First Presbyterian Church"	1415	815	485	288
+"GA"	2006	"Chatham County"	"Fred Wessels Comm. Center"	1022	337	95	231
+"GA"	2006	"Chatham County"	"Garden City Community Center"	1113	533	384	144
+"GA"	2006	"Chatham County"	"Garden City Recreation Center"	1103	277	49	225
+"GA"	2006	"Chatham County"	"Georgetown Elementary"	2788	1169	673	470
+"GA"	2006	"Chatham County"	"Girls Scout Cottage"	795	374	168	197
+"GA"	2006	"Chatham County"	"Gospel Temple Church of God"	2023	745	83	647
+"GA"	2006	"Chatham County"	"Gould School"	640	211	153	56
+"GA"	2006	"Chatham County"	"Grace United Methodist Church"	605	318	226	88
+"GA"	2006	"Chatham County"	"Haven School"	1013	337	33	303
+"GA"	2006	"Chatham County"	"Heritage Park of Savannah"	1696	732	394	324
+"GA"	2006	"Chatham County"	"Holy Spirit Lutheran Church"	1333	556	89	448
+"GA"	2006	"Chatham County"	"Hope Baptist Church"	391	157	93	63
+"GA"	2006	"Chatham County"	"Immanuel Baptist Church"	742	319	196	110
+"GA"	2006	"Chatham County"	"Island Community Center"	1680	668	432	218
+"GA"	2006	"Chatham County"	"Islands Elementary School"	2252	1025	796	210
+"GA"	2006	"Chatham County"	"Isle Of Hope School"	887	503	376	115
+"GA"	2006	"Chatham County"	"Isle of Hope Baptist Church Center"	1607	888	704	161
+"GA"	2006	"Chatham County"	"JEA Building"	1465	718	385	305
+"GA"	2006	"Chatham County"	"Jenkins High School"	825	338	177	151
+"GA"	2006	"Chatham County"	"Largo Tibet School"	1806	593	240	345
+"GA"	2006	"Chatham County"	"Lazaretto Boat Club"	1137	620	480	124
+"GA"	2006	"Chatham County"	"Liberty City Church of Christ"	1130	523	62	457
+"GA"	2006	"Chatham County"	"May Howard School"	1978	891	637	234
+"GA"	2006	"Chatham County"	"Moses Jackson Center"	798	269	38	227
+"GA"	2006	"Chatham County"	"Myers Middle School"	659	297	87	202
+"GA"	2006	"Chatham County"	"Ogeechee Fire Station #10"	618	242	161	75
+"GA"	2006	"Chatham County"	"Old Courthouse"	304	143	73	63
+"GA"	2006	"Chatham County"	"Point Pleasant"	1812	901	679	189
+"GA"	2006	"Chatham County"	"Pooler City Hall"	2814	1098	697	385
+"GA"	2006	"Chatham County"	"Port Wentworth School"	753	273	176	93
+"GA"	2006	"Chatham County"	"Progressive Recreation"	2727	1103	716	365
+"GA"	2006	"Chatham County"	"Pt. Wentworth Comm. Center"	1067	417	253	156
+"GA"	2006	"Chatham County"	"Pulaski School"	1406	539	104	432
+"GA"	2006	"Chatham County"	"Resurrection Of Our Lord"	1192	428	48	376
+"GA"	2006	"Chatham County"	"Riverside Baptist Church"	315	110	36	72
+"GA"	2006	"Chatham County"	"Riverview Health Rehabilitation Ctr."	1447	632	195	429
+"GA"	2006	"Chatham County"	"Rose of Sharon"	1172	511	259	233
+"GA"	2006	"Chatham County"	"Rothwell Baptist Church"	2500	1166	877	269
+"GA"	2006	"Chatham County"	"SS Fire Dept. Montgomery"	1157	586	450	126
+"GA"	2006	"Chatham County"	"SS Fire Station #1 Whitebluff"	1229	470	199	258
+"GA"	2006	"Chatham County"	"Saint Francis Episcopal"	1624	765	544	190
+"GA"	2006	"Chatham County"	"Salvation Army"	1900	737	180	536
+"GA"	2006	"Chatham County"	"Savannah Christian School"	267	56	26	29
+"GA"	2006	"Chatham County"	"Savannah High School"	554	165	36	126
+"GA"	2006	"Chatham County"	"Senior Citizens Center"	573	171	37	130
+"GA"	2006	"Chatham County"	"Shuman Middle School"	535	227	24	203
+"GA"	2006	"Chatham County"	"Skidaway Island Presbyterian"	1854	1094	906	169
+"GA"	2006	"Chatham County"	"Skidaway Island State Park"	1342	802	659	134
+"GA"	2006	"Chatham County"	"Skidaway Island United Methodist"	1486	869	743	116
+"GA"	2006	"Chatham County"	"South Gardens Christian Church"	968	363	119	228
+"GA"	2006	"Chatham County"	"Southside Baptist Church"	838	361	146	207
+"GA"	2006	"Chatham County"	"Southwest Baptist Church"	4267	1428	747	662
+"GA"	2006	"Chatham County"	"Spencer School"	223	58	3	55
+"GA"	2006	"Chatham County"	"St. Frances Cabrini Church"	1311	465	200	259
+"GA"	2006	"Chatham County"	"St. Peters Episcopal Church"	1680	957	777	165
+"GA"	2006	"Chatham County"	"Temple of Glory Comm. Church"	1349	447	36	407
+"GA"	2006	"Chatham County"	"The Woods of Savannah"	696	296	176	111
+"GA"	2006	"Chatham County"	"Thunderbolt Municipal Complex"	1103	578	302	265
+"GA"	2006	"Chatham County"	"Tiger Arena/Savannah State"	1575	435	195	230
+"GA"	2006	"Chatham County"	"Tompkins Middle School"	1192	176	23	151
+"GA"	2006	"Chatham County"	"Tompkins Recreation Center"	718	270	37	228
+"GA"	2006	"Chatham County"	"Tybee Island Comm. Center"	1244	618	397	198
+"GA"	2006	"Chatham County"	"Tybee Island Town Hall"	1448	706	462	219
+"GA"	2006	"Chatham County"	"WW Law Center"	531	167	31	132
+"GA"	2006	"Chatham County"	"West Broad YMCA"	966	237	27	206
+"GA"	2006	"Chatham County"	"White Bluff School"	748	339	171	160
+"GA"	2006	"Chatham County"	"Whitefield Methodist Church"	910	508	305	195
+"GA"	2006	"Chatham County"	"Wilder Memorial Baptist Church"	1474	477	107	368
+"GA"	2006	"Chatham County"	"Williams Court"	917	370	70	268
+"GA"	2006	"Chatham County"	"Wilmington Baptist Church"	275	106	40	63
+"GA"	2006	"Chatham County"	"Wilmington Island Pres. Church"	1375	749	569	158
+"GA"	2006	"Chatham County"	"Windsor Elem./Golden Age"	1315	580	313	249
+"GA"	2006	"Chatham County"	"Windsor Forest Baptist School"	1826	911	612	278
+"GA"	2006	"Chatham County"	"Windsor Forest High School"	1666	650	377	253
+"GA"	2006	"Chatham County"	"Woodlawn Baptist Church"	738	281	162	115
+"GA"	2006	"Chattahoochee County"	"Cusseta"	2797	739	341	383
+"GA"	2006	"Chattooga County"	"ALPINE"	728	307	179	122
+"GA"	2006	"Chattooga County"	"CLOUDLAND"	307	148	71	68
+"GA"	2006	"Chattooga County"	"COLDWATER"	206	97	39	57
+"GA"	2006	"Chattooga County"	"DIRTSELLER"	113	53	32	20
+"GA"	2006	"Chattooga County"	"DIRTTOWN"	683	313	173	121
+"GA"	2006	"Chattooga County"	"HAYWOOD"	131	69	48	17
+"GA"	2006	"Chattooga County"	"LYERLY"	783	304	183	111
+"GA"	2006	"Chattooga County"	"PENNVILLE"	489	157	88	66
+"GA"	2006	"Chattooga County"	"SEMINOLE"	90	42	21	21
+"GA"	2006	"Chattooga County"	"SUBLIGNA"	354	168	113	48
+"GA"	2006	"Chattooga County"	"SUMMERVILLE"	4711	1506	808	664
+"GA"	2006	"Chattooga County"	"TELOGA"	460	177	90	78
+"GA"	2006	"Chattooga County"	"TRION"	2547	858	512	330
+"GA"	2006	"Cherokee County"	"AIR ACRES"	721	721	531	151
+"GA"	2006	"Cherokee County"	"ARNOLD MILL"	1282	1280	974	207
+"GA"	2006	"Cherokee County"	"AVERY"	756	754	608	96
+"GA"	2006	"Cherokee County"	"BALL GROUND"	778	774	583	144
+"GA"	2006	"Cherokee County"	"BASCOMB"	1373	1370	1047	251
+"GA"	2006	"Cherokee County"	"BELLS"	919	919	608	238
+"GA"	2006	"Cherokee County"	"BOOTH"	1120	1118	901	177
+"GA"	2006	"Cherokee County"	"BRADSHAW"	1069	1068	851	164
+"GA"	2006	"Cherokee County"	"BRIDGEMILL"	1298	1294	1058	185
+"GA"	2006	"Cherokee County"	"CANTON"	777	773	500	222
+"GA"	2006	"Cherokee County"	"CARMEL"	904	903	650	186
+"GA"	2006	"Cherokee County"	"CHEROKEE SOUTH"	784	781	517	206
+"GA"	2006	"Cherokee County"	"CLAYTON"	478	478	372	73
+"GA"	2006	"Cherokee County"	"CONNS CREEK"	236	236	171	46
+"GA"	2006	"Cherokee County"	"DEER RUN"	831	828	671	119
+"GA"	2006	"Cherokee County"	"DIXIE"	1226	1225	890	260
+"GA"	2006	"Cherokee County"	"DUPREE"	542	542	405	109
+"GA"	2006	"Cherokee County"	"FREEHOME"	1422	1415	1141	196
+"GA"	2006	"Cherokee County"	"HICKORY FLAT"	773	773	600	132
+"GA"	2006	"Cherokee County"	"HIGHTOWER"	716	714	547	110
+"GA"	2006	"Cherokee County"	"HILLSIDE"	1120	1113	901	167
+"GA"	2006	"Cherokee County"	"HOLLY SPRINGS"	570	569	435	99
+"GA"	2006	"Cherokee County"	"KELLOGG"	1270	1262	929	254
+"GA"	2006	"Cherokee County"	"LIBERTY"	1175	1173	855	258
+"GA"	2006	"Cherokee County"	"LICKSKILLET"	482	482	349	103
+"GA"	2006	"Cherokee County"	"LITTLE RIVER"	1287	1284	972	236
+"GA"	2006	"Cherokee County"	"MACEDONIA"	860	859	727	106
+"GA"	2006	"Cherokee County"	"MOUNTAIN ROAD"	906	904	700	148
+"GA"	2006	"Cherokee County"	"OAK GROVE"	841	838	627	155
+"GA"	2006	"Cherokee County"	"RM MOORE"	767	762	585	128
+"GA"	2006	"Cherokee County"	"ROSECREEK"	1343	1336	1084	194
+"GA"	2006	"Cherokee County"	"RT JONES"	419	418	294	102
+"GA"	2006	"Cherokee County"	"SALACOA"	172	171	125	28
+"GA"	2006	"Cherokee County"	"SIXES"	905	899	705	138
+"GA"	2006	"Cherokee County"	"SUTALLEE"	594	593	472	84
+"GA"	2006	"Cherokee County"	"TEASLEY"	1385	1381	1062	244
+"GA"	2006	"Cherokee County"	"TOONIGH"	1453	1451	1118	256
+"GA"	2006	"Cherokee County"	"UNION HILL"	967	966	790	114
+"GA"	2006	"Cherokee County"	"UNIVETER"	1181	1175	918	193
+"GA"	2006	"Cherokee County"	"VICTORIA"	936	932	698	175
+"GA"	2006	"Cherokee County"	"WALESKA"	688	687	499	125
+"GA"	2006	"Cherokee County"	"WILDCAT"	867	863	642	165
+"GA"	2006	"Cherokee County"	"WOODLANDS"	794	792	582	160
+"GA"	2006	"Cherokee County"	"WOODSTOCK"	838	836	596	168
+"GA"	2006	"Clarke County"	"1A"	1787	788	375	374
+"GA"	2006	"Clarke County"	"1B"	2247	1029	448	509
+"GA"	2006	"Clarke County"	"1C"	1513	729	279	385
+"GA"	2006	"Clarke County"	"1D"	2001	1032	388	572
+"GA"	2006	"Clarke County"	"2A"	2230	816	186	598
+"GA"	2006	"Clarke County"	"2B"	2307	689	96	569
+"GA"	2006	"Clarke County"	"3A"	1590	460	74	373
+"GA"	2006	"Clarke County"	"3B"	2586	653	152	460
+"GA"	2006	"Clarke County"	"4A"	1178	311	88	193
+"GA"	2006	"Clarke County"	"4B"	2710	856	317	459
+"GA"	2006	"Clarke County"	"5A"	1878	860	357	434
+"GA"	2006	"Clarke County"	"5B"	1844	861	351	456
+"GA"	2006	"Clarke County"	"5C"	1388	603	83	467
+"GA"	2006	"Clarke County"	"5D"	1411	630	217	379
+"GA"	2006	"Clarke County"	"6A"	1764	786	409	334
+"GA"	2006	"Clarke County"	"6B"	2597	1119	509	542
+"GA"	2006	"Clarke County"	"6C"	2141	864	427	368
+"GA"	2006	"Clarke County"	"6D"	950	517	211	270
+"GA"	2006	"Clarke County"	"7A"	1804	732	360	313
+"GA"	2006	"Clarke County"	"7B"	2122	782	320	389
+"GA"	2006	"Clarke County"	"7C"	1778	759	341	357
+"GA"	2006	"Clarke County"	"8A"	1968	862	340	451
+"GA"	2006	"Clarke County"	"8B"	1734	750	312	378
+"GA"	2006	"Clarke County"	"8C"	1970	749	307	379
+"GA"	2006	"Clay County"	"Bluffton"	314	122	65	55
+"GA"	2006	"Clay County"	"Courthouse"	365	97	30	66
+"GA"	2006	"Clay County"	"Day's Crossroad"	491	221	95	124
+"GA"	2006	"Clay County"	"Old Head Start"	329	123	40	77
+"GA"	2006	"Clay County"	"Zetto"	292	90	30	59
+"GA"	2006	"Clayton County"	"ELLENWOOD"	3140	1162	156	989
+"GA"	2006	"Clayton County"	"FOREST PARK 1"	2371	570	215	337
+"GA"	2006	"Clayton County"	"FOREST PARK 2"	1754	524	178	313
+"GA"	2006	"Clayton County"	"FOREST PARK 3"	1688	460	175	266
+"GA"	2006	"Clayton County"	"FOREST PARK 4"	1427	508	230	259
+"GA"	2006	"Clayton County"	"FOREST PARK 5"	2754	645	214	407
+"GA"	2006	"Clayton County"	"FOREST PARK 6"	1084	355	151	192
+"GA"	2006	"Clayton County"	"JONESBORO 1"	3331	1010	184	810
+"GA"	2006	"Clayton County"	"JONESBORO 10"	2354	567	149	402
+"GA"	2006	"Clayton County"	"JONESBORO 11"	2896	1094	415	640
+"GA"	2006	"Clayton County"	"JONESBORO 12"	2108	591	102	475
+"GA"	2006	"Clayton County"	"JONESBORO 13"	1048	424	143	275
+"GA"	2006	"Clayton County"	"JONESBORO 14"	3313	1374	629	708
+"GA"	2006	"Clayton County"	"JONESBORO 15"	1823	393	119	263
+"GA"	2006	"Clayton County"	"JONESBORO 16"	1453	433	94	312
+"GA"	2006	"Clayton County"	"JONESBORO 17"	3438	937	145	772
+"GA"	2006	"Clayton County"	"JONESBORO 18"	2029	523	157	350
+"GA"	2006	"Clayton County"	"JONESBORO 2"	3305	957	105	838
+"GA"	2006	"Clayton County"	"JONESBORO 3"	2824	961	252	678
+"GA"	2006	"Clayton County"	"JONESBORO 4"	1543	396	124	258
+"GA"	2006	"Clayton County"	"JONESBORO 5"	1431	537	223	293
+"GA"	2006	"Clayton County"	"JONESBORO 6"	2152	868	542	287
+"GA"	2006	"Clayton County"	"JONESBORO 7"	2211	711	240	448
+"GA"	2006	"Clayton County"	"JONESBORO 8"	2784	640	146	479
+"GA"	2006	"Clayton County"	"JONESBORO 9"	1304	317	114	193
+"GA"	2006	"Clayton County"	"LAKE CITY"	2047	533	126	389
+"GA"	2006	"Clayton County"	"LOVEJOY 1"	2733	930	236	674
+"GA"	2006	"Clayton County"	"LOVEJOY 2"	2180	596	180	406
+"GA"	2006	"Clayton County"	"LOVEJOY 3"	3024	882	339	509
+"GA"	2006	"Clayton County"	"LOVEJOY 4"	2918	975	193	766
+"GA"	2006	"Clayton County"	"LOVEJOY 5"	2399	724	147	553
+"GA"	2006	"Clayton County"	"MORROW 1"	2069	669	139	506
+"GA"	2006	"Clayton County"	"MORROW 2"	1611	464	219	221
+"GA"	2006	"Clayton County"	"MORROW 3"	3190	1075	264	789
+"GA"	2006	"Clayton County"	"MORROW 4"	1625	532	187	331
+"GA"	2006	"Clayton County"	"MORROW 5"	3291	1175	309	839
+"GA"	2006	"Clayton County"	"MORROW 6"	1852	647	194	430
+"GA"	2006	"Clayton County"	"MORROW 7"	1558	524	167	337
+"GA"	2006	"Clayton County"	"MORROW 8"	2099	844	154	677
+"GA"	2006	"Clayton County"	"MORROW 9"	1153	399	112	274
+"GA"	2006	"Clayton County"	"OAK 1"	1612	418	45	364
+"GA"	2006	"Clayton County"	"OAK 2"	1457	305	41	259
+"GA"	2006	"Clayton County"	"OAK 3"	3248	771	82	680
+"GA"	2006	"Clayton County"	"OAK 4"	2676	680	92	578
+"GA"	2006	"Clayton County"	"PANHANDLE 1"	2294	861	208	630
+"GA"	2006	"Clayton County"	"PANHANDLE 2"	1649	638	308	318
+"GA"	2006	"Clayton County"	"RIVERDALE 1"	1912	731	100	614
+"GA"	2006	"Clayton County"	"RIVERDALE 10"	2110	371	47	318
+"GA"	2006	"Clayton County"	"RIVERDALE 11"	1551	603	71	523
+"GA"	2006	"Clayton County"	"RIVERDALE 12"	2085	708	113	586
+"GA"	2006	"Clayton County"	"RIVERDALE 2"	2414	718	100	608
+"GA"	2006	"Clayton County"	"RIVERDALE 3"	2613	817	90	712
+"GA"	2006	"Clayton County"	"RIVERDALE 4"	3201	838	197	632
+"GA"	2006	"Clayton County"	"RIVERDALE 5"	2067	678	125	535
+"GA"	2006	"Clayton County"	"RIVERDALE 6"	2607	636	168	452
+"GA"	2006	"Clayton County"	"RIVERDALE 7"	2152	431	103	313
+"GA"	2006	"Clayton County"	"RIVERDALE 8"	2238	927	173	737
+"GA"	2006	"Clayton County"	"RIVERDALE 9"	2053	628	129	491
+"GA"	2006	"Clinch County"	"Arabia"	87	28	12	15
+"GA"	2006	"Clinch County"	"Argyle"	237	88	31	56
+"GA"	2006	"Clinch County"	"Dupont"	210	80	22	56
+"GA"	2006	"Clinch County"	"Fargo"	248	63	40	23
+"GA"	2006	"Clinch County"	"Homerville"	2508	700	270	417
+"GA"	2006	"Cobb County"	"AB Precinct A-L"	0	13012	9560	2866
+"GA"	2006	"Cobb County"	"AB Precinct M-Z"	0	16397	11678	3902
+"GA"	2006	"Cobb County"	"Acworth 1A"	3195	1251	792	415
+"GA"	2006	"Cobb County"	"Acworth 1B"	2892	953	595	300
+"GA"	2006	"Cobb County"	"Acworth 1C"	2644	937	527	370
+"GA"	2006	"Cobb County"	"Addison 01"	1811	875	589	218
+"GA"	2006	"Cobb County"	"Austell 1A"	2714	1088	328	725
+"GA"	2006	"Cobb County"	"Baker 01"	2882	1070	655	360
+"GA"	2006	"Cobb County"	"Bells Ferry 01"	966	442	290	115
+"GA"	2006	"Cobb County"	"Bells Ferry 02"	1323	647	406	200
+"GA"	2006	"Cobb County"	"Bells Ferry 03"	4361	1813	1205	466
+"GA"	2006	"Cobb County"	"Big Shanty 01"	1829	675	433	192
+"GA"	2006	"Cobb County"	"Big Shanty 02"	1535	727	542	153
+"GA"	2006	"Cobb County"	"Big Shanty 03"	1340	680	462	177
+"GA"	2006	"Cobb County"	"Birney 01"	1721	727	424	268
+"GA"	2006	"Cobb County"	"Birney 02"	1869	857	406	419
+"GA"	2006	"Cobb County"	"Blackwell 01"	1678	777	496	227
+"GA"	2006	"Cobb County"	"Brumby 01"	1360	400	127	259
+"GA"	2006	"Cobb County"	"Bryant 01"	1562	707	90	595
+"GA"	2006	"Cobb County"	"Bryant 02"	2821	984	149	809
+"GA"	2006	"Cobb County"	"Bullard 01"	1210	637	476	128
+"GA"	2006	"Cobb County"	"Chalker 01"	1130	483	338	115
+"GA"	2006	"Cobb County"	"Chalker 02"	3036	1045	634	348
+"GA"	2006	"Cobb County"	"Chattahoochee 01"	3773	1141	464	603
+"GA"	2006	"Cobb County"	"Cheatham Hill 01"	2089	967	619	284
+"GA"	2006	"Cobb County"	"Cheatham Hill 02"	2051	952	709	187
+"GA"	2006	"Cobb County"	"Cheatham Hill 03"	1549	822	531	248
+"GA"	2006	"Cobb County"	"Chestnut Ridge 01"	2607	1307	961	273
+"GA"	2006	"Cobb County"	"Clarkdale 01"	1175	493	269	191
+"GA"	2006	"Cobb County"	"Clarkdale 02"	1732	778	326	421
+"GA"	2006	"Cobb County"	"Cooper 01"	1687	774	292	453
+"GA"	2006	"Cobb County"	"Cumberland 01"	2393	881	473	346
+"GA"	2006	"Cobb County"	"Davis 01"	1589	759	540	180
+"GA"	2006	"Cobb County"	"Dickerson 01"	1370	655	470	158
+"GA"	2006	"Cobb County"	"Dobbins 01"	1670	405	125	267
+"GA"	2006	"Cobb County"	"Dodgen 01"	1748	838	610	175
+"GA"	2006	"Cobb County"	"Dowell 01"	2539	1181	760	358
+"GA"	2006	"Cobb County"	"Durham 01"	2211	996	786	183
+"GA"	2006	"Cobb County"	"East Cobb 01"	1662	827	564	216
+"GA"	2006	"Cobb County"	"East Piedmont 01"	1476	639	393	199
+"GA"	2006	"Cobb County"	"East Valley 01"	2173	1033	739	228
+"GA"	2006	"Cobb County"	"Eastside 01"	959	452	308	106
+"GA"	2006	"Cobb County"	"Eastside 02"	1460	702	529	125
+"GA"	2006	"Cobb County"	"Elizabeth 01"	2075	565	327	211
+"GA"	2006	"Cobb County"	"Elizabeth 02"	1643	772	518	213
+"GA"	2006	"Cobb County"	"Elizabeth 03"	1671	778	544	180
+"GA"	2006	"Cobb County"	"Elizabeth 04"	572	202	108	76
+"GA"	2006	"Cobb County"	"Elizabeth 05"	2314	1027	652	286
+"GA"	2006	"Cobb County"	"Elizabeth 06"	2297	1142	806	276
+"GA"	2006	"Cobb County"	"Elizabeth 07"	1316	591	352	203
+"GA"	2006	"Cobb County"	"Fair Oaks 01"	2740	1144	485	616
+"GA"	2006	"Cobb County"	"Fair Oaks 02"	1136	420	207	195
+"GA"	2006	"Cobb County"	"Fair Oaks 03"	1750	635	239	369
+"GA"	2006	"Cobb County"	"Fair Oaks 04"	1513	565	307	236
+"GA"	2006	"Cobb County"	"Fair Oaks 05"	1127	374	176	164
+"GA"	2006	"Cobb County"	"Fair Oaks 06"	1029	330	154	150
+"GA"	2006	"Cobb County"	"Ford 01"	1090	468	361	88
+"GA"	2006	"Cobb County"	"Frey 01"	1738	768	578	151
+"GA"	2006	"Cobb County"	"Fullers Park 01"	1049	499	354	124
+"GA"	2006	"Cobb County"	"Garrison Mill 01"	2162	1094	758	256
+"GA"	2006	"Cobb County"	"Gritters 01"	1819	833	538	242
+"GA"	2006	"Cobb County"	"Harmony-Leland 01"	2736	1128	366	712
+"GA"	2006	"Cobb County"	"Harrison 01"	2161	924	695	175
+"GA"	2006	"Cobb County"	"Hayes 01"	2821	1325	1021	257
+"GA"	2006	"Cobb County"	"Hightower 01"	1939	952	654	245
+"GA"	2006	"Cobb County"	"Keheley 01"	843	405	296	97
+"GA"	2006	"Cobb County"	"Kell 01"	1617	717	528	157
+"GA"	2006	"Cobb County"	"Kemp 01"	1598	762	584	128
+"GA"	2006	"Cobb County"	"Kemp 02"	1666	777	533	206
+"GA"	2006	"Cobb County"	"Kemp 03"	1521	694	555	99
+"GA"	2006	"Cobb County"	"Kennesaw 1A"	1479	608	389	177
+"GA"	2006	"Cobb County"	"Kennesaw 2A"	1714	496	260	212
+"GA"	2006	"Cobb County"	"Kennesaw 2B"	2758	1076	728	297
+"GA"	2006	"Cobb County"	"Kennesaw 3A"	1172	438	270	139
+"GA"	2006	"Cobb County"	"Kennesaw 4A"	1812	717	455	214
+"GA"	2006	"Cobb County"	"Kennesaw 5A"	2345	930	655	237
+"GA"	2006	"Cobb County"	"Kennesaw 5B"	2160	846	517	292
+"GA"	2006	"Cobb County"	"Lassiter 01"	1567	763	527	170
+"GA"	2006	"Cobb County"	"Lewis 01"	1143	513	370	116
+"GA"	2006	"Cobb County"	"Lindley 01"	3237	1492	655	751
+"GA"	2006	"Cobb County"	"Lost Mountain 01"	2275	910	678	189
+"GA"	2006	"Cobb County"	"Lost Mountain 02"	3024	1352	1086	216
+"GA"	2006	"Cobb County"	"Lost Mountain 03"	2881	1146	855	241
+"GA"	2006	"Cobb County"	"Lost Mountain 04"	1587	676	539	120
+"GA"	2006	"Cobb County"	"Lost Mountain 05"	1769	818	655	135
+"GA"	2006	"Cobb County"	"Mableton 01"	1338	569	255	291
+"GA"	2006	"Cobb County"	"Mableton 02"	1504	654	311	310
+"GA"	2006	"Cobb County"	"Mableton 03"	2513	1127	631	422
+"GA"	2006	"Cobb County"	"Mableton 04"	1295	703	463	193
+"GA"	2006	"Cobb County"	"Mabry 01"	740	379	294	75
+"GA"	2006	"Cobb County"	"Macland 01"	2227	975	464	471
+"GA"	2006	"Cobb County"	"Macland 02"	600	265	128	132
+"GA"	2006	"Cobb County"	"Marietta 1A"	1548	434	159	258
+"GA"	2006	"Cobb County"	"Marietta 2A"	2057	975	610	305
+"GA"	2006	"Cobb County"	"Marietta 2B"	1009	411	169	219
+"GA"	2006	"Cobb County"	"Marietta 2C"	1863	868	524	272
+"GA"	2006	"Cobb County"	"Marietta 3A"	1458	603	378	167
+"GA"	2006	"Cobb County"	"Marietta 3B"	1504	660	271	356
+"GA"	2006	"Cobb County"	"Marietta 4A"	1068	501	310	138
+"GA"	2006	"Cobb County"	"Marietta 4B"	2105	879	561	267
+"GA"	2006	"Cobb County"	"Marietta 4C"	757	380	241	114
+"GA"	2006	"Cobb County"	"Marietta 4E"	1712	781	529	187
+"GA"	2006	"Cobb County"	"Marietta 5A"	1114	345	91	242
+"GA"	2006	"Cobb County"	"Marietta 5B"	1360	410	169	216
+"GA"	2006	"Cobb County"	"Marietta 6A"	787	171	45	123
+"GA"	2006	"Cobb County"	"Marietta 6B"	1864	858	593	237
+"GA"	2006	"Cobb County"	"Marietta 6C"	871	290	169	105
+"GA"	2006	"Cobb County"	"Marietta 7A"	1928	508	157	312
+"GA"	2006	"Cobb County"	"Mars Hill 01"	2250	912	702	165
+"GA"	2006	"Cobb County"	"Mars Hill 02"	1986	750	511	204
+"GA"	2006	"Cobb County"	"McCleskey 01"	1411	711	505	155
+"GA"	2006	"Cobb County"	"McEachern 01"	1880	847	537	273
+"GA"	2006	"Cobb County"	"Mountain View 01"	819	397	293	79
+"GA"	2006	"Cobb County"	"Mt Bethel 01"	3496	1640	1212	347
+"GA"	2006	"Cobb County"	"Mt Bethel 02"	1030	460	324	109
+"GA"	2006	"Cobb County"	"Mt Bethel 03"	2413	894	607	237
+"GA"	2006	"Cobb County"	"Mt Bethel 04"	2378	982	647	257
+"GA"	2006	"Cobb County"	"Murdock 01"	1902	973	702	208
+"GA"	2006	"Cobb County"	"Nicholson 01"	1919	845	570	224
+"GA"	2006	"Cobb County"	"Nickajack 01"	1821	692	286	376
+"GA"	2006	"Cobb County"	"North Cobb 01"	1622	658	424	202
+"GA"	2006	"Cobb County"	"Norton Park 01"	1257	588	388	160
+"GA"	2006	"Cobb County"	"Norton Park 02"	1670	755	374	324
+"GA"	2006	"Cobb County"	"Oakdale 01"	1572	712	447	220
+"GA"	2006	"Cobb County"	"Oregon 01"	1250	570	416	127
+"GA"	2006	"Cobb County"	"Oregon 02"	1965	769	306	426
+"GA"	2006	"Cobb County"	"Oregon 03"	1214	473	229	210
+"GA"	2006	"Cobb County"	"Oregon 04"	2056	937	333	568
+"GA"	2006	"Cobb County"	"Oregon 05"	2578	1190	727	411
+"GA"	2006	"Cobb County"	"Oregon 06"	2022	914	415	445
+"GA"	2006	"Cobb County"	"PR Precinct A-L"	0	190	72	107
+"GA"	2006	"Cobb County"	"PR Precinct M-Z"	0	39	17	19
+"GA"	2006	"Cobb County"	"Paces Mill 01"	1275	581	344	189
+"GA"	2006	"Cobb County"	"Palmer 01"	1929	764	491	232
+"GA"	2006	"Cobb County"	"Pebblebrook 01"	1783	783	241	512
+"GA"	2006	"Cobb County"	"Pebblebrook 02"	1467	630	146	469
+"GA"	2006	"Cobb County"	"Pine Mountain 01"	1777	907	707	162
+"GA"	2006	"Cobb County"	"Pine Mountain 02"	1968	983	811	117
+"GA"	2006	"Cobb County"	"Pitner 01"	982	469	309	131
+"GA"	2006	"Cobb County"	"Poole 01"	502	302	195	96
+"GA"	2006	"Cobb County"	"Pope 01"	1532	710	495	163
+"GA"	2006	"Cobb County"	"Post Oak 01"	2906	1426	1035	296
+"GA"	2006	"Cobb County"	"Powder Springs 1A"	2914	1259	665	544
+"GA"	2006	"Cobb County"	"Powder Springs 2A"	1925	807	242	537
+"GA"	2006	"Cobb County"	"Powder Springs 3A"	2234	993	435	530
+"GA"	2006	"Cobb County"	"Powers Ferry 01"	1390	588	344	175
+"GA"	2006	"Cobb County"	"Red Rock 01"	497	227	193	22
+"GA"	2006	"Cobb County"	"Red Rock 02"	1127	530	404	94
+"GA"	2006	"Cobb County"	"Riverside 01"	1039	412	70	334
+"GA"	2006	"Cobb County"	"Rocky Mount 01"	1236	599	444	128
+"GA"	2006	"Cobb County"	"Rocky Mount 02"	1751	838	580	187
+"GA"	2006	"Cobb County"	"Roswell 01"	2395	1214	872	270
+"GA"	2006	"Cobb County"	"Roswell 02"	2970	1389	989	313
+"GA"	2006	"Cobb County"	"Sandy Plains 01"	2093	1013	683	268
+"GA"	2006	"Cobb County"	"Sedalia Park 01"	1313	574	338	179
+"GA"	2006	"Cobb County"	"Sewell Mill 01"	1351	657	479	132
+"GA"	2006	"Cobb County"	"Sewell Mill 02"	594	310	228	68
+"GA"	2006	"Cobb County"	"Sewell Mill 03"	2700	962	543	347
+"GA"	2006	"Cobb County"	"Sewell Mill 04"	1277	678	484	149
+"GA"	2006	"Cobb County"	"Sewell Mill 05"	1563	745	526	185
+"GA"	2006	"Cobb County"	"Shallowford Falls 01"	2657	1306	965	268
+"GA"	2006	"Cobb County"	"Simpson 01"	1262	548	411	118
+"GA"	2006	"Cobb County"	"Smyrna 1A"	2513	957	418	497
+"GA"	2006	"Cobb County"	"Smyrna 2A"	1109	492	257	199
+"GA"	2006	"Cobb County"	"Smyrna 2B"	2025	666	250	377
+"GA"	2006	"Cobb County"	"Smyrna 3A"	2357	963	425	470
+"GA"	2006	"Cobb County"	"Smyrna 4A"	2957	1246	682	478
+"GA"	2006	"Cobb County"	"Smyrna 5A"	2445	928	426	438
+"GA"	2006	"Cobb County"	"Smyrna 6A"	3698	1555	862	602
+"GA"	2006	"Cobb County"	"Smyrna 7A"	2054	1118	679	369
+"GA"	2006	"Cobb County"	"Smyrna 7B"	3055	1307	678	579
+"GA"	2006	"Cobb County"	"Smyrna 7C"	1296	581	353	188
+"GA"	2006	"Cobb County"	"Sope Creek 01"	1826	895	632	202
+"GA"	2006	"Cobb County"	"Sope Creek 02"	2897	1244	858	325
+"GA"	2006	"Cobb County"	"Sope Creek 03"	2397	940	700	179
+"GA"	2006	"Cobb County"	"Sprayberry 01"	1896	890	604	247
+"GA"	2006	"Cobb County"	"Sweetwater 01"	1918	902	514	365
+"GA"	2006	"Cobb County"	"Sweetwater 02"	1012	365	152	200
+"GA"	2006	"Cobb County"	"Sweetwater 03"	2090	888	394	466
+"GA"	2006	"Cobb County"	"Sweetwater 04"	1922	710	274	401
+"GA"	2006	"Cobb County"	"Sweetwater 05"	1665	736	300	412
+"GA"	2006	"Cobb County"	"Teasley 01"	1575	666	370	254
+"GA"	2006	"Cobb County"	"Terrell Mill 01"	1651	719	444	220
+"GA"	2006	"Cobb County"	"Terrell Mill 02"	511	165	62	93
+"GA"	2006	"Cobb County"	"Timber Ridge 01"	2143	1043	751	218
+"GA"	2006	"Cobb County"	"Tritt 01"	2186	1091	768	256
+"GA"	2006	"Cobb County"	"Tritt 02"	853	444	316	96
+"GA"	2006	"Cobb County"	"Vaughan 01"	2469	1145	881	213
+"GA"	2006	"Cobb County"	"Vinings 01"	465	297	215	69
+"GA"	2006	"Cobb County"	"Vinings 02"	1029	349	153	176
+"GA"	2006	"Cobb County"	"Vinings 03"	3386	1038	487	493
+"GA"	2006	"Cobb County"	"Vinings 04"	1527	885	690	143
+"GA"	2006	"Cobb County"	"Wade Green 01"	1620	740	470	223
+"GA"	2006	"Cobb County"	"Wade Green 02"	1200	532	335	166
+"GA"	2006	"Cobb County"	"Willeo 01"	2409	1198	887	244
+"GA"	2006	"Coffee County"	"Ambrose"	1538	475	307	155
+"GA"	2006	"Coffee County"	"Bridgetown"	239	116	69	40
+"GA"	2006	"Coffee County"	"Broxton"	1924	659	390	255
+"GA"	2006	"Coffee County"	"Douglas"	11532	3287	2018	1188
+"GA"	2006	"Coffee County"	"Nicholls"	1459	467	260	200
+"GA"	2006	"Coffee County"	"West Green"	726	316	215	95
+"GA"	2006	"Colquitt County"	"Autreyville"	319	317	204	101
+"GA"	2006	"Colquitt County"	"Bridgecreek"	357	356	251	99
+"GA"	2006	"Colquitt County"	"Crosland"	99	98	51	45
+"GA"	2006	"Colquitt County"	"Doerun"	259	256	117	135
+"GA"	2006	"Colquitt County"	"Funston"	344	341	224	109
+"GA"	2006	"Colquitt County"	"Hamilton"	215	212	131	75
+"GA"	2006	"Colquitt County"	"Hartsfield"	152	152	109	36
+"GA"	2006	"Colquitt County"	"Hopewell"	405	405	267	126
+"GA"	2006	"Colquitt County"	"Lee"	274	273	187	80
+"GA"	2006	"Colquitt County"	"Millcreek"	153	153	92	48
+"GA"	2006	"Colquitt County"	"Monk"	367	363	199	151
+"GA"	2006	"Colquitt County"	"Moultrie"	1212	1195	710	447
+"GA"	2006	"Colquitt County"	"Murphy"	316	309	215	79
+"GA"	2006	"Colquitt County"	"Norman Park"	571	566	341	209
+"GA"	2006	"Colquitt County"	"Robinson"	239	239	156	78
+"GA"	2006	"Colquitt County"	"Shaw"	649	639	173	456
+"GA"	2006	"Colquitt County"	"Thigpen"	89	87	54	31
+"GA"	2006	"Colquitt County"	"Tyty"	136	135	98	31
+"GA"	2006	"Colquitt County"	"Warrior"	262	261	178	70
+"GA"	2006	"Columbia County"	"Abilene Baptist Church"	1784	658	481	167
+"GA"	2006	"Columbia County"	"Augusta Christian"	1819	691	527	146
+"GA"	2006	"Columbia County"	"Augusta Christian Elementary"	1515	544	423	103
+"GA"	2006	"Columbia County"	"Belair Elementary School"	1716	555	418	122
+"GA"	2006	"Columbia County"	"Bessie Thomas Center"	1361	513	409	99
+"GA"	2006	"Columbia County"	"Blanchard Park"	1415	553	439	104
+"GA"	2006	"Columbia County"	"Blue Ridge Elementary"	1699	603	440	153
+"GA"	2006	"Columbia County"	"Brookwood Elementary"	1526	626	461	151
+"GA"	2006	"Columbia County"	"Burks Mountain Fire Station"	569	232	91	138
+"GA"	2006	"Columbia County"	"Christ The King Lutheran"	1658	683	524	141
+"GA"	2006	"Columbia County"	"Church Of Our Savior"	1712	669	473	183
+"GA"	2006	"Columbia County"	"Damascus Baptist Church"	689	324	274	43
+"GA"	2006	"Columbia County"	"Eubank/Blanchard Center"	928	423	291	123
+"GA"	2006	"Columbia County"	"Euchee Creek Elementary"	873	323	214	103
+"GA"	2006	"Columbia County"	"Evans Elementary School"	1499	567	457	100
+"GA"	2006	"Columbia County"	"Evans Govt. Building"	1209	441	332	99
+"GA"	2006	"Columbia County"	"Evans Sanctified Church"	1820	667	507	141
+"GA"	2006	"Columbia County"	"Gospel Water Branch"	933	384	276	100
+"GA"	2006	"Columbia County"	"Grace Baptist Church"	1599	673	471	192
+"GA"	2006	"Columbia County"	"Greater Aug. Apostolic Church"	1150	506	378	122
+"GA"	2006	"Columbia County"	"Greenbrier High School"	684	295	256	35
+"GA"	2006	"Columbia County"	"Grovetown City Hall"	2044	601	381	197
+"GA"	2006	"Columbia County"	"Grovetown Methodist Church"	1411	471	280	174
+"GA"	2006	"Columbia County"	"Grovetown Middle School"	975	329	221	98
+"GA"	2006	"Columbia County"	"Harlem Baptist Church"	945	406	222	177
+"GA"	2006	"Columbia County"	"Harlem Middle School"	1439	546	409	120
+"GA"	2006	"Columbia County"	"Kiokee Baptist Church"	1753	692	599	79
+"GA"	2006	"Columbia County"	"Lakeside Middle School"	1591	590	441	134
+"GA"	2006	"Columbia County"	"Lewis Methodist Church"	1745	659	517	130
+"GA"	2006	"Columbia County"	"Martinez Baptist Church"	1373	467	347	106
+"GA"	2006	"Columbia County"	"Martinez Elementary School"	1510	672	523	136
+"GA"	2006	"Columbia County"	"Marvin Methodist Church"	1504	565	400	153
+"GA"	2006	"Columbia County"	"Parkway Baptist Church"	1593	675	554	106
+"GA"	2006	"Columbia County"	"Riverside Baptist Church"	765	341	299	35
+"GA"	2006	"Columbia County"	"Riverside Elementary School"	1152	456	349	101
+"GA"	2006	"Columbia County"	"Riverside Middle School"	2352	906	721	169
+"GA"	2006	"Columbia County"	"Savannah Rapids Pavilion"	1193	490	402	76
+"GA"	2006	"Columbia County"	"South Columbia Elementary"	925	302	221	72
+"GA"	2006	"Columbia County"	"Stevens Creek Church"	978	402	302	85
+"GA"	2006	"Columbia County"	"Stevens Creek Elementary"	1335	541	436	96
+"GA"	2006	"Columbia County"	"Wesley Methodist Church"	1231	547	462	72
+"GA"	2006	"Columbia County"	"West Acres Baptist Church"	2062	761	592	155
+"GA"	2006	"Columbia County"	"Westmont Elementary School"	1410	491	339	137
+"GA"	2006	"Columbia County"	"Westside Christian Church"	962	362	284	74
+"GA"	2006	"Columbia County"	"Woodlawn Baptist Church"	1867	736	600	116
+"GA"	2006	"Cook County"	"Cecil"	324	316	143	170
+"GA"	2006	"Cook County"	"Delle Beamguard"	505	503	352	137
+"GA"	2006	"Cook County"	"Elm Pine"	169	165	23	139
+"GA"	2006	"Cook County"	"Lenox"	401	398	229	157
+"GA"	2006	"Cook County"	"Massee"	181	180	111	59
+"GA"	2006	"Cook County"	"New Life Baptist Church"	278	277	176	95
+"GA"	2006	"Cook County"	"Riverbend"	268	266	179	79
+"GA"	2006	"Cook County"	"Sparks"	186	183	72	107
+"GA"	2006	"Coweta County"	"CANNONGATE"	1187	1187	963	181
+"GA"	2006	"Coweta County"	"CEDAR CREEK"	1268	1263	973	220
+"GA"	2006	"Coweta County"	"CENTRAL"	378	378	111	259
+"GA"	2006	"Coweta County"	"DRESDEN"	272	270	197	54
+"GA"	2006	"Coweta County"	"EBENEZER CHURCH ROAD"	562	561	446	96
+"GA"	2006	"Coweta County"	"FISCHER ROAD"	992	991	745	192
+"GA"	2006	"Coweta County"	"GRANTVILLE"	697	691	451	224
+"GA"	2006	"Coweta County"	"GREENTOP"	801	799	571	196
+"GA"	2006	"Coweta County"	"HARALSON"	533	530	403	94
+"GA"	2006	"Coweta County"	"JEFFERSON PARKWAY"	932	931	575	316
+"GA"	2006	"Coweta County"	"MADRAS"	1051	1047	732	256
+"GA"	2006	"Coweta County"	"MORELAND"	715	710	529	152
+"GA"	2006	"Coweta County"	"NEWNAN"	849	842	421	381
+"GA"	2006	"Coweta County"	"NEWNAN CROSSING"	2268	2265	1709	478
+"GA"	2006	"Coweta County"	"NORTHSIDE"	716	711	492	194
+"GA"	2006	"Coweta County"	"PANTHER CREEK"	954	951	682	202
+"GA"	2006	"Coweta County"	"PINE ROAD"	510	507	400	84
+"GA"	2006	"Coweta County"	"POWELL EXPO CENTER"	613	609	450	128
+"GA"	2006	"Coweta County"	"RAYMOND"	687	687	542	113
+"GA"	2006	"Coweta County"	"SENOIA"	1020	1017	776	203
+"GA"	2006	"Coweta County"	"SHARPSBURG"	1292	1288	1016	206
+"GA"	2006	"Coweta County"	"SMOKEY ROAD"	621	621	352	235
+"GA"	2006	"Coweta County"	"THOMAS CROSSROADS"	1563	1561	1229	274
+"GA"	2006	"Coweta County"	"TURIN"	840	836	607	195
+"GA"	2006	"Coweta County"	"TURKEY CREEK"	178	178	103	68
+"GA"	2006	"Coweta County"	"WELCOME"	970	966	726	198
+"GA"	2006	"Coweta County"	"WESTSIDE"	290	290	102	177
+"GA"	2006	"Coweta County"	"WHITE OAK"	1604	1599	1195	332
+"GA"	2006	"Crawford County"	"1A"	146	146	74	69
+"GA"	2006	"Crawford County"	"1B"	357	345	140	198
+"GA"	2006	"Crawford County"	"2"	503	490	219	251
+"GA"	2006	"Crawford County"	"3"	400	398	274	110
+"GA"	2006	"Crawford County"	"4"	512	507	342	139
+"GA"	2006	"Crawford County"	"5"	547	543	364	151
+"GA"	2006	"Crisp County"	"Arabi"	202	200	115	77
+"GA"	2006	"Crisp County"	"Coney"	255	251	191	56
+"GA"	2006	"Crisp County"	"Cordele"	1799	1770	933	789
+"GA"	2006	"Crisp County"	"Hatley"	81	79	54	21
+"GA"	2006	"Crisp County"	"Jamestown"	363	360	268	88
+"GA"	2006	"Crisp County"	"Listonia"	241	240	172	61
+"GA"	2006	"Dade County"	"DAVIS"	426	422	312	102
+"GA"	2006	"Dade County"	"NEW HOME"	187	187	146	37
+"GA"	2006	"Dade County"	"NEW SALEM"	328	323	237	79
+"GA"	2006	"Dade County"	"NORTH DADE"	507	495	333	154
+"GA"	2006	"Dade County"	"SOUTH DADE"	252	249	163	80
+"GA"	2006	"Dade County"	"TRENTON"	505	494	382	110
+"GA"	2006	"Dade County"	"WEST BROW"	316	312	255	52
+"GA"	2006	"Dawson County"	"Amicalola"	2083	718	565	111
+"GA"	2006	"Dawson County"	"Blacks"	1609	550	448	71
+"GA"	2006	"Dawson County"	"Dawsonville"	1247	374	274	63
+"GA"	2006	"Dawson County"	"Etowah"	985	366	305	45
+"GA"	2006	"Dawson County"	"Kilough"	2028	830	674	123
+"GA"	2006	"Dawson County"	"Purdys"	831	219	177	27
+"GA"	2006	"Dawson County"	"Sanford"	1243	419	335	61
+"GA"	2006	"Dawson County"	"Savannah"	1299	379	301	49
+"GA"	2006	"DeKalb County"	"ALLGOOD ELEM"	1916	984	167	784
+"GA"	2006	"DeKalb County"	"ASHFORD DUNWOODY RD"	2018	1051	623	344
+"GA"	2006	"DeKalb County"	"ASHFORD PARK ELEM"	1485	754	456	234
+"GA"	2006	"DeKalb County"	"ATHERTON ELEM"	1082	371	55	311
+"GA"	2006	"DeKalb County"	"AUSTIN"	2122	1103	795	250
+"GA"	2006	"DeKalb County"	"AVONDALE ELEM"	2001	1177	492	534
+"GA"	2006	"DeKalb County"	"AVONDALE MIDDLE"	1566	377	80	266
+"GA"	2006	"DeKalb County"	"BETHUNE MIDDLE"	2636	1016	112	885
+"GA"	2006	"DeKalb County"	"BOB MATHIS ELEM"	2236	1113	140	954
+"GA"	2006	"DeKalb County"	"BOULEVARD"	2645	1126	178	855
+"GA"	2006	"DeKalb County"	"BRIAR VISTA ELEM"	2055	929	262	569
+"GA"	2006	"DeKalb County"	"BRIARCLIFF"	1609	722	331	328
+"GA"	2006	"DeKalb County"	"BRIARLAKE ELEM"	1388	784	442	260
+"GA"	2006	"DeKalb County"	"BRIARWOOD"	1305	513	209	277
+"GA"	2006	"DeKalb County"	"BROCKETT"	1789	891	477	348
+"GA"	2006	"DeKalb County"	"BROCKETT ELEM"	1943	935	454	419
+"GA"	2006	"DeKalb County"	"BROOKHAVEN"	1880	837	428	339
+"GA"	2006	"DeKalb County"	"BROWN'S MILL ELEM"	2824	1428	153	1248
+"GA"	2006	"DeKalb County"	"BURGESS"	1989	841	116	652
+"GA"	2006	"DeKalb County"	"CANBY LANE ELEM"	1418	673	64	603
+"GA"	2006	"DeKalb County"	"CANDLER"	1942	616	69	531
+"GA"	2006	"DeKalb County"	"CEDAR GROVE ELEM"	2668	1246	144	1082
+"GA"	2006	"DeKalb County"	"CEDAR GROVE MIDDLE"	1302	503	42	454
+"GA"	2006	"DeKalb County"	"CEDAR GROVE SOUTH"	2892	1436	149	1265
+"GA"	2006	"DeKalb County"	"CHAMBLEE"	2004	965	501	362
+"GA"	2006	"DeKalb County"	"CHAPEL HILL ELEM"	2336	1163	132	1018
+"GA"	2006	"DeKalb County"	"CHESNUT ELEM"	1466	554	291	223
+"GA"	2006	"DeKalb County"	"CLAIREMONT EAST"	1837	1047	334	595
+"GA"	2006	"DeKalb County"	"CLAIREMONT WEST"	2188	1158	333	692
+"GA"	2006	"DeKalb County"	"CLAIRMONT HILLS"	2312	951	353	514
+"GA"	2006	"DeKalb County"	"CLARKSTON"	2075	686	146	501
+"GA"	2006	"DeKalb County"	"CLIFTON ELEM"	1064	521	54	462
+"GA"	2006	"DeKalb County"	"COLUMBIA DRIVE"	1662	652	81	558
+"GA"	2006	"DeKalb County"	"COLUMBIA ELEM"	1178	445	41	397
+"GA"	2006	"DeKalb County"	"COLUMBIA MIDDLE"	1089	363	41	312
+"GA"	2006	"DeKalb County"	"COVINGTON"	1797	600	60	535
+"GA"	2006	"DeKalb County"	"COVINGTON HWY LIBRARY"	883	163	22	137
+"GA"	2006	"DeKalb County"	"CROSS KEYS HIGH"	1387	527	250	239
+"GA"	2006	"DeKalb County"	"CROSSROADS"	2071	903	130	756
+"GA"	2006	"DeKalb County"	"DORAVILLE NORTH"	1296	512	258	211
+"GA"	2006	"DeKalb County"	"DORAVILLE SOUTH"	878	380	161	175
+"GA"	2006	"DeKalb County"	"DRESDEN ELEM"	1699	769	335	360
+"GA"	2006	"DeKalb County"	"DRUID HILLS HIGH"	1651	833	274	477
+"GA"	2006	"DeKalb County"	"DUNAIRE ELEM"	1373	615	138	447
+"GA"	2006	"DeKalb County"	"DUNWOODY"	1517	613	357	222
+"GA"	2006	"DeKalb County"	"DUNWOODY HIGH"	1577	796	557	185
+"GA"	2006	"DeKalb County"	"DUNWOODY LIBRARY"	1994	1055	800	215
+"GA"	2006	"DeKalb County"	"EAST LAKE ELEM"	2370	931	130	740
+"GA"	2006	"DeKalb County"	"EASTLAND"	2273	1011	125	817
+"GA"	2006	"DeKalb County"	"EMBRY HILLS"	1766	981	544	362
+"GA"	2006	"DeKalb County"	"EMORY ROAD"	826	293	83	190
+"GA"	2006	"DeKalb County"	"EMORY SOUTH"	2380	1139	339	695
+"GA"	2006	"DeKalb County"	"EPWORTH"	2681	1567	307	1078
+"GA"	2006	"DeKalb County"	"EVANSDALE ELEM"	2032	974	480	424
+"GA"	2006	"DeKalb County"	"FAIRINGTON ELEM"	2612	986	86	883
+"GA"	2006	"DeKalb County"	"FERNBANK ELEM"	1839	1084	346	642
+"GA"	2006	"DeKalb County"	"FLAKES MILL ROAD"	1209	572	59	506
+"GA"	2006	"DeKalb County"	"FLAT SHOALS"	1694	647	42	591
+"GA"	2006	"DeKalb County"	"FLAT SHOALS ELEM"	1574	669	48	616
+"GA"	2006	"DeKalb County"	"FLAT SHOALS LIBRARY"	1457	605	52	538
+"GA"	2006	"DeKalb County"	"FLAT SHOALS PARKWAY"	2374	1177	141	1017
+"GA"	2006	"DeKalb County"	"FORREST HILLS ELEM"	1302	675	162	434
+"GA"	2006	"DeKalb County"	"FREEDOM MIDDLE"	2101	904	166	719
+"GA"	2006	"DeKalb County"	"GEORGETOWN SQUARE"	2103	752	462	248
+"GA"	2006	"DeKalb County"	"GLENHAVEN"	1139	485	92	382
+"GA"	2006	"DeKalb County"	"GLENHAVEN ELEM"	1439	572	66	492
+"GA"	2006	"DeKalb County"	"GLENNWOOD"	1276	606	172	370
+"GA"	2006	"DeKalb County"	"GRESHAM PARK ELEM"	2031	797	75	700
+"GA"	2006	"DeKalb County"	"HAMBRICK ELEM"	2269	918	198	680
+"GA"	2006	"DeKalb County"	"HAWTHORNE ELEM"	1718	886	438	388
+"GA"	2006	"DeKalb County"	"HENDERSON MILL ELEM"	2209	1109	569	463
+"GA"	2006	"DeKalb County"	"HERITAGE ED"	1364	628	247	313
+"GA"	2006	"DeKalb County"	"HOOPER ALEXANDER ELEM"	1289	587	99	430
+"GA"	2006	"DeKalb County"	"HUGH HOWELL"	1451	799	485	279
+"GA"	2006	"DeKalb County"	"HUNTLEY HILLS ELEM"	1517	662	306	296
+"GA"	2006	"DeKalb County"	"IDLEWOOD ELEM"	1549	722	252	435
+"GA"	2006	"DeKalb County"	"IDLEWOOD ROAD"	1676	514	94	404
+"GA"	2006	"DeKalb County"	"INDIAN CREEK ELEM"	1628	496	115	349
+"GA"	2006	"DeKalb County"	"JOHNSON ESTATES"	906	531	186	296
+"GA"	2006	"DeKalb County"	"JOHNSON FERRY"	1746	731	411	258
+"GA"	2006	"DeKalb County"	"JOLLY ELEM"	1929	600	98	479
+"GA"	2006	"DeKalb County"	"KELLEY CHAPEL ROAD"	1027	549	61	481
+"GA"	2006	"DeKalb County"	"KELLEY LAKE ELEM"	2320	927	88	826
+"GA"	2006	"DeKalb County"	"KINGSLEY ELEM"	2064	1037	710	251
+"GA"	2006	"DeKalb County"	"KITTREDGE MAGNET"	1630	737	250	416
+"GA"	2006	"DeKalb County"	"KNOLLWOOD ELEM"	1510	628	82	519
+"GA"	2006	"DeKalb County"	"LAKESIDE HIGH"	1747	1011	529	414
+"GA"	2006	"DeKalb County"	"LAVISTA ROAD"	1516	772	312	376
+"GA"	2006	"DeKalb County"	"LAWRENCEVILLE HWY"	1957	1026	557	395
+"GA"	2006	"DeKalb County"	"LITHONIA"	875	275	58	207
+"GA"	2006	"DeKalb County"	"LITHONIA HIGH"	2011	774	72	694
+"GA"	2006	"DeKalb County"	"MAINSTREET"	2220	980	144	817
+"GA"	2006	"DeKalb County"	"MARBUT ELEM"	2690	1028	80	930
+"GA"	2006	"DeKalb County"	"MARGARET HARRIS ED"	1431	551	208	299
+"GA"	2006	"DeKalb County"	"MARY LIN ELEM"	2117	1022	261	640
+"GA"	2006	"DeKalb County"	"MCLENDON ELEM"	1539	642	187	385
+"GA"	2006	"DeKalb County"	"MCNAIR MIDDLE"	1358	579	55	507
+"GA"	2006	"DeKalb County"	"MCWILLIAMS"	1339	710	77	622
+"GA"	2006	"DeKalb County"	"MEADOWVIEW ELEM"	2511	1006	99	893
+"GA"	2006	"DeKalb County"	"MEDLOCK ELEM"	1679	919	335	495
+"GA"	2006	"DeKalb County"	"MEMORIAL NORTH"	2000	684	182	473
+"GA"	2006	"DeKalb County"	"MEMORIAL SOUTH"	1368	464	98	355
+"GA"	2006	"DeKalb County"	"MEMORIAL-STONE MTN"	1491	591	183	388
+"GA"	2006	"DeKalb County"	"METROPOLITAN"	1350	577	79	452
+"GA"	2006	"DeKalb County"	"MIDVALE ELEM"	1649	886	561	270
+"GA"	2006	"DeKalb County"	"MIDVALE ROAD"	1603	909	507	347
+"GA"	2006	"DeKalb County"	"MIDWAY ELEM"	1885	625	89	511
+"GA"	2006	"DeKalb County"	"MILLER GROVE MIDDLE"	2471	903	61	833
+"GA"	2006	"DeKalb County"	"MILLER GROVE ROAD"	1594	798	89	700
+"GA"	2006	"DeKalb County"	"ML KING JR. HIGH"	1973	984	86	879
+"GA"	2006	"DeKalb County"	"MONTCLAIR ELEM"	1543	465	157	273
+"GA"	2006	"DeKalb County"	"MONTGOMERY ELEM"	2897	1452	896	429
+"GA"	2006	"DeKalb County"	"MONTREAL"	1037	537	265	211
+"GA"	2006	"DeKalb County"	"MT. VERNON EAST"	2112	1100	784	260
+"GA"	2006	"DeKalb County"	"MT. VERNON WEST"	1992	875	606	221
+"GA"	2006	"DeKalb County"	"MURPHEY CANDLER ELEM"	3277	1499	197	1278
+"GA"	2006	"DeKalb County"	"NANCY CREEK ELEM"	1652	777	413	297
+"GA"	2006	"DeKalb County"	"NARVIE J. HARRIS ELEM"	1612	775	74	686
+"GA"	2006	"DeKalb County"	"NELMS DRIVE"	2431	1286	579	594
+"GA"	2006	"DeKalb County"	"NORTH DECATUR"	1186	454	130	286
+"GA"	2006	"DeKalb County"	"NORTH HAIRSTON"	1382	643	152	460
+"GA"	2006	"DeKalb County"	"NORTH PEACHTREE"	1841	696	298	361
+"GA"	2006	"DeKalb County"	"NORTHLAKE"	1101	643	311	272
+"GA"	2006	"DeKalb County"	"OAK GROVE ELEM"	1689	940	465	395
+"GA"	2006	"DeKalb County"	"OAKCLIFF ELEM"	997	385	181	168
+"GA"	2006	"DeKalb County"	"OAKHURST"	1863	968	174	682
+"GA"	2006	"DeKalb County"	"PANOLA"	1240	583	77	488
+"GA"	2006	"DeKalb County"	"PANOLA ROAD"	1209	548	45	493
+"GA"	2006	"DeKalb County"	"PANOLA WAY ELEM"	1273	466	55	404
+"GA"	2006	"DeKalb County"	"PANTHERSVILLE ROAD"	3370	1441	131	1292
+"GA"	2006	"DeKalb County"	"PEACHCREST ELEM"	1407	566	103	440
+"GA"	2006	"DeKalb County"	"PEACHTREE MIDDLE"	1423	544	230	275
+"GA"	2006	"DeKalb County"	"PINE LAKE"	453	248	56	152
+"GA"	2006	"DeKalb County"	"PINEY GROVE"	931	326	41	274
+"GA"	2006	"DeKalb County"	"PLEASANTDALE ELEM"	1310	695	337	292
+"GA"	2006	"DeKalb County"	"PLEASANTDALE ROAD"	2117	641	167	448
+"GA"	2006	"DeKalb County"	"PONCE DE LEON"	1579	788	201	517
+"GA"	2006	"DeKalb County"	"RAINBOW ELEM"	2527	1207	138	1050
+"GA"	2006	"DeKalb County"	"REDAN ELEM"	1725	784	78	694
+"GA"	2006	"DeKalb County"	"REDAN MIDDLE"	2791	1192	155	1018
+"GA"	2006	"DeKalb County"	"REDAN ROAD"	1820	796	114	665
+"GA"	2006	"DeKalb County"	"REDAN-TROTTI LIBRARY"	2452	1042	119	904
+"GA"	2006	"DeKalb County"	"REHOBOTH"	1574	829	371	370
+"GA"	2006	"DeKalb County"	"RENFROE MIDDLE"	1081	575	81	440
+"GA"	2006	"DeKalb County"	"ROCK CHAPEL ELEM"	2687	1080	130	938
+"GA"	2006	"DeKalb County"	"ROCK CHAPEL ROAD"	1931	863	143	702
+"GA"	2006	"DeKalb County"	"ROCKBRIDGE ELEM"	2097	768	134	605
+"GA"	2006	"DeKalb County"	"ROCKBRIDGE ROAD"	2435	1204	157	1032
+"GA"	2006	"DeKalb County"	"ROWLAND ELEM"	2055	664	110	531
+"GA"	2006	"DeKalb County"	"ROWLAND ROAD"	1379	633	134	479
+"GA"	2006	"DeKalb County"	"SAGAMORE HILLS ELEM"	2290	1315	656	559
+"GA"	2006	"DeKalb County"	"SALEM MIDDLE"	2346	1155	112	1020
+"GA"	2006	"DeKalb County"	"SCOTT"	1867	937	262	549
+"GA"	2006	"DeKalb County"	"SCOTTDALE"	2272	820	187	560
+"GA"	2006	"DeKalb County"	"SHADOW ROCK ELEM"	2848	1303	165	1121
+"GA"	2006	"DeKalb County"	"SHAMROCK MIDDLE"	1241	680	304	310
+"GA"	2006	"DeKalb County"	"SILVER LAKE"	2533	1048	632	357
+"GA"	2006	"DeKalb County"	"SKYLAND"	1381	654	324	270
+"GA"	2006	"DeKalb County"	"SMOKE RISE ELEM"	1756	970	579	330
+"GA"	2006	"DeKalb County"	"SNAPFINGER ELEM"	1412	680	69	600
+"GA"	2006	"DeKalb County"	"SNAPFINGER ROAD NORTH"	1713	697	77	606
+"GA"	2006	"DeKalb County"	"SNAPFINGER ROAD SOUTH"	1475	748	106	628
+"GA"	2006	"DeKalb County"	"SOUTH DESHON"	2156	958	101	838
+"GA"	2006	"DeKalb County"	"SOUTH HAIRSTON"	2253	989	135	836
+"GA"	2006	"DeKalb County"	"STEPHENSON HIGH"	2252	1036	129	895
+"GA"	2006	"DeKalb County"	"STEPHENSON MIDDLE"	2262	1086	153	907
+"GA"	2006	"DeKalb County"	"STONE MILL ELEM"	2116	550	83	452
+"GA"	2006	"DeKalb County"	"STONE MOUNTAIN LIBRARY"	1243	456	151	283
+"GA"	2006	"DeKalb County"	"STONE MOUNTAIN MIDDLE"	1842	765	173	568
+"GA"	2006	"DeKalb County"	"STONEVIEW ELEM"	1093	325	54	266
+"GA"	2006	"DeKalb County"	"TERRY MILL ELEM"	1705	743	76	644
+"GA"	2006	"DeKalb County"	"TILLY MILL ROAD"	1257	629	423	162
+"GA"	2006	"DeKalb County"	"TILSON ELEM"	1337	489	52	420
+"GA"	2006	"DeKalb County"	"TONEY ELEM"	1242	570	60	497
+"GA"	2006	"DeKalb County"	"TUCKER"	876	471	271	167
+"GA"	2006	"DeKalb County"	"TUCKER LIBRARY"	1321	667	393	220
+"GA"	2006	"DeKalb County"	"VALLEY BROOK"	605	333	128	178
+"GA"	2006	"DeKalb County"	"WADSWORTH ELEM"	2079	847	92	734
+"GA"	2006	"DeKalb County"	"WARREN TECH"	1576	730	369	302
+"GA"	2006	"DeKalb County"	"WESLEY CHAPEL SOUTH"	2196	1111	104	992
+"GA"	2006	"DeKalb County"	"WHITE OAK"	1757	735	76	650
+"GA"	2006	"DeKalb County"	"WHITEFOORD ELEM"	2527	883	120	700
+"GA"	2006	"DeKalb County"	"WINNONA PARK ELEM"	1475	844	187	555
+"GA"	2006	"DeKalb County"	"WINTERS CHAPEL"	1070	600	374	183
+"GA"	2006	"DeKalb County"	"WOODRIDGE ELEM"	2234	910	107	783
+"GA"	2006	"DeKalb County"	"WOODROW ROAD"	2513	982	110	842
+"GA"	2006	"DeKalb County"	"WOODWARD ELEM"	1399	576	242	274
+"GA"	2006	"DeKalb County"	"WYNBROOKE ELEM"	2180	1126	172	937
+"GA"	2006	"Decatur County"	"Attapulgus"	778	256	95	156
+"GA"	2006	"Decatur County"	"Bainbridge-Coliseum"	4227	1392	909	447
+"GA"	2006	"Decatur County"	"Bdge-Fairgrounds"	2398	751	348	387
+"GA"	2006	"Decatur County"	"Belcher"	300	139	106	32
+"GA"	2006	"Decatur County"	"Bell"	237	85	32	53
+"GA"	2006	"Decatur County"	"Brinson"	459	176	119	52
+"GA"	2006	"Decatur County"	"Climax"	797	315	220	87
+"GA"	2006	"Decatur County"	"Faceville"	299	122	60	61
+"GA"	2006	"Decatur County"	"Fowlstown"	344	112	27	85
+"GA"	2006	"Decatur County"	"Kendrick"	325	139	89	49
+"GA"	2006	"Decatur County"	"Parker"	251	102	63	38
+"GA"	2006	"Decatur County"	"Pine Hill"	367	135	81	52
+"GA"	2006	"Decatur County"	"Recovery"	380	176	118	55
+"GA"	2006	"Decatur County"	"West Bainbridge"	1616	477	252	222
+"GA"	2006	"Dodge County"	"Chauncey"	156	154	89	63
+"GA"	2006	"Dodge County"	"Clarks"	34	34	18	15
+"GA"	2006	"Dodge County"	"Eddins"	376	368	210	143
+"GA"	2006	"Dodge County"	"Empire"	191	189	112	70
+"GA"	2006	"Dodge County"	"Jaybird"	70	69	34	34
+"GA"	2006	"Dodge County"	"Jones"	193	191	89	97
+"GA"	2006	"Dodge County"	"Lee"	1340	1327	718	575
+"GA"	2006	"Dodge County"	"McCranie"	122	121	88	33
+"GA"	2006	"Dodge County"	"Milan"	184	181	107	70
+"GA"	2006	"Dodge County"	"Mitchell"	133	131	71	55
+"GA"	2006	"Dodge County"	"Mullis"	213	208	109	89
+"GA"	2006	"Dodge County"	"Plain Field"	187	186	120	63
+"GA"	2006	"Dodge County"	"Pond Town"	325	321	134	181
+"GA"	2006	"Dodge County"	"Rawlins"	212	211	128	74
+"GA"	2006	"Dodge County"	"Vilula"	98	94	62	29
+"GA"	2006	"Dodge County"	"Yonker"	87	87	50	35
+"GA"	2006	"Dooly County"	"BYROMVILLE"	307	299	123	166
+"GA"	2006	"Dooly County"	"LILLY"	218	209	69	131
+"GA"	2006	"Dooly County"	"PINEHURST"	250	247	159	83
+"GA"	2006	"Dooly County"	"UNADILLA"	652	638	280	342
+"GA"	2006	"Dooly County"	"VIENNA"	755	739	368	352
+"GA"	2006	"Dougherty County"	"1st Baptist Church of Putney"	2013	937	432	492
+"GA"	2006	"Dougherty County"	"2nd Mt Zion Church"	1156	542	244	280
+"GA"	2006	"Dougherty County"	"ASU Hper Gym"	1040	236	12	223
+"GA"	2006	"Dougherty County"	"Albany Middle School"	1196	488	56	426
+"GA"	2006	"Dougherty County"	"Beattie Rd Church"	3194	1657	914	718
+"GA"	2006	"Dougherty County"	"Bill Miller Center"	1524	563	63	491
+"GA"	2006	"Dougherty County"	"Branch Road Building"	1655	690	237	442
+"GA"	2006	"Dougherty County"	"Carver Comm. Center"	1221	462	20	435
+"GA"	2006	"Dougherty County"	"Carver Gym"	1014	333	17	312
+"GA"	2006	"Dougherty County"	"Christ Church"	1368	796	496	283
+"GA"	2006	"Dougherty County"	"Covenant Pres Church"	1808	864	446	398
+"GA"	2006	"Dougherty County"	"Darton College"	2624	1091	339	742
+"GA"	2006	"Dougherty County"	"Harvest Temple"	1337	654	404	240
+"GA"	2006	"Dougherty County"	"Jackson Heights Elem"	1891	628	12	612
+"GA"	2006	"Dougherty County"	"Lamar Reese Elem School"	862	406	21	382
+"GA"	2006	"Dougherty County"	"Merry Acres Middle School"	2021	997	562	412
+"GA"	2006	"Dougherty County"	"Mock Road Elem"	817	339	83	251
+"GA"	2006	"Dougherty County"	"Monroe High School"	659	308	8	297
+"GA"	2006	"Dougherty County"	"Mt. Zion Center"	2720	1004	32	962
+"GA"	2006	"Dougherty County"	"Palmyra Rd Meth Church"	1637	662	335	308
+"GA"	2006	"Dougherty County"	"Phoebe East"	2066	710	131	572
+"GA"	2006	"Dougherty County"	"Phoebe Education Bldg."	1144	336	90	238
+"GA"	2006	"Dougherty County"	"Radium Middle School"	639	298	108	186
+"GA"	2006	"Dougherty County"	"Saints/Christ Church"	909	363	33	323
+"GA"	2006	"Dougherty County"	"Sherwood Elem School"	2172	909	391	499
+"GA"	2006	"Dougherty County"	"Turner Elem School"	1215	144	12	128
+"GA"	2006	"Dougherty County"	"Westover High School"	2707	1366	678	671
+"GA"	2006	"Dougherty County"	"Westown Elem School"	2384	1009	60	938
+"GA"	2006	"Douglas County"	"ANNETTE WINN"	1469	639	419	187
+"GA"	2006	"Douglas County"	"ARBOR STATION"	1936	741	446	265
+"GA"	2006	"Douglas County"	"BEULAH"	2290	994	639	301
+"GA"	2006	"Douglas County"	"BILL ARP"	3366	1374	973	353
+"GA"	2006	"Douglas County"	"BRIGHT STAR"	1860	781	495	251
+"GA"	2006	"Douglas County"	"CHAPEL HILL"	2027	813	464	310
+"GA"	2006	"Douglas County"	"CHESTNUT LOG"	3202	1210	727	422
+"GA"	2006	"Douglas County"	"COLONIAL HILLS"	1651	580	120	435
+"GA"	2006	"Douglas County"	"DEER LICK"	2047	841	473	321
+"GA"	2006	"Douglas County"	"DORSETT SHOALS"	2554	1023	677	281
+"GA"	2006	"Douglas County"	"DOUGLASVILLE"	3064	1031	569	420
+"GA"	2006	"Douglas County"	"EPHESUS BAPTIST"	3156	1348	996	291
+"GA"	2006	"Douglas County"	"FACTORY SHOALS"	3787	1488	613	819
+"GA"	2006	"Douglas County"	"FAIRPLAY MS"	2614	1121	881	171
+"GA"	2006	"Douglas County"	"GOLDEN"	2140	795	217	548
+"GA"	2006	"Douglas County"	"HOLLY SPRINGS"	3476	1494	801	635
+"GA"	2006	"Douglas County"	"LITHIA SPRINGS"	2677	1137	398	690
+"GA"	2006	"Douglas County"	"LUTHERAN"	2510	1043	677	324
+"GA"	2006	"Douglas County"	"MIRROR LAKE ELE"	2810	1088	697	351
+"GA"	2006	"Douglas County"	"ST. JULIANS"	1575	713	455	215
+"GA"	2006	"Douglas County"	"STEWART"	1615	638	132	494
+"GA"	2006	"Douglas County"	"TURNER"	2410	990	586	360
+"GA"	2006	"Douglas County"	"WINSTON"	1112	450	210	227
+"GA"	2006	"Early County"	"Arlington"	396	147	74	70
+"GA"	2006	"Early County"	"Blakely"	3180	736	368	364
+"GA"	2006	"Early County"	"Cedar Springs"	287	130	83	45
+"GA"	2006	"Early County"	"Colomokee"	256	104	66	35
+"GA"	2006	"Early County"	"Cuba"	610	190	117	71
+"GA"	2006	"Early County"	"Damascus"	560	208	77	128
+"GA"	2006	"Early County"	"Freeman"	242	95	73	22
+"GA"	2006	"Early County"	"Hilton"	321	107	60	42
+"GA"	2006	"Early County"	"Jakin"	510	213	94	113
+"GA"	2006	"Early County"	"Lucille"	476	170	93	75
+"GA"	2006	"Early County"	"Urquhart"	209	96	68	28
+"GA"	2006	"Echols County"	"1A"	427	425	320	97
+"GA"	2006	"Echols County"	"1B"	173	171	123	37
+"GA"	2006	"Echols County"	"1C"	323	319	222	84
+"GA"	2006	"Echols County"	"1D"	552	549	411	124
+"GA"	2006	"Echols County"	"1E"	377	377	315	56
+"GA"	2006	"Echols County"	"2A"	395	394	292	95
+"GA"	2006	"Echols County"	"2B"	679	676	507	150
+"GA"	2006	"Echols County"	"2C"	555	554	460	89
+"GA"	2006	"Echols County"	"2D"	448	446	363	73
+"GA"	2006	"Echols County"	"3A"	263	260	172	86
+"GA"	2006	"Echols County"	"3B"	429	427	231	190
+"GA"	2006	"Echols County"	"3C"	239	236	93	141
+"GA"	2006	"Echols County"	"3D"	245	243	160	79
+"GA"	2006	"Echols County"	"3E"	431	427	311	106
+"GA"	2006	"Echols County"	"4A"	637	636	493	128
+"GA"	2006	"Echols County"	"4B"	591	587	412	169
+"GA"	2006	"Echols County"	"4C"	572	570	436	123
+"GA"	2006	"Echols County"	"5A"	530	529	410	108
+"GA"	2006	"Echols County"	"5B"	687	686	517	155
+"GA"	2006	"Echols County"	"5C"	425	424	350	68
+"GA"	2006	"Echols County"	"5D"	515	514	415	92
+"GA"	2006	"Echols County"	"Statenville"	482	479	278	184
+"GA"	2006	"Elbert County"	"Centerville"	748	291	176	111
+"GA"	2006	"Elbert County"	"Elberton"	3356	683	326	339
+"GA"	2006	"Elbert County"	"Eliam"	709	297	206	87
+"GA"	2006	"Elbert County"	"Gaines"	372	176	91	79
+"GA"	2006	"Elbert County"	"Goshen"	1301	471	292	164
+"GA"	2006	"Elbert County"	"Longstreet"	586	229	143	81
+"GA"	2006	"Elbert County"	"Moss-Ruckersville"	356	119	62	55
+"GA"	2006	"Elbert County"	"Petersburg"	315	138	103	32
+"GA"	2006	"Elbert County"	"Pike"	1234	398	217	170
+"GA"	2006	"Elbert County"	"Webbsboro"	326	137	79	56
+"GA"	2006	"Elbert County"	"Wyche"	1002	328	204	119
+"GA"	2006	"Emanuel County"	"Adrian"	148	147	81	61
+"GA"	2006	"Emanuel County"	"Blundale"	90	86	68	17
+"GA"	2006	"Emanuel County"	"Canoochee"	136	134	85	47
+"GA"	2006	"Emanuel County"	"Cowford"	167	164	135	26
+"GA"	2006	"Emanuel County"	"Cross-Green"	108	102	29	73
+"GA"	2006	"Emanuel County"	"Garfield"	201	199	127	70
+"GA"	2006	"Emanuel County"	"Norristown"	77	77	58	17
+"GA"	2006	"Emanuel County"	"Nunez"	144	143	91	49
+"GA"	2006	"Emanuel County"	"Oak Park"	171	171	106	58
+"GA"	2006	"Emanuel County"	"Red Oak"	106	106	60	40
+"GA"	2006	"Emanuel County"	"Stillmore"	168	167	86	78
+"GA"	2006	"Emanuel County"	"Summertown"	195	190	121	67
+"GA"	2006	"Emanuel County"	"Swainsboro"	1610	1576	870	669
+"GA"	2006	"Emanuel County"	"Twin City"	480	472	260	207
+"GA"	2006	"Evans County"	"Bacon Ford Park"	375	106	8	97
+"GA"	2006	"Evans County"	"Bellville"	1064	473	329	138
+"GA"	2006	"Evans County"	"Canoochee Courthouse"	651	246	139	103
+"GA"	2006	"Evans County"	"Claxton"	694	270	172	92
+"GA"	2006	"Evans County"	"Cleo Griffin Center"	239	103	64	37
+"GA"	2006	"Evans County"	"Daisy City Hall"	730	271	175	91
+"GA"	2006	"Evans County"	"Evans Co Cthouse Anx"	642	183	55	126
+"GA"	2006	"Evans County"	"Hagan City Hall"	443	202	126	72
+"GA"	2006	"Evans County"	"Neder Center"	215	60	26	34
+"GA"	2006	"Evans County"	"Undine Courthouse"	301	145	101	43
+"GA"	2006	"Fannin County"	"COLWELL"	665	278	207	56
+"GA"	2006	"Fannin County"	"FAIRPLAY"	700	270	193	66
+"GA"	2006	"Fannin County"	"FLINTHILL"	2425	938	645	269
+"GA"	2006	"Fannin County"	"HEMPTOWN"	750	335	254	62
+"GA"	2006	"Fannin County"	"HOTHOUSE"	1341	461	346	99
+"GA"	2006	"Fannin County"	"MINERAL BLUFF"	613	272	189	69
+"GA"	2006	"Fannin County"	"MOBILE"	744	293	225	58
+"GA"	2006	"Fannin County"	"MORGANTON"	1497	581	436	123
+"GA"	2006	"Fannin County"	"NOONTOOTLA"	576	254	187	58
+"GA"	2006	"Fannin County"	"SKENIAH"	210	92	60	24
+"GA"	2006	"Fannin County"	"SUGAR CREEK"	1487	473	352	104
+"GA"	2006	"Fannin County"	"TOCCOA"	2296	729	518	182
+"GA"	2006	"Fayette County"	"Aberdeen"	764	761	566	149
+"GA"	2006	"Fayette County"	"Antioch"	761	761	544	177
+"GA"	2006	"Fayette County"	"Banks"	675	672	431	215
+"GA"	2006	"Fayette County"	"Blackrock"	922	917	448	441
+"GA"	2006	"Fayette County"	"Braelinn"	899	898	716	139
+"GA"	2006	"Fayette County"	"Brooks"	769	764	642	78
+"GA"	2006	"Fayette County"	"Camp Creek"	820	817	611	164
+"GA"	2006	"Fayette County"	"Dogwood"	1003	999	770	174
+"GA"	2006	"Fayette County"	"Europe"	1117	1113	288	804
+"GA"	2006	"Fayette County"	"Fayetteville East"	576	575	378	181
+"GA"	2006	"Fayette County"	"Fayetteville West"	478	477	315	133
+"GA"	2006	"Fayette County"	"Fielding Ridge"	1317	1315	985	267
+"GA"	2006	"Fayette County"	"Flat Creek"	710	710	514	158
+"GA"	2006	"Fayette County"	"Flint"	559	557	345	194
+"GA"	2006	"Fayette County"	"Harps Crossing"	669	668	500	147
+"GA"	2006	"Fayette County"	"Hopeful"	677	677	381	274
+"GA"	2006	"Fayette County"	"Jeff Davis"	634	633	384	226
+"GA"	2006	"Fayette County"	"Kedron"	933	932	641	251
+"GA"	2006	"Fayette County"	"Kenwood"	437	437	166	258
+"GA"	2006	"Fayette County"	"McIntosh"	1145	1145	898	196
+"GA"	2006	"Fayette County"	"Morning Creek"	1068	1065	642	385
+"GA"	2006	"Fayette County"	"Murphy"	1031	1030	714	276
+"GA"	2006	"Fayette County"	"Oak Grove"	539	538	375	140
+"GA"	2006	"Fayette County"	"Oak Ridge"	805	803	460	312
+"GA"	2006	"Fayette County"	"Rareover"	1000	997	752	206
+"GA"	2006	"Fayette County"	"Rising Star"	1037	1034	769	202
+"GA"	2006	"Fayette County"	"Sandy Creek"	1305	1302	763	480
+"GA"	2006	"Fayette County"	"Shakerag East"	613	610	444	123
+"GA"	2006	"Fayette County"	"Shakerag West"	570	569	414	123
+"GA"	2006	"Fayette County"	"Spring Hill"	1081	1078	659	374
+"GA"	2006	"Fayette County"	"Starrsmill"	1169	1167	942	168
+"GA"	2006	"Fayette County"	"Whitewater"	998	996	799	149
+"GA"	2006	"Fayette County"	"Willow Pond"	773	772	575	158
+"GA"	2006	"Fayette County"	"Willowbend"	789	789	610	143
+"GA"	2006	"Fayette County"	"Windgate"	458	453	334	87
+"GA"	2006	"Fayette County"	"Woolsey"	806	806	660	115
+"GA"	2006	"Floyd County"	"ALTO PARK"	1063	1058	757	251
+"GA"	2006	"Floyd County"	"ARMUCHEE"	330	328	249	69
+"GA"	2006	"Floyd County"	"BARKERS"	653	651	439	187
+"GA"	2006	"Floyd County"	"CAVE SPRING"	607	602	332	233
+"GA"	2006	"Floyd County"	"CHULIO"	373	370	247	100
+"GA"	2006	"Floyd County"	"EAST LINDALE"	1092	1084	741	301
+"GA"	2006	"Floyd County"	"EAST ROME"	1251	1241	714	451
+"GA"	2006	"Floyd County"	"ETOWAH"	1425	1420	900	464
+"GA"	2006	"Floyd County"	"EVERETT SPRINGS"	179	178	113	53
+"GA"	2006	"Floyd County"	"FLOYD SPRINGS"	671	667	472	173
+"GA"	2006	"Floyd County"	"FOSTER'S MILL"	326	322	201	110
+"GA"	2006	"Floyd County"	"GARDEN LAKES"	731	727	441	253
+"GA"	2006	"Floyd County"	"GLENWOOD"	942	940	650	253
+"GA"	2006	"Floyd County"	"HOWELL"	446	442	311	114
+"GA"	2006	"Floyd County"	"NORTH CAROLINA"	582	580	353	193
+"GA"	2006	"Floyd County"	"NORTH MT ALTO"	1178	1171	696	414
+"GA"	2006	"Floyd County"	"NORTH ROME"	1009	996	530	435
+"GA"	2006	"Floyd County"	"RIVERSIDE"	243	241	151	78
+"GA"	2006	"Floyd County"	"SOUTH MT ALTO"	1241	1230	755	420
+"GA"	2006	"Floyd County"	"SOUTH ROME"	379	373	108	256
+"GA"	2006	"Floyd County"	"TEXAS VALLEY"	303	302	227	63
+"GA"	2006	"Floyd County"	"TOWN ROME"	767	764	440	277
+"GA"	2006	"Floyd County"	"VANNS VALLEY"	235	233	160	67
+"GA"	2006	"Floyd County"	"WATTERS"	994	986	677	264
+"GA"	2006	"Floyd County"	"WEST LINDALE"	812	804	510	256
+"GA"	2006	"Forsyth County"	"Big Creek"	1917	1913	1533	279
+"GA"	2006	"Forsyth County"	"Brandywine"	866	863	612	196
+"GA"	2006	"Forsyth County"	"Chattahoochee"	1091	1088	866	154
+"GA"	2006	"Forsyth County"	"Chestatee"	1361	1355	1089	181
+"GA"	2006	"Forsyth County"	"Coal Mountain"	887	886	734	102
+"GA"	2006	"Forsyth County"	"Concord"	1191	1187	993	140
+"GA"	2006	"Forsyth County"	"Crossroads"	1253	1251	1012	183
+"GA"	2006	"Forsyth County"	"Cumming"	903	898	681	159
+"GA"	2006	"Forsyth County"	"Daves Creek"	552	549	473	55
+"GA"	2006	"Forsyth County"	"Heardsville"	930	927	754	115
+"GA"	2006	"Forsyth County"	"Johns Creek"	1211	1207	986	178
+"GA"	2006	"Forsyth County"	"Lakeland"	377	376	302	49
+"GA"	2006	"Forsyth County"	"Lanier"	752	749	614	94
+"GA"	2006	"Forsyth County"	"Mashburn"	1050	1044	842	142
+"GA"	2006	"Forsyth County"	"Matt"	1220	1216	1019	135
+"GA"	2006	"Forsyth County"	"Midway"	1174	1171	960	154
+"GA"	2006	"Forsyth County"	"Mountainside"	617	612	479	100
+"GA"	2006	"Forsyth County"	"Oakmont-Midway"	571	571	455	87
+"GA"	2006	"Forsyth County"	"Old Atlanta"	1074	1070	915	121
+"GA"	2006	"Forsyth County"	"Otwell"	911	906	682	151
+"GA"	2006	"Forsyth County"	"Piney Grove"	1422	1418	1181	175
+"GA"	2006	"Forsyth County"	"Pleasant Grove"	845	842	693	88
+"GA"	2006	"Forsyth County"	"Polo"	1043	1039	926	94
+"GA"	2006	"Forsyth County"	"Riverclub"	761	760	641	82
+"GA"	2006	"Forsyth County"	"Saint Marlo"	555	554	451	82
+"GA"	2006	"Forsyth County"	"Sawnee"	1154	1150	899	193
+"GA"	2006	"Forsyth County"	"Sharon Fork"	1321	1320	1133	127
+"GA"	2006	"Forsyth County"	"South Forsyth"	1218	1216	1019	149
+"GA"	2006	"Forsyth County"	"Vickery"	1322	1320	1100	153
+"GA"	2006	"Forsyth County"	"Windermere"	1260	1256	1047	163
+"GA"	2006	"Franklin County"	"Ashland"	90	90	59	26
+"GA"	2006	"Franklin County"	"Canon"	388	382	196	176
+"GA"	2006	"Franklin County"	"Carnesville"	544	539	334	185
+"GA"	2006	"Franklin County"	"Dooley"	144	142	94	45
+"GA"	2006	"Franklin County"	"Flintsville"	209	206	116	81
+"GA"	2006	"Franklin County"	"Gumlog"	494	491	325	147
+"GA"	2006	"Franklin County"	"Gunnells"	177	175	122	48
+"GA"	2006	"Franklin County"	"Lavonia"	602	593	324	250
+"GA"	2006	"Franklin County"	"Middle River"	368	366	246	106
+"GA"	2006	"Franklin County"	"Red Hill"	164	163	106	53
+"GA"	2006	"Franklin County"	"Royston"	677	670	420	225
+"GA"	2006	"Franklin County"	"Strange"	244	240	151	82
+"GA"	2006	"Franklin County"	"Welborn"	276	276	177	92
+"GA"	2006	"Fulton County"	"01A"	865	858	143	617
+"GA"	2006	"Fulton County"	"01B"	1232	1213	227	859
+"GA"	2006	"Fulton County"	"01C"	145	144	23	117
+"GA"	2006	"Fulton County"	"01D"	243	237	27	197
+"GA"	2006	"Fulton County"	"01E"	969	955	186	643
+"GA"	2006	"Fulton County"	"01F"	159	157	19	131
+"GA"	2006	"Fulton County"	"01G"	318	315	33	268
+"GA"	2006	"Fulton County"	"01J"	369	367	52	301
+"GA"	2006	"Fulton County"	"01P1"	331	327	33	291
+"GA"	2006	"Fulton County"	"01P2"	3	3	0	3
+"GA"	2006	"Fulton County"	"01R"	315	310	28	278
+"GA"	2006	"Fulton County"	"01S"	386	381	23	347
+"GA"	2006	"Fulton County"	"01T"	352	348	67	259
+"GA"	2006	"Fulton County"	"02A"	538	533	87	417
+"GA"	2006	"Fulton County"	"02B"	336	331	79	224
+"GA"	2006	"Fulton County"	"02C"	440	436	97	306
+"GA"	2006	"Fulton County"	"02D"	784	779	122	612
+"GA"	2006	"Fulton County"	"02E"	733	728	113	500
+"GA"	2006	"Fulton County"	"02F1"	639	635	128	427
+"GA"	2006	"Fulton County"	"02F2"	137	137	21	106
+"GA"	2006	"Fulton County"	"02G"	685	682	132	488
+"GA"	2006	"Fulton County"	"02J"	178	176	30	133
+"GA"	2006	"Fulton County"	"02L1"	1070	1063	303	648
+"GA"	2006	"Fulton County"	"02L2"	85	84	22	50
+"GA"	2006	"Fulton County"	"02S"	546	535	79	419
+"GA"	2006	"Fulton County"	"02W"	278	276	92	158
+"GA"	2006	"Fulton County"	"02X"	360	359	119	187
+"GA"	2006	"Fulton County"	"03A1"	431	421	37	379
+"GA"	2006	"Fulton County"	"03A2"	15	15	4	11
+"GA"	2006	"Fulton County"	"03B1"	149	148	15	132
+"GA"	2006	"Fulton County"	"03B2"	6	6	0	6
+"GA"	2006	"Fulton County"	"03C"	472	471	35	427
+"GA"	2006	"Fulton County"	"03D"	207	206	20	180
+"GA"	2006	"Fulton County"	"03E"	274	269	22	235
+"GA"	2006	"Fulton County"	"03F"	193	193	22	168
+"GA"	2006	"Fulton County"	"03G"	137	136	7	128
+"GA"	2006	"Fulton County"	"03H"	263	261	14	246
+"GA"	2006	"Fulton County"	"03L"	125	122	16	104
+"GA"	2006	"Fulton County"	"03M"	187	186	60	96
+"GA"	2006	"Fulton County"	"03N"	260	257	23	229
+"GA"	2006	"Fulton County"	"03P1"	214	212	62	114
+"GA"	2006	"Fulton County"	"03P2"	47	47	5	42
+"GA"	2006	"Fulton County"	"03R"	454	446	40	397
+"GA"	2006	"Fulton County"	"03S"	231	229	30	196
+"GA"	2006	"Fulton County"	"03T"	363	359	36	316
+"GA"	2006	"Fulton County"	"03U"	158	157	13	139
+"GA"	2006	"Fulton County"	"04A"	253	252	30	216
+"GA"	2006	"Fulton County"	"04B"	278	277	27	241
+"GA"	2006	"Fulton County"	"04D"	506	503	54	443
+"GA"	2006	"Fulton County"	"04E"	408	405	43	352
+"GA"	2006	"Fulton County"	"04G"	144	143	5	135
+"GA"	2006	"Fulton County"	"04H"	213	213	36	173
+"GA"	2006	"Fulton County"	"04K"	451	448	45	391
+"GA"	2006	"Fulton County"	"04L"	304	301	26	267
+"GA"	2006	"Fulton County"	"04M"	168	168	21	144
+"GA"	2006	"Fulton County"	"04S"	677	671	41	620
+"GA"	2006	"Fulton County"	"04T"	304	303	25	273
+"GA"	2006	"Fulton County"	"04V"	311	309	22	280
+"GA"	2006	"Fulton County"	"04W"	277	274	15	253
+"GA"	2006	"Fulton County"	"04X1"	550	549	43	498
+"GA"	2006	"Fulton County"	"04X2"	153	151	14	134
+"GA"	2006	"Fulton County"	"05A"	797	789	123	583
+"GA"	2006	"Fulton County"	"05B"	85	84	10	63
+"GA"	2006	"Fulton County"	"05C"	20	20	4	16
+"GA"	2006	"Fulton County"	"05F"	168	164	12	147
+"GA"	2006	"Fulton County"	"06A"	798	793	222	479
+"GA"	2006	"Fulton County"	"06B"	549	543	164	333
+"GA"	2006	"Fulton County"	"06D"	781	771	267	431
+"GA"	2006	"Fulton County"	"06E"	638	630	156	403
+"GA"	2006	"Fulton County"	"06F"	878	866	227	523
+"GA"	2006	"Fulton County"	"06G"	816	808	157	560
+"GA"	2006	"Fulton County"	"06H"	715	706	235	386
+"GA"	2006	"Fulton County"	"06J"	930	924	235	571
+"GA"	2006	"Fulton County"	"06K"	423	421	80	280
+"GA"	2006	"Fulton County"	"06L"	721	715	285	360
+"GA"	2006	"Fulton County"	"06R"	630	617	212	343
+"GA"	2006	"Fulton County"	"06S"	1318	1299	408	750
+"GA"	2006	"Fulton County"	"07A"	1061	1052	653	335
+"GA"	2006	"Fulton County"	"07B"	1163	1158	801	276
+"GA"	2006	"Fulton County"	"07C"	1156	1146	707	369
+"GA"	2006	"Fulton County"	"07D"	830	825	444	315
+"GA"	2006	"Fulton County"	"07E"	829	823	328	440
+"GA"	2006	"Fulton County"	"07F"	211	210	88	115
+"GA"	2006	"Fulton County"	"07G"	598	592	335	200
+"GA"	2006	"Fulton County"	"07H"	783	778	439	293
+"GA"	2006	"Fulton County"	"07J"	797	793	389	341
+"GA"	2006	"Fulton County"	"07K1"	574	570	290	231
+"GA"	2006	"Fulton County"	"07K2"	29	29	8	18
+"GA"	2006	"Fulton County"	"07M1"	197	195	81	99
+"GA"	2006	"Fulton County"	"07M2"	284	284	144	125
+"GA"	2006	"Fulton County"	"07N"	362	355	120	208
+"GA"	2006	"Fulton County"	"08A"	973	966	649	263
+"GA"	2006	"Fulton County"	"08B"	1241	1229	856	298
+"GA"	2006	"Fulton County"	"08C"	616	613	456	132
+"GA"	2006	"Fulton County"	"08D"	510	506	369	112
+"GA"	2006	"Fulton County"	"08E"	1234	1224	784	373
+"GA"	2006	"Fulton County"	"08F"	1006	998	735	203
+"GA"	2006	"Fulton County"	"08G"	715	707	398	270
+"GA"	2006	"Fulton County"	"08H"	970	959	663	248
+"GA"	2006	"Fulton County"	"08J"	961	959	589	318
+"GA"	2006	"Fulton County"	"08K"	222	220	146	55
+"GA"	2006	"Fulton County"	"08L"	963	956	419	449
+"GA"	2006	"Fulton County"	"08M"	644	637	464	139
+"GA"	2006	"Fulton County"	"08N"	739	731	470	217
+"GA"	2006	"Fulton County"	"08P"	441	438	148	242
+"GA"	2006	"Fulton County"	"09A"	701	696	286	365
+"GA"	2006	"Fulton County"	"09B"	155	152	15	132
+"GA"	2006	"Fulton County"	"09C"	908	896	83	797
+"GA"	2006	"Fulton County"	"09D"	512	504	40	459
+"GA"	2006	"Fulton County"	"09E"	410	408	39	359
+"GA"	2006	"Fulton County"	"09F"	1229	1220	724	428
+"GA"	2006	"Fulton County"	"09G"	505	504	217	233
+"GA"	2006	"Fulton County"	"09K"	212	210	11	199
+"GA"	2006	"Fulton County"	"09L"	496	488	43	433
+"GA"	2006	"Fulton County"	"09M"	416	412	144	222
+"GA"	2006	"Fulton County"	"09N"	208	208	17	189
+"GA"	2006	"Fulton County"	"10A"	1097	1088	81	985
+"GA"	2006	"Fulton County"	"10B"	710	706	54	643
+"GA"	2006	"Fulton County"	"10C"	515	512	37	466
+"GA"	2006	"Fulton County"	"10D"	419	414	54	356
+"GA"	2006	"Fulton County"	"10E"	376	370	27	336
+"GA"	2006	"Fulton County"	"10F"	443	438	46	386
+"GA"	2006	"Fulton County"	"10G"	611	603	61	533
+"GA"	2006	"Fulton County"	"10H"	580	576	36	531
+"GA"	2006	"Fulton County"	"10J"	247	244	27	212
+"GA"	2006	"Fulton County"	"10L"	1153	1145	94	1028
+"GA"	2006	"Fulton County"	"10M1"	464	461	35	412
+"GA"	2006	"Fulton County"	"10M2"	295	294	31	262
+"GA"	2006	"Fulton County"	"10P"	504	500	47	449
+"GA"	2006	"Fulton County"	"10R"	199	199	12	184
+"GA"	2006	"Fulton County"	"11A1"	273	272	14	252
+"GA"	2006	"Fulton County"	"11A2"	162	162	12	150
+"GA"	2006	"Fulton County"	"11A3"	34	34	3	31
+"GA"	2006	"Fulton County"	"11B1"	294	291	20	269
+"GA"	2006	"Fulton County"	"11B2"	720	718	53	660
+"GA"	2006	"Fulton County"	"11C"	764	759	53	697
+"GA"	2006	"Fulton County"	"11E1"	272	270	20	242
+"GA"	2006	"Fulton County"	"11E2"	447	445	43	394
+"GA"	2006	"Fulton County"	"11E3"				
+"GA"	2006	"Fulton County"	"11G"	615	611	70	535
+"GA"	2006	"Fulton County"	"11H1"	669	663	42	605
+"GA"	2006	"Fulton County"	"11H2"	236	235	19	208
+"GA"	2006	"Fulton County"	"11J"	617	616	41	568
+"GA"	2006	"Fulton County"	"11K"	343	343	28	300
+"GA"	2006	"Fulton County"	"11L"	493	489	35	439
+"GA"	2006	"Fulton County"	"11M"	756	755	57	685
+"GA"	2006	"Fulton County"	"11N"	990	985	84	884
+"GA"	2006	"Fulton County"	"11P"	363	355	33	314
+"GA"	2006	"Fulton County"	"11R"	323	319	20	295
+"GA"	2006	"Fulton County"	"12A"	247	244	31	198
+"GA"	2006	"Fulton County"	"12B"	669	658	78	559
+"GA"	2006	"Fulton County"	"12C"	418	418	49	354
+"GA"	2006	"Fulton County"	"12D"	194	193	17	170
+"GA"	2006	"Fulton County"	"12E1"	226	224	20	195
+"GA"	2006	"Fulton County"	"12E2"	1	1	1	0
+"GA"	2006	"Fulton County"	"12F"	203	203	28	171
+"GA"	2006	"Fulton County"	"12G"	239	237	39	192
+"GA"	2006	"Fulton County"	"12H"	728	727	92	621
+"GA"	2006	"Fulton County"	"12J"	476	473	56	408
+"GA"	2006	"Fulton County"	"12L"	109	107	18	85
+"GA"	2006	"Fulton County"	"12M"	83	83	6	77
+"GA"	2006	"Fulton County"	"12S"	474	473	44	411
+"GA"	2006	"Fulton County"	"12T"	582	581	53	521
+"GA"	2006	"Fulton County"	"AP01A"	936	936	651	242
+"GA"	2006	"Fulton County"	"AP01B"	276	276	205	60
+"GA"	2006	"Fulton County"	"AP02"	1394	1389	937	379
+"GA"	2006	"Fulton County"	"AP03"	135	135	67	59
+"GA"	2006	"Fulton County"	"AP04"	736	734	562	138
+"GA"	2006	"Fulton County"	"AP05"	1426	1425	1103	272
+"GA"	2006	"Fulton County"	"AP06"	640	640	476	132
+"GA"	2006	"Fulton County"	"AP07A"	990	987	663	270
+"GA"	2006	"Fulton County"	"AP07B"	409	409	334	64
+"GA"	2006	"Fulton County"	"AP09"	1276	1271	895	299
+"GA"	2006	"Fulton County"	"AP10"	326	326	235	79
+"GA"	2006	"Fulton County"	"AP12"	543	542	322	191
+"GA"	2006	"Fulton County"	"AP13"	602	601	425	158
+"GA"	2006	"Fulton County"	"AP14A"	726	724	525	161
+"GA"	2006	"Fulton County"	"AP14B"	154	154	116	37
+"GA"	2006	"Fulton County"	"AP14C"	114	114	76	34
+"GA"	2006	"Fulton County"	"CP01A"	652	646	230	372
+"GA"	2006	"Fulton County"	"CP01B"	67	67	27	33
+"GA"	2006	"Fulton County"	"CP02A"	205	202	68	128
+"GA"	2006	"Fulton County"	"CP02B"				
+"GA"	2006	"Fulton County"	"CP04"	15	15	2	13
+"GA"	2006	"Fulton County"	"CP05A"	582	580	71	500
+"GA"	2006	"Fulton County"	"CP05B"	11	11	1	10
+"GA"	2006	"Fulton County"	"CP06"	67	66	5	59
+"GA"	2006	"Fulton County"	"CP07A"	175	175	16	157
+"GA"	2006	"Fulton County"	"CP07B"	2	2	0	2
+"GA"	2006	"Fulton County"	"CP07C"	1	1	0	1
+"GA"	2006	"Fulton County"	"CP08A"	51	50	6	41
+"GA"	2006	"Fulton County"	"CP08B"	18	18	2	16
+"GA"	2006	"Fulton County"	"CP08C"	34	34	3	30
+"GA"	2006	"Fulton County"	"EP01"	740	736	109	614
+"GA"	2006	"Fulton County"	"EP02"	321	321	59	251
+"GA"	2006	"Fulton County"	"EP03"	224	223	46	164
+"GA"	2006	"Fulton County"	"EP04"	610	606	150	411
+"GA"	2006	"Fulton County"	"EP05A"	485	481	86	384
+"GA"	2006	"Fulton County"	"EP05B"				
+"GA"	2006	"Fulton County"	"EP06"	738	734	90	624
+"GA"	2006	"Fulton County"	"EP07"	807	802	198	558
+"GA"	2006	"Fulton County"	"EP08"	472	469	28	437
+"GA"	2006	"Fulton County"	"EP09"	636	633	100	517
+"GA"	2006	"Fulton County"	"EP10"	543	542	60	478
+"GA"	2006	"Fulton County"	"EP11"	783	777	94	663
+"GA"	2006	"Fulton County"	"FA01A"	1394	1388	383	975
+"GA"	2006	"Fulton County"	"FA01B"	91	91	8	81
+"GA"	2006	"Fulton County"	"HP01"	819	817	377	381
+"GA"	2006	"Fulton County"	"JC01"	1491	1487	1037	402
+"GA"	2006	"Fulton County"	"JC02"	300	300	219	70
+"GA"	2006	"Fulton County"	"JC03"	696	692	462	201
+"GA"	2006	"Fulton County"	"JC04A"	1303	1298	957	299
+"GA"	2006	"Fulton County"	"JC04B"	71	71	43	20
+"GA"	2006	"Fulton County"	"JC05"	599	596	400	173
+"GA"	2006	"Fulton County"	"JC06"	766	766	590	155
+"GA"	2006	"Fulton County"	"JC07"	1223	1217	839	323
+"GA"	2006	"Fulton County"	"JC08"	940	934	672	225
+"GA"	2006	"Fulton County"	"JC09"	790	790	528	216
+"GA"	2006	"Fulton County"	"JC10"	691	690	410	226
+"GA"	2006	"Fulton County"	"JC11"	1036	1031	782	204
+"GA"	2006	"Fulton County"	"JC12A"	975	973	737	179
+"GA"	2006	"Fulton County"	"JC12B"	20	20	14	6
+"GA"	2006	"Fulton County"	"JC13A"	838	834	682	116
+"GA"	2006	"Fulton County"	"JC13B"	114	114	103	9
+"GA"	2006	"Fulton County"	"JC14"	773	772	601	146
+"GA"	2006	"Fulton County"	"JC15"	233	230	127	83
+"GA"	2006	"Fulton County"	"JC16"	648	646	456	152
+"GA"	2006	"Fulton County"	"JC17"	238	238	155	66
+"GA"	2006	"Fulton County"	"JC18"	1149	1146	800	289
+"GA"	2006	"Fulton County"	"JC19"	1340	1335	905	342
+"GA"	2006	"Fulton County"	"MC01"	6	6	6	0
+"GA"	2006	"Fulton County"	"ML01"	782	778	625	127
+"GA"	2006	"Fulton County"	"ML02A"	522	521	427	76
+"GA"	2006	"Fulton County"	"ML02B"	463	462	380	66
+"GA"	2006	"Fulton County"	"ML03"	1327	1322	1067	182
+"GA"	2006	"Fulton County"	"ML04"	931	924	748	146
+"GA"	2006	"Fulton County"	"ML05"	1279	1275	927	304
+"GA"	2006	"Fulton County"	"ML06"	1002	999	627	328
+"GA"	2006	"Fulton County"	"ML07"	595	591	472	87
+"GA"	2006	"Fulton County"	"MP01"	208	206	107	75
+"GA"	2006	"Fulton County"	"NC1"	430	428	306	98
+"GA"	2006	"Fulton County"	"NC2A"	154	154	88	56
+"GA"	2006	"Fulton County"	"NC2B"	21	21	18	2
+"GA"	2006	"Fulton County"	"NC2C"				
+"GA"	2006	"Fulton County"	"NC2D"				
+"GA"	2006	"Fulton County"	"NC3"	45	45	26	14
+"GA"	2006	"Fulton County"	"NC4A"	188	188	139	40
+"GA"	2006	"Fulton County"	"NC4B"	46	46	25	16
+"GA"	2006	"Fulton County"	"NC4C"				
+"GA"	2006	"Fulton County"	"NC4D"				
+"GA"	2006	"Fulton County"	"PA01"	602	602	182	400
+"GA"	2006	"Fulton County"	"Provisioinal OS 1"	385	377	95	265
+"GA"	2006	"Fulton County"	"RW01"	1638	1634	1173	380
+"GA"	2006	"Fulton County"	"RW02"	1332	1329	916	330
+"GA"	2006	"Fulton County"	"RW03A"	1069	1068	654	356
+"GA"	2006	"Fulton County"	"RW03B"	54	54	29	19
+"GA"	2006	"Fulton County"	"RW04"	797	795	532	208
+"GA"	2006	"Fulton County"	"RW05"	506	505	272	199
+"GA"	2006	"Fulton County"	"RW06"	835	830	555	212
+"GA"	2006	"Fulton County"	"RW07A"	135	135	63	57
+"GA"	2006	"Fulton County"	"RW07B"	179	179	63	109
+"GA"	2006	"Fulton County"	"RW08"	739	735	560	147
+"GA"	2006	"Fulton County"	"RW09"	782	780	618	128
+"GA"	2006	"Fulton County"	"RW10"	1288	1281	894	302
+"GA"	2006	"Fulton County"	"RW11A"	854	851	545	253
+"GA"	2006	"Fulton County"	"RW11B"				
+"GA"	2006	"Fulton County"	"RW12A"	1401	1398	1000	328
+"GA"	2006	"Fulton County"	"RW12B"	55	55	47	5
+"GA"	2006	"Fulton County"	"RW12C"	29	29	12	17
+"GA"	2006	"Fulton County"	"RW13"	1297	1292	917	296
+"GA"	2006	"Fulton County"	"RW15"	1242	1240	974	204
+"GA"	2006	"Fulton County"	"RW16"	678	676	481	146
+"GA"	2006	"Fulton County"	"RW17"	915	913	545	284
+"GA"	2006	"Fulton County"	"RW18"	826	825	581	200
+"GA"	2006	"Fulton County"	"RW19"	582	580	411	145
+"GA"	2006	"Fulton County"	"RW20"	1019	1013	695	266
+"GA"	2006	"Fulton County"	"RW21"	1175	1173	871	242
+"GA"	2006	"Fulton County"	"RW22"	1027	1024	599	364
+"GA"	2006	"Fulton County"	"SC01"	1104	1102	96	991
+"GA"	2006	"Fulton County"	"SC02"	766	764	80	662
+"GA"	2006	"Fulton County"	"SC04"	317	313	200	101
+"GA"	2006	"Fulton County"	"SC05"	909	906	172	725
+"GA"	2006	"Fulton County"	"SC06"	473	472	330	119
+"GA"	2006	"Fulton County"	"SC07"	874	872	273	574
+"GA"	2006	"Fulton County"	"SC08A"	1201	1198	138	1044
+"GA"	2006	"Fulton County"	"SC08B"				
+"GA"	2006	"Fulton County"	"SC09"	1366	1362	158	1186
+"GA"	2006	"Fulton County"	"SC10"	367	366	40	318
+"GA"	2006	"Fulton County"	"SC11"	933	930	70	847
+"GA"	2006	"Fulton County"	"SC12"	494	492	247	227
+"GA"	2006	"Fulton County"	"SC13A"	1030	1024	145	855
+"GA"	2006	"Fulton County"	"SC13B"	294	294	46	237
+"GA"	2006	"Fulton County"	"SC14"	220	220	19	193
+"GA"	2006	"Fulton County"	"SC16A"	1291	1286	111	1156
+"GA"	2006	"Fulton County"	"SC16B"	122	121	12	106
+"GA"	2006	"Fulton County"	"SC17"	357	354	29	317
+"GA"	2006	"Fulton County"	"SC18A"	1090	1086	129	938
+"GA"	2006	"Fulton County"	"SC18B"				
+"GA"	2006	"Fulton County"	"SC19A"	680	676	76	592
+"GA"	2006	"Fulton County"	"SC19B"				
+"GA"	2006	"Fulton County"	"SC19C"				
+"GA"	2006	"Fulton County"	"SC21"	334	333	82	246
+"GA"	2006	"Fulton County"	"SC23"	1118	1114	115	984
+"GA"	2006	"Fulton County"	"SC27"	726	724	61	653
+"GA"	2006	"Fulton County"	"SC29"	945	943	80	848
+"GA"	2006	"Fulton County"	"SC30"	829	824	67	742
+"GA"	2006	"Fulton County"	"SS01"	1360	1354	995	293
+"GA"	2006	"Fulton County"	"SS02A"	495	490	326	131
+"GA"	2006	"Fulton County"	"SS02B"	156	156	78	62
+"GA"	2006	"Fulton County"	"SS03"	609	607	349	217
+"GA"	2006	"Fulton County"	"SS04"	687	685	381	265
+"GA"	2006	"Fulton County"	"SS05"	897	891	631	197
+"GA"	2006	"Fulton County"	"SS06"	565	559	425	107
+"GA"	2006	"Fulton County"	"SS07A"	292	290	190	80
+"GA"	2006	"Fulton County"	"SS07B"	130	130	67	46
+"GA"	2006	"Fulton County"	"SS07C"	182	181	113	58
+"GA"	2006	"Fulton County"	"SS08A"	502	497	268	191
+"GA"	2006	"Fulton County"	"SS08B"	212	211	134	65
+"GA"	2006	"Fulton County"	"SS08C"	86	86	52	30
+"GA"	2006	"Fulton County"	"SS09"	1157	1149	816	281
+"GA"	2006	"Fulton County"	"SS10"	1424	1417	1021	321
+"GA"	2006	"Fulton County"	"SS11A"	11	11	7	4
+"GA"	2006	"Fulton County"	"SS11B"	234	234	96	117
+"GA"	2006	"Fulton County"	"SS11C"	101	100	35	55
+"GA"	2006	"Fulton County"	"SS11D"	163	162	91	63
+"GA"	2006	"Fulton County"	"SS12"	1566	1560	1007	449
+"GA"	2006	"Fulton County"	"SS13A"	587	585	357	191
+"GA"	2006	"Fulton County"	"SS13B"	152	151	94	43
+"GA"	2006	"Fulton County"	"SS14"	584	582	404	152
+"GA"	2006	"Fulton County"	"SS15A"	349	347	106	229
+"GA"	2006	"Fulton County"	"SS15B"	388	385	170	197
+"GA"	2006	"Fulton County"	"SS16"	1086	1082	754	266
+"GA"	2006	"Fulton County"	"SS17"	1008	998	679	268
+"GA"	2006	"Fulton County"	"SS18A"	335	334	230	82
+"GA"	2006	"Fulton County"	"SS18B"	102	101	67	27
+"GA"	2006	"Fulton County"	"SS19"	1095	1094	568	473
+"GA"	2006	"Fulton County"	"SS20"	456	450	253	167
+"GA"	2006	"Fulton County"	"SS22"	796	790	494	234
+"GA"	2006	"Fulton County"	"SS25"	543	539	378	137
+"GA"	2006	"Fulton County"	"SS26"	567	560	199	319
+"GA"	2006	"Fulton County"	"SS29"	841	838	505	273
+"GA"	2006	"Fulton County"	"SS31"	345	345	234	88
+"GA"	2006	"Fulton County"	"UC01"	861	858	103	737
+"GA"	2006	"Fulton County"	"UC02"	1283	1277	186	1066
+"GA"	2006	"Fulton County"	"UC03A"	525	517	259	248
+"GA"	2006	"Fulton County"	"UC03B"				
+"GA"	2006	"Gilmer County"	"BIG CREEK"	992	430	310	93
+"GA"	2006	"Gilmer County"	"BOARDTOWN"	869	413	306	100
+"GA"	2006	"Gilmer County"	"CARTECAY"	1097	446	330	97
+"GA"	2006	"Gilmer County"	"CHERRY LOG"	665	313	212	87
+"GA"	2006	"Gilmer County"	"EAST ELLIJAY"	1169	421	302	97
+"GA"	2006	"Gilmer County"	"ELLIJAY NORTH"	1237	472	330	119
+"GA"	2006	"Gilmer County"	"ELLIJAY NORTHEAST"	1138	413	303	89
+"GA"	2006	"Gilmer County"	"ELLIJAY SOUTH"	1697	628	436	163
+"GA"	2006	"Gilmer County"	"LEACHES"	1475	585	410	151
+"GA"	2006	"Gilmer County"	"MOUNTAINTOWN"	793	343	241	75
+"GA"	2006	"Gilmer County"	"TAILS CREEK"	1147	420	264	136
+"GA"	2006	"Gilmer County"	"TOWN CREEK"	697	297	198	78
+"GA"	2006	"Gilmer County"	"YUKON"	826	357	262	81
+"GA"	2006	"Glascock County"	"Edgehill"	57	56	41	14
+"GA"	2006	"Glascock County"	"Gibson"	231	226	166	57
+"GA"	2006	"Glascock County"	"Mill"	207	203	165	36
+"GA"	2006	"Glascock County"	"Mitchell"	168	164	117	42
+"GA"	2006	"Glynn County"	"Adult Education Center"	994	208	38	168
+"GA"	2006	"Glynn County"	"Ballard Park"	996	297	213	73
+"GA"	2006	"Glynn County"	"Beverly Shores"	2604	660	346	298
+"GA"	2006	"Glynn County"	"C B Greer Elementary School"	3180	1075	761	282
+"GA"	2006	"Glynn County"	"City Recreation Building"	2241	678	327	331
+"GA"	2006	"Glynn County"	"College Place Methodist Church"	759	233	83	145
+"GA"	2006	"Glynn County"	"Glyndale"	1285	407	281	114
+"GA"	2006	"Glynn County"	"Goodyear Elementary School"	1468	418	258	143
+"GA"	2006	"Glynn County"	"Jekyll Island"	631	333	185	132
+"GA"	2006	"Glynn County"	"Northside Baptist Church A"	674	246	168	72
+"GA"	2006	"Glynn County"	"Northside Baptist Church B"	2887	851	434	390
+"GA"	2006	"Glynn County"	"Oglethorpe Point Elementary A"	1734	613	474	122
+"GA"	2006	"Glynn County"	"Oglethorpe Point Elementary B"	2428	936	715	195
+"GA"	2006	"Glynn County"	"Risley Middle School"	705	169	30	136
+"GA"	2006	"Glynn County"	"Satilla Marsh Elementary A"	2131	775	549	200
+"GA"	2006	"Glynn County"	"Satilla Marsh Elementary B"	1569	557	372	175
+"GA"	2006	"Glynn County"	"Selden Park"	1416	232	79	150
+"GA"	2006	"Glynn County"	"St. Simons First Baptist Church"	2877	1006	702	265
+"GA"	2006	"Glynn County"	"St. Williams Catholic Church"	3562	1261	924	303
+"GA"	2006	"Glynn County"	"Sterling Baptist Church"	2713	870	646	209
+"GA"	2006	"Glynn County"	"Sterling Church of God"	2718	661	425	218
+"GA"	2006	"Gordon County"	"CALHOUN CITY"	5136	1731	1189	472
+"GA"	2006	"Gordon County"	"FAIRMOUNT"	1014	416	298	99
+"GA"	2006	"Gordon County"	"GORDON COUNTY"	4293	1349	943	360
+"GA"	2006	"Gordon County"	"LILY POND"	1170	455	320	108
+"GA"	2006	"Gordon County"	"OAKMAN"	727	241	142	90
+"GA"	2006	"Gordon County"	"OOSTANAULA"	477	225	142	75
+"GA"	2006	"Gordon County"	"PINE CHAPEL"	741	290	217	63
+"GA"	2006	"Gordon County"	"PLAINVILLE"	1367	470	331	119
+"GA"	2006	"Gordon County"	"RANGER"	504	190	130	51
+"GA"	2006	"Gordon County"	"RED BUD"	1639	517	370	129
+"GA"	2006	"Gordon County"	"RESACA"	959	366	261	95
+"GA"	2006	"Gordon County"	"SONORAVILLE"	3509	1224	847	319
+"GA"	2006	"Gordon County"	"SUGAR VALLEY"	1026	377	264	102
+"GA"	2006	"Grady County"	"Blowing Cave"	201	201	137	63
+"GA"	2006	"Grady County"	"Cairo 04"	623	609	155	447
+"GA"	2006	"Grady County"	"Cairo 05"	634	628	397	225
+"GA"	2006	"Grady County"	"Duncanville"	179	176	103	68
+"GA"	2006	"Grady County"	"Higdon"	291	287	173	114
+"GA"	2006	"Grady County"	"Limesink"	104	104	70	34
+"GA"	2006	"Grady County"	"Midway"	327	322	215	98
+"GA"	2006	"Grady County"	"Pine Park"	204	202	126	75
+"GA"	2006	"Grady County"	"Ragan"	198	197	94	100
+"GA"	2006	"Grady County"	"Spence"	205	205	150	48
+"GA"	2006	"Grady County"	"Spring Hill"	219	218	150	65
+"GA"	2006	"Grady County"	"Whigham"	365	361	202	154
+"GA"	2006	"Grady County"	"Woodland"	507	504	351	142
+"GA"	2006	"Greene County"	"Greensboro"	2590	778	346	412
+"GA"	2006	"Greene County"	"Greshamville"	560	242	179	57
+"GA"	2006	"Greene County"	"Liberty"	397	175	130	37
+"GA"	2006	"Greene County"	"Old Salem"	2593	1261	1106	116
+"GA"	2006	"Greene County"	"Siloam"	910	335	147	179
+"GA"	2006	"Greene County"	"Union Point"	986	380	186	189
+"GA"	2006	"Greene County"	"White Plains"	346	149	76	69
+"GA"	2006	"Greene County"	"Woodville"	527	225	93	121
+"GA"	2006	"Gwinnett County"	"001 Harbins A"	2760	1129	810	271
+"GA"	2006	"Gwinnett County"	"002 Rockbridge A"	2121	820	394	393
+"GA"	2006	"Gwinnett County"	"003 Dacula"	3507	1421	1001	356
+"GA"	2006	"Gwinnett County"	"004 Suwanee A"	1506	614	445	140
+"GA"	2006	"Gwinnett County"	"005 Baycreek A"	3831	1604	1108	428
+"GA"	2006	"Gwinnett County"	"006 Goodwins A"	2583	1094	699	326
+"GA"	2006	"Gwinnett County"	"007 Duluth A"	3052	1284	859	357
+"GA"	2006	"Gwinnett County"	"008 Duncans A"	2772	1113	919	154
+"GA"	2006	"Gwinnett County"	"009 Pucketts A"	2695	1166	867	243
+"GA"	2006	"Gwinnett County"	"010 Cates A"	1875	730	517	175
+"GA"	2006	"Gwinnett County"	"011 Berkshire A"	1388	528	284	214
+"GA"	2006	"Gwinnett County"	"012 Berkshire B"	2585	1061	517	492
+"GA"	2006	"Gwinnett County"	"013 Berkshire K"	455	214	120	85
+"GA"	2006	"Gwinnett County"	"014 Garners A"	2744	1379	1002	289
+"GA"	2006	"Gwinnett County"	"015 Lawrenceville A"	2247	750	491	220
+"GA"	2006	"Gwinnett County"	"016 Lawrenceville B"	2647	1122	598	481
+"GA"	2006	"Gwinnett County"	"017 Martins A"	1338	459	167	266
+"GA"	2006	"Gwinnett County"	"018 Martins B"	1685	668	390	238
+"GA"	2006	"Gwinnett County"	"019 Martins C"	1556	645	405	187
+"GA"	2006	"Gwinnett County"	"020 Pinckneyville A"	1059	371	136	218
+"GA"	2006	"Gwinnett County"	"021 Pinckneyville B"	819	330	149	152
+"GA"	2006	"Gwinnett County"	"022 Pinckneyville C"	1310	721	502	182
+"GA"	2006	"Gwinnett County"	"023 Pinckneyville D"	1398	404	125	254
+"GA"	2006	"Gwinnett County"	"024 Sugar Hill A"	1401	518	279	214
+"GA"	2006	"Gwinnett County"	"025 Sugar Hill B"	3006	1213	874	281
+"GA"	2006	"Gwinnett County"	"026 Hog Mountain A"	2056	824	551	251
+"GA"	2006	"Gwinnett County"	"027 Hog Mountain B"	2855	1234	892	285
+"GA"	2006	"Gwinnett County"	"028 Rockycreek A"	2193	906	665	197
+"GA"	2006	"Gwinnett County"	"029 Cates B"	1260	647	476	141
+"GA"	2006	"Gwinnett County"	"030 Cates C"	1731	710	442	237
+"GA"	2006	"Gwinnett County"	"031 Berkshire C"	1000	505	370	111
+"GA"	2006	"Gwinnett County"	"032 Berkshire D"	1312	660	472	153
+"GA"	2006	"Gwinnett County"	"033 Berkshire E"	1613	804	561	193
+"GA"	2006	"Gwinnett County"	"034 Berkshire F"	1217	474	262	178
+"GA"	2006	"Gwinnett County"	"035 Cates D"	2284	1028	706	248
+"GA"	2006	"Gwinnett County"	"036 Cates E"	2136	1039	734	242
+"GA"	2006	"Gwinnett County"	"037 Pinckneyville E"	915	339	135	179
+"GA"	2006	"Gwinnett County"	"038 Pinckneyville F"	827	297	167	111
+"GA"	2006	"Gwinnett County"	"039 Pinckneyville G"	1143	566	336	189
+"GA"	2006	"Gwinnett County"	"040 Pinckneyville H"	2476	1089	690	309
+"GA"	2006	"Gwinnett County"	"041 Baycreek B"	2779	1154	678	435
+"GA"	2006	"Gwinnett County"	"042 Lawrenceville C"	1943	860	618	201
+"GA"	2006	"Gwinnett County"	"043 Martins D"	1029	389	175	200
+"GA"	2006	"Gwinnett County"	"044 Rockbridge B"	2359	956	500	401
+"GA"	2006	"Gwinnett County"	"045 Garners B"	2314	1008	555	404
+"GA"	2006	"Gwinnett County"	"046 Cates F"	1461	703	546	133
+"GA"	2006	"Gwinnett County"	"047 Cates G"	2251	1102	850	204
+"GA"	2006	"Gwinnett County"	"048 Duluth B"	2391	1006	681	254
+"GA"	2006	"Gwinnett County"	"049 Garners C"	1404	629	389	199
+"GA"	2006	"Gwinnett County"	"050 Pinckneyville I"	1197	466	231	216
+"GA"	2006	"Gwinnett County"	"051 Pinckneyville J"	787	276	98	155
+"GA"	2006	"Gwinnett County"	"052 Berkshire G"	1201	645	459	140
+"GA"	2006	"Gwinnett County"	"053 Cates H"	2143	787	444	310
+"GA"	2006	"Gwinnett County"	"054 Sugar Hill C"	2711	1192	884	249
+"GA"	2006	"Gwinnett County"	"055 Sugar Hill D"	1763	584	442	111
+"GA"	2006	"Gwinnett County"	"056 Duluth C"	1518	641	405	194
+"GA"	2006	"Gwinnett County"	"057 Duluth D"	2759	1067	645	356
+"GA"	2006	"Gwinnett County"	"058 Pinckneyville K"	1891	630	263	346
+"GA"	2006	"Gwinnett County"	"059 Pinckneyville N"	1874	657	246	369
+"GA"	2006	"Gwinnett County"	"060 Lawrenceville D"	1266	311	142	156
+"GA"	2006	"Gwinnett County"	"061 Lawrenceville E"	1629	689	507	152
+"GA"	2006	"Gwinnett County"	"062 Pinckneyville L"	1855	1051	791	206
+"GA"	2006	"Gwinnett County"	"063 Pinckneyville M"	1925	1004	781	179
+"GA"	2006	"Gwinnett County"	"064 Garners D"	2169	971	413	526
+"GA"	2006	"Gwinnett County"	"065 Berkshire H"	723	284	150	119
+"GA"	2006	"Gwinnett County"	"066 Pinckneyville O"	1895	713	269	389
+"GA"	2006	"Gwinnett County"	"067 Berkshire I"	1914	1028	683	270
+"GA"	2006	"Gwinnett County"	"068 Cates I"	2506	1191	856	286
+"GA"	2006	"Gwinnett County"	"069 Cates J"	2226	1071	684	323
+"GA"	2006	"Gwinnett County"	"070 Goodwins B"	2703	1260	932	263
+"GA"	2006	"Gwinnett County"	"071 Lawrenceville F"	2139	746	390	332
+"GA"	2006	"Gwinnett County"	"072 Martins E"	2239	600	140	432
+"GA"	2006	"Gwinnett County"	"073 Pinckneyville P"	1399	714	457	216
+"GA"	2006	"Gwinnett County"	"074 Pinckneyville Q"	832	327	88	222
+"GA"	2006	"Gwinnett County"	"075 Rockbridge C"	2646	1109	483	590
+"GA"	2006	"Gwinnett County"	"076 Rockbridge D"	2236	954	461	474
+"GA"	2006	"Gwinnett County"	"077 Goodwins C"	3813	1202	693	459
+"GA"	2006	"Gwinnett County"	"078 Pinckneyville R"	795	271	84	172
+"GA"	2006	"Gwinnett County"	"079 Cates K"	1929	914	669	198
+"GA"	2006	"Gwinnett County"	"080 Baycreek C"	2893	1235	835	335
+"GA"	2006	"Gwinnett County"	"081 Cates L"	2752	1130	743	329
+"GA"	2006	"Gwinnett County"	"082 Duluth E"	1120	462	240	187
+"GA"	2006	"Gwinnett County"	"083 Goodwins D"	3440	1389	905	395
+"GA"	2006	"Gwinnett County"	"084 Lawrenceville G"	1583	614	302	281
+"GA"	2006	"Gwinnett County"	"085 Lawrenceville H"	2110	920	656	203
+"GA"	2006	"Gwinnett County"	"086 Martins F"	1248	461	227	216
+"GA"	2006	"Gwinnett County"	"087 Pinckneyville S"	1741	744	433	259
+"GA"	2006	"Gwinnett County"	"088 Rockbridge E"	2670	1049	450	544
+"GA"	2006	"Gwinnett County"	"089 Sugar Hill E"	1592	697	517	142
+"GA"	2006	"Gwinnett County"	"090 Lawrenceville I"	2245	780	483	261
+"GA"	2006	"Gwinnett County"	"091 Baycreek D"	3233	1501	1081	372
+"GA"	2006	"Gwinnett County"	"092 Berkshire J"	2011	1040	730	262
+"GA"	2006	"Gwinnett County"	"093 Cates M"	3027	1403	1057	278
+"GA"	2006	"Gwinnett County"	"094 Cates N"	1978	894	698	167
+"GA"	2006	"Gwinnett County"	"095 Duluth F"	1246	360	156	188
+"GA"	2006	"Gwinnett County"	"096 Duluth G"	1728	809	589	167
+"GA"	2006	"Gwinnett County"	"097 Goodwins E"	3292	1286	882	339
+"GA"	2006	"Gwinnett County"	"098 Goodwins F"	1819	794	532	223
+"GA"	2006	"Gwinnett County"	"099 Pinckneyville T"	1917	809	509	252
+"GA"	2006	"Gwinnett County"	"100 Suwanee B"	2520	1099	794	250
+"GA"	2006	"Gwinnett County"	"101 Pinckneyville U"	1328	665	383	243
+"GA"	2006	"Gwinnett County"	"102 Pucketts B"	3606	1482	1055	353
+"GA"	2006	"Gwinnett County"	"103 Berkshire L"	1630	674	366	265
+"GA"	2006	"Gwinnett County"	"104 Rockbridge F"	2929	1208	549	622
+"GA"	2006	"Gwinnett County"	"105 Sugar Hill F"	2395	1040	758	226
+"GA"	2006	"Gwinnett County"	"106 Suwanee C"	2529	1091	764	268
+"GA"	2006	"Gwinnett County"	"107 Cates O"	855	479	356	96
+"GA"	2006	"Gwinnett County"	"108 Baycreek E"	2870	1184	835	306
+"GA"	2006	"Gwinnett County"	"109 Berkshire M"	1167	588	438	121
+"GA"	2006	"Gwinnett County"	"110 Martins G"	1349	561	295	227
+"GA"	2006	"Gwinnett County"	"111 Duluth H"	1737	649	457	160
+"GA"	2006	"Gwinnett County"	"112 Berkshire N"	949	515	375	116
+"GA"	2006	"Gwinnett County"	"113 Pinckneyville V"	1255	459	228	217
+"GA"	2006	"Gwinnett County"	"114 Pinckneyville W"	1084	395	193	180
+"GA"	2006	"Gwinnett County"	"115 Martins H"	2584	1021	601	379
+"GA"	2006	"Gwinnett County"	"116 Martins I"	1881	694	283	381
+"GA"	2006	"Gwinnett County"	"117 Martins J"	1854	655	249	372
+"GA"	2006	"Gwinnett County"	"118 Garners F"	1268	652	468	147
+"GA"	2006	"Gwinnett County"	"119 Bershire O"	1952	984	722	197
+"GA"	2006	"Gwinnett County"	"120 Berkshire P"	879	396	234	133
+"GA"	2006	"Gwinnett County"	"121 Pinckneyville X"	2098	1008	676	274
+"GA"	2006	"Gwinnett County"	"122 Rockbridge G"	2789	1185	493	645
+"GA"	2006	"Gwinnett County"	"123 Pinckneyville Y"	1058	414	184	198
+"GA"	2006	"Gwinnett County"	"124 Goodwins G"	1453	514	265	226
+"GA"	2006	"Gwinnett County"	"125 Pinckneyville Z"	1555	871	678	142
+"GA"	2006	"Gwinnett County"	"126 Pinckneyville A1"	2191	1198	886	239
+"GA"	2006	"Gwinnett County"	"127 Lawrenceville J"	1388	606	331	243
+"GA"	2006	"Gwinnett County"	"128 Goodwins H"	1910	801	515	238
+"GA"	2006	"Gwinnett County"	"129 Duncans B"	3549	1572	1296	214
+"GA"	2006	"Gwinnett County"	"130 Suwanee D"	2633	1156	900	200
+"GA"	2006	"Gwinnett County"	"131 Suwanee E"	3999	1874	1471	313
+"GA"	2006	"Gwinnett County"	"132 Lawrenceville K"	2239	1011	697	271
+"GA"	2006	"Gwinnett County"	"133 Harbins B"	1927	802	627	149
+"GA"	2006	"Gwinnett County"	"134 Baycreek F"	1824	787	507	251
+"GA"	2006	"Gwinnett County"	"135 Pucketts C"	3123	1392	1094	245
+"GA"	2006	"Gwinnett County"	"136 Hog Mountain C"	2648	966	700	219
+"GA"	2006	"Gwinnett County"	"137 Rockycreek B"	2956	1158	839	290
+"GA"	2006	"Gwinnett County"	"138 Duluth I"	2262	991	743	210
+"GA"	2006	"Gwinnett County"	"139 Martins K"	2350	922	390	487
+"GA"	2006	"Gwinnett County"	"140 Duluth J"	1484	509	271	213
+"GA"	2006	"Gwinnett County"	"141 Sugar Hill G"	1727	798	597	164
+"GA"	2006	"Gwinnett County"	"142 Suwanee F"	2572	1157	760	348
+"GA"	2006	"Gwinnett County"	"143 Lawrenceville L"	2740	1133	733	350
+"GA"	2006	"Gwinnett County"	"144 Lawrenceville M"	3371	1050	456	550
+"GA"	2006	"Gwinnett County"	"145 Baycreek G"	2191	892	634	221
+"GA"	2006	"Gwinnett County"	"146 Baycreek H"	2457	1142	884	196
+"GA"	2006	"Gwinnett County"	"147 Baycreek I"	2855	1087	698	346
+"GA"	2006	"Gwinnett County"	"148 Berkshire Q"	1104	578	405	131
+"GA"	2006	"Gwinnett County"	"149 Goodwins I"	1757	862	647	178
+"GA"	2006	"Gwinnett County"	"150 Duluth K"	1098	326	132	183
+"GA"	2006	"Gwinnett County"	"151 Harbins C"	1167	535	440	76
+"GA"	2006	"Gwinnett County"	"152 Rockycreek C"	2320	973	724	206
+"GA"	2006	"Gwinnett County"	"153 Lawrenceville N"	1569	564	369	166
+"GA"	2006	"Gwinnett County"	"154 Pucketts D"	1835	834	655	152
+"GA"	2006	"Gwinnett County"	"155 Suwanee G"	1951	818	585	196
+"GA"	2006	"Gwinnett County"	"156 Baycreek J"	1568	605	366	212
+"GA"	2006	"Gwinnett County"	"157 Duncans C"	1930	829	684	127
+"GA"	2006	"Gwinnett County"	"158 Hog Mountain D"	1740	648	485	138
+"GA"	2006	"Gwinnett County"	"Baldwin"	272	269	201	66
+"GA"	2006	"Gwinnett County"	"Batesville"	220	215	153	47
+"GA"	2006	"Gwinnett County"	"Center Hill"	708	704	564	127
+"GA"	2006	"Gwinnett County"	"Clarkesville"	679	676	519	132
+"GA"	2006	"Gwinnett County"	"Cool Springs"	341	338	244	72
+"GA"	2006	"Gwinnett County"	"Cornelia"	508	507	327	154
+"GA"	2006	"Gwinnett County"	"Deep Creek"	389	389	285	83
+"GA"	2006	"Gwinnett County"	"Demorest"	469	467	337	108
+"GA"	2006	"Gwinnett County"	"Fair Play"	457	454	357	81
+"GA"	2006	"Gwinnett County"	"Falling Water"	249	248	191	50
+"GA"	2006	"Gwinnett County"	"Fork"	410	408	298	90
+"GA"	2006	"Gwinnett County"	"Glade Creek"	387	387	313	58
+"GA"	2006	"Gwinnett County"	"Mud Creek"	402	400	308	77
+"GA"	2006	"Gwinnett County"	"View"	423	421	320	78
+"GA"	2006	"Hall County"	"Agriculture Center"	1754	749	613	116
+"GA"	2006	"Hall County"	"Bark Camp"	1839	837	678	128
+"GA"	2006	"Hall County"	"Big Hickory"	2544	1184	994	138
+"GA"	2006	"Hall County"	"Candler"	1390	687	553	97
+"GA"	2006	"Hall County"	"Chestatee"	1895	757	605	126
+"GA"	2006	"Hall County"	"Chicopee"	765	280	192	73
+"GA"	2006	"Hall County"	"Clermont"	1998	941	778	117
+"GA"	2006	"Hall County"	"Flowery Branch I"	2422	1116	855	197
+"GA"	2006	"Hall County"	"Flowery Branch II"	1736	763	574	138
+"GA"	2006	"Hall County"	"Fork"	2349	1002	792	160
+"GA"	2006	"Hall County"	"Friendship I"	3037	1049	853	149
+"GA"	2006	"Hall County"	"Friendship II"	1669	778	640	108
+"GA"	2006	"Hall County"	"Friendship III"	2031	803	623	148
+"GA"	2006	"Hall County"	"Gainesville I"	1393	649	502	112
+"GA"	2006	"Hall County"	"Gainesville II"	1706	601	94	498
+"GA"	2006	"Hall County"	"Gainesville III"	2716	711	461	220
+"GA"	2006	"Hall County"	"Gainesville IV"	1511	607	398	157
+"GA"	2006	"Hall County"	"Gainesville Mill"	204	65	34	29
+"GA"	2006	"Hall County"	"Gainesville V"	1104	383	261	94
+"GA"	2006	"Hall County"	"Gillsville"	706	331	248	68
+"GA"	2006	"Hall County"	"Glade"	992	434	334	81
+"GA"	2006	"Hall County"	"Lula"	2129	845	655	165
+"GA"	2006	"Hall County"	"Morgan I"	2822	1234	989	184
+"GA"	2006	"Hall County"	"Morgan II"	1393	518	367	133
+"GA"	2006	"Hall County"	"Morgan III"	1443	701	595	80
+"GA"	2006	"Hall County"	"Murrayville"	1635	660	506	111
+"GA"	2006	"Hall County"	"New Holland"	1261	487	332	116
+"GA"	2006	"Hall County"	"Oakwood I"	1405	474	327	128
+"GA"	2006	"Hall County"	"Oakwood II"	1040	510	420	57
+"GA"	2006	"Hall County"	"Oakwood III"	1862	822	610	168
+"GA"	2006	"Hall County"	"Quillians"	1686	821	652	122
+"GA"	2006	"Hall County"	"Riverbend"	996	399	286	92
+"GA"	2006	"Hall County"	"Roberts"	2744	1173	915	198
+"GA"	2006	"Hall County"	"Tadmore"	2658	858	553	274
+"GA"	2006	"Hall County"	"West Whelchel"	3064	1491	1232	188
+"GA"	2006	"Hall County"	"Whelchel I"	1695	739	573	124
+"GA"	2006	"Hall County"	"Whelchel II"	1258	572	454	93
+"GA"	2006	"Hall County"	"Wilson I"	1210	485	353	112
+"GA"	2006	"Hall County"	"Wilson II"	1257	511	406	83
+"GA"	2006	"Hancock County"	"Berea-Steadman"	470	187	145	34
+"GA"	2006	"Hancock County"	"Bremen"	4023	1486	1035	398
+"GA"	2006	"Hancock County"	"Buchanan"	1667	532	342	160
+"GA"	2006	"Hancock County"	"Buncombe"	667	275	177	84
+"GA"	2006	"Hancock County"	"Corinth"	1110	463	310	126
+"GA"	2006	"Hancock County"	"Devereux 1A"	205	203	25	176
+"GA"	2006	"Hancock County"	"Devereux 1B"	443	439	154	271
+"GA"	2006	"Hancock County"	"Felton"	249	110	83	22
+"GA"	2006	"Hancock County"	"Linton A"	285	279	98	175
+"GA"	2006	"Hancock County"	"Linton B"	182	182	58	121
+"GA"	2006	"Hancock County"	"Little Creek"	517	239	159	60
+"GA"	2006	"Hancock County"	"Mayfield 3A"	136	134	20	108
+"GA"	2006	"Hancock County"	"Mayfield 3B"	184	181	32	147
+"GA"	2006	"Hancock County"	"Mt View"	224	113	97	15
+"GA"	2006	"Hancock County"	"Seventh"	1231	420	286	117
+"GA"	2006	"Hancock County"	"Sparta"	385	374	50	318
+"GA"	2006	"Hancock County"	"Tallapoosa"	2310	829	512	274
+"GA"	2006	"Hancock County"	"Twentieth"	500	212	145	61
+"GA"	2006	"Hancock County"	"Waco"	740	301	211	73
+"GA"	2006	"Harris County"	"CATAULA"	1938	727	538	178
+"GA"	2006	"Harris County"	"ELLERSLIE"	2407	947	672	249
+"GA"	2006	"Harris County"	"GOODMAN"	1133	444	277	150
+"GA"	2006	"Harris County"	"HAMILTON"	1594	480	256	211
+"GA"	2006	"Harris County"	"LOWER 19TH"	1815	693	493	182
+"GA"	2006	"Harris County"	"MULBERRY GROVE"	2033	667	522	133
+"GA"	2006	"Harris County"	"PINE MOUTAIN VALLEY"	877	354	252	90
+"GA"	2006	"Harris County"	"SKINNER"	703	341	231	103
+"GA"	2006	"Harris County"	"UPPER 19TH"	1078	403	302	89
+"GA"	2006	"Harris County"	"VALLEY PLAINS"	608	241	144	93
+"GA"	2006	"Harris County"	"WAVERLY HALL"	1620	574	310	252
+"GA"	2006	"Harris County"	"WHITESVILLE"	1076	466	329	120
+"GA"	2006	"Hart County"	"Bio"	943	443	231	197
+"GA"	2006	"Hart County"	"Bowersville"	950	478	214	245
+"GA"	2006	"Hart County"	"Cokesbury"	905	366	151	203
+"GA"	2006	"Hart County"	"Goldmine"	1265	566	328	223
+"GA"	2006	"Hart County"	"Hartwell"	4613	1892	926	920
+"GA"	2006	"Hart County"	"Reed Creek"	2023	1009	581	383
+"GA"	2006	"Hart County"	"Shoal Creek"	1010	488	282	195
+"GA"	2006	"Heard County"	"CENTRALHATCHEE"	264	263	186	66
+"GA"	2006	"Heard County"	"COOKSVILLE-CORINTH"	136	135	86	42
+"GA"	2006	"Heard County"	"ENON GROVE"	249	247	177	59
+"GA"	2006	"Heard County"	"EPHESUS"	191	191	139	47
+"GA"	2006	"Heard County"	"FRANKLIN"	449	445	273	157
+"GA"	2006	"Heard County"	"GLENLOCH"	138	138	105	26
+"GA"	2006	"Heard County"	"ROOSTERVILLE"	270	270	206	53
+"GA"	2006	"Heard County"	"SOUTHWEST"	236	235	142	83
+"GA"	2006	"Heard County"	"WALNUT HILL"	139	138	88	42
+"GA"	2006	"Henry County"	"AUSTIN RD"	1277	1275	732	498
+"GA"	2006	"Henry County"	"COTTON INDIAN"	837	833	559	234
+"GA"	2006	"Henry County"	"DUTCHTOWN"	691	689	498	148
+"GA"	2006	"Henry County"	"EAST LAKE"	784	783	632	125
+"GA"	2006	"Henry County"	"ELLENWOOD"	1257	1255	358	876
+"GA"	2006	"Henry County"	"FLIPPEN"	967	964	491	438
+"GA"	2006	"Henry County"	"GROVE PARK"	644	643	419	194
+"GA"	2006	"Henry County"	"HICKORY FLAT"	1166	1160	642	494
+"GA"	2006	"Henry County"	"HIDDEN VALLEY"	929	926	412	475
+"GA"	2006	"Henry County"	"KELLEYTOWN"	1056	1054	755	240
+"GA"	2006	"Henry County"	"LAKE DOW"	1082	1080	819	213
+"GA"	2006	"Henry County"	"LAKE HAVEN"	928	924	688	197
+"GA"	2006	"Henry County"	"LOCUST GROVE"	844	840	477	329
+"GA"	2006	"Henry County"	"LOWES"	1213	1210	753	407
+"GA"	2006	"Henry County"	"MCDONOUGH"	268	267	166	94
+"GA"	2006	"Henry County"	"MCDONOUGH CENTRAL"	660	657	374	253
+"GA"	2006	"Henry County"	"MCMULLEN"	759	754	589	124
+"GA"	2006	"Henry County"	"MT. BETHEL"	506	506	391	103
+"GA"	2006	"Henry County"	"MT. CARMEL"	523	522	307	194
+"GA"	2006	"Henry County"	"NORTH HAMPTON"	1176	1175	725	405
+"GA"	2006	"Henry County"	"OAKLAND"	852	850	607	216
+"GA"	2006	"Henry County"	"PATES CREEK"	1398	1394	905	428
+"GA"	2006	"Henry County"	"PLEASANT GROVE"	1201	1199	787	357
+"GA"	2006	"Henry County"	"SANDY RIDGE"	940	939	677	224
+"GA"	2006	"Henry County"	"SHAKERAG"	1118	1117	232	850
+"GA"	2006	"Henry County"	"SOUTH CEDAR"	864	857	341	494
+"GA"	2006	"Henry County"	"SOUTH HAMPTON"	1015	1012	709	265
+"GA"	2006	"Henry County"	"SPIVEY COMMUNITY"	1236	1234	400	803
+"GA"	2006	"Henry County"	"STAGECOACH"	717	717	449	229
+"GA"	2006	"Henry County"	"STOCKBRIDGE CENTRAL"	821	818	401	377
+"GA"	2006	"Henry County"	"STOCKBRIDGE EAST"	436	436	201	215
+"GA"	2006	"Henry County"	"STOCKBRIDGE WEST"	816	816	248	551
+"GA"	2006	"Henry County"	"SWAN LAKE"	600	598	349	215
+"GA"	2006	"Henry County"	"TIMBERRIDGE"	571	570	457	81
+"GA"	2006	"Henry County"	"TUSSAHAW"	918	915	725	154
+"GA"	2006	"Henry County"	"UNITY GROVE"	946	943	696	203
+"GA"	2006	"Henry County"	"WESLEY LAKES"	953	949	440	468
+"GA"	2006	"Henry County"	"WESTSIDE"	758	753	283	440
+"GA"	2006	"Houston County"	"ANNX"	506	505	368	124
+"GA"	2006	"Houston County"	"BMS"	1401	1400	1096	245
+"GA"	2006	"Houston County"	"BON"	1200	1195	905	241
+"GA"	2006	"Houston County"	"CENT"	1101	1095	766	284
+"GA"	2006	"Houston County"	"ELBC"	362	359	123	228
+"GA"	2006	"Houston County"	"ESES"	1138	1136	725	373
+"GA"	2006	"Houston County"	"FMMS"	2368	2366	1694	626
+"GA"	2006	"Houston County"	"HAFS"	541	530	320	193
+"GA"	2006	"Houston County"	"HCHS"	1019	1017	761	222
+"GA"	2006	"Houston County"	"HCTC"	803	799	526	244
+"GA"	2006	"Houston County"	"HEFS"	348	343	188	148
+"GA"	2006	"Houston County"	"KATH"	627	626	451	159
+"GA"	2006	"Houston County"	"LIND"	569	565	210	336
+"GA"	2006	"Houston County"	"MAES"	1067	1066	822	212
+"GA"	2006	"Houston County"	"MALL"	971	968	642	297
+"GA"	2006	"Houston County"	"MILL"	874	869	585	245
+"GA"	2006	"Houston County"	"MORN"	537	534	302	212
+"GA"	2006	"Houston County"	"NSES"	905	904	588	274
+"GA"	2006	"Houston County"	"NSMS"	1124	1120	597	498
+"GA"	2006	"Houston County"	"NSSH"	689	684	391	265
+"GA"	2006	"Houston County"	"PERL"	447	441	162	267
+"GA"	2006	"Houston County"	"PPS"	1679	1661	1096	521
+"GA"	2006	"Houston County"	"QRUN"	964	960	744	186
+"GA"	2006	"Houston County"	"RECR"	208	207	118	82
+"GA"	2006	"Houston County"	"ROZR"	906	904	734	144
+"GA"	2006	"Houston County"	"RUSS"	919	916	570	312
+"GA"	2006	"Houston County"	"TWPK"	912	910	624	262
+"GA"	2006	"Houston County"	"WATS"	250	250	141	99
+"GA"	2006	"Irwin County"	"Fletcher"	293	160	136	23
+"GA"	2006	"Irwin County"	"Holt"	206	98	53	44
+"GA"	2006	"Irwin County"	"Irwinville"	542	263	184	71
+"GA"	2006	"Irwin County"	"Minnie"	250	129	98	27
+"GA"	2006	"Irwin County"	"Mystic"	355	178	121	54
+"GA"	2006	"Irwin County"	"Ocilla"	2100	663	303	349
+"GA"	2006	"Irwin County"	"Osierfield"	220	70	46	22
+"GA"	2006	"Irwin County"	"Roberts"	368	135	82	49
+"GA"	2006	"Jackson County"	"Attica"	819	415	288	112
+"GA"	2006	"Jackson County"	"Center"	675	309	220	81
+"GA"	2006	"Jackson County"	"Cunningham"	478	205	167	26
+"GA"	2006	"Jackson County"	"Harrisburg"	1304	583	410	146
+"GA"	2006	"Jackson County"	"Hoschton"	797	407	309	73
+"GA"	2006	"Jackson County"	"Miller"	1199	521	428	64
+"GA"	2006	"Jackson County"	"Newtown"	1617	627	468	128
+"GA"	2006	"Jackson County"	"North Jefferson"	2871	1005	785	175
+"GA"	2006	"Jackson County"	"North Minish"	1467	566	373	166
+"GA"	2006	"Jackson County"	"Porter"	2061	846	692	112
+"GA"	2006	"Jackson County"	"Randolph"	2687	1138	926	157
+"GA"	2006	"Jackson County"	"Redstone"	1044	443	294	136
+"GA"	2006	"Jackson County"	"South Jefferson"	2128	657	455	174
+"GA"	2006	"Jackson County"	"South Minish"	2237	1003	675	294
+"GA"	2006	"Jackson County"	"Talmo"	676	313	261	47
+"GA"	2006	"Jackson County"	"Wilson"	655	341	261	70
+"GA"	2006	"Jasper County"	"HILLSBORO"	153	150	97	50
+"GA"	2006	"Jasper County"	"MARTIN BURNEY"	505	504	367	107
+"GA"	2006	"Jasper County"	"MONTICELLO"	858	848	405	408
+"GA"	2006	"Jasper County"	"SHADY DALE"	155	155	86	65
+"GA"	2006	"Jasper County"	"SMITH, JORDON LAZENBY"	120	118	91	22
+"GA"	2006	"Jasper County"	"THOMPSON BARNES"	356	354	277	59
+"GA"	2006	"Jasper County"	"WYATT"	336	335	229	82
+"GA"	2006	"Jeff Davis County"	"Altamaha 1"	576	223	159	58
+"GA"	2006	"Jeff Davis County"	"Altamaha 2"	934	321	242	72
+"GA"	2006	"Jeff Davis County"	"Blackburn 1"	664	167	100	66
+"GA"	2006	"Jeff Davis County"	"Blackburn 2"	545	205	137	61
+"GA"	2006	"Jeff Davis County"	"Hazlehurst"	1214	314	121	190
+"GA"	2006	"Jeff Davis County"	"Ocmulgee 1"	1098	413	262	144
+"GA"	2006	"Jeff Davis County"	"Ocmulgee 2"	335	125	57	65
+"GA"	2006	"Jeff Davis County"	"Whitehead 1"	773	274	184	87
+"GA"	2006	"Jeff Davis County"	"Whitehead 2"	628	281	172	107
+"GA"	2006	"Jefferson County"	"Avera"	157	157	104	49
+"GA"	2006	"Jefferson County"	"Bartow"	219	216	110	99
+"GA"	2006	"Jefferson County"	"Louisville"	1207	1189	528	651
+"GA"	2006	"Jefferson County"	"Mathews"	234	233	155	71
+"GA"	2006	"Jefferson County"	"Stapleton"	203	201	136	64
+"GA"	2006	"Jefferson County"	"Stapleton Crossroads"	191	186	81	100
+"GA"	2006	"Jefferson County"	"Wadley"	666	638	227	399
+"GA"	2006	"Jefferson County"	"Wrens"	1000	976	543	425
+"GA"	2006	"Jenkins County"	"Courthouse"	912	242	112	127
+"GA"	2006	"Jenkins County"	"Four Points"	970	348	216	124
+"GA"	2006	"Jenkins County"	"Perkins"	895	306	223	78
+"GA"	2006	"Jenkins County"	"Primary School"	889	247	91	152
+"GA"	2006	"Jenkins County"	"Senior Citizens"	918	311	236	70
+"GA"	2006	"Johnson County"	"Adrian"	273	105	60	43
+"GA"	2006	"Johnson County"	"Bray"	586	277	204	73
+"GA"	2006	"Johnson County"	"Kite"	747	302	181	105
+"GA"	2006	"Johnson County"	"Moores Chapel"	441	195	122	65
+"GA"	2006	"Johnson County"	"Smith"	429	196	125	61
+"GA"	2006	"Johnson County"	"Spann"	309	128	57	69
+"GA"	2006	"Johnson County"	"Wrightsville"	1876	474	243	222
+"GA"	2006	"Jones County"	"BARRON"	659	308	168	128
+"GA"	2006	"Jones County"	"CLINTON"	1507	567	365	170
+"GA"	2006	"Jones County"	"DAVIDSON"	1079	487	303	157
+"GA"	2006	"Jones County"	"ETHRIDGE"	1308	482	304	167
+"GA"	2006	"Jones County"	"FINNEY"	1810	887	641	209
+"GA"	2006	"Jones County"	"GRAY"	1580	602	416	167
+"GA"	2006	"Jones County"	"HAWKINS"	2078	806	319	455
+"GA"	2006	"Jones County"	"POPE"	1279	549	246	281
+"GA"	2006	"Jones County"	"ROBERTS"	1836	672	356	290
+"GA"	2006	"Jones County"	"SANDERS"	129	64	40	20
+"GA"	2006	"Jones County"	"WHITE"	276	143	99	40
+"GA"	2006	"Lamar County"	"Barnesville FBC"	539	533	165	358
+"GA"	2006	"Lamar County"	"Chappell Mill V. FD"	366	364	250	92
+"GA"	2006	"Lamar County"	"L C S C"	965	959	676	239
+"GA"	2006	"Lamar County"	"Milner"	1096	1091	789	257
+"GA"	2006	"Lamar County"	"Redbone"	242	237	176	58
+"GA"	2006	"Lamar County"	"Senior Citzen Bldg"	373	370	194	168
+"GA"	2006	"Lanier County"	"Lakeland"	2892	753	389	356
+"GA"	2006	"Lanier County"	"Sirmans"	393	115	38	75
+"GA"	2006	"Lanier County"	"Stockton"	407	149	95	50
+"GA"	2006	"Laurens County"	"Bailey"	939	437	325	103
+"GA"	2006	"Laurens County"	"Bethsaida"	2848	1199	822	329
+"GA"	2006	"Laurens County"	"Buckeye"	886	317	144	167
+"GA"	2006	"Laurens County"	"Burch"	378	144	74	63
+"GA"	2006	"Laurens County"	"Burgamy"	740	306	124	178
+"GA"	2006	"Laurens County"	"Cadwell"	600	258	156	92
+"GA"	2006	"Laurens County"	"Calhoun Park"	4972	1311	410	870
+"GA"	2006	"Laurens County"	"Carter"	489	181	133	40
+"GA"	2006	"Laurens County"	"Dudley"	849	411	281	123
+"GA"	2006	"Laurens County"	"Hampton Mill"	1408	593	406	164
+"GA"	2006	"Laurens County"	"Harvard"	346	144	61	82
+"GA"	2006	"Laurens County"	"Jackson"	904	304	150	136
+"GA"	2006	"Laurens County"	"Lowery"	413	171	97	62
+"GA"	2006	"Laurens County"	"Oconee"	442	159	110	46
+"GA"	2006	"Laurens County"	"Pine Forest"	3330	1336	874	393
+"GA"	2006	"Laurens County"	"Pinetucky"	1128	357	212	135
+"GA"	2006	"Laurens County"	"Reedy Springs"	601	263	179	79
+"GA"	2006	"Laurens County"	"Rockledge"	299	126	93	28
+"GA"	2006	"Laurens County"	"Smith"	2793	769	347	395
+"GA"	2006	"Laurens County"	"West Laurens"	1713	562	308	237
+"GA"	2006	"Lee County"	"Byne"	458	204	141	62
+"GA"	2006	"Lee County"	"CJC"	436	189	125	58
+"GA"	2006	"Lee County"	"Century"	1724	650	442	191
+"GA"	2006	"Lee County"	"Chokee"	409	173	53	117
+"GA"	2006	"Lee County"	"Leesburg"	1985	707	441	248
+"GA"	2006	"Lee County"	"Living Hope"	853	433	295	126
+"GA"	2006	"Lee County"	"Lutheran"	2459	1210	856	342
+"GA"	2006	"Lee County"	"Redbone"	3318	1321	831	451
+"GA"	2006	"Lee County"	"S. Grace"	1664	651	419	218
+"GA"	2006	"Lee County"	"Smithville"	845	277	111	158
+"GA"	2006	"Liberty County"	"Button Gwinnett"	106	105	33	67
+"GA"	2006	"Liberty County"	"Dorchester"	865	853	393	442
+"GA"	2006	"Liberty County"	"Fleming East"	694	691	496	182
+"GA"	2006	"Liberty County"	"Fleming West"	184	181	56	120
+"GA"	2006	"Liberty County"	"Gum Branch"	497	494	317	160
+"GA"	2006	"Liberty County"	"Hinesville"	546	542	325	206
+"GA"	2006	"Liberty County"	"Hinesville Lodge #271"	458	453	183	262
+"GA"	2006	"Liberty County"	"Lewis Frasier"	716	705	367	320
+"GA"	2006	"Liberty County"	"Liberty County Pre-K Gym"	458	452	162	280
+"GA"	2006	"Liberty County"	"Lyman Hall"	563	559	182	366
+"GA"	2006	"Liberty County"	"Riceboro"	399	387	100	276
+"GA"	2006	"Liberty County"	"Town of Allenhurst"	450	448	158	272
+"GA"	2006	"Liberty County"	"Walthourville"	416	414	153	250
+"GA"	2006	"Lincoln County"	"Bethany Church"	153	151	121	27
+"GA"	2006	"Lincoln County"	"Faith Temple of Lincolnton"	152	149	89	57
+"GA"	2006	"Lincoln County"	"Lincoln Center"	446	440	331	104
+"GA"	2006	"Lincoln County"	"Lincoln Club House"	220	217	118	93
+"GA"	2006	"Lincoln County"	"Martins Crossroad"	364	362	265	92
+"GA"	2006	"Lincoln County"	"Midway"	161	155	95	56
+"GA"	2006	"Lincoln County"	"Tabernacle"	284	284	166	116
+"GA"	2006	"Long County"	"Beards Creek"	876	287	174	110
+"GA"	2006	"Long County"	"North Ludowici"	737	235	137	90
+"GA"	2006	"Long County"	"Rye Patch/Oak Dale"	1176	384	253	124
+"GA"	2006	"Long County"	"South Ludowici"	512	130	53	72
+"GA"	2006	"Long County"	"Tibet"	1150	284	187	93
+"GA"	2006	"Lowndes County"	"Airport Church"	359	357	175	176
+"GA"	2006	"Lowndes County"	"Azalea City Church"	363	360	123	231
+"GA"	2006	"Lowndes County"	"Craig Recreation Center"	326	322	71	239
+"GA"	2006	"Lowndes County"	"Dasher City Hall"	683	677	466	195
+"GA"	2006	"Lowndes County"	"First Christian Church"	266	264	148	97
+"GA"	2006	"Lowndes County"	"Forrest St Church of God"	307	305	123	179
+"GA"	2006	"Lowndes County"	"Garden Center Auditorium"	260	259	62	193
+"GA"	2006	"Lowndes County"	"Grace Community Chapel"	577	576	309	255
+"GA"	2006	"Lowndes County"	"Hahira United Methodist"	415	412	280	125
+"GA"	2006	"Lowndes County"	"James H. Rainwater Conference Center"	783	779	410	350
+"GA"	2006	"Lowndes County"	"Jaycee Park Activity"	858	852	349	486
+"GA"	2006	"Lowndes County"	"Lake Park Civic Center"	379	375	230	127
+"GA"	2006	"Lowndes County"	"Lomax Pinevale Gym"	259	254	33	217
+"GA"	2006	"Lowndes County"	"Mathis Auditorium"	722	717	426	275
+"GA"	2006	"Lowndes County"	"Messiah Lutheran Church"	666	657	405	234
+"GA"	2006	"Lowndes County"	"Mildred Hunter Center"	297	293	33	259
+"GA"	2006	"Lowndes County"	"Mt. Olive Church"	380	377	247	123
+"GA"	2006	"Lowndes County"	"Mt. Pleasant Church"	324	323	227	91
+"GA"	2006	"Lowndes County"	"Mt. Zion A.M.E."	421	419	221	188
+"GA"	2006	"Lowndes County"	"Mt. Zion Church"	339	333	191	132
+"GA"	2006	"Lowndes County"	"Nayor City Hall"	237	232	113	117
+"GA"	2006	"Lowndes County"	"Nazarene Church"	279	278	82	190
+"GA"	2006	"Lowndes County"	"Newsome St. Church"	329	325	169	145
+"GA"	2006	"Lowndes County"	"Papermill Union Hall"	623	614	346	256
+"GA"	2006	"Lowndes County"	"Pine Grove Church"	270	269	121	144
+"GA"	2006	"Lowndes County"	"Remerton City Hall"	83	83	50	30
+"GA"	2006	"Lowndes County"	"S. Lowndes Rec Complex"	543	540	335	192
+"GA"	2006	"Lowndes County"	"Senior Citizens Community"	482	478	134	339
+"GA"	2006	"Lowndes County"	"Shiloh Fire Station"	461	455	319	125
+"GA"	2006	"Lowndes County"	"Smith Hospital"	1185	1176	805	339
+"GA"	2006	"Lowndes County"	"Southside Rec Center"	152	150	33	116
+"GA"	2006	"Lowndes County"	"Trinity Presbyterian"	979	968	637	318
+"GA"	2006	"Lowndes County"	"Water TMT Plant"	753	751	465	268
+"GA"	2006	"Lowndes County"	"Westminister Presbyterian"	886	878	657	194
+"GA"	2006	"Lumpkin County"	"Auraria"	1697	666	465	158
+"GA"	2006	"Lumpkin County"	"Cane Creek"	800	342	232	89
+"GA"	2006	"Lumpkin County"	"Chestatee"	254	135	96	35
+"GA"	2006	"Lumpkin County"	"Crumby"	456	205	152	42
+"GA"	2006	"Lumpkin County"	"Dahlonega City"	1493	532	361	129
+"GA"	2006	"Lumpkin County"	"Dahlonega County"	679	232	162	52
+"GA"	2006	"Lumpkin County"	"Davis"	899	312	210	87
+"GA"	2006	"Lumpkin County"	"Frogtown"	422	175	118	41
+"GA"	2006	"Lumpkin County"	"Martins Ford"	1542	583	421	125
+"GA"	2006	"Lumpkin County"	"Mill Creek"	854	316	235	63
+"GA"	2006	"Lumpkin County"	"Nimblewill"	625	260	188	63
+"GA"	2006	"Lumpkin County"	"Porter Springs"	617	263	178	71
+"GA"	2006	"Lumpkin County"	"Shoal Creek"	824	361	248	89
+"GA"	2006	"Lumpkin County"	"Wahoo"	696	247	182	53
+"GA"	2006	"Lumpkin County"	"Yahoola"	499	209	146	54
+"GA"	2006	"Macon County"	"Ideal"	1371	361	158	193
+"GA"	2006	"Macon County"	"Marshallville"	1415	522	199	313
+"GA"	2006	"Macon County"	"Montezuma 4"	1680	374	153	217
+"GA"	2006	"Macon County"	"Montezuma 5"	1424	383	98	278
+"GA"	2006	"Macon County"	"Oglethorpe"	1446	316	128	181
+"GA"	2006	"Madison County"	"Colbert"	2274	776	528	216
+"GA"	2006	"Madison County"	"Collins"	508	148	85	56
+"GA"	2006	"Madison County"	"Comer"	1055	353	201	129
+"GA"	2006	"Madison County"	"Danielsville"	2372	593	426	144
+"GA"	2006	"Madison County"	"Fork"	463	175	80	83
+"GA"	2006	"Madison County"	"Harrison"	485	196	136	53
+"GA"	2006	"Madison County"	"Hull"	2809	867	542	287
+"GA"	2006	"Madison County"	"Ila"	1357	438	316	103
+"GA"	2006	"Madison County"	"Mill"	1359	449	295	135
+"GA"	2006	"Madison County"	"Paoli"	200	80	56	19
+"GA"	2006	"Madison County"	"Pittman"	1631	616	429	164
+"GA"	2006	"Madison County"	"Poca"	847	306	203	87
+"GA"	2006	"Marion County"	"Brantley"	314	148	113	32
+"GA"	2006	"Marion County"	"Buena Vista"	1506	463	165	293
+"GA"	2006	"Marion County"	"Doyle"	204	89	58	31
+"GA"	2006	"Marion County"	"Draneville"	328	144	77	62
+"GA"	2006	"Marion County"	"Fort Perry"	641	203	116	79
+"GA"	2006	"Marion County"	"Pineknot"	707	258	168	85
+"GA"	2006	"Marion County"	"Tazewell"	307	155	100	51
+"GA"	2006	"McDuffie County"	"Board of Education"	644	639	489	136
+"GA"	2006	"McDuffie County"	"City of Thomson Fire Station #1"	427	418	191	215
+"GA"	2006	"McDuffie County"	"Dearing Community Center"	688	687	523	146
+"GA"	2006	"McDuffie County"	"Depot"	366	365	135	226
+"GA"	2006	"McDuffie County"	"Happy Valley"	154	153	87	61
+"GA"	2006	"McDuffie County"	"Marshall Church"	512	509	392	109
+"GA"	2006	"McDuffie County"	"Pine Grove"	515	514	445	62
+"GA"	2006	"McDuffie County"	"Queen of Angels"	287	285	84	192
+"GA"	2006	"McDuffie County"	"Shrine Club"	174	173	105	65
+"GA"	2006	"McDuffie County"	"Whiteoak"	303	302	193	108
+"GA"	2006	"McIntosh County"	"Crescent"	1672	572	226	331
+"GA"	2006	"McIntosh County"	"Darien"	1963	692	353	317
+"GA"	2006	"McIntosh County"	"North Darien"	1864	647	424	207
+"GA"	2006	"McIntosh County"	"Sapelo Island"	71	31	3	26
+"GA"	2006	"McIntosh County"	"South Newport"	1634	648	396	222
+"GA"	2006	"McIntosh County"	"Townsend"	484	154	86	66
+"GA"	2006	"Meriwether County"	"ALVATON"	441	440	249	174
+"GA"	2006	"Meriwether County"	"CHALYBEATE"	169	169	132	33
+"GA"	2006	"Meriwether County"	"COVE"	106	105	75	27
+"GA"	2006	"Meriwether County"	"DURAND"	219	218	129	79
+"GA"	2006	"Meriwether County"	"GAY"	139	137	98	34
+"GA"	2006	"Meriwether County"	"GREENVILLE"	580	579	286	281
+"GA"	2006	"Meriwether County"	"LONE OAK"	352	349	165	174
+"GA"	2006	"Meriwether County"	"LUTHERSVILLE"	706	703	366	312
+"GA"	2006	"Meriwether County"	"MANCHESTER GILL l"	600	594	396	168
+"GA"	2006	"Meriwether County"	"MANCHESTER GILL ll"	303	301	73	226
+"GA"	2006	"Meriwether County"	"ODESSADALE"	94	93	40	49
+"GA"	2006	"Meriwether County"	"RALEIGH"	205	202	145	45
+"GA"	2006	"Meriwether County"	"WARM SPRINGS"	481	477	287	179
+"GA"	2006	"Meriwether County"	"WOODBURY"	491	488	285	191
+"GA"	2006	"Miller County"	"Colquitt-Miller"	3578	1071	635	413
+"GA"	2006	"Mitchell County"	"Baconton"	865	391	174	212
+"GA"	2006	"Mitchell County"	"Branchville"	471	207	127	77
+"GA"	2006	"Mitchell County"	"Camilla North"	1419	540	109	424
+"GA"	2006	"Mitchell County"	"Camilla South"	2529	900	435	457
+"GA"	2006	"Mitchell County"	"Cotton"	290	157	110	40
+"GA"	2006	"Mitchell County"	"Hinsonton"	124	75	48	23
+"GA"	2006	"Mitchell County"	"Hopeful"	315	172	100	71
+"GA"	2006	"Mitchell County"	"Lester"	872	356	225	126
+"GA"	2006	"Mitchell County"	"Pebble City"	142	81	58	19
+"GA"	2006	"Mitchell County"	"Pelham"	2475	894	406	464
+"GA"	2006	"Mitchell County"	"Sale City"	338	168	90	70
+"GA"	2006	"Monroe County"	"BENTONS"	1816	866	644	186
+"GA"	2006	"Monroe County"	"BRANTLEYS"	596	329	236	81
+"GA"	2006	"Monroe County"	"BURGAYS"	1440	769	599	131
+"GA"	2006	"Monroe County"	"CABANISS"	479	198	118	75
+"GA"	2006	"Monroe County"	"COX"	520	254	174	68
+"GA"	2006	"Monroe County"	"CULLODEN"	357	161	88	68
+"GA"	2006	"Monroe County"	"DILLARDS"	649	306	229	66
+"GA"	2006	"Monroe County"	"EVERS"	1056	483	342	118
+"GA"	2006	"Monroe County"	"FORSYTH"	3136	1107	497	583
+"GA"	2006	"Monroe County"	"HIGH FALLS"	994	424	302	102
+"GA"	2006	"Monroe County"	"KELSEYS"	541	270	122	135
+"GA"	2006	"Monroe County"	"MIDDLEBROOKS"	892	383	268	106
+"GA"	2006	"Monroe County"	"PROCTORS"	611	236	147	82
+"GA"	2006	"Monroe County"	"RUSSELLVILLE"	289	156	108	42
+"GA"	2006	"Montgomery County"	"Ailey"	190	187	99	81
+"GA"	2006	"Montgomery County"	"Alston"	185	183	130	49
+"GA"	2006	"Montgomery County"	"Higgston"	409	406	283	110
+"GA"	2006	"Montgomery County"	"Kibbee"	174	168	121	43
+"GA"	2006	"Montgomery County"	"Mount Vernon"	495	490	245	234
+"GA"	2006	"Montgomery County"	"Tarrytown"	121	121	81	36
+"GA"	2006	"Montgomery County"	"Uvalda"	319	312	163	143
+"GA"	2006	"Morgan County"	"Apalachee"	173	85	58	25
+"GA"	2006	"Morgan County"	"Bethany Springfield"	1094	502	369	115
+"GA"	2006	"Morgan County"	"Bostwick"	1383	674	475	162
+"GA"	2006	"Morgan County"	"Buckhead"	998	503	352	120
+"GA"	2006	"Morgan County"	"Clacks Chapel"	800	355	278	67
+"GA"	2006	"Morgan County"	"Madison East"	1443	601	288	294
+"GA"	2006	"Morgan County"	"Madison South"	1035	411	302	93
+"GA"	2006	"Morgan County"	"Madison West"	495	186	59	123
+"GA"	2006	"Morgan County"	"Rutledge"	1262	565	402	135
+"GA"	2006	"Morgan County"	"West Morgan"	690	309	247	44
+"GA"	2006	"Murray County"	"CARTERS DOOLITTLE"	475	471	319	145
+"GA"	2006	"Murray County"	"MCDONALD"	513	510	356	135
+"GA"	2006	"Murray County"	"NORTH"	586	580	431	135
+"GA"	2006	"Murray County"	"SHUCK PEN"	625	622	467	139
+"GA"	2006	"Murray County"	"SOUTHWEST"	661	660	472	178
+"GA"	2006	"Murray County"	"SPRING PLACE"	939	930	674	230
+"GA"	2006	"Murray County"	"TOWN"	1564	1554	1143	373
+"GA"	2006	"Muscogee County"	"Arnold"	1515	622	438	168
+"GA"	2006	"Muscogee County"	"Blackmon Rd"	2019	834	499	313
+"GA"	2006	"Muscogee County"	"Blanchard"	2552	1135	806	303
+"GA"	2006	"Muscogee County"	"Brewer"	1891	537	96	435
+"GA"	2006	"Muscogee County"	"Britt David"	2101	801	517	257
+"GA"	2006	"Muscogee County"	"Britt@Wynnton"	2038	637	107	518
+"GA"	2006	"Muscogee County"	"Carver"	1659	506	95	398
+"GA"	2006	"Muscogee County"	"Clubview"	2130	958	685	239
+"GA"	2006	"Muscogee County"	"Columbus High"	1273	483	290	181
+"GA"	2006	"Muscogee County"	"Dawson"	2407	968	134	822
+"GA"	2006	"Muscogee County"	"Eddy"	972	226	89	132
+"GA"	2006	"Muscogee County"	"Edgewood"	1368	547	255	282
+"GA"	2006	"Muscogee County"	"Edgewood Baptist Ch"	1005	377	181	187
+"GA"	2006	"Muscogee County"	"First African"	1391	330	102	215
+"GA"	2006	"Muscogee County"	"Forrest Rd"	1986	751	129	618
+"GA"	2006	"Muscogee County"	"Fort"	2375	874	147	716
+"GA"	2006	"Muscogee County"	"Fox Recreational Ctr"	1539	309	124	170
+"GA"	2006	"Muscogee County"	"Gallops"	961	324	186	126
+"GA"	2006	"Muscogee County"	"Gentian"	2050	698	411	263
+"GA"	2006	"Muscogee County"	"Georgetown"	2479	808	186	616
+"GA"	2006	"Muscogee County"	"Hannan"	1079	232	51	177
+"GA"	2006	"Muscogee County"	"Hardaway"	1155	487	358	117
+"GA"	2006	"Muscogee County"	"Heiferhorn"	1268	618	459	154
+"GA"	2006	"Muscogee County"	"Johnson"	2011	638	366	248
+"GA"	2006	"Muscogee County"	"Key Elementary"	1935	659	282	371
+"GA"	2006	"Muscogee County"	"Liberty"	1298	567	98	465
+"GA"	2006	"Muscogee County"	"Mack Rec Ctr"	1707	602	93	501
+"GA"	2006	"Muscogee County"	"Mathews"	2682	1300	850	429
+"GA"	2006	"Muscogee County"	"Midland Academy"	698	307	195	108
+"GA"	2006	"Muscogee County"	"Moon-North Highland"	2739	983	622	338
+"GA"	2006	"Muscogee County"	"Morningside"	2246	935	611	301
+"GA"	2006	"Muscogee County"	"Muscogee"	2002	437	60	371
+"GA"	2006	"Muscogee County"	"North Lumpkin-30th A"	2364	565	111	447
+"GA"	2006	"Muscogee County"	"Northside Baptist"	1775	664	392	254
+"GA"	2006	"Muscogee County"	"Psalmond Rd Rec Ctr"	1139	527	361	157
+"GA"	2006	"Muscogee County"	"Reese Road"	2177	944	614	307
+"GA"	2006	"Muscogee County"	"Rothschild"	2390	753	224	518
+"GA"	2006	"Muscogee County"	"Spencer High"	2184	457	111	333
+"GA"	2006	"Muscogee County"	"St Andrews Presby"	3109	1312	921	369
+"GA"	2006	"Muscogee County"	"St John AME"	1918	773	171	592
+"GA"	2006	"Muscogee County"	"St Mark UMC"	2481	1130	806	305
+"GA"	2006	"Muscogee County"	"St Mary's"	1741	633	89	536
+"GA"	2006	"Muscogee County"	"St Mary's UMC"	719	218	42	175
+"GA"	2006	"Muscogee County"	"St Stephens"	2913	1136	795	322
+"GA"	2006	"Muscogee County"	"Waddell"	2480	689	306	371
+"GA"	2006	"Muscogee County"	"Wesley Hts"	1478	518	147	360
+"GA"	2006	"Muscogee County"	"Wynnbrook"	2699	1412	1131	262
+"GA"	2006	"Muscogee County"	"Wynnton"	1879	747	435	287
+"GA"	2006	"Newton County"	"Alcovy"	2383	1031	682	307
+"GA"	2006	"Newton County"	"Almon"	3036	1064	454	570
+"GA"	2006	"Newton County"	"Beaverdam"	2693	1066	401	643
+"GA"	2006	"Newton County"	"Brewers"	1967	769	549	194
+"GA"	2006	"Newton County"	"Brick Store"	3442	1571	1199	308
+"GA"	2006	"Newton County"	"Buck Creek"	3400	1228	712	470
+"GA"	2006	"Newton County"	"Cedar Shoals"	1475	472	244	199
+"GA"	2006	"Newton County"	"City Pond"	1115	381	105	272
+"GA"	2006	"Newton County"	"Covington Mills"	1719	657	353	276
+"GA"	2006	"Newton County"	"Downs"	3510	1405	870	470
+"GA"	2006	"Newton County"	"Fairview"	2768	1053	338	683
+"GA"	2006	"Newton County"	"Gum Creek"	2745	1130	844	225
+"GA"	2006	"Newton County"	"Leguinn"	1286	536	408	103
+"GA"	2006	"Newton County"	"Livingston"	2248	769	327	420
+"GA"	2006	"Newton County"	"Mansfield"	1012	525	414	90
+"GA"	2006	"Newton County"	"Newborn"	564	302	245	45
+"GA"	2006	"Newton County"	"Oxford"	1565	728	515	183
+"GA"	2006	"Newton County"	"Rocky Plains"	1892	674	403	255
+"GA"	2006	"Newton County"	"Stansells"	2205	809	355	430
+"GA"	2006	"Newton County"	"Town"	2411	740	227	498
+"GA"	2006	"Oconee County"	"Antioch"	938	467	318	112
+"GA"	2006	"Oconee County"	"Bishop"	918	463	325	113
+"GA"	2006	"Oconee County"	"Bogart"	1429	699	524	148
+"GA"	2006	"Oconee County"	"Briarwood"	1589	786	541	199
+"GA"	2006	"Oconee County"	"Civic Center"	1145	519	366	124
+"GA"	2006	"Oconee County"	"Dark Corner"	1303	644	479	132
+"GA"	2006	"Oconee County"	"Eastville"	1974	908	666	198
+"GA"	2006	"Oconee County"	"Farmington"	451	262	159	84
+"GA"	2006	"Oconee County"	"Flat Rock"	1094	598	380	172
+"GA"	2006	"Oconee County"	"Friendship"	1552	737	498	184
+"GA"	2006	"Oconee County"	"High Shoals"	901	430	312	90
+"GA"	2006	"Oconee County"	"Mars Hill"	1431	675	474	163
+"GA"	2006	"Oconee County"	"Watkinsville East"	1838	802	542	214
+"GA"	2006	"Oconee County"	"Watkinsville West"	1125	520	331	152
+"GA"	2006	"Oglethorpe County"	"Beaverdam"	1387	578	381	164
+"GA"	2006	"Oglethorpe County"	"Crawford"	1336	490	255	200
+"GA"	2006	"Oglethorpe County"	"Falling Creek"	511	209	133	67
+"GA"	2006	"Oglethorpe County"	"Glade"	292	141	78	61
+"GA"	2006	"Oglethorpe County"	"Goosepond"	432	170	99	68
+"GA"	2006	"Oglethorpe County"	"Grove Creek"	372	152	83	64
+"GA"	2006	"Oglethorpe County"	"Lexington"	1440	543	299	216
+"GA"	2006	"Oglethorpe County"	"Pleasant Hill"	655	271	184	71
+"GA"	2006	"Oglethorpe County"	"Wolfskin"	526	250	146	80
+"GA"	2006	"Oglethorpe County"	"Woodstock"	249	106	56	49
+"GA"	2006	"Paulding County"	"ALLGOOD ELEMENTARY SCHOOL"	567	567	400	127
+"GA"	2006	"Paulding County"	"AUSTIN MIDDLE SCHOOL"	933	932	612	280
+"GA"	2006	"Paulding County"	"BAGGETT ELEMENTARY SCHOOL"	833	831	590	209
+"GA"	2006	"Paulding County"	"BEULAHLAND BAPTIST CHURCH"	803	802	548	217
+"GA"	2006	"Paulding County"	"BURNT HICKORY FIRE STATION"	496	495	369	93
+"GA"	2006	"Paulding County"	"C.A. ROBERTS ELEMENTARY SCHOOL"	1110	1110	767	292
+"GA"	2006	"Paulding County"	"DALLAS LIBRARY"	637	636	413	195
+"GA"	2006	"Paulding County"	"DOBBINS MIDDLE SCHOOL"	1114	1110	586	481
+"GA"	2006	"Paulding County"	"EAST PAULDING HIGH SCHOOL"	896	895	688	164
+"GA"	2006	"Paulding County"	"EAST PAULDING MIDDLE SCHOOL"	1111	1109	757	295
+"GA"	2006	"Paulding County"	"HERSCHEL JONES MIDDLE SCHOOL"	569	569	332	211
+"GA"	2006	"Paulding County"	"HIRAM ELEMENTARY SCHOOL"	716	714	479	200
+"GA"	2006	"Paulding County"	"HIRAM HIGH SCHOOL"	1351	1347	928	343
+"GA"	2006	"Paulding County"	"MCGARITY ELEMENTARY SCHOOL"	925	922	573	313
+"GA"	2006	"Paulding County"	"MOSES MIDDLE SCHOOL"	946	945	708	194
+"GA"	2006	"Paulding County"	"NEBO ELEMENTARY SCHOOL"	818	816	580	207
+"GA"	2006	"Paulding County"	"NEW GEORGIA BAPTIST CHURCH"	308	306	218	76
+"GA"	2006	"Paulding County"	"NORTHSIDE ELEMENTARY SCHOOL"	505	501	382	97
+"GA"	2006	"Paulding County"	"P.B. RITCH ELEMENTARY SCHOOL"	1625	1623	1179	385
+"GA"	2006	"Paulding County"	"PAULDING COUNTY HIGH SCHOOL"	630	626	394	204
+"GA"	2006	"Paulding County"	"PICKETT'S MILL BAPTIST CHURCH"	585	584	461	99
+"GA"	2006	"Paulding County"	"POOLE ELEMENTARY SCHOOL"	773	771	502	226
+"GA"	2006	"Paulding County"	"RUSSOM ELEMENTARY SCHOOL"	754	753	614	94
+"GA"	2006	"Paulding County"	"SENATOR'S RIDGE"	561	561	464	75
+"GA"	2006	"Paulding County"	"SHELTON ELEMENTARY SCHOOL"	1335	1333	1060	220
+"GA"	2006	"Paulding County"	"SOUTH PAULDING MIDDLE SCHOOL"	639	635	450	158
+"GA"	2006	"Paulding County"	"UNION ELEMENTARY"	469	469	345	109
+"GA"	2006	"Peach County"	"Byron #1"	1681	835	568	226
+"GA"	2006	"Peach County"	"Byron #2"	2490	1052	739	261
+"GA"	2006	"Peach County"	"Claude"	586	273	213	51
+"GA"	2006	"Peach County"	"Fort Valley #1"	2055	774	358	383
+"GA"	2006	"Peach County"	"Fort Valley #2"	1754	603	216	368
+"GA"	2006	"Peach County"	"Fort Valley #3"	1978	644	111	528
+"GA"	2006	"Peach County"	"Powersville"	779	352	250	84
+"GA"	2006	"Pickens County"	"APPALACHIAN"	1626	570	417	121
+"GA"	2006	"Pickens County"	"HILL"	1027	349	261	70
+"GA"	2006	"Pickens County"	"HINTON"	478	218	180	36
+"GA"	2006	"Pickens County"	"JASPER"	1482	463	319	121
+"GA"	2006	"Pickens County"	"JERUSALEM"	715	316	247	47
+"GA"	2006	"Pickens County"	"LUDVILLE"	386	150	103	41
+"GA"	2006	"Pickens County"	"NELSON"	953	366	282	66
+"GA"	2006	"Pickens County"	"REFUGE"	1764	573	389	162
+"GA"	2006	"Pickens County"	"SHARPTOP"	1835	898	686	172
+"GA"	2006	"Pickens County"	"TALKING ROCK"	864	363	274	73
+"GA"	2006	"Pickens County"	"TOWNSEND"	1463	523	387	103
+"GA"	2006	"Pickens County"	"YELLOW CREEK"	2139	875	673	143
+"GA"	2006	"Pierce County"	"Alabaha"	508	186	146	39
+"GA"	2006	"Pierce County"	"Blackshear"	1975	597	419	165
+"GA"	2006	"Pierce County"	"Hacklebarney/Cason"	2057	634	406	220
+"GA"	2006	"Pierce County"	"Mershon"	314	171	136	34
+"GA"	2006	"Pierce County"	"Otter Creek"	908	380	272	105
+"GA"	2006	"Pierce County"	"Patterson"	851	328	226	93
+"GA"	2006	"Pierce County"	"St Johns/Blackshear"	1072	394	294	97
+"GA"	2006	"Pierce County"	"Sunset/Sweat"	215	118	84	34
+"GA"	2006	"Pike County"	"Concord"	1024	482	309	148
+"GA"	2006	"Pike County"	"Hollonville"	977	453	355	74
+"GA"	2006	"Pike County"	"Lifsey Springs"	776	361	261	77
+"GA"	2006	"Pike County"	"Meansville"	927	406	324	65
+"GA"	2006	"Pike County"	"Molena"	1061	453	293	134
+"GA"	2006	"Pike County"	"Second District"	1716	734	584	136
+"GA"	2006	"Pike County"	"Williamson"	984	447	350	80
+"GA"	2006	"Pike County"	"Zebulon"	1454	572	366	187
+"GA"	2006	"Polk County"	"ANTIOCH"	1059	451	286	150
+"GA"	2006	"Polk County"	"ARAGON"	1388	522	359	136
+"GA"	2006	"Polk County"	"BLOOMING GROVE"	820	272	191	73
+"GA"	2006	"Polk County"	"BROWNING"	451	206	152	38
+"GA"	2006	"Polk County"	"CEDARTOWN"	3343	1119	550	532
+"GA"	2006	"Polk County"	"ESOM HILL"	394	142	92	43
+"GA"	2006	"Polk County"	"FISH CREEK"	2434	898	620	250
+"GA"	2006	"Polk County"	"LAKE CREEK"	2333	978	650	280
+"GA"	2006	"Polk County"	"PRIOR STATION"	1107	488	298	155
+"GA"	2006	"Polk County"	"ROCKMART"	3480	1205	716	438
+"GA"	2006	"Polk County"	"YOUNGS"	1124	433	257	164
+"GA"	2006	"Pulaski County"	"1A"	430	429	233	179
+"GA"	2006	"Pulaski County"	"1B"	224	219	59	158
+"GA"	2006	"Pulaski County"	"2A"	329	325	187	129
+"GA"	2006	"Pulaski County"	"2B"	332	326	89	232
+"GA"	2006	"Pulaski County"	"3A"	526	524	430	80
+"GA"	2006	"Pulaski County"	"3B"	624	624	515	83
+"GA"	2006	"Pulaski County"	"3C"	427	425	301	109
+"GA"	2006	"Pulaski County"	"4A"	641	637	475	138
+"GA"	2006	"Pulaski County"	"4B"	556	555	381	142
+"GA"	2006	"Pulaski County"	"EAST"	273	267	160	94
+"GA"	2006	"Pulaski County"	"NORTH"	617	614	355	231
+"GA"	2006	"Pulaski County"	"SOUTH"	636	633	419	186
+"GA"	2006	"Quitman County"	"Georgetown City"	493	170	81	84
+"GA"	2006	"Quitman County"	"Georgetown County"	837	281	139	136
+"GA"	2006	"Quitman County"	"Morris"	88	55	23	31
+"GA"	2006	"Rabun County"	"Chechero"	783	367	246	104
+"GA"	2006	"Rabun County"	"Clayton"	2286	742	501	214
+"GA"	2006	"Rabun County"	"Lakemont-Stonepile"	1258	570	409	140
+"GA"	2006	"Rabun County"	"Moccasin"	131	79	54	21
+"GA"	2006	"Rabun County"	"Persimmon"	384	206	146	57
+"GA"	2006	"Rabun County"	"Tallulah"	648	281	212	51
+"GA"	2006	"Rabun County"	"Tiger"	892	464	348	103
+"GA"	2006	"Rabun County"	"Valley"	1842	778	567	184
+"GA"	2006	"Rabun County"	"Warwoman"	283	155	95	56
+"GA"	2006	"Randolph County"	"4th District"	37	37	25	12
+"GA"	2006	"Randolph County"	"Benevolence"	90	90	53	37
+"GA"	2006	"Randolph County"	"Carnegie"	138	138	113	25
+"GA"	2006	"Randolph County"	"Coleman"	100	95	56	35
+"GA"	2006	"Randolph County"	"Cuthbert"	468	462	162	294
+"GA"	2006	"Randolph County"	"Cuthbert-Middle Sch"	115	115	10	103
+"GA"	2006	"Randolph County"	"Fountain Bridge-5th"	48	48	40	8
+"GA"	2006	"Randolph County"	"Shellman"	272	268	103	162
+"GA"	2006	"Randolph County"	"Springvale"	53	53	19	34
+"GA"	2006	"Rockdale County"	"Barksdale"	1396	6	898	428
+"GA"	2006	"Rockdale County"	"Conyers"	624	6	273	318
+"GA"	2006	"Rockdale County"	"Fieldstone"	1350	4	533	766
+"GA"	2006	"Rockdale County"	"Flat Shoals"	1018	8	436	544
+"GA"	2006	"Rockdale County"	"Hightower"	1170	5	718	402
+"GA"	2006	"Rockdale County"	"Honey Creek"	910	1	605	249
+"GA"	2006	"Rockdale County"	"Lorraine"	1240	4	698	495
+"GA"	2006	"Rockdale County"	"Magnet"	1028	3	696	263
+"GA"	2006	"Rockdale County"	"Milstead"	890	4	337	523
+"GA"	2006	"Rockdale County"	"Olde Towne"	579	4	230	322
+"GA"	2006	"Rockdale County"	"Rockdale"	1220	3	558	608
+"GA"	2006	"Rockdale County"	"Sheffield"	742	3	514	200
+"GA"	2006	"Rockdale County"	"Smyrna"	1213	4	586	579
+"GA"	2006	"Rockdale County"	"St. Pius"	1307	7	620	630
+"GA"	2006	"Rockdale County"	"Stanton"	874	1	567	260
+"GA"	2006	"Rockdale County"	"The Lakes"	553	3	238	293
+"GA"	2006	"Schley County"	"Precinct One"	584	577	386	181
+"GA"	2006	"Screven County"	"Academy Sch Gym"	828	358	264	88
+"GA"	2006	"Screven County"	"Bay Branch"	668	295	238	51
+"GA"	2006	"Screven County"	"Co Sch Bus Garage"	287	125	53	72
+"GA"	2006	"Screven County"	"Culver's Store"	895	398	174	218
+"GA"	2006	"Screven County"	"Foy's Store"	243	86	22	61
+"GA"	2006	"Screven County"	"Hiltonia"	687	324	150	167
+"GA"	2006	"Screven County"	"Hunters"	330	174	118	53
+"GA"	2006	"Screven County"	"Jackson Fire Station"	358	192	156	35
+"GA"	2006	"Screven County"	"Newington"	902	346	197	144
+"GA"	2006	"Screven County"	"Rocky Ford"	460	231	129	94
+"GA"	2006	"Screven County"	"Sr Citizens Center"	934	344	123	215
+"GA"	2006	"Screven County"	"Sylvania"	1042	389	239	143
+"GA"	2006	"Seminole County"	"Precinct 1"	1074	436	242	187
+"GA"	2006	"Seminole County"	"Precinct 2"	960	356	208	138
+"GA"	2006	"Seminole County"	"Precinct 3"	840	279	48	228
+"GA"	2006	"Seminole County"	"Precinct 4"	977	350	192	149
+"GA"	2006	"Seminole County"	"Precinct 5"	985	363	248	105
+"GA"	2006	"Spalding County"	"1st ASSEMBLY"	1715	604	441	131
+"GA"	2006	"Spalding County"	"1st METHODIST"	1243	579	462	93
+"GA"	2006	"Spalding County"	"1st PRESBYTERIAN"	1581	586	404	156
+"GA"	2006	"Spalding County"	"AMBUCS"	1410	483	309	160
+"GA"	2006	"Spalding County"	"BLALOCK"	478	219	180	30
+"GA"	2006	"Spalding County"	"CABIN"	1384	518	387	107
+"GA"	2006	"Spalding County"	"CARVER"	1178	459	292	146
+"GA"	2006	"Spalding County"	"CITY PARK"	1548	331	104	222
+"GA"	2006	"Spalding County"	"COMMUNITY MINISTRIES CHURCH"	1109	363	61	294
+"GA"	2006	"Spalding County"	"COUNTY LINE METHODIST"	1802	698	570	102
+"GA"	2006	"Spalding County"	"FAIRMONT"	1440	385	69	313
+"GA"	2006	"Spalding County"	"GA EXPERIMENT STATION"	2421	750	449	285
+"GA"	2006	"Spalding County"	"GARY REID"	1831	589	255	321
+"GA"	2006	"Spalding County"	"LIBERTY SPRINGS"	1078	410	308	80
+"GA"	2006	"Spalding County"	"LIBRARY"	1131	408	325	64
+"GA"	2006	"Spalding County"	"ROBERTS"	1590	631	448	148
+"GA"	2006	"Spalding County"	"SOUTHSIDE"	1373	580	448	106
+"GA"	2006	"Spalding County"	"SUNNYSIDE"	1285	411	290	107
+"GA"	2006	"Spalding County"	"TEAMON BAPTIST CHURCH"	1150	378	259	91
+"GA"	2006	"Spalding County"	"THIRD WARD"	978	429	307	94
+"GA"	2006	"Spalding County"	"WEST GRIFFIN"	1377	308	67	237
+"GA"	2006	"Stephens County"	"Big Smith"	760	750	456	270
+"GA"	2006	"Stephens County"	"Broad River"	287	285	184	98
+"GA"	2006	"Stephens County"	"Currahee"	146	146	105	37
+"GA"	2006	"Stephens County"	"Martin"	281	281	158	118
+"GA"	2006	"Stephens County"	"Toccoa #1"	766	760	488	252
+"GA"	2006	"Stephens County"	"Toccoa #2"	477	472	316	140
+"GA"	2006	"Stephens County"	"Toccoa #3"	833	825	566	235
+"GA"	2006	"Stephens County"	"Wolf Pit"	643	640	417	212
+"GA"	2006	"Stewart County"	"Louvale"	315	125	35	89
+"GA"	2006	"Stewart County"	"Lumpkin"	1197	322	100	218
+"GA"	2006	"Stewart County"	"Omaha"	234	67	15	52
+"GA"	2006	"Stewart County"	"Richland"	1210	388	160	222
+"GA"	2006	"Sumter County"	"15"	1603	673	353	305
+"GA"	2006	"Sumter County"	"17"	631	244	111	122
+"GA"	2006	"Sumter County"	"28"	829	321	203	115
+"GA"	2006	"Sumter County"	"29"	376	150	78	70
+"GA"	2006	"Sumter County"	"N-26"	394	180	135	32
+"GA"	2006	"Sumter County"	"NE-27"	3005	823	339	475
+"GA"	2006	"Sumter County"	"NW-27"	3410	836	259	556
+"GA"	2006	"Sumter County"	"O-26"	1019	365	171	184
+"GA"	2006	"Sumter County"	"SE-27"	1969	563	280	268
+"GA"	2006	"Sumter County"	"SW-27"	2222	722	415	284
+"GA"	2006	"Talbot County"	"BOX SPRINGS"	427	156	85	65
+"GA"	2006	"Talbot County"	"FLINT HILL"	815	358	149	200
+"GA"	2006	"Talbot County"	"GENEVA"	392	142	60	77
+"GA"	2006	"Talbot County"	"JUNCTION CITY"	281	99	28	70
+"GA"	2006	"Talbot County"	"O'NEAL"	488	191	83	104
+"GA"	2006	"Talbot County"	"PRATTSBURG"	109	48	23	22
+"GA"	2006	"Talbot County"	"TALBOTTON"	855	320	106	208
+"GA"	2006	"Talbot County"	"VALLEY"	694	281	111	160
+"GA"	2006	"Taliaferro County"	"Crawfordville"	313	309	109	195
+"GA"	2006	"Taliaferro County"	"Sharon"	98	96	34	58
+"GA"	2006	"Tattnall County"	"Birdford"	222	222	152	66
+"GA"	2006	"Tattnall County"	"Cobbtown"	262	259	174	77
+"GA"	2006	"Tattnall County"	"Collins"	376	372	247	120
+"GA"	2006	"Tattnall County"	"Ellagrove"	267	263	184	75
+"GA"	2006	"Tattnall County"	"Elza"	107	105	65	38
+"GA"	2006	"Tattnall County"	"Glennville"	323	320	233	82
+"GA"	2006	"Tattnall County"	"Longview"	84	81	56	24
+"GA"	2006	"Tattnall County"	"Manassas 2"	122	122	82	39
+"GA"	2006	"Tattnall County"	"Manassas I"	154	151	90	59
+"GA"	2006	"Tattnall County"	"Mendes"	266	265	203	60
+"GA"	2006	"Tattnall County"	"Reidsville"	423	421	260	151
+"GA"	2006	"Tattnall County"	"Shiloh"	220	215	84	127
+"GA"	2006	"Tattnall County"	"Tison 1"	280	276	212	61
+"GA"	2006	"Tattnall County"	"Tison 2"	167	165	125	35
+"GA"	2006	"Tattnall County"	"White Pines"	480	466	270	190
+"GA"	2006	"Taylor County"	"PRECINCT #1"	316	314	55	252
+"GA"	2006	"Taylor County"	"PRECINCT #2"	206	202	129	69
+"GA"	2006	"Taylor County"	"PRECINCT #3"	138	137	105	28
+"GA"	2006	"Taylor County"	"PRECINCT #4"	82	80	56	22
+"GA"	2006	"Taylor County"	"PRECINCT #5"	386	381	272	98
+"GA"	2006	"Taylor County"	"PRECINCT #6"	554	546	271	259
+"GA"	2006	"Telfair County"	"Helena"	778	290	107	172
+"GA"	2006	"Telfair County"	"Jacksonville"	559	219	98	118
+"GA"	2006	"Telfair County"	"Lumber City"	1024	312	141	161
+"GA"	2006	"Telfair County"	"McRae"	1873	728	327	386
+"GA"	2006	"Telfair County"	"Milan"	778	288	145	131
+"GA"	2006	"Telfair County"	"Scotland"	293	138	69	65
+"GA"	2006	"Terrell County"	"Bronwood"	714	266	114	143
+"GA"	2006	"Terrell County"	"Dawson"	2399	728	211	511
+"GA"	2006	"Terrell County"	"Graves"	506	168	101	64
+"GA"	2006	"Terrell County"	"Herod/Dover"	237	86	49	36
+"GA"	2006	"Terrell County"	"Parrott"	359	159	78	75
+"GA"	2006	"Terrell County"	"Sasser"	1115	445	251	184
+"GA"	2006	"Thomas County"	"Barwick"	505	164	108	55
+"GA"	2006	"Thomas County"	"Boston"	1350	454	233	216
+"GA"	2006	"Thomas County"	"Central"	1946	613	382	218
+"GA"	2006	"Thomas County"	"Coolidge"	717	254	156	89
+"GA"	2006	"Thomas County"	"Douglass"	1411	361	77	273
+"GA"	2006	"Thomas County"	"Ellabelle"	834	314	218	90
+"GA"	2006	"Thomas County"	"Fire Station #2"	1099	444	326	114
+"GA"	2006	"Thomas County"	"Gatlin Creek"	1723	605	434	157
+"GA"	2006	"Thomas County"	"Harper"	1393	404	122	275
+"GA"	2006	"Thomas County"	"Jerger"	1543	529	353	163
+"GA"	2006	"Thomas County"	"Meigs"	647	250	148	100
+"GA"	2006	"Thomas County"	"Merrillville"	514	224	131	87
+"GA"	2006	"Thomas County"	"Metcalfe"	261	123	86	33
+"GA"	2006	"Thomas County"	"New Covenant"	1461	491	327	148
+"GA"	2006	"Thomas County"	"Ochlocknee"	885	306	216	77
+"GA"	2006	"Thomas County"	"Patten"	262	123	96	25
+"GA"	2006	"Thomas County"	"Pavo"	582	235	161	63
+"GA"	2006	"Thomas County"	"Remington YMCA"	1447	467	291	165
+"GA"	2006	"Thomas County"	"Resource Center"	1129	352	63	285
+"GA"	2006	"Thomas County"	"Scott"	1877	675	445	213
+"GA"	2006	"Tift County"	"Brighton"	1495	649	505	114
+"GA"	2006	"Tift County"	"Brookfield"	1102	485	342	126
+"GA"	2006	"Tift County"	"Chula"	1039	550	422	115
+"GA"	2006	"Tift County"	"Docia"	770	367	296	57
+"GA"	2006	"Tift County"	"Eldorado"	797	316	239	68
+"GA"	2006	"Tift County"	"Mott- Litman Gym"	1768	483	96	382
+"GA"	2006	"Tift County"	"Omega"	632	253	179	69
+"GA"	2006	"Tift County"	"Tifton Lodge"	2037	706	481	200
+"GA"	2006	"Tift County"	"Tifton Northeast"	2325	729	459	238
+"GA"	2006	"Tift County"	"Tifton Northwest"	2077	720	542	164
+"GA"	2006	"Tift County"	"Tifton South"	1461	436	145	277
+"GA"	2006	"Tift County"	"Ty Ty"	850	374	259	105
+"GA"	2006	"Toombs County"	"1192nd-Blue Ridge"	343	159	117	38
+"GA"	2006	"Toombs County"	"1403rd-Marvin"	288	124	74	47
+"GA"	2006	"Toombs County"	"1521st- Hardens Chapel"	368	190	112	71
+"GA"	2006	"Toombs County"	"1536-1 Lyons"	1654	581	358	211
+"GA"	2006	"Toombs County"	"1536-2 Santa Claus"	1041	388	295	89
+"GA"	2006	"Toombs County"	"1715th-Normantown"	406	183	123	56
+"GA"	2006	"Toombs County"	"1770th-Ohoopee"	155	80	55	25
+"GA"	2006	"Toombs County"	"1823rd-Center"	1017	431	305	109
+"GA"	2006	"Toombs County"	"39th-New Branch"	341	185	107	72
+"GA"	2006	"Toombs County"	"43rd-Cedar Crossing"	812	312	173	125
+"GA"	2006	"Toombs County"	"51-1 Old Health Dept."	1833	602	268	327
+"GA"	2006	"Toombs County"	"51-2 S.T.I."	1031	411	280	116
+"GA"	2006	"Toombs County"	"51-3 V.P.D."	1361	665	472	180
+"GA"	2006	"Toombs County"	"51-4 S.T.I.A.L.C."	1369	537	374	145
+"GA"	2006	"Towns County"	"HIAWASSEE"	851	840	647	162
+"GA"	2006	"Towns County"	"MACEDONIA"	822	820	586	210
+"GA"	2006	"Towns County"	"TATE CITY"	17	17	14	2
+"GA"	2006	"Towns County"	"YOUNG HARRIS"	881	877	600	240
+"GA"	2006	"Treutlen County"	"Blackville"	93	93	66	25
+"GA"	2006	"Treutlen County"	"Gillis Springs"	55	54	26	25
+"GA"	2006	"Treutlen County"	"Lothair"	139	139	78	58
+"GA"	2006	"Treutlen County"	"Oglethorpe"	82	81	45	35
+"GA"	2006	"Treutlen County"	"Orland"	109	107	73	30
+"GA"	2006	"Treutlen County"	"Soperton"	672	666	321	330
+"GA"	2006	"Troup County"	"ADMINSTRATION"	2156	477	226	230
+"GA"	2006	"Troup County"	"EAST VERNON"	2248	926	717	182
+"GA"	2006	"Troup County"	"GARDNER NEWMAN"	1457	509	341	153
+"GA"	2006	"Troup County"	"GRAY HILL"	1288	467	311	141
+"GA"	2006	"Troup County"	"GRIGGS CENTER"	1767	505	75	424
+"GA"	2006	"Troup County"	"HAMMETT RD"	2473	838	510	311
+"GA"	2006	"Troup County"	"HIGHLAND"	1008	347	189	152
+"GA"	2006	"Troup County"	"HOGANSVILLE"	2173	772	440	301
+"GA"	2006	"Troup County"	"HOLLIS HAND"	2977	1181	945	203
+"GA"	2006	"Troup County"	"LEE'S CROSSING"	1008	326	235	84
+"GA"	2006	"Troup County"	"LONG CANE"	2096	848	640	193
+"GA"	2006	"Troup County"	"MCLENDON"	2353	950	720	206
+"GA"	2006	"Troup County"	"MOUNTVILLE"	1098	469	329	129
+"GA"	2006	"Troup County"	"NORTHSIDE"	1929	811	610	181
+"GA"	2006	"Troup County"	"ROSEMONT"	2456	963	761	173
+"GA"	2006	"Troup County"	"WEST POINT"	1646	496	237	247
+"GA"	2006	"Turner County"	"Ashburn"	931	920	409	494
+"GA"	2006	"Turner County"	"Rebecca"	171	170	97	67
+"GA"	2006	"Turner County"	"Sycamore"	493	489	329	142
+"GA"	2006	"Twiggs County"	"DRY BRANCH"	470	465	288	146
+"GA"	2006	"Twiggs County"	"GOLDEN ISLES"	561	551	190	339
+"GA"	2006	"Twiggs County"	"HIGGSVILLE"	297	289	184	102
+"GA"	2006	"Twiggs County"	"JEFFERSONVILLE/WARE"	535	527	168	337
+"GA"	2006	"Twiggs County"	"SHADY GROVE/TARVERSVILLE"	328	320	129	185
+"GA"	2006	"Union County"	"Blairsville"	644	637	417	193
+"GA"	2006	"Union County"	"Choestoe"	387	386	297	70
+"GA"	2006	"Union County"	"Coosa"	645	639	500	126
+"GA"	2006	"Union County"	"Dooley"	391	388	265	112
+"GA"	2006	"Union County"	"Gum Log"	465	463	336	109
+"GA"	2006	"Union County"	"Ivy Log"	510	506	369	109
+"GA"	2006	"Union County"	"Jones Creek"	474	473	338	115
+"GA"	2006	"Union County"	"Owltown"	428	425	281	130
+"GA"	2006	"Union County"	"Pat Cowell"	537	534	391	124
+"GA"	2006	"Union County"	"Suches"	266	263	179	66
+"GA"	2006	"Union County"	"Trackrock"	373	372	262	99
+"GA"	2006	"Upson County"	"ATWATER"	1081	440	309	112
+"GA"	2006	"Upson County"	"FLINT"	721	288	209	65
+"GA"	2006	"Upson County"	"LINCOLN PARK"	593	234	54	178
+"GA"	2006	"Upson County"	"REDBONE"	3415	1132	721	376
+"GA"	2006	"Upson County"	"REEVES"	782	308	246	54
+"GA"	2006	"Upson County"	"SALEM"	326	196	24	168
+"GA"	2006	"Upson County"	"THE JUG"	327	172	87	83
+"GA"	2006	"Upson County"	"THE ROCK"	359	179	124	44
+"GA"	2006	"Upson County"	"TOWN"	5726	1758	1100	610
+"GA"	2006	"Upson County"	"YATESVILLE"	703	326	235	78
+"GA"	2006	"Walker County"	"Cane Creek"	1356	442	305	130
+"GA"	2006	"Walker County"	"Cedar Grove"	372	145	111	30
+"GA"	2006	"Walker County"	"Chattanooga Valley"	2949	1053	821	212
+"GA"	2006	"Walker County"	"Chestnut Flat"	1559	518	350	155
+"GA"	2006	"Walker County"	"Chickamauga"	3599	1301	1004	274
+"GA"	2006	"Walker County"	"Daugherty"	212	75	53	19
+"GA"	2006	"Walker County"	"East Armuchee"	700	266	196	67
+"GA"	2006	"Walker County"	"Fairview"	2590	778	573	194
+"GA"	2006	"Walker County"	"Fairyland"	1075	541	460	66
+"GA"	2006	"Walker County"	"Kensington"	838	309	227	77
+"GA"	2006	"Walker County"	"Lafayette"	4672	1194	855	310
+"GA"	2006	"Walker County"	"Mountain"	741	295	216	69
+"GA"	2006	"Walker County"	"Peavine"	2899	1013	762	228
+"GA"	2006	"Walker County"	"Pond Springs"	1668	634	483	144
+"GA"	2006	"Walker County"	"Rossville"	5320	1315	982	316
+"GA"	2006	"Walker County"	"Wallaceville"	1886	577	430	140
+"GA"	2006	"Walker County"	"West Armuchee"	278	130	91	37
+"GA"	2006	"Walker County"	"Wilson"	633	248	174	66
+"GA"	2006	"Walton County"	"Bay Creek"	1894	733	594	104
+"GA"	2006	"Walton County"	"Between"	3018	1269	1007	211
+"GA"	2006	"Walton County"	"Blasingame"	809	370	289	70
+"GA"	2006	"Walton County"	"Bold Springs"	2759	1248	1051	152
+"GA"	2006	"Walton County"	"Broken Arrow"	2899	1102	890	155
+"GA"	2006	"Walton County"	"Campton"	2016	866	663	160
+"GA"	2006	"Walton County"	"East Monroe"	2348	647	371	255
+"GA"	2006	"Walton County"	"Good Hope"	1108	531	400	104
+"GA"	2006	"Walton County"	"Gratis"	749	359	282	61
+"GA"	2006	"Walton County"	"Jersey"	1179	524	438	67
+"GA"	2006	"Walton County"	"Loganville North"	3510	1229	983	188
+"GA"	2006	"Walton County"	"Loganville South"	4394	1576	1248	250
+"GA"	2006	"Walton County"	"Mountain"	846	300	224	68
+"GA"	2006	"Walton County"	"North Monroe"	4377	950	460	454
+"GA"	2006	"Walton County"	"Social Circle"	2965	1096	719	329
+"GA"	2006	"Walton County"	"South Monroe"	3937	1388	998	327
+"GA"	2006	"Walton County"	"Walnut Grove"	1863	702	567	97
+"GA"	2006	"Walton County"	"West Walton"	2811	1225	1049	123
+"GA"	2006	"Walton County"	"Whatley"	751	365	277	77
+"GA"	2006	"Ware County"	"1231-150B"	2584	1009	712	278
+"GA"	2006	"Ware County"	"1231-150C"	670	216	138	75
+"GA"	2006	"Ware County"	"1231-151"	2299	990	732	235
+"GA"	2006	"Ware County"	"Beach-Bickley"	242	123	89	31
+"GA"	2006	"Ware County"	"District 1"	2338	646	145	492
+"GA"	2006	"Ware County"	"District 2A"	2296	858	566	281
+"GA"	2006	"Ware County"	"District 2B"	1246	284	111	169
+"GA"	2006	"Ware County"	"Haywood"	388	156	111	40
+"GA"	2006	"Ware County"	"Jamestown"	1043	478	352	117
+"GA"	2006	"Ware County"	"Manor"	358	140	95	43
+"GA"	2006	"Ware County"	"Millwood"	287	120	68	51
+"GA"	2006	"Ware County"	"Waresboro"	621	270	196	67
+"GA"	2006	"Warren County"	"Beall Springs"	0	214	118	92
+"GA"	2006	"Warren County"	"Camak"	0	147	85	58
+"GA"	2006	"Warren County"	"Norwood"	0	173	57	111
+"GA"	2006	"Warren County"	"Pan Handle"	0	46	35	10
+"GA"	2006	"Warren County"	"Ricketson"	0	100	68	28
+"GA"	2006	"Warren County"	"Warrenton"	3309	643	271	359
+"GA"	2006	"Washington County"	"Davisboro"	325	323	155	161
+"GA"	2006	"Washington County"	"Deepstep"	206	203	125	76
+"GA"	2006	"Washington County"	"Harrison"	404	402	226	167
+"GA"	2006	"Washington County"	"Oconee"	231	228	112	111
+"GA"	2006	"Washington County"	"Riddleville"	262	257	157	95
+"GA"	2006	"Washington County"	"Sandersville"	1874	1853	866	959
+"GA"	2006	"Washington County"	"Tennille"	760	749	352	378
+"GA"	2006	"Washington County"	"Warthen"	293	290	156	131
+"GA"	2006	"Wayne County"	"Altamaha"	1660	495	295	186
+"GA"	2006	"Wayne County"	"East Jesup"	385	167	116	50
+"GA"	2006	"Wayne County"	"Empire"	700	302	190	100
+"GA"	2006	"Wayne County"	"Gardi"	534	242	138	97
+"GA"	2006	"Wayne County"	"Madray Springs"	831	400	242	148
+"GA"	2006	"Wayne County"	"Mt. Pleasant"	198	107	84	19
+"GA"	2006	"Wayne County"	"Odum"	868	399	239	146
+"GA"	2006	"Wayne County"	"Oglethorpe"	1252	480	321	150
+"GA"	2006	"Wayne County"	"Pine Street"	631	196	76	118
+"GA"	2006	"Wayne County"	"Rec Center"	1026	453	299	135
+"GA"	2006	"Wayne County"	"Red Hill"	791	267	172	88
+"GA"	2006	"Wayne County"	"Ritch"	249	121	69	48
+"GA"	2006	"Wayne County"	"Screven"	1020	469	290	173
+"GA"	2006	"Wayne County"	"Unity"	1567	487	293	177
+"GA"	2006	"Wayne County"	"VFW"	712	248	60	184
+"GA"	2006	"Webster County"	"Gooseberry 3"	76	76	48	28
+"GA"	2006	"Webster County"	"Preston 1"	248	244	106	134
+"GA"	2006	"Webster County"	"Preston 3"	72	71	41	28
+"GA"	2006	"Webster County"	"Weston 2"	167	164	61	99
+"GA"	2006	"Wheeler County"	"Alamo"	1631	552	274	265
+"GA"	2006	"Wheeler County"	"Glenwood"	1134	416	209	198
+"GA"	2006	"White County"	"Blue Creek"	1534	622	454	140
+"GA"	2006	"White County"	"Blue Ridge"	585	223	171	44
+"GA"	2006	"White County"	"Helen"	492	172	108	51
+"GA"	2006	"White County"	"Mossy Creek"	1959	737	580	130
+"GA"	2006	"White County"	"Mt. Yonah"	3029	878	698	156
+"GA"	2006	"White County"	"Nacoochee"	1301	601	424	143
+"GA"	2006	"White County"	"Robertstown"	331	128	93	34
+"GA"	2006	"White County"	"Shoal Creek"	1642	541	392	127
+"GA"	2006	"White County"	"Tesnatee"	787	319	249	60
+"GA"	2006	"White County"	"Town Creek"	1128	425	316	83
+"GA"	2006	"White County"	"White Creek"	1203	491	391	85
+"GA"	2006	"Whitfield County"	"1A"	416	412	248	151
+"GA"	2006	"Whitfield County"	"2A"	849	845	619	195
+"GA"	2006	"Whitfield County"	"3A"	735	731	528	179
+"GA"	2006	"Whitfield County"	"4A"	858	853	648	183
+"GA"	2006	"Whitfield County"	"5A"	326	320	157	161
+"GA"	2006	"Whitfield County"	"6A"	245	243	124	117
+"GA"	2006	"Whitfield County"	"ANTIOCH"	440	437	293	136
+"GA"	2006	"Whitfield County"	"CARBONDALE"	466	461	339	118
+"GA"	2006	"Whitfield County"	"COHUTTA"	412	403	289	100
+"GA"	2006	"Whitfield County"	"DUG GAP"	1053	1046	815	205
+"GA"	2006	"Whitfield County"	"EASTSIDE"	447	443	311	121
+"GA"	2006	"Whitfield County"	"FINCHER"	622	617	436	169
+"GA"	2006	"Whitfield County"	"GROVE LEVEL"	504	502	381	113
+"GA"	2006	"Whitfield County"	"LOWER TENTH"	316	312	266	44
+"GA"	2006	"Whitfield County"	"MILL CREEK"	506	502	397	90
+"GA"	2006	"Whitfield County"	"NINTH"	695	689	538	141
+"GA"	2006	"Whitfield County"	"PLEASANT GROVE"	1217	1201	888	280
+"GA"	2006	"Whitfield County"	"TILTON"	234	233	181	40
+"GA"	2006	"Whitfield County"	"TRICHUM"	426	422	333	79
+"GA"	2006	"Whitfield County"	"TUNNEL HILL"	996	987	725	238
+"GA"	2006	"Whitfield County"	"UPPER TENTH"	274	271	217	47
+"GA"	2006	"Whitfield County"	"VARNELL"	1355	1344	1081	228
+"GA"	2006	"Whitfield County"	"WESTSIDE"	809	799	611	170
+"GA"	2006	"Wilcox County"	"Abbeville North #2"	336	121	49	71
+"GA"	2006	"Wilcox County"	"Abbeville South #5"	868	356	212	136
+"GA"	2006	"Wilcox County"	"Pineview #2"	493	227	119	107
+"GA"	2006	"Wilcox County"	"Pitts #3"	689	342	233	105
+"GA"	2006	"Wilcox County"	"Rochelle North #1"	435	172	46	119
+"GA"	2006	"Wilcox County"	"Rochelle South #4"	807	353	243	100
+"GA"	2006	"Wilkes County"	"Court House"	351	348	225	113
+"GA"	2006	"Wilkes County"	"Ed Pope Ctr"	300	293	104	182
+"GA"	2006	"Wilkes County"	"Metasville"	196	195	127	65
+"GA"	2006	"Wilkes County"	"Rayle"	257	248	122	122
+"GA"	2006	"Wilkes County"	"Senior Citizens Ctr"	459	453	202	243
+"GA"	2006	"Wilkes County"	"Tignall"	297	288	164	115
+"GA"	2006	"Wilkes County"	"Young Farmer's Bldg"	460	453	327	112
+"GA"	2006	"Wilkinson County"	"Bloodworth"	342	147	108	36
+"GA"	2006	"Wilkinson County"	"Griffin"	164	65	44	16
+"GA"	2006	"Wilkinson County"	"High Hill"	161	99	66	27
+"GA"	2006	"Wilkinson County"	"Irwinton"	848	321	117	194
+"GA"	2006	"Wilkinson County"	"Ivey"	921	348	226	105
+"GA"	2006	"Wilkinson County"	"Lord"	745	316	122	186
+"GA"	2006	"Wilkinson County"	"Midway"	973	344	70	270
+"GA"	2006	"Wilkinson County"	"Ramah"	1749	651	244	396
+"GA"	2006	"Wilkinson County"	"Turkey Creek"	440	181	101	71
+"GA"	2006	"Worth County"	"Bridgeboro"	898	425	255	158
+"GA"	2006	"Worth County"	"County Line"	571	211	139	65
+"GA"	2006	"Worth County"	"Doles"	293	157	114	40
+"GA"	2006	"Worth County"	"Gordy"	281	139	98	41
+"GA"	2006	"Worth County"	"Isabella"	884	439	318	109
+"GA"	2006	"Worth County"	"Minton"	383	179	118	56
+"GA"	2006	"Worth County"	"Oakfield"	177	70	33	36
+"GA"	2006	"Worth County"	"Piney Woods"	222	74	33	40
+"GA"	2006	"Worth County"	"Poulan"	654	260	146	107
+"GA"	2006	"Worth County"	"Redrock"	763	310	177	124
+"GA"	2006	"Worth County"	"Scooterville"	416	183	133	49
+"GA"	2006	"Worth County"	"Shingler"	377	203	142	57
+"GA"	2006	"Worth County"	"Sumner"	534	233	157	72
+"GA"	2006	"Worth County"	"Sylvester"	1930	591	157	428
+"GA"	2006	"Worth County"	"Sylvester East"	1095	462	301	150
+"GA"	2006	"Worth County"	"Warwick"	568	274	155	113

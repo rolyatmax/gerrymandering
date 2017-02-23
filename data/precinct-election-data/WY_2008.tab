@@ -1,0 +1,487 @@
+state	year	county	precinct	g2008_USP_dv	g2008_USP_rv	g2008_USS_dv	g2008_USS_rv	s2008_USS_dv	s2008_USS_rv	g2008_USH_dv	g2008_USH_rv	g2008_USP_tv	g2008_USS_tv	g2008_USH_tv	s2008_USS_tv
+"WY"	2008	"Albany"	"Northern Albany County 11-1"	204	364	152	414	157	405	221	321	568	566	542	562
+"WY"	2008	"Albany"	"Fairgrounds: County 12-1"	742	1230	532	1481	596	1403	855	1087	1972	2013	1942	1999
+"WY"	2008	"Albany"	"Centennial School 13-1"	114	174	94	199	101	190	129	155	288	293	284	291
+"WY"	2008	"Albany"	"Rock River Town Hall 14-1"	29	104	24	109	25	107	45	82	133	133	127	132
+"WY"	2008	"Albany"	"Slade School 31-1"	42	27	38	32	41	28	42	21	69	70	63	69
+"WY"	2008	"Albany"	"Slade School 31-2"	980	855	659	1180	746	1084	1095	683	1835	1839	1778	1830
+"WY"	2008	"Albany"	"Albany Public Library 31-3"	768	441	559	655	614	587	792	354	1209	1214	1146	1201
+"WY"	2008	"Albany"	"Spring Creek School 31-4"	435	240	339	334	364	305	457	191	675	673	648	669
+"WY"	2008	"Albany"	"Laramie Jr. High 41-1"	648	579	425	799	482	736	694	503	1227	1224	1197	1218
+"WY"	2008	"Albany"	"Laramie Jr. High 41-2"	130	160	84	202	96	190	149	134	290	286	283	286
+"WY"	2008	"Albany"	"Indian Paintbrush School 41-3"	677	582	470	785	500	748	730	498	1259	1255	1228	1248
+"WY"	2008	"Albany"	"American Heritage Center 41-4"	279	240	150	359	170	333	282	194	519	509	476	503
+"WY"	2008	"Albany"	"Albany Public Library 51-1"	96	31	79	43	76	43	90	26	127	122	116	119
+"WY"	2008	"Albany"	"Albany Public Library 51-2"	430	231	322	337	350	300	439	199	661	659	638	650
+"WY"	2008	"Albany"	"Spring Creek School 51-3"	546	343	395	481	426	443	571	267	889	876	838	869
+"WY"	2008	"Albany"	"Linford School 51-4"	44	36	37	48	32	51	49	29	80	85	78	83
+"WY"	2008	"Albany"	"Linford School 51-5"	742	915	538	1135	583	1084	876	731	1657	1673	1607	1667
+"WY"	2008	"Albany"	"Linford School 51-6"	267	114	217	181	237	155	283	89	381	398	372	392
+"WY"	2008	"Albany"	"Beitel School 61-1"	3	2	2	3	2	3	2	2	5	5	4	5
+"WY"	2008	"Albany"	"Beitel School 61-2"	680	623	489	829	530	784	754	516	1303	1318	1270	1314
+"WY"	2008	"Albany"	"Whiting High School 61-3"	609	418	446	589	493	530	667	350	1027	1035	1017	1023
+"WY"	2008	"Albany"	"Whiting High School 61-4"	179	227	119	286	124	277	227	173	406	405	400	401
+"WY"	2008	"Big Horn"	"Fair Grounds - Basin 1-1"	192	565	133	656	128	651	284	429	757	789	713	779
+"WY"	2008	"Big Horn"	"Burlington Fire Hall 2-1"	33	247	12	273	16	273	54	210	280	285	264	289
+"WY"	2008	"Big Horn"	"Burlington Fire Hall - Otto 3-1"	6	102	7	106	10	102	18	88	108	113	106	112
+"WY"	2008	"Big Horn"	"Emblem Irrigation District Office 5-1"	4	52	2	59	3	58	7	51	56	61	58	61
+"WY"	2008	"Big Horn"	"Hyattville Community Center 6-1"	23	80	10	95	9	96	18	82	103	105	100	105
+"WY"	2008	"Big Horn"	"Manderson Town Hall 8-1"	32	135	17	154	22	148	52	106	167	171	158	170
+"WY"	2008	"Big Horn"	"Greybull Elks Lodge 11-1"	327	756	203	901	210	898	439	578	1083	1104	1017	1108
+"WY"	2008	"Big Horn"	"Shell Community Hall 16-1"	68	199	42	230	43	229	81	171	267	272	252	272
+"WY"	2008	"Big Horn"	"Lovell National Guard Armory 20-1"	242	1173	148	1296	154	1284	357	1017	1415	1444	1374	1438
+"WY"	2008	"Big Horn"	"Cowley Log Gym 22-1"	52	347	30	371	33	367	84	303	399	401	387	400
+"WY"	2008	"Big Horn"	"Byron Town Complex 23-1"	77	240	51	274	56	264	96	206	317	325	302	320
+"WY"	2008	"Big Horn"	"Deaver Community Hall 25-1"	30	78	12	96	12	97	31	71	108	108	102	109
+"WY"	2008	"Big Horn"	"Frannie School Building 26-1"	22	71	15	79	18	76	31	57	93	94	88	94
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-1"	66	215	39	248	80	203	83	177	281	287	260	283
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-2"	81	152	61	173	75	160	92	129	233	234	221	235
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-3"	66	199	53	214	93	172	89	159	265	267	248	265
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-4"	83	357	56	388	111	335	121	289	440	444	410	446
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-5"	158	460	87	538	182	437	180	388	618	625	568	619
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-7"	73	288	50	319	108	258	98	232	361	369	330	366
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-8"	63	248	49	268	84	231	91	198	311	317	289	315
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-9"	82	294	42	343	111	274	115	243	376	385	358	385
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-10"	88	444	69	466	118	412	136	357	532	535	493	530
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-11"	56	243	39	257	68	227	91	188	299	296	279	295
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-12"	101	288	51	340	114	273	132	224	389	391	356	387
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-13"	45	191	28	213	54	182	61	154	236	241	215	236
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-14"	193	662	107	762	217	652	248	568	855	869	816	869
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-15"	80	284	30	338	89	278	104	235	364	368	339	367
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-16"	188	659	108	737	214	623	273	528	847	845	801	837
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-17"	215	820	155	885	265	765	284	668	1035	1040	952	1030
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-18"	90	329	61	359	115	307	133	253	419	420	386	422
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-19"	151	635	91	705	173	615	200	549	786	796	749	788
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-20"	59	275	32	305	66	266	74	245	334	337	319	332
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 1-21"	95	379	67	417	123	351	126	315	474	484	441	474
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 2-1"	68	318	55	331	92	294	83	277	386	386	360	386
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 3-1"	91	644	70	666	126	604	140	539	735	736	679	730
+"WY"	2008	"Campbell"	"Rozet School 4-1"	83	576	70	594	124	537	131	488	659	664	619	661
+"WY"	2008	"Campbell"	"Antelope Valley Baptist Church 5-1"	128	668	79	714	175	615	198	551	796	793	749	790
+"WY"	2008	"Campbell"	"Rawhide School 6-1"	43	232	23	254	52	225	59	201	275	277	260	277
+"WY"	2008	"Campbell"	"Recluse School 7-1"	24	128	15	142	27	127	39	110	152	157	149	154
+"WY"	2008	"Campbell"	"Little Powder School 8-1"	10	113	7	116	12	110	19	98	123	123	117	122
+"WY"	2008	"Campbell"	"First United Methodist Church 9-1"	78	594	48	631	121	551	129	513	672	679	642	672
+"WY"	2008	"Campbell"	"Wright Town Hall 12-1"	5	106	6	107	11	102	11	99	111	113	110	113
+"WY"	2008	"Campbell"	"4-J School 13-1"	12	201	10	202	19	192	19	183	213	212	202	211
+"WY"	2008	"Campbell"	"Wright Town Hall 14-1"	102	511	81	526	122	488	142	417	613	607	559	610
+"WY"	2008	"Campbell"	"Wright Town Hall 14-2"	27	206	14	219	28	204	34	182	233	233	216	232
+"WY"	2008	"Campbell"	"Central Pavilion Camplex 18-1"	113	555	87	588	171	500	182	444	668	675	626	671
+"WY"	2008	"Campbell"	"Antelope Valley Baptist Church 19-1"	53	314	25	347	79	287	88	254	367	372	342	366
+"WY"	2008	"Campbell"	"Antelope Valley Baptist Church 22-1"	120	423	73	479	132	420	177	327	543	552	504	552
+"WY"	2008	"Carbon"	"Pershing Elementary School/Rawlins 1-1"	378	245	308	309	314	302	405	177	623	617	582	616
+"WY"	2008	"Carbon"	"Jeffrey Center/Rawlins 1-2"	82	112	66	129	62	132	94	93	194	195	187	194
+"WY"	2008	"Carbon"	"Jeffrey Center/Rawlins 2-1"	256	362	194	432	195	432	325	264	618	626	589	627
+"WY"	2008	"Carbon"	"Jeffrey Center/Rawlins 2-2"	271	456	207	524	212	516	354	356	727	731	710	728
+"WY"	2008	"Carbon"	"Jeffrey Center/Rawlins 3-1"	255	317	185	396	180	401	312	236	572	581	548	581
+"WY"	2008	"Carbon"	"Jeffrey Center/Rawlins 3-2"	243	383	190	440	180	451	300	309	626	630	609	631
+"WY"	2008	"Carbon"	"Muddy Gap Fire Station  4-1"	4	14	3	16	2	17	5	14	18	19	19	19
+"WY"	2008	"Carbon"	"Sinclair Town Hall 5-1"	68	176	53	193	69	175	95	132	244	246	227	244
+"WY"	2008	"Carbon"	"Hanna Town Hall 6-1"	2	32	3	33	0	35	7	29	34	36	36	35
+"WY"	2008	"Carbon"	"Medicine Bow Senior Center 7-1"	45	105	35	120	33	124	60	95	150	155	155	157
+"WY"	2008	"Carbon"	"Hanna Town Hall 8-1"	137	256	107	289	117	282	184	191	393	396	375	399
+"WY"	2008	"Carbon"	"Elk Mountain Senior Center 9-1"	25	141	12	159	19	149	37	128	166	171	165	168
+"WY"	2008	"Carbon"	"McFadden Fire Station 10-1"	5	49	2	53	3	52	7	47	54	55	54	55
+"WY"	2008	"Carbon"	"Saratoga Senior Center 11-1"	286	592	199	682	189	694	323	530	878	881	853	883
+"WY"	2008	"Carbon"	"Saratoga Senior Center 11-2"	81	286	47	314	53	310	93	262	367	361	355	363
+"WY"	2008	"Carbon"	"Encampment Senior Center 12-1"	66	227	46	257	53	247	87	202	293	303	289	300
+"WY"	2008	"Carbon"	"Riverside Town Hall 13-1"	69	185	43	209	44	206	78	162	254	252	240	250
+"WY"	2008	"Carbon"	"Dixon Senior Center 14-1"	21	111	22	111	23	106	35	93	132	133	128	129
+"WY"	2008	"Carbon"	"Baggs Senior Center 15-1"	42	282	38	285	47	270	67	236	324	323	303	317
+"WY"	2008	"Converse"	"Lost Springs Hall 1-1"	4	99	4	100	4	99	13	87	103	104	100	103
+"WY"	2008	"Converse"	"Douglas Rec Center 2-2"	71	297	62	312	58	320	128	232	368	374	360	378
+"WY"	2008	"Converse"	"White School 3-1"	20	160	19	161	23	157	39	130	180	180	169	180
+"WY"	2008	"Converse"	"Douglas Rec Center 4-4"	66	347	47	369	45	368	131	272	413	416	403	413
+"WY"	2008	"Converse"	"Glenrock Rec Center 6-6"	42	251	28	271	33	267	76	202	293	299	278	300
+"WY"	2008	"Converse"	"Douglas Rec Center 7-7"	27	167	21	173	18	177	38	145	194	194	183	195
+"WY"	2008	"Converse"	"Douglas Rec Center 8-8"	49	252	37	271	30	278	81	211	301	308	292	308
+"WY"	2008	"Converse"	"Glenrock Rec Center 9-1"	164	510	105	577	126	558	252	392	674	682	644	684
+"WY"	2008	"Converse"	"Glenrock Rec Center 9-2"	146	353	96	410	97	415	218	271	499	506	489	512
+"WY"	2008	"Converse"	"Glenrock Rec Center 10-10"	60	237	59	241	48	255	93	202	297	300	295	303
+"WY"	2008	"Converse"	"Glenrock Rec Center 11-11"	27	188	29	188	32	187	77	132	215	217	209	219
+"WY"	2008	"Converse"	"Dry Creek School 13-13"	7	94	6	95	6	95	13	88	101	101	101	101
+"WY"	2008	"Converse"	"Douglas Rec Center 20-20"	13	102	13	103	10	106	21	91	115	116	112	116
+"WY"	2008	"Converse"	"Douglas Rec Center 23-1"	87	223	63	249	57	257	121	171	310	312	292	314
+"WY"	2008	"Converse"	"Douglas Rec Center 23-2"	111	299	72	353	73	351	155	240	410	425	395	424
+"WY"	2008	"Converse"	"Douglas Rec Center 23-3"	107	323	73	352	70	358	143	252	430	425	395	428
+"WY"	2008	"Converse"	"Douglas Rec Center 23-4"	85	176	64	203	65	200	106	133	261	267	239	265
+"WY"	2008	"Converse"	"Douglas Rec Center 23-5"	140	384	98	434	91	434	205	279	524	532	484	525
+"WY"	2008	"Converse"	"Douglas Rec Center 23-6"	154	460	94	531	98	525	221	382	614	625	603	623
+"WY"	2008	"Crook"	"Sundance Inside North - Courthouse 1-1"	76	254	51	288	67	272	111	197	330	339	308	339
+"WY"	2008	"Crook"	"Sundance Inside South - Courthouse 1-2"	73	212	52	242	67	227	101	161	285	294	262	294
+"WY"	2008	"Crook"	"Sundance Outside - Courthouse 2-2"	92	401	61	436	74	421	156	310	493	497	466	495
+"WY"	2008	"Crook"	"Beulah Community Bldg. 3-3"	34	126	25	134	34	124	52	101	160	159	153	158
+"WY"	2008	"Crook"	"Aladdin Community Bldg  7-7"	33	149	31	159	37	153	47	115	182	190	162	190
+"WY"	2008	"Crook"	"Alva Church 9-9"	5	58	2	66	5	62	6	55	63	68	61	67
+"WY"	2008	"Crook"	"Tower Junction - Camp Beard 11-11"	25	190	17	206	28	194	44	152	215	223	196	222
+"WY"	2008	"Crook"	"Elmore - Barton Ranch Voting Booth 12-12"	30	234	22	244	36	227	45	196	264	266	241	263
+"WY"	2008	"Crook"	"Hulett Outside - Civic Center 13-13"	22	229	21	235	27	227	50	185	251	256	235	254
+"WY"	2008	"Crook"	"Hulett Inside - Civic Center 14-14"	42	136	28	145	36	136	51	106	178	173	157	172
+"WY"	2008	"Crook"	"Pine Haven Town Hall 15-15"	57	220	43	240	76	205	90	164	277	283	254	281
+"WY"	2008	"Crook"	"Moorcroft Outside -Baptist Church 16-16"	33	270	20	285	29	274	57	220	303	305	277	303
+"WY"	2008	"Crook"	"Moorcroft West Side - City Hall 18-1"	45	164	34	179	53	162	66	125	209	213	191	215
+"WY"	2008	"Crook"	"Moorcroft East Side - City Hall 18-2"	30	178	17	194	32	180	55	142	208	211	197	212
+"WY"	2008	"Crook"	"New Haven Community Bldg. 23-23"	8	49	4	52	6	51	8	48	57	56	56	57
+"WY"	2008	"Crook"	"Colony Community Bldg. 24-24"	6	42	4	44	3	45	3	42	48	48	45	48
+"WY"	2008	"Crook"	"Oshoto Community Bldg. 26-26"	1	55	5	53	2	56	7	41	56	58	48	58
+"WY"	2008	"Fremont"	"Lander Community Center 1-1"	283	415	201	495	212	498	362	303	698	696	665	710
+"WY"	2008	"Fremont"	"Lander Community Center 1-2"	185	174	122	238	144	216	217	120	359	360	337	360
+"WY"	2008	"Fremont"	"Lander Community Center 1-3"	313	317	228	406	237	411	369	244	630	634	613	648
+"WY"	2008	"Fremont"	"Lander Community Center 1-4"	226	274	169	335	188	318	279	209	500	504	488	506
+"WY"	2008	"Fremont"	"Lander Community Center 1-5"	310	444	203	551	230	539	396	331	754	754	727	769
+"WY"	2008	"Fremont"	"Lander Community Center 1-6"	263	345	194	414	211	403	332	259	608	608	591	614
+"WY"	2008	"Fremont"	"Hudson Town Hall 2-1"	92	186	65	219	69	219	120	149	278	284	269	288
+"WY"	2008	"Fremont"	"Riverton Fair Office 3-1"	224	555	138	637	145	644	297	418	779	775	715	789
+"WY"	2008	"Fremont"	"Riverton Fair Office 3-2"	117	208	81	247	78	255	151	157	325	328	308	333
+"WY"	2008	"Fremont"	"Riverton Fair Office 3-3"	220	536	142	614	163	602	305	414	756	756	719	765
+"WY"	2008	"Fremont"	"Riverton Fair Office 3-4"	141	300	104	342	103	351	177	236	441	446	413	454
+"WY"	2008	"Fremont"	"Riverton Fair Office 3-5"	346	784	195	922	218	913	441	627	1130	1117	1068	1131
+"WY"	2008	"Fremont"	"Riverton Fair Office 3-6"	251	655	168	750	183	734	345	510	906	918	855	917
+"WY"	2008	"Fremont"	"Ft. Washakie School Admin. 4-1"	408	119	262	255	293	224	388	107	527	517	495	517
+"WY"	2008	"Fremont"	"Lander Community Center 5-1"	412	822	321	939	349	911	556	660	1234	1260	1216	1260
+"WY"	2008	"Fremont"	"Lander Community Center 6-1"	160	350	115	393	112	398	192	287	510	508	479	510
+"WY"	2008	"Fremont"	"Dubois Headwaters Comm. Center  7-1"	276	879	220	936	225	953	323	796	1155	1156	1119	1178
+"WY"	2008	"Fremont"	"Arapahoe School 8-1"	288	141	201	203	210	199	266	110	429	404	376	409
+"WY"	2008	"Fremont"	"Missouri Valley Fire Hall 9-1"	39	318	31	323	32	321	62	281	357	354	343	353
+"WY"	2008	"Fremont"	"Fairgrounds/Main Hall 10-1"	147	534	108	577	106	586	236	413	681	685	649	692
+"WY"	2008	"Fremont"	"Jeffrey City Fire Hall 12-1"	8	75	8	78	7	79	14	68	83	86	82	86
+"WY"	2008	"Fremont"	"WY Indian High Tech Center 13-1"	533	136	369	275	393	267	499	130	669	644	629	660
+"WY"	2008	"Fremont"	"Wind River Rec. Center 14-1"	95	437	84	460	78	468	136	365	532	544	501	546
+"WY"	2008	"Fremont"	"Midvale Fire Hall 15-1"	30	150	24	157	21	162	49	122	180	181	171	183
+"WY"	2008	"Fremont"	"Kinnear Fire Hall 16-1"	55	135	32	164	37	162	61	125	190	196	186	199
+"WY"	2008	"Fremont"	"Fairgrounds/Main Hall 17-1"	161	269	111	319	124	306	191	216	430	430	407	430
+"WY"	2008	"Fremont"	"Riverton Fair Office 18-1"	219	915	135	1019	154	1005	331	741	1134	1154	1072	1159
+"WY"	2008	"Fremont"	"Crowheart School Gym 19-1"	42	83	25	100	28	97	45	73	125	125	118	125
+"WY"	2008	"Fremont"	"Shoshone Senior Citizens Center 20-1"	65	260	66	270	55	286	138	177	325	336	315	341
+"WY"	2008	"Fremont"	"Fairgrounds/Main Hall 21-1"	80	192	63	213	64	219	120	131	272	276	251	283
+"WY"	2008	"Fremont"	"Lysite Fire Hall 22-1"	1	46	4	42	1	43	6	35	47	46	41	44
+"WY"	2008	"Fremont"	"Atlantic City Fire Hall 24-1"	26	29	23	34	23	34	30	21	55	57	51	57
+"WY"	2008	"Goshen"	"Prairie Center 1-1"	3	46	2	48	0	49	4	44	49	50	48	49
+"WY"	2008	"Goshen"	"Jay Em 2-1"	15	49	10	55	8	55	18	44	64	65	62	63
+"WY"	2008	"Goshen"	"Lingle Town Hall 8-1"	116	418	81	452	85	446	168	351	534	533	519	531
+"WY"	2008	"Goshen"	"Ft. Laramie Town Hall 9-1"	89	155	62	183	59	189	98	143	244	245	241	248
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-1"	110	99	77	129	81	125	108	92	209	206	200	206
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-2"	143	232	92	287	104	274	166	193	375	379	359	378
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-3"	105	163	75	199	72	201	126	135	268	274	261	273
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-4"	192	363	104	450	107	447	229	311	555	554	540	554
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-5"	105	186	68	223	67	222	129	157	291	291	286	289
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-6"	140	252	91	308	94	306	157	231	392	399	388	400
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-7"	162	248	100	313	107	302	167	232	410	413	399	409
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-8"	216	508	142	595	134	598	262	453	724	737	715	732
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-9"	159	328	106	383	106	386	175	292	487	489	467	492
+"WY"	2008	"Goshen"	"Torrington Rendezvous Ctr. 10-10"	78	106	63	122	67	116	78	96	184	185	174	183
+"WY"	2008	"Goshen"	"Veteran Legion Post #56 13-1"	38	70	22	88	22	90	43	65	108	110	108	112
+"WY"	2008	"Goshen"	"Yoder Community Center 15-1"	60	146	41	178	44	172	87	115	206	219	202	216
+"WY"	2008	"Goshen"	"Huntley School 16-1"	48	193	29	222	33	215	60	181	241	251	241	248
+"WY"	2008	"Goshen"	"Hawk Springs Comm. Hall 17-1"	21	78	20	79	21	81	24	71	99	99	95	102
+"WY"	2008	"Goshen"	"La Grange Memorial Bldg. 18-1"	26	273	21	263	21	261	43	235	299	284	278	282
+"WY"	2008	"Goshen"	"Iowa Center Jackson Home 20-1"	6	29	4	26	7	24	5	24	35	30	29	31
+"WY"	2008	"Hot Springs"	"1 Hot Springs County Fair Building 1-1"	226	581	132	691	139	693	349	440	807	823	789	832
+"WY"	2008	"Hot Springs"	"2 Hot Springs County Fair Building 1-2"	177	494	131	565	129	570	271	373	671	696	644	699
+"WY"	2008	"Hot Springs"	"Hot Springs County Museum 2-4"	187	644	137	709	142	703	273	509	831	846	782	845
+"WY"	2008	"Hot Springs"	"National Guard Armory 3-3"	29	115	23	132	26	129	41	109	144	155	150	155
+"WY"	2008	"Johnson"	"Johnson County Fairgrounds 2-14"	17	88	11	94	16	90	22	78	105	105	100	106
+"WY"	2008	"Johnson"	"Buffalo - Catholic Rec Hall 3-1"	93	303	64	344	68	333	145	248	396	408	393	401
+"WY"	2008	"Johnson"	"Buffalo - Catholic Rec Hall 3-2"	82	194	55	231	60	223	116	151	276	286	267	283
+"WY"	2008	"Johnson"	"Buffalo - Catholic Rec Hall 3-3"	67	172	48	198	50	195	79	151	239	246	230	245
+"WY"	2008	"Johnson"	"Johnson County Fairgrounds 3-4"	86	221	56	258	64	247	112	169	307	314	281	311
+"WY"	2008	"Johnson"	"Johnson County Fairgrounds 3-5"	34	131	24	146	23	147	50	104	165	170	154	170
+"WY"	2008	"Johnson"	"Johnson County Fairgrounds 3-6"	54	169	29	198	33	193	72	137	223	227	209	226
+"WY"	2008	"Johnson"	"Johnson County Fairgrounds 3-7"	52	201	24	231	31	224	74	174	253	255	248	255
+"WY"	2008	"Johnson"	"Buffalo - Catholic Rec Hall 3-8"	62	228	47	244	50	244	95	179	290	291	274	294
+"WY"	2008	"Johnson"	"Buffalo - Catholic Rec Hall 4-7"	136	569	79	624	102	598	187	484	705	703	671	700
+"WY"	2008	"Johnson"	"Johnson County Fairgrounds 4-8"	156	541	104	606	103	605	212	462	697	710	674	708
+"WY"	2008	"Johnson"	"Johnson County Fairgrounds 5-9"	8	76	3	80	5	79	14	66	84	83	80	84
+"WY"	2008	"Johnson"	"Kaycee - Harold Jarrard Park 6-10"	26	128	16	141	15	141	41	108	154	157	149	156
+"WY"	2008	"Johnson"	"Kaycee - Harold Jarrard Park 8-11"	23	192	11	209	12	209	37	176	215	220	213	221
+"WY"	2008	"Johnson"	"Kaycee - Harold Jarrard Park 9-12"	8	62	2	69	4	67	14	55	70	71	69	71
+"WY"	2008	"Johnson"	"Kaycee - Harold Jarrard Park 9-13"	2	11	2	12	2	12	6	8	13	14	14	14
+"WY"	2008	"Johnson"	"Johnson County Fairgrounds 10-15"	2	48	2	48	2	47	5	32	50	50	37	49
+"WY"	2008	"Laramie"	"Holiday Inn/Cheyenne 1-1"	670	688	525	826	561	784	815	493	1358	1351	1308	1345
+"WY"	2008	"Laramie"	"Holiday Inn/Cheyenne 1-2"	448	373	372	447	383	441	531	257	821	819	788	824
+"WY"	2008	"Laramie"	"Laramie County Library 1-3"	481	379	360	513	403	469	550	275	860	873	825	872
+"WY"	2008	"Laramie"	"Storey Gym 1-4"	269	239	194	303	222	273	301	174	508	497	475	495
+"WY"	2008	"Laramie"	"Kiwanis Community House/Cheyenne 1-5"	348	421	254	518	282	491	427	339	769	772	766	773
+"WY"	2008	"Laramie"	"Kiwanis Community House/Cheyenne 1-6"	482	428	348	559	391	518	533	363	910	907	896	909
+"WY"	2008	"Laramie"	"Storey Gym 1-7"	180	199	129	256	147	240	220	154	379	385	374	387
+"WY"	2008	"Laramie"	"Storey Gym 1-8"	479	403	352	532	388	492	556	310	882	884	866	880
+"WY"	2008	"Laramie"	"Alta Vista Elementary School 1-9"	286	278	206	368	224	339	338	217	564	574	555	563
+"WY"	2008	"Laramie"	"Holiday Inn/Cheyenne 1-10"	399	303	311	393	332	374	464	208	702	704	672	706
+"WY"	2008	"Laramie"	"Westgate Club House/Cheyenne 2-1"	264	426	162	527	202	484	337	325	690	689	662	686
+"WY"	2008	"Laramie"	"Kiwanis Community House/Cheyenne 2-2"	278	419	182	511	201	492	356	319	697	693	675	693
+"WY"	2008	"Laramie"	"Kiwanis Community House/Cheyenne 2-3"	245	420	133	536	178	490	319	344	665	669	663	668
+"WY"	2008	"Laramie"	"City Fire Station #6 2-4"	230	413	143	507	172	476	305	337	643	650	642	648
+"WY"	2008	"Laramie"	"Cheyenne Berean Church 2-5"	424	644	275	793	338	729	577	481	1068	1068	1058	1067
+"WY"	2008	"Laramie"	"Cheyenne Berean Church 2-6"	550	807	397	966	443	920	716	601	1357	1363	1317	1363
+"WY"	2008	"Laramie"	"Kiwanis Community House/Cheyenne 2-7"	269	381	204	461	231	434	359	274	650	665	633	665
+"WY"	2008	"Laramie"	"Cheyenne Berean Church 2-8"	340	565	239	652	265	631	456	430	905	891	886	896
+"WY"	2008	"Laramie"	"Good Shepherd Lutheran Church 2-9"	350	391	229	512	261	478	433	275	741	741	708	739
+"WY"	2008	"Laramie"	"North Christian Church 2-10"	68	117	40	140	44	136	77	103	185	180	180	180
+"WY"	2008	"Laramie"	"Cheyenne Housing Authority  2-11"	307	443	240	512	271	483	406	319	750	752	725	754
+"WY"	2008	"Laramie"	"Northwoods Presbyterian Church 2-12"	242	409	170	470	195	440	314	309	651	640	623	635
+"WY"	2008	"Laramie"	"Laramie County Library 2-13"	82	138	63	153	72	148	117	101	220	216	218	220
+"WY"	2008	"Laramie"	"Anderson Elementary School 2-14"	389	566	252	706	301	654	526	404	955	958	930	955
+"WY"	2008	"Laramie"	"First Baptist Church 3-1"	310	528	211	639	244	603	410	417	838	850	827	847
+"WY"	2008	"Laramie"	"American Legion Post #6 3-2"	283	283	216	357	230	340	348	203	566	573	551	570
+"WY"	2008	"Laramie"	"First Congregational Church/Cheyenne 3-3"	247	262	175	333	203	303	304	195	509	508	499	506
+"WY"	2008	"Laramie"	"First Congregational Church/Cheyenne 3-4"	369	412	261	528	300	486	444	326	781	789	770	786
+"WY"	2008	"Laramie"	"IBEW #415 3-5"	422	588	331	697	362	665	542	449	1010	1028	991	1027
+"WY"	2008	"Laramie"	"AMVETS Post #10 3-6"	355	494	292	569	320	546	487	340	849	861	827	866
+"WY"	2008	"Laramie"	"AMVETS Post #10 3-7"	177	230	139	271	149	259	233	154	407	410	387	408
+"WY"	2008	"Laramie"	"Dildine Elementary School  3-8"	358	492	256	593	287	562	445	380	850	849	825	849
+"WY"	2008	"Laramie"	"VFW Post #1881 3-9"	545	711	380	867	432	815	675	539	1256	1247	1214	1247
+"WY"	2008	"Laramie"	"VFW Post #1881 3-10"	311	446	210	544	241	519	387	338	757	754	725	760
+"WY"	2008	"Laramie"	"VFW Post #1881 3-11"	150	239	98	286	106	277	208	168	389	384	376	383
+"WY"	2008	"Laramie"	"VFW Post #1881 3-12"	295	429	220	510	232	494	389	310	724	730	699	726
+"WY"	2008	"Laramie"	"Willadsen Elementary School 4-1"	29	88	30	87	30	88	43	77	117	117	120	118
+"WY"	2008	"Laramie"	"Gilchrist Elementary School 4-2"	194	432	155	478	149	478	258	361	626	633	619	627
+"WY"	2008	"Laramie"	"Iron Mountain Country Church 4-3"	70	212	62	221	60	224	96	178	282	283	274	284
+"WY"	2008	"Laramie"	"Shrine Club 4-4"	133	371	92	424	113	397	213	281	504	516	494	510
+"WY"	2008	"Laramie"	"Shrine Club 4-5"	8	73	8	73	8	73	11	65	81	81	76	81
+"WY"	2008	"Laramie"	"Shrine Club 4-6"	393	1127	262	1250	292	1219	586	882	1520	1512	1468	1511
+"WY"	2008	"Laramie"	"Taco Johns Ice and Event Center 4-7"	305	739	239	777	253	761	417	577	1044	1016	994	1014
+"WY"	2008	"Laramie"	"Laramie County Community College 4-8"	357	523	303	575	326	549	498	351	880	878	849	875
+"WY"	2008	"Laramie"	"Laramie County Community College 4-9"	390	633	297	723	326	689	523	443	1023	1020	966	1015
+"WY"	2008	"Laramie"	"Laramie County Community College 5-1"	398	599	318	689	348	663	524	437	997	1007	961	1011
+"WY"	2008	"Laramie"	"Qwest Building 5-2"	392	880	306	966	317	954	523	716	1272	1272	1239	1271
+"WY"	2008	"Laramie"	"Laramie County Fire Dist. #2 5-3"	307	561	272	614	265	615	416	433	868	886	849	880
+"WY"	2008	"Laramie"	"Cheyenne Hills Church 5-4"	348	824	252	917	267	901	525	611	1172	1169	1136	1168
+"WY"	2008	"Laramie"	"Archer Research Station 5-5"	140	389	120	405	108	416	188	318	529	525	506	524
+"WY"	2008	"Laramie"	"Carpenter Fire Station 6-1"	169	550	149	593	135	600	279	434	719	742	713	735
+"WY"	2008	"Laramie"	"Burns Community Center  6-2"	165	600	132	634	149	619	304	436	765	766	740	768
+"WY"	2008	"Laramie"	"Commerce Building 6-3"	182	589	131	650	157	624	264	486	771	781	750	781
+"WY"	2008	"Laramie"	"Petsch Feedlot Office 6-4"	16	70	8	80	8	80	21	62	86	88	83	88
+"WY"	2008	"Laramie"	"Albin Community Center 6-5"	35	159	20	177	25	172	45	144	194	197	189	197
+"WY"	2008	"Laramie"	"Laramie County Community College 7-1"	22	22	23	21	25	20	29	14	44	44	43	45
+"WY"	2008	"Laramie"	"Qwest Building 7-2"	7	12	4	15	5	14	6	13	19	19	19	19
+"WY"	2008	"Laramie"	"Mary Godfrey Playhouse 7-3"	6	8	4	10	5	7	6	8	14	14	14	12
+"WY"	2008	"Laramie"	"Mary Godfrey Playhouse 7-4"	49	52	39	61	40	62	66	34	101	100	100	102
+"WY"	2008	"Laramie"	"Laramie County Library 7-5"	55	72	50	76	52	72	73	50	127	126	123	124
+"WY"	2008	"Lincoln"	"South Lincoln Training & Events Ctr. 1-1"	145	199	117	240	113	242	197	145	344	357	342	355
+"WY"	2008	"Lincoln"	"South Lincoln Training & Events Ctr. 1-2"	131	308	111	333	122	317	217	203	439	444	420	439
+"WY"	2008	"Lincoln"	"South Lincoln Training & Events Ctr. 1-3"	155	354	120	406	109	415	256	249	509	526	505	524
+"WY"	2008	"Lincoln"	"Diamondville School Admin Bldg 1-4"	77	149	58	185	68	173	129	105	226	243	234	241
+"WY"	2008	"Lincoln"	"Diamondville Search & Rescue Bldg 1-5"	57	70	45	90	49	87	87	46	127	135	133	136
+"WY"	2008	"Lincoln"	"South Lincoln Training & Events Ctr. 1-6"	23	95	24	94	24	95	38	78	118	118	116	119
+"WY"	2008	"Lincoln"	"Opal Town Hall 1-7"	13	57	12	58	11	59	19	46	70	70	65	70
+"WY"	2008	"Lincoln"	"LaBarge Town Hall 1-8"	39	295	46	291	47	288	84	228	334	337	312	335
+"WY"	2008	"Lincoln"	"Afton Civic Center 2-1"	128	756	99	801	115	780	202	636	884	900	838	895
+"WY"	2008	"Lincoln"	"Afton Civic Center  2-2"	25	213	20	226	20	227	49	189	238	246	238	247
+"WY"	2008	"Lincoln"	"Alpine Civic Center 2-3"	273	437	191	512	204	494	338	339	710	703	677	698
+"WY"	2008	"Lincoln"	"Bedford Water & Sewer Building 2-4"	55	359	43	376	40	380	90	300	414	419	390	420
+"WY"	2008	"Lincoln"	"Etna Elementary School 2-5"	131	547	94	597	95	587	198	440	678	691	638	682
+"WY"	2008	"Lincoln"	"Afton Civic Center 2-6"	65	428	48	456	50	454	110	364	493	504	474	504
+"WY"	2008	"Lincoln"	"Afton Civic Center 2-7"	107	840	77	874	79	869	183	712	947	951	895	948
+"WY"	2008	"Lincoln"	"Thayne Town Hall 2-8"	60	399	51	413	55	407	93	338	459	464	431	462
+"WY"	2008	"Lincoln"	"Cokeville Town Hall 2-9"	40	318	33	330	36	319	96	249	358	363	345	355
+"WY"	2008	"Lincoln"	"Star Valley Ranch 2-10"	299	661	241	719	235	721	346	585	960	960	931	956
+"WY"	2008	"Natrona"	"Roosevelt School 1-1"	324	299	266	363	279	353	425	176	623	629	601	632
+"WY"	2008	"Natrona"	"Natrona County Library 1-2"	288	296	237	342	237	353	362	202	584	579	564	590
+"WY"	2008	"Natrona"	"Dean Morgan Junior High School 1-3"	412	515	314	620	337	600	514	387	927	934	901	937
+"WY"	2008	"Natrona"	"Casper College 1-4"	352	542	262	633	261	644	446	403	894	895	849	905
+"WY"	2008	"Natrona"	"Jefferson School 1-5"	271	327	214	378	218	384	349	241	598	592	590	602
+"WY"	2008	"Natrona"	"Grant School 1-6"	425	802	339	891	353	886	616	567	1227	1230	1183	1239
+"WY"	2008	"Natrona"	"Senior Citizens' Center 1-7"	227	301	178	368	188	351	298	231	528	546	529	539
+"WY"	2008	"Natrona"	"7th Day Adventist School 1-9"	262	692	182	788	177	793	367	579	954	970	946	970
+"WY"	2008	"Natrona"	"Crest Hill School 1-11"	249	467	171	543	174	537	331	362	716	714	693	711
+"WY"	2008	"Natrona"	"Willard School 1-12"	130	240	114	251	118	241	189	156	370	365	345	359
+"WY"	2008	"Natrona"	"Westwood School 2-1"	375	547	271	649	294	632	491	395	922	920	886	926
+"WY"	2008	"Natrona"	"McKinley School 2-2"	302	424	230	491	247	485	406	281	726	721	687	732
+"WY"	2008	"Natrona"	"Old CY Junior High School 2-3"	243	449	174	526	180	522	378	304	692	700	682	702
+"WY"	2008	"Natrona"	"Southridge School 2-4"	252	440	209	481	210	476	339	328	692	690	667	686
+"WY"	2008	"Natrona"	"Casper Shrine Club 2-6"	290	844	224	916	224	917	453	648	1134	1140	1101	1141
+"WY"	2008	"Natrona"	"Paradise Valley School 2-7"	378	1009	269	1129	294	1103	589	752	1387	1398	1341	1397
+"WY"	2008	"Natrona"	"Oregon Trail School 2-8"	314	847	244	928	259	917	491	633	1161	1172	1124	1176
+"WY"	2008	"Natrona"	"Shepherd of the Valley Care Ctr. 2-9"	222	472	164	533	183	509	328	348	694	697	676	692
+"WY"	2008	"Natrona"	"Bethel Baptist Church 2-10"	348	767	239	877	238	883	466	623	1115	1116	1089	1121
+"WY"	2008	"Natrona"	"University Park School 3-2"	353	552	264	653	280	638	538	333	905	917	871	918
+"WY"	2008	"Natrona"	"Pineview School 3-3"	361	559	255	680	273	659	488	402	920	935	890	932
+"WY"	2008	"Natrona"	"Sagewood School 3-4"	406	830	306	946	328	921	591	604	1236	1252	1195	1249
+"WY"	2008	"Natrona"	"Kelly Walsh High School 3-5"	288	570	205	656	215	644	407	418	858	861	825	859
+"WY"	2008	"Natrona"	"Manor Heights School 3-6"	317	794	223	892	220	898	450	653	1111	1115	1103	1118
+"WY"	2008	"Natrona"	"Prince of Peace Lutheran Church 3-8"	446	717	301	889	357	832	626	506	1163	1190	1132	1189
+"WY"	2008	"Natrona"	"Verda James School 3-9"	231	463	178	520	179	518	340	330	694	698	670	697
+"WY"	2008	"Natrona"	"Centennial Junior High School 3-10"	431	1243	300	1376	278	1405	621	1012	1674	1676	1633	1683
+"WY"	2008	"Natrona"	"Evansville School 4-1"	219	410	168	486	203	457	321	280	629	654	601	660
+"WY"	2008	"Natrona"	"Evansville School - Out 4-2"	175	711	131	758	126	771	284	561	886	889	845	897
+"WY"	2008	"Natrona"	"Hat Six Ranch 5-1"	17	58	14	60	11	62	27	43	75	74	70	73
+"WY"	2008	"Natrona"	"Midwest Town Hall 7-1"	49	127	29	149	32	145	84	87	176	178	171	177
+"WY"	2008	"Natrona"	"Edgerton Town Hall 7-2"	14	85	14	85	12	87	33	65	99	99	98	99
+"WY"	2008	"Natrona"	"Mills Community Center 8-1"	370	741	289	837	305	829	559	485	1111	1126	1044	1134
+"WY"	2008	"Natrona"	"Mountain View School 8-2"	88	194	79	205	74	213	138	134	282	284	272	287
+"WY"	2008	"Natrona"	"Wardwell Water & Sewer 8-3"	123	407	107	431	113	427	208	293	530	538	501	540
+"WY"	2008	"Natrona"	"Christian Church of Casper 8-4"	190	737	156	783	152	790	323	586	927	939	909	942
+"WY"	2008	"Natrona"	"Bar Nunn School 8-5"	202	664	157	693	176	679	325	489	866	850	814	855
+"WY"	2008	"Natrona"	"WY Game and Fish 9-1"	261	875	190	935	184	948	380	717	1136	1125	1097	1132
+"WY"	2008	"Natrona"	"Red Creek School 11-1"	12	95	11	96	6	101	21	84	107	107	105	107
+"WY"	2008	"Natrona"	"Alcova School 11-2"	25	102	18	109	19	110	37	83	127	127	120	129
+"WY"	2008	"Natrona"	"Fish Hatchery 11-3"	68	174	44	201	45	202	88	148	242	245	236	247
+"WY"	2008	"Natrona"	"Poison Spider School 11-4"	21	72	9	84	15	77	31	58	93	93	89	92
+"WY"	2008	"Natrona"	"St. Stephen's Church 12-2"	132	281	88	328	85	327	155	248	413	416	403	412
+"WY"	2008	"Natrona"	"Bressler Ranch 13-1"	5	78	4	81	4	81	18	66	83	85	84	85
+"WY"	2008	"Natrona"	"Powder River School 13-2"	6	66	7	63	8	61	9	58	72	70	67	69
+"WY"	2008	"Natrona"	"Upper Willow Creek 14-1"	1	21	0	21	0	21	0	21	22	21	21	21
+"WY"	2008	"Niobrara"	"Rennard's Garage - Warren 1-2"	1	64	0	66	1	65	1	65	65	66	66	66
+"WY"	2008	"Niobrara"	"Stage Station - Hat Creek 3-2"	1	61	1	65	0	66	2	62	62	66	64	66
+"WY"	2008	"Niobrara"	"Lance Creek Elementary School 4-1"	3	85	5	82	2	81	3	82	88	87	85	83
+"WY"	2008	"Niobrara"	"First Baptist Church - N. Lusk 6-1"	87	270	61	300	57	303	105	233	357	361	338	360
+"WY"	2008	"Niobrara"	"Congregational Church of Lusk - S. Lusk 6-2"	141	401	100	455	85	472	187	342	542	555	529	557
+"WY"	2008	"Niobrara"	"Manville Town Hall 7-1"	11	136	10	139	8	139	24	116	147	149	140	147
+"WY"	2008	"Park"	"Clark/Pioneer Rec. Center 1-1"	61	247	54	252	59	247	77	207	308	306	284	306
+"WY"	2008	"Park"	"Cody Auditorium 2-1"	168	619	108	696	139	663	221	532	787	804	753	802
+"WY"	2008	"Park"	"Cody Auditorium 2-2"	226	570	162	640	174	623	280	470	796	802	750	797
+"WY"	2008	"Park"	"LDS Church Gym 3-1"	163	572	108	637	126	615	194	515	735	745	709	741
+"WY"	2008	"Park"	"LDS Church Gym 3-2"	185	756	119	834	120	825	205	700	941	953	905	945
+"WY"	2008	"Park"	"Grace Baptist Church 4-1"	228	850	183	899	170	908	260	776	1078	1082	1036	1078
+"WY"	2008	"Park"	"LDS Church Gym 4-2"	36	167	23	179	23	176	45	134	203	202	179	199
+"WY"	2008	"Park"	"Garland Community Church 6-1"	92	392	60	429	59	428	142	314	484	489	456	487
+"WY"	2008	"Park"	"Park County Courthouse 7-2"	10	68	6	72	5	73	9	69	78	78	78	78
+"WY"	2008	"Park"	"Meeteetse Episcopal Church 8-1"	15	108	15	109	15	109	22	94	123	124	116	124
+"WY"	2008	"Park"	"Meeteetse Town Hall 8-2"	35	158	36	159	32	165	53	134	193	195	187	197
+"WY"	2008	"Park"	"Meeteetse Episcopal Church 8-3"	23	131	25	137	28	136	33	113	154	162	146	164
+"WY"	2008	"Park"	"Fairgrounds Lg. Ex. Hall 9-1"	183	323	119	381	156	345	201	262	506	500	463	501
+"WY"	2008	"Park"	"Fairgrounds Lg. Ex. Hall 9-2"	113	279	82	313	89	307	146	224	392	395	370	396
+"WY"	2008	"Park"	"Fairgrounds Lg. Ex. Hall 9-4"	171	381	123	438	130	429	209	324	552	561	533	559
+"WY"	2008	"Park"	"Fairgrounds Lg. Ex. Hall 9-5"	153	274	102	336	111	323	176	237	427	438	413	434
+"WY"	2008	"Park"	"Fairgrounds Lg. Ex. Hall 9-7"	284	570	196	683	234	640	336	479	854	879	815	874
+"WY"	2008	"Park"	"Fairgrounds Multi-Purp. Bldg. 10-1"	114	366	68	411	75	397	130	316	480	479	446	472
+"WY"	2008	"Park"	"Fairgrounds Multi-Purp. Bldg. 10-2"	175	609	115	673	117	673	218	520	784	788	738	790
+"WY"	2008	"Park"	"Park County Courthouse 11-2"	28	52	17	66	15	68	22	59	80	83	81	83
+"WY"	2008	"Park"	"Wapiti School House 16-1"	197	383	162	419	171	407	190	366	580	581	556	578
+"WY"	2008	"Park"	"Mountain View Club 21-1"	114	483	83	517	80	517	150	412	597	600	562	597
+"WY"	2008	"Park"	"Fairgrounds Multi-Purp. Bldg. 23-1"	57	211	44	228	45	228	69	181	268	272	250	273
+"WY"	2008	"Park"	"Cody Auditorium 24-1"	260	473	187	558	231	515	281	402	733	745	683	746
+"WY"	2008	"Park"	"Cody Auditorium 24-2"	128	391	82	442	99	422	160	334	519	524	494	521
+"WY"	2008	"Park"	"Cody Auditorium 24-3"	65	145	52	161	58	155	77	122	210	213	199	213
+"WY"	2008	"Park"	"Cody Auditorium 25-1"	224	469	154	549	161	537	264	405	693	703	669	698
+"WY"	2008	"Park"	"Cody Auditorium 25-2"	128	351	69	409	79	402	149	314	479	478	463	481
+"WY"	2008	"Park"	"Cody Auditorium 25-3"	121	441	91	478	97	466	159	383	562	569	542	563
+"WY"	2008	"Platte"	"FSB Conference Center 1-1"	129	236	102	276	122	251	172	186	365	378	358	373
+"WY"	2008	"Platte"	"FSB Conference Center 1-2"	127	235	97	278	106	267	157	197	362	375	354	373
+"WY"	2008	"Platte"	"FSB Conference Center 1-3"	177	380	137	440	149	425	241	303	557	577	544	574
+"WY"	2008	"Platte"	"FSB Conference Center 1-4"	161	229	112	294	112	293	177	204	390	406	381	405
+"WY"	2008	"Platte"	"4-H Bldg./Wheatland 1-6"	197	577	154	638	162	629	242	516	774	792	758	791
+"WY"	2008	"Platte"	"FSB Conference Center Guernsey 2-1"	278	352	235	417	218	430	327	277	630	652	604	648
+"WY"	2008	"Platte"	"FSB Conference Center Guernsey 3-1"	36	34	28	43	27	47	32	31	70	71	63	74
+"WY"	2008	"Platte"	"Glendo Fire Hall 6-1"	83	163	57	180	56	179	97	127	246	237	224	235
+"WY"	2008	"Platte"	"Glendo Fire Hall 6-2"	27	93	19	102	26	97	28	89	120	121	117	123
+"WY"	2008	"Platte"	"Chugwater Community Center 9-1"	21	53	15	59	21	52	25	50	74	74	75	73
+"WY"	2008	"Platte"	"Chugwater Community Center 10-1"	34	143	35	145	38	144	47	131	177	180	178	182
+"WY"	2008	"Platte"	"4-H Building 12-1"	46	195	40	201	37	203	45	180	241	241	225	240
+"WY"	2008	"Platte"	"4-H Building 20-1"	91	312	73	345	75	341	120	288	403	418	408	416
+"WY"	2008	"Sheridan"	"Ed Hammer Inc. 1-1"	185	349	137	404	156	380	234	274	534	541	508	536
+"WY"	2008	"Sheridan"	"Fairgrounds Exhibit Hall 2-1"	191	393	127	459	139	442	265	295	584	586	560	581
+"WY"	2008	"Sheridan"	"Sheridan Senior Citizens Center 2-2"	174	277	132	323	137	313	228	212	451	455	440	450
+"WY"	2008	"Sheridan"	"Fairgrounds Exhibit Hall 2-3"	323	758	235	856	274	812	463	586	1081	1091	1049	1086
+"WY"	2008	"Sheridan"	"Sheridan Senior Citizens Center 2-4"	239	402	169	472	194	448	306	305	641	641	611	642
+"WY"	2008	"Sheridan"	"Fairgrounds Exhibit Hall 2-5"	267	737	164	851	192	823	360	627	1004	1015	987	1015
+"WY"	2008	"Sheridan"	"Sheridan County Courthouse 3-2"	160	223	96	282	115	263	181	188	383	378	369	378
+"WY"	2008	"Sheridan"	"Holy Name Church 3-3"	106	206	67	241	78	238	128	173	312	308	301	316
+"WY"	2008	"Sheridan"	"Bethesda Worship/Sheridan 3-4"	259	492	187	581	220	540	339	402	751	768	741	760
+"WY"	2008	"Sheridan"	"Calvary Baptist Church 3-5"	243	612	162	687	195	655	324	495	855	849	819	850
+"WY"	2008	"Sheridan"	"Coffeen School 4-2"	304	516	203	621	223	594	375	407	820	824	782	817
+"WY"	2008	"Sheridan"	"Holy Name Church 4-3"	240	506	162	602	196	556	303	411	746	764	714	752
+"WY"	2008	"Sheridan"	"Holy Name Church 4-4"	70	120	49	146	59	133	89	96	190	195	185	192
+"WY"	2008	"Sheridan"	"Tourist Information Center 5-1"	47	140	34	154	41	146	59	121	187	188	180	187
+"WY"	2008	"Sheridan"	"National Guard Armory 6-1"	199	539	144	609	157	594	266	456	738	753	722	751
+"WY"	2008	"Sheridan"	"Beckton School 7-1"	81	194	52	227	56	221	103	165	275	279	268	277
+"WY"	2008	"Sheridan"	"Story Women's Club 8-1"	190	361	149	406	169	389	220	310	551	555	530	558
+"WY"	2008	"Sheridan"	"Arvada School 9-1"	9	40	12	42	13	40	18	34	49	54	52	53
+"WY"	2008	"Sheridan"	"Clearmont Town Hall 10-1"	25	152	13	169	16	165	43	128	177	182	171	181
+"WY"	2008	"Sheridan"	"Old Woodland Park School 11-1"	208	583	148	655	167	633	276	484	791	803	760	800
+"WY"	2008	"Sheridan"	"Big Horn Women's Club 12-1"	358	957	242	1083	256	1056	342	846	1315	1325	1188	1312
+"WY"	2008	"Sheridan"	"Fairgrounds Exhibit Hall 13-1"	126	307	103	348	105	338	168	263	433	451	431	443
+"WY"	2008	"Sheridan"	"WY Agriculture Sub Station 16-1"	32	171	18	185	24	178	42	145	203	203	187	202
+"WY"	2008	"Sheridan"	"Ranchester Town Hall 17-1"	103	280	68	314	72	314	159	208	383	382	367	386
+"WY"	2008	"Sheridan"	"Ranchester Town Hall 17-2"	87	205	67	229	73	221	105	176	292	296	281	294
+"WY"	2008	"Sheridan"	"Ranchester Town Hall 18-1"	16	39	10	47	9	45	12	38	55	57	50	54
+"WY"	2008	"Sheridan"	"Prairie Dog Women's Club 19-1"	67	202	49	222	48	216	91	166	269	271	257	264
+"WY"	2008	"Sheridan"	"Dayton Town Hall 20-1"	115	313	80	347	89	340	146	256	428	427	402	429
+"WY"	2008	"Sheridan"	"Dayton Town Hall 20-2"	34	103	26	112	30	106	40	94	137	138	134	136
+"WY"	2008	"Sublette"	"Pinedale Elementary School 1-1"	284	658	187	743	213	720	416	482	942	930	898	933
+"WY"	2008	"Sublette"	"Pinedale Elementary School 1-3"	169	661	126	709	122	713	278	517	830	835	795	835
+"WY"	2008	"Sublette"	"Boulder Community Center 1-4"	112	424	83	454	85	447	168	345	536	537	513	532
+"WY"	2008	"Sublette"	"Big Piney Annex 2-1"	92	533	64	557	60	561	159	430	625	621	589	621
+"WY"	2008	"Sublette"	"Big Piney Annex 2-2"	53	336	38	343	49	332	91	267	389	381	358	381
+"WY"	2008	"Sublette"	"Big Piney Annex 2-4"	13	92	12	88	11	88	25	71	105	100	96	99
+"WY"	2008	"Sublette"	"Cora 4-1"	88	255	73	270	63	282	129	203	343	343	332	345
+"WY"	2008	"Sublette"	"Daniel School 4-2"	51	216	37	239	26	249	87	165	267	276	252	275
+"WY"	2008	"Sublette"	"Bondurant Elementary School 5-1"	74	141	60	152	50	162	103	103	215	212	206	212
+"WY"	2008	"Sweetwater"	"Granger Town Hall 1-1"	22	48	15	54	18	50	31	30	70	69	61	68
+"WY"	2008	"Sweetwater"	"RS East Junior High School 3-1"	155	185	134	212	134	207	214	113	340	346	327	341
+"WY"	2008	"Sweetwater"	"RS 1st United Methodist Church 3-2"	317	500	258	585	262	579	449	349	817	843	798	841
+"WY"	2008	"Sweetwater"	"RS 1st United Methodist Church 3-3"	159	246	117	287	130	282	218	166	405	404	384	412
+"WY"	2008	"Sweetwater"	"RS North Side Parish Center 3-4"	78	81	73	94	78	91	103	52	159	167	155	169
+"WY"	2008	"Sweetwater"	"RS County Office Building 3-5"	148	157	120	189	118	192	183	118	305	309	301	310
+"WY"	2008	"Sweetwater"	"RS South Side Parish Center 4-1"	202	243	159	295	168	284	250	166	445	454	416	452
+"WY"	2008	"Sweetwater"	"RS White Mountain Library 4-2"	102	202	90	216	95	209	145	142	304	306	287	304
+"WY"	2008	"Sweetwater"	"RS Sweetwater County Garage 4-3"	123	245	115	262	118	259	174	173	368	377	347	377
+"WY"	2008	"Sweetwater"	"RS 1st Congregational Church 4-4"	334	482	285	552	298	533	462	324	816	837	786	831
+"WY"	2008	"Sweetwater"	"RS Fire Station #1 5-1"	107	136	104	149	100	154	139	95	243	253	234	254
+"WY"	2008	"Sweetwater"	"RS Western WY Comm. College 5-2"	311	710	248	774	251	765	432	523	1021	1022	955	1016
+"WY"	2008	"Sweetwater"	"RS School Admin. Bldg. 5-3"	428	857	359	936	347	955	650	576	1285	1295	1226	1302
+"WY"	2008	"Sweetwater"	"RS White Mountain Library 5-5"	175	213	157	246	154	246	205	161	388	403	366	400
+"WY"	2008	"Sweetwater"	"RS Civic Center 6-1"	247	344	236	371	229	375	340	230	591	607	570	604
+"WY"	2008	"Sweetwater"	"RS County Events Complex  6-2"	194	309	147	366	168	339	280	198	503	513	478	507
+"WY"	2008	"Sweetwater"	"RS Western WY Comm. College 6-3"	142	269	118	296	123	288	195	186	411	414	381	411
+"WY"	2008	"Sweetwater"	"RS County Events Complex 6-4"	32	66	31	73	27	77	50	46	98	104	96	104
+"WY"	2008	"Sweetwater"	"RS County Events Complex 7-1"	97	424	91	432	85	439	171	324	521	523	495	524
+"WY"	2008	"Sweetwater"	"RS County Events Complex 7-2"	111	330	86	362	89	357	180	244	441	448	424	446
+"WY"	2008	"Sweetwater"	"K-Motive Bldg./Jamestown 9-1"	56	128	58	130	62	127	105	70	184	188	175	189
+"WY"	2008	"Sweetwater"	"K-Motive Bldg./Jamestown 9-2"	18	59	20	59	17	62	33	43	77	79	76	79
+"WY"	2008	"Sweetwater"	"GR Sweetwater County Library 10-1"	320	347	308	383	296	396	421	229	667	691	650	692
+"WY"	2008	"Sweetwater"	"GR Lincoln Middle School 10-2"	139	137	119	165	128	157	168	100	276	284	268	285
+"WY"	2008	"Sweetwater"	"GR Lincoln Middle School 10-3"	225	423	194	471	207	456	326	294	648	665	620	663
+"WY"	2008	"Sweetwater"	"GR Recreation Center 10-4"	612	1192	509	1339	514	1323	889	843	1804	1848	1732	1837
+"WY"	2008	"Sweetwater"	"GR Mansface Church 10-5"	372	692	286	793	294	783	541	491	1064	1079	1032	1077
+"WY"	2008	"Sweetwater"	"GR Truman School 10-6"	300	446	277	475	287	469	403	303	746	752	706	756
+"WY"	2008	"Sweetwater"	"Reliance Fire Station 12-1"	90	179	92	181	85	185	134	115	269	273	249	270
+"WY"	2008	"Sweetwater"	"Fon Slagowski's Residence/Washam 13-1"	5	20	3	23	5	21	12	14	25	26	26	26
+"WY"	2008	"Sweetwater"	"Superior Administration Building 19-1"	49	93	48	96	50	96	74	64	142	144	138	146
+"WY"	2008	"Sweetwater"	"Eden Farson Fire Station 20-1"	33	321	31	325	33	324	81	262	354	356	343	357
+"WY"	2008	"Sweetwater"	"Point of Rocks Roger Varley Res 21-1"	17	23	14	28	11	31	24	16	40	42	40	42
+"WY"	2008	"Sweetwater"	"Wamsutter Town Hall 23-1"	24	138	21	139	28	130	55	92	162	160	147	158
+"WY"	2008	"Sweetwater"	"McKinnon School 24-1"	4	68	6	68	6	68	18	52	72	74	70	74
+"WY"	2008	"Sweetwater"	"Bairoil Town Hall 25-1"	14	47	8	53	10	51	14	41	61	61	55	61
+"WY"	2008	"Teton"	"Lower Valley Energy 1-1"	586	460	367	659	363	646	622	390	1046	1026	1012	1009
+"WY"	2008	"Teton"	"LDS Church 1-2"	511	209	374	328	372	331	527	170	720	702	697	703
+"WY"	2008	"Teton"	"National Museum of Wildlife Art 1-3"	285	230	193	320	210	302	308	211	515	513	519	512
+"WY"	2008	"Teton"	"Recreation Center 1-4"	277	198	203	262	213	251	299	149	475	465	448	464
+"WY"	2008	"Teton"	"Teton County Fair Building 1-5"	684	282	503	435	512	413	706	217	966	938	923	925
+"WY"	2008	"Teton"	"Presbyterian Church 1-6"	594	332	416	482	419	471	595	271	926	898	866	890
+"WY"	2008	"Teton"	"Jackson Hole Christian Center 1-7"	466	269	317	401	320	387	517	191	735	718	708	707
+"WY"	2008	"Teton"	"Jackson Senior Center 1-8"	554	290	433	399	416	400	574	227	844	832	801	816
+"WY"	2008	"Teton"	"Teton County Library 1-9"	589	218	443	334	434	335	590	163	807	777	753	769
+"WY"	2008	"Teton"	"WYDOT 1-10"	338	411	249	493	255	484	388	328	749	742	716	739
+"WY"	2008	"Teton"	"Jackson Hole Airport  2-1"	460	450	346	567	350	565	487	417	910	913	904	915
+"WY"	2008	"Teton"	"National Museum of Wildlife Art 2-2"	25	22	20	27	19	28	25	21	47	47	46	47
+"WY"	2008	"Teton"	"Moran School 3-1"	215	146	179	175	180	173	213	132	361	354	345	353
+"WY"	2008	"Teton"	"Wilson School 4-1"	411	164	300	255	295	251	421	129	575	555	550	546
+"WY"	2008	"Teton"	"New Wilson Fire House 4-2"	433	275	287	404	286	404	449	244	708	691	693	690
+"WY"	2008	"Teton"	"Old Wilson School Community Center 4-3"	417	157	335	218	322	229	430	125	574	553	555	551
+"WY"	2008	"Teton"	"Teton Village Fire House 4-4"	493	286	354	404	349	406	506	243	779	758	749	755
+"WY"	2008	"Teton"	"Alta School 5-1"	134	166	104	185	102	190	123	160	300	289	283	292
+"WY"	2008	"Uinta"	"Machine Shop 1-1"	521	1018	444	1116	467	1090	692	768	1539	1560	1460	1557
+"WY"	2008	"Uinta"	"Evanston Middle School 1-2"	492	1187	390	1327	403	1305	648	987	1679	1717	1635	1708
+"WY"	2008	"Uinta"	"Evanston City Hall Chambers 1-3"	334	647	303	698	302	702	450	479	981	1001	929	1004
+"WY"	2008	"Uinta"	"Evanston City Hall Conference 1-4"	59	74	68	71	73	66	82	45	133	139	127	139
+"WY"	2008	"Uinta"	"Evanston Library 2-1"	139	644	121	670	118	673	234	514	783	791	748	791
+"WY"	2008	"Uinta"	"Bear River Town Hall 2-2"	59	180	50	188	51	187	75	146	239	238	221	238
+"WY"	2008	"Uinta"	"Lyman Town Hall Chambers 3-1"	244	591	184	668	202	647	373	431	835	852	804	849
+"WY"	2008	"Uinta"	"Lyman Town Hall Conference 3-2"	94	395	98	410	99	404	170	304	489	508	474	503
+"WY"	2008	"Uinta"	"Ft. Bridger Elementary School 4-1"	131	261	97	305	108	288	175	209	392	402	384	396
+"WY"	2008	"Uinta"	"Mountain View Town Hall 4-2"	158	388	111	452	126	433	222	297	546	563	519	559
+"WY"	2008	"Uinta"	"Mtn. View School Admin. Bldg. 4-3"	86	378	75	400	83	388	142	313	464	475	455	471
+"WY"	2008	"Washakie"	"Ten Sleep Senior Center 3-1"	84	405	57	436	57	436	121	348	489	493	469	493
+"WY"	2008	"Washakie"	"Methodist RER Building/Worland 5-1"	258	634	125	761	135	748	349	493	892	886	842	883
+"WY"	2008	"Washakie"	"Worland High School 5-2"	270	670	154	801	166	790	392	506	940	955	898	956
+"WY"	2008	"Washakie"	"Worland Community Center Complex 5-3"	163	387	105	450	120	434	241	274	550	555	515	554
+"WY"	2008	"Washakie"	"Fairgrounds 5-5"	267	860	161	979	168	975	357	731	1127	1140	1088	1143
+"WY"	2008	"Weston"	"State Forestry Building/Newcastle 1-1"	92	468	75	494	103	467	139	401	560	569	540	570
+"WY"	2008	"Weston"	"State Forestry Building/Newcastle 1-2"	83	362	66	378	75	367	110	315	445	444	425	442
+"WY"	2008	"Weston"	"Kitty Moats/Osage 2-1"	25	130	22	139	21	140	38	98	155	161	136	161
+"WY"	2008	"Weston"	"Upton Community Center 3-1"	24	213	23	219	21	219	48	171	237	242	219	240
+"WY"	2008	"Weston"	"Upton Community Center 4-1"	107	382	68	438	85	417	153	300	489	506	453	502
+"WY"	2008	"Weston"	"State Forestry Building/Newcastle 5-1"	94	339	74	379	80	376	130	302	433	453	432	456
+"WY"	2008	"Weston"	"State Forestry Building/Newcastle 5-2"	82	244	60	267	75	254	99	201	326	327	300	329
+"WY"	2008	"Weston"	"State Forestry Building/Newcastle 5-3"	151	480	107	550	112	549	210	386	631	657	596	661

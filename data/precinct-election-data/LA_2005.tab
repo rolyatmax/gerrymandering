@@ -1,0 +1,321 @@
+state	year	parish	ward	precinct	sd	sd2	ld	ld2	g2005_STS_dv	g2005_STS_rv	g2005_STS_tv	g2005_STS_dv2	g2005_STS_rv2	g2005_STS_tv2	g2005_STH_dv	g2005_STH_rv	g2005_STH_tv	g2005_STH_dv2	g2005_STH_rv2	g2005_STH_tv2	r2005_STS_dv	r2005_STS_rv	r2005_STS_tv	r2005_STH_dv	r2005_STH_rv	r2005_STH_tv	r2005_STH_dv2	r2005_STH_rv2	r2005_STH_tv2
+"LA"	2005	"East Baton Rouge"	"1"	"103A"			66								9	159	168							0	207	207			
+"LA"	2005	"East Baton Rouge"	"1"	"103B"			66								9	129	138							0	153	153			
+"LA"	2005	"East Baton Rouge"	"1"	"104A"			66								11	56	67							0	59	59			
+"LA"	2005	"East Baton Rouge"	"1"	"104B"			66								9	57	66							0	60	60			
+"LA"	2005	"East Baton Rouge"	"1"	"17"			29								23	6	29							23	0	23			
+"LA"	2005	"East Baton Rouge"	"1"	"23"			29								53	2	55							54	0	54			
+"LA"	2005	"East Baton Rouge"	"1"	"52A"			66								21	212	233							0	251	251			
+"LA"	2005	"East Baton Rouge"	"1"	"52B"			66								13	223	236							0	242	242			
+"LA"	2005	"East Baton Rouge"	"1"	"53A"			66								6	182	188							0	182	182			
+"LA"	2005	"East Baton Rouge"	"1"	"53B"			66								3	207	210							0	223	223			
+"LA"	2005	"East Baton Rouge"	"1"	"54A"			66								34	154	188							0	189	189			
+"LA"	2005	"East Baton Rouge"	"1"	"54B"			66								39	202	241							0	237	237			
+"LA"	2005	"East Baton Rouge"	"1"	"55A"			66								14	200	214							0	230	230			
+"LA"	2005	"East Baton Rouge"	"1"	"55B"			66								8	247	255							0	262	262			
+"LA"	2005	"East Baton Rouge"	"1"	"58A"			29								40	5	45							54	0	54			
+"LA"	2005	"East Baton Rouge"	"1"	"58B"			29								27	3	30							27	0	27			
+"LA"	2005	"East Baton Rouge"	"1"	"60A"			66								19	232	251							0	267	267			
+"LA"	2005	"East Baton Rouge"	"1"	"60B"			66								21	250	271							0	264	264			
+"LA"	2005	"East Baton Rouge"	"1"	"70A"			29								95	6	101							128	0	128			
+"LA"	2005	"East Baton Rouge"	"1"	"70B"			29								84	8	92							115	0	115			
+"LA"	2005	"East Baton Rouge"	"1"	"71A"			66								19	217	236							0	254	254			
+"LA"	2005	"East Baton Rouge"	"1"	"71B"			66								10	167	177							0	207	207			
+"LA"	2005	"East Baton Rouge"	"1"	"72A"			66								9	140	149							0	148	148			
+"LA"	2005	"East Baton Rouge"	"1"	"72B"			66								15	121	136							0	151	151			
+"LA"	2005	"East Baton Rouge"	"1"	"77A"			29								137	4	141							171	0	171			
+"LA"	2005	"East Baton Rouge"	"1"	"77B"			29								98	4	102							125	0	125			
+"LA"	2005	"East Baton Rouge"	"1"	"78A"			29								37	10	47							50	0	50			
+"LA"	2005	"East Baton Rouge"	"1"	"78B"			29								20	3	23							34	0	34			
+"LA"	2005	"East Baton Rouge"	"1"	"81A"			66								8	40	48							0	56	56			
+"LA"	2005	"East Baton Rouge"	"1"	"81B"			66								3	29	32							0	40	40			
+"LA"	2005	"East Baton Rouge"	"1"	"82A"			29								78	14	92							102	0	102			
+"LA"	2005	"East Baton Rouge"	"1"	"82B"			29								64	15	79							101	0	101			
+"LA"	2005	"East Baton Rouge"	"1"	"83A"			66								5	85	90							0	99	99			
+"LA"	2005	"East Baton Rouge"	"1"	"83B"			66								7	83	90							0	97	97			
+"LA"	2005	"East Baton Rouge"	"1"	"84A"			29								120	5	125							117	0	117			
+"LA"	2005	"East Baton Rouge"	"1"	"84B"			29								130	13	143							140	0	140			
+"LA"	2005	"East Baton Rouge"	"1"	"85A"			29								71	1	72							79	0	79			
+"LA"	2005	"East Baton Rouge"	"1"	"85B"			29								66	4	70							64	0	64			
+"LA"	2005	"East Baton Rouge"	"1"	"87A"			66								8	216	224							0	240	240			
+"LA"	2005	"East Baton Rouge"	"1"	"87B"			66								19	174	193							0	204	204			
+"LA"	2005	"East Baton Rouge"	"1"	"88A"			29								39	8	47							50	0	50			
+"LA"	2005	"East Baton Rouge"	"1"	"88B"			29								41	6	47							35	0	35			
+"LA"	2005	"East Baton Rouge"	"1"	"88C"			29								48	7	55							59	0	59			
+"LA"	2005	"East Baton Rouge"	"1"	"89"			66								16	152	168							0	162	162			
+"LA"	2005	"East Baton Rouge"	"1"	"9"			66								20	270	290							0	287	287			
+"LA"	2005	"East Baton Rouge"	"1"	"90A"			66								14	141	155							0	155	155			
+"LA"	2005	"East Baton Rouge"	"1"	"90B"			66								16	145	161							0	154	154			
+"LA"	2005	"East Baton Rouge"	"1"	"93"			29								17	9	26							33	0	33			
+"LA"	2005	"East Baton Rouge"	"2"	"1A"			29								75	11	86							101	0	101			
+"LA"	2005	"East Baton Rouge"	"2"	"1B"			29								71	5	76							97	0	97			
+"LA"	2005	"East Baton Rouge"	"2"	"23A"			29								56	0	56							50	0	50			
+"LA"	2005	"East Baton Rouge"	"2"	"23B"			29								63	1	64							77	0	77			
+"LA"	2005	"East Baton Rouge"	"2"	"30A"			29								97	1	98							86	0	86			
+"LA"	2005	"East Baton Rouge"	"2"	"30B"			29								100	2	102							98	0	98			
+"LA"	2005	"East Baton Rouge"	"3"	"24A"			29								96	7	103							118	0	118			
+"LA"	2005	"East Baton Rouge"	"3"	"24B"			29								69	8	77							90	0	90			
+"LA"	2005	"East Baton Rouge"	"3"	"27A"			66								14	83	97							0	109	109			
+"LA"	2005	"East Baton Rouge"	"3"	"27B"			66								16	67	83							0	84	84			
+"LA"	2005	"East Baton Rouge"	"Early Voting"				66	29							11	156	167	16	4	20				0	243	243	21		21
+"LA"	2005	"Jefferson"	"0"	"100"	6				9	123	133											127	127						
+"LA"	2005	"Jefferson"	"0"	"101"	6				13	88	101											98	98						
+"LA"	2005	"Jefferson"	"0"	"102"	6				29	159	190											177	177						
+"LA"	2005	"Jefferson"	"0"	"103"	6				19	251	273											275	275						
+"LA"	2005	"Jefferson"	"0"	"107"	6				1	5	6											3	3						
+"LA"	2005	"Jefferson"	"0"	"136"	6				19	80	102											103	103						
+"LA"	2005	"Jefferson"	"0"	"138"	6				5	22	27											24	24						
+"LA"	2005	"Jefferson"	"0"	"171"	3		87		14	0	15				12	0	12												
+"LA"	2005	"Jefferson"	"0"	"172"	3				100	0	104																		
+"LA"	2005	"Jefferson"	"0"	"173"	3		87		106	0	107				107	0	107												
+"LA"	2005	"Jefferson"	"0"	"174"	3				42	0	42																		
+"LA"	2005	"Jefferson"	"0"	"175"	3				51	0	56																		
+"LA"	2005	"Jefferson"	"0"	"179A"	3				155	0	157																		
+"LA"	2005	"Jefferson"	"0"	"179B"	3		87		182	0	183				184	0	184												
+"LA"	2005	"Jefferson"	"0"	"180"	3		87		277	0	277				238	0	238												
+"LA"	2005	"Jefferson"	"0"	"181"	3		87		288	0	290				260	0	260												
+"LA"	2005	"Jefferson"	"0"	"182"	3				74	0	76																		
+"LA"	2005	"Jefferson"	"0"	"187"	3		87		298	0	298				307	0	307												
+"LA"	2005	"Jefferson"	"0"	"188"	3				109	0	113																		
+"LA"	2005	"Jefferson"	"0"	"189"	3				122	0	129																		
+"LA"	2005	"Jefferson"	"0"	"195"			87								147	0	147												
+"LA"	2005	"Jefferson"	"0"	"196"			87								169	0	169												
+"LA"	2005	"Jefferson"	"0"	"197A"			87								18	0	18												
+"LA"	2005	"Jefferson"	"0"	"197B"			87								184	0	184												
+"LA"	2005	"Jefferson"	"0"	"197C"			87								0	0	0												
+"LA"	2005	"Jefferson"	"0"	"200"	3		87		224	0	225				163	0	163												
+"LA"	2005	"Jefferson"	"0"	"201"	3		87		179	0	179				189	0	189												
+"LA"	2005	"Jefferson"	"0"	"205"			87								138	0	138												
+"LA"	2005	"Jefferson"	"0"	"210"	3		87		45	0	46				41	0	41												
+"LA"	2005	"Jefferson"	"0"	"211"	3		87		64	0	64				51	0	51												
+"LA"	2005	"Jefferson"	"0"	"212A"			87								185	0	185												
+"LA"	2005	"Jefferson"	"0"	"212B"			87								0	0	0												
+"LA"	2005	"Jefferson"	"0"	"213A"			87								35	0	35												
+"LA"	2005	"Jefferson"	"0"	"213B"			87								100	0	100												
+"LA"	2005	"Jefferson"	"0"	"213C"			87								17	0	17												
+"LA"	2005	"Jefferson"	"0"	"214A"			87								45	0	45												
+"LA"	2005	"Jefferson"	"0"	"214B"			87								29	0	29												
+"LA"	2005	"Jefferson"	"0"	"30"	6				42	264	318											303	303						
+"LA"	2005	"Jefferson"	"0"	"34"	6				22	223	247											209	209						
+"LA"	2005	"Jefferson"	"0"	"38"	6				29	203	238											216	216						
+"LA"	2005	"Jefferson"	"0"	"39"	6				34	188	228											210	210						
+"LA"	2005	"Jefferson"	"0"	"42"	6				32	202	240											215	215						
+"LA"	2005	"Jefferson"	"0"	"43"	6				17	159	183											172	172						
+"LA"	2005	"Jefferson"	"0"	"44"	6				29	226	258											255	255						
+"LA"	2005	"Jefferson"	"0"	"45"	6				28	167	205											184	184						
+"LA"	2005	"Jefferson"	"0"	"46"	6				8	99	109											104	104						
+"LA"	2005	"Jefferson"	"0"	"85"	6				34	211	248											232	232						
+"LA"	2005	"Jefferson"	"0"	"87"	6				22	183	216											184	184						
+"LA"	2005	"Jefferson"	"0"	"88"	6				18	167	188											183	183						
+"LA"	2005	"Jefferson"	"0"	"89"	6				33	185	224											200	200						
+"LA"	2005	"Jefferson"	"0"	"90"	6				26	179	207											171	171						
+"LA"	2005	"Jefferson"	"0"	"91"	6				29	170	204											191	191						
+"LA"	2005	"Jefferson"	"0"	"92"	6				8	133	143											165	165						
+"LA"	2005	"Jefferson"	"0"	"93"	6				15	193	210											185	185						
+"LA"	2005	"Jefferson"	"0"	"94"	6				34	290	325											306	306						
+"LA"	2005	"Jefferson"	"0"	"95"	6				36	205	243											237	237						
+"LA"	2005	"Jefferson"	"0"	"96"	6				8	99	109											107	107						
+"LA"	2005	"Jefferson"	"0"	"97"	6				20	160	189											162	162						
+"LA"	2005	"Jefferson"	"0"	"98"	6				44	310	362											306	306						
+"LA"	2005	"Jefferson"	"0"	"99"	6				11	79	92											87	87						
+"LA"	2005	"Jefferson"	"0"	"G001"	3				15	0	15																		
+"LA"	2005	"Jefferson"	"0"	"G002"	3				62	0	65																		
+"LA"	2005	"Jefferson"	"Early Voting"		6	3	87		17	58	76	39	0	39	85	0	85					135	135						
+"LA"	2005	"Orleans"	"14"	"1"	6				40	57	99											90	90						
+"LA"	2005	"Orleans"	"14"	"10"	6				106	80	187											150	150						
+"LA"	2005	"Orleans"	"14"	"11"	6				56	63	121											120	120						
+"LA"	2005	"Orleans"	"14"	"12"	6				64	51	116											113	113						
+"LA"	2005	"Orleans"	"14"	"13A"	6				32	57	91											79	79						
+"LA"	2005	"Orleans"	"14"	"14"	6				51	89	141											135	135						
+"LA"	2005	"Orleans"	"14"	"15"	6				58	84	145											123	123						
+"LA"	2005	"Orleans"	"14"	"16"	6				74	111	189											196	196						
+"LA"	2005	"Orleans"	"14"	"17"	6				56	53	111											89	89						
+"LA"	2005	"Orleans"	"14"	"18A"	6				55	69	127											131	131						
+"LA"	2005	"Orleans"	"14"	"19"	6				56	46	103											91	91						
+"LA"	2005	"Orleans"	"14"	"2"	6				49	57	107											88	88						
+"LA"	2005	"Orleans"	"14"	"3"	6				85	46	132											109	109						
+"LA"	2005	"Orleans"	"14"	"4"	6				66	18	85											76	76						
+"LA"	2005	"Orleans"	"14"	"5"	6				66	48	117											87	87						
+"LA"	2005	"Orleans"	"14"	"6"	6				85	85	175											161	161						
+"LA"	2005	"Orleans"	"14"	"7"	6				63	112	175											144	144						
+"LA"	2005	"Orleans"	"14"	"8"	6				94	72	170											163	163						
+"LA"	2005	"Orleans"	"14"	"9"	6				86	113	200											189	189						
+"LA"	2005	"Orleans"	"15"	"1"	3				67	0	68																		
+"LA"	2005	"Orleans"	"15"	"5"	3				35	0	35																		
+"LA"	2005	"Orleans"	"16"	"1"	6				55	28	85											56	56						
+"LA"	2005	"Orleans"	"16"	"1A"	6				41	20	63											45	45						
+"LA"	2005	"Orleans"	"16"	"2"	6				58	57	118											109	109						
+"LA"	2005	"Orleans"	"16"	"5"	6				85	38	129											93	93						
+"LA"	2005	"Orleans"	"16"	"8"	6				69	47	118											95	95						
+"LA"	2005	"Orleans"	"17"	"1"	6				49	26	79											61	61						
+"LA"	2005	"Orleans"	"5"	"17"	3				73	0	82																		
+"LA"	2005	"Orleans"	"5"	"18"	3				121	0	131																		
+"LA"	2005	"Orleans"	"6"	"1"	3		96		46	0	48				103	0	104							83	0	83			
+"LA"	2005	"Orleans"	"6"	"2"			96								135	0	135							125	0	125			
+"LA"	2005	"Orleans"	"6"	"4"			96								69	0	78							55	0	55			
+"LA"	2005	"Orleans"	"7"	"1"			96								122	0	125							111	0	111			
+"LA"	2005	"Orleans"	"7"	"10"			96								53	0	54							54	0	54			
+"LA"	2005	"Orleans"	"7"	"17"			96								80	0	81							64	0	64			
+"LA"	2005	"Orleans"	"7"	"18"			96								124	0	131							172	0	172			
+"LA"	2005	"Orleans"	"7"	"19"			96								95	0	97							118	0	118			
+"LA"	2005	"Orleans"	"7"	"2"			96								65	0	65							51	0	51			
+"LA"	2005	"Orleans"	"7"	"20"			96								61	0	64							82	0	82			
+"LA"	2005	"Orleans"	"7"	"20A"			96								31	0	33							59	0	59			
+"LA"	2005	"Orleans"	"7"	"21"			96								83	0	84							91	0	91			
+"LA"	2005	"Orleans"	"7"	"22"			96								64	0	66							94	0	94			
+"LA"	2005	"Orleans"	"7"	"23"			96								148	0	151							171	0	171			
+"LA"	2005	"Orleans"	"7"	"24"			96								135	0	135							128	0	128			
+"LA"	2005	"Orleans"	"7"	"25A"	3				99	0	99																		
+"LA"	2005	"Orleans"	"7"	"26"			96								41	0	41							57	0	57			
+"LA"	2005	"Orleans"	"7"	"26A"			96								113	0	117							146	0	146			
+"LA"	2005	"Orleans"	"7"	"27"			96								91	0	96							80	0	80			
+"LA"	2005	"Orleans"	"7"	"27A"			96								79	0	81							56	0	56			
+"LA"	2005	"Orleans"	"7"	"27B"			96								107	0	109							65	0	65			
+"LA"	2005	"Orleans"	"7"	"28"			96								96	0	116							103	0	103			
+"LA"	2005	"Orleans"	"7"	"28A"			96								79	0	82							96	0	96			
+"LA"	2005	"Orleans"	"7"	"30"			96								152	0	155							209	0	209			
+"LA"	2005	"Orleans"	"7"	"31"			96								114	0	116							138	0	138			
+"LA"	2005	"Orleans"	"7"	"33A"	3				72	0	75																		
+"LA"	2005	"Orleans"	"7"	"35"	3				38	0	38																		
+"LA"	2005	"Orleans"	"7"	"36"	3				48	0	48																		
+"LA"	2005	"Orleans"	"7"	"36A"	3				40	0	40																		
+"LA"	2005	"Orleans"	"7"	"37"	3				49	0	51																		
+"LA"	2005	"Orleans"	"7"	"37A"	3				40	0	41																		
+"LA"	2005	"Orleans"	"7"	"38A"	3				50	0	51																		
+"LA"	2005	"Orleans"	"7"	"39"	3				75	0	79																		
+"LA"	2005	"Orleans"	"7"	"4"			96								38	0	43							41	0	41			
+"LA"	2005	"Orleans"	"7"	"40"	3				96	0	99																		
+"LA"	2005	"Orleans"	"7"	"41"	3				50	0	54																		
+"LA"	2005	"Orleans"	"7"	"42"	3				51	0	61																		
+"LA"	2005	"Orleans"	"7"	"4A"			96								28	0	29							40	0	40			
+"LA"	2005	"Orleans"	"7"	"5"			96								30	0	33							32	0	32			
+"LA"	2005	"Orleans"	"7"	"7"			96								32	0	33							44	0	44			
+"LA"	2005	"Orleans"	"7"	"8"			96								63	0	64							68	0	68			
+"LA"	2005	"Orleans"	"7"	"9"			96								44	0	44							36	0	36			
+"LA"	2005	"Orleans"	"7"	"9A"			96								58	0	58							69	0	69			
+"LA"	2005	"Orleans"	"8"	"1"	3		96		47	0	49				121	0	121							78	0	78			
+"LA"	2005	"Orleans"	"8"	"10"	3				41	0	41																		
+"LA"	2005	"Orleans"	"8"	"12"	3				57	0	59																		
+"LA"	2005	"Orleans"	"8"	"14"	3				33	0	33																		
+"LA"	2005	"Orleans"	"8"	"15"	3				109	0	111																		
+"LA"	2005	"Orleans"	"8"	"16"	3				33	0	33																		
+"LA"	2005	"Orleans"	"8"	"17"	3				52	0	52																		
+"LA"	2005	"Orleans"	"8"	"18"	3				46	0	47																		
+"LA"	2005	"Orleans"	"8"	"19"	3				64	0	66																		
+"LA"	2005	"Orleans"	"8"	"2"	3		96		38	0	40				117	0	117							84	0	84			
+"LA"	2005	"Orleans"	"8"	"20"	3				63	0	65																		
+"LA"	2005	"Orleans"	"8"	"21"	3				90	0	90																		
+"LA"	2005	"Orleans"	"8"	"22"	3				90	0	94																		
+"LA"	2005	"Orleans"	"8"	"23"	3				112	0	115																		
+"LA"	2005	"Orleans"	"8"	"24"	3				60	0	66																		
+"LA"	2005	"Orleans"	"8"	"25"	3				74	0	74																		
+"LA"	2005	"Orleans"	"8"	"25A"	3				58	0	60																		
+"LA"	2005	"Orleans"	"8"	"26"	3				69	0	72																		
+"LA"	2005	"Orleans"	"8"	"26A"	3				115	0	116																		
+"LA"	2005	"Orleans"	"8"	"27"	3				58	0	58																		
+"LA"	2005	"Orleans"	"8"	"27A"	3				69	0	70																		
+"LA"	2005	"Orleans"	"8"	"28"	3				178	0	182																		
+"LA"	2005	"Orleans"	"8"	"29"	3				46	0	47																		
+"LA"	2005	"Orleans"	"8"	"30"	3				73	0	74																		
+"LA"	2005	"Orleans"	"8"	"4"	3		96		25	0	25				38	0	38							46	0	46			
+"LA"	2005	"Orleans"	"8"	"6"	3		96		36	0	36				36	0	36							27	0	27			
+"LA"	2005	"Orleans"	"8"	"7"	3		96		28	0	29				42	0	44							38	0	38			
+"LA"	2005	"Orleans"	"8"	"8"	3		96		43	0	45				35	0	37							33	0	33			
+"LA"	2005	"Orleans"	"9"	"10"	3				26	0	26																		
+"LA"	2005	"Orleans"	"9"	"11"	3				18	0	22																		
+"LA"	2005	"Orleans"	"9"	"12"	3				35	0	45																		
+"LA"	2005	"Orleans"	"9"	"13"	3				36	0	40																		
+"LA"	2005	"Orleans"	"9"	"14"	3				13	0	15																		
+"LA"	2005	"Orleans"	"9"	"15"	3				27	0	34																		
+"LA"	2005	"Orleans"	"9"	"16"	3				25	0	27																		
+"LA"	2005	"Orleans"	"9"	"17"	3				48	0	49																		
+"LA"	2005	"Orleans"	"9"	"18"	3				35	0	36																		
+"LA"	2005	"Orleans"	"9"	"19"	3				42	0	42																		
+"LA"	2005	"Orleans"	"9"	"21"	3				34	0	34																		
+"LA"	2005	"Orleans"	"9"	"22"	3				66	0	66																		
+"LA"	2005	"Orleans"	"9"	"23"	3				56	0	58																		
+"LA"	2005	"Orleans"	"9"	"24"	3				19	0	20																		
+"LA"	2005	"Orleans"	"9"	"25"	3				42	0	42																		
+"LA"	2005	"Orleans"	"9"	"25A"	3				49	0	50																		
+"LA"	2005	"Orleans"	"9"	"26"	3				36	0	36																		
+"LA"	2005	"Orleans"	"9"	"26A"	3				39	0	39																		
+"LA"	2005	"Orleans"	"9"	"27"	3				40	0	40																		
+"LA"	2005	"Orleans"	"9"	"28"	3				31	0	32																		
+"LA"	2005	"Orleans"	"9"	"28A"	3				0	0	0																		
+"LA"	2005	"Orleans"	"9"	"28C"	3				35	0	36																		
+"LA"	2005	"Orleans"	"9"	"28D"	3				40	0	40																		
+"LA"	2005	"Orleans"	"9"	"28E"	3				25	0	25																		
+"LA"	2005	"Orleans"	"9"	"28F"	3				54	0	54																		
+"LA"	2005	"Orleans"	"9"	"29"	3				21	0	23																		
+"LA"	2005	"Orleans"	"9"	"29A"	3				35	0	35																		
+"LA"	2005	"Orleans"	"9"	"30"	3				75	0	76																		
+"LA"	2005	"Orleans"	"9"	"30A"	3				127	0	129																		
+"LA"	2005	"Orleans"	"9"	"31"	3				105	0	107																		
+"LA"	2005	"Orleans"	"9"	"31A"	3				76	0	76																		
+"LA"	2005	"Orleans"	"9"	"31B"	3				143	0	143																		
+"LA"	2005	"Orleans"	"9"	"31C"	3				129	0	130																		
+"LA"	2005	"Orleans"	"9"	"31D"	3				107	0	108																		
+"LA"	2005	"Orleans"	"9"	"31E"	3				105	0	105																		
+"LA"	2005	"Orleans"	"9"	"33"	3				39	0	40																		
+"LA"	2005	"Orleans"	"9"	"33A"	3				41	0	41																		
+"LA"	2005	"Orleans"	"9"	"34"	3				25	0	26																		
+"LA"	2005	"Orleans"	"9"	"42"	3				57	0	57																		
+"LA"	2005	"Orleans"	"9"	"42A"	3				60	0	60																		
+"LA"	2005	"Orleans"	"9"	"42B"	3				54	0	54																		
+"LA"	2005	"Orleans"	"9"	"9"	3				25	0	33																		
+"LA"	2005	"Orleans"	"Early Voting"		6	3	96		49	37	90				40	0	40					68	68	47	0	47			
+"LA"	2005	"St. Tammany"	"0"	"102"	6				23	266	297											340	340						
+"LA"	2005	"St. Tammany"	"0"	"103"	6				15	296	313											330	330						
+"LA"	2005	"St. Tammany"	"0"	"104"	6				30	324	360											401	401						
+"LA"	2005	"St. Tammany"	"0"	"401"	6				35	343	385											447	447						
+"LA"	2005	"St. Tammany"	"0"	"402"	6				15	184	204											219	219						
+"LA"	2005	"St. Tammany"	"0"	"413"	6				19	373	394											453	453						
+"LA"	2005	"St. Tammany"	"0"	"419"	6				12	266	280											333	333						
+"LA"	2005	"St. Tammany"	"0"	"M01"	6				34	204	242											247	247						
+"LA"	2005	"St. Tammany"	"0"	"M02"	6				49	238	297											284	284						
+"LA"	2005	"St. Tammany"	"0"	"M03"	6				33	117	152											151	151						
+"LA"	2005	"St. Tammany"	"0"	"M04"	6				53	154	216											212	212						
+"LA"	2005	"St. Tammany"	"0"	"M05"	6				27	158	192											205	205						
+"LA"	2005	"St. Tammany"	"0"	"M06"	6				28	224	255											271	271						
+"LA"	2005	"St. Tammany"	"0"	"M07"	6				30	232	268											277	277						
+"LA"	2005	"St. Tammany"	"0"	"M08"	6				15	159	177											182	182						
+"LA"	2005	"St. Tammany"	"0"	"MD1"	6				33	160	196											205	205						
+"LA"	2005	"St. Tammany"	"Early Voting"		6				14	190	212											378	378						
+"LA"	2005	"Tangipahoa"	"0"	"121A"	6				21	83	120											93	93						
+"LA"	2005	"Tangipahoa"	"0"	"121B"	6				2	8	11											9	9						
+"LA"	2005	"Tangipahoa"	"0"	"124"	6				20	51	83											71	71						
+"LA"	2005	"Tangipahoa"	"0"	"125"	6				23	92	120											100	100						
+"LA"	2005	"Tangipahoa"	"0"	"127"	6				10	21	36											32	32						
+"LA"	2005	"Tangipahoa"	"0"	"127A"	6				3	52	60											65	65						
+"LA"	2005	"Tangipahoa"	"0"	"129"	6				8	40	53											35	35						
+"LA"	2005	"Tangipahoa"	"0"	"129A"	6				13	69	86											68	68						
+"LA"	2005	"Tangipahoa"	"0"	"133"	6				27	76	108											112	112						
+"LA"	2005	"Tangipahoa"	"0"	"133A"	6				10	41	53											52	52						
+"LA"	2005	"Tangipahoa"	"0"	"137"	6				11	100	128											101	101						
+"LA"	2005	"Tangipahoa"	"0"	"137A"	6				21	126	150											143	143						
+"LA"	2005	"Tangipahoa"	"0"	"137B"	6				12	61	74											60	60						
+"LA"	2005	"Tangipahoa"	"0"	"137C"	6				29	175	212											197	197						
+"LA"	2005	"Tangipahoa"	"0"	"139"	6				7	47	57											65	65						
+"LA"	2005	"Tangipahoa"	"0"	"149"	6				16	225	255											241	241						
+"LA"	2005	"Tangipahoa"	"0"	"149A"	6				10	35	49											48	48						
+"LA"	2005	"Tangipahoa"	"0"	"151"	6				36	115	176											167	167						
+"LA"	2005	"Tangipahoa"	"0"	"33"	6				5	52	63											57	57						
+"LA"	2005	"Tangipahoa"	"0"	"40"	6				5	50	58											66	66						
+"LA"	2005	"Tangipahoa"	"0"	"40A"	6				26	136	167											186	186						
+"LA"	2005	"Tangipahoa"	"0"	"41"	6				26	193	224											200	200						
+"LA"	2005	"Tangipahoa"	"0"	"42"	6				7	41	51											49	49						
+"LA"	2005	"Tangipahoa"	"0"	"42A"	6				15	84	99											88	88						
+"LA"	2005	"Tangipahoa"	"0"	"45"	6				14	149	165											150	150						
+"LA"	2005	"Tangipahoa"	"0"	"45A"	6				19	60	90											68	68						
+"LA"	2005	"Tangipahoa"	"0"	"46"	6				31	83	117											81	81						
+"LA"	2005	"Tangipahoa"	"0"	"47"	6				18	52	72											71	71						
+"LA"	2005	"Tangipahoa"	"0"	"70"	6				42	175	229											202	202						
+"LA"	2005	"Tangipahoa"	"0"	"70A"	6				5	20	26											14	14						
+"LA"	2005	"Tangipahoa"	"0"	"71"	6				49	142	201											179	179						
+"LA"	2005	"Tangipahoa"	"0"	"73"	6				27	88	124											125	125						
+"LA"	2005	"Tangipahoa"	"0"	"74"	6				31	118	160											129	129						
+"LA"	2005	"Tangipahoa"	"Early Voting"		6				38	438	498											530	530						
+"LA"	2005	"West Baton Rouge"	"4"	"1"			29								39	7	46							33	0	33			
+"LA"	2005	"West Baton Rouge"	"4"	"4"			29								76	1	77							51	0	51			
+"LA"	2005	"West Baton Rouge"	"5"	"1"			29								108	1	109							100	0	100			
+"LA"	2005	"West Baton Rouge"	"Early Voting"				29								22	3	25							35	0	35			

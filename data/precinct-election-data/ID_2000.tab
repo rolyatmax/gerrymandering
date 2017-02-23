@@ -1,0 +1,938 @@
+state	year	precinct	county	g2000_USP_rv	g2000_USP_dv	g2000_REG_tv	g2000_BALL_tv	g2000_USH_rv	g2000_USH_dv
+"ID"	2000	"1"	"Ada"	204	234	1085	525	238	247
+"ID"	2000	"2"	"Ada"	277	188	939	525	276	211
+"ID"	2000	"3"	"Ada"	321	295	1234	688	377	262
+"ID"	2000	"4"	"Ada"	196	177	950	465	226	189
+"ID"	2000	"5"	"Ada"	145	121	928	353	159	141
+"ID"	2000	"6"	"Ada"	409	275	1103	726	449	252
+"ID"	2000	"7"	"Ada"	275	187	929	535	306	188
+"ID"	2000	"8"	"Ada"	241	148	1005	426	213	177
+"ID"	2000	"9"	"Ada"	501	414	1535	974	565	364
+"ID"	2000	"10"	"Ada"	347	176	843	566	381	164
+"ID"	2000	"11"	"Ada"	112	234	1001	472	135	268
+"ID"	2000	"12"	"Ada"	561	279	1421	897	550	296
+"ID"	2000	"13"	"Ada"	253	227	939	565	280	223
+"ID"	2000	"14"	"Ada"	386	251	1310	702	413	227
+"ID"	2000	"15"	"Ada"	535	325	1576	952	526	348
+"ID"	2000	"16"	"Ada"	907	390	2355	1374	849	423
+"ID"	2000	"17"	"Ada"	388	218	1209	657	375	244
+"ID"	2000	"18"	"Ada"	308	509	1496	961	378	519
+"ID"	2000	"19"	"Ada"	130	312	1034	554	154	345
+"ID"	2000	"20"	"Ada"	478	398	1829	1010	493	435
+"ID"	2000	"21"	"Ada"	147	316	1124	639	187	382
+"ID"	2000	"22"	"Ada"	183	355	1128	636	216	379
+"ID"	2000	"23"	"Ada"	188	298	969	576	220	293
+"ID"	2000	"24"	"Ada"	279	404	1341	844	296	490
+"ID"	2000	"25"	"Ada"	424	389	1463	927	502	378
+"ID"	2000	"26"	"Ada"	250	148	939	445	259	144
+"ID"	2000	"27"	"Ada"	529	417	1587	1026	596	376
+"ID"	2000	"28"	"Ada"	150	167	705	390	152	209
+"ID"	2000	"29"	"Ada"	536	132	1048	706	520	155
+"ID"	2000	"30"	"Ada"	269	243	1025	600	308	253
+"ID"	2000	"31"	"Ada"	305	451	1514	938	385	492
+"ID"	2000	"32"	"Ada"	288	252	1164	610	274	279
+"ID"	2000	"33"	"Ada"	273	247	976	622	306	268
+"ID"	2000	"34"	"Ada"	291	274	1051	645	294	303
+"ID"	2000	"35"	"Ada"	363	239	1063	670	394	234
+"ID"	2000	"36"	"Ada"	465	219	1199	740	432	254
+"ID"	2000	"37"	"Ada"	265	225	904	572	305	218
+"ID"	2000	"38"	"Ada"	414	299	1819	796	422	303
+"ID"	2000	"39"	"Ada"	436	295	1515	800	451	305
+"ID"	2000	"40"	"Ada"	311	238	1002	604	346	219
+"ID"	2000	"41"	"Ada"	123	201	735	404	138	218
+"ID"	2000	"42"	"Ada"	398	229	1059	702	355	318
+"ID"	2000	"43"	"Ada"	289	232	945	584	318	221
+"ID"	2000	"44"	"Ada"	327	235	1078	630	361	222
+"ID"	2000	"45"	"Ada"	301	337	1149	734	346	335
+"ID"	2000	"46"	"Ada"	242	103	538	369	232	113
+"ID"	2000	"47"	"Ada"	636	186	1298	850	582	217
+"ID"	2000	"48"	"Ada"	263	273	963	612	303	255
+"ID"	2000	"49"	"Ada"	300	220	909	589	302	235
+"ID"	2000	"50"	"Ada"	480	408	1626	1011	446	494
+"ID"	2000	"51"	"Ada"	259	229	947	553	258	248
+"ID"	2000	"52"	"Ada"	884	270	1726	1228	825	336
+"ID"	2000	"53"	"Ada"	490	354	1511	924	512	345
+"ID"	2000	"54"	"Ada"	389	208	922	643	362	243
+"ID"	2000	"55"	"Ada"	402	163	896	595	362	208
+"ID"	2000	"56"	"Ada"	373	194	1094	615	350	225
+"ID"	2000	"57"	"Ada"	265	182	728	504	259	198
+"ID"	2000	"58"	"Ada"	292	222	802	561	280	250
+"ID"	2000	"59"	"Ada"	394	213	952	662	364	245
+"ID"	2000	"60"	"Ada"	301	194	795	542	326	195
+"ID"	2000	"61"	"Ada"	305	252	1053	618	327	238
+"ID"	2000	"62"	"Ada"	352	273	1161	697	391	252
+"ID"	2000	"63"	"Ada"	664	238	1606	988	613	301
+"ID"	2000	"64"	"Ada"	492	380	1478	965	540	357
+"ID"	2000	"65"	"Ada"	576	337	1501	974	539	397
+"ID"	2000	"66"	"Ada"	692	233	1382	993	641	273
+"ID"	2000	"67"	"Ada"	1305	471	2645	1855	1176	586
+"ID"	2000	"68"	"Ada"	1458	441	2810	1986	1357	528
+"ID"	2000	"69"	"Ada"	82	53	277	151	85	59
+"ID"	2000	"70"	"Ada"	42	5	69	48	41	7
+"ID"	2000	"71"	"Ada"	501	199	1343	758	483	218
+"ID"	2000	"72"	"Ada"	479	172	1028	698	470	195
+"ID"	2000	"73"	"Ada"	1278	388	2600	1751	1205	451
+"ID"	2000	"74"	"Ada"	868	310	1828	1284	870	338
+"ID"	2000	"75"	"Ada"	446	186	1110	674	404	233
+"ID"	2000	"76"	"Ada"	546	224	1216	806	469	274
+"ID"	2000	"77"	"Ada"	776	236	1547	1058	729	268
+"ID"	2000	"78"	"Ada"	410	140	836	586	391	155
+"ID"	2000	"79"	"Ada"	903	288	1903	1261	810	357
+"ID"	2000	"80"	"Ada"	391	268	1832	799	416	278
+"ID"	2000	"81"	"Ada"	225	133	800	387	228	139
+"ID"	2000	"82"	"Ada"	753	431	2033	1267	714	468
+"ID"	2000	"83"	"Ada"	932	291	1721	1278	901	315
+"ID"	2000	"84"	"Ada"	506	306	1502	890	545	288
+"ID"	2000	"85"	"Ada"	663	247	1522	979	630	288
+"ID"	2000	"86"	"Ada"	751	398	2074	1229	716	437
+"ID"	2000	"87"	"Ada"	884	428	2255	1382	818	473
+"ID"	2000	"88"	"Ada"	877	370	2166	1342	835	414
+"ID"	2000	"89"	"Ada"	637	280	1510	978	569	339
+"ID"	2000	"90"	"Ada"	762	265	1717	1104	745	298
+"ID"	2000	"91"	"Ada"	1764	506	3572	2422	1672	593
+"ID"	2000	"92"	"Ada"	478	108	971	629	450	145
+"ID"	2000	"93"	"Ada"	465	135	1049	658	419	187
+"ID"	2000	"94"	"Ada"	233	63	498	319	197	99
+"ID"	2000	"95"	"Ada"	1022	348	2337	1439	967	387
+"ID"	2000	"96"	"Ada"	711	235	1774	999	660	259
+"ID"	2000	"97"	"Ada"	576	183	1316	809	528	237
+"ID"	2000	"98"	"Ada"	846	364	2190	1307	818	403
+"ID"	2000	"99"	"Ada"	800	297	1729	1190	736	365
+"ID"	2000	"100"	"Ada"	806	248	1620	1109	718	303
+"ID"	2000	"101"	"Ada"	751	249	1578	1057	693	305
+"ID"	2000	"102"	"Ada"	1213	470	2433	1761	1164	486
+"ID"	2000	"103"	"Ada"	699	265	1589	1020	647	306
+"ID"	2000	"104"	"Ada"	196	132	600	353	184	146
+"ID"	2000	"105"	"Ada"	1379	473	2556	1923	1277	536
+"ID"	2000	"106"	"Ada"	568	416	1650	1072	562	424
+"ID"	2000	"107"	"Ada"	754	570	2539	1441	688	654
+"ID"	2000	"108"	"Ada"	178	192	667	423	172	221
+"ID"	2000	"109"	"Ada"	214	77	500	321	193	109
+"ID"	2000	"110"	"Ada"	393	336	1468	830	453	320
+"ID"	2000	"111"	"Ada"	968	531	2482	1593	1026	499
+"ID"	2000	"112"	"Ada"	493	166	1109	717	466	190
+"ID"	2000	"113"	"Ada"	385	278	1062	719	440	240
+"ID"	2000	"114"	"Ada"	605	445	1781	1116	657	393
+"ID"	2000	"115"	"Ada"	326	318	1121	718	350	340
+"ID"	2000	"116"	"Ada"	717	198	1460	978	671	234
+"ID"	2000	"117"	"Ada"	661	407	1978	1151	628	435
+"ID"	2000	"118"	"Ada"	456	294	1227	809	419	333
+"ID"	2000	"119"	"Ada"	626	297	1559	1000	594	347
+"ID"	2000	"120"	"Ada"	642	338	1702	1046	627	362
+"ID"	2000	"121"	"Ada"	497	368	1608	933	548	324
+"ID"	2000	"122"	"Ada"	814	439	2196	1327	759	486
+"ID"	2000	"123"	"Ada"	796	348	1995	1227	754	396
+"ID"	2000	"124"	"Ada"	470	210	1125	725	414	254
+"ID"	2000	"125"	"Ada"	1103	388	2301	1566	1019	432
+"ID"	2000	"126"	"Ada"	271	212	784	531	250	242
+"ID"	2000	"127"	"Ada"	322	157	819	508	295	177
+"ID"	2000	"128"	"Ada"	506	309	1508	886	557	283
+"ID"	2000	"129"	"Ada"	557	439	1724	1064	519	475
+"ID"	2000	"130"	"Ada"	180	238	904	503	199	269
+"ID"	2000	"131"	"Ada"	1095	514	2756	1706	1107	513
+"ID"	2000	"132 Absentee"	"Ada"	13	3		16	10	4
+"ID"	2000	"133 Absentee"	"Ada"	98	49		159	102	52
+"ID"	2000	"134 Absentee"	"Ada"	1063	622		1781	1122	552
+"ID"	2000	"135 Absentee"	"Ada"	851	347		1253	788	381
+"ID"	2000	"136 Absentee"	"Ada"	1311	468		1868	1192	532
+"ID"	2000	"137 Absentee"	"Ada"	413	169		611	372	187
+"ID"	2000	"138 Absentee"	"Ada"	773	347		1176	707	386
+"ID"	2000	"139 Absentee"	"Ada"	339	207		580	326	193
+"ID"	2000	"140 Absentee"	"Ada"	573	387		1047	535	424
+"ID"	2000	"141 Absentee"	"Ada"	16	16		34	13	17
+"ID"	2000	"142 Absentee"	"Ada"	406	187		630	375	198
+"ID"	2000	"143 Absentee"	"Ada"	131	48		194	120	58
+"ID"	2000	"144 Absentee"	"Ada"	258	140		430	278	128
+"ID"	2000	"145 Absentee"	"Ada"	190	95		296	176	99
+"ID"	2000	"146 Absentee"	"Ada"	72	36		120	67	41
+"ID"	2000	"147 Absentee"	"Ada"	860	263		1173	772	318
+"ID"	2000	"148 Absentee"	"Ada"	112	128		262	108	131
+"ID"	2000	"149 Absentee"	"Ada"	55	36		105	62	35
+"ID"	2000	"150 Absentee"	"Ada"	676	679		1514	736	657
+"ID"	2000	"1 Indian Valley"	"Adams"	124	23	213	173	114	38
+"ID"	2000	"2 Council"	"Adams"	352	91	614	476	302	92
+"ID"	2000	"3 No. Council"	"Adams"	494	95	794	647	417	120
+"ID"	2000	"4 Bear"	"Adams"	25	1	33	26	22	2
+"ID"	2000	"5 New Meadows"	"Adams"	437	113	808	589	369	116
+"ID"	2000	"6 Little Salmon River"	"Adams"	44	13	73	58	31	16
+"ID"	2000	"Pocatello 1"	"Bannock"	301	242	811	576	330	218
+"ID"	2000	"Pocatello 2"	"Bannock"	334	179	822	547	345	182
+"ID"	2000	"Pocatello 3"	"Bannock"	274	158	717	461	289	149
+"ID"	2000	"Pocatello 4"	"Bannock"	292	259	1271	636	321	247
+"ID"	2000	"Pocatello 5"	"Bannock"	375	226	1016	658	401	218
+"ID"	2000	"Pocatello 6"	"Bannock"	239	225	1003	551	262	215
+"ID"	2000	"Pocatello 7"	"Bannock"	235	160	669	438	273	140
+"ID"	2000	"Pocatello 8"	"Bannock"	174	183	697	420	194	187
+"ID"	2000	"Pocatello 9"	"Bannock"	299	166	795	515	316	168
+"ID"	2000	"Pocatello 10"	"Bannock"	306	230	931	594	347	200
+"ID"	2000	"Pocatello 11"	"Bannock"	278	224	855	551	302	213
+"ID"	2000	"Pocatello 12"	"Bannock"	376	209	963	639	386	220
+"ID"	2000	"Pocatello 13"	"Bannock"	258	189	818	492	285	181
+"ID"	2000	"Pocatello 14"	"Bannock"	329	232	977	612	356	210
+"ID"	2000	"Pocatello 15"	"Bannock"	286	176	837	509	305	176
+"ID"	2000	"Pocatello 16"	"Bannock"	141	133	505	310	161	126
+"ID"	2000	"Pocatello 17"	"Bannock"	245	170	695	445	273	142
+"ID"	2000	"Pocatello 18"	"Bannock"	312	156	790	510	323	145
+"ID"	2000	"Pocatello 19"	"Bannock"	276	151	662	476	300	147
+"ID"	2000	"Pocatello 20"	"Bannock"	241	165	667	454	275	141
+"ID"	2000	"Pocatello 21"	"Bannock"	303	154	829	495	341	125
+"ID"	2000	"Pocatello 22"	"Bannock"	389	212	1031	657	412	211
+"ID"	2000	"Pocatello 23"	"Bannock"	300	225	881	570	341	195
+"ID"	2000	"Pocatello 24"	"Bannock"	196	192	752	430	213	185
+"ID"	2000	"Pocatello 25"	"Bannock"	153	177	764	394	177	175
+"ID"	2000	"Pocatello 26"	"Bannock"	363	193	1339	646	386	205
+"ID"	2000	"Pocatello 27"	"Bannock"	339	177	958	563	363	163
+"ID"	2000	"Pocatello 28"	"Bannock"	337	158	950	556	344	173
+"ID"	2000	"Pocatello 29"	"Bannock"	238	250	1176	573	255	264
+"ID"	2000	"Pocatello 30"	"Bannock"	266	172	727	485	289	168
+"ID"	2000	"Absentee 32"	"Bannock"	42	9	0	53	37	12
+"ID"	2000	"Absentee 33"	"Bannock"	609	486	0	1179	648	453
+"ID"	2000	"Absentee 34"	"Bannock"	804	533	0	1459	835	524
+"ID"	2000	"Absentee 35"	"Bannock"	202	159	0	403	217	157
+"ID"	2000	"Pocatello 36"	"Bannock"	378	136	905	568	402	133
+"ID"	2000	"Pocatello 37"	"Bannock"	375	181	987	600	409	159
+"ID"	2000	"Pocatello 38"	"Bannock"	395	248	1105	690	406	237
+"ID"	2000	"Pocatello 39"	"Bannock"	232	208	875	507	263	207
+"ID"	2000	"Pocatello 40"	"Bannock"	317	200	812	581	331	210
+"ID"	2000	"Arimo 41"	"Bannock"	189	26	331	239	186	41
+"ID"	2000	"Downey 42"	"Bannock"	354	96	661	496	365	99
+"ID"	2000	"Inkom 43"	"Bannock"	513	263	1192	865	524	277
+"ID"	2000	"Lava Hot Springs 44"	"Bannock"	283	141	688	480	313	139
+"ID"	2000	"Mccammon 45"	"Bannock"	470	223	999	742	467	220
+"ID"	2000	"Pocatello 46"	"Bannock"	389	182	1080	616	417	166
+"ID"	2000	"Pocatello 47"	"Bannock"	352	159	841	540	368	148
+"ID"	2000	"Pocatello 48"	"Bannock"	417	187	1020	639	449	163
+"ID"	2000	"Pocatello 49"	"Bannock"	427	192	980	661	469	164
+"ID"	2000	"Chubbuck 50"	"Bannock"	339	132	841	509	347	139
+"ID"	2000	"Chubbuck 51"	"Bannock"	372	149	857	564	388	146
+"ID"	2000	"Chubbuck 52"	"Bannock"	407	195	999	640	439	174
+"ID"	2000	"Chubbuck 53"	"Bannock"	284	218	816	543	309	205
+"ID"	2000	"Chubbuck 54"	"Bannock"	466	206	1061	721	493	205
+"ID"	2000	"Chubbuck 55"	"Bannock"	471	165	962	665	479	164
+"ID"	2000	"Chubbuck 56"	"Bannock"	508	229	1225	799	528	233
+"ID"	2000	"Chubbuck 57"	"Bannock"	173	226	724	442	202	216
+"ID"	2000	"Montpelier 1"	"Bear Lake"	311	90	568	430	292	74
+"ID"	2000	"Montpelier 2"	"Bear Lake"	271	80	489	381	227	61
+"ID"	2000	"Montpelier 3"	"Bear Lake"	61	13	106	83	51	14
+"ID"	2000	"Montpelier 4"	"Bear Lake"	220	71	396	310	202	53
+"ID"	2000	"Georgetown"	"Bear Lake"	299	34	423	352	272	36
+"ID"	2000	"Bennington"	"Bear Lake"	129	9	168	145	122	8
+"ID"	2000	"Bailey Creek"	"Bear Lake"	48	9	81	59	49	4
+"ID"	2000	"Paris"	"Bear Lake"	260	48	387	329	225	45
+"ID"	2000	"Bern"	"Bear Lake"	59	20	92	79	56	16
+"ID"	2000	"Dingle"	"Bear Lake"	106	30	164	149	97	28
+"ID"	2000	"Pegram"	"Bear Lake"	21		27	21	21	
+"ID"	2000	"Fish Haven"	"Bear Lake"	73	23	135	103	62	21
+"ID"	2000	"St Charles"	"Bear Lake"	111	34	180	152	88	32
+"ID"	2000	"Bloomington"	"Bear Lake"	99	23	157	121	75	21
+"ID"	2000	"Liberty"	"Bear Lake"	162	30	227	203	137	32
+"ID"	2000	"Geneva"	"Bear Lake"	66	3	77	72	60	5
+"ID"	2000	"1 Benewah"	"Benewah"	87	25	179	126	77	22
+"ID"	2000	"2 Center"	"Benewah"	273	68	472	367	222	72
+"ID"	2000	"3 College"	"Benewah"	341	114	592	493	284	107
+"ID"	2000	"4 Emida"	"Benewah"	72	27	158	119	65	26
+"ID"	2000	"5 Fernwood"	"Benewah"	167	41	306	236	135	48
+"ID"	2000	"6 Plummer"	"Benewah"	316	164	824	523	304	119
+"ID"	2000	"7 Santa"	"Benewah"	126	38	246	191	97	39
+"ID"	2000	"8 St. Joe"	"Benewah"	43	4	63	53	39	6
+"ID"	2000	"9 St. Maries"	"Benewah"	567	146	1005	781	442	146
+"ID"	2000	"10 Tensed"	"Benewah"	185	102	433	308	165	85
+"ID"	2000	"11 Townsite"	"Benewah"	429	166	820	644	337	129
+"ID"	2000	"01 Blackfoot"	"Bingham"	606	227	1190	874	657	180
+"ID"	2000	"02 Blackfoot"	"Bingham"	299	159	666	492	316	149
+"ID"	2000	"03 Blackfoot"	"Bingham"	432	209	1023	686	460	186
+"ID"	2000	"04 Blackfoot"	"Bingham"	512	224	1217	799	559	193
+"ID"	2000	"05 Blackfoot"	"Bingham"	498	271	1327	834	566	215
+"ID"	2000	"06 Blackfoot"	"Bingham"	551	200	1135	803	608	163
+"ID"	2000	"07 Firth"	"Bingham"	604	106	1059	756	602	112
+"ID"	2000	"08 Firth"	"Bingham"	451	104	831	579	427	104
+"ID"	2000	"09 Groveland"	"Bingham"	625	173	1155	849	609	183
+"ID"	2000	"10 Jameston"	"Bingham"	385	75	665	489	390	69
+"ID"	2000	"11 Moreland"	"Bingham"	785	166	1400	1023	768	199
+"ID"	2000	"12 Rockford"	"Bingham"	537	67	849	641	529	83
+"ID"	2000	"13 Shelley"	"Bingham"	560	112	1030	707	556	107
+"ID"	2000	"14 Shelley"	"Bingham"	684	132	1212	875	712	130
+"ID"	2000	"15 Aberdeen"	"Bingham"	561	167	1165	789	596	160
+"ID"	2000	"16 Springfield/Sterling"	"Bingham"	226	44	415	293	217	51
+"ID"	2000	"17 Riverside"	"Bingham"	688	191	1318	938	713	181
+"ID"	2000	"18 Pingree"	"Bingham"	359	89	658	491	369	93
+"ID"	2000	"19 Wapello"	"Bingham"	263	74	482	361	263	78
+"ID"	2000	"20 Fort Hall"	"Bingham"	90	373	933	518	148	324
+"ID"	2000	"21 Shelley"	"Bingham"	599	80	980	705	574	95
+"ID"	2000	"22 Groveland"	"Bingham"	313	67	545	406	318	72
+"ID"	2000	"1 NW Ketchum"	"Blaine"	177	284	812	518	192	296
+"ID"	2000	"2 SW Ketchum"	"Blaine"	192	354	1111	618	212	337
+"ID"	2000	"3 N & E Ketchum"	"Blaine"	43	76	415	210	94	98
+"ID"	2000	"4 S Ketchum"	"Blaine"	84	162	554	284	106	145
+"ID"	2000	"5 NE Blaine County"	"Blaine"	179	191	743	413	189	191
+"ID"	2000	"6 Hailey #1"	"Blaine"	232	310	981	609	256	302
+"ID"	2000	"7 Hailey #2"	"Blaine"	243	365	1112	689	276	344
+"ID"	2000	"8 Hailey #3"	"Blaine"	316	335	1187	705	355	285
+"ID"	2000	"9 Yale"	"Blaine"	13		13	13	12	1
+"ID"	2000	"10 Bellevue"	"Blaine"	365	338	1228	778	425	300
+"ID"	2000	"11 Gannett Picabo"	"Blaine"	172	44	407	227	166	52
+"ID"	2000	"12 Carey"	"Blaine"	230	69	488	317	257	50
+"ID"	2000	"13 Sun Valley"	"Blaine"	240	196	944	467	243	198
+"ID"	2000	"14 Hailey #4"	"Blaine"	393	481	1441	949	433	454
+"ID"	2000	"16 Absentee #1"	"Blaine"	649	543		1472	682	508
+"ID"	2000	"30 Garden Valley"	"Boise"	510	152	1397	733	485	152
+"ID"	2000	"40 Horseshoe Bend"	"Boise"	462	117	1013	641	414	135
+"ID"	2000	"50 Idaho City"	"Boise"	222	135	778	427	228	134
+"ID"	2000	"60 Lowman"	"Boise"	77	24	211	122	68	35
+"ID"	2000	"70 Mores Creek"	"Boise"	452	198	1348	741	412	237
+"ID"	2000	"80 Placerville"	"Boise"	94	30	260	150	95	39
+"ID"	2000	"90 Absentee"	"Boise"	202	89		311	176	96
+"ID"	2000	"1 Airport"	"Bonner"	664	362	1621	1162	635	396
+"ID"	2000	"2 Algoma"	"Bonner"	989	394	2112	1512	936	416
+"ID"	2000	"3 Blue Lake"	"Bonner"	76	20	141	109	76	24
+"ID"	2000	"4 Careywood"	"Bonner"	368	139	756	547	320	149
+"ID"	2000	"5 Clark Fork"	"Bonner"	276	154	726	491	267	154
+"ID"	2000	"6 Cocolalla"	"Bonner"	321	93	626	461	311	108
+"ID"	2000	"7 Colburn"	"Bonner"	340	157	819	579	312	192
+"ID"	2000	"9 Dover"	"Bonner"	152	77	366	276	149	91
+"ID"	2000	"10 E Priest River"	"Bonner"	377	193	923	622	316	223
+"ID"	2000	"11 Edgemere"	"Bonner"	451	140	959	660	430	153
+"ID"	2000	"12 Gamlin Lake"	"Bonner"	183	104	450	341	183	127
+"ID"	2000	"14 Grouse Crk"	"Bonner"	279	108	626	462	266	143
+"ID"	2000	"15 Hope"	"Bonner"	273	196	749	558	286	219
+"ID"	2000	"16 Humbird"	"Bonner"	82	58	251	173	80	67
+"ID"	2000	"17 Kootenai"	"Bonner"	530	265	1298	895	510	272
+"ID"	2000	"18 Laclede"	"Bonner"	173	78	379	271	161	78
+"ID"	2000	"20 Lamb Creek"	"Bonner"	211	90	453	330	190	103
+"ID"	2000	"21 Lincoln"	"Bonner"	281	165	786	510	273	165
+"ID"	2000	"25 Newport"	"Bonner"	401	190	912	645	356	189
+"ID"	2000	"26 Northside"	"Bonner"	82	19	156	107	68	19
+"ID"	2000	"27 Oden"	"Bonner"	206	107	468	353	194	119
+"ID"	2000	"28 Priest River"	"Bonner"	92	45	216	148	90	47
+"ID"	2000	"29 Sandpoint"	"Bonner"	316	262	1069	714	307	327
+"ID"	2000	"30 Selle"	"Bonner"	290	125	660	493	285	146
+"ID"	2000	"31 Spirit Valley"	"Bonner"	325	102	642	472	298	118
+"ID"	2000	"32 Washington"	"Bonner"	431	303	1203	848	408	330
+"ID"	2000	"33 W Branch"	"Bonner"	90	59	264	179	81	77
+"ID"	2000	"34 Westmond"	"Bonner"	288	125	649	471	282	131
+"ID"	2000	"35 W Priest River"	"Bonner"	262	144	687	449	229	159
+"ID"	2000	"36 Wrenco"	"Bonner"	136	44	289	200	119	57
+"ID"	2000	"1"	"Bonneville"	645	227	1177	942	651	231
+"ID"	2000	"2"	"Bonneville"	693	162	1302	892	677	177
+"ID"	2000	"3"	"Bonneville"	353	128	701	524	357	121
+"ID"	2000	"4"	"Bonneville"	412	159	868	607	418	153
+"ID"	2000	"5"	"Bonneville"	410	166	890	626	415	157
+"ID"	2000	"6"	"Bonneville"	1257	360	2285	1694	1264	345
+"ID"	2000	"7"	"Bonneville"	287	128	642	436	303	111
+"ID"	2000	"8"	"Bonneville"	331	124	791	509	358	109
+"ID"	2000	"9"	"Bonneville"	413	216	1080	682	437	179
+"ID"	2000	"10"	"Bonneville"	382	140	821	569	396	120
+"ID"	2000	"11"	"Bonneville"	327	136	684	492	309	147
+"ID"	2000	"12"	"Bonneville"	408	229	1003	695	419	198
+"ID"	2000	"13"	"Bonneville"	355	152	955	564	359	138
+"ID"	2000	"14"	"Bonneville"	444	180	905	674	429	199
+"ID"	2000	"15"	"Bonneville"	552	224	1088	815	549	203
+"ID"	2000	"16"	"Bonneville"	834	214	1438	1113	838	213
+"ID"	2000	"17"	"Bonneville"	439	182	964	674	446	175
+"ID"	2000	"18"	"Bonneville"	302	169	710	514	314	153
+"ID"	2000	"19"	"Bonneville"	434	205	970	674	443	191
+"ID"	2000	"20"	"Bonneville"	549	224	1077	819	573	196
+"ID"	2000	"21"	"Bonneville"	408	125	843	585	430	116
+"ID"	2000	"22"	"Bonneville"	274	103	588	402	270	106
+"ID"	2000	"23"	"Bonneville"	562	115	969	708	547	130
+"ID"	2000	"24"	"Bonneville"	715	208	1378	962	718	184
+"ID"	2000	"25"	"Bonneville"	655	215	1412	923	666	203
+"ID"	2000	"26"	"Bonneville"	627	212	1168	882	637	190
+"ID"	2000	"27"	"Bonneville"	719	223	1187	984	709	213
+"ID"	2000	"36"	"Bonneville"	404	80	688	519	406	83
+"ID"	2000	"37"	"Bonneville"	463	117	850	618	433	138
+"ID"	2000	"38"	"Bonneville"	301	65	482	379	293	68
+"ID"	2000	"39"	"Bonneville"	520	47	726	587	498	55
+"ID"	2000	"40"	"Bonneville"	678	152	1064	860	666	141
+"ID"	2000	"41"	"Bonneville"	1143	349	2073	1572	1152	332
+"ID"	2000	"42"	"Bonneville"	340	84	534	445	340	87
+"ID"	2000	"43"	"Bonneville"	681	115	1137	844	663	125
+"ID"	2000	"44"	"Bonneville"	329	69	546	419	315	78
+"ID"	2000	"45"	"Bonneville"	425	100	800	552	427	96
+"ID"	2000	"46"	"Bonneville"	478	155	1014	680	475	156
+"ID"	2000	"47"	"Bonneville"	458	77	858	571	439	85
+"ID"	2000	"48"	"Bonneville"	685	155	1256	887	665	151
+"ID"	2000	"49"	"Bonneville"	856	192	1435	1119	870	170
+"ID"	2000	"50"	"Bonneville"	988	185	1706	1225	972	174
+"ID"	2000	"51"	"Bonneville"	823	106	1231	969	791	125
+"ID"	2000	"52"	"Bonneville"	350	55	585	432	342	62
+"ID"	2000	"53"	"Bonneville"	806	121	1290	990	771	152
+"ID"	2000	"54"	"Bonneville"	233	27	381	277	230	35
+"ID"	2000	"55"	"Bonneville"	210	55	444	298	200	75
+"ID"	2000	"56"	"Bonneville"	15	3	32	23	18	4
+"ID"	2000	"57"	"Bonneville"	15		22	16	12	1
+"ID"	2000	"1 Bonners Ferry"	"Boundary"	171	50	399	245	157	49
+"ID"	2000	"2 Copeland"	"Boundary"	289	76	583	407	250	77
+"ID"	2000	"3 Kootenai"	"Boundary"	281	115	678	441	247	110
+"ID"	2000	"4 Moyie Springs"	"Boundary"	681	157	1228	921	592	154
+"ID"	2000	"5 Naples"	"Boundary"	419	124	874	604	353	133
+"ID"	2000	"6 N Bonners Ferry"	"Boundary"	489	176	1095	791	423	166
+"ID"	2000	"7 Valley View"	"Boundary"	467	134	996	659	407	130
+"ID"	2000	"Arco 1"	"Butte"	307	134	720	485	249	120
+"ID"	2000	"Arco 2"	"Butte"	212	118	522	356	197	91
+"ID"	2000	"Moore"	"Butte"	370	89	688	491	335	86
+"ID"	2000	"Howe"	"Butte"	165	13	236	181	140	9
+"ID"	2000	"1"	"Camas"	179	57	346	256	153	51
+"ID"	2000	"2"	"Camas"	180	56	357	267	169	42
+"ID"	2000	"1"	"Canyon"	464	145	961	649	467	148
+"ID"	2000	"3"	"Canyon"	763	158	1244	989	710	214
+"ID"	2000	"4"	"Canyon"	298	171	828	529	298	184
+"ID"	2000	"5"	"Canyon"	343	239	1058	660	360	237
+"ID"	2000	"6"	"Canyon"	329	175	830	547	358	161
+"ID"	2000	"7"	"Canyon"	132	160	694	327	163	141
+"ID"	2000	"8"	"Canyon"	494	199	1088	736	455	227
+"ID"	2000	"9"	"Canyon"	398	192	960	631	392	183
+"ID"	2000	"10"	"Canyon"	398	149	826	596	394	164
+"ID"	2000	"11"	"Canyon"	541	219	1043	805	516	239
+"ID"	2000	"12"	"Canyon"	311	128	627	475	314	134
+"ID"	2000	"13"	"Canyon"	480	238	1157	781	464	263
+"ID"	2000	"15"	"Canyon"	344	171	874	557	339	170
+"ID"	2000	"18"	"Canyon"	651	199	1170	907	637	206
+"ID"	2000	"19"	"Canyon"	462	97	778	601	449	117
+"ID"	2000	"20"	"Canyon"	1484	425	2545	2011	1416	471
+"ID"	2000	"21"	"Canyon"	708	112	1255	877	655	164
+"ID"	2000	"22"	"Canyon"	513	125	962	692	497	160
+"ID"	2000	"23"	"Canyon"	1096	332	2030	1538	1095	366
+"ID"	2000	"25"	"Canyon"	671	181	1100	901	654	192
+"ID"	2000	"27"	"Canyon"	261	66	471	353	256	82
+"ID"	2000	"28"	"Canyon"	457	92	784	580	448	106
+"ID"	2000	"29"	"Canyon"	928	376	2008	1410	955	361
+"ID"	2000	"30"	"Canyon"	564	223	1233	860	566	242
+"ID"	2000	"32"	"Canyon"	642	180	1138	887	611	211
+"ID"	2000	"33"	"Canyon"	974	408	2392	1498	971	404
+"ID"	2000	"34"	"Canyon"	412	136	1002	582	393	155
+"ID"	2000	"35"	"Canyon"	449	194	955	688	420	217
+"ID"	2000	"36"	"Canyon"	460	167	1139	662	427	182
+"ID"	2000	"37"	"Canyon"	1177	352	2126	1605	1142	344
+"ID"	2000	"38"	"Canyon"	263	174	880	483	262	187
+"ID"	2000	"39"	"Canyon"	799	277	1473	1142	781	291
+"ID"	2000	"40"	"Canyon"	290	149	822	496	310	146
+"ID"	2000	"42"	"Canyon"	251	123	663	426	231	151
+"ID"	2000	"43"	"Canyon"	637	281	1241	958	610	304
+"ID"	2000	"44"	"Canyon"	385	156	919	595	352	189
+"ID"	2000	"45"	"Canyon"	507	228	1128	802	505	235
+"ID"	2000	"46"	"Canyon"	645	202	1094	905	650	205
+"ID"	2000	"47"	"Canyon"	446	212	1042	719	449	216
+"ID"	2000	"48"	"Canyon"	375	168	868	579	355	176
+"ID"	2000	"49"	"Canyon"	577	197	1082	813	561	207
+"ID"	2000	"50"	"Canyon"	1280	393	2170	1772	1233	430
+"ID"	2000	"51"	"Canyon"	569	158	1158	794	539	190
+"ID"	2000	"52"	"Canyon"	317	106	755	461	328	109
+"ID"	2000	"54"	"Canyon"	341	101	625	485	337	116
+"ID"	2000	"55"	"Canyon"	736	226	1365	1039	702	249
+"ID"	2000	"56"	"Canyon"	1083	280	1886	1458	1035	321
+"ID"	2000	"57"	"Canyon"	339	68	546	442	334	75
+"ID"	2000	"58"	"Canyon"	671	208	1295	931	638	259
+"ID"	2000	"59"	"Canyon"	1103	353	1967	1552	1064	380
+"ID"	2000	"60"	"Canyon"	689	137	1067	872	640	162
+"ID"	2000	"61"	"Canyon"	732	233	1306	1022	707	266
+"ID"	2000	"62"	"Canyon"	321	149	931	522	318	157
+"ID"	2000	"Soda 1"	"Caribou"	458	78	848	574	413	89
+"ID"	2000	"Soda 2"	"Caribou"	336	75	666	438	315	67
+"ID"	2000	"Soda 3"	"Caribou"	264	61	534	344	240	48
+"ID"	2000	"Soda 4"	"Caribou"	218	52	423	243	203	49
+"ID"	2000	"Bancroft"	"Caribou"	315	39	511	374	295	33
+"ID"	2000	"Grace 1"	"Caribou"	449	67	729	556	401	82
+"ID"	2000	"Grace 2"	"Caribou"	261	41	440	323	235	41
+"ID"	2000	"Wayan"	"Caribou"	31	2	48	35	28	3
+"ID"	2000	"Freedom"	"Caribou"	70	2	95	76	61	5
+"ID"	2000	"Absentee"	"Caribou"	199	58		281	179	63
+"ID"	2000	"01  Albion"	"Cassia"	186	29	308	230	186	25
+"ID"	2000	"02  Almo"	"Cassia"	79	7	104	89	78	5
+"ID"	2000	"03  Bridge"	"Cassia"	36	1	65	41	36	2
+"ID"	2000	"04  Burley 1"	"Cassia"	416	103	867	547	438	77
+"ID"	2000	"05  Burley 2"	"Cassia"	214	66	555	309	218	64
+"ID"	2000	"06  Burley 3"	"Cassia"	134	42	443	200	135	39
+"ID"	2000	"07  Burley 4"	"Cassia"	315	97	764	447	328	80
+"ID"	2000	"08  Burley 5"	"Cassia"	239	64	493	320	255	55
+"ID"	2000	"09  Burley 6"	"Cassia"	78	72	295	173	88	69
+"ID"	2000	"10  Burley 7"	"Cassia"	80	55	298	158	96	50
+"ID"	2000	"11  Burley 8"	"Cassia"	326	57	652	407	329	59
+"ID"	2000	"12  Declo"	"Cassia"	417	53	715	488	404	57
+"ID"	2000	"13  Elba"	"Cassia"	83	4	115	91	79	8
+"ID"	2000	"14  Heglar-Yale"	"Cassia"	85	4	137	91	82	7
+"ID"	2000	"15  Jackson"	"Cassia"	105	20	202	137	113	19
+"ID"	2000	"16  Malta"	"Cassia"	228	12	315	249	217	27
+"ID"	2000	"17  Oakley 1"	"Cassia"	165	15	285	190	165	17
+"ID"	2000	"18  Oakley 2"	"Cassia"	267	20	431	303	257	28
+"ID"	2000	"19  Parsons"	"Cassia"	49	8	86	61	54	5
+"ID"	2000	"20  Pella"	"Cassia"	262	21	412	297	255	28
+"ID"	2000	"21  Springdale"	"Cassia"	315	32	504	372	312	38
+"ID"	2000	"22  Starrah's Ferry"	"Cassia"	574	85	990	688	560	88
+"ID"	2000	"23  Sublett"	"Cassia"	43		48	45	40	3
+"ID"	2000	"24  Unity"	"Cassia"	575	84	1052	697	573	85
+"ID"	2000	"25  View"	"Cassia"	228	17	359	263	227	23
+"ID"	2000	"26  Absentee"	"Cassia"	484	119		653	489	122
+"ID"	2000	"1"	"Clark"	104	31	180	144	104	24
+"ID"	2000	"2"	"Clark"	88	20	156	118	77	22
+"ID"	2000	"3"	"Clark"	119	12	173	138	113	12
+"ID"	2000	"01  Orofino"	"Clearwater"	277	93	725	408	269	110
+"ID"	2000	"02  Orofino"	"Clearwater"	285	102	602	407	273	109
+"ID"	2000	"03  Orofino"	"Clearwater"	393	98	761	532	374	117
+"ID"	2000	"04  Orofino"	"Clearwater"	237	63	466	320	216	80
+"ID"	2000	"05  Orofino"	"Clearwater"	350	140	785	531	316	165
+"ID"	2000	"06  Fraser"	"Clearwater"	41	11	104	59	38	16
+"ID"	2000	"07  Greer"	"Clearwater"	13	8	40	27	11	16
+"ID"	2000	"08  Teakean"	"Clearwater"	97	20	170	124	86	32
+"ID"	2000	"09  Weippe"	"Clearwater"	337	70	665	443	313	87
+"ID"	2000	"10  Headquarters"	"Clearwater"	30		46	30	25	2
+"ID"	2000	"11  Ahsahka"	"Clearwater"	128	48	314	199	118	57
+"ID"	2000	"12  Pierce"	"Clearwater"	270	32	466	324	239	54
+"ID"	2000	"13  Elk River"	"Clearwater"	48	25	128	80	42	30
+"ID"	2000	"14  Grangemont"	"Clearwater"	58	14	107	84	62	19
+"ID"	2000	"15  Absentee"	"Clearwater"	321	117		468	302	128
+"ID"	2000	"01 Challis 1"	"Custer"	286	66	543	377	260	63
+"ID"	2000	"02 Challis 2"	"Custer"	126	27	266	169	119	29
+"ID"	2000	"03 Round Valley 1"	"Custer"	394	45	628	469	355	50
+"ID"	2000	"04 Round Valley 2"	"Custer"	275	49	426	337	243	52
+"ID"	2000	"05 Mackay"	"Custer"	165	82	393	279	167	72
+"ID"	2000	"06 Leslie"	"Custer"	213	37	376	266	186	41
+"ID"	2000	"07 Battleground"	"Custer"	85	5	108	94	74	8
+"ID"	2000	"08 Sunol"	"Custer"	49	7	68	56	45	6
+"ID"	2000	"09 Clayton"	"Custer"	114	32	248	162	114	26
+"ID"	2000	"11 Stanley"	"Custer"	87	66	277	183	84	75
+"ID"	2000	"Atlanta"	"Elmore"	18	3	63	28	14	4
+"ID"	2000	"Camas"	"Elmore"	10	2	26	13	11	2
+"ID"	2000	"Chattin Flats"	"Elmore"	31	2	69	33	29	2
+"ID"	2000	"Glenns Ferry"	"Elmore"	358	202	1028	610	396	176
+"ID"	2000	"Hammett"	"Elmore"	100	42	215	151	103	41
+"ID"	2000	"King Hill"	"Elmore"	71	38	200	126	79	37
+"ID"	2000	"Mayfield"	"Elmore"	56	18	108	76	61	15
+"ID"	2000	"Mt. Home 1"	"Elmore"	360	94	1144	464	330	75
+"ID"	2000	"Mt. Home 2"	"Elmore"	490	190	1345	731	505	172
+"ID"	2000	"Mt. Home 3"	"Elmore"	405	223	1242	685	427	203
+"ID"	2000	"Mt. Home 4"	"Elmore"	286	116	812	431	280	116
+"ID"	2000	"Mt. Home 5"	"Elmore"	363	111	891	517	381	115
+"ID"	2000	"Mt. Home 6"	"Elmore"	622	228	1552	891	645	198
+"ID"	2000	"Mt. Home 7"	"Elmore"	363	149	1014	552	383	145
+"ID"	2000	"Mt. Home 8"	"Elmore"	559	153	1333	756	552	148
+"ID"	2000	"Pine"	"Elmore"	65	14	118	93	67	18
+"ID"	2000	"Prairie"	"Elmore"	34	7	76	50	37	6
+"ID"	2000	"Absentee 20"	"Elmore"	671	231		935	663	204
+"ID"	2000	"Absentee 21"	"Elmore"	29	17		50	30	16
+"ID"	2000	"Preston 1"	"Franklin"	248	66	424	337	257	62
+"ID"	2000	"Preston 2"	"Franklin"	333	59	557	418	333	59
+"ID"	2000	"Preston 3"	"Franklin"	294	42	481	358	288	54
+"ID"	2000	"Preston 4"	"Franklin"	415	63	666	504	399	73
+"ID"	2000	"Preston 5"	"Franklin"	229	37	390	287	230	46
+"ID"	2000	"Banida-Winder 6"	"Franklin"	125	8	148	136	125	6
+"ID"	2000	"Clifton-Oxford 7"	"Franklin"	164	16	245	195	164	22
+"ID"	2000	"Dayton 8"	"Franklin"	263	36	421	324	272	37
+"ID"	2000	"Fairview 9"	"Franklin"	246	21	333	281	245	23
+"ID"	2000	"Franklin 10"	"Franklin"	328	41	502	390	304	44
+"ID"	2000	"Mapleton 11"	"Franklin"	102	15	164	128	95	24
+"ID"	2000	"Mink Creek 12"	"Franklin"	116	8	146	136	104	19
+"ID"	2000	"Thatcher-Cleveland 13"	"Franklin"	69	12	128	96	72	17
+"ID"	2000	"Treasureton-Riverdale 14"	"Franklin"	169	23	236	201	169	27
+"ID"	2000	"Weston 15"	"Franklin"	259	44	423	321	258	48
+"ID"	2000	"Whitney 16"	"Franklin"	234	22	333	274	222	30
+"ID"	2000	"1 Ashton #1"	"Fremont"	305	48	565	387	308	49
+"ID"	2000	"2 Ashton #2"	"Fremont"	380	62	695	463	380	63
+"ID"	2000	"3 Chester/Twin Groves"	"Fremont"	333	56	616	408	329	61
+"ID"	2000	"4 Drummond/Lamont"	"Fremont"	42	8	83	55	44	9
+"ID"	2000	"5 Egin"	"Fremont"	344	23	497	384	328	33
+"ID"	2000	"6 Island Park"	"Fremont"	297	80	741	401	297	88
+"ID"	2000	"8 Newdale"	"Fremont"	139	14	240	166	140	18
+"ID"	2000	"9 Parker"	"Fremont"	256	29	438	311	257	43
+"ID"	2000	"10 Squirrel"	"Fremont"	43	4	73	51	43	4
+"ID"	2000	"11 St Anthony 1"	"Fremont"	421	59	768	507	424	60
+"ID"	2000	"12 St Anthony 2"	"Fremont"	232	56	471	318	223	64
+"ID"	2000	"13 St Anthony 3"	"Fremont"	432	84	852	550	429	85
+"ID"	2000	"14 Teton"	"Fremont"	226	40	391	294	233	44
+"ID"	2000	"15 Warm River/Green Timber"	"Fremont"	69	14	120	88	73	13
+"ID"	2000	"16 Wilford"	"Fremont"	340	29	502	391	343	30
+"ID"	2000	"Absentee 27"	"Fremont"	173	41		228	164	50
+"ID"	2000	"Absentee 28"	"Fremont"	210	52		285	226	45
+"ID"	2000	"Central"	"Gem"	269	99	661	416	261	111
+"ID"	2000	"North Emmett"	"Gem"	203	65	602	301	198	75
+"ID"	2000	"Butteview"	"Gem"	267	130	740	446	290	128
+"ID"	2000	"South Emmett"	"Gem"	343	90	846	493	327	126
+"ID"	2000	"West Emmett"	"Gem"	198	85	500	309	195	95
+"ID"	2000	"Emerson"	"Gem"	421	140	957	630	433	159
+"ID"	2000	"Lincoln"	"Gem"	549	165	1130	786	547	190
+"ID"	2000	"Letha"	"Gem"	466	135	998	676	456	167
+"ID"	2000	"Hanna"	"Gem"	353	63	692	442	344	74
+"ID"	2000	"Brick"	"Gem"	378	74	751	486	361	94
+"ID"	2000	"Bench"	"Gem"	264	82	566	383	266	101
+"ID"	2000	"Sweet-Montour"	"Gem"	198	58	417	278	198	66
+"ID"	2000	"Ola"	"Gem"	68	20	125	96	70	20
+"ID"	2000	"Absentee 1"	"Gem"	269	113		424	272	120
+"ID"	2000	"Absentee 2"	"Gem"	130	27		162	126	29
+"ID"	2000	"1 E Gooding"	"Gooding"	253	154	762	445	280	140
+"ID"	2000	"2 W Gooding"	"Gooding"	373	232	1034	676	429	196
+"ID"	2000	"3 Orchard Valley"	"Gooding"	192	42	439	253	195	42
+"ID"	2000	"4 NW Gooding"	"Gooding"	347	84	663	463	364	73
+"ID"	2000	"5 NE Gooding"	"Gooding"	344	92	683	470	366	85
+"ID"	2000	"6 Bliss"	"Gooding"	193	62	429	274	215	44
+"ID"	2000	"7 Tuttle"	"Gooding"	256	83	619	369	269	79
+"ID"	2000	"8 Hagerman"	"Gooding"	325	144	928	520	366	125
+"ID"	2000	"9 West Point"	"Gooding"	126	23	247	159	130	21
+"ID"	2000	"10 Wendell-Rural"	"Gooding"	305	52	550	384	314	49
+"ID"	2000	"11 E Wendell"	"Gooding"	323	124	832	505	343	116
+"ID"	2000	"12 W Wendell"	"Gooding"	145	71	393	242	160	63
+"ID"	2000	"Absentee 21"	"Gooding"	259	92		388	277	83
+"ID"	2000	"Absentee 22"	"Gooding"	61	27		88	65	23
+"ID"	2000	"01 Big Butte"	"Idaho"	62	2	85	67	53	6
+"ID"	2000	"02 Clearwater"	"Idaho"	119	15	243	164	131	16
+"ID"	2000	"03 Cottonwood 1"	"Idaho"	235	42	419	289	205	43
+"ID"	2000	"04 Cottonwood 2"	"Idaho"	243	39	417	292	206	48
+"ID"	2000	"05 Elk City"	"Idaho"	175	21	359	214	140	31
+"ID"	2000	"06 Fenn"	"Idaho"	111	8	160	123	93	12
+"ID"	2000	"07 Ferdinand"	"Idaho"	123	28	249	163	117	25
+"ID"	2000	"08 Glover"	"Idaho"	124	19	208	128	108	25
+"ID"	2000	"09 Grangeville 1"	"Idaho"	97	14	174	148	90	11
+"ID"	2000	"10 Grangeville 2"	"Idaho"	286	32	554	352	245	52
+"ID"	2000	"11 Grangeville 3"	"Idaho"	270	56	618	351	257	49
+"ID"	2000	"12 Grangeville 4"	"Idaho"	287	69	624	380	266	77
+"ID"	2000	"13 Grangeville 5"	"Idaho"	386	85	775	504	354	86
+"ID"	2000	"14 Greencreek"	"Idaho"	433	93	794	534	383	88
+"ID"	2000	"15 Harpster"	"Idaho"	108	30	268	172	96	41
+"ID"	2000	"16 Joseph"	"Idaho"	17	2	20	20	17	1
+"ID"	2000	"17 Kamiah"	"Idaho"	434	119	1013	594	382	130
+"ID"	2000	"18 Keuterville"	"Idaho"	131	22	240	161	122	23
+"ID"	2000	"19 Kooskia"	"Idaho"	513	119	1171	723	476	127
+"ID"	2000	"20 Lowell"	"Idaho"	66	17	137	86	53	18
+"ID"	2000	"21 Pollock"	"Idaho"	148	34	354	204	139	34
+"ID"	2000	"22 Riggins"	"Idaho"	242	50	633	337	215	54
+"ID"	2000	"23 Slate Creek"	"Idaho"	63	14	141	88	53	17
+"ID"	2000	"24 Stites"	"Idaho"	191	24	359	238	171	30
+"ID"	2000	"25 White Bird"	"Idaho"	147	19	308	181	132	27
+"ID"	2000	"26 Woodland"	"Idaho"	106	10	216	144	109	9
+"ID"	2000	"Absentee 7"	"Idaho"	284	98		459	263	101
+"ID"	2000	"Absentee 8"	"Idaho"	405	106		537	379	94
+"ID"	2000	"01 Annis"	"Jefferson"	203	36	330	258	201	37
+"ID"	2000	"02 Clark"	"Jefferson"	390	64	646	484	384	62
+"ID"	2000	"03 Garfield"	"Jefferson"	598	66	928	696	584	65
+"ID"	2000	"04 Grant"	"Jefferson"	353	42	553	419	337	52
+"ID"	2000	"05 Hamer"	"Jefferson"	206	12	280	228	200	16
+"ID"	2000	"06 Labelle"	"Jefferson"	400	47	596	477	383	51
+"ID"	2000	"07 Lewisville"	"Jefferson"	413	65	680	514	399	56
+"ID"	2000	"08 Lorenzo"	"Jefferson"	132	24	222	166	127	24
+"ID"	2000	"09 Menan"	"Jefferson"	496	59	753	589	475	56
+"ID"	2000	"10 Monteview"	"Jefferson"	142	13	223	168	140	18
+"ID"	2000	"11 Rigby 1"	"Jefferson"	351	83	638	465	350	80
+"ID"	2000	"12 Rigby 2"	"Jefferson"	177	61	376	261	182	54
+"ID"	2000	"13 Rigby 3"	"Jefferson"	607	135	1027	772	611	116
+"ID"	2000	"14 Rigby 4"	"Jefferson"	440	109	769	577	446	90
+"ID"	2000	"15 Ririe"	"Jefferson"	477	68	805	573	456	83
+"ID"	2000	"16 Roberts"	"Jefferson"	274	80	576	383	258	82
+"ID"	2000	"17 Terreton"	"Jefferson"	409	46	615	470	387	57
+"ID"	2000	"AB Absentee"	"Jefferson"	412	90		546	406	83
+"ID"	2000	"Bishop"	"Jerome"	150	61	448	249	185	42
+"ID"	2000	"Canyonside"	"Jerome"	656	195	1428	917	699	176
+"ID"	2000	"Courthouse"	"Jerome"	163	72	470	262	176	58
+"ID"	2000	"Eden"	"Jerome"	259	66	533	353	276	55
+"ID"	2000	"Falls City"	"Jerome"	245	59	500	449	254	52
+"ID"	2000	"Grandview"	"Jerome"	181	46	390	243	197	37
+"ID"	2000	"Hazelton"	"Jerome"	481	99	957	655	507	81
+"ID"	2000	"Northeast"	"Jerome"	468	189	1181	718	509	145
+"ID"	2000	"Northwest"	"Jerome"	277	124	835	454	322	99
+"ID"	2000	"Shepherd"	"Jerome"	379	108	929	536	422	89
+"ID"	2000	"Southeast"	"Jerome"	231	79	674	347	235	79
+"ID"	2000	"Southwest"	"Jerome"	473	166	1104	706	533	129
+"ID"	2000	"Absentee"	"Jerome"	455	96		602	470	101
+"ID"	2000	"1"	"Kootenai"	615	301	1683	991	589	301
+"ID"	2000	"2"	"Kootenai"	806	281	1956	1155	789	258
+"ID"	2000	"3"	"Kootenai"	172	127	595	328	176	126
+"ID"	2000	"4"	"Kootenai"	571	281	1524	945	533	295
+"ID"	2000	"5"	"Kootenai"	471	269	1330	804	439	258
+"ID"	2000	"6"	"Kootenai"	770	329	1983	1179	751	324
+"ID"	2000	"7"	"Kootenai"	740	246	1647	1046	710	244
+"ID"	2000	"8"	"Kootenai"	581	209	1294	839	534	200
+"ID"	2000	"9"	"Kootenai"	506	187	1217	742	483	195
+"ID"	2000	"10"	"Kootenai"	565	211	1406	831	543	211
+"ID"	2000	"11"	"Kootenai"	732	286	1795	1084	687	281
+"ID"	2000	"12"	"Kootenai"	584	220	1555	874	580	240
+"ID"	2000	"13"	"Kootenai"	716	244	1868	1015	705	236
+"ID"	2000	"14"	"Kootenai"	461	234	1226	736	440	221
+"ID"	2000	"15"	"Kootenai"	621	278	1668	969	565	286
+"ID"	2000	"16"	"Kootenai"	637	354	1822	1051	603	336
+"ID"	2000	"17"	"Kootenai"	734	319	2003	1162	744	309
+"ID"	2000	"18"	"Kootenai"	107	39	261	159	104	38
+"ID"	2000	"19"	"Kootenai"	311	113	791	457	314	117
+"ID"	2000	"20"	"Kootenai"	497	221	1293	782	488	227
+"ID"	2000	"21"	"Kootenai"	533	281	1392	872	532	280
+"ID"	2000	"22"	"Kootenai"	269	153	837	451	276	137
+"ID"	2000	"23"	"Kootenai"	423	151	916	615	420	147
+"ID"	2000	"24"	"Kootenai"	602	209	1284	877	577	228
+"ID"	2000	"25"	"Kootenai"	644	327	1996	1065	607	308
+"ID"	2000	"26"	"Kootenai"	479	188	1388	724	457	201
+"ID"	2000	"27"	"Kootenai"	464	198	1168	710	448	186
+"ID"	2000	"28"	"Kootenai"	543	324	1783	928	576	285
+"ID"	2000	"29"	"Kootenai"	300	173	1048	514	294	171
+"ID"	2000	"30"	"Kootenai"	281	154	812	475	273	153
+"ID"	2000	"31"	"Kootenai"	250	197	935	486	241	195
+"ID"	2000	"32"	"Kootenai"	559	305	1575	949	551	292
+"ID"	2000	"33"	"Kootenai"	294	178	862	517	295	177
+"ID"	2000	"34"	"Kootenai"	597	308	1599	959	578	294
+"ID"	2000	"35"	"Kootenai"	280	191	1010	521	266	203
+"ID"	2000	"36"	"Kootenai"	290	181	930	511	292	176
+"ID"	2000	"37"	"Kootenai"	665	232	1676	994	616	240
+"ID"	2000	"38"	"Kootenai"	341	148	853	535	347	148
+"ID"	2000	"39"	"Kootenai"	243	257	1316	564	264	244
+"ID"	2000	"40"	"Kootenai"	347	323	1351	745	352	318
+"ID"	2000	"41"	"Kootenai"	203	121	808	372	183	138
+"ID"	2000	"42"	"Kootenai"	284	277	1265	647	310	285
+"ID"	2000	"43"	"Kootenai"	215	155	760	422	216	160
+"ID"	2000	"44"	"Kootenai"	353	143	894	551	338	164
+"ID"	2000	"45"	"Kootenai"	241	102	608	375	243	96
+"ID"	2000	"46"	"Kootenai"	391	176	964	624	392	186
+"ID"	2000	"47"	"Kootenai"	169	72	449	260	162	71
+"ID"	2000	"48"	"Kootenai"	179	63	402	267	156	77
+"ID"	2000	"49"	"Kootenai"	176	119	552	324	186	113
+"ID"	2000	"50"	"Kootenai"	175	81	474	291	168	97
+"ID"	2000	"Absentee Leg Dist 2"	"Kootenai"	2231	940		3337	2116	903
+"ID"	2000	"Absentee Leg Dist 3"	"Kootenai"	2565	1419		4303	2572	1341
+"ID"	2000	"Absentee Leg Dist 4"	"Kootenai"	1379	593		2141	1307	620
+"ID"	2000	"01 Moscow"	"Latah"	143	120	843	325	158	117
+"ID"	2000	"02 Moscow"	"Latah"	280	197	1011	555	271	219
+"ID"	2000	"03 Moscow"	"Latah"	321	240	1105	655	308	281
+"ID"	2000	"04 Moscow"	"Latah"	301	228	904	577	276	247
+"ID"	2000	"05 Moscow"	"Latah"	411	308	1094	766	423	309
+"ID"	2000	"06 Moscow"	"Latah"	283	191	1105	565	251	228
+"ID"	2000	"07 Moscow"	"Latah"	292	190	933	532	279	203
+"ID"	2000	"08 Moscow"	"Latah"	231	158	1057	438	241	141
+"ID"	2000	"09 Moscow"	"Latah"	270	280	961	613	258	306
+"ID"	2000	"10 Moscow"	"Latah"	228	193	810	480	205	235
+"ID"	2000	"11 Moscow"	"Latah"	213	292	967	596	196	332
+"ID"	2000	"12 Moscow"	"Latah"	398	195	1004	653	378	237
+"ID"	2000	"13 Moscow"	"Latah"	228	259	887	545	246	258
+"ID"	2000	"14 Moscow"	"Latah"	144	172	904	401	147	211
+"ID"	2000	"15 Moscow"	"Latah"	175	294	925	588	176	352
+"ID"	2000	"16 Moscow"	"Latah"	160	215	1059	506	160	277
+"ID"	2000	"17 Moscow"	"Latah"	294	227	908	603	291	244
+"ID"	2000	"18 Moscow"	"Latah"	284	192	1141	541	259	202
+"ID"	2000	"19 Deary"	"Latah"	348	134	824	531	328	150
+"ID"	2000	"20 Farmington"	"Latah"	20		37	21	17	
+"ID"	2000	"21 Genesee"	"Latah"	434	180	954	668	428	187
+"ID"	2000	"22 Harvard"	"Latah"	105	38	204	151	93	37
+"ID"	2000	"23 Juliaetta"	"Latah"	201	89	424	309	198	83
+"ID"	2000	"24 Kendrick"	"Latah"	162	79	367	262	157	86
+"ID"	2000	"25 Linden"	"Latah"	38	8	83	50	35	12
+"ID"	2000	"26 Palouse"	"Latah"	110	29	239	157	109	40
+"ID"	2000	"27 Potlatch"	"Latah"	359	186	890	592	301	216
+"ID"	2000	"28 Princeton"	"Latah"	206	64	410	293	193	75
+"ID"	2000	"29 Troy"	"Latah"	458	275	1195	816	434	300
+"ID"	2000	"30 Viola"	"Latah"	153	80	339	257	138	90
+"ID"	2000	"31 Cora"	"Latah"	101	37	185	151	89	46
+"ID"	2000	"32 Bovill"	"Latah"	80	37	226	134	57	58
+"ID"	2000	"33 Absentee Dist 5"	"Latah"	713	473		1323	694	502
+"ID"	2000	"34 Absentee Dist 7"	"Latah"	17	1		19	12	2
+"ID"	2000	"Salmon"	"Lemhi"	630	167	1344	839	614	147
+"ID"	2000	"Depot"	"Lemhi"	248	53	499	316	258	39
+"ID"	2000	"Brooklyn"	"Lemhi"	714	219	1528	977	696	202
+"ID"	2000	"Carmen"	"Lemhi"	220	27	347	261	218	24
+"ID"	2000	"Noble"	"Lemhi"	95	22	159	125	89	27
+"ID"	2000	"Gibbonsville"	"Lemhi"	59	12	119	83	60	16
+"ID"	2000	"Mineral Hill"	"Lemhi"	20	2	43	24	20	3
+"ID"	2000	"Iron Creek"	"Lemhi"	73	27	169	120	70	36
+"ID"	2000	"Pahsimeroi"	"Lemhi"	57	3	90	68	60	6
+"ID"	2000	"Baker"	"Lemhi"	161	18	252	189	160	17
+"ID"	2000	"Fort Lemhi"	"Lemhi"	80	10	119	100	78	14
+"ID"	2000	"Yearianville"	"Lemhi"	50	11	96	72	56	13
+"ID"	2000	"Junction"	"Lemhi"	129	20	222	165	127	25
+"ID"	2000	"Absentee"	"Lemhi"	323	69		427	325	65
+"ID"	2000	"1 Nezperce"	"Lewis"	280	78	519	381	244	94
+"ID"	2000	"2 W Kamiah"	"Lewis"	361	86	743	481	309	88
+"ID"	2000	"3 E Kamiah"	"Lewis"	115	23	249	156	104	26
+"ID"	2000	"4 Craigmont"	"Lewis"	265	79	474	366	241	81
+"ID"	2000	"5 Winchester"	"Lewis"	187	53	345	261	168	59
+"ID"	2000	"6 Reubens"	"Lewis"	38	5	56	46	38	7
+"ID"	2000	"7 Mohler"	"Lewis"	36	11	57	50	36	8
+"ID"	2000	"8 Slickpoo"	"Lewis"	13		16	14	8	1
+"ID"	2000	"Shoshone #1"	"Lincoln"	176	107	426	316	188	81
+"ID"	2000	"Shoshone #2"	"Lincoln"	172	146	441	357	196	108
+"ID"	2000	"North Shoshone #3"	"Lincoln"	207	65	359	297	197	51
+"ID"	2000	"Richfield #4"	"Lincoln"	236	86	443	362	247	60
+"ID"	2000	"Dietrich #5"	"Lincoln"	230	33	333	279	218	28
+"ID"	2000	"Kimama #6"	"Lincoln"	28		45	29	23	2
+"ID"	2000	"1 Plano"	"Madison"	274	22	463	311	256	34
+"ID"	2000	"2 Hibbard"	"Madison"	524	51	813	596	529	55
+"ID"	2000	"3 Salem"	"Madison"	256	31	425	300	262	34
+"ID"	2000	"4 Sugar City"	"Madison"	630	68	1094	728	636	72
+"ID"	2000	"5 Moody"	"Madison"	145	19	231	172	141	27
+"ID"	2000	"6 Burton"	"Madison"	476	44	816	543	481	49
+"ID"	2000	"7 Rexburg"	"Madison"	616	72	1181	738	624	91
+"ID"	2000	"8 Rexburg"	"Madison"	708	78	1291	832	700	101
+"ID"	2000	"9  Rexburg"	"Madison"	835	80	1718	957	791	101
+"ID"	2000	"10 Rexburg"	"Madison"	824	46	1559	905	652	56
+"ID"	2000	"11 Rexburg"	"Madison"	901	104	1654	1044	850	129
+"ID"	2000	"12 Rexburg"	"Madison"	404	38	682	466	403	48
+"ID"	2000	"13 Union/Lyman"	"Madison"	557	65	911	647	558	58
+"ID"	2000	"14 Archer"	"Madison"	365	36	568	414	343	55
+"ID"	2000	"15 Absentee"	"Madison"	426	62		520	431	62
+"ID"	2000	"01 Acequia"	"Minidoka"	469	66	883	566	481	65
+"ID"	2000	"02 Emerson"	"Minidoka"	593	86	1031	737	582	105
+"ID"	2000	"03 Heyburn 1"	"Minidoka"	440	151	1061	647	460	145
+"ID"	2000	"04 Heyburn 2"	"Minidoka"	489	113	1001	651	527	108
+"ID"	2000	"05 Paul"	"Minidoka"	438	118	940	619	476	107
+"ID"	2000	"06 Pioneer"	"Minidoka"	536	95	958	663	552	94
+"ID"	2000	"07 Rupert 1"	"Minidoka"	348	135	791	520	395	87
+"ID"	2000	"08 Rupert 2"	"Minidoka"	516	198	1250	765	538	185
+"ID"	2000	"09 Rupert 3"	"Minidoka"	230	129	647	393	245	123
+"ID"	2000	"10 Rupert 4"	"Minidoka"	179	50	339	242	192	39
+"ID"	2000	"11 Rupert 5"	"Minidoka"	301	111	684	437	301	103
+"ID"	2000	"Absentee"	"Minidoka"	250	58		343	252	52
+"ID"	2000	"Absentee"	"Minidoka"	118	34		193	126	57
+"ID"	2000	"1 Lewiston"	"Nez Perce"	116	82	380	206	108	85
+"ID"	2000	"2 Lewiston"	"Nez Perce"	162	88	456	267	154	93
+"ID"	2000	"3 Lewiston"	"Nez Perce"	153	117	473	296	153	122
+"ID"	2000	"4 Lewiston"	"Nez Perce"	211	114	555	351	206	119
+"ID"	2000	"5 Lewiston"	"Nez Perce"	223	112	493	350	214	106
+"ID"	2000	"6 Lewiston"	"Nez Perce"	253	78	488	340	242	80
+"ID"	2000	"7 Lewiston"	"Nez Perce"	324	156	886	511	330	148
+"ID"	2000	"8 Lewiston"	"Nez Perce"	314	161	674	508	320	163
+"ID"	2000	"9 Lewiston"	"Nez Perce"	334	231	873	592	327	213
+"ID"	2000	"10 Lewiston"	"Nez Perce"	299	179	738	498	310	157
+"ID"	2000	"11 Lewiston"	"Nez Perce"	239	153	598	416	241	146
+"ID"	2000	"12 Lewiston"	"Nez Perce"	559	183	978	759	563	169
+"ID"	2000	"13 Lewiston"	"Nez Perce"	511	220	998	754	496	206
+"ID"	2000	"14 Lewiston"	"Nez Perce"	288	184	768	508	296	172
+"ID"	2000	"15 Lewiston"	"Nez Perce"	373	224	937	652	374	227
+"ID"	2000	"16 Lewiston"	"Nez Perce"	356	186	836	573	347	189
+"ID"	2000	"17 Lewiston"	"Nez Perce"	320	173	742	523	338	152
+"ID"	2000	"18 Lewiston"	"Nez Perce"	401	189	821	617	395	187
+"ID"	2000	"19 Lewiston"	"Nez Perce"	235	125	480	387	241	121
+"ID"	2000	"20 Lewiston"	"Nez Perce"	310	167	751	511	313	163
+"ID"	2000	"21 Lewiston"	"Nez Perce"	486	186	944	698	461	197
+"ID"	2000	"22 Lewiston"	"Nez Perce"	331	144	740	500	305	161
+"ID"	2000	"23 Lewiston"	"Nez Perce"	462	146	878	639	431	159
+"ID"	2000	"24 Lewiston"	"Nez Perce"	517	236	1037	783	492	239
+"ID"	2000	"25 Lewiston"	"Nez Perce"	637	166	1067	839	587	196
+"ID"	2000	"26 Lewiston"	"Nez Perce"	467	174	911	670	444	196
+"ID"	2000	"30 Culdesac"	"Nez Perce"	208	87	431	318	194	103
+"ID"	2000	"31 Gifford"	"Nez Perce"	91	31	179	137	87	45
+"ID"	2000	"32 Hatwai"	"Nez Perce"	205	89	463	320	196	93
+"ID"	2000	"33 Lapwai"	"Nez Perce"	120	271	667	413	183	209
+"ID"	2000	"34 Leland"	"Nez Perce"	177	32	269	214	150	50
+"ID"	2000	"35 Lenore"	"Nez Perce"	116	58	229	187	127	54
+"ID"	2000	"36 Peck"	"Nez Perce"	121	51	249	189	117	55
+"ID"	2000	"37 Rimrock"	"Nez Perce"	85	9	122	98	73	14
+"ID"	2000	"38 Spalding"	"Nez Perce"	171	74	346	256	169	73
+"ID"	2000	"39 Tammany"	"Nez Perce"	298	73	495	386	286	81
+"ID"	2000	"40 Webb"	"Nez Perce"	104	46	215	159	104	45
+"ID"	2000	"Malad 1"	"Oneida"	402	80	666	510	402	80
+"ID"	2000	"Malad 2"	"Oneida"	327	109	629	464	339	87
+"ID"	2000	"Malad 3"	"Oneida"	330	83	582	435	333	80
+"ID"	2000	"Malad 4"	"Oneida"	219	30	335	260	204	36
+"ID"	2000	"Curlew"	"Oneida"	93	2	143	100	87	8
+"ID"	2000	"Holbrook"	"Oneida"	55	3	90	64	52	5
+"ID"	2000	"01 North Homedale"	"Owyhee"	310	128	820	468	301	106
+"ID"	2000	"02 South Homedale"	"Owyhee"	417	122	947	579	393	120
+"ID"	2000	"03 North Marsing"	"Owyhee"	246	70	512	385	221	71
+"ID"	2000	"04 South Marsing"	"Owyhee"	260	94	669	382	250	85
+"ID"	2000	"05 Pleasant Valley"	"Owyhee"	62		93	64	59	
+"ID"	2000	"06 Wilson"	"Owyhee"	232	45	444	296	202	54
+"ID"	2000	"07 Murphy"	"Owyhee"	112	15	212	131	100	18
+"ID"	2000	"08 Oreana"	"Owyhee"	68	3	129	73	66	2
+"ID"	2000	"09 Grand View"	"Owyhee"	305	39	573	369	276	48
+"ID"	2000	"10 Bruneau"	"Owyhee"	237	40	396	290	220	31
+"ID"	2000	"11 Riddle"	"Owyhee"	16	39	102	57	25	26
+"ID"	2000	"12 Three Creek"	"Owyhee"	21	2	55	27	25	1
+"ID"	2000	"99 Absentee"	"Owyhee"	164	26		200	148	26
+"ID"	2000	"1"	"Payette"	472	194	1164	716	458	204
+"ID"	2000	"2"	"Payette"	992	308	1896	1383	975	326
+"ID"	2000	"3"	"Payette"	428	173	939	651	438	170
+"ID"	2000	"4"	"Payette"	251	107	585	397	253	100
+"ID"	2000	"5"	"Payette"	661	204	1256	913	651	200
+"ID"	2000	"6"	"Payette"	575	218	1200	850	547	238
+"ID"	2000	"7"	"Payette"	155	27	271	188	145	35
+"ID"	2000	"8"	"Payette"	793	228	1612	1101	794	233
+"ID"	2000	"9"	"Payette"	568	171	1188	814	576	180
+"ID"	2000	"10"	"Payette"	66	13	120	89	65	16
+"ID"	2000	"1 American Falls"	"Power"	369	159	873	560	379	151
+"ID"	2000	"2 American Falls"	"Power"	447	185	1084	656	459	155
+"ID"	2000	"3 American Falls"	"Power"	472	203	1095	701	480	173
+"ID"	2000	"4 Rockland"	"Power"	223	37	423	275	214	45
+"ID"	2000	"5 Arbon"	"Power"	76	4	99	80	70	7
+"ID"	2000	"6 E Power County"	"Power"	155	99	425	291	162	107
+"ID"	2000	"7 Absentee"	"Power"	130	68		209	126	56
+"ID"	2000	"1 Murray/Prichard"	"Shoshone"	59	68	221	136	59	63
+"ID"	2000	"2 Mullan"	"Shoshone"	149	175	566	357	136	181
+"ID"	2000	"3 Wallace"	"Shoshone"	132	131	562	301	124	135
+"ID"	2000	"4 Wallace"	"Shoshone"	131	99	447	252	127	92
+"ID"	2000	"5 Silverton"	"Shoshone"	132	103	408	252	133	97
+"ID"	2000	"6 Osburn"	"Shoshone"	222	130	624	387	210	151
+"ID"	2000	"7 Osburn"	"Shoshone"	216	184	729	437	201	200
+"ID"	2000	"8 Kellogg"	"Shoshone"	146	119	521	295	147	117
+"ID"	2000	"9 Kellogg"	"Shoshone"	252	207	895	527	256	211
+"ID"	2000	"10 Kellogg"	"Shoshone"	124	126	507	269	113	130
+"ID"	2000	"11 Wardner"	"Shoshone"	36	37	125	83	31	39
+"ID"	2000	"12 Smelterville"	"Shoshone"	121	118	463	269	97	133
+"ID"	2000	"13 Pinehurst"	"Shoshone"	132	76	346	228	108	97
+"ID"	2000	"14 Pinehurst"	"Shoshone"	321	229	981	606	298	255
+"ID"	2000	"15 Kingston"	"Shoshone"	336	198	971	587	323	209
+"ID"	2000	"16 Calder"	"Shoshone"	74	15	159	98	75	17
+"ID"	2000	"17 Clarkia"	"Shoshone"	31	18	90	54	30	17
+"ID"	2000	"18 Avery"	"Shoshone"	32	12	86	47	27	13
+"ID"	2000	"Absentee"	"Shoshone"	233	180		450	217	181
+"ID"	2000	"1 Victor"	"Teton"	583	227	1238	897	547	243
+"ID"	2000	"2 Driggs"	"Teton"	761	330	1726	1211	717	344
+"ID"	2000	"3 Tetonia"	"Teton"	328	138	722	516	285	137
+"ID"	2000	"4 Felt"	"Teton"	73	25	172	111	71	22
+"ID"	2000	"Twin Falls 1"	"Twin Falls"	203	146	715	409	256	114
+"ID"	2000	"Twin Falls 2"	"Twin Falls"	168	94	548	302	185	81
+"ID"	2000	"Twin Falls 3"	"Twin Falls"	228	131	644	403	265	114
+"ID"	2000	"Twin Falls 4"	"Twin Falls"	374	157	1145	608	421	145
+"ID"	2000	"Twin Falls 5"	"Twin Falls"	465	204	1087	719	503	173
+"ID"	2000	"Twin Falls 6"	"Twin Falls"	224	144	676	424	250	132
+"ID"	2000	"Twin Falls 7"	"Twin Falls"	393	186	1155	648	448	156
+"ID"	2000	"Twin Falls 8"	"Twin Falls"	308	179	817	531	337	157
+"ID"	2000	"Twin Falls 9"	"Twin Falls"	193	58	424	272	195	62
+"ID"	2000	"Twin Falls 10"	"Twin Falls"	173	95	536	300	203	76
+"ID"	2000	"Twin Falls 11"	"Twin Falls"	322	156	722	512	348	129
+"ID"	2000	"Twin Falls 12"	"Twin Falls"	254	135	615	424	286	117
+"ID"	2000	"Twin Falls 13"	"Twin Falls"	787	264	1783	1104	832	222
+"ID"	2000	"Twin Falls 14"	"Twin Falls"	362	140	757	542	403	113
+"ID"	2000	"Twin Falls 15"	"Twin Falls"	306	113	736	473	354	93
+"ID"	2000	"Twin Falls 16"	"Twin Falls"	206	126	576	368	232	113
+"ID"	2000	"Twin Falls 17"	"Twin Falls"	298	126	818	488	340	119
+"ID"	2000	"Twin Falls 18"	"Twin Falls"	386	195	1131	657	435	185
+"ID"	2000	"Twin Falls 19"	"Twin Falls"	685	246	1485	1005	764	190
+"ID"	2000	"Twin Falls 20"	"Twin Falls"	40	35	144	82	43	34
+"ID"	2000	"Out Twin Falls 21"	"Twin Falls"	633	154	1312	831	647	143
+"ID"	2000	"Out Twin Falls 22"	"Twin Falls"	457	113	923	624	488	108
+"ID"	2000	"Out Twin Falls 23"	"Twin Falls"	268	83	521	387	289	68
+"ID"	2000	"Out Twin Falls 24"	"Twin Falls"	304	99	675	433	315	95
+"ID"	2000	"Buhl 1"	"Twin Falls"	302	120	713	461	332	107
+"ID"	2000	"Buhl 2"	"Twin Falls"	245	97	595	381	262	90
+"ID"	2000	"Buhl 3"	"Twin Falls"	215	57	446	291	217	52
+"ID"	2000	"Buhl 4"	"Twin Falls"	253	118	675	428	271	123
+"ID"	2000	"Buhl 5"	"Twin Falls"	130	64	357	230	148	67
+"ID"	2000	"Buhl 6"	"Twin Falls"	115	57	248	187	131	48
+"ID"	2000	"Buhl 7"	"Twin Falls"	351	130	754	537	375	120
+"ID"	2000	"Castleford 1"	"Twin Falls"	256	66	495	348	277	61
+"ID"	2000	"Clover 1"	"Twin Falls"	116	14	213	152	124	18
+"ID"	2000	"Deep Creek 1"	"Twin Falls"	294	78	666	421	298	91
+"ID"	2000	"Filer 1"	"Twin Falls"	358	97	788	491	388	83
+"ID"	2000	"Filer 2"	"Twin Falls"	534	167	1113	747	547	154
+"ID"	2000	"Filer 3"	"Twin Falls"	340	142	725	518	362	120
+"ID"	2000	"Hansen 1"	"Twin Falls"	466	143	1143	680	501	128
+"ID"	2000	"Hollister 1"	"Twin Falls"	325	57	605	424	320	73
+"ID"	2000	"Kimberly 1"	"Twin Falls"	327	127	721	490	355	98
+"ID"	2000	"Kimberly 2"	"Twin Falls"	531	118	995	701	545	113
+"ID"	2000	"Kimberly 3"	"Twin Falls"	226	41	446	300	232	46
+"ID"	2000	"Maroa 1"	"Twin Falls"	162	31	278	206	162	32
+"ID"	2000	"Murtaugh 1"	"Twin Falls"	224	42	506	292	230	42
+"ID"	2000	"Absentee"	"Twin Falls"	808	269		1186	838	261
+"ID"	2000	"Absentee"	"Twin Falls"	1162	356		1743	1252	321
+"ID"	2000	"Absentee"	"Twin Falls"	17	7		25	17	4
+"ID"	2000	"Alpha"	"Valley"	148	31	336	204	140	49
+"ID"	2000	"Cascade"	"Valley"	263	76	734	380	272	82
+"ID"	2000	"Donnelly"	"Valley"	33	16	115	55	36	17
+"ID"	2000	"McCall"	"Valley"	492	315	1905	908	474	368
+"ID"	2000	"Payette"	"Valley"	298	154	891	503	255	204
+"ID"	2000	"Roseberry"	"Valley"	521	258	1485	884	527	277
+"ID"	2000	"West Mountain"	"Valley"	271	65	616	364	263	73
+"ID"	2000	"Yellow Pine"	"Valley"	39	8	76	61	42	12
+"ID"	2000	"Absentee"	"Valley"	483	206		749	467	212
+"ID"	2000	"01 Eaton Hale"	"Washington"	539	125	879	693	475	137
+"ID"	2000	"02 West Weiser"	"Washington"	218	105	475	352	204	92
+"ID"	2000	"03 South Weiser"	"Washington"	170	107	434	309	171	97
+"ID"	2000	"04 Weiser"	"Washington"	271	137	590	445	244	130
+"ID"	2000	"05 Middle Weiser"	"Washington"	195	112	459	331	194	105
+"ID"	2000	"06 East Weiser"	"Washington"	282	52	469	363	271	59
+"ID"	2000	"07 Midvale"	"Washington"	289	53	481	370	277	52
+"ID"	2000	"08 Cambridge"	"Washington"	391	82	752	524	373	84
+"ID"	2000	"09 Pioneer"	"Washington"	252	142	595	438	256	132
+"ID"	2000	"10 Sunnyside"	"Washington"	292	65	488	385	286	64

@@ -1,0 +1,898 @@
+state	year	county	precinct	g2006_USH_dv	g2006_USH_rv	g2006_USH_tv	g2006_GOV_dv	g2006_GOV_rv	g2006_GOV_tv
+"SD"	2006	"Aurora"	"1"	198	108	306	81	229	310
+"SD"	2006	"Aurora"	"2"	89	67	156	38	114	152
+"SD"	2006	"Aurora"	"3"	267	78	345	146	199	345
+"SD"	2006	"Aurora"	"4"	51	27	78	28	46	74
+"SD"	2006	"Aurora"	"5"	109	22	131	64	67	131
+"SD"	2006	"Aurora"	"6"	74	31	105	40	66	106
+"SD"	2006	"Aurora"	"7"	261	73	334	154	182	336
+"SD"	2006	"Beadle"	"W1"						
+"SD"	2006	"Beadle"	"W1-1(06)"	200	65	265	80	191	271
+"SD"	2006	"Beadle"	"W1-2(06)"	361	112	473	112	361	473
+"SD"	2006	"Beadle"	"W2"	233	65	298	100	198	298
+"SD"	2006	"Beadle"	"W3"	320	135	455	137	320	457
+"SD"	2006	"Beadle"	"W4(06)"	225	62	287	92	189	281
+"SD"	2006	"Beadle"	"W5(06)"	351	125	476	130	345	475
+"SD"	2006	"Beadle"	"W6(06)"	301	97	398	136	271	407
+"SD"	2006	"Beadle"	"W7-1"	446	156	602	184	424	608
+"SD"	2006	"Beadle"	"W7-2"	465	160	625	164	469	633
+"SD"	2006	"Beadle"	"W8-1"	522	218	740	217	531	748
+"SD"	2006	"Beadle"	"W8-2"	518	157	675	169	514	683
+"SD"	2006	"Beadle"	"W9(06)"	240	109	349	84	265	349
+"SD"	2006	"Beadle"	"W10(08)"	164	50	214	77	137	214
+"SD"	2006	"Beadle"	"W11(08)"	122	47	169	42	127	169
+"SD"	2006	"Beadle"	"W12"	289	68	357	104	251	355
+"SD"	2006	"Beadle"	"W13(06)"	65	45	110	20	91	111
+"SD"	2006	"Beadle"	"W14(08)"	145	56	201	64	139	203
+"SD"	2006	"Beadle"	"W15"	82	119	201	24	185	209
+"SD"	2006	"Beadle"	"W16(06)"	117	79	196	31	164	195
+"SD"	2006	"Beadle"	"W17"	128	67	195	37	179	216
+"SD"	2006	"Beadle"	"W18(08)"	141	57	198	51	149	200
+"SD"	2006	"Bennett"	"Allen"	198	66	264	120	122	242
+"SD"	2006	"Bennett"	"Martin City"						
+"SD"	2006	"Bennett"	"Martin Rural 26"	95	51	146	48	96	144
+"SD"	2006	"Bennett"	"Martin Rural 27"	137	63	200	59	131	190
+"SD"	2006	"Bennett"	"Tuthill"	42	51	93	15	83	98
+"SD"	2006	"Bennett"	"Vetal"	46	26	72	22	46	68
+"SD"	2006	"Bennett"	"Ward 1(08)"	86	38	124	47	76	123
+"SD"	2006	"Bennett"	"Ward 2(08)"	107	28	135	63	67	130
+"SD"	2006	"Bennett"	"Ward 3(08)"	100	45	145	48	94	142
+"SD"	2006	"Bon Homme"	"1"	477	175	652	191	451	642
+"SD"	2006	"Bon Homme"	"2"	322	188	510	172	349	521
+"SD"	2006	"Bon Homme"	"3"	642	146	788	258	522	780
+"SD"	2006	"Bon Homme"	"4"	452	89	541	181	353	534
+"SD"	2006	"Bon Homme"	"5"	464	175	639	196	442	638
+"SD"	2006	"Brookings"	"1-Tompkins Alumni Center"				215	364	579
+"SD"	2006	"Brookings"	"2-First Lutheran Church"				388	515	903
+"SD"	2006	"Brookings"	"3-City Hall"				427	492	919
+"SD"	2006	"Brookings"	"4-Ascension Lutheran Church"				632	897	1529
+"SD"	2006	"Brookings"	"5-Bethel Baptist Church"				748	1126	1874
+"SD"	2006	"Brookings"	"6-United Church of Christ"				470	698	1168
+"SD"	2006	"Brookings"	"8-Medary Township"				235	403	638
+"SD"	2006	"Brookings"	"9-White Area"				204	426	630
+"SD"	2006	"Brookings"	"10-Bruce Area"				137	403	540
+"SD"	2006	"Brookings"	"11-Aurora Area"				226	386	612
+"SD"	2006	"Brookings"	"12-Sinai Area"				88	177	265
+"SD"	2006	"Brookings"	"13-Brookings Township"				84	147	231
+"SD"	2006	"Brookings"	"14-Volga Area"				286	700	986
+"SD"	2006	"Brookings"	"15-Laketon & Winsor Twps."				73	99	172
+"SD"	2006	"Brookings"	"16-Elkton Area"				145	341	486
+"SD"	2006	"Brown"	"Alexander Mitchell Library"	999	391	1390	457	918	1375
+"SD"	2006	"Brown"	"Avera-Midland Campus"	601	223	824	297	517	814
+"SD"	2006	"Brown"	"Claremont Fire Station"	876	361	1237	406	813	1219
+"SD"	2006	"Brown"	"Columbia American Legion"	484	185	669	242	423	665
+"SD"	2006	"Brown"	"Courthouse Community Rm 4"	416	170	586	213	367	580
+"SD"	2006	"Brown"	"Courthouse Community Rm 8"	938	429	1367	414	960	1374
+"SD"	2006	"Brown"	"Frederick Community Center"	782	343	1125	339	774	1113
+"SD"	2006	"Brown"	"Groton Community Center"	569	160	729	285	438	723
+"SD"	2006	"Brown"	"Hecla Community Center"	666	328	994	339	643	982
+"SD"	2006	"Brown"	"Hub Area Vocational Ctr"	511	204	715	268	450	718
+"SD"	2006	"Brown"	"Northern Electric Coop"	713	251	964	355	602	957
+"SD"	2006	"Brown"	"Primrose Gym"	439	203	642	185	447	632
+"SD"	2006	"Brown"	"School/Blind & Visually Imp 10"	288	112	400	132	259	391
+"SD"	2006	"Brown"	"School/Blind & Visually Imp 16"	200	59	259	107	153	260
+"SD"	2006	"Brown"	"Senior Citizens Ctr"	535	257	792	283	503	786
+"SD"	2006	"Brown"	"Stratford Community Center"	270	105	375	136	240	376
+"SD"	2006	"Brown"	"Super City Plaza 11"	453	102	555	229	311	540
+"SD"	2006	"Brown"	"Super City Plaza 7"	197	56	253	104	149	253
+"SD"	2006	"Brown"	"Warner Community Center"	769	209	978	311	665	976
+"SD"	2006	"Brown"	"Washington St. Gym 1"	166	47	213	80	132	212
+"SD"	2006	"Brown"	"Washington St. Gym 2"	277	57	334	142	182	324
+"SD"	2006	"Brown"	"Westport Town Hall"	229	54	283	136	146	282
+"SD"	2006	"Brule"	"1"	575	185	760	256	498	754
+"SD"	2006	"Brule"	"2"	318	115	433	143	288	431
+"SD"	2006	"Brule"	"3"	211	82	293	90	203	293
+"SD"	2006	"Brule"	"4"	43	17	60	16	44	60
+"SD"	2006	"Brule"	"5"	76	26	102	27	79	106
+"SD"	2006	"Buffalo"	"Elvira"	95	62	157	43	117	160
+"SD"	2006	"Buffalo"	"Pershing"	73	24	97	55	40	95
+"SD"	2006	"Buffalo"	"Victory"	336	75	411	262	148	410
+"SD"	2006	"Butte"	"Castle Rock Precinct 06"	17	20	37	15	18	33
+"SD"	2006	"Butte"	"Fruitdale Precinct 17"	213	138	351	123	228	351
+"SD"	2006	"Butte"	"Minnesela Precinct 16"	236	217	453	124	321	445
+"SD"	2006	"Butte"	"Newell City Precinct 20"	169	83	252	72	177	249
+"SD"	2006	"Butte"	"Nisland Precinct 18"	108	63	171	62	102	164
+"SD"	2006	"Butte"	"Orman Precinct 12"	39	30	69	23	47	70
+"SD"	2006	"Butte"	"Romans Precinct 11"	28	30	58	13	46	59
+"SD"	2006	"Butte"	"Union Precinct 08 (Including: Horsecreek Precinct 13, Newell Independent Precinct 14)"	256	131	387	112	271	383
+"SD"	2006	"Butte"	"Ward 1 Precinct 21"	131	59	190	70	117	187
+"SD"	2006	"Butte"	"Ward 1 Precinct 22"	147	56	203	75	124	199
+"SD"	2006	"Butte"	"Ward 2 Precinct 23"	125	83	208	62	141	203
+"SD"	2006	"Butte"	"Ward 2 Precinct 24"	179	80	259	90	167	257
+"SD"	2006	"Butte"	"Ward 3 Precinct 25"	51	31	82	25	60	85
+"SD"	2006	"Butte"	"Ward 3 Precinct 26"	274	196	470	152	315	467
+"SD"	2006	"Butte"	"Ward 4 Precinct 27"	83	60	143	41	102	143
+"SD"	2006	"Butte"	"Ward 4 Precinct 28"	257	128	385	122	266	388
+"SD"	2006	"Campbell"	"1"	123	74	197	52	145	197
+"SD"	2006	"Campbell"	"2"	85	67	152	17	131	148
+"SD"	2006	"Campbell"	"3"	79	68	147	22	125	147
+"SD"	2006	"Campbell"	"4"	111	36	147	33	114	147
+"SD"	2006	"Campbell"	"5"	112	62	174	38	133	171
+"SD"	2006	"Charles Mix"	"1"	328	101	429	128	300	428
+"SD"	2006	"Charles Mix"	"2"	138	50	188	48	145	193
+"SD"	2006	"Charles Mix"	"3"	393	120	513	193	326	519
+"SD"	2006	"Charles Mix"	"4"	162	24	186	110	72	182
+"SD"	2006	"Charles Mix"	"5"	277	71	348	142	206	348
+"SD"	2006	"Charles Mix"	"6"	245	33	278	160	118	278
+"SD"	2006	"Charles Mix"	"7"	71	39	110	34	73	107
+"SD"	2006	"Charles Mix"	"8"	114	60	174	55	116	171
+"SD"	2006	"Charles Mix"	"9"	173	169	342	74	269	343
+"SD"	2006	"Charles Mix"	"10"	67	81	148	23	124	147
+"SD"	2006	"Charles Mix"	"11"	381	349	730	146	587	733
+"SD"	2006	"Charles Mix"	"12"	103	33	136	44	93	137
+"SD"	2006	"Charles Mix"	"13"	58	12	70	34	36	70
+"SD"	2006	"Clark"	"Ash, Woodland, Garfield"	57	17	74	33	41	74
+"SD"	2006	"Clark"	"Blaine, Cottonwood, Sp Val, War"	122	19	141	50	95	145
+"SD"	2006	"Clark"	"City of Clark Ward I"	180	45	225	66	158	224
+"SD"	2006	"Clark"	"City of Clark Ward II"	117	45	162	65	95	160
+"SD"	2006	"Clark"	"City of Clark Ward III, Lincoln"	188	62	250	90	160	250
+"SD"	2006	"Clark"	"Elrod, Foxton, Merton, Town of"						
+"SD"	2006	"Clark"	"Lake, Washington, Collins"	98	35	133	49	85	134
+"SD"	2006	"Clark"	"Mt Pleasant, Day, Darlington"						
+"SD"	2006	"Clark"	"Mt Pleasant, Day, Darlington, Elrod, Foxton, Merton, Town of(06)"	202	66	268	102	167	269
+"SD"	2006	"Clark"	"Raymond Twp, Logan, Fordham, To"	100	31	131	51	81	132
+"SD"	2006	"Clark"	"Richland, Hague, Rosedale"	96	24	120	41	82	123
+"SD"	2006	"Clark"	"Thorp, Maydell, Eden, Town of G"	97	33	130	51	80	131
+"SD"	2006	"Clark"	"Town of Vienna, Pleasant"	42	60	102	20	85	105
+"SD"	2006	"Clark"	"Town of Willow Lake"	100	37	137	35	97	132
+"SD"	2006	"Clay"	"Central 1"	232	39	271	185	86	271
+"SD"	2006	"Clay"	"Central 2"	311	73	384	233	152	385
+"SD"	2006	"Clay"	"Irene City(06)"	54	8	62	33	31	64
+"SD"	2006	"Clay"	"Northeast 1"	240	62	302	148	155	303
+"SD"	2006	"Clay"	"Northeast 2"	261	61	322	183	136	319
+"SD"	2006	"Clay"	"Northwest 1"	420	75	495	272	234	506
+"SD"	2006	"Clay"	"Northwest 2"	272	75	347	163	182	345
+"SD"	2006	"Clay"	"Rural Ward 1"	280	107	387	156	238	394
+"SD"	2006	"Clay"	"Rural Ward 2"	282	54	336	159	180	339
+"SD"	2006	"Clay"	"Rural Ward 3"	654	177	831	380	447	827
+"SD"	2006	"Clay"	"Southeast 1"	610	131	741	365	375	740
+"SD"	2006	"Clay"	"Southeast 2"	563	121	684	345	339	684
+"SD"	2006	"Clay"	"Str/Bt Wakond(04)"						
+"SD"	2006	"Codington"	"Dexter"	72	16	88	42	43	85
+"SD"	2006	"Codington"	"Eden, Phipps, Wallace"	80	30	110	45	68	113
+"SD"	2006	"Codington"	"Elmira"	125	48	173	50	123	173
+"SD"	2006	"Codington"	"Fuller - Florence"	193	59	252	104	141	245
+"SD"	2006	"Codington"	"Germantown"	73	6	79	41	36	77
+"SD"	2006	"Codington"	"Graceland, Henry, Henry"	157	58	215	81	130	211
+"SD"	2006	"Codington"	"Kampeska Township"	92	38	130	35	95	130
+"SD"	2006	"Codington"	"Kranzburg Twp. & Village"	161	90	251	58	199	257
+"SD"	2006	"Codington"	"Lake Township"	217	92	309	112	194	306
+"SD"	2006	"Codington"	"Leola - South Shore"	116	29	145	72	75	147
+"SD"	2006	"Codington"	"Pelican"	178	95	273	74	202	276
+"SD"	2006	"Codington"	"Rauville"	99	29	128	51	77	128
+"SD"	2006	"Codington"	"Richland"	55	24	79	27	50	77
+"SD"	2006	"Codington"	"Sheridan"	130	55	185	60	129	189
+"SD"	2006	"Codington"	"Ward A Precinct 1 (Including: Ward A Precinct 4)"	61	250	311	226	650	876
+"SD"	2006	"Codington"	"Ward A Precinct 2"	409	142	551	171	390	561
+"SD"	2006	"Codington"	"Ward A Precinct 3"	497	184	681	253	422	675
+"SD"	2006	"Codington"	"Ward B Precinct 1"	378	155	533	147	389	536
+"SD"	2006	"Codington"	"Ward B Precinct 2"	565	244	809	301	514	815
+"SD"	2006	"Codington"	"Ward B Precinct 3 (Including: Ward B Precinct 4)"	363	169	532	167	367	534
+"SD"	2006	"Codington"	"Ward C Precinct 1"	93	39	132	55	76	131
+"SD"	2006	"Codington"	"Ward C Precinct 2"	145	69	214	71	139	210
+"SD"	2006	"Codington"	"Ward C Precinct 3"	481	146	627	235	391	626
+"SD"	2006	"Codington"	"Ward C Precinct 4"	164	46	210	84	128	212
+"SD"	2006	"Codington"	"Ward D Precinct 1"	341	110	451	167	287	454
+"SD"	2006	"Codington"	"Ward D Precinct 2"	308	109	417	161	256	417
+"SD"	2006	"Codington"	"Ward D Precinct 3"	299	100	399	155	245	400
+"SD"	2006	"Codington"	"Ward D Precinct 4"	141	40	181	75	109	184
+"SD"	2006	"Codington"	"Ward E Precinct 1"	352	110	462	167	294	461
+"SD"	2006	"Codington"	"Ward E Precinct 2"	172	72	244	82	163	245
+"SD"	2006	"Codington"	"Ward E Precinct 3"	414	258	672	180	493	673
+"SD"	2006	"Codington"	"Ward E Precinct 4"	164	106	270	84	191	275
+"SD"	2006	"Codington"	"Waverly"	67	21	88	39	52	91
+"SD"	2006	"Corson"	"Archambault Precinct"	20	15	35	18	18	36
+"SD"	2006	"Corson"	"Bullhead Precinct"	52	3	55	36	18	54
+"SD"	2006	"Corson"	"Butte Precinct"	68	20	88	44	36	80
+"SD"	2006	"Corson"	"Cadillac Precinct"	23	25	48	11	36	47
+"SD"	2006	"Corson"	"Grand Valley Precinct"	28	42	70	14	47	61
+"SD"	2006	"Corson"	"Kenel Precinct"	31	3	34	18	12	30
+"SD"	2006	"Corson"	"Liberty Precinct"	19	14	33	4	30	34
+"SD"	2006	"Corson"	"Lincoln Precinct"	49	52	101	28	72	100
+"SD"	2006	"Corson"	"Little Eagle Precinct"	62	10	72	37	32	69
+"SD"	2006	"Corson"	"Little Oak Precinct"	32	24	56	10	47	57
+"SD"	2006	"Corson"	"McIntosh Precinct"						
+"SD"	2006	"Corson"	"Mission Precinct"	25	0	25	15	8	23
+"SD"	2006	"Corson"	"Morristown Precinct"	87	24	111	38	67	105
+"SD"	2006	"Corson"	"NcUbtoah Precinct(06)"	62	36	98	27	68	95
+"SD"	2006	"Corson"	"Ridgeland Precinct"	32	20	52	11	41	52
+"SD"	2006	"Corson"	"South McLaughlin City Precinct"	51	30	81	34	44	78
+"SD"	2006	"Corson"	"Wakpala Precinct"	46	1	47	22	21	43
+"SD"	2006	"Corson"	"Watauga Precinct"	14	13	27	7	21	28
+"SD"	2006	"Custer"	"Bear Rock 9"	586	395	981	407	564	971
+"SD"	2006	"Custer"	"Buffalo Gap 3"	115	64	179	77	97	174
+"SD"	2006	"Custer"	"Custer 6"	181	70	251	122	127	249
+"SD"	2006	"Custer"	"Custer 7"	211	92	303	122	182	304
+"SD"	2006	"Custer"	"Custer 8"	225	92	317	112	210	322
+"SD"	2006	"Custer"	"Elk Mountain 10"	38	64	102	16	74	90
+"SD"	2006	"Custer"	"Fairburn 2"	70	43	113	44	71	115
+"SD"	2006	"Custer"	"Hermosa 1"	435	295	730	270	439	709
+"SD"	2006	"Custer"	"Pringle 4"	158	97	255	112	136	248
+"SD"	2006	"Custer"	"Sentinel Hill 5"	337	224	561	233	331	564
+"SD"	2006	"Davison"	"Badg,Perry,N 1/2 Mit Twp"						
+"SD"	2006	"Davison"	"Bak,Blen,Mtv,Un Twp"						
+"SD"	2006	"Davison"	"Beul,Lis,Pros,S 1/2 Mit Twp"						
+"SD"	2006	"Davison"	"Prec 1 (Including: Prec 3)"	265	144	409	133	277	410
+"SD"	2006	"Davison"	"Prec 2"	189	48	237	92	144	236
+"SD"	2006	"Davison"	"Prec 4"	218	95	313	114	201	315
+"SD"	2006	"Davison"	"Prec 5"	317	97	414	182	233	415
+"SD"	2006	"Davison"	"Prec 6"	140	48	188	76	113	189
+"SD"	2006	"Davison"	"Prec 7"	262	77	339	133	201	334
+"SD"	2006	"Davison"	"Prec 8"	205	103	308	88	219	307
+"SD"	2006	"Davison"	"Prec 10"	236	96	332	96	237	333
+"SD"	2006	"Davison"	"Prec 11 (Including: Prec 13)"	269	107	376	130	246	376
+"SD"	2006	"Davison"	"Prec 12"	136	56	192	74	119	193
+"SD"	2006	"Davison"	"Prec 14"	167	92	259	74	186	260
+"SD"	2006	"Davison"	"Prec 15"	239	92	331	121	210	331
+"SD"	2006	"Davison"	"Prec 16"	269	130	399	139	262	401
+"SD"	2006	"Davison"	"Prec 17"	316	130	446	156	298	454
+"SD"	2006	"Davison"	"Prec 18"	229	92	321	113	207	320
+"SD"	2006	"Davison"	"Prec 19"	238	91	329	109	221	330
+"SD"	2006	"Davison"	"Prec 20"	504	202	706	241	474	715
+"SD"	2006	"Davison"	"Rome,Tobin,Ethn"						
+"SD"	2006	"Day"	"1"	209	67	276	108	173	281
+"SD"	2006	"Day"	"2"	243	51	294	135	165	300
+"SD"	2006	"Day"	"3"	147	36	183	82	106	188
+"SD"	2006	"Day"	"4"	141	30	171	82	89	171
+"SD"	2006	"Day"	"5"	207	54	261	122	140	262
+"SD"	2006	"Day"	"6"	188	43	231	122	115	237
+"SD"	2006	"Day"	"7"	154	46	200	102	93	195
+"SD"	2006	"Day"	"8"	124	30	154	70	82	152
+"SD"	2006	"Day"	"9"	152	43	195	80	107	187
+"SD"	2006	"Day"	"10"	85	35	120	43	73	116
+"SD"	2006	"Day"	"11"	173	43	216	96	120	216
+"SD"	2006	"Day"	"12"	184	39	223	104	118	222
+"SD"	2006	"Day"	"13"	162	45	207	99	109	208
+"SD"	2006	"Day"	"14"	199	55	254	111	142	253
+"SD"	2006	"Deuel"	"Alt., Portland, Alt."	84	20	104	39	63	102
+"SD"	2006	"Deuel"	"Ant. Valley, Lowe"	65	17	82	38	43	81
+"SD"	2006	"Deuel"	"Blom, Grange, Toronto"	183	37	220	97	115	212
+"SD"	2006	"Deuel"	"Clear Lake WD 1"	145	40	185	63	123	186
+"SD"	2006	"Deuel"	"Clear Lake WD 2"	142	44	186	85	99	184
+"SD"	2006	"Deuel"	"Clear Lake WD 3"	155	51	206	83	123	206
+"SD"	2006	"Deuel"	"Glenwood, Herrick, Gary"	180	74	254	86	165	251
+"SD"	2006	"Deuel"	"Goodwin, Rome, Goodwin"	126	62	188	51	131	182
+"SD"	2006	"Deuel"	"Hav., CL, Hidewood"	195	76	271	89	178	267
+"SD"	2006	"Deuel"	"Norden, Brandt, Brandt"	213	42	255	86	183	269
+"SD"	2006	"Deuel"	"Scandi, Astoria"	117	49	166	54	113	167
+"SD"	2006	"Dewey"	"EAGLE BUTTE EAST"	194	14	208	122	79	201
+"SD"	2006	"Dewey"	"EB SOUTH"	286	35	321	160	158	318
+"SD"	2006	"Dewey"	"EB WEST GREEN GRASS"	107	27	134	72	61	133
+"SD"	2006	"Dewey"	"FIRESTEEL"	56	9	65	17	47	64
+"SD"	2006	"Dewey"	"GLENCROSS"	35	12	47	6	41	47
+"SD"	2006	"Dewey"	"ISABEL"	97	61	158	34	127	161
+"SD"	2006	"Dewey"	"LAPLANT"	53	5	58	26	27	53
+"SD"	2006	"Dewey"	"NO HEART (Including: EB NORTH)"	200	34	234	122	112	234
+"SD"	2006	"Dewey"	"PROMISE"	44	12	56	30	25	55
+"SD"	2006	"Dewey"	"SWIFTBIRD"	34	2	36	23	12	35
+"SD"	2006	"Dewey"	"TIMBER LAKE"	203	70	273	68	196	264
+"SD"	2006	"Dewey"	"TRAIL CITY"	17	22	39	4	33	37
+"SD"	2006	"Dewey"	"WHITE HORSE"	55	2	57	40	16	56
+"SD"	2006	"Douglas"	"1"	100	262	362	21	342	363
+"SD"	2006	"Douglas"	"2"	169	185	354	70	292	362
+"SD"	2006	"Douglas"	"3"	177	154	331	84	249	333
+"SD"	2006	"Douglas"	"4"	257	127	384	106	281	387
+"SD"	2006	"Douglas"	"5"	161	180	341	50	290	340
+"SD"	2006	"Edmunds"	"1"	276	140	416	112	304	416
+"SD"	2006	"Edmunds"	"2"	303	156	459	115	352	467
+"SD"	2006	"Edmunds"	"3"	158	80	238	35	212	247
+"SD"	2006	"Edmunds"	"4"	55	20	75	18	58	76
+"SD"	2006	"Edmunds"	"5"	170	73	243	74	167	241
+"SD"	2006	"Edmunds"	"6"	115	59	174	38	133	171
+"SD"	2006	"Edmunds"	"7"	295	130	425	114	313	427
+"SD"	2006	"Fall River"	"Ardmor(04)"						
+"SD"	2006	"Fall River"	"Argentine"	56	38	94	35	62	97
+"SD"	2006	"Fall River"	"Beaver"	76	33	109	43	65	108
+"SD"	2006	"Fall River"	"Cascade"	109	72	181	55	123	178
+"SD"	2006	"Fall River"	"Cottonwood"	35	23	58	19	38	57
+"SD"	2006	"Fall River"	"Edgemont 1"	80	41	121	48	69	117
+"SD"	2006	"Fall River"	"Edgemont 2"	81	35	116	58	60	118
+"SD"	2006	"Fall River"	"Edgemont 3"	69	21	90	37	48	85
+"SD"	2006	"Fall River"	"Hot Springs 1"	202	87	289	139	146	285
+"SD"	2006	"Fall River"	"Hot Springs 2A"	218	102	320	137	184	321
+"SD"	2006	"Fall River"	"Hot Springs 2B"	138	49	187	84	96	180
+"SD"	2006	"Fall River"	"Hot Springs 3"	297	126	423	185	233	418
+"SD"	2006	"Fall River"	"Hot Springs 4"	233	102	335	141	189	330
+"SD"	2006	"Fall River"	"Jackson"	401	295	696	254	414	668
+"SD"	2006	"Fall River"	"Limestone"	56	45	101	30	65	95
+"SD"	2006	"Fall River"	"Oelrichs"	37	23	60	26	38	64
+"SD"	2006	"Fall River"	"Smithwick"	28	37	65	25	37	62
+"SD"	2006	"Faulk"	"1"	116	72	188	50	136	186
+"SD"	2006	"Faulk"	"2"	60	32	92	17	74	91
+"SD"	2006	"Faulk"	"3"	87	69	156	34	123	157
+"SD"	2006	"Faulk"	"4"	69	29	98	21	81	102
+"SD"	2006	"Faulk"	"5"	66	32	98	23	78	101
+"SD"	2006	"Faulk"	"6"	165	71	236	64	173	237
+"SD"	2006	"Faulk"	"7"	200	61	261	61	202	263
+"SD"	2006	"Faulk"	"8(04)"						
+"SD"	2006	"Faulk"	"9(04)"						
+"SD"	2006	"Faulk"	"10(04)"						
+"SD"	2006	"Faulk"	"11(04)"						
+"SD"	2006	"Grant"	"Adams-Albee-Revillo-Vernon"	119	27	146	68	76	144
+"SD"	2006	"Grant"	"Alban"	215	44	259	77	183	260
+"SD"	2006	"Grant"	"Big Stone City & Twp"	282	102	384	123	267	390
+"SD"	2006	"Grant"	"Blooming Val-Farm-Lura"	77	36	113	44	70	114
+"SD"	2006	"Grant"	"Georgia-Madison-LaBolt"	111	46	157	58	101	159
+"SD"	2006	"Grant"	"Grant Center"	128	41	169	54	116	170
+"SD"	2006	"Grant"	"Mazeppa-Osceola-Marvin"	95	30	125	57	68	125
+"SD"	2006	"Grant"	"Melrose"	137	58	195	46	153	199
+"SD"	2006	"Grant"	"Milbank 11"	62	24	86	23	60	83
+"SD"	2006	"Grant"	"Milbank 12"	282	82	364	122	236	358
+"SD"	2006	"Grant"	"Milbank 21"	119	61	180	47	133	180
+"SD"	2006	"Grant"	"Milbank 22"	346	126	472	144	335	479
+"SD"	2006	"Grant"	"Milbank 31"	62	22	84	35	48	83
+"SD"	2006	"Grant"	"Milbank 32"	86	24	110	30	79	109
+"SD"	2006	"Grant"	"Milbank 33"	221	93	314	90	234	324
+"SD"	2006	"Grant"	"Stockholm Town & Twp"	65	20	85	29	51	80
+"SD"	2006	"Grant"	"Troy-Strandburg"	37	10	47	16	32	48
+"SD"	2006	"Grant"	"Twin Brooks-Kilborn"	122	34	156	62	94	156
+"SD"	2006	"Grant"	"Vemon(06)"	90	36	126	51	76	127
+"SD"	2006	"Gregory"	"1"	686	320	1006	331	671	1002
+"SD"	2006	"Gregory"	"2"	518	275	793	287	501	788
+"SD"	2006	"Gregory"	"3"	247	129	376	84	299	383
+"SD"	2006	"Haakon"	"Community Room(06)"	130	77	207	47	162	209
+"SD"	2006	"Haakon"	"Deadman"	127	86	213	44	167	211
+"SD"	2006	"Haakon"	"Deep Creek Church(06)"	36	17	53	10	43	53
+"SD"	2006	"Haakon"	"Kirley"						
+"SD"	2006	"Haakon"	"Lake Waggoner"	147	110	257	62	198	260
+"SD"	2006	"Haakon"	"Midland"	141	82	223	45	172	217
+"SD"	2006	"Haakon"	"Milesville"	53	66	119	22	88	110
+"SD"	2006	"Haakon"	"South Fork"						
+"SD"	2006	"Hamlin"	"Bryant"	195	82	277	104	174	278
+"SD"	2006	"Hamlin"	"Castlewood"	350	192	542	183	380	563
+"SD"	2006	"Hamlin"	"Estelline"	405	95	500	233	275	508
+"SD"	2006	"Hamlin"	"Hayti"	233	165	398	95	300	395
+"SD"	2006	"Hamlin"	"Hazel"	54	68	122	20	105	125
+"SD"	2006	"Hamlin"	"Norden"	321	200	521	153	364	517
+"SD"	2006	"Hamlin"	"Oxford"	63	67	130	34	99	133
+"SD"	2006	"Hand"	"1 (Including: 3)"						
+"SD"	2006	"Hand"	"1(08)"	76	58	134	13	141	154
+"SD"	2006	"Hand"	"2"	76	22	98	35	67	102
+"SD"	2006	"Hand"	"3(08)"	70	23	93	14	79	93
+"SD"	2006	"Hand"	"4"	33	23	56	7	49	56
+"SD"	2006	"Hand"	"5 (Including: 8)"						
+"SD"	2006	"Hand"	"5(06)"	85	86	171	24	163	187
+"SD"	2006	"Hand"	"6"	115	64	179	50	133	183
+"SD"	2006	"Hand"	"7"	102	39	141	58	85	143
+"SD"	2006	"Hand"	"8(06)"	24	13	37	7	29	36
+"SD"	2006	"Hand"	"9 (Including: 10)"						
+"SD"	2006	"Hand"	"9(06)"	41	46	87	9	81	90
+"SD"	2006	"Hand"	"10(06)"	21	18	39	5	33	38
+"SD"	2006	"Hand"	"11"	329	127	456	121	335	456
+"SD"	2006	"Hand"	"12"	370	143	513	141	366	507
+"SD"	2006	"Hanson"	"1 - Emery Fire Hall"	203	203	406	136	269	405
+"SD"	2006	"Hanson"	"2 - Alex City Hall"	221	86	307	88	225	313
+"SD"	2006	"Hanson"	"3 - Fulton Community Hall"						
+"SD"	2006	"Hanson"	"4 - Fulton Community Hall"						
+"SD"	2006	"Hanson"	"5 - Hanson County Courthouse"						
+"SD"	2006	"Hanson"	"5 - Extension Bldg(08)"						
+"SD"	2006	"Hanson"	"BANSON-PLANO-ROSEDALE-WORTHEN(06)"	192	188	380	80	300	380
+"SD"	2006	"Hanson"	"BEULAH-WAYNE(06)"	100	128	228	54	176	230
+"SD"	2006	"Hanson"	"EDGERTON-SPRINGLAKE-FARMER(06)"	86	26	112	30	82	112
+"SD"	2006	"Hanson"	"JASPER-FULTON-FAIRVIEW(06)"	112	49	161	53	107	160
+"SD"	2006	"Hanson"	"TAYLOR-PLEASANT(06)"	97	112	209	63	146	209
+"SD"	2006	"Harding"	"Buffalo"	67	55	122	34	90	124
+"SD"	2006	"Harding"	"Camp Crook"	94	28	122	53	64	117
+"SD"	2006	"Harding"	"Fillmore"	29	19	48	6	37	43
+"SD"	2006	"Harding"	"Govert(08)"	16	9	25	6	15	21
+"SD"	2006	"Harding"	"Hilton"	63	44	107	40	54	94
+"SD"	2006	"Harding"	"Ladner"	14	21	35	3	30	33
+"SD"	2006	"Harding"	"Ludlow (Including: Vessey)"	28	19	47	22	23	45
+"SD"	2006	"Harding"	"Poplar Grove"	25	28	53	23	25	48
+"SD"	2006	"Harding"	"Reva (Including: Govert)"	40	34	74	24	42	66
+"SD"	2006	"Harding"	"Vessey(08)"	17	9	26	12	8	20
+"SD"	2006	"Hughes"	"5-Blunt City Hall"	173	82	255	66	191	257
+"SD"	2006	"Hughes"	"7-Harrold Fire Hall"	80	51	131	41	93	134
+"SD"	2006	"Hughes"	"9-Hyde"	70	10	80	33	46	79
+"SD"	2006	"Hughes"	"11-Rural New Life Assembly Chu"	654	339	993	245	749	994
+"SD"	2006	"Hughes"	"21-Pierre City Auditorium"	379	175	554	181	367	548
+"SD"	2006	"Hughes"	"22-Pierre(04)"						
+"SD"	2006	"Hughes"	"23-Pierre PILC Rec Center"	411	135	546	188	361	549
+"SD"	2006	"Hughes"	"24-Pierre Buchanan School"	478	200	678	217	458	675
+"SD"	2006	"Hughes"	"25-Pierre(04)"						
+"SD"	2006	"Hughes"	"26-Pierre Riggs Theater"	423	189	612	168	440	608
+"SD"	2006	"Hughes"	"27-Pierre(04)"						
+"SD"	2006	"Hughes"	"28-Pierre Courthouse"	417	211	628	183	443	626
+"SD"	2006	"Hughes"	"29-Pierre Senior Citizen's Cen"	277	107	384	123	259	382
+"SD"	2006	"Hughes"	"30-Pierre Faith Lutheran Churc"	430	150	580	184	398	582
+"SD"	2006	"Hughes"	"31-Pierre Poplar Ave Fire Stat"	582	235	817	228	601	829
+"SD"	2006	"Hughes"	"32-Pierre 7th Day Adv Church"	395	123	518	136	382	518
+"SD"	2006	"Hughes"	"33-Pierre Resurrection Church"	374	152	526	156	374	530
+"SD"	2006	"Hughes"	"34-Pierre No. 4 Fire Station"	474	205	679	176	513	689
+"SD"	2006	"Hutchinson"	"1"	470	311	781	188	615	803
+"SD"	2006	"Hutchinson"	"2"	490	273	763	174	595	769
+"SD"	2006	"Hutchinson"	"3"	109	78	187	21	159	180
+"SD"	2006	"Hutchinson"	"4"	354	121	475	107	371	478
+"SD"	2006	"Hutchinson"	"5"	493	216	709	167	550	717
+"SD"	2006	"Hutchinson"	"6"	315	137	452	119	334	453
+"SD"	2006	"Hutchinson"	"7"	165	94	259	47	213	260
+"SD"	2006	"Hutchinson"	"8(04)"						
+"SD"	2006	"Hutchinson"	"9(04)"						
+"SD"	2006	"Hutchinson"	"10(04)"						
+"SD"	2006	"Hyde"	"1"	134	64	198	28	171	199
+"SD"	2006	"Hyde"	"2"	148	76	224	50	169	219
+"SD"	2006	"Hyde"	"3"	77	47	124	30	93	123
+"SD"	2006	"Hyde"	"4"	151	67	218	49	164	213
+"SD"	2006	"Hyde"	"5"	53	15	68	20	48	68
+"SD"	2006	"Jackson"	"1 Cottonwood"	17	19	36	8	29	37
+"SD"	2006	"Jackson"	"2 Interior"	49	47	96	29	67	96
+"SD"	2006	"Jackson"	"3 Kadoka"	157	89	246	60	185	245
+"SD"	2006	"Jackson"	"4 Kadoka"	90	63	153	45	109	154
+"SD"	2006	"Jackson"	"5 Belvidere"	45	36	81	32	45	77
+"SD"	2006	"Jackson"	"6 Long Valley"	57	43	100	38	66	104
+"SD"	2006	"Jackson"	"7 Wanblee"	139	49	188	100	79	179
+"SD"	2006	"Jackson"	"8 Green Valley"	44	21	65	20	41	61
+"SD"	2006	"Jerauld"	"1"	429	124	553	209	347	556
+"SD"	2006	"Jerauld"	"2"	105	50	155	57	93	150
+"SD"	2006	"Jerauld"	"3"	116	25	141	44	100	144
+"SD"	2006	"Jerauld"	"4"	77	28	105	49	55	104
+"SD"	2006	"Jerauld"	"5"	81	31	112	37	79	116
+"SD"	2006	"Jones"	"1 Okaton area"	126	93	219	44	173	217
+"SD"	2006	"Jones"	"3 Wards II, III & Buffalo"	160	59	219	55	169	224
+"SD"	2006	"Jones"	"5 Draper area"	155	47	202	66	130	196
+"SD"	2006	"Jones"	"2 S.Creek, Capa & Bovine(04)"						
+"SD"	2006	"Jones"	"4 Union, Highland & Van Metre(04)"						
+"SD"	2006	"Kingsbury"	"Arlington Precinct"	413	122	535	218	322	540
+"SD"	2006	"Kingsbury"	"Badger Precinct"	222	82	304	107	201	308
+"SD"	2006	"Kingsbury"	"DeSmet Precinct"	647	248	895	302	597	899
+"SD"	2006	"Kingsbury"	"Iroquois Precinct"	184	45	229	75	153	228
+"SD"	2006	"Kingsbury"	"Lake Preston Precinct"	313	99	412	142	272	414
+"SD"	2006	"Kingsbury"	"Oldham Precinct"	166	64	230	73	158	231
+"SD"	2006	"Lake"	"Chester (Including: Franklin)"	358	92	450	177	287	464
+"SD"	2006	"Lake"	"Concord (Including: Badus, Ramona Village, Wayne)"	210	50	260	104	161	265
+"SD"	2006	"Lake"	"Farmington (Including: Clarno, Leroy, Orland)"	252	110	362	121	246	367
+"SD"	2006	"Lake"	"Farmington (Including: Leroy)(04)"						
+"SD"	2006	"Lake"	"Clarno Orland(04)"						
+"SD"	2006	"Lake"	"Herman (Including: Winfred)"	316	75	391	162	230	392
+"SD"	2006	"Lake"	"Lakeview"	328	89	417	179	241	420
+"SD"	2006	"Lake"	"Nunda (Including: Nunda Village, Summit)"	122	39	161	50	109	159
+"SD"	2006	"Lake"	"Ward 1 Precinct 1 (Including: Ward 1 Precinct 2, Ward 1 Precinct 3, Ward 1 Precinct 4)"						
+"SD"	2006	"Lake"	"Ward 2 Precinct 1 (Including: Ward 2 Precinct 2, Ward 2 Precinct 3)"						
+"SD"	2006	"Lake"	"Ward 3 Precinct 1 (Including: Ward 3 Precinct 2, Ward 3 Precinct 3)"						
+"SD"	2006	"Lake"	"Ward 1 Precinct 1(06)"	240	114	354	152	205	357
+"SD"	2006	"Lake"	"Ward 1 Precinct 2(06)"	293	85	378	163	214	377
+"SD"	2006	"Lake"	"Ward 1 Precinct 3(06)"	269	61	330	133	203	336
+"SD"	2006	"Lake"	"Ward 1 Precinct 4(06)"	263	72	335	112	237	349
+"SD"	2006	"Lake"	"Ward 2 Precinct 1(06)"	174	40	214	83	125	208
+"SD"	2006	"Lake"	"Ward 2 Precinct 2(06)"	255	47	302	126	177	303
+"SD"	2006	"Lake"	"Ward 2 Precinct 3(06)"	202	66	268	104	171	275
+"SD"	2006	"Lake"	"Ward 3 Precinct 1(06)"	143	44	187	73	112	185
+"SD"	2006	"Lake"	"Ward 3 Precinct 2(06)"	175	46	221	89	131	220
+"SD"	2006	"Lake"	"Ward 3 Precinct 3(06)"	191	54	245	96	150	246
+"SD"	2006	"Lake"	"Wentworth (Including: Rutland, Wentworth Village)"	287	105	392	141	247	388
+"SD"	2006	"Lawrence"	"Absentee Precinct"	295	155	450	1829	2665	4494
+"SD"	2006	"Lawrence"	"Boxelder(06)"	144	77	221	84	133	217
+"SD"	2006	"Lawrence"	"Deadwood"	266	75	341	173	175	348
+"SD"	2006	"Lawrence"	"Lead"	633	177	810	351	454	805
+"SD"	2006	"Lawrence"	"Nemo"						
+"SD"	2006	"Lawrence"	"Rural 1"	354	166	520	181	335	516
+"SD"	2006	"Lawrence"	"Spearfish Ward 1"	343	166	509	229	287	516
+"SD"	2006	"Lawrence"	"Spearfish Ward 2"	476	234	710	261	429	690
+"SD"	2006	"Lawrence"	"Spearfish Ward 3"	450	250	700	258	451	709
+"SD"	2006	"Lawrence"	"St Onge"	161	94	255	88	162	250
+"SD"	2006	"Lawrence"	"Valley 1"	293	223	516	154	356	510
+"SD"	2006	"Lawrence"	"Valley 2"	300	232	532	177	356	533
+"SD"	2006	"Lawrence"	"Whitewood"	382	159	541	209	326	535
+"SD"	2006	"Lincoln"	"Beresford/Pleasant/Brooklyn"	272	128	400	144	258	402
+"SD"	2006	"Lincoln"	"Canton 1,2,3"	660	206	866	329	539	868
+"SD"	2006	"Lincoln"	"Canton 4 & 5"	419	137	556	207	343	550
+"SD"	2006	"Lincoln"	"Dayton Township"	229	101	330	106	224	330
+"SD"	2006	"Lincoln"	"Delapre Township"	489	279	768	245	529	774
+"SD"	2006	"Lincoln"	"Delaware Township"	70	36	106	40	65	105
+"SD"	2006	"Lincoln"	"Fairview Inc/Fairview Township"	70	41	111	33	75	108
+"SD"	2006	"Lincoln"	"Grant Township"	131	52	183	61	116	177
+"SD"	2006	"Lincoln"	"Harrisburg"	747	304	1051	387	663	1050
+"SD"	2006	"Lincoln"	"Highland/Canton Township"	258	96	354	135	228	363
+"SD"	2006	"Lincoln"	"Hudson/Eden Township"	158	43	201	90	110	200
+"SD"	2006	"Lincoln"	"LaValley Township"						
+"SD"	2006	"Lincoln"	"Lennox City"	661	212	873	312	562	874
+"SD"	2006	"Lincoln"	"Lincoln Township"	83	30	113	41	72	113
+"SD"	2006	"Lincoln"	"Norway Township"	99	33	132	56	78	134
+"SD"	2006	"Lincoln"	"Perry Township"	219	109	328	114	220	334
+"SD"	2006	"Lincoln"	"Sioux Falls 1-11"	664	388	1052	332	741	1073
+"SD"	2006	"Lincoln"	"Sioux Falls 1-12"	526	278	804	283	528	811
+"SD"	2006	"Lincoln"	"Sioux Falls 1-13"	759	318	1077	413	674	1087
+"SD"	2006	"Lincoln"	"Sioux Falls 1-14"	241	136	377	126	253	379
+"SD"	2006	"Lincoln"	"Sioux Falls 1-16"						
+"SD"	2006	"Lincoln"	"Sioux Falls 2-10"	1004	548	1552	526	1048	1574
+"SD"	2006	"Lincoln"	"Sioux Falls 2-11"	625	355	980	330	656	986
+"SD"	2006	"Lincoln"	"Sioux Falls 2-12"	356	175	531	198	337	535
+"SD"	2006	"Lincoln"	"Sioux Falls 2-13"	458	220	678	225	459	684
+"SD"	2006	"Lincoln"	"Sioux Falls 2-15"						
+"SD"	2006	"Lincoln"	"Sioux Falls 1(04)"						
+"SD"	2006	"Lincoln"	"Sioux Falls 1A(04)"						
+"SD"	2006	"Lincoln"	"Sioux Falls 2(04)"						
+"SD"	2006	"Lincoln"	"Sioux Falls 3(04)"						
+"SD"	2006	"Lincoln"	"Sioux Falls 4(04)"						
+"SD"	2006	"Lincoln"	"Springdale Township"	644	367	1011	316	706	1022
+"SD"	2006	"Lincoln"	"Tea City"	707	281	988	337	644	981
+"SD"	2006	"Lincoln"	"Worthing/Lynn Township"	366	123	489	161	322	483
+"SD"	2006	"Lyman"	"1 IONA"	47	27	74	23	53	76
+"SD"	2006	"Lyman"	"4 OACOMA"	252	78	330	104	235	339
+"SD"	2006	"Lyman"	"6 RELIANCE"	91	53	144	51	93	144
+"SD"	2006	"Lyman"	"7 LOWER BRULE"	207	32	239	166	65	231
+"SD"	2006	"Lyman"	"9 KENNEBEC"	163	70	233	65	176	241
+"SD"	2006	"Lyman"	"12 PRESHO"	266	95	361	101	267	368
+"SD"	2006	"Lyman"	"13 VIVIAN"						
+"SD"	2006	"Marshall"	"Britton Twps"	162	66	228	65	168	233
+"SD"	2006	"Marshall"	"Community Bldg"	156	29	185	71	118	189
+"SD"	2006	"Marshall"	"Community Bldg 3 & Miller"	210	52	262	92	168	260
+"SD"	2006	"Marshall"	"Eden Area"	219	42	261	108	145	253
+"SD"	2006	"Marshall"	"Fun After Fifty"	163	38	201	84	123	207
+"SD"	2006	"Marshall"	"Lake City Area"	147	60	207	75	106	181
+"SD"	2006	"Marshall"	"Langford Area"	106	50	156	50	87	137
+"SD"	2006	"Marshall"	"Pl Valley, White, Victor"	112	27	139	43	87	130
+"SD"	2006	"Marshall"	"Veblen Area"	161	43	204	84	121	205
+"SD"	2006	"McCook"	"Bridgewater Area-Rural"	288	215	503	104	390	494
+"SD"	2006	"McCook"	"Canistota Area-Rural"	378	171	549	180	375	555
+"SD"	2006	"McCook"	"Montrose Area-Rural"	412	129	541	211	330	541
+"SD"	2006	"McCook"	"Salem Area-Rural"	266	84	350	86	257	343
+"SD"	2006	"McCook"	"Salem City"	531	180	711	217	488	705
+"SD"	2006	"McCook"	"Spencer Area-Rural"	126	35	161	69	92	161
+"SD"	2006	"McPherson"	"101"	34	17	51	6	44	50
+"SD"	2006	"McPherson"	"central"	134	100	234	47	181	228
+"SD"	2006	"McPherson"	"northeast leola"	119	104	223	35	184	219
+"SD"	2006	"McPherson"	"northwest"	131	121	252	44	206	250
+"SD"	2006	"McPherson"	"southeast leola"	168	113	281	54	225	279
+"SD"	2006	"McPherson"	"southwest"	146	100	246	45	206	251
+"SD"	2006	"Meade"	"Alkali 6A"	101	36	137	42	93	135
+"SD"	2006	"Meade"	"Base 23"	65	102	167	27	136	163
+"SD"	2006	"Meade"	"Bear Butte 9"	75	53	128	33	95	128
+"SD"	2006	"Meade"	"Black Hawk 14"	326	152	478	199	279	478
+"SD"	2006	"Meade"	"Central Black Hawk 19"	304	173	477	170	302	472
+"SD"	2006	"Meade"	"Central Sturgis 3"	175	78	253	90	162	252
+"SD"	2006	"Meade"	"Chalk Butte 27"	67	50	117	36	90	126
+"SD"	2006	"Meade"	"East Piedmont 12"	287	155	442	151	290	441
+"SD"	2006	"Meade"	"East Sturgis 1"	170	105	275	89	183	272
+"SD"	2006	"Meade"	"Elk Vale 21"	126	61	187	68	118	186
+"SD"	2006	"Meade"	"Ellsworth 22"	40	54	94	18	75	93
+"SD"	2006	"Meade"	"Elm Springs 18"	50	34	84	28	43	71
+"SD"	2006	"Meade"	"Fairpoint 29"	22	10	32	13	20	33
+"SD"	2006	"Meade"	"Faith 31"	133	108	241	55	196	251
+"SD"	2006	"Meade"	"Harmony 8"	175	93	268	95	165	260
+"SD"	2006	"Meade"	"Hereford 20"	39	14	53	25	19	44
+"SD"	2006	"Meade"	"Marcus 41"	25	15	40	19	21	40
+"SD"	2006	"Meade"	"Northeast Sturgis 1A"	116	42	158	60	99	159
+"SD"	2006	"Meade"	"Northwest Sturgis 5"	323	128	451	172	277	449
+"SD"	2006	"Meade"	"Piedmont 11"	392	254	646	214	419	633
+"SD"	2006	"Meade"	"Pine 33"	30	45	75	17	54	71
+"SD"	2006	"Meade"	"Red Owl 30"	41	23	64	21	41	62
+"SD"	2006	"Meade"	"Rural Black Hawk 15"	596	286	882	313	585	898
+"SD"	2006	"Meade"	"Rural Sturgis 7"	154	80	234	66	172	238
+"SD"	2006	"Meade"	"South Sturgis 2A"	257	88	345	118	225	343
+"SD"	2006	"Meade"	"Southeast Piedmont 13"	527	383	910	285	602	887
+"SD"	2006	"Meade"	"Southeast Sturgis 2"	300	155	455	131	325	456
+"SD"	2006	"Meade"	"Southwest Sturgis 4A"	189	69	258	85	167	252
+"SD"	2006	"Meade"	"Sturgis 5A"	145	51	196	75	129	204
+"SD"	2006	"Meade"	"Sulphur 35"	16	28	44	6	39	45
+"SD"	2006	"Meade"	"Tilford 6"	411	210	621	229	388	617
+"SD"	2006	"Meade"	"Union 40"	20	10	30	8	22	30
+"SD"	2006	"Meade"	"Viewfield 17"	37	19	56	22	30	52
+"SD"	2006	"Meade"	"West Black Hawk 16"	212	128	340	120	215	335
+"SD"	2006	"Meade"	"West Elk Vale 24"	84	46	130	56	71	127
+"SD"	2006	"Meade"	"West Sturgis 4"	119	40	159	56	102	158
+"SD"	2006	"Meade"	"White Owl 25"	25	12	37	15	21	36
+"SD"	2006	"Mellette"	"Central"	131	76	207	73	122	195
+"SD"	2006	"Mellette"	"East"	111	52	163	44	119	163
+"SD"	2006	"Mellette"	"West"	89	62	151	6	96	102
+"SD"	2006	"Mellette"	"White River"	177	52	229	97	134	231
+"SD"	2006	"Miner"	"Beaver, Clinton, Miner"	60	33	93	39	51	90
+"SD"	2006	"Miner"	"Clearwater Howard Roswell Twps"	136	66	202	55	152	207
+"SD"	2006	"Miner"	"Gr Valley Carthage Redstone Twp"	106	24	130	42	89	131
+"SD"	2006	"Miner"	"Henden Adams Belleview Grafton"	142	50	192	69	124	193
+"SD"	2006	"Miner"	"Howard City Ward 1"	117	34	151	62	90	152
+"SD"	2006	"Miner"	"Howard City Ward 2"	122	36	158	45	113	158
+"SD"	2006	"Miner"	"Howard City Ward 3"	121	23	144	62	87	149
+"SD"	2006	"Miner"	"Vermillion, Canova, Rock Creek-"	135	36	171	64	106	170
+"SD"	2006	"Minnehaha"	"1-1"	462	192	654	286	372	658
+"SD"	2006	"Minnehaha"	"1-2"	427	178	605	271	343	614
+"SD"	2006	"Minnehaha"	"1-3"	642	395	1037	399	635	1034
+"SD"	2006	"Minnehaha"	"1-4 (Including: 1-5)"	886	371	1257	551	702	1253
+"SD"	2006	"Minnehaha"	"1-6"	886	350	1236	551	697	1248
+"SD"	2006	"Minnehaha"	"1-7"	896	352	1248	503	747	1250
+"SD"	2006	"Minnehaha"	"1-8"	635	221	856	341	513	854
+"SD"	2006	"Minnehaha"	"1-9"	881	320	1201	481	729	1210
+"SD"	2006	"Minnehaha"	"1-10"	958	417	1375	514	864	1378
+"SD"	2006	"Minnehaha"	"1-15(08)"	385	128	513	230	283	513
+"SD"	2006	"Minnehaha"	"1-17"						
+"SD"	2006	"Minnehaha"	"2-1"	895	373	1268	533	768	1301
+"SD"	2006	"Minnehaha"	"2-2"	988	488	1476	560	961	1521
+"SD"	2006	"Minnehaha"	"2-3"	898	370	1268	560	721	1281
+"SD"	2006	"Minnehaha"	"2-4"	661	226	887	417	463	880
+"SD"	2006	"Minnehaha"	"2-5(08)"	769	306	1075	460	630	1090
+"SD"	2006	"Minnehaha"	"2-6"	820	403	1223	459	771	1230
+"SD"	2006	"Minnehaha"	"2-7"	793	397	1190	452	769	1221
+"SD"	2006	"Minnehaha"	"2-8"	679	334	1013	353	669	1022
+"SD"	2006	"Minnehaha"	"2-9"	811	359	1170	471	713	1184
+"SD"	2006	"Minnehaha"	"2-14"	765	373	1138	387	761	1148
+"SD"	2006	"Minnehaha"	"3-1(08)"	751	260	1011	507	514	1021
+"SD"	2006	"Minnehaha"	"3-3(04)"						
+"SD"	2006	"Minnehaha"	"3-4(08)"	793	303	1096	534	561	1095
+"SD"	2006	"Minnehaha"	"3-5"	484	134	618	332	290	622
+"SD"	2006	"Minnehaha"	"3-6"	788	232	1020	537	476	1013
+"SD"	2006	"Minnehaha"	"3-7"	738	226	964	487	479	966
+"SD"	2006	"Minnehaha"	"3-8"	305	143	448	195	256	451
+"SD"	2006	"Minnehaha"	"3-9"	1134	529	1663	739	914	1653
+"SD"	2006	"Minnehaha"	"3-10"	516	211	727	249	482	731
+"SD"	2006	"Minnehaha"	"3-11"	901	371	1272	443	841	1284
+"SD"	2006	"Minnehaha"	"3-12"	1026	409	1435	583	843	1426
+"SD"	2006	"Minnehaha"	"3-13(08)"	832	376	1208	430	783	1213
+"SD"	2006	"Minnehaha"	"3-14"						
+"SD"	2006	"Minnehaha"	"3-15"						
+"SD"	2006	"Minnehaha"	"3-16"						
+"SD"	2006	"Minnehaha"	"3-17"						
+"SD"	2006	"Minnehaha"	"4-1 (Including: 5-15)"						
+"SD"	2006	"Minnehaha"	"4-1 (Including: 4-2)(08)"						
+"SD"	2006	"Minnehaha"	"4-1(06)"	372	100	472	259	208	467
+"SD"	2006	"Minnehaha"	"4-2(06)"	357	81	438	233	189	422
+"SD"	2006	"Minnehaha"	"4-3(08)"	381	121	502	256	246	502
+"SD"	2006	"Minnehaha"	"4-4"	615	153	768	405	354	759
+"SD"	2006	"Minnehaha"	"4-5"	497	115	612	353	254	607
+"SD"	2006	"Minnehaha"	"4-6"	334	56	390	222	162	384
+"SD"	2006	"Minnehaha"	"4-7 (Including: 4-8)"	992	342	1334	560	757	1317
+"SD"	2006	"Minnehaha"	"4-9"	738	257	995	474	527	1001
+"SD"	2006	"Minnehaha"	"4-10"	684	294	978	392	597	989
+"SD"	2006	"Minnehaha"	"4-11"	867	353	1220	471	766	1237
+"SD"	2006	"Minnehaha"	"4-12"						
+"SD"	2006	"Minnehaha"	"4-13"						
+"SD"	2006	"Minnehaha"	"5-1 (Including: 5-2)"	801	250	1051	588	460	1048
+"SD"	2006	"Minnehaha"	"5-1(04)"						
+"SD"	2006	"Minnehaha"	"5-2(04)"						
+"SD"	2006	"Minnehaha"	"5-3"	398	162	560	260	295	555
+"SD"	2006	"Minnehaha"	"5-4"	664	212	876	467	410	877
+"SD"	2006	"Minnehaha"	"5-5"	609	178	787	406	382	788
+"SD"	2006	"Minnehaha"	"5-6"	814	315	1129	518	628	1146
+"SD"	2006	"Minnehaha"	"5-7"	497	199	696	346	352	698
+"SD"	2006	"Minnehaha"	"5-8"	681	280	961	505	462	967
+"SD"	2006	"Minnehaha"	"5-9"	468	165	633	335	289	624
+"SD"	2006	"Minnehaha"	"5-10"	567	176	743	350	409	759
+"SD"	2006	"Minnehaha"	"5-11"	502	158	660	299	364	663
+"SD"	2006	"Minnehaha"	"5-12"	572	191	763	409	364	773
+"SD"	2006	"Minnehaha"	"5-13"	496	220	716	341	387	728
+"SD"	2006	"Minnehaha"	"5-14"						
+"SD"	2006	"Minnehaha"	"5-16"						
+"SD"	2006	"Minnehaha"	"VP-1"	457	175	632	273	358	631
+"SD"	2006	"Minnehaha"	"VP-2"	1088	607	1695	582	1131	1713
+"SD"	2006	"Minnehaha"	"VP-3"	991	458	1449	527	932	1459
+"SD"	2006	"Minnehaha"	"VP-4"	784	301	1085	464	607	1071
+"SD"	2006	"Minnehaha"	"VP-5"	880	290	1170	420	755	1175
+"SD"	2006	"Minnehaha"	"VP-6"	383	168	551	209	348	557
+"SD"	2006	"Minnehaha"	"VP-7"	1027	298	1325	517	797	1314
+"SD"	2006	"Minnehaha"	"VP-8"	478	159	637	196	442	638
+"SD"	2006	"Minnehaha"	"VP-9"	777	256	1033	409	24	433
+"SD"	2006	"Minnehaha"	"VP-10"	799	222	1021	447	576	1023
+"SD"	2006	"Minnehaha"	"VP-11"	660	238	898	299	624	923
+"SD"	2006	"Minnehaha"	"VP-12"	104	37	141	36	107	143
+"SD"	2006	"Minnehaha"	"VP-13"	614	213	827	290	532	822
+"SD"	2006	"Minnehaha"	"VP-15"	873	322	1195	465	742	1207
+"SD"	2006	"Minnehaha"	"VP-16"	667	218	885	343	541	884
+"SD"	2006	"Minnehaha"	"VP-17"	394	204	598	235	361	596
+"SD"	2006	"Minnehaha"	"VP-21"	656	220	876	270	619	889
+"SD"	2006	"Moody"	"1 - Extension"						
+"SD"	2006	"Moody"	"2 - Ct House"						
+"SD"	2006	"Moody"	"3 - Trent"						
+"SD"	2006	"Moody"	"4A - Egan"						
+"SD"	2006	"Moody"	"4B - Extension"						
+"SD"	2006	"Moody"	"5 - Colman"						
+"SD"	2006	"Pennington"	"1-1"	909	670	1579	575	1022	1597
+"SD"	2006	"Pennington"	"1-2"	937	543	1480	25	911	936
+"SD"	2006	"Pennington"	"1-3"	1394	827	2221	791	1434	2225
+"SD"	2006	"Pennington"	"1-4"	253	100	353	144	212	356
+"SD"	2006	"Pennington"	"2-1"	628	276	904	456	452	908
+"SD"	2006	"Pennington"	"2-2"	223	150	373	110	262	372
+"SD"	2006	"Pennington"	"2-2(Including:2-5)(08)"						
+"SD"	2006	"Pennington"	"2-3"	579	300	879	394	469	863
+"SD"	2006	"Pennington"	"2-4"	843	404	1247	512	704	1216
+"SD"	2006	"Pennington"	"2-5"	32	12	44	17	30	47
+"SD"	2006	"Pennington"	"3-1"	647	329	976	390	586	976
+"SD"	2006	"Pennington"	"3-2"	161	98	259	86	180	266
+"SD"	2006	"Pennington"	"3-3"	790	438	1228	438	811	1249
+"SD"	2006	"Pennington"	"3-4"	819	530	1349	554	817	1371
+"SD"	2006	"Pennington"	"3-4(Including:3-6)(08)"						
+"SD"	2006	"Pennington"	"3-5"	1119	604	1723	649	1073	1722
+"SD"	2006	"Pennington"	"3-6"	281	195	476	182	310	492
+"SD"	2006	"Pennington"	"3-7"	512	236	748	376	381	757
+"SD"	2006	"Pennington"	"4-1"	361	168	529	232	289	521
+"SD"	2006	"Pennington"	"4-2"	1197	579	1776	788	972	1760
+"SD"	2006	"Pennington"	"4-3"	613	306	919	387	517	904
+"SD"	2006	"Pennington"	"4-3(Including:4-4)(08)"						
+"SD"	2006	"Pennington"	"4-4"	24	14	38	15	22	37
+"SD"	2006	"Pennington"	"5-1"	971	527	1498	621	887	1508
+"SD"	2006	"Pennington"	"5-2"	334	187	521	234	297	531
+"SD"	2006	"Pennington"	"5-3"	1059	644	1703	609	1100	1709
+"SD"	2006	"Pennington"	"5-4"	762	382	1144	586	577	1163
+"SD"	2006	"Pennington"	"5-5"	428	248	676	254	416	670
+"SD"	2006	"Pennington"	"BB5(06)"	641	506	1147	442	723	1165
+"SD"	2006	"Pennington"	"BE8(04)"						
+"SD"	2006	"Pennington"	"BE30"	14	12	26	10	15	25
+"SD"	2006	"Pennington"	"BE33"	552	255	807	296	493	789
+"SD"	2006	"Pennington"	"BE35"	93	30	123	50	75	125
+"SD"	2006	"Pennington"	"CA19"	155	111	266	96	180	276
+"SD"	2006	"Pennington"	"CL6"	237	162	399	166	239	405
+"SD"	2006	"Pennington"	"CR14"	34	28	62	10	49	59
+"SD"	2006	"Pennington"	"DG7"	177	139	316	106	208	314
+"SD"	2006	"Pennington"	"DT24"	380	284	664	247	417	664
+"SD"	2006	"Pennington"	"HC1"	345	261	606	221	383	604
+"SD"	2006	"Pennington"	"HR9"	251	123	374	147	222	369
+"SD"	2006	"Pennington"	"JS5"						
+"SD"	2006	"Pennington"	"K3"	264	164	428	169	254	423
+"SD"	2006	"Pennington"	"NH18"	337	152	489	214	254	468
+"SD"	2006	"Pennington"	"NU10"	308	134	442	168	262	430
+"SD"	2006	"Pennington"	"Q17"	33	44	77	14	65	79
+"SD"	2006	"Pennington"	"R13"	23	27	50	20	29	49
+"SD"	2006	"Pennington"	"RK4"	582	492	1074	338	728	1066
+"SD"	2006	"Pennington"	"RVE1"						
+"SD"	2006	"Pennington"	"RVFD"						
+"SD"	2006	"Pennington"	"RVF2(08)"						
+"SD"	2006	"Pennington"	"RVS1"						
+"SD"	2006	"Pennington"	"RVV1"						
+"SD"	2006	"Pennington"	"SC9(06)"	111	86	197	70	131	201
+"SD"	2006	"Pennington"	"SC11"	33	25	58	25	32	57
+"SD"	2006	"Pennington"	"SIL2(04)"						
+"SD"	2006	"Pennington"	"SL23(06)"	887	520	1407	560	852	1412
+"SD"	2006	"Pennington"	"VC37(06)"	185	104	289	131	156	287
+"SD"	2006	"Pennington"	"VD33(06)"	400	252	652	246	405	651
+"SD"	2006	"Pennington"	"VN34(06)"	613	300	913	332	571	903
+"SD"	2006	"Pennington"	"VS36(06)"	485	263	748	266	461	727
+"SD"	2006	"Pennington"	"VW35(06)"	644	326	970	360	594	954
+"SD"	2006	"Pennington"	"WA12"	42	25	67	35	31	66
+"SD"	2006	"Pennington"	"WL15"	387	181	568	163	406	569
+"SD"	2006	"Pennington"	"WP23"						
+"SD"	2006	"Perkins"	"1"	165	85	250	79	165	244
+"SD"	2006	"Perkins"	"2"	62	48	110	34	76	110
+"SD"	2006	"Perkins"	"3"	169	122	291	70	219	289
+"SD"	2006	"Perkins"	"4"	40	20	60	17	36	53
+"SD"	2006	"Perkins"	"5"	76	45	121	11	78	89
+"SD"	2006	"Perkins"	"6"	67	29	96	37	57	94
+"SD"	2006	"Perkins"	"7"	58	54	112	24	74	98
+"SD"	2006	"Perkins"	"8"	26	18	44	12	29	41
+"SD"	2006	"Perkins"	"9"	35	20	55	16	38	54
+"SD"	2006	"Perkins"	"12"	171	126	297	78	209	287
+"SD"	2006	"Potter"	"23"	184	105	289	76	212	288
+"SD"	2006	"Potter"	"25"	96	47	143	31	109	140
+"SD"	2006	"Potter"	"26"	164	65	229	75	157	232
+"SD"	2006	"Potter"	"27"	217	131	348	104	244	348
+"SD"	2006	"Potter"	"31(04)"						
+"SD"	2006	"Potter"	"35"	208	140	348	72	278	350
+"SD"	2006	"Potter"	"36"	35	36	71	10	63	73
+"SD"	2006	"Potter"	"38(04)"						
+"SD"	2006	"Roberts"	"1"	144	24	168	56	117	173
+"SD"	2006	"Roberts"	"2"	266	116	382	134	248	382
+"SD"	2006	"Roberts"	"3"	159	60	219	72	144	216
+"SD"	2006	"Roberts"	"4"	74	15	89	41	48	89
+"SD"	2006	"Roberts"	"5"	332	58	390	210	188	398
+"SD"	2006	"Roberts"	"6"	189	85	274	101	173	274
+"SD"	2006	"Roberts"	"7"	168	82	250	85	161	246
+"SD"	2006	"Roberts"	"8"	76	29	105	51	57	108
+"SD"	2006	"Roberts"	"9"	356	115	471	196	277	473
+"SD"	2006	"Roberts"	"10"	219	33	252	152	101	253
+"SD"	2006	"Roberts"	"11"	576	148	724	308	418	726
+"SD"	2006	"Roberts"	"12"	224	69	293	131	158	289
+"SD"	2006	"Roberts"	"13"	305	87	392	181	207	388
+"SD"	2006	"Roberts"	"14"	126	42	168	67	99	166
+"SD"	2006	"Sanborn"	"1"	88	38	126	30	94	124
+"SD"	2006	"Sanborn"	"2"	115	36	151	57	94	151
+"SD"	2006	"Sanborn"	"3"	195	67	262	76	185	261
+"SD"	2006	"Sanborn"	"4"	67	15	82	29	51	80
+"SD"	2006	"Sanborn"	"5"	94	23	117	54	59	113
+"SD"	2006	"Sanborn"	"6(08)"	168	46	214	91	123	214
+"SD"	2006	"Sanborn"	"7(08)"	188	74	262	101	168	269
+"SD"	2006	"Shannon"	"Batesland"	83	23	106	61	43	104
+"SD"	2006	"Shannon"	"Cuny Table"	39	6	45	31	12	43
+"SD"	2006	"Shannon"	"Kyle"	385	40	425	285	105	390
+"SD"	2006	"Shannon"	"Manderson"	228	47	275	168	78	246
+"SD"	2006	"Shannon"	"Oglala"	224	61	285	182	84	266
+"SD"	2006	"Shannon"	"Pine Ridge 1"	294	50	344	234	79	313
+"SD"	2006	"Shannon"	"Pine Ridge 2"	251	47	298	205	76	281
+"SD"	2006	"Shannon"	"Pine Ridge 3"	243	46	289	204	70	274
+"SD"	2006	"Shannon"	"Porcupine"	159	20	179	124	45	169
+"SD"	2006	"Shannon"	"Sharps Corner"	148	19	167	103	52	155
+"SD"	2006	"Spink"	"1"	280	186	466	106	363	469
+"SD"	2006	"Spink"	"3"	230	97	327	93	231	324
+"SD"	2006	"Spink"	"4"	259	84	343	96	244	340
+"SD"	2006	"Spink"	"5"	180	64	244	75	187	262
+"SD"	2006	"Spink"	"6"	120	20	140	52	87	139
+"SD"	2006	"Spink"	"7"	341	133	474	172	302	474
+"SD"	2006	"Spink"	"8"	127	33	160	56	105	161
+"SD"	2006	"Spink"	"9"	394	165	559	165	381	546
+"SD"	2006	"Spink"	"10"	420	142	562	183	375	558
+"SD"	2006	"Stanley"	"1 Orton"	1	23	24	6	8	14
+"SD"	2006	"Stanley"	"2 Ft Pierre"	3	61	64	15	23	38
+"SD"	2006	"Stanley"	"3 Sansarc"	5	148	153	71	74	145
+"SD"	2006	"Stanley"	"4 Consolidated"	2	190	192	51	88	139
+"SD"	2006	"Stanley"	"5 Oahe"	4	150	154	68	84	152
+"SD"	2006	"Stanley"	"6 Ft Pierre"	6	273	279	117	123	240
+"SD"	2006	"Stanley"	"9 Ft Pierre"	9	182	191	72	97	169
+"SD"	2006	"Stanley"	"14 Hayes"	14	37	51	14	14	28
+"SD"	2006	"Sully"	"1"	58	51	109	27	81	108
+"SD"	2006	"Sully"	"2 (Including: 5)"						
+"SD"	2006	"Sully"	"2(06)"	116	81	197	50	142	192
+"SD"	2006	"Sully"	"3"	98	77	175	36	140	176
+"SD"	2006	"Sully"	"3 (Including: 4)(08)"						
+"SD"	2006	"Sully"	"4"	121	46	167	38	132	170
+"SD"	2006	"Sully"	"5(06)"	110	67	177	47	125	172
+"SD"	2006	"Sully"	"6"						
+"SD"	2006	"Todd"	"Absentee(04)"						
+"SD"	2006	"Todd"	"Bordeaux"	342	113	455	261	180	441
+"SD"	2006	"Todd"	"Jeanette"	54	69	123	12	109	121
+"SD"	2006	"Todd"	"Lakeview"	1382	451	1833	980	764	1744
+"SD"	2006	"Todd"	"Mission-N. Antelope"	35	30	65	20	41	61
+"SD"	2006	"Todd"	"O'Kreek"	31	13	44	22	17	39
+"SD"	2006	"Todd"	"Parmelee"	166	48	214	115	78	193
+"SD"	2006	"Todd"	"Rosebud"	296	57	353	238	102	340
+"SD"	2006	"Todd"	"South Antelope"	168	63	231	114	112	226
+"SD"	2006	"Todd"	"St. Francis"	203	29	232	130	78	208
+"SD"	2006	"Tripp"	"Clearfield"	88	58	146	41	107	148
+"SD"	2006	"Tripp"	"Colome"	240	153	393	115	284	399
+"SD"	2006	"Tripp"	"Hamill"	51	39	90	20	73	93
+"SD"	2006	"Tripp"	"Ideal"	45	39	84	18	72	90
+"SD"	2006	"Tripp"	"Lake"	75	80	155	31	124	155
+"SD"	2006	"Tripp"	"Lamro"	189	102	291	68	233	301
+"SD"	2006	"Tripp"	"Sully"	81	28	109	28	81	109
+"SD"	2006	"Tripp"	"Winner City E 2nd"	185	88	273	88	190	278
+"SD"	2006	"Tripp"	"Winner City E 3rd"	219	103	322	99	217	316
+"SD"	2006	"Tripp"	"Winner City SE 1st"	127	51	178	48	132	180
+"SD"	2006	"Tripp"	"Winner City W 2nd"	255	101	356	101	256	357
+"SD"	2006	"Tripp"	"Winner City W 3rd"	109	37	146	51	90	141
+"SD"	2006	"Tripp"	"Witten"	85	39	124	31	89	120
+"SD"	2006	"Turner"	"Brothersfield/Home/Parker"	610	222	832	264	566	830
+"SD"	2006	"Turner"	"Centerville/Turner"	478	115	593	286	312	598
+"SD"	2006	"Turner"	"Chancellor/Germantown"	227	79	306	91	224	315
+"SD"	2006	"Turner"	"Childstown/Salem/Spring Valley"	187	86	273	89	196	285
+"SD"	2006	"Turner"	"Dolton/Monroe/Marion/Rosefield"	504	347	851	246	600	846
+"SD"	2006	"Turner"	"Irene/Daneville"	153	41	194	78	111	189
+"SD"	2006	"Turner"	"Norway/Hurley/Davis/Middleton"	379	124	503	223	278	501
+"SD"	2006	"Turner"	"Viborg/Swan Lake"	345	123	468	196	272	468
+"SD"	2006	"Union"	"1"	175	44	219	76	137	213
+"SD"	2006	"Union"	"2"	312	95	407	147	260	407
+"SD"	2006	"Union"	"3"	144	84	228	70	162	232
+"SD"	2006	"Union"	"4"	110	43	153	42	108	150
+"SD"	2006	"Union"	"5"	273	74	347	229	201	430
+"SD"	2006	"Union"	"6"	412	140	552	225	332	557
+"SD"	2006	"Union"	"7"	248	98	346	139	204	343
+"SD"	2006	"Union"	"8"	587	213	800	302	496	798
+"SD"	2006	"Union"	"9"	210	134	344	126	216	342
+"SD"	2006	"Union"	"10"	204	75	279	108	177	285
+"SD"	2006	"Union"	"11"	405	151	556	225	317	542
+"SD"	2006	"Union"	"12"	239	168	407	123	282	405
+"SD"	2006	"Union"	"13"	380	548	928	186	741	927
+"SD"	2006	"Walworth"	"2"	48	46	94	10	81	91
+"SD"	2006	"Walworth"	"3"	43	46	89	14	93	107
+"SD"	2006	"Walworth"	"4"	60	39	99	16	79	95
+"SD"	2006	"Walworth"	"5"	70	49	119	21	101	122
+"SD"	2006	"Walworth"	"9"	37	34	71	15	62	77
+"SD"	2006	"Walworth"	"10"	75	28	103	35	69	104
+"SD"	2006	"Walworth"	"11"	111	74	185	35	139	174
+"SD"	2006	"Walworth"	"12"	140	75	215	34	176	210
+"SD"	2006	"Walworth"	"13"	104	50	154	27	122	149
+"SD"	2006	"Walworth"	"15"	150	79	229	56	164	220
+"SD"	2006	"Walworth"	"16"	148	75	223	55	165	220
+"SD"	2006	"Walworth"	"17"	73	29	102	28	70	98
+"SD"	2006	"Walworth"	"18"	102	57	159	51	115	166
+"SD"	2006	"Walworth"	"19"	173	77	250	91	156	247
+"SD"	2006	"Walworth"	"20"	188	110	298	79	213	292
+"SD"	2006	"Yankton"	"1"	632	155	787	315	484	799
+"SD"	2006	"Yankton"	"2 (Including: 28)"	942	282	1224	440	789	1229
+"SD"	2006	"Yankton"	"3"	754	256	1010	370	657	1027
+"SD"	2006	"Yankton"	"4"	923	278	1201	436	760	1196
+"SD"	2006	"Yankton"	"5"	1138	382	1520	489	1039	1528
+"SD"	2006	"Yankton"	"9 (Including: 29)"	234	51	285	122	162	284
+"SD"	2006	"Yankton"	"10 (Including: 22)"	151	46	197	77	124	201
+"SD"	2006	"Yankton"	"11(08)"						
+"SD"	2006	"Yankton"	"Mis Hill 11&23"	230	54	284	101	185	286
+"SD"	2006	"Yankton"	"Utica/Zisk 12,24&25"	222	54	276	101	184	285
+"SD"	2006	"Yankton"	"Lstrv/Zis 13,17/18"	149	54	203	64	139	203
+"SD"	2006	"Yankton"	"14"	281	76	357	154	209	363
+"SD"	2006	"Yankton"	"19 (Including: 16)"	108	32	140	39	106	145
+"SD"	2006	"Yankton"	"23(08)"						
+"SD"	2006	"Yankton"	"26"	938	383	1321	406	927	1333
+"SD"	2006	"Yankton"	"Mayf/Wal15&20(04)"						
+"SD"	2006	"Yankton"	"Lake(04)"						
+"SD"	2006	"Ziebach"	"Bridger"	43	7	50	30	16	46
+"SD"	2006	"Ziebach"	"Cherry Creek"	75	5	80	43	30	73
+"SD"	2006	"Ziebach"	"Davis"	8	19	27	64	69	133
+"SD"	2006	"Ziebach"	"Glad Valley"	55	15	70	26	46	72
+"SD"	2006	"Ziebach"	"North Dupree"	52	12	64	24	39	63
+"SD"	2006	"Ziebach"	"Red Scaffold"	52	11	63	46	20	66
+"SD"	2006	"Ziebach"	"Redelm"	113	35	148	65	80	145
+"SD"	2006	"Ziebach"	"South Dupree"	98	33	131	49	79	128

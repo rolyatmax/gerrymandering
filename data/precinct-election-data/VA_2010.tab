@@ -1,0 +1,2376 @@
+state	year	county	cd	precinct	g2010_USH_dv	g2010_USH_rv	g2010_USH_tv
+"VA"	2010	"Accomack County"	2	"101 - CHINCOTEAGUE"	366	834	1229
+"VA"	2010	"Accomack County"	2	"201 - ATLANTIC"	105	266	382
+"VA"	2010	"Accomack County"	2	"202 - GREENBACKVILLE"	121	279	408
+"VA"	2010	"Accomack County"	2	"203 - HALLWOOD"	52	164	219
+"VA"	2010	"Accomack County"	2	"204 - SAXIS"	20	85	109
+"VA"	2010	"Accomack County"	2	"205 - TANGIER"	33	163	205
+"VA"	2010	"Accomack County"	2	"301 - NEW CHURCH"	193	154	359
+"VA"	2010	"Accomack County"	2	"302 - OAK HALL"	215	219	442
+"VA"	2010	"Accomack County"	2	"401 - BLOXOM"	89	217	314
+"VA"	2010	"Accomack County"	2	"402 - PARKSLEY"	201	364	575
+"VA"	2010	"Accomack County"	2	"501 - MAPPSVILLE"	195	189	395
+"VA"	2010	"Accomack County"	2	"502 - RUE"	240	113	356
+"VA"	2010	"Accomack County"	2	"601 - ACCOMAC"	400	456	872
+"VA"	2010	"Accomack County"	2	"701 - ONANCOCK"	404	549	977
+"VA"	2010	"Accomack County"	2	"702 - ONLEY"	110	180	297
+"VA"	2010	"Accomack County"	2	"801 - BOBTOWN"	86	196	288
+"VA"	2010	"Accomack County"	2	"802 - KELLER"	91	86	185
+"VA"	2010	"Accomack County"	2	"803 - MELFA"	229	215	450
+"VA"	2010	"Accomack County"	2	"804 - QUINBY"	46	104	156
+"VA"	2010	"Accomack County"	2	"805 - WACHAPREAGUE"	86	130	225
+"VA"	2010	"Accomack County"	2	"901 - PAINTER"	604	464	1088
+"VA"	2010	"Albemarle County"	5	"101 - WOODBROOK"	907	745	1670
+"VA"	2010	"Albemarle County"	5	"103 - BRANCHLANDS"	403	201	609
+"VA"	2010	"Albemarle County"	5	"104 - AGNOR-HURT"	868	366	1257
+"VA"	2010	"Albemarle County"	5	"105 - DUNLORA"	776	475	1267
+"VA"	2010	"Albemarle County"	5	"106 - NORTHSIDE"	613	644	1281
+"VA"	2010	"Albemarle County"	5	"201 - JACK JOUETT"	715	540	1264
+"VA"	2010	"Albemarle County"	5	"202 - UNIVERSITY HALL"	527	182	711
+"VA"	2010	"Albemarle County"	5	"203 - GEORGETOWN"	911	322	1251
+"VA"	2010	"Albemarle County"	5	"204 - BELFIELD"	387	358	759
+"VA"	2010	"Albemarle County"	5	"301 - IVY"	1438	969	2431
+"VA"	2010	"Albemarle County"	5	"302 - RED HILL"	961	641	1620
+"VA"	2010	"Albemarle County"	5	"304 - EAST IVY"	543	369	915
+"VA"	2010	"Albemarle County"	5	"305 - COUNTRY GREEN"	712	474	1193
+"VA"	2010	"Albemarle County"	5	"401 - SCOTTSVILLE"	415	435	858
+"VA"	2010	"Albemarle County"	5	"402 - MONTICELLO"	343	396	751
+"VA"	2010	"Albemarle County"	5	"403 - PORTERS"	554	250	819
+"VA"	2010	"Albemarle County"	5	"405 - CALE"	1562	658	2250
+"VA"	2010	"Albemarle County"	5	"406 - STONE ROBINSON"	765	1002	1783
+"VA"	2010	"Albemarle County"	5	"501 - KESWICK"	431	354	792
+"VA"	2010	"Albemarle County"	5	"502 - STONY POINT"	417	449	887
+"VA"	2010	"Albemarle County"	5	"503 - HOLLYMEAD"	1436	1308	2785
+"VA"	2010	"Albemarle County"	5	"504 - FREE BRIDGE"	1149	773	1940
+"VA"	2010	"Albemarle County"	5	"505 - BURNLEY"	470	371	850
+"VA"	2010	"Albemarle County"	5	"601 - CROZET"	1227	910	2176
+"VA"	2010	"Albemarle County"	5	"602 - FREE UNION"	446	382	842
+"VA"	2010	"Albemarle County"	5	"603 - EARLYSVILLE"	918	962	1904
+"VA"	2010	"Albemarle County"	5	"604 - BROWNSVILLE"	1118	859	1999
+"VA"	2010	"Albemarle County"	5	"605 - YELLOW MOUNTAIN"	219	176	405
+"VA"	2010	"Alexandria City"	8	"101 - LADREY SENIOR BUILDING"	563	465	1054
+"VA"	2010	"Alexandria City"	8	"102 - CITY HALL"	615	605	1239
+"VA"	2010	"Alexandria City"	8	"103 - LYLES CROUCH SCHOOL"	638	541	1200
+"VA"	2010	"Alexandria City"	8	"104 - DURANT CENTER"	1041	542	1610
+"VA"	2010	"Alexandria City"	8	"105 - LEE CENTER"	1156	712	1898
+"VA"	2010	"Alexandria City"	8	"106 - CORA KELLY CENTER"	1432	456	1919
+"VA"	2010	"Alexandria City"	8	"107 - MT VERNON RECREATION CENTER"	1220	563	1821
+"VA"	2010	"Alexandria City"	8	"108 - GEORGE WASHINGTON MIDDLE SCH"	1021	359	1401
+"VA"	2010	"Alexandria City"	8	"109 - FIRE DEPARTMENT HEADQUARTERS"	894	603	1517
+"VA"	2010	"Alexandria City"	8	"201 - MAURY SCHOOL"	955	517	1502
+"VA"	2010	"Alexandria City"	8	"202 - GEORGE MASON SCHOOL"	887	670	1573
+"VA"	2010	"Alexandria City"	8	"203 - AGUDAS ACHIM SYNAGOGUE"	902	429	1361
+"VA"	2010	"Alexandria City"	8	"204 - BLESSED SACRAMENT CHURCH"	768	614	1405
+"VA"	2010	"Alexandria City"	8	"205 - DOUGLAS MACARTHUR SCHOOL"	976	708	1705
+"VA"	2010	"Alexandria City"	8	"206 - CHINQUAPIN PARK RECREATION CTR"	780	430	1226
+"VA"	2010	"Alexandria City"	8	"207 - TEMPLE BETH EL SYNAGOGUE"	973	649	1643
+"VA"	2010	"Alexandria City"	8	"208 - NOVA ARTS CENTER"	763	445	1225
+"VA"	2010	"Alexandria City"	8	"209 - JAMES K POLK SCHOOL"	1074	455	1546
+"VA"	2010	"Alexandria City"	8	"210 - ST JAMES CHURCH"	479	281	769
+"VA"	2010	"Alexandria City"	8	"302 - PATRICK HENRY REC CENTER"	695	284	992
+"VA"	2010	"Alexandria City"	8	"303 - CHARLES E BEATLEY LIBRARY"	929	323	1271
+"VA"	2010	"Alexandria City"	8	"304 - SAMUEL TUCKER SCHOOL"	1040	371	1423
+"VA"	2010	"Alexandria City"	8	"305 - JOHN ADAMS SCHOOL"	924	271	1210
+"VA"	2010	"Alexandria City"	8	"306 - WILLIAM RAMSAY SCHOOL"	857	296	1176
+"VA"	2010	"Alexandria City"	8	"307 - SOUTH PORT"	834	394	1244
+"VA"	2010	"Alexandria City"	8	"308 - CAMERON STATION COMMUNITY CTR"	847	737	1603
+"VA"	2010	"Alleghany County"	6	"201 - HUMPBACK BRIDGE"		201	237
+"VA"	2010	"Alleghany County"	6	"202 - DOLLY ANN"		306	374
+"VA"	2010	"Alleghany County"	6	"301 - CALLAGHAN"		176	216
+"VA"	2010	"Alleghany County"	6	"302 - GRIFFITH"		404	471
+"VA"	2010	"Alleghany County"	9	"101 - ARRITT"	171	236	420
+"VA"	2010	"Alleghany County"	9	"103 - DAMERON"	56	130	194
+"VA"	2010	"Alleghany County"	9	"401 - LOW MOOR"	146	208	369
+"VA"	2010	"Alleghany County"	9	"402 - JACKSON HEIGHTS"	124	198	327
+"VA"	2010	"Alleghany County"	9	"501 - IRON GATE"	92	99	195
+"VA"	2010	"Alleghany County"	9	"502 - PETERS SWITCH"	193	271	482
+"VA"	2010	"Alleghany County"	9	"601 - DISTRICT 1"	346	286	648
+"VA"	2010	"Alleghany County"	9	"701 - DISTRICT 2"	264	183	461
+"VA"	2010	"Amelia County"	4	"101 - NUMBER ONE"	197	457	654
+"VA"	2010	"Amelia County"	4	"201 - NUMBER TWO"	221	555	776
+"VA"	2010	"Amelia County"	4	"301 - NUMBER THREE"	148	558	707
+"VA"	2010	"Amelia County"	4	"401 - NUMBER FOUR"	206	643	852
+"VA"	2010	"Amelia County"	4	"501 - NUMBER FIVE"	330	521	852
+"VA"	2010	"Amherst County"	6	"101 - WRIGHT SHOP"		332	475
+"VA"	2010	"Amherst County"	6	"102 - NEW GLASGOW"		480	605
+"VA"	2010	"Amherst County"	6	"103 - COOLWELL"		252	294
+"VA"	2010	"Amherst County"	6	"201 - COURT HOUSE"		940	1200
+"VA"	2010	"Amherst County"	6	"202 - TEMPERANCE"		408	485
+"VA"	2010	"Amherst County"	6	"301 - MONROE"		392	477
+"VA"	2010	"Amherst County"	6	"302 - ELON"		1038	1214
+"VA"	2010	"Amherst County"	6	"303 - PLEASANT VIEW"		246	297
+"VA"	2010	"Amherst County"	6	"401 - AMELON"		1028	1237
+"VA"	2010	"Amherst County"	6	"402 - LONCO"		217	259
+"VA"	2010	"Amherst County"	6	"501 - MADISON"		967	1193
+"VA"	2010	"Appomattox County"	5	"101 - VERA"	101	276	388
+"VA"	2010	"Appomattox County"	5	"102 - PAMPLIN"	271	457	752
+"VA"	2010	"Appomattox County"	5	"201 - CHAP"	169	220	400
+"VA"	2010	"Appomattox County"	5	"202 - SPOUT SPRING"	192	511	716
+"VA"	2010	"Appomattox County"	5	"301 - 460"	213	478	705
+"VA"	2010	"Appomattox County"	5	"302 - STONEWALL"	216	371	602
+"VA"	2010	"Appomattox County"	5	"401 - COURTHOUSE"	302	595	918
+"VA"	2010	"Appomattox County"	5	"501 - OAKVILLE"	267	514	799
+"VA"	2010	"Appomattox County"	5	"502 - AGEE"	139	156	307
+"VA"	2010	"Arlington County"	8	"001 - ARLINGTON"	594	218	833
+"VA"	2010	"Arlington County"	8	"002 - ASHTON HEIGHTS"	884	385	1316
+"VA"	2010	"Arlington County"	8	"003 - AURORA HILLS"	545	414	981
+"VA"	2010	"Arlington County"	8	"004 - BALLSTON"	590	320	938
+"VA"	2010	"Arlington County"	8	"005 - BARCROFT"	708	322	1047
+"VA"	2010	"Arlington County"	8	"006 - CRYSTAL CITY"	452	384	855
+"VA"	2010	"Arlington County"	8	"007 - CHERRYDALE"	861	472	1363
+"VA"	2010	"Arlington County"	8	"008 - HUME"	780	547	1358
+"VA"	2010	"Arlington County"	8	"009 - COLUMBIA"	908	325	1269
+"VA"	2010	"Arlington County"	8	"010 - WILSON"	792	407	1229
+"VA"	2010	"Arlington County"	8	"011 - EAST FALLS CHURCH"	613	387	1025
+"VA"	2010	"Arlington County"	8	"012 - FAIRLINGTON"	819	514	1361
+"VA"	2010	"Arlington County"	8	"013 - GLEN CARLYN"	526	235	785
+"VA"	2010	"Arlington County"	8	"014 - CLARENDON"	556	336	907
+"VA"	2010	"Arlington County"	8	"015 - LYON PARK"	724	331	1074
+"VA"	2010	"Arlington County"	8	"016 - LYON VILLAGE"	799	435	1273
+"VA"	2010	"Arlington County"	8	"017 - OVERLEE KNOLLS"	875	492	1413
+"VA"	2010	"Arlington County"	8	"018 - PARK LANE"	910	395	1330
+"VA"	2010	"Arlington County"	8	"019 - ROSSLYN"	770	402	1193
+"VA"	2010	"Arlington County"	8	"020 - THRIFTON"	805	649	1474
+"VA"	2010	"Arlington County"	8	"021 - VIRGINIA HIGHLANDS"	755	519	1307
+"VA"	2010	"Arlington County"	8	"022 - ABINGDON"	877	514	1418
+"VA"	2010	"Arlington County"	8	"023 - WESTOVER"	605	292	916
+"VA"	2010	"Arlington County"	8	"024 - WOODLAWN"	1094	427	1563
+"VA"	2010	"Arlington County"	8	"025 - ARLINGTON FOREST"	681	346	1064
+"VA"	2010	"Arlington County"	8	"026 - FILLMORE"	894	350	1287
+"VA"	2010	"Arlington County"	8	"027 - JEFFERSON"	903	418	1359
+"VA"	2010	"Arlington County"	8	"028 - CLAREMONT"	861	383	1268
+"VA"	2010	"Arlington County"	8	"029 - DOMINION HILLS"	925	439	1394
+"VA"	2010	"Arlington County"	8	"030 - GLEBE"	817	169	1003
+"VA"	2010	"Arlington County"	8	"031 - LEXINGTON"	923	478	1432
+"VA"	2010	"Arlington County"	8	"032 - OAKRIDGE"	670	465	1155
+"VA"	2010	"Arlington County"	8	"033 - ROCK SPRING"	879	637	1545
+"VA"	2010	"Arlington County"	8	"034 - YORKTOWN"	773	486	1282
+"VA"	2010	"Arlington County"	8	"035 - MADISON"	828	808	1677
+"VA"	2010	"Arlington County"	8	"036 - MARSHALL"	891	584	1514
+"VA"	2010	"Arlington County"	8	"037 - NOTTINGHAM"	755	479	1260
+"VA"	2010	"Arlington County"	8	"038 - ARLINGTON VIEW"	684	200	900
+"VA"	2010	"Arlington County"	8	"039 - ASHLAWN"	449	285	761
+"VA"	2010	"Arlington County"	8	"040 - VIRGINIA SQUARE"	653	413	1086
+"VA"	2010	"Arlington County"	8	"041 - WOODBURY"	597	367	971
+"VA"	2010	"Arlington County"	8	"042 - SHIRLINGTON"	578	313	910
+"VA"	2010	"Arlington County"	8	"043 - ARLINGTON MILL"	479	126	614
+"VA"	2010	"Arlington County"	8	"044 - DAWSON TERRACE"	523	255	798
+"VA"	2010	"Arlington County"	8	"045 - BUCKINGHAM"	850	396	1270
+"VA"	2010	"Arlington County"	8	"046 - CENTRAL"	681	438	1141
+"VA"	2010	"Arlington County"	8	"047 - FOUR MILE RUN"	564	216	790
+"VA"	2010	"Arlington County"	8	"048 - COURTLANDS"	525	315	857
+"VA"	2010	"Arlington County"	8	"049 - MONROE"	392	196	601
+"VA"	2010	"Arlington County"	8	"050 - CRYSTAL PLAZA"	454	340	810
+"VA"	2010	"Arlington County"	8	"051 - TAYLOR"	209	114	325
+"VA"	2010	"Augusta County"	6	"101 - JOLIVUE"		419	547
+"VA"	2010	"Augusta County"	6	"102 - EXPO"		350	449
+"VA"	2010	"Augusta County"	6	"103 - VERONA"		692	864
+"VA"	2010	"Augusta County"	6	"201 - CRIMORA"		706	848
+"VA"	2010	"Augusta County"	6	"202 - NEW HOPE"		585	742
+"VA"	2010	"Augusta County"	6	"203 - WEYERS CAVE"		787	953
+"VA"	2010	"Augusta County"	6	"301 - FORT DEFIANCE"		852	1144
+"VA"	2010	"Augusta County"	6	"302 - NORTH RIVER"		290	352
+"VA"	2010	"Augusta County"	6	"303 - MOUNT SOLON"		427	497
+"VA"	2010	"Augusta County"	6	"304 - CHURCHVILLE FIRE STATION"		330	413
+"VA"	2010	"Augusta County"	6	"401 - BUFFALO GAP"		404	496
+"VA"	2010	"Augusta County"	6	"402 - CHURCHVILLE LIBRARY"		376	487
+"VA"	2010	"Augusta County"	6	"403 - CRAIGSVILLE"		202	252
+"VA"	2010	"Augusta County"	6	"404 - DEERFIELD"		116	153
+"VA"	2010	"Augusta County"	6	"405 - CEDAR GREEN"		400	527
+"VA"	2010	"Augusta County"	6	"501 - GREENVILLE"		608	713
+"VA"	2010	"Augusta County"	6	"502 - MIDDLEBROOK"		365	453
+"VA"	2010	"Augusta County"	6	"503 - SPOTTSWOOD"		340	410
+"VA"	2010	"Augusta County"	6	"504 - WHITE HILL"		647	761
+"VA"	2010	"Augusta County"	6	"601 - SHERANDO"		456	554
+"VA"	2010	"Augusta County"	6	"602 - STUARTS DRAFT"		1100	1312
+"VA"	2010	"Augusta County"	6	"603 - LYNDHURST"		577	700
+"VA"	2010	"Augusta County"	6	"801 - DOOMS"		626	744
+"VA"	2010	"Augusta County"	6	"802 - FISHERSVILLE"		1205	1481
+"VA"	2010	"Augusta County"	6	"803 - WILSON"		652	832
+"VA"	2010	"Bath County"	6	"101 - WARM SPRINGS"		133	164
+"VA"	2010	"Bath County"	6	"102 - MOUNTAIN GROVE"		36	45
+"VA"	2010	"Bath County"	6	"201 - HOT SPRINGS"		145	193
+"VA"	2010	"Bath County"	6	"301 - FAIRVIEW"		128	156
+"VA"	2010	"Bath County"	6	"302 - BURNSVILLE"		38	44
+"VA"	2010	"Bath County"	6	"401 - MILLBORO"		176	236
+"VA"	2010	"Bath County"	6	"501 - HEALING SPRINGS"		191	237
+"VA"	2010	"Bedford City"	5	"001 - WARD ONE"	461	625	1123
+"VA"	2010	"Bedford City"	5	"002 - WARD TWO"	313	344	686
+"VA"	2010	"Bedford County"	5	"101 - GOODVIEW ELEM SCHOOL"	581	1160	1797
+"VA"	2010	"Bedford County"	5	"102 - HARDY VOL FIRE CO"	191	307	519
+"VA"	2010	"Bedford County"	5	"103 - CHAMBLISSBURG FIRST AID BLDG"	154	282	452
+"VA"	2010	"Bedford County"	5	"202 - STAUNTON RIVER HIGH SCHOOL"	223	469	725
+"VA"	2010	"Bedford County"	5	"203 - MONETA ELEM SCHOOL"	469	989	1496
+"VA"	2010	"Bedford County"	5	"204 - BODY CAMP ELEM SCHOOL"	92	124	224
+"VA"	2010	"Bedford County"	5	"205 - SAUNDERS VOL FIRE DEPT"	298	694	1013
+"VA"	2010	"Bedford County"	5	"302 - BEDFORD COUNTY PSA"	232	444	705
+"VA"	2010	"Bedford County"	5	"303 - BETHESDA METHODIST CHURCH"	148	316	484
+"VA"	2010	"Bedford County"	5	"305 - HUDDLESTON ELEM SCHOOL"	122	286	431
+"VA"	2010	"Bedford County"	5	"602 - SHADY GROVE BAPTIST CHURCH"	220	512	772
+"VA"	2010	"Bedford County"	5	"603 - THAXTON ELEM SCHOOL"	232	498	779
+"VA"	2010	"Bedford County"	5	"604 - SAUNDERS GROVE BRETHERN CHURCH"	60	109	177
+"VA"	2010	"Bedford County"	5	"701 - GOODE RESCUE SQUAD"	237	882	1173
+"VA"	2010	"Bedford County"	5	"702 - LIBERTY HIGH SCHOOL"	339	744	1110
+"VA"	2010	"Bedford County"	5	"703 - BEDFORD CHRISTIAN CHURCH"	298	563	900
+"VA"	2010	"Bedford County"	6	"301 - NEW LONDON ACADEMY"		1459	1632
+"VA"	2010	"Bedford County"	6	"304 - FOREST YOUTH ATHLETIC ASSOC"		423	493
+"VA"	2010	"Bedford County"	6	"401 - FOREST ELEM SCHOOL"		1119	1281
+"VA"	2010	"Bedford County"	6	"402 - THOMAS JEFFERSON ELEM SCHOOL"		1456	1707
+"VA"	2010	"Bedford County"	6	"403 - KNIGHTS OF COLUMBUS BLDG"		1065	1188
+"VA"	2010	"Bedford County"	6	"502 - BIG ISLAND ELEM SCHOOL"		231	303
+"VA"	2010	"Bedford County"	6	"503 - SEDALIA CENTER"		322	384
+"VA"	2010	"Bedford County"	6	"504 - ODD FELLOWS HALL"		162	213
+"VA"	2010	"Bedford County"	6	"505 - BOONSBORO ELEMENTARY SCHOOL"		904	1090
+"VA"	2010	"Bedford County"	6	"506 - BOONSBORO RURITAN CLUB"		811	965
+"VA"	2010	"Bedford County"	6	"507 - PLEASANT VIEW BAPTIST CHURCH"		86	105
+"VA"	2010	"Bedford County"	6	"601 - MONTVALE ELEM SCHOOL"		570	694
+"VA"	2010	"Bedford County"	6	"704 - SUCK SPRINGS"		253	302
+"VA"	2010	"Bland County"	9	"101 - BASTIAN"	86	176	271
+"VA"	2010	"Bland County"	9	"102 - CERES"	140	138	286
+"VA"	2010	"Bland County"	9	"201 - DAVIS"	54	33	89
+"VA"	2010	"Bland County"	9	"202 - SEDDON"	211	289	518
+"VA"	2010	"Bland County"	9	"301 - HOLLYBROOK"	104	125	232
+"VA"	2010	"Bland County"	9	"302 - MECHANICSBURG"	48	72	123
+"VA"	2010	"Bland County"	9	"401 - ROCKY GAP"	158	310	478
+"VA"	2010	"Botetourt County"	6	"101 - AMSTERDAM"		521	663
+"VA"	2010	"Botetourt County"	6	"102 - ASBURY"		1155	1402
+"VA"	2010	"Botetourt County"	6	"104 - TROUTVILLE"		302	364
+"VA"	2010	"Botetourt County"	6	"201 - BLUE RIDGE"		863	1037
+"VA"	2010	"Botetourt County"	6	"202 - RAINBOW FOREST"		756	903
+"VA"	2010	"Botetourt County"	6	"301 - BUCHANAN"		492	593
+"VA"	2010	"Botetourt County"	6	"302 - MILL CREEK"		377	458
+"VA"	2010	"Botetourt County"	6	"303 - ROARING RUN"		151	185
+"VA"	2010	"Botetourt County"	6	"304 - SPRINGWOOD"		305	369
+"VA"	2010	"Botetourt County"	6	"402 - COURTHOUSE"		630	786
+"VA"	2010	"Botetourt County"	6	"403 - EAGLE ROCK"		343	420
+"VA"	2010	"Botetourt County"	6	"404 - GLEN WILTON"		225	284
+"VA"	2010	"Botetourt County"	6	"405 - ORISKANY"		39	45
+"VA"	2010	"Botetourt County"	6	"406 - TOWN HALL"		516	626
+"VA"	2010	"Botetourt County"	6	"501 - COYNER SPRINGS"		446	522
+"VA"	2010	"Botetourt County"	6	"502 - CLOVERDALE"		1186	1420
+"VA"	2010	"Bristol City"	9	"001 - FIRST WARD"	347	452	821
+"VA"	2010	"Bristol City"	9	"002 - SECOND WARD"	515	699	1241
+"VA"	2010	"Bristol City"	9	"003 - THIRD WARD"	332	311	655
+"VA"	2010	"Bristol City"	9	"004 - FOURTH WARD"	694	1140	1875
+"VA"	2010	"Brunswick County"	4	"301 - ALBERTA"	46	69	115
+"VA"	2010	"Brunswick County"	4	"302 - DANIELTOWN"	218	224	443
+"VA"	2010	"Brunswick County"	4	"303 - ELMORE"	105	100	205
+"VA"	2010	"Brunswick County"	4	"304 - SEYMOUR"	91	77	169
+"VA"	2010	"Brunswick County"	4	"402 - KING'S STORE"	56	8	64
+"VA"	2010	"Brunswick County"	5	"101 - BRODNAX"	171	107	287
+"VA"	2010	"Brunswick County"	5	"102 - ROCK STORE"	189	211	409
+"VA"	2010	"Brunswick County"	5	"103 - TILLMAN"	176	271	455
+"VA"	2010	"Brunswick County"	5	"201 - DROMGOOLE"	93	69	166
+"VA"	2010	"Brunswick County"	5	"202 - EDGERTON"	387	124	521
+"VA"	2010	"Brunswick County"	5	"203 - FITZHUGH"	264	113	384
+"VA"	2010	"Brunswick County"	5	"401 - STURGEON"	467	279	752
+"VA"	2010	"Brunswick County"	5	"402 - KING'S STORE"	128	63	194
+"VA"	2010	"Brunswick County"	5	"501 - LAWRENCEVILLE"	652	225	889
+"VA"	2010	"Buchanan County"	9	"102 - BLACKEY"	119	131	254
+"VA"	2010	"Buchanan County"	9	"103 - HURLEY"	248	303	554
+"VA"	2010	"Buchanan County"	9	"201 - GRASSY"	69	21	90
+"VA"	2010	"Buchanan County"	9	"202 - BULL"	255	147	407
+"VA"	2010	"Buchanan County"	9	"203 - ROCKLICK"	214	182	399
+"VA"	2010	"Buchanan County"	9	"301 - SLATE"	298	226	529
+"VA"	2010	"Buchanan County"	9	"302 - NORTH GRUNDY"	250	192	449
+"VA"	2010	"Buchanan County"	9	"403 - SOUTH GRUNDY"	360	324	694
+"VA"	2010	"Buchanan County"	9	"404 - OAKWOOD"	61	45	107
+"VA"	2010	"Buchanan County"	9	"501 - PRATER"	311	119	432
+"VA"	2010	"Buchanan County"	9	"502 - FOX"	90	28	118
+"VA"	2010	"Buchanan County"	9	"503 - VANSANT"	242	202	452
+"VA"	2010	"Buchanan County"	9	"601 - COUNCIL"	173	107	281
+"VA"	2010	"Buchanan County"	9	"602 - GARDEN"	230	156	390
+"VA"	2010	"Buchanan County"	9	"603 - HURRICANE"	215	100	319
+"VA"	2010	"Buchanan County"	9	"701 - WHITEWOOD"	310	231	549
+"VA"	2010	"Buchanan County"	9	"702 - CONTRARY"	211	138	356
+"VA"	2010	"Buckingham County"	5	"101 - NEW CANTON"	414	293	732
+"VA"	2010	"Buckingham County"	5	"201 - WHITE HALL"	204	183	394
+"VA"	2010	"Buckingham County"	5	"301 - CURDSVILLE"	206	252	467
+"VA"	2010	"Buckingham County"	5	"302 - NEW STORE"	80	216	303
+"VA"	2010	"Buckingham County"	5	"401 - MAYSVILLE"	315	348	676
+"VA"	2010	"Buckingham County"	5	"501 - WRIGHTS"	161	226	404
+"VA"	2010	"Buckingham County"	5	"502 - GLENMORE"	298	152	464
+"VA"	2010	"Buckingham County"	5	"601 - SLATE RIVER"	532	331	879
+"VA"	2010	"Buckingham County"	5	"701 - GOLD HILL"	221	171	400
+"VA"	2010	"Buena Vista City"	6	"001 - FIRST WARD"		551	658
+"VA"	2010	"Buena Vista City"	6	"002 - SECOND WARD"		421	532
+"VA"	2010	"Cambell County"	5	"101 - BROOKVILLE"	433	1114	1599
+"VA"	2010	"Cambell County"	5	"102 - NEW LONDON"	315	906	1275
+"VA"	2010	"Cambell County"	5	"201 - WALKER"	410	1024	1483
+"VA"	2010	"Cambell County"	5	"202 - BEDFORD SPRINGS"	279	828	1144
+"VA"	2010	"Cambell County"	5	"301 - EVINGTON"	201	408	628
+"VA"	2010	"Cambell County"	5	"302 - LYNCH STATION"	316	497	847
+"VA"	2010	"Cambell County"	5	"303 - ALTAVISTA"	479	502	1007
+"VA"	2010	"Cambell County"	5	"401 - THREE FORKS"	314	876	1223
+"VA"	2010	"Cambell County"	5	"402 - COURT HOUSE"	430	1048	1522
+"VA"	2010	"Cambell County"	5	"501 - SPRING HILL"	373	768	1183
+"VA"	2010	"Cambell County"	5	"502 - YELLOW BRANCH"	358	719	1104
+"VA"	2010	"Cambell County"	5	"601 - AIRPORT"	182	638	835
+"VA"	2010	"Cambell County"	5	"602 - KINGS"	224	317	554
+"VA"	2010	"Cambell County"	5	"603 - CONCORD"	434	904	1386
+"VA"	2010	"Cambell County"	5	"701 - BROOKNEAL"	325	509	864
+"VA"	2010	"Cambell County"	5	"702 - GLADYS"	379	523	928
+"VA"	2010	"Cambell County"	5	"703 - MORRIS CHURCH"	129	207	347
+"VA"	2010	"Caroline County"	1	"101 - BOWLING GREEN"	410	866	1296
+"VA"	2010	"Caroline County"	1	"301 - PORT ROYAL"	114	217	334
+"VA"	2010	"Caroline County"	1	"303 - WOODFORD"	258	322	586
+"VA"	2010	"Caroline County"	1	"402 - PENOLA"	25	80	107
+"VA"	2010	"Caroline County"	1	"501 - MATTAPONI"	689	447	1154
+"VA"	2010	"Caroline County"	7	"201 - MADISON"	762	1009	1833
+"VA"	2010	"Caroline County"	7	"302 - CHILESBURG"	63	97	167
+"VA"	2010	"Caroline County"	7	"401 - REEDY CHURCH"	837	465	1349
+"VA"	2010	"Caroline County"	7	"501 - MATTAPONI"	94	28	130
+"VA"	2010	"Carroll County"	9	"101 - MT BETHEL"	93	205	306
+"VA"	2010	"Carroll County"	9	"102 - ST PAUL"	158	375	552
+"VA"	2010	"Carroll County"	9	"103 - LAMBSBURG"	77	145	228
+"VA"	2010	"Carroll County"	9	"104 - OAKLAND A"	172	208	396
+"VA"	2010	"Carroll County"	9	"201 - HILLSVILLE B"	448	468	951
+"VA"	2010	"Carroll County"	9	"202 - LAUREL FORK"	165	181	358
+"VA"	2010	"Carroll County"	9	"203 - GLADESBORO"	236	286	547
+"VA"	2010	"Carroll County"	9	"301 - HILLSVILLE C"	478	486	1012
+"VA"	2010	"Carroll County"	9	"302 - SYLVATUS"	137	235	393
+"VA"	2010	"Carroll County"	9	"303 - DUGSPUR"	73	139	222
+"VA"	2010	"Carroll County"	9	"401 - HILLSVILLE D"	77	98	183
+"VA"	2010	"Carroll County"	9	"402 - WOODLAWN D"	334	476	841
+"VA"	2010	"Carroll County"	9	"403 - OAKLAND D"	128	243	386
+"VA"	2010	"Carroll County"	9	"404 - FANCY GAP"	112	160	286
+"VA"	2010	"Carroll County"	9	"501 - VAUGHAN"	90	157	255
+"VA"	2010	"Carroll County"	9	"502 - GLADEVILLE"	188	414	630
+"VA"	2010	"Carroll County"	9	"503 - WOODLAWN E"	109	190	311
+"VA"	2010	"Carroll County"	9	"504 - LAUREL"	114	242	370
+"VA"	2010	"Charles City County"	3	"101 - PRECINCT 1-1"	478	346	834
+"VA"	2010	"Charles City County"	3	"201 - PRECINCT 2-1"	490	217	715
+"VA"	2010	"Charles City County"	3	"301 - PRECINCT 3-1"	578	363	952
+"VA"	2010	"Charlotte County"	5	"101 - COUNTY SEAT"	274	377	672
+"VA"	2010	"Charlotte County"	5	"201 - RED OAK WYLLIESBURG"	234	312	565
+"VA"	2010	"Charlotte County"	5	"302 - DRAKES BRANCH"	225	310	550
+"VA"	2010	"Charlotte County"	5	"401 - KEYSVILLE"	230	354	603
+"VA"	2010	"Charlotte County"	5	"501 - CULLEN"	129	208	345
+"VA"	2010	"Charlotte County"	5	"503 - RED HOUSE"	139	137	282
+"VA"	2010	"Charlotte County"	5	"601 - ASPEN"	115	139	259
+"VA"	2010	"Charlotte County"	5	"602 - PHENIX"	132	237	376
+"VA"	2010	"Charlotte County"	5	"701 - BACON"	182	125	313
+"VA"	2010	"Charlotte County"	5	"702 - SAXE"	98	96	200
+"VA"	2010	"Charlottesville City"	5	"101 - RECREATION"	1942	500	2457
+"VA"	2010	"Charlottesville City"	5	"102 - CLARK"	1229	261	1503
+"VA"	2010	"Charlottesville City"	5	"201 - CARVER"	977	139	1122
+"VA"	2010	"Charlottesville City"	5	"202 - WALKER"	1290	453	1757
+"VA"	2010	"Charlottesville City"	5	"301 - BENJAMIN TONSLER"	1060	129	1201
+"VA"	2010	"Charlottesville City"	5	"302 - JEFFERSON PARK"	1624	434	2078
+"VA"	2010	"Charlottesville City"	5	"401 - VENABLE"	1245	380	1635
+"VA"	2010	"Charlottesville City"	5	"402 - ALUMNI HALL"	598	168	775
+"VA"	2010	"Chesapeake City"	4	"001 - GREAT BRIDGE"	234	871	1106
+"VA"	2010	"Chesapeake City"	4	"002 - BETHEL"	125	855	980
+"VA"	2010	"Chesapeake City"	4	"003 - CAMELOT"	1342	333	1677
+"VA"	2010	"Chesapeake City"	4	"004 - CHURCHLAND"	208	831	1040
+"VA"	2010	"Chesapeake City"	4	"005 - CRESTWOOD"	870	179	1051
+"VA"	2010	"Chesapeake City"	4	"006 - DEEP CREEK"	617	920	1541
+"VA"	2010	"Chesapeake City"	4	"007 - GREENBRIER"	340	934	1275
+"VA"	2010	"Chesapeake City"	4	"008 - SOUTH NORFOLK RECREATION"	316	639	961
+"VA"	2010	"Chesapeake City"	4	"009 - BELLS MILL"	367	1272	1641
+"VA"	2010	"Chesapeake City"	4	"010 - OSCAR SMITH"	145	308	454
+"VA"	2010	"Chesapeake City"	4	"011 - GENEVA PARK"	225	486	712
+"VA"	2010	"Chesapeake City"	4	"012 - GEORGETOWN"	1296	496	1797
+"VA"	2010	"Chesapeake City"	4	"013 - GILMERTON"	338	619	959
+"VA"	2010	"Chesapeake City"	4	"014 - GRASSFIELD"	83	209	292
+"VA"	2010	"Chesapeake City"	4	"015 - B M WILLIAMS"	345	448	794
+"VA"	2010	"Chesapeake City"	4	"016 - HICKORY GROVE"	265	1283	1548
+"VA"	2010	"Chesapeake City"	4	"017 - INDIAN CREEK"	128	553	684
+"VA"	2010	"Chesapeake City"	4	"018 - INDIAN RIVER"	337	268	609
+"VA"	2010	"Chesapeake City"	4	"019 - JOLLIFF"	151	574	726
+"VA"	2010	"Chesapeake City"	4	"020 - E W CHITTUM"	392	831	1226
+"VA"	2010	"Chesapeake City"	4	"021 - FELLOWSHIP"	231	697	931
+"VA"	2010	"Chesapeake City"	4	"022 - NORFOLK HIGHLANDS"	168	437	605
+"VA"	2010	"Chesapeake City"	4	"023 - OAK GROVE"	702	968	1674
+"VA"	2010	"Chesapeake City"	4	"024 - OAKLETTE"	370	470	844
+"VA"	2010	"Chesapeake City"	4	"025 - ST JULIANS"	49	245	294
+"VA"	2010	"Chesapeake City"	4	"026 - JOHNSON PARK"	199	181	381
+"VA"	2010	"Chesapeake City"	4	"027 - SILVERWOOD"	334	989	1326
+"VA"	2010	"Chesapeake City"	4	"028 - SUNRAY I"	16	101	118
+"VA"	2010	"Chesapeake City"	4	"029 - TANGLEWOOD"	149	738	889
+"VA"	2010	"Chesapeake City"	4	"030 - SOUTH NORFOLK"	326	101	428
+"VA"	2010	"Chesapeake City"	4	"031 - CARVER SCHOOL"	813	252	1067
+"VA"	2010	"Chesapeake City"	4	"032 - PROVIDENCE"	975	158	1136
+"VA"	2010	"Chesapeake City"	4	"033 - WESTOVER"	168	383	551
+"VA"	2010	"Chesapeake City"	4	"034 - HICKORY MIDDLE SCHOOL"	288	1544	1832
+"VA"	2010	"Chesapeake City"	4	"035 - TAYLOR ROAD"	903	658	1565
+"VA"	2010	"Chesapeake City"	4	"036 - GREAT BRIDGE BAPTIST CHURCH"	333	1597	1931
+"VA"	2010	"Chesapeake City"	4	"037 - BRIDGETOWN"	349	1536	1890
+"VA"	2010	"Chesapeake City"	4	"038 - BAILEY CREEK"	123	595	718
+"VA"	2010	"Chesapeake City"	4	"039 - LAKE DRUMMOND"	101	400	501
+"VA"	2010	"Chesapeake City"	4	"040 - RIVER BIRCH"	703	999	1704
+"VA"	2010	"Chesapeake City"	4	"041 - JOHN T WEST"	680	703	1386
+"VA"	2010	"Chesapeake City"	4	"042 - PARKWAYS"	749	887	1640
+"VA"	2010	"Chesapeake City"	4	"043 - PLEASANT CROSSING"	324	1752	2078
+"VA"	2010	"Chesapeake City"	4	"044 - NANSEMOND"	294	437	731
+"VA"	2010	"Chesapeake City"	4	"045 - SUNRAY II"	217	164	381
+"VA"	2010	"Chesapeake City"	4	"046 - BELLS MILL II"	286	637	923
+"VA"	2010	"Chesapeake City"	4	"047 - GREEN SEA"	159	708	867
+"VA"	2010	"Chesapeake City"	4	"048 - JOLLIFF MIDDLE SCHOOL"	838	194	1032
+"VA"	2010	"Chesapeake City"	4	"049 - WATERWAY"	494	1110	1606
+"VA"	2010	"Chesapeake City"	4	"050 - RIVER WALK"	490	631	1124
+"VA"	2010	"Chesapeake City"	4	"051 - COOPERS WAY"	190	1098	1289
+"VA"	2010	"Chesapeake City"	4	"052 - SHIPYARD ROAD"	466	426	892
+"VA"	2010	"Chesapeake City"	4	"053 - FAIRWAYS"	275	413	688
+"VA"	2010	"Chesterfield Couty"	4	"101 - BELLWOOD"	254	414	670
+"VA"	2010	"Chesterfield Couty"	4	"102 - SOUTH CHESTER"	448	871	1322
+"VA"	2010	"Chesterfield Couty"	4	"103 - ENON"	313	1001	1316
+"VA"	2010	"Chesterfield Couty"	4	"104 - NORTH CHESTER"	326	1038	1375
+"VA"	2010	"Chesterfield Couty"	4	"105 - DREWRYS BLUFF"	576	479	1063
+"VA"	2010	"Chesterfield Couty"	4	"106 - HARROWGATE"	742	1034	1779
+"VA"	2010	"Chesterfield Couty"	4	"107 - WELLS"	477	767	1252
+"VA"	2010	"Chesterfield Couty"	4	"108 - ECOFF"	451	1511	1973
+"VA"	2010	"Chesterfield Couty"	4	"109 - ELIZABETH SCOTT"	621	1200	1826
+"VA"	2010	"Chesterfield Couty"	4	"110 - DUTCH GAP"	353	561	915
+"VA"	2010	"Chesterfield Couty"	4	"111 - IRON BRIDGE"	685	1201	1893
+"VA"	2010	"Chesterfield Couty"	4	"112 - CARVER"	479	668	1150
+"VA"	2010	"Chesterfield Couty"	4	"201 - GATES"	344	675	1020
+"VA"	2010	"Chesterfield Couty"	4	"202 - BEULAH"	750	729	1486
+"VA"	2010	"Chesterfield Couty"	4	"203 - BIRD"	419	434	860
+"VA"	2010	"Chesterfield Couty"	4	"204 - JACOBS"	365	538	906
+"VA"	2010	"Chesterfield Couty"	4	"205 - FALLING CREEK"	871	791	1669
+"VA"	2010	"Chesterfield Couty"	4	"208 - MEADOWBROOK"	827	477	1311
+"VA"	2010	"Chesterfield Couty"	4	"209 - SALEM CHURCH"	552	982	1543
+"VA"	2010	"Chesterfield Couty"	4	"210 - FIVE FORKS"	773	788	1564
+"VA"	2010	"Chesterfield Couty"	4	"211 - NASH"	384	1488	1876
+"VA"	2010	"Chesterfield Couty"	4	"301 - ETTRICK"	1063	371	1444
+"VA"	2010	"Chesterfield Couty"	4	"302 - DEER RUN"	154	420	576
+"VA"	2010	"Chesterfield Couty"	4	"303 - MATOACA"	737	967	1708
+"VA"	2010	"Chesterfield Couty"	4	"304 - WINFREES STORE"	369	1278	1649
+"VA"	2010	"Chesterfield Couty"	4	"305 - BEACH"	95	501	597
+"VA"	2010	"Chesterfield Couty"	4	"306 - WINTERPOCK"	275	1337	1616
+"VA"	2010	"Chesterfield Couty"	4	"307 - COSBY"	369	951	1327
+"VA"	2010	"Chesterfield Couty"	4	"315 - BAILEY BRIDGE"	498	1472	1977
+"VA"	2010	"Chesterfield Couty"	4	"316 - SPRING RUN"	359	836	1202
+"VA"	2010	"Chesterfield Couty"	4	"317 - BIRKDALE"	400	1083	1487
+"VA"	2010	"Chesterfield Couty"	7	"206 - BELMONT"	462	171	655
+"VA"	2010	"Chesterfield Couty"	7	"207 - CHIPPENHAM"	321	218	565
+"VA"	2010	"Chesterfield Couty"	7	"212 - ST. LUKE'S"	275	539	870
+"VA"	2010	"Chesterfield Couty"	7	"213 - SOUTHSIDE"	1337	436	1847
+"VA"	2010	"Chesterfield Couty"	7	"308 - SOUTH MANCHESTER"	312	420	803
+"VA"	2010	"Chesterfield Couty"	7	"309 - SKINQUARTER"	373	1411	1923
+"VA"	2010	"Chesterfield Couty"	7	"310 - TOMAHAWK"	438	1044	1621
+"VA"	2010	"Chesterfield Couty"	7	"312 - EVERGREEN"	584	1257	2007
+"VA"	2010	"Chesterfield Couty"	7	"313 - WOOLRIDGE"	448	1147	1722
+"VA"	2010	"Chesterfield Couty"	7	"401 - HARBOUR POINTE"	312	646	1012
+"VA"	2010	"Chesterfield Couty"	7	"402 - GENITO"	772	1039	1978
+"VA"	2010	"Chesterfield Couty"	7	"403 - BRANDERMILL"	447	942	1574
+"VA"	2010	"Chesterfield Couty"	7	"404 - PROVIDENCE"	596	697	1430
+"VA"	2010	"Chesterfield Couty"	7	"405 - LA PRADE"	496	904	1561
+"VA"	2010	"Chesterfield Couty"	7	"406 - SMOKETREE"	351	982	1449
+"VA"	2010	"Chesterfield Couty"	7	"407 - MONACAN"	224	525	822
+"VA"	2010	"Chesterfield Couty"	7	"408 - REAMS"	881	756	1750
+"VA"	2010	"Chesterfield Couty"	7	"409 - MANCHESTER"	836	584	1511
+"VA"	2010	"Chesterfield Couty"	7	"410 - WAGSTAFF"	289	488	836
+"VA"	2010	"Chesterfield Couty"	7	"411 - SWIFT CREEK"	451	915	1466
+"VA"	2010	"Chesterfield Couty"	7	"413 - SHENANDOAH"	504	661	1274
+"VA"	2010	"Chesterfield Couty"	7	"414 - CRENSHAW"	370	640	1189
+"VA"	2010	"Chesterfield Couty"	7	"501 - HUGUENOT"	397	627	1113
+"VA"	2010	"Chesterfield Couty"	7	"502 - CRESTWOOD"	293	523	888
+"VA"	2010	"Chesterfield Couty"	7	"503 - MIDLOTHIAN"	637	1955	2803
+"VA"	2010	"Chesterfield Couty"	7	"504 - ROBIOUS"	490	1447	2105
+"VA"	2010	"Chesterfield Couty"	7	"505 - BON AIR"	548	982	1653
+"VA"	2010	"Chesterfield Couty"	7	"506 - GREENFIELD"	498	754	1395
+"VA"	2010	"Chesterfield Couty"	7	"507 - SALISBURY"	416	1573	2171
+"VA"	2010	"Chesterfield Couty"	7	"508 - BELGRADE"	322	700	1121
+"VA"	2010	"Chesterfield Couty"	7	"509 - CRANBECK"	239	426	738
+"VA"	2010	"Chesterfield Couty"	7	"510 - SYCAMORE"	366	1098	1604
+"VA"	2010	"Chesterfield Couty"	7	"511 - BLACK HEATH"	278	854	1213
+"VA"	2010	"Chesterfield Couty"	7	"513 - BEAUFONT"	160	115	288
+"VA"	2010	"Chesterfield Couty"	7	"514 - WATKINS"	427	1200	1797
+"VA"	2010	"Chesterfield Couty"	7	"515 - DAVIS"	911	392	1355
+"VA"	2010	"Clarke County"	10	"101 - RUSSELL"	208	572	799
+"VA"	2010	"Clarke County"	10	"201 - BERRYVILLE"	340	579	949
+"VA"	2010	"Clarke County"	10	"301 - MILLWOOD"	173	374	574
+"VA"	2010	"Clarke County"	10	"302 - PINE GROVE"	96	181	285
+"VA"	2010	"Clarke County"	10	"401 - WHITE POST"	251	543	823
+"VA"	2010	"Clarke County"	10	"501 - BUCKMARSH"	220	431	673
+"VA"	2010	"Clarke County"	10	"502 - BLUE RIDGE"	71	141	217
+"VA"	2010	"Colonial Heights City"	4	"001 - FIRST"	119	498	618
+"VA"	2010	"Colonial Heights City"	4	"002 - SECOND"	126	642	768
+"VA"	2010	"Colonial Heights City"	4	"003 - THIRD"	137	783	921
+"VA"	2010	"Colonial Heights City"	4	"004 - FOURTH"	186	982	1170
+"VA"	2010	"Colonial Heights City"	4	"005 - FIFTH"	111	1143	1261
+"VA"	2010	"Covington City"	6	"101 - PRECINCT 1-1"		137	172
+"VA"	2010	"Covington City"	9	"201 - PRECINCT 2-1"	114	141	270
+"VA"	2010	"Covington City"	9	"301 - PRECINCT 3-1"	158	58	224
+"VA"	2010	"Covington City"	9	"401 - PRECINCT 4-1"	160	206	375
+"VA"	2010	"Covington City"	9	"501 - PRECINCT 5-1"	140	173	327
+"VA"	2010	"Craig County"	9	"101 - COURT HOUSE"	175	262	446
+"VA"	2010	"Craig County"	9	"201 - AMMENDALE PRECINCT"	137	271	423
+"VA"	2010	"Craig County"	9	"202 - NORTH MOUNTAIN"	36	39	76
+"VA"	2010	"Craig County"	9	"301 - GIVENS & REYNOLDS STORE"	160	94	259
+"VA"	2010	"Craig County"	9	"302 - MCGUIRES STORE"	68	51	120
+"VA"	2010	"Craig County"	9	"303 - MARSHALLS STORE"	48	62	113
+"VA"	2010	"Craig County"	9	"401 - BARBOURS CREEK"	58	84	150
+"VA"	2010	"Craig County"	9	"402 - PAINT BANK"	25	17	44
+"VA"	2010	"Craig County"	9	"403 - CRAIG SPRINGS"	58	113	178
+"VA"	2010	"Craig County"	9	"404 - FORKS OF JOHNS CREEK"	30	28	59
+"VA"	2010	"Craig County"	9	"501 - CRAIG CITY"	190	216	419
+"VA"	2010	"Culpeper County"	7	"101 - WEST FAIRFAX"	589	936	1584
+"VA"	2010	"Culpeper County"	7	"201 - EAST FAIRFAX"	363	480	888
+"VA"	2010	"Culpeper County"	7	"302 - EGGBORNSVILLE"	125	425	574
+"VA"	2010	"Culpeper County"	7	"303 - CARDOVA"	160	402	587
+"VA"	2010	"Culpeper County"	7	"401 - ELDORADO"	189	374	587
+"VA"	2010	"Culpeper County"	7	"402 - BROWNS STORE"	314	760	1126
+"VA"	2010	"Culpeper County"	7	"501 - JEFFERSONTON"	362	1052	1469
+"VA"	2010	"Culpeper County"	7	"502 - RIXEYVILLE"	86	301	404
+"VA"	2010	"Culpeper County"	7	"601 - MITCHELLS"	44	142	190
+"VA"	2010	"Culpeper County"	7	"602 - PEARL SAMPLE"	270	669	982
+"VA"	2010	"Culpeper County"	7	"702 - BRANDY STATION"	198	599	838
+"VA"	2010	"Culpeper County"	7	"703 - LIGNUM"	106	283	404
+"VA"	2010	"Culpeper County"	7	"704 - RICHARDSVILLE"	46	165	225
+"VA"	2010	"Cumberland County"	5	"101 - PRECINCT 1"	254	355	633
+"VA"	2010	"Cumberland County"	5	"201 - PRECINCT 2"	284	355	666
+"VA"	2010	"Cumberland County"	5	"301 - ELECTION DISTRICT 3 PRECINCT"	420	210	645
+"VA"	2010	"Cumberland County"	5	"401 - PRECINCT 4"	259	324	604
+"VA"	2010	"Cumberland County"	5	"501 - PRECINCT 5"	300	338	646
+"VA"	2010	"Danville City"	5	"001 - WARD ONE"	316	18	338
+"VA"	2010	"Danville City"	5	"002 - WARD TWO"	304	164	470
+"VA"	2010	"Danville City"	5	"003 - WARD THREE"	405	24	433
+"VA"	2010	"Danville City"	5	"004 - WARD FOUR"	790	742	1546
+"VA"	2010	"Danville City"	5	"005 - WARD FIVE"	202	279	490
+"VA"	2010	"Danville City"	5	"006 - WARD SIX"	448	35	485
+"VA"	2010	"Danville City"	5	"007 - WARD SEVEN"	723	90	820
+"VA"	2010	"Danville City"	5	"008 - WARD EIGHT"	423	300	732
+"VA"	2010	"Danville City"	5	"009 - WARD NINE"	368	254	627
+"VA"	2010	"Danville City"	5	"010 - WARD TEN"	418	443	874
+"VA"	2010	"Danville City"	5	"011 - WARD ELEVEN"	813	453	1274
+"VA"	2010	"Danville City"	5	"012 - WARD TWELVE"	767	567	1350
+"VA"	2010	"Danville City"	5	"013 - WARD THIRTEEN"	683	432	1127
+"VA"	2010	"Danville City"	5	"014 - WARD FOURTEEN"	185	7	192
+"VA"	2010	"Danville City"	5	"015 - WARD FIFTEEN"	502	503	1021
+"VA"	2010	"Danville City"	5	"016 - WARD SIXTEEN"	494	693	1206
+"VA"	2010	"Danville City"	5	"017 - WARD SEVENTEEN"	318	730	1062
+"VA"	2010	"Dickenson County"	9	"101 - SOUTH CLINTWOOD"	584	448	1052
+"VA"	2010	"Dickenson County"	9	"201 - NORA"	184	127	312
+"VA"	2010	"Dickenson County"	9	"202 - FRYING PAN"	74	59	134
+"VA"	2010	"Dickenson County"	9	"203 - CLINCHCO"	256	104	364
+"VA"	2010	"Dickenson County"	9	"301 - WEST DANTE"	54	96	154
+"VA"	2010	"Dickenson County"	9	"302 - HERALD"	120	110	231
+"VA"	2010	"Dickenson County"	9	"303 - RIDGE"	125	165	297
+"VA"	2010	"Dickenson County"	9	"304 - LONGS FORK"	121	136	257
+"VA"	2010	"Dickenson County"	9	"401 - COLLEY"	364	109	482
+"VA"	2010	"Dickenson County"	9	"402 - HAYSI"	332	128	469
+"VA"	2010	"Dickenson County"	9	"501 - TARPON"	149	72	222
+"VA"	2010	"Dickenson County"	9	"502 - ARTRIP"	171	118	296
+"VA"	2010	"Dickenson County"	9	"503 - NORTH CLINTWOOD"	193	195	396
+"VA"	2010	"Dinwiddie County"	4	"101 - ROHOIC"	198	285	484
+"VA"	2010	"Dinwiddie County"	4	"102 - WHITE OAK"	92	249	341
+"VA"	2010	"Dinwiddie County"	4	"103 - CHURCH ROAD"	114	550	665
+"VA"	2010	"Dinwiddie County"	4	"201 - EDGEHILL"	226	290	516
+"VA"	2010	"Dinwiddie County"	4	"202 - CHESDIN"	436	547	983
+"VA"	2010	"Dinwiddie County"	4	"301 - REAMS"	79	207	286
+"VA"	2010	"Dinwiddie County"	4	"302 - NEW HOPE"	490	551	1043
+"VA"	2010	"Dinwiddie County"	4	"401 - DINWIDDIE"	390	404	795
+"VA"	2010	"Dinwiddie County"	4	"402 - LITTLE ZION"	275	294	569
+"VA"	2010	"Dinwiddie County"	4	"403 - CHERRY HILL"	152	126	278
+"VA"	2010	"Dinwiddie County"	4	"501 - COURTHOUSE"	153	426	579
+"VA"	2010	"Dinwiddie County"	4	"502 - MCKENNEY"	186	369	556
+"VA"	2010	"Dinwiddie County"	4	"503 - ROCKY RUN"	87	263	350
+"VA"	2010	"Emporia City"	4	"101 - PRECINCT 1-1"	158	117	275
+"VA"	2010	"Emporia City"	4	"201 - PRECINCT 2-1"	94	31	125
+"VA"	2010	"Emporia City"	4	"301 - PRECINCT 3-1"	80	164	244
+"VA"	2010	"Emporia City"	4	"401 - PRECINCT 4-1"	117	166	283
+"VA"	2010	"Emporia City"	4	"501 - PRECINCT 5-1"	118	14	133
+"VA"	2010	"Emporia City"	4	"601 - DISTRICT 6"	73	196	269
+"VA"	2010	"Emporia City"	4	"701 - DISTRICT 7"	88	90	179
+"VA"	2010	"Essex County"	1	"101 - GREATER TAPPAHANNOCK"	240	415	661
+"VA"	2010	"Essex County"	1	"201 - NORTH"	431	271	708
+"VA"	2010	"Essex County"	1	"301 - SOUTH"	226	488	726
+"VA"	2010	"Essex County"	1	"401 - CENTRAL"	261	496	764
+"VA"	2010	"Fairfax City"	1	"001 - ONE"	476	405	917
+"VA"	2010	"Fairfax City"	11	"002 - TWO"	518	532	1069
+"VA"	2010	"Fairfax City"	11	"003 - THREE"	699	654	1386
+"VA"	2010	"Fairfax City"	11	"004 - FOUR"	619	567	1229
+"VA"	2010	"Fairfax City"	11	"005 - FIVE"	513	456	1002
+"VA"	2010	"Fairfax City"	11	"006 - SIX"	475	464	962
+"VA"	2010	"Fairfax County"	8	"208 - RESTON #1"	712	381	1110
+"VA"	2010	"Fairfax County"	8	"209 - RESTON #2"	855	421	1293
+"VA"	2010	"Fairfax County"	8	"219 - WESTBRIAR"	714	802	1530
+"VA"	2010	"Fairfax County"	8	"220 - DOGWOOD"	909	533	1458
+"VA"	2010	"Fairfax County"	8	"221 - HUNTERS WOODS"	846	636	1498
+"VA"	2010	"Fairfax County"	8	"222 - RESTON #3"	712	283	1007
+"VA"	2010	"Fairfax County"	8	"223 - GLADE"	1101	665	1787
+"VA"	2010	"Fairfax County"	8	"224 - SOUTH LAKES"	1330	776	2138
+"VA"	2010	"Fairfax County"	8	"225 - TERRASET"	1023	487	1538
+"VA"	2010	"Fairfax County"	8	"226 - WOLFTRAP"	820	933	1774
+"VA"	2010	"Fairfax County"	8	"227 - SUNRISE VALLEY"	461	456	927
+"VA"	2010	"Fairfax County"	8	"233 - NORTH POINT"	1007	953	1980
+"VA"	2010	"Fairfax County"	8	"234 - ALDRIN"	1119	1054	2196
+"VA"	2010	"Fairfax County"	8	"238 - CAMERON GLEN"	548	506	1065
+"VA"	2010	"Fairfax County"	8	"315 - PIMMIT"	614	503	1135
+"VA"	2010	"Fairfax County"	8	"317 - WESTHAMPTON"	553	414	980
+"VA"	2010	"Fairfax County"	8	"401 - BUSH HILL"	706	689	1419
+"VA"	2010	"Fairfax County"	8	"402 - CAMERON"	243	209	460
+"VA"	2010	"Fairfax County"	8	"404 - FRANCONIA"	771	605	1393
+"VA"	2010	"Fairfax County"	8	"405 - GROVETON"	1067	423	1506
+"VA"	2010	"Fairfax County"	8	"406 - HAYFIELD"	639	772	1428
+"VA"	2010	"Fairfax County"	8	"408 - MOUNT EAGLE"	389	172	576
+"VA"	2010	"Fairfax County"	8	"409 - PIONEER"	1025	620	1667
+"VA"	2010	"Fairfax County"	8	"410 - ROSE HILL"	894	786	1698
+"VA"	2010	"Fairfax County"	8	"411 - VIRGINIA HILLS"	261	222	495
+"VA"	2010	"Fairfax County"	8	"413 - FAIRFIELD"	1173	330	1519
+"VA"	2010	"Fairfax County"	8	"419 - LANE"	716	475	1214
+"VA"	2010	"Fairfax County"	8	"420 - VILLAGES"	814	599	1427
+"VA"	2010	"Fairfax County"	8	"421 - KINGSTOWNE"	793	546	1350
+"VA"	2010	"Fairfax County"	8	"422 - VAN DORN"	746	563	1321
+"VA"	2010	"Fairfax County"	8	"423 - CLERMONT"	617	521	1159
+"VA"	2010	"Fairfax County"	8	"424 - HUNTLEY"	731	504	1252
+"VA"	2010	"Fairfax County"	8	"425 - WILTON"	491	293	793
+"VA"	2010	"Fairfax County"	8	"427 - ISLAND CREEK"	595	491	1100
+"VA"	2010	"Fairfax County"	8	"501 - BAILEYS"	821	392	1230
+"VA"	2010	"Fairfax County"	8	"505 - GLEN FOREST #1"	389	176	574
+"VA"	2010	"Fairfax County"	8	"506 - HOLMES #1"	57	35	99
+"VA"	2010	"Fairfax County"	8	"507 - LINCOLNIA"	708	428	1151
+"VA"	2010	"Fairfax County"	8	"510 - PARKLAWN"	434	399	844
+"VA"	2010	"Fairfax County"	8	"515 - WESTLAWN"	342	242	595
+"VA"	2010	"Fairfax County"	8	"516 - WEYANOKE"	489	266	770
+"VA"	2010	"Fairfax County"	8	"517 - WILLSTON"	365	223	597
+"VA"	2010	"Fairfax County"	8	"520 - SKYLINE"	807	329	1146
+"VA"	2010	"Fairfax County"	8	"524 - WHITTIER"	339	264	612
+"VA"	2010	"Fairfax County"	8	"525 - WALNUT HILL #1"	184	153	340
+"VA"	2010	"Fairfax County"	8	"526 - BREN MAR"	734	476	1222
+"VA"	2010	"Fairfax County"	8	"527 - EDSALL"	368	277	654
+"VA"	2010	"Fairfax County"	8	"529 - GLEN FOREST #2"	366	213	586
+"VA"	2010	"Fairfax County"	8	"601 - BELLE HAVEN"	517	584	1108
+"VA"	2010	"Fairfax County"	8	"602 - BELLEVIEW"	566	443	1024
+"VA"	2010	"Fairfax County"	8	"604 - BUCKNELL"	888	433	1342
+"VA"	2010	"Fairfax County"	8	"606 - HOLLIN HALL"	544	455	1010
+"VA"	2010	"Fairfax County"	8	"607 - HUNTINGTON"	850	558	1434
+"VA"	2010	"Fairfax County"	8	"608 - KIRKSIDE"	710	359	1080
+"VA"	2010	"Fairfax County"	8	"609 - MARLAN"	547	526	1090
+"VA"	2010	"Fairfax County"	8	"610 - SHERWOOD"	725	563	1299
+"VA"	2010	"Fairfax County"	8	"619 - BELVOIR"	507	423	940
+"VA"	2010	"Fairfax County"	8	"621 - GROSVENOR"	353	223	584
+"VA"	2010	"Fairfax County"	8	"627 - WOODLAWN"	879	422	1319
+"VA"	2010	"Fairfax County"	8	"703 - FORT BUFFALO"	463	253	731
+"VA"	2010	"Fairfax County"	8	"705 - GRAHAM"	294	174	478
+"VA"	2010	"Fairfax County"	8	"706 - GREENWAY"	467	302	787
+"VA"	2010	"Fairfax County"	8	"708 - MARSHALL"	1062	666	1755
+"VA"	2010	"Fairfax County"	8	"710 - PINE SPRING"	577	343	933
+"VA"	2010	"Fairfax County"	8	"712 - SHREVE"	437	301	745
+"VA"	2010	"Fairfax County"	8	"713 - TIMBER LANE"	737	473	1222
+"VA"	2010	"Fairfax County"	8	"717 - WOODBURN"	449	322	782
+"VA"	2010	"Fairfax County"	8	"726 - MAGARITY"	730	569	1326
+"VA"	2010	"Fairfax County"	8	"728 - WALNUT HILL #2"	217	176	396
+"VA"	2010	"Fairfax County"	8	"731 - TYSONS"	483	389	882
+"VA"	2010	"Fairfax County"	10	"203 - FLORIS"	604	932	1563
+"VA"	2010	"Fairfax County"	10	"229 - FOX MILL"	805	1258	2099
+"VA"	2010	"Fairfax County"	10	"235 - FRYING PAN"	460	518	1000
+"VA"	2010	"Fairfax County"	10	"236 - STUART"	283	324	619
+"VA"	2010	"Fairfax County"	10	"237 - MCNAIR"	573	429	1028
+"VA"	2010	"Fairfax County"	10	"239 - COATES"	398	261	670
+"VA"	2010	"Fairfax County"	10	"301 - CHAIN BRIDGE"	581	824	1424
+"VA"	2010	"Fairfax County"	10	"302 - CHESTERBROOK"	564	730	1303
+"VA"	2010	"Fairfax County"	10	"303 - CHURCHILL"	321	354	687
+"VA"	2010	"Fairfax County"	10	"304 - COOPER"	331	651	991
+"VA"	2010	"Fairfax County"	10	"305 - EL NIDO"	557	479	1053
+"VA"	2010	"Fairfax County"	10	"306 - GREAT FALLS"	373	631	1017
+"VA"	2010	"Fairfax County"	10	"307 - HAYCOCK"	560	632	1209
+"VA"	2010	"Fairfax County"	10	"309 - KENMORE"	564	1019	1604
+"VA"	2010	"Fairfax County"	10	"310 - KIRBY"	461	481	955
+"VA"	2010	"Fairfax County"	10	"311 - LANGLEY"	407	604	1022
+"VA"	2010	"Fairfax County"	10	"312 - LONGFELLOW"	605	571	1199
+"VA"	2010	"Fairfax County"	10	"314 - MCLEAN"	522	609	1154
+"VA"	2010	"Fairfax County"	10	"316 - SALONA"	634	675	1324
+"VA"	2010	"Fairfax County"	10	"318 - WESTMORELAND"	354	341	708
+"VA"	2010	"Fairfax County"	10	"319 - HERNDON #1"	638	805	1454
+"VA"	2010	"Fairfax County"	10	"320 - HERNDON #2"	672	653	1365
+"VA"	2010	"Fairfax County"	10	"321 - CLEARVIEW"	788	1043	1859
+"VA"	2010	"Fairfax County"	10	"322 - FORESTVILLE"	392	983	1407
+"VA"	2010	"Fairfax County"	10	"323 - SHOUSE"	396	643	1053
+"VA"	2010	"Fairfax County"	10	"324 - HERNDON #3"	590	526	1141
+"VA"	2010	"Fairfax County"	10	"325 - HUTCHISON"	342	271	629
+"VA"	2010	"Fairfax County"	10	"327 - SUGARLAND"	508	756	1300
+"VA"	2010	"Fairfax County"	10	"328 - HICKORY"	486	861	1372
+"VA"	2010	"Fairfax County"	10	"329 - SENECA"	500	982	1502
+"VA"	2010	"Fairfax County"	10	"330 - COLVIN"	336	721	1073
+"VA"	2010	"Fairfax County"	10	"331 - SPRING HILL"	414	653	1075
+"VA"	2010	"Fairfax County"	10	"843 - FAIR LAKES"	537	679	1240
+"VA"	2010	"Fairfax County"	10	"844 - CENTERPOINTE"	607	592	1236
+"VA"	2010	"Fairfax County"	10	"846 - GREENBRIAR EAST"	496	605	1120
+"VA"	2010	"Fairfax County"	10	"847 - GREENBRIAR WEST"	345	572	936
+"VA"	2010	"Fairfax County"	10	"901 - CENTRE RIDGE"	518	578	1111
+"VA"	2010	"Fairfax County"	10	"902 - BROOKFIELD"	535	706	1275
+"VA"	2010	"Fairfax County"	10	"903 - CUB RUN"	529	971	1550
+"VA"	2010	"Fairfax County"	10	"904 - DULLES"	240	483	740
+"VA"	2010	"Fairfax County"	10	"905 - FRANKLIN"	548	866	1441
+"VA"	2010	"Fairfax County"	10	"908 - KINROSS"	710	1257	1991
+"VA"	2010	"Fairfax County"	10	"910 - LONDON TOWNE EAST"	217	277	501
+"VA"	2010	"Fairfax County"	10	"911 - NAVY"	506	848	1372
+"VA"	2010	"Fairfax County"	10	"913 - ROCKY RUN"	513	1120	1680
+"VA"	2010	"Fairfax County"	10	"915 - VIRGINIA RUN"	298	912	1241
+"VA"	2010	"Fairfax County"	10	"917 - STONE"	485	650	1165
+"VA"	2010	"Fairfax County"	10	"920 - LEES CORNER EAST"	384	603	996
+"VA"	2010	"Fairfax County"	10	"921 - DEER PARK"	417	944	1412
+"VA"	2010	"Fairfax County"	10	"923 - BULL RUN"	229	690	934
+"VA"	2010	"Fairfax County"	10	"924 - LONDON TOWNE WEST"	474	352	846
+"VA"	2010	"Fairfax County"	10	"925 - OLD MILL"	355	465	834
+"VA"	2010	"Fairfax County"	10	"927 - LEES CORNER WEST"	518	841	1387
+"VA"	2010	"Fairfax County"	10	"928 - POPLAR TREE"	338	732	1080
+"VA"	2010	"Fairfax County"	11	"102 - BRISTOW"	502	337	854
+"VA"	2010	"Fairfax County"	11	"104 - CHAPEL"	650	607	1275
+"VA"	2010	"Fairfax County"	11	"105 - FAIRVIEW"	1144	1022	2202
+"VA"	2010	"Fairfax County"	11	"106 - HERITAGE"	799	410	1248
+"VA"	2010	"Fairfax County"	11	"108 - KINGS PARK"	771	742	1546
+"VA"	2010	"Fairfax County"	11	"109 - OLDE CREEK"	626	626	1272
+"VA"	2010	"Fairfax County"	11	"110 - NORTH SPRINGFIELD #1"	552	466	1047
+"VA"	2010	"Fairfax County"	11	"111 - NORTH SPRINGFIELD #2"	364	346	727
+"VA"	2010	"Fairfax County"	11	"113 - OAK HILL"	605	584	1204
+"VA"	2010	"Fairfax County"	11	"115 - RAVENSWORTH"	394	418	832
+"VA"	2010	"Fairfax County"	11	"116 - WAKEFIELD"	706	528	1264
+"VA"	2010	"Fairfax County"	11	"117 - WOODSON"	586	440	1043
+"VA"	2010	"Fairfax County"	11	"118 - LAKE BRADDOCK"	1082	749	1878
+"VA"	2010	"Fairfax County"	11	"119 - LAUREL"	966	915	1933
+"VA"	2010	"Fairfax County"	11	"120 - SIDEBURN"	764	953	1738
+"VA"	2010	"Fairfax County"	11	"121 - VILLA"	418	450	881
+"VA"	2010	"Fairfax County"	11	"122 - Long Branch"	459	432	907
+"VA"	2010	"Fairfax County"	11	"123 - ROBINSON"	1022	919	1986
+"VA"	2010	"Fairfax County"	11	"124 - OLLEY"	473	412	911
+"VA"	2010	"Fairfax County"	11	"125 - SIGNAL HILL"	829	765	1621
+"VA"	2010	"Fairfax County"	11	"126 - BONNIE BRAE"	629	455	1110
+"VA"	2010	"Fairfax County"	11	"127 - BURKE CENTRE"	1021	854	1918
+"VA"	2010	"Fairfax County"	11	"128 - CARDINAL"	576	441	1038
+"VA"	2010	"Fairfax County"	11	"129 - KEENE MILL"	414	375	804
+"VA"	2010	"Fairfax County"	11	"130 - TERRA CENTRE"	581	552	1156
+"VA"	2010	"Fairfax County"	11	"202 - FLINT HILL"	1049	980	2056
+"VA"	2010	"Fairfax County"	11	"213 - VIENNA #1"	1029	848	1907
+"VA"	2010	"Fairfax County"	11	"214 - VIENNA #2"	862	742	1631
+"VA"	2010	"Fairfax County"	11	"216 - VIENNA #4"	423	304	746
+"VA"	2010	"Fairfax County"	11	"218 - VIENNA #6"	631	388	1045
+"VA"	2010	"Fairfax County"	11	"415 - CRESTWOOD"	513	460	999
+"VA"	2010	"Fairfax County"	11	"417 - GARFIELD"	646	537	1208
+"VA"	2010	"Fairfax County"	11	"418 - LYNBROOK"	377	319	713
+"VA"	2010	"Fairfax County"	11	"426 - GREENSPRING"	710	561	1304
+"VA"	2010	"Fairfax County"	11	"502 - BARCROFT"	888	587	1502
+"VA"	2010	"Fairfax County"	11	"503 - BELVEDERE"	491	294	803
+"VA"	2010	"Fairfax County"	11	"506 - HOLMES #1"	51	31	84
+"VA"	2010	"Fairfax County"	11	"508 - MASONVILLE"	515	371	902
+"VA"	2010	"Fairfax County"	11	"511 - RAVENWOOD"	509	310	839
+"VA"	2010	"Fairfax County"	11	"512 - SLEEPY HOLLOW"	407	318	739
+"VA"	2010	"Fairfax County"	11	"513 - SAINT ALBANS"	705	432	1152
+"VA"	2010	"Fairfax County"	11	"518 - COLUMBIA"	598	438	1066
+"VA"	2010	"Fairfax County"	11	"519 - HUMMER"	446	381	839
+"VA"	2010	"Fairfax County"	11	"521 - BROOK HILL"	422	431	874
+"VA"	2010	"Fairfax County"	11	"522 - CAMELOT"	388	389	797
+"VA"	2010	"Fairfax County"	11	"523 - POE"	616	454	1093
+"VA"	2010	"Fairfax County"	11	"528 - RIDGELEA"	356	317	684
+"VA"	2010	"Fairfax County"	11	"530 - HOLMES #2"	433	237	684
+"VA"	2010	"Fairfax County"	11	"531 - LEEWOOD"	230	189	427
+"VA"	2010	"Fairfax County"	11	"605 - FORT HUNT"	566	606	1187
+"VA"	2010	"Fairfax County"	11	"611 - STRATFORD"	978	884	1898
+"VA"	2010	"Fairfax County"	11	"612 - WAYNEWOOD"	394	381	784
+"VA"	2010	"Fairfax County"	11	"613 - WESTGATE"	681	1083	1790
+"VA"	2010	"Fairfax County"	11	"614 - WHITMAN"	500	599	1121
+"VA"	2010	"Fairfax County"	11	"615 - WOODLEY"	610	612	1248
+"VA"	2010	"Fairfax County"	11	"616 - GUNSTON"	564	633	1216
+"VA"	2010	"Fairfax County"	11	"617 - LORTON"	536	186	734
+"VA"	2010	"Fairfax County"	11	"618 - NEWINGTON"	1085	866	2001
+"VA"	2010	"Fairfax County"	11	"622 - LORTON STATION"	770	364	1156
+"VA"	2010	"Fairfax County"	11	"623 - ALBAN"	265	238	514
+"VA"	2010	"Fairfax County"	11	"624 - HUNT"	868	883	1772
+"VA"	2010	"Fairfax County"	11	"625 - LORTON CENTER"	468	355	840
+"VA"	2010	"Fairfax County"	11	"626 - SARATOGA"	1192	964	2195
+"VA"	2010	"Fairfax County"	11	"628 - LAUREL HILL"	646	426	1085
+"VA"	2010	"Fairfax County"	11	"629 - SOUTH COUNTY"	597	613	1229
+"VA"	2010	"Fairfax County"	11	"701 - BLAKE"	1031	790	1860
+"VA"	2010	"Fairfax County"	11	"704 - FREEDOM HILL"	540	450	1005
+"VA"	2010	"Fairfax County"	11	"707 - MANTUA"	712	502	1238
+"VA"	2010	"Fairfax County"	11	"709 - MOSBY"	1114	685	1851
+"VA"	2010	"Fairfax County"	11	"711 - PRICE"	560	421	998
+"VA"	2010	"Fairfax County"	11	"714 - WALKER"	804	587	1422
+"VA"	2010	"Fairfax County"	11	"718 - PINE RIDGE"	513	406	940
+"VA"	2010	"Fairfax County"	11	"719 - STENWOOD"	275	257	536
+"VA"	2010	"Fairfax County"	11	"720 - THOREAU"	503	397	920
+"VA"	2010	"Fairfax County"	11	"721 - MERRIFIELD"	700	468	1199
+"VA"	2010	"Fairfax County"	11	"727 - OAKTON"	667	727	1416
+"VA"	2010	"Fairfax County"	11	"729 - NOTTOWAY"	946	754	1733
+"VA"	2010	"Fairfax County"	11	"730 - PENDERBROOK"	684	650	1355
+"VA"	2010	"Fairfax County"	11	"732 - OAK MARR"	777	923	1730
+"VA"	2010	"Fairfax County"	11	"733 - KILMER"	938	675	1639
+"VA"	2010	"Fairfax County"	11	"801 - BURKE"	983	812	1833
+"VA"	2010	"Fairfax County"	11	"803 - CLIFTON"	774	1442	2251
+"VA"	2010	"Fairfax County"	11	"805 - FAIRFAX STATION"	717	1145	1892
+"VA"	2010	"Fairfax County"	11	"811 - POHICK"	874	826	1722
+"VA"	2010	"Fairfax County"	11	"812 - VALLEY"	654	619	1300
+"VA"	2010	"Fairfax County"	11	"815 - WOODYARD"	490	757	1263
+"VA"	2010	"Fairfax County"	11	"824 - ORANGE"	845	1110	2010
+"VA"	2010	"Fairfax County"	11	"825 - CHERRY RUN"	646	738	1421
+"VA"	2010	"Fairfax County"	11	"827 - IRVING"	634	670	1334
+"VA"	2010	"Fairfax County"	11	"833 - WHITE OAKS"	703	603	1331
+"VA"	2010	"Fairfax County"	11	"838 - SANGSTER"	534	644	1190
+"VA"	2010	"Fairfax County"	11	"839 - SILVERBROOK"	761	991	1781
+"VA"	2010	"Fairfax County"	11	"840 - WEST SPRINGFIELD"	709	739	1473
+"VA"	2010	"Fairfax County"	11	"841 - POPES HEAD"	620	1068	1714
+"VA"	2010	"Fairfax County"	11	"842 - PARKWAY"	539	630	1189
+"VA"	2010	"Fairfax County"	11	"845 - FOUNTAINHEAD"	730	1207	1961
+"VA"	2010	"Fairfax County"	11	"848 - FAIR OAKS"	278	236	528
+"VA"	2010	"Fairfax County"	11	"849 - NEWGATE NORTH"	331	453	798
+"VA"	2010	"Fairfax County"	11	"850 - SOUTH RUN"	317	441	767
+"VA"	2010	"Fairfax County"	11	"851 - WILLOW SPRINGS"	803	970	1805
+"VA"	2010	"Fairfax County"	11	"852 - MONUMENT"	613	577	1219
+"VA"	2010	"Fairfax County"	11	"853 - EAGLE VIEW"	672	683	1373
+"VA"	2010	"Fairfax County"	11	"854 - NEWGATE SOUTH"	546	956	1529
+"VA"	2010	"Fairfax County"	11	"914 - VALE"	726	915	1684
+"VA"	2010	"Fairfax County"	11	"916 - WAPLES MILL"	963	1222	2219
+"VA"	2010	"Fairfax County"	11	"918 - CENTREVILLE"	748	684	1465
+"VA"	2010	"Fairfax County"	11	"919 - GREEN TRAILS"	871	823	1720
+"VA"	2010	"Fairfax County"	11	"926 - POWELL"	640	540	1203
+"VA"	2010	"Falls Church City"	8	"001 - FIRST WARD"	707	346	1075
+"VA"	2010	"Falls Church City"	8	"002 - SECOND WARD"	376	220	607
+"VA"	2010	"Falls Church City"	8	"003 - THIRD WARD"	399	247	655
+"VA"	2010	"Falls Church City"	8	"004 - FOURTH WARD"	505	315	840
+"VA"	2010	"Falls Church City"	8	"005 - FIFTH WARD"	454	236	698
+"VA"	2010	"Fauquier County"	1	"101 - KETTLE RUN"	212	584	802
+"VA"	2010	"Fauquier County"	1	"102 - CATLETT"	224	817	1054
+"VA"	2010	"Fauquier County"	1	"103 - CASANOVA"	171	301	478
+"VA"	2010	"Fauquier County"	1	"104 - LOIS"	127	348	480
+"VA"	2010	"Fauquier County"	1	"105 - OPAL"	96	364	464
+"VA"	2010	"Fauquier County"	1	"203 - BALDWIN RIDGE"	261	657	940
+"VA"	2010	"Fauquier County"	1	"301 - MORRISVILLE"	162	504	679
+"VA"	2010	"Fauquier County"	1	"302 - REMINGTON"	291	690	1006
+"VA"	2010	"Fauquier County"	1	"303 - BEALETON"	249	599	859
+"VA"	2010	"Fauquier County"	1	"403 - WATERLOO"	486	1213	1719
+"VA"	2010	"Fauquier County"	10	"201 - COURTHOUSE"	354	665	1051
+"VA"	2010	"Fauquier County"	10	"202 - AIRLIE"	198	556	773
+"VA"	2010	"Fauquier County"	10	"203 - BALDWIN RIDGE"	71	144	220
+"VA"	2010	"Fauquier County"	10	"204 - WARRENTON"	320	626	967
+"VA"	2010	"Fauquier County"	10	"401 - MARSHALL"	319	764	1111
+"VA"	2010	"Fauquier County"	10	"402 - LEEDS"	384	628	1039
+"VA"	2010	"Fauquier County"	10	"501 - THE PLAINS"	320	563	909
+"VA"	2010	"Fauquier County"	10	"502 - NEW BALTIMORE"	448	1467	1967
+"VA"	2010	"Fauquier County"	10	"503 - BROAD RUN"	245	769	1047
+"VA"	2010	"Floyd County"	9	"101 - LOCUST GROVE"	422	482	935
+"VA"	2010	"Floyd County"	9	"201 - LITTLE RIVER"	500	589	1117
+"VA"	2010	"Floyd County"	9	"301 - COURTHOUSE"	514	460	992
+"VA"	2010	"Floyd County"	9	"401 - BURKS FORK"	388	538	944
+"VA"	2010	"Floyd County"	9	"501 - INDIAN VALLEY"	294	563	882
+"VA"	2010	"Fluvanna County"	5	"101 - PALMYRA"	508	597	1128
+"VA"	2010	"Fluvanna County"	5	"201 - COLUMBIA"	641	550	1220
+"VA"	2010	"Fluvanna County"	5	"301 - FORK UNION"	632	428	1086
+"VA"	2010	"Fluvanna County"	5	"401 - CUNNINGHAM"	503	950	1491
+"VA"	2010	"Fluvanna County"	5	"501 - RIVANNA"	1054	1177	2273
+"VA"	2010	"Fluvanna County"	5	"502 - RIVANNA 2"	906	872	1810
+"VA"	2010	"Franklin City"	4	"101 - PRECINCT 1-1"	87	345	433
+"VA"	2010	"Franklin City"	4	"201 - PRECINCT 2-1"	119	345	464
+"VA"	2010	"Franklin City"	4	"301 - PRECINCT 3-1"	230	60	290
+"VA"	2010	"Franklin City"	4	"401 - PRECINCT 4-1"	232	59	292
+"VA"	2010	"Franklin City"	4	"501 - PRECINCT 5-1"	184	36	220
+"VA"	2010	"Franklin City"	4	"601 - PRECINCT 6-1"	107	252	359
+"VA"	2010	"Franklin County"	5	"102 - BURNT CHIMNEY"	484	1045	1596
+"VA"	2010	"Franklin County"	5	"103 - SCRUGGS"	599	1535	2179
+"VA"	2010	"Franklin County"	5	"201 - GLADE HILL"	328	631	999
+"VA"	2010	"Franklin County"	5	"202 - PENHOOK"	291	590	904
+"VA"	2010	"Franklin County"	5	"203 - HODGESVILLE"	108	137	256
+"VA"	2010	"Franklin County"	5	"204 - DUDLEY"	205	346	565
+"VA"	2010	"Franklin County"	5	"301 - SNOW CREEK"	207	279	503
+"VA"	2010	"Franklin County"	5	"302 - FORK MOUNTAIN"	190	270	483
+"VA"	2010	"Franklin County"	5	"303 - SONTAG"	413	331	766
+"VA"	2010	"Franklin County"	5	"304 - DICKINSON"	197	177	383
+"VA"	2010	"Franklin County"	5	"401 - HENRY"	205	480	718
+"VA"	2010	"Franklin County"	5	"402 - FERRUM"	188	346	554
+"VA"	2010	"Franklin County"	5	"403 - ENDICOTT"	158	318	508
+"VA"	2010	"Franklin County"	5	"501 - WAIDSBORO"	170	269	470
+"VA"	2010	"Franklin County"	5	"502 - CALLAWAY"	260	534	837
+"VA"	2010	"Franklin County"	5	"503 - BOWMANS"	177	303	501
+"VA"	2010	"Franklin County"	5	"504 - GOGGINSVILLE"	209	438	667
+"VA"	2010	"Franklin County"	5	"601 - BOONES MILL"	335	617	1002
+"VA"	2010	"Franklin County"	5	"602 - BONBROOK"	309	513	844
+"VA"	2010	"Franklin County"	5	"603 - COOPERS COVE"	230	444	697
+"VA"	2010	"Franklin County"	5	"701 - ROCKY MOUNT EAST"	388	426	839
+"VA"	2010	"Franklin County"	5	"702 - ROCKY MOUNT WEST"	369	344	734
+"VA"	2010	"Franklin County"	5	"703 - ROCKY MOUNT SOUTH"	315	309	641
+"VA"	2010	"Frederick County"	10	"101 - RUSSELLS"	148	693	875
+"VA"	2010	"Frederick County"	10	"102 - GORE"	195	651	887
+"VA"	2010	"Frederick County"	10	"103 - KERNSTOWN"	213	783	1027
+"VA"	2010	"Frederick County"	10	"104 - CEDAR CREEK"	130	422	562
+"VA"	2010	"Frederick County"	10	"201 - GAINESBOROUGH"	91	434	548
+"VA"	2010	"Frederick County"	10	"202 - ALBIN"	264	888	1192
+"VA"	2010	"Frederick County"	10	"203 - REDLAND"	282	1037	1364
+"VA"	2010	"Frederick County"	10	"301 - CLEAR BROOK"	103	407	537
+"VA"	2010	"Frederick County"	10	"302 - NEFF'S TOWN"	162	556	746
+"VA"	2010	"Frederick County"	10	"303 - WHITE HALL"	267	957	1268
+"VA"	2010	"Frederick County"	10	"401 - CARPERS VALLEY"	267	733	1022
+"VA"	2010	"Frederick County"	10	"402 - SHENANDOAH"	116	393	528
+"VA"	2010	"Frederick County"	10	"403 - PARKIN'S MILL"	493	1476	2026
+"VA"	2010	"Frederick County"	10	"501 - STEPHENS CITY"	236	688	942
+"VA"	2010	"Frederick County"	10	"502 - NEWTOWN"	191	723	937
+"VA"	2010	"Frederick County"	10	"503 - CANTERBURG"	250	710	985
+"VA"	2010	"Frederick County"	10	"601 - MILLBROOK"	185	498	710
+"VA"	2010	"Frederick County"	10	"602 - ASH HOLLOW"	221	554	801
+"VA"	2010	"Frederick County"	10	"603 - GREENWOOD"	327	928	1297
+"VA"	2010	"Fredericksburg City"	1	"101 - PRECINCT 1 - DISTRICT ONE"	603	760	1392
+"VA"	2010	"Fredericksburg City"	1	"201 - PRECINCT 1 - DISTRICT TWO"	477	515	1018
+"VA"	2010	"Fredericksburg City"	1	"301 - PRECINCT 1 - DISTRICT THREE"	444	657	1121
+"VA"	2010	"Fredericksburg City"	1	"401 - PRECINCT 1 - DISTRICT FOUR"	440	163	611
+"VA"	2010	"Fredericksburg City"	1	"402 - PRECINCT 2 - DISTRICT FOUR"	144	126	275
+"VA"	2010	"Galax City"	9	"001 - EAST"	340	308	675
+"VA"	2010	"Galax City"	9	"002 - NORTH"	204	228	453
+"VA"	2010	"Galax City"	9	"003 - SOUTH"	207	187	401
+"VA"	2010	"Giles County"	9	"101 - GLEN LYN"	38	42	80
+"VA"	2010	"Giles County"	9	"102 - RICH CREEK"	122	179	309
+"VA"	2010	"Giles County"	9	"103 - NARROWS"	551	441	1025
+"VA"	2010	"Giles County"	9	"201 - PEARISBURG"	718	687	1426
+"VA"	2010	"Giles County"	9	"202 - STAFFORDSVILLE"	118	130	251
+"VA"	2010	"Giles County"	9	"203 - WHITE GATE"	61	81	144
+"VA"	2010	"Giles County"	9	"301 - EGGLESTON"	246	190	445
+"VA"	2010	"Giles County"	9	"302 - PEMBROKE"	574	378	975
+"VA"	2010	"Giles County"	9	"303 - NEWPORT"	353	254	622
+"VA"	2010	"Gloucester County"	1	"101 - HARCUM"	198	578	784
+"VA"	2010	"Gloucester County"	1	"102 - SALEM"	157	486	649
+"VA"	2010	"Gloucester County"	1	"103 - BETHEL"	181	517	708
+"VA"	2010	"Gloucester County"	1	"201 - COURTHOUSE"	270	761	1046
+"VA"	2010	"Gloucester County"	1	"202 - BOTETOURT"	349	882	1244
+"VA"	2010	"Gloucester County"	1	"301 - WHITE MARSH"	306	909	1225
+"VA"	2010	"Gloucester County"	1	"302 - ROANES"	248	752	1013
+"VA"	2010	"Gloucester County"	1	"401 - HAYES"	305	819	1143
+"VA"	2010	"Gloucester County"	1	"402 - SARAH'S CREEK"	166	546	721
+"VA"	2010	"Gloucester County"	1	"501 - ACHILLES"	189	891	1094
+"VA"	2010	"Gloucester County"	1	"502 - TIMBERNECK"	198	546	749
+"VA"	2010	"Goochland County"	7	"101 - FIFE"	227	310	575
+"VA"	2010	"Goochland County"	7	"102 - HADENSVILLE"	274	489	845
+"VA"	2010	"Goochland County"	7	"201 - THREE SQUARE"	174	137	328
+"VA"	2010	"Goochland County"	7	"202 - SANDY HOOK"	528	683	1325
+"VA"	2010	"Goochland County"	7	"301 - GOOCHLAND COURT HOUSE"	371	688	1145
+"VA"	2010	"Goochland County"	7	"401 - CROZIER"	79	157	249
+"VA"	2010	"Goochland County"	7	"402 - CENTERVILLE"	338	1133	1611
+"VA"	2010	"Goochland County"	7	"501 - MANAKIN"	440	1629	2217
+"VA"	2010	"Grayson County"	9	"101 - BRIDLE CREEK"	83	75	168
+"VA"	2010	"Grayson County"	9	"102 - FLATRIDGE"	61	61	131
+"VA"	2010	"Grayson County"	9	"103 - GRANT"	118	110	229
+"VA"	2010	"Grayson County"	9	"104 - MOUTH OF WILSON"	78	75	160
+"VA"	2010	"Grayson County"	9	"105 - MOUNT ROGERS"	75	120	200
+"VA"	2010	"Grayson County"	9	"106 - RUGBY"	65	92	160
+"VA"	2010	"Grayson County"	9	"107 - TROUTDALE"	34	60	100
+"VA"	2010	"Grayson County"	9	"201 - COMERS ROCK"	68	90	165
+"VA"	2010	"Grayson County"	9	"202 - ELK CREEK"	123	181	318
+"VA"	2010	"Grayson County"	9	"203 - INDEPENDENCE"	405	510	940
+"VA"	2010	"Grayson County"	9	"301 - BAYWOOD"	198	278	501
+"VA"	2010	"Grayson County"	9	"302 - FAIRVIEW"	259	429	709
+"VA"	2010	"Grayson County"	9	"401 - FRIES"	134	136	277
+"VA"	2010	"Grayson County"	9	"402 - PROVIDENCE"	190	311	542
+"VA"	2010	"Grayson County"	9	"403 - OLDTOWN"	86	102	202
+"VA"	2010	"Greene County"	5	"101 - DYKE"	202	390	606
+"VA"	2010	"Greene County"	5	"102 - SWIFT RUN"	414	624	1063
+"VA"	2010	"Greene County"	5	"201 - RUCKERSVILLE"	905	1337	2305
+"VA"	2010	"Greene County"	5	"301 - STANARDSVILLE"	627	1076	1743
+"VA"	2010	"Greensville County"	4	"101 - PRECINCT 1-A"	102	80	182
+"VA"	2010	"Greensville County"	4	"102 - PRECINCT 1-B"	43	88	131
+"VA"	2010	"Greensville County"	4	"103 - PRECINCT 1-C"	165	118	283
+"VA"	2010	"Greensville County"	4	"201 - PRECINCT 2-A"	245	137	382
+"VA"	2010	"Greensville County"	4	"202 - PRECINCT 2-B"	185	279	464
+"VA"	2010	"Greensville County"	4	"302 - PRECINCT 3-A"	423	368	794
+"VA"	2010	"Greensville County"	4	"401 - PRECINCT 4-A"	79	163	242
+"VA"	2010	"Greensville County"	4	"402 - PRECINCT 4-B"	224	154	378
+"VA"	2010	"Greensville County"	4	"403 - PRECINCT 4-C"	95	94	189
+"VA"	2010	"Halifax County"	5	"101 - CHILDREY"	258	261	530
+"VA"	2010	"Halifax County"	5	"102 - LIBERTY"	119	128	250
+"VA"	2010	"Halifax County"	5	"103 - REPUBLICAN GROVE"	294	229	541
+"VA"	2010	"Halifax County"	5	"201 - CLAYS MILL"	126	261	397
+"VA"	2010	"Halifax County"	5	"202 - CROSSROADS"	183	204	396
+"VA"	2010	"Halifax County"	5	"203 - CLOVER"	364	252	619
+"VA"	2010	"Halifax County"	5	"302 - MEADVILLE"	238	67	308
+"VA"	2010	"Halifax County"	5	"304 - VERNON HILL"	178	206	385
+"VA"	2010	"Halifax County"	5	"305 - SINAI"	500	245	760
+"VA"	2010	"Halifax County"	5	"401 - COURTHOUSE"	400	377	794
+"VA"	2010	"Halifax County"	5	"403 - CENTER"	214	525	743
+"VA"	2010	"Halifax County"	5	"502 - DAN RIVER"	305	640	966
+"VA"	2010	"Halifax County"	5	"503 - SCOTTSBURG"	134	284	436
+"VA"	2010	"Halifax County"	5	"601 - BLACK WALNUT"	198	304	511
+"VA"	2010	"Halifax County"	5	"603 - MT CARMEL"	413	392	828
+"VA"	2010	"Halifax County"	5	"605 - UNION"	98	133	240
+"VA"	2010	"Halifax County"	5	"701 - HYCO"	207	511	740
+"VA"	2010	"Halifax County"	5	"702 - MIDWAY"	108	398	522
+"VA"	2010	"Halifax County"	5	"703 - VIRGILINA"	112	247	375
+"VA"	2010	"Halifax County"	5	"801 - SOUTH BOSTON EAST"	509	212	728
+"VA"	2010	"Halifax County"	5	"802 - SOUTH BOSTON WEST"	345	133	486
+"VA"	2010	"Hampton City"	1	"203 - BURBANK"	265	303	579
+"VA"	2010	"Hampton City"	1	"208 - KRAFT"	965	855	1845
+"VA"	2010	"Hampton City"	1	"210 - MACHEN"	1201	425	1646
+"VA"	2010	"Hampton City"	1	"212 - BETHEL"	1323	652	1998
+"VA"	2010	"Hampton City"	1	"214 - TUCKER CAPPS"	734	695	1446
+"VA"	2010	"Hampton City"	1	"216 - SANDY BOTTOM"	523	341	873
+"VA"	2010	"Hampton City"	2	"106 - ARMSTRONG"	768	528	1334
+"VA"	2010	"Hampton City"	2	"110 - PHOEBUS"	168	141	325
+"VA"	2010	"Hampton City"	2	"111 - HAMPTON LIBRARY"	272	263	546
+"VA"	2010	"Hampton City"	2	"113 - SYMS"	295	392	711
+"VA"	2010	"Hampton City"	2	"115 - WYTHE"	425	421	901
+"VA"	2010	"Hampton City"	2	"117 - KECOUGHTAN"	682	304	1014
+"VA"	2010	"Hampton City"	2	"201 - BOOKER"	612	865	1520
+"VA"	2010	"Hampton City"	2	"202 - BRYAN"	598	621	1273
+"VA"	2010	"Hampton City"	2	"203 - BURBANK"	217	220	446
+"VA"	2010	"Hampton City"	2	"205 - ASBURY"	725	1362	2161
+"VA"	2010	"Hampton City"	2	"209 - LANGLEY"	544	583	1168
+"VA"	2010	"Hampton City"	2	"213 - PHILLIPS"	895	1289	2257
+"VA"	2010	"Hampton City"	3	"101 - ABERDEEN"	989	140	1140
+"VA"	2010	"Hampton City"	3	"102 - BASSETTE"	1179	52	1241
+"VA"	2010	"Hampton City"	3	"103 - CITY HALL"	656	100	774
+"VA"	2010	"Hampton City"	3	"104 - COOPER"	1149	210	1390
+"VA"	2010	"Hampton City"	3	"105 - EAST HAMPTON"	442	190	663
+"VA"	2010	"Hampton City"	3	"107 - LINDSAY"	935	196	1150
+"VA"	2010	"Hampton City"	3	"108 - THOMAS"	1148	164	1331
+"VA"	2010	"Hampton City"	3	"109 - PHENIX"	1429	61	1501
+"VA"	2010	"Hampton City"	3	"110 - PHOEBUS"	17	2	19
+"VA"	2010	"Hampton City"	3	"112 - SMITH"	1230	368	1656
+"VA"	2010	"Hampton City"	3	"116 - JONES"	455	122	599
+"VA"	2010	"Hampton City"	3	"118 - MALLORY"	1463	149	1632
+"VA"	2010	"Hampton City"	3	"204 - FORREST"	672	360	1079
+"VA"	2010	"Hampton City"	3	"215 - TYLER"	268	68	338
+"VA"	2010	"HaNOVER COUNTY"	7	"101 - ASHLAND"	755	720	1583
+"VA"	2010	"HaNOVER COUNTY"	7	"103 - ASHCAKE"	228	744	1058
+"VA"	2010	"HaNOVER COUNTY"	7	"104 - SLIDING HILL"	307	620	1012
+"VA"	2010	"HaNOVER COUNTY"	7	"201 - BEAVERDAM"	289	818	1374
+"VA"	2010	"HaNOVER COUNTY"	7	"202 - BLUNTS"	209	364	633
+"VA"	2010	"HaNOVER COUNTY"	7	"203 - WILMINGTON PARISH"	300	952	1377
+"VA"	2010	"HaNOVER COUNTY"	7	"204 - GODDINS HILL"	187	360	596
+"VA"	2010	"HaNOVER COUNTY"	7	"206 - COURTHOUSE"	123	287	464
+"VA"	2010	"HaNOVER COUNTY"	7	"207 - STONY RUN"	47	103	163
+"VA"	2010	"HaNOVER COUNTY"	7	"301 - CLAY"	190	864	1166
+"VA"	2010	"HaNOVER COUNTY"	7	"302 - CHICKAHOMINY"	246	633	973
+"VA"	2010	"HaNOVER COUNTY"	7	"303 - SHADY GROVE"	147	651	884
+"VA"	2010	"HaNOVER COUNTY"	7	"304 - ATLEE"	348	1082	1584
+"VA"	2010	"HaNOVER COUNTY"	7	"305 - COOL SPRING"	246	739	1082
+"VA"	2010	"HaNOVER COUNTY"	7	"401 - BATTLEFIELD"	146	710	989
+"VA"	2010	"HaNOVER COUNTY"	7	"402 - OLD CHURCH"	160	656	917
+"VA"	2010	"HaNOVER COUNTY"	7	"403 - COLD HARBOR"	382	1251	1811
+"VA"	2010	"HaNOVER COUNTY"	7	"404 - BLACK CREEK"	114	665	874
+"VA"	2010	"HaNOVER COUNTY"	7	"405 - PEBBLE CREEK"	200	482	744
+"VA"	2010	"HaNOVER COUNTY"	7	"406 - BEAVERDAM CREEK"	47	158	230
+"VA"	2010	"HaNOVER COUNTY"	7	"502 - RURAL POINT"	223	795	1174
+"VA"	2010	"HaNOVER COUNTY"	7	"503 - NEWMAN"	227	597	915
+"VA"	2010	"HaNOVER COUNTY"	7	"504 - STUDLEY"	83	593	791
+"VA"	2010	"HaNOVER COUNTY"	7	"505 - TOTOPOTOMOY"	49	232	315
+"VA"	2010	"HaNOVER COUNTY"	7	"506 - GEORGETOWN"	269	734	1119
+"VA"	2010	"HaNOVER COUNTY"	7	"507 - LAUREL MEADOW"	195	673	982
+"VA"	2010	"HaNOVER COUNTY"	7	"601 - VILLAGE"	304	1239	1696
+"VA"	2010	"HaNOVER COUNTY"	7	"602 - LEE DAVIS"	200	881	1208
+"VA"	2010	"HaNOVER COUNTY"	7	"603 - MECHANICSVILLE"	238	473	786
+"VA"	2010	"HaNOVER COUNTY"	7	"604 - HANOVER GROVE"	150	580	823
+"VA"	2010	"HaNOVER COUNTY"	7	"701 - FARRINGTON"	265	786	1172
+"VA"	2010	"HaNOVER COUNTY"	7	"702 - MONTPELIER"	542	1109	1929
+"VA"	2010	"HaNOVER COUNTY"	7	"703 - ROCKVILLE"	256	740	1129
+"VA"	2010	"HaNOVER COUNTY"	7	"704 - ELMONT"	222	658	954
+"VA"	2010	"Harrisonburg City"	6	"101 - NORTHEAST"		762	1236
+"VA"	2010	"Harrisonburg City"	6	"102 - EAST CENTRAL"		406	758
+"VA"	2010	"Harrisonburg City"	6	"103 - SOUTHEAST"		617	958
+"VA"	2010	"Harrisonburg City"	6	"201 - NORTHWEST"		844	1454
+"VA"	2010	"Harrisonburg City"	6	"202 - SOUTHWEST"		935	1490
+"VA"	2010	"Henrico County"	3	"201 - ADAMS"	658	38	704
+"VA"	2010	"Henrico County"	3	"206 - CENTRAL GARDENS"	1215	53	1276
+"VA"	2010	"Henrico County"	3	"208 - FAIRFIELD"	910	107	1022
+"VA"	2010	"Henrico County"	3	"215 - MAPLEWOOD"	1244	102	1353
+"VA"	2010	"Henrico County"	3	"220 - RATCLIFFE"	1451	141	1617
+"VA"	2010	"Henrico County"	3	"501 - ANTIOCH"	218	740	990
+"VA"	2010	"Henrico County"	3	"502 - CEDAR FORK"	418	114	539
+"VA"	2010	"Henrico County"	3	"503 - CHICKAHOMINY"	416	709	1152
+"VA"	2010	"Henrico County"	3	"504 - DONAHOE"	393	248	655
+"VA"	2010	"Henrico County"	3	"505 - DOREY"	430	661	1114
+"VA"	2010	"Henrico County"	3	"506 - EANES"	578	261	852
+"VA"	2010	"Henrico County"	3	"507 - ELKO"	68	267	349
+"VA"	2010	"Henrico County"	3	"508 - HIGHLAND SPRINGS"	609	198	815
+"VA"	2010	"Henrico County"	3	"509 - LABURNUM"	569	274	862
+"VA"	2010	"Henrico County"	3	"510 - MASONIC"	700	156	866
+"VA"	2010	"Henrico County"	3	"511 - MEHFOUD"	647	293	953
+"VA"	2010	"Henrico County"	3	"512 - MONTROSE"	928	189	1136
+"VA"	2010	"Henrico County"	3	"513 - NINE MILE"	229	210	453
+"VA"	2010	"Henrico County"	3	"514 - PLEASANTS"	1203	196	1413
+"VA"	2010	"Henrico County"	3	"515 - SANDSTON"	188	640	871
+"VA"	2010	"Henrico County"	3	"516 - SULLIVANS"	551	329	896
+"VA"	2010	"Henrico County"	3	"517 - TOWN HALL"	187	343	541
+"VA"	2010	"Henrico County"	3	"518 - WHITLOCKS"	379	620	1022
+"VA"	2010	"Henrico County"	3	"519 - ROLFE"	1949	266	2242
+"VA"	2010	"Henrico County"	7	"101 - COALPIT"	525	890	1522
+"VA"	2010	"Henrico County"	7	"102 - DUMBARTON"	688	403	1173
+"VA"	2010	"Henrico County"	7	"103 - GLEN ALLEN"	517	1006	1654
+"VA"	2010	"Henrico County"	7	"104 - GLENSIDE"	568	242	837
+"VA"	2010	"Henrico County"	7	"105 - GREENDALE"	234	384	665
+"VA"	2010	"Henrico County"	7	"106 - HERMITAGE"	494	588	1163
+"VA"	2010	"Henrico County"	7	"107 - HILLIARD"	217	255	501
+"VA"	2010	"Henrico County"	7	"108 - HUNTON"	99	305	451
+"VA"	2010	"Henrico County"	7	"109 - JOHNSON"	119	192	345
+"VA"	2010	"Henrico County"	7	"110 - LAKESIDE"	392	545	1016
+"VA"	2010	"Henrico County"	7	"111 - LONGAN"	395	745	1243
+"VA"	2010	"Henrico County"	7	"112 - MAUDE TREVVETT"	171	325	545
+"VA"	2010	"Henrico County"	7	"113 - STAPLES MILL"	657	1193	2000
+"VA"	2010	"Henrico County"	7	"114 - SUMMIT COURT"	212	288	562
+"VA"	2010	"Henrico County"	7	"115 - WESTWOOD"	296	449	782
+"VA"	2010	"Henrico County"	7	"116 - HUNGARY CREEK"	629	1086	1853
+"VA"	2010	"Henrico County"	7	"202 - AZALEA"	1031	145	1194
+"VA"	2010	"Henrico County"	7	"203 - BELMONT"	481	378	915
+"VA"	2010	"Henrico County"	7	"204 - BROOKLAND"	145	163	321
+"VA"	2010	"Henrico County"	7	"205 - CANTERBURY"	135	426	574
+"VA"	2010	"Henrico County"	7	"207 - CHAMBERLAYNE"	958	371	1388
+"VA"	2010	"Henrico County"	7	"209 - GLEN LEA"	565	151	735
+"VA"	2010	"Henrico County"	7	"210 - GREENWOOD"	537	118	689
+"VA"	2010	"Henrico County"	7	"211 - HIGHLAND GARDENS"	668	56	735
+"VA"	2010	"Henrico County"	7	"212 - HOLLYBROOK"	222	144	383
+"VA"	2010	"Henrico County"	7	"213 - HUNGARY"	581	144	748
+"VA"	2010	"Henrico County"	7	"214 - LONGDALE"	342	234	622
+"VA"	2010	"Henrico County"	7	"216 - MOODY"	167	274	485
+"VA"	2010	"Henrico County"	7	"217 - MOUNTAIN"	118	120	262
+"VA"	2010	"Henrico County"	7	"218 - OAKVIEW"	15	50	71
+"VA"	2010	"Henrico County"	7	"219 - RANDOLPH"	150	23	178
+"VA"	2010	"Henrico County"	7	"221 - STRATFORD HALL"	43	75	133
+"VA"	2010	"Henrico County"	7	"222 - WILDER"	854	217	1098
+"VA"	2010	"Henrico County"	7	"223 - YELLOW TAVERN"	677	621	1390
+"VA"	2010	"Henrico County"	7	"301 - CAUSEWAY"	231	572	861
+"VA"	2010	"Henrico County"	7	"302 - CEDARFIELD"	316	884	1284
+"VA"	2010	"Henrico County"	7	"303 - CRESTVIEW"	316	440	833
+"VA"	2010	"Henrico County"	7	"304 - INNSBROOK"	365	651	1096
+"VA"	2010	"Henrico County"	7	"305 - JACKSON DAVIS"	257	596	911
+"VA"	2010	"Henrico County"	7	"306 - MONUMENT HILLS"	139	320	495
+"VA"	2010	"Henrico County"	7	"307 - NUCKOLS FARM"	390	1132	1623
+"VA"	2010	"Henrico County"	7	"308 - POCAHONTAS"	247	605	905
+"VA"	2010	"Henrico County"	7	"309 - RIDGE"	201	455	738
+"VA"	2010	"Henrico County"	7	"310 - SADLER"	236	656	956
+"VA"	2010	"Henrico County"	7	"311 - SHADY GROVE"	314	1160	1581
+"VA"	2010	"Henrico County"	7	"312 - SKIPWITH"	363	633	1084
+"VA"	2010	"Henrico County"	7	"313 - SPRINGFIELD"	291	424	766
+"VA"	2010	"Henrico County"	7	"314 - STONEY RUN"	539	1170	1843
+"VA"	2010	"Henrico County"	7	"315 - THREE CHOPT"	308	535	902
+"VA"	2010	"Henrico County"	7	"316 - TUCKER"	600	440	1092
+"VA"	2010	"Henrico County"	7	"317 - RIVERS EDGE"	289	1010	1377
+"VA"	2010	"Henrico County"	7	"318 - SHORT PUMP"	325	876	1291
+"VA"	2010	"Henrico County"	7	"401 - BYRD"	412	766	1258
+"VA"	2010	"Henrico County"	7	"402 - DERBYSHIRE"	226	776	1064
+"VA"	2010	"Henrico County"	7	"403 - FREEMAN"	227	484	785
+"VA"	2010	"Henrico County"	7	"404 - GAYTON"	449	1219	1790
+"VA"	2010	"Henrico County"	7	"405 - GODWIN"	417	742	1247
+"VA"	2010	"Henrico County"	7	"406 - LAKEWOOD"	285	779	1144
+"VA"	2010	"Henrico County"	7	"407 - LAUDERDALE"	496	668	1249
+"VA"	2010	"Henrico County"	7	"408 - MAYBEURY"	387	803	1295
+"VA"	2010	"Henrico County"	7	"409 - MOORELAND"	147	745	945
+"VA"	2010	"Henrico County"	7	"410 - PEMBERTON"	324	508	897
+"VA"	2010	"Henrico County"	7	"411 - PINCHBECK"	463	764	1318
+"VA"	2010	"Henrico County"	7	"412 - RIDGEFIELD"	370	889	1382
+"VA"	2010	"Henrico County"	7	"413 - ROLLINGWOOD"	310	592	972
+"VA"	2010	"Henrico County"	7	"414 - SPOTTSWOOD"	169	345	547
+"VA"	2010	"Henrico County"	7	"415 - TUCKAHOE"	423	1499	2028
+"VA"	2010	"Henrico County"	7	"416 - WEST END"	366	769	1230
+"VA"	2010	"Henrico County"	7	"417 - WELBORNE"	232	487	759
+"VA"	2010	"Henry County"	5	"302 - AXTON"	432	273	720
+"VA"	2010	"Henry County"	5	"303 - IRISBURG"	387	336	750
+"VA"	2010	"Henry County"	5	"304 - MOUNT OLIVET"	658	505	1187
+"VA"	2010	"Henry County"	5	"305 - MOUNTAIN VALLEY"	276	255	546
+"VA"	2010	"Henry County"	5	"401 - COLLINSVILLE NUMBER 1"	156	351	544
+"VA"	2010	"Henry County"	5	"402 - DANIELS CREEK"	198	330	557
+"VA"	2010	"Henry County"	5	"404 - COLLINSVILLE NUMBER 2"	364	597	987
+"VA"	2010	"Henry County"	5	"405 - MOUNTAIN VIEW"	266	270	560
+"VA"	2010	"Henry County"	5	"502 - FIGSBORO"	213	407	636
+"VA"	2010	"Henry County"	5	"503 - STANLEYTOWN"	294	633	967
+"VA"	2010	"Henry County"	5	"504 - OAK LEVEL"	143	211	365
+"VA"	2010	"Henry County"	5	"505 - DYERS STORE"	165	186	366
+"VA"	2010	"Henry County"	5	"601 - FONTAINE"	266	511	807
+"VA"	2010	"Henry County"	5	"603 - RIDGEWAY #1"	292	527	860
+"VA"	2010	"Henry County"	5	"604 - RIDGEWAY #2"	214	440	673
+"VA"	2010	"Henry County"	9	"101 - BASSETT NUMBER TWO"	221	162	393
+"VA"	2010	"Henry County"	9	"102 - GUNVILLE"	177	420	616
+"VA"	2010	"Henry County"	9	"103 - SCOTT'S TANYARD"	328	685	1056
+"VA"	2010	"Henry County"	9	"201 - FIELDALE"	202	255	463
+"VA"	2010	"Henry County"	9	"202 - HORSEPASTURE #1"	329	409	760
+"VA"	2010	"Henry County"	9	"203 - HORSEPASTURE #2"	470	103	586
+"VA"	2010	"Henry County"	9	"204 - SPENCER"	314	475	813
+"VA"	2010	"Henry County"	9	"501 - BASSETT NUMBER ONE"	214	188	416
+"VA"	2010	"Henry County"	9	"602 - HILLCREST"	226	205	439
+"VA"	2010	"Highland County"	6	"001 - MONTEREY"		218	278
+"VA"	2010	"Highland County"	6	"003 - WILSONS MILL"		40	62
+"VA"	2010	"Highland County"	6	"005 - BLUE GRASS"		134	169
+"VA"	2010	"Highland County"	6	"007 - MILL GAP"		78	100
+"VA"	2010	"Highland County"	6	"008 - MCDOWELL"		151	182
+"VA"	2010	"Highland County"	6	"010 - HEADWATERS"		42	53
+"VA"	2010	"Hopewell City"	4	"101 - WARD ONE"	184	320	505
+"VA"	2010	"Hopewell City"	4	"201 - WARD TWO"	451	81	532
+"VA"	2010	"Hopewell City"	4	"301 - WARD THREE"	137	633	770
+"VA"	2010	"Hopewell City"	4	"401 - WARD FOUR"	319	664	989
+"VA"	2010	"Hopewell City"	4	"501 - WARD FIVE"	168	545	714
+"VA"	2010	"Hopewell City"	4	"601 - WARD SIX"	355	98	453
+"VA"	2010	"Hopewell City"	4	"701 - WARD SEVEN"	253	235	488
+"VA"	2010	"Isle of Wight County"	4	"101 - SMITHFIELD"	652	1830	2487
+"VA"	2010	"Isle of Wight County"	4	"201 - BARTLETT"	415	983	1402
+"VA"	2010	"Isle of Wight County"	4	"202 - CARROLLTON"	344	959	1305
+"VA"	2010	"Isle of Wight County"	4	"301 - RUSHMERE"	436	595	1038
+"VA"	2010	"Isle of Wight County"	4	"302 - PONS"	505	539	1047
+"VA"	2010	"Isle of Wight County"	4	"401 - COURTHOUSE"	205	399	604
+"VA"	2010	"Isle of Wight County"	4	"402 - WINDSOR"	206	580	786
+"VA"	2010	"Isle of Wight County"	4	"403 - ORBIT"	86	285	371
+"VA"	2010	"Isle of Wight County"	4	"501 - WALTERS"	94	395	490
+"VA"	2010	"Isle of Wight County"	4	"502 - CAMPS MILL"	114	120	234
+"VA"	2010	"Isle of Wight County"	4	"503 - CARRSVILLE"	105	215	320
+"VA"	2010	"Isle of Wight County"	4	"504 - ZUNI"	144	414	559
+"VA"	2010	"Isle of Wight County"	4	"505 - RAYNOR"	48	131	179
+"VA"	2010	"James City County"	1	"101 - BERKELEY A"	500	675	1199
+"VA"	2010	"James City County"	1	"102 - BERKELEY B"	484	1375	1884
+"VA"	2010	"James City County"	1	"103 - BERKELEY C"	488	1209	1725
+"VA"	2010	"James City County"	1	"201 - JAMESTOWN A"	598	1341	1980
+"VA"	2010	"James City County"	1	"202 - JAMESTOWN B"	745	1063	1848
+"VA"	2010	"James City County"	1	"301 - POWHATAN A"	547	1265	1831
+"VA"	2010	"James City County"	1	"302 - POWHATAN B"	230	257	495
+"VA"	2010	"James City County"	1	"303 - POWHATAN C"	683	1701	2412
+"VA"	2010	"James City County"	1	"304 - POWHATAN D"	574	739	1337
+"VA"	2010	"James City County"	1	"401 - STONEHOUSE A"	559	1130	1714
+"VA"	2010	"James City County"	1	"402 - STONEHOUSE B"	578	1321	1925
+"VA"	2010	"James City County"	1	"403 - STONEHOUSE C"	407	949	1374
+"VA"	2010	"James City County"	1	"501 - ROBERTS A"	589	754	1363
+"VA"	2010	"James City County"	1	"502 - ROBERTS B"	309	959	1281
+"VA"	2010	"James City County"	1	"503 - ROBERTS C"	263	321	597
+"VA"	2010	"King and Queen County"	1	"101 - OWENTON"	266	168	441
+"VA"	2010	"King and Queen County"	1	"201 - CLARKS"	145	354	504
+"VA"	2010	"King and Queen County"	1	"301 - SHACKLEFORDS"	150	277	429
+"VA"	2010	"King and Queen County"	1	"401 - COURTHOUSE"	215	232	455
+"VA"	2010	"King and Queen County"	1	"501 - OLDMILL"	132	305	445
+"VA"	2010	"King George County"	1	"101 - COURTHOUSE"	277	693	991
+"VA"	2010	"King George County"	1	"102 - PASSAPATANZY"	158	317	478
+"VA"	2010	"King George County"	1	"201 - MONROE"	550	1455	2017
+"VA"	2010	"King George County"	1	"301 - DAHLGREN"	376	716	1103
+"VA"	2010	"King George County"	1	"401 - SHILOH"	435	799	1241
+"VA"	2010	"King William County"	1	"101 - WEST POINT"	248	653	919
+"VA"	2010	"King William County"	1	"201 - SWEET HALL"	107	278	392
+"VA"	2010	"King William County"	1	"202 - COURTHOUSE"	330	406	744
+"VA"	2010	"King William County"	1	"301 - AYLETT"	208	740	963
+"VA"	2010	"King William County"	1	"401 - MANQUIN"	257	736	1009
+"VA"	2010	"King William County"	1	"501 - MANGOHICK"	393	629	1039
+"VA"	2010	"Lancaster County"	1	"101 - PRECINCT 1-1"	277	637	928
+"VA"	2010	"Lancaster County"	1	"201 - PRECINCT 2-1"	331	308	643
+"VA"	2010	"Lancaster County"	1	"301 - PRECINCT 3-1"	180	517	706
+"VA"	2010	"Lancaster County"	1	"302 - PRECINCT 3-2"	64	281	348
+"VA"	2010	"Lancaster County"	1	"401 - PRECINCT 4-1"	386	433	828
+"VA"	2010	"Lancaster County"	1	"501 - PRECINCT 5-1"	223	784	1019
+"VA"	2010	"Lee County"	9	"101 - ELYDALE"	121	180	311
+"VA"	2010	"Lee County"	9	"102 - EWING"	124	168	297
+"VA"	2010	"Lee County"	9	"103 - ROSE HILL"	260	253	520
+"VA"	2010	"Lee County"	9	"201 - BLACKWATER"	79	46	126
+"VA"	2010	"Lee County"	9	"202 - FLATWOODS"	186	304	496
+"VA"	2010	"Lee County"	9	"203 - NORTH JONESVILLE"	181	194	380
+"VA"	2010	"Lee County"	9	"204 - SOUTH JONESVILLE"	234	246	491
+"VA"	2010	"Lee County"	9	"301 - BEN HUR"	275	280	556
+"VA"	2010	"Lee County"	9	"302 - WEST PENNINGTON GAP"	168	142	313
+"VA"	2010	"Lee County"	9	"303 - WOODWAY"	255	266	525
+"VA"	2010	"Lee County"	9	"401 - STICKLEYVILLE"	148	143	296
+"VA"	2010	"Lee County"	9	"402 - JASPER"	131	70	203
+"VA"	2010	"Lee County"	9	"403 - SEMINARY"	113	153	272
+"VA"	2010	"Lee County"	9	"404 - DRYDEN"	259	236	500
+"VA"	2010	"Lee County"	9	"501 - SAINT CHARLES"	105	29	138
+"VA"	2010	"Lee County"	9	"502 - STONE CREEK"	70	47	117
+"VA"	2010	"Lee County"	9	"503 - EAST PENNINGTON GAP"	206	218	430
+"VA"	2010	"Lee County"	9	"504 - ROBBINS CHAPEL"	51	50	105
+"VA"	2010	"Lee County"	9	"505 - KEOKEE"	106	32	141
+"VA"	2010	"Lexington City"	6	"001 - LEXINGTON"		678	1192
+"VA"	2010	"Loudoun County"	10	"101 - SANDERS CORNER"	316	796	1123
+"VA"	2010	"Loudoun County"	10	"102 - ASHBURN FARM"	414	998	1465
+"VA"	2010	"Loudoun County"	10	"105 - HILLSIDE"	418	925	1381
+"VA"	2010	"Loudoun County"	10	"106 - EAGLE RIDGE"	369	722	1109
+"VA"	2010	"Loudoun County"	10	"107 - LITTLE RIVER"	182	382	578
+"VA"	2010	"Loudoun County"	10	"108 - MERCER"	481	761	1266
+"VA"	2010	"Loudoun County"	10	"109 - HUTCHISON"	486	843	1365
+"VA"	2010	"Loudoun County"	10	"110 - OAK GROVE"	139	95	239
+"VA"	2010	"Loudoun County"	10	"111 - BRIAR WOODS"	331	536	897
+"VA"	2010	"Loudoun County"	10	"112 - FREEDOM"	510	953	1500
+"VA"	2010	"Loudoun County"	10	"113 - MILL RUN"	334	458	816
+"VA"	2010	"Loudoun County"	10	"114 - DULLES SOUTH"	391	823	1236
+"VA"	2010	"Loudoun County"	10	"115 - PINEBROOK"	270	645	942
+"VA"	2010	"Loudoun County"	10	"116 - LEGACY"	244	459	723
+"VA"	2010	"Loudoun County"	10	"117 - CARTER"	323	346	690
+"VA"	2010	"Loudoun County"	10	"207 - RIVER BEND"	233	489	747
+"VA"	2010	"Loudoun County"	10	"208 - ALGONKIAN"	456	665	1159
+"VA"	2010	"Loudoun County"	10	"209 - POTOMAC FALLS"	392	532	951
+"VA"	2010	"Loudoun County"	10	"210 - CASCADES"	428	637	1087
+"VA"	2010	"Loudoun County"	10	"211 - BUCHANAN"	135	221	371
+"VA"	2010	"Loudoun County"	10	"212 - CLAUDE MOORE PARK"	421	396	838
+"VA"	2010	"Loudoun County"	10	"213 - COUNTRYSIDE"	224	395	634
+"VA"	2010	"Loudoun County"	10	"301 - PURCELLVILLE ONE"	347	763	1135
+"VA"	2010	"Loudoun County"	10	"302 - ROUND HILL"	277	660	964
+"VA"	2010	"Loudoun County"	10	"303 - HILLSBORO"	243	658	936
+"VA"	2010	"Loudoun County"	10	"304 - HAMILTON"	476	1123	1643
+"VA"	2010	"Loudoun County"	10	"305 - PHILOMONT"	226	645	893
+"VA"	2010	"Loudoun County"	10	"306 - BETWEEN THE HILLS"	39	121	162
+"VA"	2010	"Loudoun County"	10	"307 - MIDDLEBURG"	182	300	497
+"VA"	2010	"Loudoun County"	10	"308 - ST LOUIS"	212	339	566
+"VA"	2010	"Loudoun County"	10	"309 - ALDIE"	153	255	415
+"VA"	2010	"Loudoun County"	10	"310 - PURCELLVILLE TWO"	236	654	926
+"VA"	2010	"Loudoun County"	10	"311 - WOODGROVE"	215	574	804
+"VA"	2010	"Loudoun County"	10	"401 - WEST LOVETTSVILLE"	311	687	1029
+"VA"	2010	"Loudoun County"	10	"402 - WATERFORD"	312	689	1023
+"VA"	2010	"Loudoun County"	10	"403 - LUCKETTS"	252	609	886
+"VA"	2010	"Loudoun County"	10	"405 - GREENWAY"	236	391	640
+"VA"	2010	"Loudoun County"	10	"406 - BALLS BLUFF"	376	709	1104
+"VA"	2010	"Loudoun County"	10	"407 - HARPER PARK"	489	1156	1676
+"VA"	2010	"Loudoun County"	10	"408 - EVERGREEN"	453	973	1458
+"VA"	2010	"Loudoun County"	10	"409 - CLARKES GAP"	208	458	683
+"VA"	2010	"Loudoun County"	10	"410 - TOLBERT"	444	685	1155
+"VA"	2010	"Loudoun County"	10	"411 - EAST LOVETTSVILLE"	297	644	968
+"VA"	2010	"Loudoun County"	10	"412 - HERITAGE"	248	564	845
+"VA"	2010	"Loudoun County"	10	"501 - WEST LEESBURG"	426	641	1097
+"VA"	2010	"Loudoun County"	10	"502 - EAST LEESBURG"	418	451	898
+"VA"	2010	"Loudoun County"	10	"503 - DRY MILL"	217	378	621
+"VA"	2010	"Loudoun County"	10	"504 - SMARTS MILL"	389	611	1025
+"VA"	2010	"Loudoun County"	10	"505 - COOL SPRING"	321	745	1094
+"VA"	2010	"Loudoun County"	10	"506 - BRANDON PARK"	178	280	469
+"VA"	2010	"Loudoun County"	10	"604 - SUGARLAND NORTH"	491	901	1407
+"VA"	2010	"Loudoun County"	10	"605 - SUGARLAND SOUTH"	406	570	996
+"VA"	2010	"Loudoun County"	10	"606 - SENECA"	336	483	835
+"VA"	2010	"Loudoun County"	10	"607 - LOWES ISLAND"	335	632	982
+"VA"	2010	"Loudoun County"	10	"608 - MIRROR RIDGE"	372	464	859
+"VA"	2010	"Loudoun County"	10	"609 - SOUTH BANK"	384	705	1105
+"VA"	2010	"Loudoun County"	10	"701 - SULLY"	280	404	705
+"VA"	2010	"Loudoun County"	10	"702 - PARK VIEW"	416	621	1054
+"VA"	2010	"Loudoun County"	10	"703 - ROLLING RIDGE"	423	420	856
+"VA"	2010	"Loudoun County"	10	"704 - GUILFORD"	234	347	598
+"VA"	2010	"Loudoun County"	10	"705 - FOREST GROVE"	304	576	909
+"VA"	2010	"Loudoun County"	10	"808 - STONE BRIDGE"	439	726	1206
+"VA"	2010	"Loudoun County"	10	"809 - RUSSELL BRANCH"	374	661	1061
+"VA"	2010	"Loudoun County"	10	"810 - CEDAR LANE"	362	578	965
+"VA"	2010	"Loudoun County"	10	"811 - DOMINION"	432	675	1128
+"VA"	2010	"Loudoun County"	10	"812 - FARMWELL STATION"	483	739	1242
+"VA"	2010	"Loudoun County"	10	"813 - SELDENS LANDING"	435	586	1044
+"VA"	2010	"Loudoun County"	10	"814 - NEWTON-LEE"	584	1264	1880
+"VA"	2010	"Loudoun County"	10	"815 - BELMONT RIDGE"	685	1180	1894
+"VA"	2010	"Loudoun County"	10	"816 - WELLER"	448	767	1238
+"VA"	2010	"Louisa County"	7	"101 - ZION"	337	588	946
+"VA"	2010	"Louisa County"	7	"102 - MECHANICSVILLE"	230	392	638
+"VA"	2010	"Louisa County"	7	"201 - LOUISA #1"	191	401	633
+"VA"	2010	"Louisa County"	7	"202 - LOUISA #2"	238	332	582
+"VA"	2010	"Louisa County"	7	"301 - PATRICK HENRY NO 1"	670	591	1303
+"VA"	2010	"Louisa County"	7	"401 - MINERAL"	236	604	883
+"VA"	2010	"Louisa County"	7	"402 - YANCEYVILLE"	154	145	315
+"VA"	2010	"Louisa County"	7	"501 - FREDERICKS HALL"	214	343	588
+"VA"	2010	"Louisa County"	7	"502 - CUCKOO"	224	333	583
+"VA"	2010	"Louisa County"	7	"601 - BUMPASS"	134	503	679
+"VA"	2010	"Louisa County"	7	"602 - LOCUST CREEK"	192	395	647
+"VA"	2010	"Louisa County"	7	"701 - SHELTONS MILL"	220	434	728
+"VA"	2010	"Louisa County"	7	"702 - SOUTH ANNA"	151	341	525
+"VA"	2010	"Lunenburg County"	5	"101 - PLYMOUTH"	137	296	451
+"VA"	2010	"Lunenburg County"	5	"201 - BROWNS STORE"	182	321	513
+"VA"	2010	"Lunenburg County"	5	"301 - ROSEBUD"	187	257	454
+"VA"	2010	"Lunenburg County"	5	"302 - FLAT ROCK"	88	84	176
+"VA"	2010	"Lunenburg County"	5	"401 - ARROWHEAD GUN CLUB"	57	155	217
+"VA"	2010	"Lunenburg County"	5	"402 - PLEASANT GROVE"	142	227	385
+"VA"	2010	"Lunenburg County"	5	"501 - REEDY CREEK"	145	128	286
+"VA"	2010	"Lunenburg County"	5	"502 - PEOPLES COMMUNITY CENTER"	237	92	331
+"VA"	2010	"Lunenburg County"	5	"601 - HOUNDS CREEK"	347	229	589
+"VA"	2010	"Lunenburg County"	5	"701 - MEHERRIN FIRE DEPARTMENT"	129	99	239
+"VA"	2010	"Lunenburg County"	5	"702 - VICTORIA PUBLIC LIBRARY"	145	218	372
+"VA"	2010	"Lynchburg City"	6	"101 - FIRST WARD FIRST PRECINCT"		1179	1660
+"VA"	2010	"Lynchburg City"	6	"102 - FIRST WARD SECOND PRECINCT"		1087	1392
+"VA"	2010	"Lynchburg City"	6	"103 - FIRST WARD THIRD PRECINCT"		878	1143
+"VA"	2010	"Lynchburg City"	6	"104 - FIRST WARD FOURTH PRECINCT"		277	428
+"VA"	2010	"Lynchburg City"	6	"105 - FIRST WARD FIFTH PRECINCT"		503	730
+"VA"	2010	"Lynchburg City"	6	"201 - SECOND WARD FIRST PRECINCT"		439	1053
+"VA"	2010	"Lynchburg City"	6	"202 - SECOND WARD SECOND PRECINCT"		302	670
+"VA"	2010	"Lynchburg City"	6	"203 - SECOND WARD THIRD PRECINCT"		134	284
+"VA"	2010	"Lynchburg City"	6	"301 - THIRD WARD FIRST PRECINCT"		426	652
+"VA"	2010	"Lynchburg City"	6	"302 - THIRD WARD SECOND PRECINCT"		208	301
+"VA"	2010	"Lynchburg City"	6	"303 - THIRD WARD THIRD PRECINCT"		463	590
+"VA"	2010	"Lynchburg City"	6	"304 - THIRD WARD FOURTH PRECINCT"		1255	1492
+"VA"	2010	"Lynchburg City"	6	"305 - THIRD WARD FIFTH PRECINCT"		858	1048
+"VA"	2010	"Lynchburg City"	6	"401 - FOURTH WARD FIRST PRECINCT"		1275	1607
+"VA"	2010	"Lynchburg City"	6	"402 - FOURTH WARD SECOND PRECINCT"		521	700
+"VA"	2010	"Lynchburg City"	6	"403 - FOURTH WARD THIRD PRECINCT"		968	1300
+"VA"	2010	"Lynchburg City"	6	"404 - FOURTH WARD FOURTH PRECINCT"		981	1326
+"VA"	2010	"Madison County"	7	"001 - OAK PARK"	152	242	409
+"VA"	2010	"Madison County"	7	"002 - RADIANT"	218	396	626
+"VA"	2010	"Madison County"	7	"003 - ROCHELLE"	94	224	331
+"VA"	2010	"Madison County"	7	"004 - GRAVES MILL"	10	29	39
+"VA"	2010	"Madison County"	7	"005 - MADISON"	226	461	707
+"VA"	2010	"Madison County"	7	"006 - WOLFTOWN"	150	247	406
+"VA"	2010	"Madison County"	7	"007 - BRIGHTWOOD"	164	515	698
+"VA"	2010	"Madison County"	7	"008 - CRIGLERSVILLE"	114	222	347
+"VA"	2010	"Madison County"	7	"009 - ETLAN"	69	128	201
+"VA"	2010	"Manassas City"	10	"001 - DEAN"	495	1062	1596
+"VA"	2010	"Manassas City"	10	"002 - WEEMS"	417	721	1165
+"VA"	2010	"Manassas City"	10	"003 - METZ"	459	731	1210
+"VA"	2010	"Manassas City"	10	"004 - HAYDON"	550	941	1510
+"VA"	2010	"Manassas City"	10	"005 - BALDWIN"	518	656	1193
+"VA"	2010	"Manassas Park City"	10	"001 - PRECINCT ONE"	410	483	917
+"VA"	2010	"Manassas Park City"	10	"002 - PRECINCT TWO"	317	442	773
+"VA"	2010	"Martinsville City"	5	"001 - PRECINCT #1"	477	4	482
+"VA"	2010	"Martinsville City"	5	"002 - PRECINCT #2"	456	299	780
+"VA"	2010	"Martinsville City"	5	"003 - PRECINCT #3"	339	131	491
+"VA"	2010	"Martinsville City"	5	"004 - PRECINCT #4"	574	275	865
+"VA"	2010	"Martinsville City"	5	"005 - PRECINCT #5"	468	854	1344
+"VA"	2010	"Martinsville City"	5	"006 - PRECINCT #6"	251	0	254
+"VA"	2010	"Mathews County"	1	"001 - CHESAPEAKE"	182	533	720
+"VA"	2010	"Mathews County"	1	"002 - WESTVILLE"	284	816	1119
+"VA"	2010	"Mathews County"	1	"003 - PIANKATANK"	325	916	1251
+"VA"	2010	"Meclenburg County"	5	"101 - WRIGHTS STORE"	195	169	367
+"VA"	2010	"Meclenburg County"	5	"102 - PEARSONS STORE"	37	88	131
+"VA"	2010	"Meclenburg County"	5	"103 - SOUTH CLARKSVILLE"	348	259	622
+"VA"	2010	"Meclenburg County"	5	"201 - BOYDTON"	211	189	402
+"VA"	2010	"Meclenburg County"	5	"202 - BLUESTONE SENIOR HIGH SCHOOL"	90	49	140
+"VA"	2010	"Meclenburg County"	5	"203 - CHASE CITY VFW POST"	193	49	244
+"VA"	2010	"Meclenburg County"	5	"301 - BRACEY"	206	471	690
+"VA"	2010	"Meclenburg County"	5	"302 - LACROSSE"	213	236	461
+"VA"	2010	"Meclenburg County"	5	"401 - AMERICAN LEGION HALL"	618	291	925
+"VA"	2010	"Meclenburg County"	5	"402 - PARK VIEW MIDDLE SCHOOL"	101	54	156
+"VA"	2010	"Meclenburg County"	5	"501 - SOUTH HILL"	349	637	996
+"VA"	2010	"Meclenburg County"	5	"601 - BASKERVILLE"	183	280	470
+"VA"	2010	"Meclenburg County"	5	"602 - UNION LEVEL"	89	207	300
+"VA"	2010	"Meclenburg County"	5	"603 - SMITH CROSSROADS"	59	120	181
+"VA"	2010	"Meclenburg County"	5	"604 - LAKE GASTON"	64	124	195
+"VA"	2010	"Meclenburg County"	5	"701 - CHASE CITY"	216	306	528
+"VA"	2010	"Meclenburg County"	5	"702 - SUNSHINE"	123	190	319
+"VA"	2010	"Meclenburg County"	5	"801 - FINCHLEY"	83	127	214
+"VA"	2010	"Meclenburg County"	5	"802 - BLUESTONE"	189	334	533
+"VA"	2010	"Meclenburg County"	5	"803 - CHASE CITY ELEMENTARY SCHOOL"	231	191	429
+"VA"	2010	"Meclenburg County"	5	"901 - AVERETT"	17	110	134
+"VA"	2010	"Meclenburg County"	5	"902 - BUFFALO SPRINGS"	69	200	275
+"VA"	2010	"Meclenburg County"	5	"903 - CLARKSVILLE"	303	605	923
+"VA"	2010	"Middlesex County"	1	"101 - SALUDA"	173	302	481
+"VA"	2010	"Middlesex County"	1	"102 - URBANNA"	101	388	493
+"VA"	2010	"Middlesex County"	1	"103 - HARMONY VILLAGE"	113	246	364
+"VA"	2010	"Middlesex County"	1	"201 - WILTON"	187	549	750
+"VA"	2010	"Middlesex County"	1	"202 - NEW MARKET"	210	741	956
+"VA"	2010	"Middlesex County"	1	"301 - WATERVIEW"	86	192	278
+"VA"	2010	"Middlesex County"	1	"302 - CHURCH VIEW"	154	206	361
+"VA"	2010	"Montgomery County"	9	"101 - PRECINCT A-1"	658	510	1193
+"VA"	2010	"Montgomery County"	9	"102 - PRECINCT A-2"	766	363	1161
+"VA"	2010	"Montgomery County"	9	"103 - PRECINCT A-3"	921	393	1343
+"VA"	2010	"Montgomery County"	9	"201 - PRECINCT B-1"	395	434	844
+"VA"	2010	"Montgomery County"	9	"202 - PRECINCT B-2"	690	612	1331
+"VA"	2010	"Montgomery County"	9	"203 - PRECINCT B-3"	394	471	891
+"VA"	2010	"Montgomery County"	9	"204 - PRECINCT B-4"	665	721	1425
+"VA"	2010	"Montgomery County"	9	"301 - PRECINCT C-1"	456	645	1125
+"VA"	2010	"Montgomery County"	9	"302 - PRECINCT C-2"	496	599	1127
+"VA"	2010	"Montgomery County"	9	"303 - PRECINCT C-3"	163	274	448
+"VA"	2010	"Montgomery County"	9	"304 - PRECINCT C-4"	429	523	971
+"VA"	2010	"Montgomery County"	9	"401 - PRECINCT D-1"	325	394	734
+"VA"	2010	"Montgomery County"	9	"402 - PRECINCT D-2"	400	625	1039
+"VA"	2010	"Montgomery County"	9	"403 - PRECINCT D-3"	396	427	848
+"VA"	2010	"Montgomery County"	9	"404 - PRECINCT D-4"	205	293	511
+"VA"	2010	"Montgomery County"	9	"405 - PRECINCT D-5"	505	586	1122
+"VA"	2010	"Montgomery County"	9	"501 - PRECINCT E-1"	826	621	1474
+"VA"	2010	"Montgomery County"	9	"502 - PRECINCT E-2"	233	222	469
+"VA"	2010	"Montgomery County"	9	"601 - PRECINCT F-1"	877	443	1349
+"VA"	2010	"Montgomery County"	9	"602 - PRECINCT F-2"	503	276	803
+"VA"	2010	"Montgomery County"	9	"701 - PRECINCT G-1"	795	397	1215
+"VA"	2010	"Montgomery County"	9	"702 - PRECINCT G-2"	458	276	745
+"VA"	2010	"Nelson County"	5	"101 - ROCKFISH"	679	495	1206
+"VA"	2010	"Nelson County"	5	"201 - LOVINGSTON"	261	273	546
+"VA"	2010	"Nelson County"	5	"202 - SCHUYLER"	252	174	441
+"VA"	2010	"Nelson County"	5	"301 - SHIPMAN"	545	333	904
+"VA"	2010	"Nelson County"	5	"302 - GLADSTONE"	98	64	164
+"VA"	2010	"Nelson County"	5	"401 - ROSELAND"	449	461	930
+"VA"	2010	"Nelson County"	5	"402 - MONTEBELLO"	38	53	92
+"VA"	2010	"Nelson County"	5	"501 - FABER"	259	200	465
+"VA"	2010	"Nelson County"	5	"502 - NELLYSFORD"	538	498	1056
+"VA"	2010	"New Kent County"	3	"102 - TUNSTALL"	79	272	360
+"VA"	2010	"New Kent County"	3	"103 - SOUTHERN BRANCH"	167	670	882
+"VA"	2010	"New Kent County"	3	"201 - QUINTON"	186	551	773
+"VA"	2010	"New Kent County"	3	"202 - KENTWOOD"	111	458	592
+"VA"	2010	"New Kent County"	3	"301 - WATKINS"	265	354	637
+"VA"	2010	"New Kent County"	3	"302 - CUMBERLAND"	159	257	452
+"VA"	2010	"New Kent County"	3	"402 - CHICKAHOMINY RIVER"	124	410	557
+"VA"	2010	"New Kent County"	3	"403 - AIRPORT"	123	331	474
+"VA"	2010	"New Kent County"	3	"501 - ELTHAM"	153	331	508
+"VA"	2010	"New Kent County"	3	"503 - PROVIDENCE FORGE"	310	998	1362
+"VA"	2010	"Newport News City"	1	"107 - RICHNECK"	822	756	1594
+"VA"	2010	"Newport News City"	1	"109 - WINDSOR"	372	345	724
+"VA"	2010	"Newport News City"	1	"202 - BOULEVARD"	326	660	1005
+"VA"	2010	"Newport News City"	1	"204 - WELLESLEY"	255	415	685
+"VA"	2010	"Newport News City"	1	"205 - DEEP CREEK"	308	991	1311
+"VA"	2010	"Newport News City"	1	"208 - HIDENWOOD"	204	706	920
+"VA"	2010	"Newport News City"	1	"209 - HILTON"	360	702	1088
+"VA"	2010	"Newport News City"	1	"211 - PALMER"	439	531	996
+"VA"	2010	"Newport News City"	1	"212 - RIVERSIDE"	208	589	809
+"VA"	2010	"Newport News City"	1	"215 - WARWICK"	259	351	619
+"VA"	2010	"Newport News City"	1	"216 - YATES"	269	568	847
+"VA"	2010	"Newport News City"	1	"218 - KILN CREEK"	743	1075	1835
+"VA"	2010	"Newport News City"	1	"219 - DEER PARK"	625	727	1374
+"VA"	2010	"Newport News City"	1	"315 - SEDGEFIELD"	325	451	797
+"VA"	2010	"Newport News City"	1	"316 - SOUTH MORRISON"	476	471	957
+"VA"	2010	"Newport News City"	1	"319 - SAUNDERS"	562	770	1353
+"VA"	2010	"Newport News City"	1	"320 - WATKINS"	383	811	1208
+"VA"	2010	"Newport News City"	3	"101 - DENBIGH"	1110	320	1462
+"VA"	2010	"Newport News City"	3	"102 - EPES"	852	307	1179
+"VA"	2010	"Newport News City"	3	"103 - JENKINS"	644	489	1185
+"VA"	2010	"Newport News City"	3	"104 - MCINTOSH"	647	212	879
+"VA"	2010	"Newport News City"	3	"105 - OYSTER POINT"	128	148	284
+"VA"	2010	"Newport News City"	3	"106 - RESERVOIR"	917	521	1471
+"VA"	2010	"Newport News City"	3	"108 - LEE HALL"	705	276	998
+"VA"	2010	"Newport News City"	3	"110 - GREENWOOD"	772	275	1066
+"VA"	2010	"Newport News City"	3	"201 - BLAND"	120	66	189
+"VA"	2010	"Newport News City"	3	"203 - CHARLES"	726	856	1663
+"VA"	2010	"Newport News City"	3	"210 - NELSON"	807	1014	1880
+"VA"	2010	"Newport News City"	3	"213 - SANFORD"	176	404	605
+"VA"	2010	"Newport News City"	3	"217 - RIVERVIEW"	465	669	1182
+"VA"	2010	"Newport News City"	3	"302 - BRIARFIELD"	516	172	701
+"VA"	2010	"Newport News City"	3	"303 - CARVER"	458	117	595
+"VA"	2010	"Newport News City"	3	"304 - CHESTNUT"	420	7	431
+"VA"	2010	"Newport News City"	3	"305 - DOWNTOWN"	169	46	217
+"VA"	2010	"Newport News City"	3	"306 - DUNBAR"	158	5	164
+"VA"	2010	"Newport News City"	3	"307 - HUNTINGTON"	313	4	319
+"VA"	2010	"Newport News City"	3	"308 - JEFFERSON"	398	1	404
+"VA"	2010	"Newport News City"	3	"309 - MAGRUDER"	474	7	482
+"VA"	2010	"Newport News City"	3	"310 - MARSHALL"	533	5	544
+"VA"	2010	"Newport News City"	3	"311 - NEWMARKET"	877	262	1164
+"VA"	2010	"Newport News City"	3	"312 - NEWSOME PARK"	200	5	207
+"VA"	2010	"Newport News City"	3	"313 - REED"	839	15	858
+"VA"	2010	"Newport News City"	3	"314 - RIVER"	318	273	610
+"VA"	2010	"Newport News City"	3	"317 - WASHINGTON"	241	5	248
+"VA"	2010	"Newport News City"	3	"318 - WILSON"	529	48	585
+"VA"	2010	"Norfolk City"	2	"102 - OCEAN VIEW SCHOOL"	584	529	1179
+"VA"	2010	"Norfolk City"	2	"103 - NORTHSIDE"	339	472	872
+"VA"	2010	"Norfolk City"	2	"104 - TITUSTOWN CENTER"	210	29	245
+"VA"	2010	"Norfolk City"	2	"106 - ZION GRACE"	662	581	1277
+"VA"	2010	"Norfolk City"	2	"201 - OLD DOMINION"	342	392	759
+"VA"	2010	"Norfolk City"	2	"208 - LARCHMONT LIBRARY"	293	250	557
+"VA"	2010	"Norfolk City"	2	"209 - LARCHMONT REC CENTER"	432	376	838
+"VA"	2010	"Norfolk City"	2	"213 - TAYLOR ELEMENTARY SCHOOL"	52	27	84
+"VA"	2010	"Norfolk City"	2	"217 - WESLEY"	385	262	681
+"VA"	2010	"Norfolk City"	2	"406 - BARRON BLACK"	398	367	789
+"VA"	2010	"Norfolk City"	2	"408 - EASTON"	506	504	1049
+"VA"	2010	"Norfolk City"	2	"409 - FAIRLAWN"	452	389	874
+"VA"	2010	"Norfolk City"	2	"415 - UNITED WAY"	101	75	180
+"VA"	2010	"Norfolk City"	2	"501 - BAYVIEW SCHOOL"	514	611	1167
+"VA"	2010	"Norfolk City"	2	"503 - EAST OCEAN VIEW"	506	450	993
+"VA"	2010	"Norfolk City"	2	"504 - LARRYMORE"	560	436	1027
+"VA"	2010	"Norfolk City"	2	"505 - LITTLE CREEK"	296	394	710
+"VA"	2010	"Norfolk City"	2	"506 - OCEAN VIEW CENTER"	504	508	1048
+"VA"	2010	"Norfolk City"	2	"508 - OCEANAIR"	368	176	560
+"VA"	2010	"Norfolk City"	2	"509 - TARRALLTON"	446	780	1278
+"VA"	2010	"Norfolk City"	2	"510 - THIRD PRESBYTERIAN"	464	767	1291
+"VA"	2010	"Norfolk City"	2	"511 - CROSSROADS"	405	507	964
+"VA"	2010	"Norfolk City"	2	"512 - AZALEA GARDENS"	319	356	699
+"VA"	2010	"Norfolk City"	3	"101 - GRANBY"	749	465	1265
+"VA"	2010	"Norfolk City"	3	"105 - TUCKER HOUSE"	210	13	228
+"VA"	2010	"Norfolk City"	3	"203 - GHENT SQUARE"	349	213	579
+"VA"	2010	"Norfolk City"	3	"204 - IMMANUEL"	379	33	424
+"VA"	2010	"Norfolk City"	3	"205 - LAFAYETTE LIBRARY"	322	267	609
+"VA"	2010	"Norfolk City"	3	"207 - LAMBERT'S POINT"	344	35	392
+"VA"	2010	"Norfolk City"	3	"210 - MAURY"	588	321	948
+"VA"	2010	"Norfolk City"	3	"211 - CHRYSLER MUSEUM"	637	421	1087
+"VA"	2010	"Norfolk City"	3	"212 - PARK PLACE"	597	20	630
+"VA"	2010	"Norfolk City"	3	"213 - TAYLOR ELEMENTARY SCHOOL"	682	343	1066
+"VA"	2010	"Norfolk City"	3	"214 - STUART"	857	290	1193
+"VA"	2010	"Norfolk City"	3	"215 - SUBURBAN PARK"	505	380	929
+"VA"	2010	"Norfolk City"	3	"218 - WILLARD"	487	444	961
+"VA"	2010	"Norfolk City"	3	"301 - BALLENTINE"	752	74	848
+"VA"	2010	"Norfolk City"	3	"302 - TANNERS CREEK"	334	103	453
+"VA"	2010	"Norfolk City"	3	"303 - BOWLING PARK"	1028	32	1070
+"VA"	2010	"Norfolk City"	3	"304 - COLEMAN PLACE SCHOOL"	376	82	468
+"VA"	2010	"Norfolk City"	3	"305 - LAFAYETTE-WINONA"	694	107	825
+"VA"	2010	"Norfolk City"	3	"306 - LINDENWOOD"	515	46	572
+"VA"	2010	"Norfolk City"	3	"308 - NORVIEW METHODIST"	481	204	710
+"VA"	2010	"Norfolk City"	3	"309 - NORVIEW MIDDLE SCHOOL"	796	89	904
+"VA"	2010	"Norfolk City"	3	"310 - ROSEMONT"	1260	38	1321
+"VA"	2010	"Norfolk City"	3	"311 - SHERWOOD REC CENTER"	574	251	866
+"VA"	2010	"Norfolk City"	3	"312 - SHERWOOD SCHOOL"	338	172	535
+"VA"	2010	"Norfolk City"	3	"313 - UNION CHAPEL"	353	15	376
+"VA"	2010	"Norfolk City"	3	"402 - BERKLEY"	753	11	777
+"VA"	2010	"Norfolk City"	3	"403 - BRAMBLETON"	275	2	282
+"VA"	2010	"Norfolk City"	3	"404 - CAMPOSTELLA"	722	19	747
+"VA"	2010	"Norfolk City"	3	"405 - CHESTERFIELD"	811	23	847
+"VA"	2010	"Norfolk City"	3	"411 - HUNTON Y"	151	1	157
+"VA"	2010	"Norfolk City"	3	"412 - INGLESIDE"	897	84	996
+"VA"	2010	"Norfolk City"	3	"413 - POPLAR HALLS"	1040	205	1273
+"VA"	2010	"Norfolk City"	3	"414 - YOUNG PARK"	774	9	788
+"VA"	2010	"Norfolk City"	3	"415 - UNITED WAY"	400	159	584
+"VA"	2010	"Northampton County"	2	"101 - PRECINCT 1-1"	345	203	563
+"VA"	2010	"Northampton County"	2	"201 - PRECINCT 2-1"	320	334	673
+"VA"	2010	"Northampton County"	2	"301 - PRECINCT 3-1"	323	153	491
+"VA"	2010	"Northampton County"	2	"401 - PRECINCT 4-1"	374	387	775
+"VA"	2010	"Northampton County"	2	"501 - PRECINCT 5-1"	280	340	638
+"VA"	2010	"Northampton County"	2	"601 - PRECINCT 6-1"	381	277	677
+"VA"	2010	"Northumberland County"	1	"101 - 1A"	218	646	870
+"VA"	2010	"Northumberland County"	1	"201 - 2A"	227	609	843
+"VA"	2010	"Northumberland County"	1	"301 - 3A"	290	216	507
+"VA"	2010	"Northumberland County"	1	"302 - 3B"	165	72	238
+"VA"	2010	"Northumberland County"	1	"401 - 4A"	351	980	1340
+"VA"	2010	"Northumberland County"	1	"501 - 5A"	249	824	1085
+"VA"	2010	"Norton City"	9	"001 - EAST WARD"	622	418	1051
+"VA"	2010	"Nottoway County"	4	"101 - PRECINCT 1-1"	168	279	448
+"VA"	2010	"Nottoway County"	4	"102 - PRECINCT 1-2"	83	233	317
+"VA"	2010	"Nottoway County"	4	"201 - PRECINCT 2-1"	156	374	533
+"VA"	2010	"Nottoway County"	4	"202 - PRECINCT 2-2"	46	207	254
+"VA"	2010	"Nottoway County"	4	"301 - PRECINCT 3-1"	244	186	431
+"VA"	2010	"Nottoway County"	4	"302 - PRECINCT 3-2"	76	161	237
+"VA"	2010	"Nottoway County"	4	"401 - PRECINCT 4-1"	241	129	370
+"VA"	2010	"Nottoway County"	4	"402 - PRECINCT 4-2"	115	261	376
+"VA"	2010	"Nottoway County"	4	"501 - PRECINCT 5-1"	243	501	747
+"VA"	2010	"Orange County"	7	"101 - ONE WEST"	373	720	1113
+"VA"	2010	"Orange County"	7	"102 - ONE EAST"	160	183	350
+"VA"	2010	"Orange County"	7	"201 - TWO WEST"	218	501	743
+"VA"	2010	"Orange County"	7	"202 - TWO EAST"	224	381	622
+"VA"	2010	"Orange County"	7	"301 - THREE"	473	748	1262
+"VA"	2010	"Orange County"	7	"401 - FOUR WEST"	192	655	872
+"VA"	2010	"Orange County"	7	"402 - FOUR EAST"	333	777	1137
+"VA"	2010	"Orange County"	7	"501 - FIVE SOUTH"	511	1099	1649
+"VA"	2010	"Orange County"	7	"502 - FIVE NORTH"	305	647	974
+"VA"	2010	"Page County"	7	"101 - WEST LURAY"	294	697	1024
+"VA"	2010	"Page County"	7	"201 - EAST LURAY"	243	703	985
+"VA"	2010	"Page County"	7	"301 - MARKSVILLE"	218	593	838
+"VA"	2010	"Page County"	7	"401 - NEWPORT"	148	651	824
+"VA"	2010	"Page County"	7	"501 - SHENANDOAH"	146	662	832
+"VA"	2010	"Patrick County"	9	"101 - ARARAT"	125	167	302
+"VA"	2010	"Patrick County"	9	"102 - CLAUDVILLE"	103	201	311
+"VA"	2010	"Patrick County"	9	"103 - WILLIS GAP"	103	186	292
+"VA"	2010	"Patrick County"	9	"201 - DRY POND"	55	110	168
+"VA"	2010	"Patrick County"	9	"202 - PATRICK SPRINGS"	211	338	558
+"VA"	2010	"Patrick County"	9	"203 - RUSSELL CREEK"	137	202	343
+"VA"	2010	"Patrick County"	9	"301 - CRITZ/STELLA"	268	392	687
+"VA"	2010	"Patrick County"	9	"302 - LIBERTY"	92	297	405
+"VA"	2010	"Patrick County"	9	"401 - MEADOWS OF DAN"	201	281	487
+"VA"	2010	"Patrick County"	9	"402 - STUART ADMINISTRATION"	238	310	560
+"VA"	2010	"Patrick County"	9	"501 - STUART COMMUNITY"	87	129	223
+"VA"	2010	"Patrick County"	9	"502 - ELAMSVILLE"	144	235	387
+"VA"	2010	"Patrick County"	9	"503 - WOOLWINE"	159	278	446
+"VA"	2010	"Petersburg City"	4	"101 - FIRST WARD FIRST PRECINCT"	589	137	729
+"VA"	2010	"Petersburg City"	4	"201 - SECOND WARD FIRST PRECINCT"	981	272	1258
+"VA"	2010	"Petersburg City"	4	"301 - THIRD WARD FIRST PRECINCT"	1026	540	1573
+"VA"	2010	"Petersburg City"	4	"401 - FOURTH WARD FIRST PRECINCT"	699	267	973
+"VA"	2010	"Petersburg City"	4	"501 - FIFTH WARD FIRST PRECINCT"	628	153	791
+"VA"	2010	"Petersburg City"	4	"601 - SIXTH WARD FIRST PRECINCT"	766	107	878
+"VA"	2010	"Petersburg City"	4	"701 - SEVENTH WARD FIRST PRECINCT"	960	249	1214
+"VA"	2010	"Pittsylvania County"	5	"103 - TWIN SPRINGS"	325	1397	1739
+"VA"	2010	"Pittsylvania County"	5	"105 - CHATHAM"	225	507	746
+"VA"	2010	"Pittsylvania County"	5	"106 - TUNSTALL"	193	447	669
+"VA"	2010	"Pittsylvania County"	5	"108 - WEST BLAIRS"	151	250	407
+"VA"	2010	"Pittsylvania County"	5	"201 - CALLANDS"	207	455	671
+"VA"	2010	"Pittsylvania County"	5	"204 - SANDY LEVEL"	143	277	429
+"VA"	2010	"Pittsylvania County"	5	"206 - CLIMAX"	133	333	482
+"VA"	2010	"Pittsylvania County"	5	"207 - GRETNA"	374	766	1167
+"VA"	2010	"Pittsylvania County"	5	"301 - CENTRAL"	412	187	605
+"VA"	2010	"Pittsylvania County"	5	"305 - RICEVILLE"	378	217	604
+"VA"	2010	"Pittsylvania County"	5	"307 - EAST BLAIRS"	553	179	736
+"VA"	2010	"Pittsylvania County"	5	"308 - MT AIRY"	170	98	272
+"VA"	2010	"Pittsylvania County"	5	"309 - EAST GRETNA"	239	166	414
+"VA"	2010	"Pittsylvania County"	5	"402 - KEELING"	186	454	652
+"VA"	2010	"Pittsylvania County"	5	"404 - KENTUCK"	375	847	1245
+"VA"	2010	"Pittsylvania County"	5	"405 - RINGGOLD"	465	803	1295
+"VA"	2010	"Pittsylvania County"	5	"501 - HURT"	387	580	1002
+"VA"	2010	"Pittsylvania County"	5	"502 - MOTLEY SYCAMORE"	420	560	1004
+"VA"	2010	"Pittsylvania County"	5	"503 - RENAN"	189	314	512
+"VA"	2010	"Pittsylvania County"	5	"602 - BEARSKIN"	87	100	191
+"VA"	2010	"Pittsylvania County"	5	"603 - STONY MILL"	237	498	759
+"VA"	2010	"Pittsylvania County"	5	"604 - SWANSONVILLE"	281	310	608
+"VA"	2010	"Pittsylvania County"	5	"605 - WHITMELL"	239	413	666
+"VA"	2010	"Pittsylvania County"	5	"606 - BROSVILLE"	357	323	694
+"VA"	2010	"Pittsylvania County"	5	"607 - DRY FORK"	87	238	332
+"VA"	2010	"Pittsylvania County"	5	"702 - BACHELORS HALL"	183	667	865
+"VA"	2010	"Pittsylvania County"	5	"703 - FERRY ROAD"	83	133	219
+"VA"	2010	"Pittsylvania County"	5	"704 - MT HERMON"	418	925	1378
+"VA"	2010	"Pittsylvania County"	5	"705 - MT CROSS"	164	514	692
+"VA"	2010	"Poquoson City"	1	"001 - CENTRAL"	204	1105	1333
+"VA"	2010	"Poquoson City"	1	"002 - EASTERN"	184	1244	1443
+"VA"	2010	"Poquoson City"	1	"003 - WESTERN"	204	1336	1557
+"VA"	2010	"Portsmouth City"	3	"001 - ONE"	540	286	858
+"VA"	2010	"Portsmouth City"	3	"005 - FIVE"	533	19	562
+"VA"	2010	"Portsmouth City"	3	"007 - SEVEN"	417	134	581
+"VA"	2010	"Portsmouth City"	3	"009 - NINE"	615	123	766
+"VA"	2010	"Portsmouth City"	3	"010 - TEN"	302	167	505
+"VA"	2010	"Portsmouth City"	3	"011 - ELEVEN"	519	5	528
+"VA"	2010	"Portsmouth City"	3	"013 - THIRTEEN"	379	11	396
+"VA"	2010	"Portsmouth City"	3	"014 - FOURTEEN"	736	22	760
+"VA"	2010	"Portsmouth City"	3	"016 - SIXTEEN"	403	218	657
+"VA"	2010	"Portsmouth City"	3	"017 - SEVENTEEN"	507	207	785
+"VA"	2010	"Portsmouth City"	3	"019 - NINETEEN"	229	199	449
+"VA"	2010	"Portsmouth City"	3	"020 - TWENTY"	418	125	566
+"VA"	2010	"Portsmouth City"	3	"021 - TWENTY-ONE"	549	8	560
+"VA"	2010	"Portsmouth City"	3	"022 - TWENTY-TWO"	296	231	585
+"VA"	2010	"Portsmouth City"	3	"023 - TWENTY-THREE"	295	380	733
+"VA"	2010	"Portsmouth City"	3	"024 - TWENTY-FOUR"	386	233	653
+"VA"	2010	"Portsmouth City"	3	"025 - TWENTY FIVE"	498	337	876
+"VA"	2010	"Portsmouth City"	3	"026 - TWENTY-SIX"	922	10	940
+"VA"	2010	"Portsmouth City"	3	"027 - TWENTY-SEVEN"	993	18	1017
+"VA"	2010	"Portsmouth City"	3	"028 - TWENTY EIGHT"	1410	23	1444
+"VA"	2010	"Portsmouth City"	3	"029 - TWENTY NINE"	197	356	599
+"VA"	2010	"Portsmouth City"	3	"030 - THIRTY"	218	360	626
+"VA"	2010	"Portsmouth City"	3	"031 - THIRTY-ONE"	555	309	930
+"VA"	2010	"Portsmouth City"	3	"032 - THIRTY-TWO"	325	439	810
+"VA"	2010	"Portsmouth City"	3	"033 - THIRTY-THREE"	232	413	672
+"VA"	2010	"Portsmouth City"	3	"034 - THIRTY-FOUR"	396	535	965
+"VA"	2010	"Portsmouth City"	3	"035 - THIRTY-FIVE"	477	535	1057
+"VA"	2010	"Portsmouth City"	3	"036 - THIRTY-SIX"	957	812	1870
+"VA"	2010	"Portsmouth City"	3	"037 - THIRTY-SEVEN"	861	463	1388
+"VA"	2010	"Portsmouth City"	3	"038 - THIRTY EIGHT"	1057	153	1242
+"VA"	2010	"Portsmouth City"	3	"039 - THIRTY-NINE"	1160	389	1583
+"VA"	2010	"Portsmouth City"	3	"101 - SUBLETTS"	183	983	1167
+"VA"	2010	"Portsmouth City"	3	"102 - MANAKIN"	128	601	730
+"VA"	2010	"Portsmouth City"	3	"103 - FLAT ROCK"	58	368	426
+"VA"	2010	"Portsmouth City"	3	"201 - POWHATAN STATION"	112	780	892
+"VA"	2010	"Portsmouth City"	3	"202 - GRACELAND"	174	809	983
+"VA"	2010	"Portsmouth City"	3	"301 - BETHESDA"	187	837	1026
+"VA"	2010	"Portsmouth City"	3	"302 - LEE'S LANDING"	130	574	704
+"VA"	2010	"Portsmouth City"	3	"401 - POWHATAN COURTHOUSE"	183	1077	1265
+"VA"	2010	"Portsmouth City"	3	"402 - BALLSVILLE"	157	613	772
+"VA"	2010	"Portsmouth City"	3	"501 - SMITH CROSS ROADS"	266	428	695
+"VA"	2010	"Portsmouth City"	3	"502 - PINEVILLE"	147	235	383
+"VA"	2010	"Prince Edward County"	5	"101 - FARMVILLE"	352	306	667
+"VA"	2010	"Prince Edward County"	5	"201 - LOCKETT"	446	409	869
+"VA"	2010	"Prince Edward County"	5	"301 - LEIGH"	285	223	526
+"VA"	2010	"Prince Edward County"	5	"302 - MT PLEASANT"	183	106	296
+"VA"	2010	"Prince Edward County"	5	"401 - HAMPDEN"	340	332	684
+"VA"	2010	"Prince Edward County"	5	"501 - DARLINGTON HTS"	207	267	480
+"VA"	2010	"Prince Edward County"	5	"502 - BUFFALO HTS"	165	236	406
+"VA"	2010	"Prince Edward County"	5	"601 - PROSPECT"	526	327	872
+"VA"	2010	"Prince Edward County"	5	"701 - WEST END"	302	331	642
+"VA"	2010	"Prince Edward County"	5	"801 - CENTER"	284	68	356
+"VA"	2010	"Prince George County"	3	"105 - HARRISON"	90	260	359
+"VA"	2010	"Prince George County"	3	"201 - BLAND"	405	1006	1459
+"VA"	2010	"Prince George County"	3	"202 - BLACK WATER"	314	663	1018
+"VA"	2010	"Prince George County"	3	"203 - BRANDON"	113	278	412
+"VA"	2010	"Prince George County"	3	"204 - COURTS BLDG"	515	605	1142
+"VA"	2010	"Prince George County"	3	"205 - JEFFERSON PARK"	240	119	369
+"VA"	2010	"Prince George County"	4	"101 - RICHARD BLAND"	186	520	706
+"VA"	2010	"Prince George County"	4	"102 - TEMPLETON"	379	1144	1526
+"VA"	2010	"Prince George County"	4	"103 - UNION BRANCH"	375	579	955
+"VA"	2010	"Prince George County"	4	"104 - RIVES"	309	379	688
+"VA"	2010	"Prince George County"	4	"205 - JEFFERSON PARK"	113	138	253
+"VA"	2010	"Prince William County"	1	"211 - POWELL"	158	166	330
+"VA"	2010	"Prince William County"	1	"301 - DUMFRIES"	426	239	675
+"VA"	2010	"Prince William County"	1	"302 - POTOMAC"	494	156	656
+"VA"	2010	"Prince William County"	1	"303 - GRAHAM PARK"	646	482	1148
+"VA"	2010	"Prince William County"	1	"304 - QUANTICO"	114	143	259
+"VA"	2010	"Prince William County"	1	"306 - WASHINGTON-REID"	576	687	1282
+"VA"	2010	"Prince William County"	1	"309 - ASHLAND"	347	456	810
+"VA"	2010	"Prince William County"	1	"310 - FOREST PARK"	431	345	781
+"VA"	2010	"Prince William County"	1	"311 - SWANS CREEK"	736	400	1141
+"VA"	2010	"Prince William County"	1	"706 - RIPPON"	1042	589	1660
+"VA"	2010	"Prince William County"	1	"708 - RIVER OAKS"	663	203	874
+"VA"	2010	"Prince William County"	10	"103 - BUCKHALL"	343	661	1032
+"VA"	2010	"Prince William County"	10	"105 - PARKSIDE"	438	711	1180
+"VA"	2010	"Prince William County"	10	"106 - ELLIS"	172	228	407
+"VA"	2010	"Prince William County"	10	"114 - SIGNAL HILL"	372	894	1288
+"VA"	2010	"Prince William County"	10	"401 - EVERGREEN"	265	861	1167
+"VA"	2010	"Prince William County"	10	"402 - BATTLEFIELD"	352	1278	1665
+"VA"	2010	"Prince William County"	10	"404 - SINCLAIR"	445	473	945
+"VA"	2010	"Prince William County"	10	"405 - STONEWALL"	335	702	1070
+"VA"	2010	"Prince William County"	10	"407 - WESTGATE"	297	358	679
+"VA"	2010	"Prince William County"	10	"409 - SUDLEY NORTH"	330	254	602
+"VA"	2010	"Prince William County"	10	"411 - MULLEN"	451	420	890
+"VA"	2010	"Prince William County"	11	"101 - BRENTSVILLE"	175	588	785
+"VA"	2010	"Prince William County"	11	"102 - BENNETT"	720	1285	2070
+"VA"	2010	"Prince William County"	11	"104 - NOKESVILLE"	331	895	1261
+"VA"	2010	"Prince William County"	11	"107 - MARSTELLER"	695	1009	1741
+"VA"	2010	"Prince William County"	11	"108 - VICTORY"	837	1176	2045
+"VA"	2010	"Prince William County"	11	"109 - PARK"	270	665	959
+"VA"	2010	"Prince William County"	11	"110 - BUCKLAND MILLS"	637	915	1594
+"VA"	2010	"Prince William County"	11	"111 - BRISTOW RUN"	545	885	1460
+"VA"	2010	"Prince William County"	11	"112 - CEDAR POINT"	539	889	1469
+"VA"	2010	"Prince William County"	11	"113 - LIMESTONE"	440	703	1170
+"VA"	2010	"Prince William County"	11	"201 - SAUNDERS"	1034	697	1761
+"VA"	2010	"Prince William County"	11	"202 - MARSHALL"	476	825	1330
+"VA"	2010	"Prince William County"	11	"203 - BENTON"	492	1018	1549
+"VA"	2010	"Prince William County"	11	"204 - MC COART"	794	915	1736
+"VA"	2010	"Prince William County"	11	"205 - BEVILLE"	581	334	931
+"VA"	2010	"Prince William County"	11	"206 - KING"	717	393	1133
+"VA"	2010	"Prince William County"	11	"207 - LODGE"	744	547	1322
+"VA"	2010	"Prince William County"	11	"208 - WESTRIDGE"	879	845	1755
+"VA"	2010	"Prince William County"	11	"209 - WOODBINE"	413	681	1120
+"VA"	2010	"Prince William County"	11	"210 - PENN"	433	676	1135
+"VA"	2010	"Prince William County"	11	"305 - PATTIE"	497	605	1132
+"VA"	2010	"Prince William County"	11	"307 - HENDERSON"	883	1033	1950
+"VA"	2010	"Prince William County"	11	"308 - MONTCLAIR"	689	817	1541
+"VA"	2010	"Prince William County"	11	"403 - BULL RUN"	743	1247	2031
+"VA"	2010	"Prince William County"	11	"406 - ALVEY"	793	1470	2298
+"VA"	2010	"Prince William County"	11	"408 - GLENKIRK"	341	589	949
+"VA"	2010	"Prince William County"	11	"410 - MOUNTAIN VIEW"	514	1157	1695
+"VA"	2010	"Prince William County"	11	"412 - PACE WEST"	576	740	1353
+"VA"	2010	"Prince William County"	11	"501 - LAKE RIDGE"	775	871	1690
+"VA"	2010	"Prince William County"	11	"502 - OCCOQUAN"	974	574	1581
+"VA"	2010	"Prince William County"	11	"503 - OLD BRIDGE"	491	735	1247
+"VA"	2010	"Prince William County"	11	"504 - ROCKLEDGE"	655	750	1443
+"VA"	2010	"Prince William County"	11	"505 - MOHICAN"	532	422	978
+"VA"	2010	"Prince William County"	11	"506 - BETHEL"	716	699	1452
+"VA"	2010	"Prince William County"	11	"507 - CHINN"	526	459	999
+"VA"	2010	"Prince William County"	11	"508 - SPRINGWOODS"	394	239	646
+"VA"	2010	"Prince William County"	11	"601 - DALE"	484	205	708
+"VA"	2010	"Prince William County"	11	"602 - NEABSCO"	512	327	856
+"VA"	2010	"Prince William County"	11	"603 - GODWIN"	809	414	1244
+"VA"	2010	"Prince William County"	11	"604 - CIVIC CENTER"	544	292	859
+"VA"	2010	"Prince William County"	11	"605 - MINNIEVILLE"	512	421	960
+"VA"	2010	"Prince William County"	11	"606 - BEL AIR"	490	370	882
+"VA"	2010	"Prince William County"	11	"607 - KERRYDALE"	630	343	1001
+"VA"	2010	"Prince William County"	11	"608 - ENTERPRISE"	720	495	1257
+"VA"	2010	"Prince William County"	11	"609 - FREEDOM"	440	113	561
+"VA"	2010	"Prince William County"	11	"701 - BELMONT"	465	506	990
+"VA"	2010	"Prince William County"	11	"702 - LIBRARY"	730	419	1178
+"VA"	2010	"Prince William County"	11	"703 - LYNN"	451	157	629
+"VA"	2010	"Prince William County"	11	"704 - FEATHERSTONE"	850	573	1460
+"VA"	2010	"Prince William County"	11	"705 - POTOMAC VIEW"	285	276	590
+"VA"	2010	"Prince William County"	11	"707 - KILBY"	379	263	667
+"VA"	2010	"Pulaski County"	9	"101 - BELSPRING"	213	206	429
+"VA"	2010	"Pulaski County"	9	"102 - NEW RIVER"	675	489	1182
+"VA"	2010	"Pulaski County"	9	"103 - WEST CLOYD"	311	324	650
+"VA"	2010	"Pulaski County"	9	"201 - DRAPER"	329	433	779
+"VA"	2010	"Pulaski County"	9	"202 - SOUTH PULASKI"	140	98	243
+"VA"	2010	"Pulaski County"	9	"203 - NEWBERN"	539	429	987
+"VA"	2010	"Pulaski County"	9	"301 - DUBLIN"	564	626	1213
+"VA"	2010	"Pulaski County"	9	"302 - HIWASSEE"	87	124	218
+"VA"	2010	"Pulaski County"	9	"304 - SNOWVILLE"	253	392	663
+"VA"	2010	"Pulaski County"	9	"401 - MASSIE"	673	750	1447
+"VA"	2010	"Pulaski County"	9	"402 - WALKER"	176	293	478
+"VA"	2010	"Pulaski County"	9	"501 - ROBINSON"	778	683	1504
+"VA"	2010	"Radford City"	9	"001 - EAST WARD PRECINCT"	486	332	835
+"VA"	2010	"Radford City"	9	"002 - WEST WARD ONE PRECINCT"	628	437	1079
+"VA"	2010	"Radford City"	9	"003 - WEST TWO PRECINCT"	561	481	1066
+"VA"	2010	"Rappahannock County"	7	"101 - WASHINGTON"	255	307	576
+"VA"	2010	"Rappahannock County"	7	"201 - AMISSVILLE"	186	370	564
+"VA"	2010	"Rappahannock County"	7	"301 - SPERRYVILLE"	270	230	512
+"VA"	2010	"Rappahannock County"	7	"401 - SCRABBLE"	237	307	564
+"VA"	2010	"Rappahannock County"	7	"501 - CHESTER GAP"	47	142	195
+"VA"	2010	"Rappahannock County"	7	"502 - FLINT HILL"	150	179	337
+"VA"	2010	"Richmond City"	3	"113 - ONE HUNDRED THIRTEEN"	499	236	770
+"VA"	2010	"Richmond City"	3	"114 - ONE HUNDRED FOURTEEN"	651	321	1024
+"VA"	2010	"Richmond City"	3	"203 - TWO HUNDRED THREE"	558	178	763
+"VA"	2010	"Richmond City"	3	"204 - TWO HUNDRED FOUR"	428	231	699
+"VA"	2010	"Richmond City"	3	"206 - TWO HUNDRED SIX"	347	89	451
+"VA"	2010	"Richmond City"	3	"207 - TWO HUNDRED SEVEN"	534	303	871
+"VA"	2010	"Richmond City"	3	"208 - TWO HUNDRED EIGHT"	604	304	959
+"VA"	2010	"Richmond City"	3	"211 - TWO HUNDRED ELEVEN"	290	64	372
+"VA"	2010	"Richmond City"	3	"212 - TWO HUNDRED TWELVE"	160	17	177
+"VA"	2010	"Richmond City"	3	"213 - TWO HUNDRED THIRTEEN"	623	65	708
+"VA"	2010	"Richmond City"	3	"303 - THREE HUNDRED THREE"	515	17	536
+"VA"	2010	"Richmond City"	3	"304 - THREE HUNDRED FOUR"	830	47	890
+"VA"	2010	"Richmond City"	3	"305 - THREE HUNDRED FIVE"	528	33	571
+"VA"	2010	"Richmond City"	3	"306 - THREE HUNDRED SIX"	355	10	369
+"VA"	2010	"Richmond City"	3	"309 - THREE HUNDRED NINE"	320	286	642
+"VA"	2010	"Richmond City"	3	"402 - FOUR HUNDRED TWO"	856	607	1539
+"VA"	2010	"Richmond City"	3	"501 - FIVE HUNDRED ONE"	685	128	880
+"VA"	2010	"Richmond City"	3	"503 - FIVE HUNDRED THREE"	954	120	1094
+"VA"	2010	"Richmond City"	3	"504 - FIVE HUNDRED FOUR"	853	131	1018
+"VA"	2010	"Richmond City"	3	"505 - FIVE HUNDRED FIVE"	240	56	308
+"VA"	2010	"Richmond City"	3	"508 - FIVE HUNDRED EIGHT"	398	122	545
+"VA"	2010	"Richmond City"	3	"509 - FIVE HUNDRED NINE"	629	65	707
+"VA"	2010	"Richmond City"	3	"510 - FIVE HUNDRED TEN"	695	71	778
+"VA"	2010	"Richmond City"	3	"602 - SIX HUNDRED TWO"	392	29	427
+"VA"	2010	"Richmond City"	3	"603 - SIX HUNDRED THREE"	468	23	501
+"VA"	2010	"Richmond City"	3	"604 - SIX HUNDRED FOUR"	426	48	482
+"VA"	2010	"Richmond City"	3	"606 - SIX HUNDRED SIX"	669	53	729
+"VA"	2010	"Richmond City"	3	"607 - SIX HUNDRED SEVEN"	131	64	208
+"VA"	2010	"Richmond City"	3	"609 - SIX HUNDRED NINE"	212	41	262
+"VA"	2010	"Richmond City"	3	"610 - SIX HUNDRED TEN"	446	31	486
+"VA"	2010	"Richmond City"	3	"701 - SEVEN HUNDRED ONE"	419	18	442
+"VA"	2010	"Richmond City"	3	"702 - SEVEN HUNDRED TWO"	385	15	406
+"VA"	2010	"Richmond City"	3	"703 - SEVEN HUNDRED THREE"	617	55	687
+"VA"	2010	"Richmond City"	3	"705 - SEVEN HUNDRED FIVE"	406	60	480
+"VA"	2010	"Richmond City"	3	"706 - SEVEN HUNDRED SIX"	831	151	1002
+"VA"	2010	"Richmond City"	3	"707 - SEVEN HUNDRED SEVEN"	1010	316	1379
+"VA"	2010	"Richmond City"	3	"802 - EIGHT HUNDRED TWO"	490	18	512
+"VA"	2010	"Richmond City"	3	"806 - EIGHT HUNDRED SIX"	726	77	820
+"VA"	2010	"Richmond City"	3	"810 - EIGHT HUNDRED TEN"	600	73	685
+"VA"	2010	"Richmond City"	3	"811 - EIGHT HUNDRED ELEVEN"	548	57	615
+"VA"	2010	"Richmond City"	3	"812 - EIGHT HUNDRED TWELVE"	930	178	1127
+"VA"	2010	"Richmond City"	3	"814 - EIGHT HUNDRED FOURTEEN"	603	47	657
+"VA"	2010	"Richmond City"	3	"902 - NINE HUNDRED TWO"	299	33	336
+"VA"	2010	"Richmond City"	3	"903 - NINE HUNDRED THREE"	1035	145	1206
+"VA"	2010	"Richmond City"	3	"910 - NINE HUNDRED TEN"	359	53	422
+"VA"	2010	"Richmond City"	3	"911 - NINE HUNDRED ELEVEN"	492	33	532
+"VA"	2010	"Richmond City"	7	"101 - ONE HUNDRED ONE"	336	620	994
+"VA"	2010	"Richmond City"	7	"102 - ONE HUNDRED TWO"	216	397	634
+"VA"	2010	"Richmond City"	7	"104 - ONE HUNDRED FOUR"	265	708	1019
+"VA"	2010	"Richmond City"	7	"105 - ONE HUNDRED FIVE"	297	471	803
+"VA"	2010	"Richmond City"	7	"106 - ONE HUNDRED SIX"	189	889	1139
+"VA"	2010	"Richmond City"	7	"111 - ONE HUNDRED ELEVEN"	346	391	778
+"VA"	2010	"Richmond City"	7	"112 - ONE HUNDRED TWELVE"	258	308	608
+"VA"	2010	"Richmond City"	7	"301 - THREE HUNDRED ONE"	439	63	516
+"VA"	2010	"Richmond City"	7	"302 - THREE HUNDRED TWO"	518	91	633
+"VA"	2010	"Richmond City"	7	"307 - THREE HUNDRED SEVEN"	525	175	728
+"VA"	2010	"Richmond City"	7	"308 - THREE HUNDRED EIGHT"	593	278	902
+"VA"	2010	"Richmond City"	7	"404 - FOUR HUNDRED FOUR"	897	366	1330
+"VA"	2010	"Richmond City"	7	"409 - FOUR HUNDRED NINE"	846	863	1796
+"VA"	2010	"Richmond City"	7	"410 - FOUR HUNDRED TEN"	734	591	1406
+"VA"	2010	"Richmond City"	7	"412 - FOUR HUNDRED TWELVE"	460	154	636
+"VA"	2010	"Richmond City"	7	"413 - FOUR HUNDRED THIRTEEN"	729	803	1609
+"VA"	2010	"Richmond City"	7	"908 - NINE HUNDRED EIGHT"	375	45	432
+"VA"	2010	"Richmond City"	7	"909 - NINE HUNDRED NINE"	538	107	660
+"VA"	2010	"Richmond City"	7	"910 - NINE HUNDRED TEN"	359	52	414
+"VA"	2010	"Richmond County"	1	"101 - PRECINCT 1-1"	212	190	409
+"VA"	2010	"Richmond County"	1	"201 - PRECINCT 2-1"	104	328	435
+"VA"	2010	"Richmond County"	1	"301 - PRECINCT 3-1"	70	347	419
+"VA"	2010	"Richmond County"	1	"302 - PRECINCT 3-2"	24	70	95
+"VA"	2010	"Richmond County"	1	"401 - PRECINCT 4-1"	97	299	398
+"VA"	2010	"Richmond County"	1	"501 - PRECINCT 5-1"	54	270	326
+"VA"	2010	"Richmond County"	1	"502 - PRECINCT 5-2"	40	72	112
+"VA"	2010	"Roanoke City"	6	"001 - HIGHLAND 1"		127	242
+"VA"	2010	"Roanoke City"	6	"002 - HIGHLAND 2"		222	486
+"VA"	2010	"Roanoke City"	6	"005 - JEFFERSON 1"		308	474
+"VA"	2010	"Roanoke City"	6	"007 - JEFFERSON-RIVERDALE"		346	473
+"VA"	2010	"Roanoke City"	6	"008 - JEFFERSON 2"		287	441
+"VA"	2010	"Roanoke City"	6	"009 - TINKER"		563	791
+"VA"	2010	"Roanoke City"	6	"010 - WILLIAMSON ROAD 1"		335	458
+"VA"	2010	"Roanoke City"	6	"011 - WILLIAMSON ROAD 2"		294	387
+"VA"	2010	"Roanoke City"	6	"012 - WILLIAMSON ROAD 3"		169	262
+"VA"	2010	"Roanoke City"	6	"013 - WILLIAMSON ROAD 4"		278	435
+"VA"	2010	"Roanoke City"	6	"014 - WILLIAMSON ROAD 5"		298	419
+"VA"	2010	"Roanoke City"	6	"015 - WILLIAMSON ROAD 6"		349	444
+"VA"	2010	"Roanoke City"	6	"016 - LINCOLN TERRACE"		93	208
+"VA"	2010	"Roanoke City"	6	"017 - MONTEREY"		521	696
+"VA"	2010	"Roanoke City"	6	"018 - PETERS CREEK"		690	1134
+"VA"	2010	"Roanoke City"	6	"019 - MELROSE"		150	332
+"VA"	2010	"Roanoke City"	6	"020 - EUREKA PARK"		235	469
+"VA"	2010	"Roanoke City"	6	"021 - VILLA HEIGHTS"		278	568
+"VA"	2010	"Roanoke City"	6	"022 - WASHINGTON HEIGHTS"		496	882
+"VA"	2010	"Roanoke City"	6	"023 - WESTSIDE"		192	370
+"VA"	2010	"Roanoke City"	6	"024 - RALEIGH COURT 1"		269	512
+"VA"	2010	"Roanoke City"	6	"026 - RALEIGH COURT 2"		340	518
+"VA"	2010	"Roanoke City"	6	"027 - RALEIGH COURT 3"		280	525
+"VA"	2010	"Roanoke City"	6	"028 - RALEIGH COURT 4"		269	439
+"VA"	2010	"Roanoke City"	6	"029 - RALEIGH COURT 5"		286	455
+"VA"	2010	"Roanoke City"	6	"030 - WASENA"		227	429
+"VA"	2010	"Roanoke City"	6	"031 - FISHBURN PARK"		481	647
+"VA"	2010	"Roanoke City"	6	"032 - GRANDIN COURT"		328	532
+"VA"	2010	"Roanoke City"	6	"033 - SOUTH ROANOKE 1"		626	822
+"VA"	2010	"Roanoke City"	6	"034 - SOUTH ROANOKE 2"		726	961
+"VA"	2010	"Roanoke City"	6	"035 - LEE-HI"		1076	1428
+"VA"	2010	"Roanoke City"	6	"037 - GARDEN CITY"		625	806
+"VA"	2010	"Roanoke County"	6	"106 - GREEN HILL"		1071	1348
+"VA"	2010	"Roanoke County"	6	"108 - WILDWOOD"		510	651
+"VA"	2010	"Roanoke County"	6	"201 - PLANTATION"		695	854
+"VA"	2010	"Roanoke County"	6	"202 - BURLINGTON"		392	519
+"VA"	2010	"Roanoke County"	6	"203 - MOUNTAIN VIEW"		1087	1366
+"VA"	2010	"Roanoke County"	6	"205 - ORCHARDS"		1268	1643
+"VA"	2010	"Roanoke County"	6	"206 - HOLLINS"		355	458
+"VA"	2010	"Roanoke County"	6	"302 - POAGES MILL"		1207	1492
+"VA"	2010	"Roanoke County"	6	"303 - WINDSOR HILLS"		663	874
+"VA"	2010	"Roanoke County"	6	"304 - OAK GROVE"		1121	1457
+"VA"	2010	"Roanoke County"	6	"305 - CASTLE ROCK"		1240	1657
+"VA"	2010	"Roanoke County"	6	"306 - GARST MILL"		500	692
+"VA"	2010	"Roanoke County"	6	"402 - BONSACK"		238	281
+"VA"	2010	"Roanoke County"	6	"403 - NORTH VINTON"		760	943
+"VA"	2010	"Roanoke County"	6	"404 - SOUTH VINTON"		762	957
+"VA"	2010	"Roanoke County"	6	"405 - LINDENWOOD"		1326	1646
+"VA"	2010	"Roanoke County"	6	"406 - MOUNT PLEASANT"		969	1190
+"VA"	2010	"Roanoke County"	6	"501 - COTTON HILL"		593	746
+"VA"	2010	"Roanoke County"	6	"502 - PENN FOREST"		626	808
+"VA"	2010	"Roanoke County"	6	"503 - CAVE SPRING"		720	902
+"VA"	2010	"Roanoke County"	6	"504 - OGDEN"		479	677
+"VA"	2010	"Roanoke County"	6	"505 - CLEARBROOK"		484	624
+"VA"	2010	"Roanoke County"	6	"506 - MOUNT VERNON"		524	656
+"VA"	2010	"Roanoke County"	6	"507 - HUNTING HILLS"		979	1201
+"VA"	2010	"Roanoke County"	9	"101 - CATAWBA"	111	269	388
+"VA"	2010	"Roanoke County"	9	"102 - MASON VALLEY"	108	277	394
+"VA"	2010	"Roanoke County"	9	"103 - GLENVAR"	266	597	875
+"VA"	2010	"Roanoke County"	9	"104 - NORTHSIDE"	339	401	753
+"VA"	2010	"Roanoke County"	9	"105 - PETERS CREEK"	501	876	1399
+"VA"	2010	"Roanoke County"	9	"107 - BENNETT SPRINGS"	136	339	493
+"VA"	2010	"Roanoke County"	9	"204 - BOTETOURT SPRINGS"	463	706	1197
+"VA"	2010	"Roanoke County"	9	"301 - BENT MOUNTAIN"	157	216	388
+"VA"	2010	"Rockbridge County"	6	"101 - AIRPORT"		332	468
+"VA"	2010	"Rockbridge County"	6	"102 - BEN SALEM"		261	336
+"VA"	2010	"Rockbridge County"	6	"103 - PLANK ROAD"		154	206
+"VA"	2010	"Rockbridge County"	6	"104 - EFFINGER"		151	187
+"VA"	2010	"Rockbridge County"	6	"201 - COLLIERSTOWN"		225	321
+"VA"	2010	"Rockbridge County"	6	"202 - HIGHLAND BELLE"		430	607
+"VA"	2010	"Rockbridge County"	6	"203 - VO-TECH"		128	187
+"VA"	2010	"Rockbridge County"	6	"301 - MAURY RIVER"		235	292
+"VA"	2010	"Rockbridge County"	6	"302 - NATURAL BRIDGE"		228	291
+"VA"	2010	"Rockbridge County"	6	"303 - FALLING SPRING"		122	158
+"VA"	2010	"Rockbridge County"	6	"401 - FAIRFIELD"		250	329
+"VA"	2010	"Rockbridge County"	6	"402 - MOUNTAIN VIEW"		321	417
+"VA"	2010	"Rockbridge County"	6	"403 - VESUVIUS"		124	146
+"VA"	2010	"Rockbridge County"	6	"501 - GOSHEN"		200	229
+"VA"	2010	"Rockbridge County"	6	"502 - MEADOWVIEW"		200	283
+"VA"	2010	"Rockbridge County"	6	"503 - ROCKBRIDGE BATHS"		148	215
+"VA"	2010	"Rockbridge County"	6	"504 - ROCKBRIDGE"		300	407
+"VA"	2010	"Rockingham County"	6	"101 - BROADWAY"		624	753
+"VA"	2010	"Rockingham County"	6	"102 - TIMBERVILLE"		279	346
+"VA"	2010	"Rockingham County"	6	"103 - FULKS RUN"		367	410
+"VA"	2010	"Rockingham County"	6	"104 - BERGTON"		165	183
+"VA"	2010	"Rockingham County"	6	"105 - LACEY SPRING"		314	355
+"VA"	2010	"Rockingham County"	6	"106 - TENTH LEGION"		285	338
+"VA"	2010	"Rockingham County"	6	"107 - PLAINS"		560	673
+"VA"	2010	"Rockingham County"	6	"201 - SINGERS GLEN"		404	498
+"VA"	2010	"Rockingham County"	6	"202 - EDOM"		359	454
+"VA"	2010	"Rockingham County"	6	"203 - MELROSE"		530	632
+"VA"	2010	"Rockingham County"	6	"204 - MT CLINTON"		373	453
+"VA"	2010	"Rockingham County"	6	"207 - OTTOBINE"		535	646
+"VA"	2010	"Rockingham County"	6	"301 - KEEZLETOWN"		371	450
+"VA"	2010	"Rockingham County"	6	"302 - PORT REPUBLIC"		474	564
+"VA"	2010	"Rockingham County"	6	"303 - NORTH RIVER"		419	494
+"VA"	2010	"Rockingham County"	6	"304 - GROTTOES"		608	724
+"VA"	2010	"Rockingham County"	6	"305 - MASSANETTA SPRINGS"		1375	1842
+"VA"	2010	"Rockingham County"	6	"306 - CROSS KEYS"		322	394
+"VA"	2010	"Rockingham County"	6	"401 - BRIDGEWATER"		1093	1423
+"VA"	2010	"Rockingham County"	6	"402 - MONTEZUMA"		609	721
+"VA"	2010	"Rockingham County"	6	"403 - MT CRAWFORD"		85	105
+"VA"	2010	"Rockingham County"	6	"404 - DAYTON"		440	546
+"VA"	2010	"Rockingham County"	6	"405 - SILVER LAKE"		830	1029
+"VA"	2010	"Rockingham County"	6	"501 - ELKTON"		663	794
+"VA"	2010	"Rockingham County"	6	"502 - SWIFT RUN"		608	698
+"VA"	2010	"Rockingham County"	6	"503 - MCGAHEYSVILLE"		517	633
+"VA"	2010	"Rockingham County"	6	"504 - SOUTH FORK"		306	357
+"VA"	2010	"Rockingham County"	6	"505 - STONY RUN"		588	791
+"VA"	2010	"Russell County"	9	"101 - MOCCASIN"	285	387	685
+"VA"	2010	"Russell County"	9	"102 - COPPER CREEK"	281	242	536
+"VA"	2010	"Russell County"	9	"103 - SOUTH CASTLEWOOD"	315	283	610
+"VA"	2010	"Russell County"	9	"201 - NORTH CASTLEWOOD"	414	335	759
+"VA"	2010	"Russell County"	9	"202 - DANTE"	122	75	202
+"VA"	2010	"Russell County"	9	"203 - CLEVELAND"	220	170	400
+"VA"	2010	"Russell County"	9	"301 - COOKS MILL"	122	76	201
+"VA"	2010	"Russell County"	9	"302 - DAUGHERTY"	31	38	72
+"VA"	2010	"Russell County"	9	"303 - HONAKER"	635	417	1061
+"VA"	2010	"Russell County"	9	"401 - DRILL"	70	32	108
+"VA"	2010	"Russell County"	9	"402 - SWORDS CREEK"	381	345	737
+"VA"	2010	"Russell County"	9	"403 - ELK GARDEN"	394	390	801
+"VA"	2010	"Russell County"	9	"501 - EAST LEBANON"	446	472	938
+"VA"	2010	"Russell County"	9	"502 - WEST LEBANON"	615	484	1125
+"VA"	2010	"Salem City"	6	"001 - NORTH SALEM NO 2"		616	817
+"VA"	2010	"Salem City"	6	"002 - CONEHURST"		283	365
+"VA"	2010	"Salem City"	6	"003 - BEVERLY HEIGHTS"		390	472
+"VA"	2010	"Salem City"	6	"004 - WEST SALEM"		560	673
+"VA"	2010	"Salem City"	6	"005 - NORTH SALEM NO 1"		496	755
+"VA"	2010	"Salem City"	6	"006 - SOUTH SALEM NO 1"		265	416
+"VA"	2010	"Salem City"	6	"007 - SOUTH SALEM NO 2"		442	614
+"VA"	2010	"Salem City"	6	"008 - EAST SALEM"		185	258
+"VA"	2010	"Salem City"	6	"009 - SOUTH SIDE HILLS"		707	880
+"VA"	2010	"Salem City"	6	"010 - HIDDEN VALLEY"		783	1002
+"VA"	2010	"Scott County"	9	"101 - WEBER CITY"	240	267	511
+"VA"	2010	"Scott County"	9	"102 - YUMA"	323	299	627
+"VA"	2010	"Scott County"	9	"202 - WEBER CITY EAST"	218	259	480
+"VA"	2010	"Scott County"	9	"203 - HILTONS"	241	334	586
+"VA"	2010	"Scott County"	9	"204 - CLARK'S"	50	110	160
+"VA"	2010	"Scott County"	9	"301 - NICKELSVILLE"	215	269	491
+"VA"	2010	"Scott County"	9	"302 - SNOWFLAKE"	146	182	336
+"VA"	2010	"Scott County"	9	"303 - TWIN SPRINGS"	160	154	320
+"VA"	2010	"Scott County"	9	"304 - COPPER CREEK"	53	46	102
+"VA"	2010	"Scott County"	9	"401 - GATE CITY"	501	631	1151
+"VA"	2010	"Scott County"	9	"501 - DUNGANNON"	141	104	251
+"VA"	2010	"Scott County"	9	"502 - FORT BLACKMORE"	152	124	280
+"VA"	2010	"Scott County"	9	"503 - MANVILLE"	95	84	181
+"VA"	2010	"Scott County"	9	"504 - RYE COVE"	158	174	341
+"VA"	2010	"Scott County"	9	"601 - CLINCHPORT"	140	118	262
+"VA"	2010	"Scott County"	9	"602 - DUFFIELD-PATTONSVILLE"	306	286	604
+"VA"	2010	"Scott County"	9	"603 - FAIRVIEW"	84	52	138
+"VA"	2010	"Shenandoah County"	6	"101 - ORKNEY SPRINGS"		267	357
+"VA"	2010	"Shenandoah County"	6	"102 - FORESTVILLE"		262	329
+"VA"	2010	"Shenandoah County"	6	"103 - NEW MARKET"		727	900
+"VA"	2010	"Shenandoah County"	6	"201 - CONICVILLE"		570	681
+"VA"	2010	"Shenandoah County"	6	"202 - MT JACKSON"		478	572
+"VA"	2010	"Shenandoah County"	6	"301 - COLUMBIA FURNACE"		214	254
+"VA"	2010	"Shenandoah County"	6	"302 - EDINBURG"		601	741
+"VA"	2010	"Shenandoah County"	6	"303 - ST LUKE"		408	518
+"VA"	2010	"Shenandoah County"	6	"401 - WOODSTOCK"		848	1161
+"VA"	2010	"Shenandoah County"	6	"402 - FORT VALLEY"		302	408
+"VA"	2010	"Shenandoah County"	6	"501 - CEDAR CREEK"		48	63
+"VA"	2010	"Shenandoah County"	6	"502 - MT OLIVE"		412	512
+"VA"	2010	"Shenandoah County"	6	"503 - TOMS BROOK"		412	516
+"VA"	2010	"Shenandoah County"	6	"504 - LEBANON CHURCH"		376	478
+"VA"	2010	"Shenandoah County"	6	"601 - STRASBURG"		757	1083
+"VA"	2010	"Shenandoah County"	6	"602 - SIGNAL KNOB"		302	390
+"VA"	2010	"Smyth County"	9	"101 - SALTVILLE"	562	457	1049
+"VA"	2010	"Smyth County"	9	"201 - SEVEN MILE FORD"	275	367	665
+"VA"	2010	"Smyth County"	9	"202 - RICH VALLEY"	225	181	415
+"VA"	2010	"Smyth County"	9	"301 - CHILHOWIE"	421	684	1142
+"VA"	2010	"Smyth County"	9	"302 - ST CLAIR"	134	137	284
+"VA"	2010	"Smyth County"	9	"401 - EAST PARK"	366	309	703
+"VA"	2010	"Smyth County"	9	"402 - WEST PARK"	179	179	366
+"VA"	2010	"Smyth County"	9	"501 - ATKINS"	349	378	764
+"VA"	2010	"Smyth County"	9	"502 - WASSONA"	391	349	766
+"VA"	2010	"Smyth County"	9	"601 - ROYAL OAK EAST"	339	386	751
+"VA"	2010	"Smyth County"	9	"602 - ROYAL OAK WEST"	188	238	448
+"VA"	2010	"Smyth County"	9	"701 - ADWOLFE"	304	476	806
+"VA"	2010	"Smyth County"	9	"702 - SUGAR GROVE"	222	227	472
+"VA"	2010	"Smyth County"	9	"703 - KONNAROCK"	27	53	80
+"VA"	2010	"Southampton County"	4	"101 - BERLIN"	57	294	351
+"VA"	2010	"Southampton County"	4	"102 - IVOR"	175	311	488
+"VA"	2010	"Southampton County"	4	"201 - BOYKINS"	189	210	399
+"VA"	2010	"Southampton County"	4	"202 - BRANCHVILLE"	55	84	139
+"VA"	2010	"Southampton County"	4	"203 - MEHERRIN"	55	37	92
+"VA"	2010	"Southampton County"	4	"301 - CAPRON"	233	257	490
+"VA"	2010	"Southampton County"	4	"302 - SEBRELL"	89	153	242
+"VA"	2010	"Southampton County"	4	"401 - DREWRYVILLE"	99	133	232
+"VA"	2010	"Southampton County"	4	"501 - HUNTERDALE"	142	461	604
+"VA"	2010	"Southampton County"	4	"502 - FORKS-OF-THE-RIVER"	91	146	237
+"VA"	2010	"Southampton County"	4	"601 - COURTLAND"	171	347	520
+"VA"	2010	"Southampton County"	4	"602 - SEDLEY"	33	215	248
+"VA"	2010	"Southampton County"	4	"701 - BLACKWATER RIVER"	128	100	228
+"VA"	2010	"Southampton County"	4	"702 - NEWSOMS"	110	244	354
+"VA"	2010	"Spoysylvania County"	1	"103 - TRAVELERS REST"	317	534	860
+"VA"	2010	"Spoysylvania County"	1	"104 - MASSAPONAX"	351	629	993
+"VA"	2010	"Spoysylvania County"	1	"201 - ELYS FORD"	197	617	827
+"VA"	2010	"Spoysylvania County"	1	"202 - WILDERNESS"	79	165	248
+"VA"	2010	"Spoysylvania County"	1	"203 - NI RIVER"	348	941	1310
+"VA"	2010	"Spoysylvania County"	1	"204 - CHANCELLOR"	378	627	1025
+"VA"	2010	"Spoysylvania County"	1	"301 - PLANK ROAD"	379	901	1298
+"VA"	2010	"Spoysylvania County"	1	"302 - HAZEL RUN"	384	709	1110
+"VA"	2010	"Spoysylvania County"	1	"303 - GRANGE HALL"	261	805	1080
+"VA"	2010	"Spoysylvania County"	1	"401 - SUMMIT"	767	1248	2032
+"VA"	2010	"Spoysylvania County"	1	"402 - FRAZERS GATE"	418	768	1194
+"VA"	2010	"Spoysylvania County"	1	"403 - LEE HILL"	487	918	1425
+"VA"	2010	"Spoysylvania County"	1	"505 - BROCK"	277	800	1087
+"VA"	2010	"Spoysylvania County"	1	"601 - SALEM"	289	442	741
+"VA"	2010	"Spoysylvania County"	1	"602 - SMITH STATION"	860	1359	2239
+"VA"	2010	"Spoysylvania County"	1	"603 - PIEDMONT"	286	547	852
+"VA"	2010	"Spoysylvania County"	1	"701 - BATTLEFIELD"	341	597	952
+"VA"	2010	"Spoysylvania County"	1	"702 - BRENTS MILL"	317	762	1100
+"VA"	2010	"Spoysylvania County"	1	"703 - FAIRVIEW"	754	1039	1809
+"VA"	2010	"Spoysylvania County"	7	"101 - PARTLOW"	196	523	755
+"VA"	2010	"Spoysylvania County"	7	"102 - BLAYDES CORNER"	202	499	722
+"VA"	2010	"Spoysylvania County"	7	"202 - WILDERNESS"	124	268	403
+"VA"	2010	"Spoysylvania County"	7	"501 - BELMONT"	188	499	715
+"VA"	2010	"Spoysylvania County"	7	"502 - BROKENBURG"	176	632	826
+"VA"	2010	"Spoysylvania County"	7	"503 - TODDS TAVERN"	105	306	423
+"VA"	2010	"Spoysylvania County"	7	"504 - COURTHOUSE"	248	488	755
+"VA"	2010	"Spoysylvania County"	7	"505 - BROCK"	6	22	29
+"VA"	2010	"Stafford County"	1	"101 - HARTWOOD"	418	1247	1684
+"VA"	2010	"Stafford County"	1	"102 - ROCKY RUN"	500	1049	1576
+"VA"	2010	"Stafford County"	1	"103 - SIMPSON"	201	589	801
+"VA"	2010	"Stafford County"	1	"104 - RAMOTH"	394	689	1101
+"VA"	2010	"Stafford County"	1	"201 - ROCK HILL"	373	649	1038
+"VA"	2010	"Stafford County"	1	"202 - ROSEVILLE"	540	879	1437
+"VA"	2010	"Stafford County"	1	"203 - RUBY"	192	646	852
+"VA"	2010	"Stafford County"	1	"204 - STEFANIGA"	420	1009	1448
+"VA"	2010	"Stafford County"	1	"301 - GRIFFIS"	347	384	738
+"VA"	2010	"Stafford County"	1	"302 - WIDEWATER"	483	507	1005
+"VA"	2010	"Stafford County"	1	"303 - HARBOUR"	309	859	1192
+"VA"	2010	"Stafford County"	1	"401 - AQUIA"	442	729	1180
+"VA"	2010	"Stafford County"	1	"402 - COURTHOUSE"	602	599	1216
+"VA"	2010	"Stafford County"	1	"403 - BROOKE"	476	971	1466
+"VA"	2010	"Stafford County"	1	"501 - GRAFTON"	369	921	1302
+"VA"	2010	"Stafford County"	1	"502 - FALMOUTH"	510	977	1504
+"VA"	2010	"Stafford County"	1	"503 - DREW"	173	352	533
+"VA"	2010	"Stafford County"	1	"504 - GAYLE"	657	761	1432
+"VA"	2010	"Stafford County"	1	"601 - FERRY FARM"	340	855	1215
+"VA"	2010	"Stafford County"	1	"602 - CHATHAM"	374	772	1164
+"VA"	2010	"Stafford County"	1	"603 - WHITE OAK"	377	1079	1465
+"VA"	2010	"Stafford County"	1	"701 - WOODLANDS"	399	625	1037
+"VA"	2010	"Stafford County"	1	"702 - WHITSON"	406	556	979
+"VA"	2010	"Stafford County"	1	"703 - HAMPTON"	423	605	1039
+"VA"	2010	"Staunton City"	6	"101 - WARD NO 1"		576	898
+"VA"	2010	"Staunton City"	6	"201 - WARD TWO"		860	1280
+"VA"	2010	"Staunton City"	6	"301 - WARD NO 3"		668	1016
+"VA"	2010	"Staunton City"	6	"401 - WARD NO 4"		600	888
+"VA"	2010	"Staunton City"	6	"501 - WARD NO 5"		446	730
+"VA"	2010	"Suffolk City"	4	"102 - DRIVER"	715	1674	2393
+"VA"	2010	"Suffolk City"	4	"103 - HARBOUR VIEW"	642	510	1154
+"VA"	2010	"Suffolk City"	4	"104 - BENNETTS CREEK"	374	793	1169
+"VA"	2010	"Suffolk City"	4	"201 - EBENEZER"	189	866	1056
+"VA"	2010	"Suffolk City"	4	"202 - CHUCKATUCK"	248	719	967
+"VA"	2010	"Suffolk City"	4	"203 - KINGS FORK"	888	1175	2067
+"VA"	2010	"Suffolk City"	4	"301 - WHITE MARSH"	725	359	1087
+"VA"	2010	"Suffolk City"	4	"302 - JOHN F KENNEDY"	577	484	1061
+"VA"	2010	"Suffolk City"	4	"303 - CYPRESS CHAPEL"	79	184	263
+"VA"	2010	"Suffolk City"	4	"401 - AIRPORT"	207	311	518
+"VA"	2010	"Suffolk City"	4	"402 - WHALEYVILLE"	166	591	757
+"VA"	2010	"Suffolk City"	4	"403 - SOUTHSIDE"	598	154	753
+"VA"	2010	"Suffolk City"	4	"501 - KILBYS MILL"	307	1007	1315
+"VA"	2010	"Suffolk City"	4	"502 - HOLLAND"	191	534	727
+"VA"	2010	"Suffolk City"	4	"503 - HOLY NECK"	258	370	628
+"VA"	2010	"Suffolk City"	4	"504 - LAKE COHOON"	103	524	627
+"VA"	2010	"Suffolk City"	4	"601 - LAKESIDE"	336	693	1029
+"VA"	2010	"Suffolk City"	4	"602 - OLDE TOWNE"	85	177	264
+"VA"	2010	"Suffolk City"	4	"603 - ELEPHANTS FORK/WESTHAVEN"	174	591	765
+"VA"	2010	"Suffolk City"	4	"701 - HOLLYWOOD"	273	59	332
+"VA"	2010	"Suffolk City"	4	"703 - NANSEMOND RIVER"	759	660	1420
+"VA"	2010	"Suffolk City"	4	"705 - YEATES"	1101	551	1656
+"VA"	2010	"Surry County"	3	"101 - SURRY"	261	356	666
+"VA"	2010	"Surry County"	3	"201 - BACONS CASTLE"	414	186	604
+"VA"	2010	"Surry County"	3	"301 - DENDRON"	168	143	319
+"VA"	2010	"Surry County"	3	"302 - WALLS BRIDGE"	194	104	307
+"VA"	2010	"Surry County"	3	"401 - CARSLEY"	327	214	546
+"VA"	2010	"Surry County"	3	"501 - CLAREMONT"	231	183	430
+"VA"	2010	"Surry County"	3	"502 - SPRING GROVE"	180	27	217
+"VA"	2010	"Sussex County"	4	"101 - WAVERLY"	313	140	453
+"VA"	2010	"Sussex County"	4	"201 - STONY CREEK"	235	204	439
+"VA"	2010	"Sussex County"	4	"202 - LITTLE MILL"	63	56	119
+"VA"	2010	"Sussex County"	4	"301 - COURTHOUSE"	120	201	321
+"VA"	2010	"Sussex County"	4	"302 - WAKEFIELD"	26	197	223
+"VA"	2010	"Sussex County"	4	"401 - MARS HILL"	226	164	390
+"VA"	2010	"Sussex County"	4	"402 - WEST WAKEFIELD"	18	25	43
+"VA"	2010	"Sussex County"	4	"501 - HENRY"	225	173	399
+"VA"	2010	"Sussex County"	4	"502 - YALE"	86	66	152
+"VA"	2010	"Sussex County"	4	"601 - BLACKWATER"	76	214	290
+"VA"	2010	"Sussex County"	4	"602 - NEWVILLE"	91	182	273
+"VA"	2010	"Tazewell County"	9	"101 - ABBS VALLEY"	119	56	181
+"VA"	2010	"Tazewell County"	9	"102 - TIP TOP"	104	164	278
+"VA"	2010	"Tazewell County"	9	"103 - BOISSEVAIN"	76	57	141
+"VA"	2010	"Tazewell County"	9	"104 - FALLS MILLS"	80	177	265
+"VA"	2010	"Tazewell County"	9	"106 - POCAHONTAS"	79	56	137
+"VA"	2010	"Tazewell County"	9	"107 - AMONATE"	36	21	61
+"VA"	2010	"Tazewell County"	9	"109 - BISHOP"	65	64	133
+"VA"	2010	"Tazewell County"	9	"110 - ADRIA"	108	160	276
+"VA"	2010	"Tazewell County"	9	"111 - GAP STORE"	122	128	258
+"VA"	2010	"Tazewell County"	9	"112 - BANDY"	67	76	147
+"VA"	2010	"Tazewell County"	9	"203 - BURKES GARDEN"	42	52	96
+"VA"	2010	"Tazewell County"	9	"204 - CLEAR FORK"	96	221	328
+"VA"	2010	"Tazewell County"	9	"207 - FREESTONE"	84	72	157
+"VA"	2010	"Tazewell County"	9	"209 - JEFFERSONVILLE"	687	889	1600
+"VA"	2010	"Tazewell County"	9	"214 - THOMPSON VALLEY"	145	236	391
+"VA"	2010	"Tazewell County"	9	"301 - CEDAR BLUFF"	485	848	1354
+"VA"	2010	"Tazewell County"	9	"302 - BAPTIST VALLEY"	126	134	262
+"VA"	2010	"Tazewell County"	9	"303 - WARDELL"	171	283	458
+"VA"	2010	"Tazewell County"	9	"305 - POUNDING MILL"	144	260	414
+"VA"	2010	"Tazewell County"	9	"401 - RICHLANDS"	593	781	1392
+"VA"	2010	"Tazewell County"	9	"402 - JEWELL RIDGE"	94	58	157
+"VA"	2010	"Tazewell County"	9	"404 - RAVEN"	213	246	470
+"VA"	2010	"Tazewell County"	9	"501 - SPRINGVILLE"	166	475	663
+"VA"	2010	"Tazewell County"	9	"502 - GRAHAM"	553	1180	1756
+"VA"	2010	"Virginia Beach City"	2	"001 - NORTH BEACH"	550	1166	1794
+"VA"	2010	"Virginia Beach City"	2	"002 - SOUTH BEACH"	433	489	988
+"VA"	2010	"Virginia Beach City"	2	"003 - OCEAN LAKES"	609	878	1574
+"VA"	2010	"Virginia Beach City"	2	"004 - LINKHORN"	463	935	1467
+"VA"	2010	"Virginia Beach City"	2	"005 - SEATACK"	610	381	1033
+"VA"	2010	"Virginia Beach City"	2	"006 - ALANTON"	543	1168	1791
+"VA"	2010	"Virginia Beach City"	2	"007 - KINGSTON"	346	738	1153
+"VA"	2010	"Virginia Beach City"	2	"008 - LONDON BRIDGE"	512	719	1300
+"VA"	2010	"Virginia Beach City"	2	"009 - TRANTWOOD"	470	1042	1587
+"VA"	2010	"Virginia Beach City"	2	"010 - GREAT NECK"	505	1296	1860
+"VA"	2010	"Virginia Beach City"	2	"011 - CAPE HENRY"	713	1013	1776
+"VA"	2010	"Virginia Beach City"	2	"012 - PLAZA"	637	551	1259
+"VA"	2010	"Virginia Beach City"	2	"013 - MT TRASHMORE"	625	813	1579
+"VA"	2010	"Virginia Beach City"	2	"014 - MALIBU"	541	738	1361
+"VA"	2010	"Virginia Beach City"	2	"015 - OLD DONATION"	474	623	1183
+"VA"	2010	"Virginia Beach City"	2	"016 - ARAGONA"	704	620	1436
+"VA"	2010	"Virginia Beach City"	2	"017 - OCEAN PARK"	401	592	1047
+"VA"	2010	"Virginia Beach City"	2	"018 - THOROUGHGOOD"	678	1029	1792
+"VA"	2010	"Virginia Beach City"	2	"019 - LAKE SMITH"	282	480	787
+"VA"	2010	"Virginia Beach City"	2	"020 - BAYSIDE"	213	304	553
+"VA"	2010	"Virginia Beach City"	2	"021 - DAVIS CORNER"	693	290	1022
+"VA"	2010	"Virginia Beach City"	2	"022 - POINT O VIEW"	424	685	1156
+"VA"	2010	"Virginia Beach City"	2	"023 - ARROWHEAD"	515	823	1413
+"VA"	2010	"Virginia Beach City"	2	"024 - LARKSPUR"	404	503	943
+"VA"	2010	"Virginia Beach City"	2	"025 - AVALON"	514	986	1577
+"VA"	2010	"Virginia Beach City"	2	"026 - FAIRFIELD"	478	836	1377
+"VA"	2010	"Virginia Beach City"	2	"027 - EDWIN"	587	913	1572
+"VA"	2010	"Virginia Beach City"	2	"028 - THALIA"	366	637	1054
+"VA"	2010	"Virginia Beach City"	2	"029 - HOLLAND"	715	489	1288
+"VA"	2010	"Virginia Beach City"	2	"030 - RED WING"	442	878	1383
+"VA"	2010	"Virginia Beach City"	2	"031 - SIGMA"	503	1151	1736
+"VA"	2010	"Virginia Beach City"	2	"032 - CREEDS"	211	454	726
+"VA"	2010	"Virginia Beach City"	2	"033 - CAPPS SHOP"	209	561	831
+"VA"	2010	"Virginia Beach City"	2	"034 - BLACKWATER"	121	278	416
+"VA"	2010	"Virginia Beach City"	2	"035 - COURTHOUSE"	500	985	1556
+"VA"	2010	"Virginia Beach City"	2	"036 - WINDSOR OAKS"	700	637	1450
+"VA"	2010	"Virginia Beach City"	2	"037 - CHESAPEAKE BEACH"	331	437	814
+"VA"	2010	"Virginia Beach City"	2	"038 - WITCHDUCK"	674	1245	2047
+"VA"	2010	"Virginia Beach City"	2	"039 - PEMBROKE"	551	657	1280
+"VA"	2010	"Virginia Beach City"	2	"040 - BONNEY"	268	407	721
+"VA"	2010	"Virginia Beach City"	2	"041 - COLLEGE PARK"	689	295	1007
+"VA"	2010	"Virginia Beach City"	2	"042 - BRANDON"	552	687	1278
+"VA"	2010	"Virginia Beach City"	2	"043 - BELLAMY"	556	380	966
+"VA"	2010	"Virginia Beach City"	2	"044 - CENTERVILLE"	544	793	1399
+"VA"	2010	"Virginia Beach City"	2	"045 - TIMBERLAKE"	588	350	999
+"VA"	2010	"Virginia Beach City"	2	"046 - GREEN RUN"	842	516	1442
+"VA"	2010	"Virginia Beach City"	2	"047 - KINGS GRANT"	527	1263	1868
+"VA"	2010	"Virginia Beach City"	2	"048 - WOLFSNARE"	481	956	1509
+"VA"	2010	"Virginia Beach City"	2	"049 - LYNNHAVEN"	520	1016	1607
+"VA"	2010	"Virginia Beach City"	2	"050 - OCEANA"	304	184	507
+"VA"	2010	"Virginia Beach City"	2	"051 - STRATFORD CHASE"	450	709	1214
+"VA"	2010	"Virginia Beach City"	2	"052 - HOMESTEAD"	664	905	1640
+"VA"	2010	"Virginia Beach City"	2	"053 - SHANNON"	414	678	1143
+"VA"	2010	"Virginia Beach City"	2	"054 - CROMWELL"	382	384	807
+"VA"	2010	"Virginia Beach City"	2	"055 - MAGIC HOLLOW"	565	386	1005
+"VA"	2010	"Virginia Beach City"	2	"056 - EDINBURGH"	232	406	689
+"VA"	2010	"Virginia Beach City"	2	"057 - SHERRY PARK"	314	525	873
+"VA"	2010	"Virginia Beach City"	2	"058 - GLENWOOD"	562	553	1157
+"VA"	2010	"Virginia Beach City"	2	"059 - SHELTON PARK"	338	472	856
+"VA"	2010	"Virginia Beach City"	2	"060 - FOXFIRE"	419	847	1326
+"VA"	2010	"Virginia Beach City"	2	"061 - BAKER"	759	105	886
+"VA"	2010	"Virginia Beach City"	2	"062 - LANDSTOWN"	553	808	1419
+"VA"	2010	"Virginia Beach City"	2	"063 - CULVER"	524	846	1445
+"VA"	2010	"Virginia Beach City"	2	"064 - ROSEMONT FOREST"	689	806	1551
+"VA"	2010	"Virginia Beach City"	2	"065 - COLONIAL"	446	562	1040
+"VA"	2010	"Virginia Beach City"	2	"066 - HUNT"	381	735	1163
+"VA"	2010	"Virginia Beach City"	2	"067 - EASTERN SHORE"	511	537	1135
+"VA"	2010	"Virginia Beach City"	2	"068 - MANOR"	489	786	1371
+"VA"	2010	"Virginia Beach City"	2	"069 - SHELL"	741	512	1297
+"VA"	2010	"Virginia Beach City"	2	"070 - CORPORATE LANDING"	423	546	1033
+"VA"	2010	"Virginia Beach City"	2	"071 - ROUND HILL"	983	587	1624
+"VA"	2010	"Virginia Beach City"	2	"072 - RUDEE"	449	750	1257
+"VA"	2010	"Virginia Beach City"	2	"073 - DAHLIA"	820	601	1496
+"VA"	2010	"Virginia Beach City"	2	"074 - BUCKNER"	556	333	943
+"VA"	2010	"Virginia Beach City"	2	"075 - COLONY"	524	1030	1615
+"VA"	2010	"Virginia Beach City"	2	"076 - VILLAGE"	439	289	772
+"VA"	2010	"Virginia Beach City"	2	"077 - BROOKWOOD"	457	467	987
+"VA"	2010	"Virginia Beach City"	2	"078 - INDIAN LAKES"	494	578	1112
+"VA"	2010	"Virginia Beach City"	2	"079 - PLEASANT HALL"	528	287	845
+"VA"	2010	"Virginia Beach City"	2	"080 - REON"	518	218	760
+"VA"	2010	"Virginia Beach City"	2	"081 - ROCK LAKE"	643	456	1166
+"VA"	2010	"Virginia Beach City"	2	"082 - SHELBURNE"	378	590	1024
+"VA"	2010	"Virginia Beach City"	2	"083 - STRAWBRIDGE"	420	841	1326
+"VA"	2010	"Virginia Beach City"	2	"084 - TALLWOOD"	534	598	1172
+"VA"	2010	"Virginia Beach City"	2	"085 - UPTON"	529	960	1577
+"VA"	2010	"Virginia Beach City"	2	"086 - HAYGOOD"	533	826	1408
+"VA"	2010	"Virginia Beach City"	2	"087 - HILLCREST"	451	625	1109
+"VA"	2010	"Virginia Beach City"	2	"088 - NORTH LANDING"	326	590	940
+"VA"	2010	"Virginia Beach City"	2	"089 - LAKE CHRISTOPHER"	509	765	1331
+"VA"	2010	"Virginia Beach City"	2	"090 - LAKE JOYCE"	301	484	835
+"VA"	2010	"Virginia Beach City"	2	"091 - LEXINGTON"	478	428	950
+"VA"	2010	"Virginia Beach City"	2	"092 - LITTLE NECK"	336	660	1078
+"VA"	2010	"Virginia Beach City"	2	"093 - NEWTOWN"	471	70	549
+"VA"	2010	"Virginia Beach City"	2	"094 - PINEWOOD"	235	372	653
+"VA"	2010	"Warren County"	10	"101 - FORK TOWN"	142	350	503
+"VA"	2010	"Warren County"	10	"102 - OTTERBURN"	127	465	608
+"VA"	2010	"Warren County"	10	"103 - WATERLICK"	100	342	459
+"VA"	2010	"Warren County"	10	"201 - HAPPY CREEK"	274	856	1162
+"VA"	2010	"Warren County"	10	"202 - LINDEN"	232	546	804
+"VA"	2010	"Warren County"	10	"301 - NORTH RIVER"	187	264	460
+"VA"	2010	"Warren County"	10	"302 - RIVERTON"	152	489	660
+"VA"	2010	"Warren County"	10	"303 - RELIANCE"	68	198	279
+"VA"	2010	"Warren County"	10	"401 - EAST SHENANDOAH"	223	747	1000
+"VA"	2010	"Warren County"	10	"402 - TOWN - WEST SHENANDOAH"	144	481	645
+"VA"	2010	"Warren County"	10	"501 - SOUTH RIVER"	204	394	614
+"VA"	2010	"Warren County"	10	"502 - BENTONVILLE"	67	238	315
+"VA"	2010	"Warren County"	10	"504 - BROWNTOWN"	83	220	314
+"VA"	2010	"Washington County"	9	"101 - EAST ABINGDON"	771	803	1610
+"VA"	2010	"Washington County"	9	"102 - WEST ABINGDON"	578	486	1096
+"VA"	2010	"Washington County"	9	"201 - CLINCHBURG"	177	248	438
+"VA"	2010	"Washington County"	9	"202 - GREENDALE"	608	855	1508
+"VA"	2010	"Washington County"	9	"203 - HAYTERS GAP"	123	167	302
+"VA"	2010	"Washington County"	9	"301 - WATAUGA"	664	866	1571
+"VA"	2010	"Washington County"	9	"302 - SOUTH ABINGDON"	622	692	1350
+"VA"	2010	"Washington County"	9	"401 - GLADE SPRING"	460	567	1049
+"VA"	2010	"Washington County"	9	"402 - MEADOWVIEW"	550	684	1268
+"VA"	2010	"Washington County"	9	"501 - RHEA VALLEY"	544	867	1482
+"VA"	2010	"Washington County"	9	"502 - DAMASCUS"	361	375	770
+"VA"	2010	"Washington County"	9	"504 - GREEN COVE"	45	73	126
+"VA"	2010	"Washington County"	9	"601 - BURSON PLACE"	288	691	1000
+"VA"	2010	"Washington County"	9	"602 - MENDOTA"	100	136	266
+"VA"	2010	"Washington County"	9	"603 - VALLEY INSTITUTE"	308	593	919
+"VA"	2010	"Washington County"	9	"701 - HIGH POINT"	304	618	943
+"VA"	2010	"Washington County"	9	"702 - WALLACE"	240	299	553
+"VA"	2010	"Washington County"	9	"703 - JOHN BATTLE"	419	667	1110
+"VA"	2010	"Waynesboro City"	6	"001 - WARD A"		351	517
+"VA"	2010	"Waynesboro City"	6	"002 - WARD B"		918	1222
+"VA"	2010	"Waynesboro City"	6	"003 - WARD C"		537	778
+"VA"	2010	"Waynesboro City"	6	"004 - WARD D"		1281	1611
+"VA"	2010	"Westmoreland County"	1	"101 - PRECINCT 1-1"	308	264	575
+"VA"	2010	"Westmoreland County"	1	"102 - PRECINCT 1-2"	74	157	234
+"VA"	2010	"Westmoreland County"	1	"201 - PRECINCT 2-1"	402	553	967
+"VA"	2010	"Westmoreland County"	1	"301 - PRECINCT 3-1"	291	599	900
+"VA"	2010	"Westmoreland County"	1	"401 - PRECINCT 4-1"	198	640	843
+"VA"	2010	"Westmoreland County"	1	"501 - PRECINCT 5-1"	257	493	762
+"VA"	2010	"Williamsburg City"	1	"001 - STRYKER"	1203	792	2065
+"VA"	2010	"Williamsburg City"	1	"002 - BERKELEY"	539	710	1267
+"VA"	2010	"Winchester City"	10	"101 - MERRIMANS"	416	865	1311
+"VA"	2010	"Winchester City"	10	"102 - OLD TOWN"	275	548	852
+"VA"	2010	"Winchester City"	10	"201 - VIRGINIA AVENUE"	332	307	660
+"VA"	2010	"Winchester City"	10	"301 - WAR MEMORIAL"	239	439	706
+"VA"	2010	"Winchester City"	10	"401 - FREDERICK DOUGLASS"	381	871	1291
+"VA"	2010	"Wise County"	9	"101 - APPALACHIA"	376	214	599
+"VA"	2010	"Wise County"	9	"102 - DORCHESTER"	189	175	371
+"VA"	2010	"Wise County"	9	"103 - GUEST RIVER VOTING PLACE"	214	180	405
+"VA"	2010	"Wise County"	9	"104 - WEST POUND"	509	428	955
+"VA"	2010	"Wise County"	9	"201 - NORTH COEBURN"	217	247	476
+"VA"	2010	"Wise County"	9	"202 - WISE"	668	806	1495
+"VA"	2010	"Wise County"	9	"203 - EAST POUND"	212	253	472
+"VA"	2010	"Wise County"	9	"301 - BIG STONE GAP"	639	545	1197
+"VA"	2010	"Wise County"	9	"302 - EAST STONE GAP"	565	688	1272
+"VA"	2010	"Wise County"	9	"401 - CLINCH VALLEY"	396	597	1003
+"VA"	2010	"Wise County"	9	"402 - SOUTH COEBURN"	424	566	1011
+"VA"	2010	"Wise County"	9	"403 - ST PAUL"	259	144	407
+"VA"	2010	"Wythe County"	9	"101 - ROYAL OAK"	120	226	354
+"VA"	2010	"Wythe County"	9	"102 - RURAL RETREAT"	481	610	1125
+"VA"	2010	"Wythe County"	9	"203 - WEST WYTHEVILLE"	665	687	1375
+"VA"	2010	"Wythe County"	9	"303 - EAST WYTHEVILLE"	803	738	1578
+"VA"	2010	"Wythe County"	9	"401 - FORT CHISWELL"	271	419	707
+"VA"	2010	"Wythe County"	9	"402 - MAX MEADOWS"	267	392	682
+"VA"	2010	"Wythe County"	9	"501 - JACKSON MEMORIAL"	232	295	545
+"VA"	2010	"Wythe County"	9	"502 - SHEFFEY"	348	475	849
+"VA"	2010	"Wythe County"	9	"601 - HUDDLE"	142	179	333
+"VA"	2010	"Wythe County"	9	"602 - ZION"	251	286	563
+"VA"	2010	"Wythe County"	9	"603 - EVERGREEN"	167	247	424
+"VA"	2010	"York County"	1	"101 - QUEENS LAKE"	473	745	1228
+"VA"	2010	"York County"	1	"102 - YORKTOWN"	185	582	786
+"VA"	2010	"York County"	1	"103 - WALLER MILL"	372	813	1206
+"VA"	2010	"York County"	1	"104 - MAGRUDER"	740	620	1381
+"VA"	2010	"York County"	1	"203 - COVENTRY"	521	1261	1815
+"VA"	2010	"York County"	1	"204 - KILN CREEK"	257	699	965
+"VA"	2010	"York County"	1	"301 - SEAFORD"	221	1150	1399
+"VA"	2010	"York County"	1	"302 - HARRIS GROVE"	362	1167	1547
+"VA"	2010	"York County"	1	"303 - EDGEHILL"	515	797	1332
+"VA"	2010	"York County"	1	"401 - HARWOODS MILL"	401	1510	1936
+"VA"	2010	"York County"	1	"402 - DARE"	420	1738	2183
+"VA"	2010	"York County"	1	"501 - TABB"	320	1067	1402
+"VA"	2010	"York County"	1	"502 - BETHEL"	615	1456	2099
