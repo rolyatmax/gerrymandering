@@ -1,6 +1,7 @@
 import {GUI} from 'dat-gui'
 import array from 'new-array'
 import Sketch from 'sketch-js'
+import precincts from './data/nc-precincts.json'
 
 const container = document.querySelector('.container')
 
