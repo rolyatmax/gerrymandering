@@ -18,7 +18,8 @@ var precincts = features.map(feat => {
     var prop = partyAffiliation[party]
     partyRegistration[party] = feat.properties[prop]
   })
-  var properties = { partyRegistration, centroid }
+  var name = feat.properties['NAME10']
+  var properties = { partyRegistration, centroid, name }
   feat.properties = properties
   return feat
 })
