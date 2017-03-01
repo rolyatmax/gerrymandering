@@ -14,5 +14,5 @@ Next steps:
  - [ ] allow zoom
  - [x] fix padding issues
 
- - [ ] show outline of districts
+ - [x] show outline of districts
  - [ ] calculate party ratios for arbitrary space

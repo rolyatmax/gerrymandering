@@ -11,7 +11,7 @@ var partyAffiliation = {
 }
 
 var precincts = features.map(feat => {
-  var poly = getLargestPolygon(feat.geometry.coordinates)
+  var poly = getLargestPolygon(feat.geometry)
   var centroid = polygonCentroid(poly)
   var partyRegistration = {}
   Object.keys(partyAffiliation).forEach(party => {
@@ -26,11 +26,12 @@ var precincts = features.map(feat => {
 
 process.stdout.write(JSON.stringify(precincts))
 
-function getLargestPolygon (coords) {
-  return coords.reduce((max, poly) => {
-    if (!max) return poly
-    var cur = polygonArea(max[0])
+function getLargestPolygon (geometry) {
+  if (geometry.type === 'Polygon') return geometry.coordinates[0]
+  return geometry.coordinates.reduce((max, poly) => {
+    if (!max) return poly[0]
+    var cur = polygonArea(max)
     var next = polygonArea(poly[0])
-    return next > cur ? poly : max
+    return next > cur ? poly[0] : max
   }, null)
 }

@@ -1,9 +1,9 @@
 /* global fetch  */
 
 import {GUI} from 'dat-gui'
-import Sketch from 'sketch-js'
 import * as d3 from 'd3'
-import plotVoterRegistration from './dots'
+import plotVoterRegistration from './plot-voter-registration'
+import plotDistricts from './plot-congressional-districts'
 
 window.d3 = d3
 
@@ -35,23 +35,13 @@ function start ([precincts, districts]) {
     projection: projection
   }
 
-  const redraw = plotVoterRegistration(settings, precincts)
+  const redrawVoterReg = plotVoterRegistration(settings, precincts)
+  const redrawDistricts = plotDistricts(settings, districts)
+  const redrawFns = [redrawVoterReg, redrawDistricts]
 
-  const districtSketch = Sketch.create({
-    container: settings.container,
-    autostart: false,
-    autoclear: false
-  })
-
-  districts.forEach(d => drawDistrict(districtSketch, d.geometry))
-
-  function drawDistrict (ctx, geometry) {
-    const coords = geometry.coordinates[0]
-    const points = coords.map(projection)
-    drawLine(ctx, points, 'rgba(50, 50, 50, 0.5)')
+  function redraw () {
+    redrawFns.forEach(fn => fn())
   }
-
-  window.districts = districts
 
   const gui = new GUI()
   gui.add(settings, 'countDivisor', 1, 1000).onFinishChange(redraw)
@@ -72,23 +62,4 @@ function start ([precincts, districts]) {
   }, {})
 
   console.log(affiliationTotals)
-}
-
-function drawLine (ctx, points, color) {
-  const start = points[0]
-  ctx.strokeStyle = color
-  ctx.lineWidth = 1
-  ctx.beginPath()
-  ctx.moveTo(start[0], start[1])
-  points.slice(1).forEach(pt => ctx.lineTo(pt[0], pt[1]))
-  ctx.stroke()
-
-  ctx.save()
-  const lastPt = points[points.length - 1]
-  ctx.beginPath()
-  ctx.setLineDash([15, 15])
-  ctx.moveTo(lastPt[0], lastPt[1])
-  ctx.lineTo(start[0], start[1])
-  ctx.stroke()
-  ctx.restore()
 }
