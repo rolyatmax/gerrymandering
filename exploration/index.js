@@ -25,8 +25,8 @@ function start ([precincts, districts]) {
     .fitExtent([[padding, padding], [width - padding, height - padding]], geojson)
 
   const settings = {
-    countDivisor: 500,
-    alpha: 40,
+    countDivisor: 4,
+    alpha: 3,
     democrat: true,
     libertarian: true,
     republican: true,

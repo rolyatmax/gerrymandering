@@ -2,8 +2,6 @@
 
 an interactive look at gerrymandering
 
-![gerrymandering](/img/nc-registration.png?raw=true "gerrymandering")
-
 ![gerrymandering](/img/nc-districts.png?raw=true "gerrymandering")
 
 getting good datas from https://dataverse.harvard.edu/dataverse/eda?q=&types=dataverses%3Adatasets

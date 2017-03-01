@@ -13,7 +13,7 @@ const colors = {
 }
 
 export default function plotVoterRegistration (settings, precincts) {
-  const dotSketch = window.dotSketch = Sketch.create({
+  const sketch = window.sketch = Sketch.create({
     container: settings.container,
     autostart: false,
     autoclear: false
@@ -24,7 +24,7 @@ export default function plotVoterRegistration (settings, precincts) {
   return redraw
 
   function redraw () {
-    dotSketch.clear()
+    sketch.clear()
     requestAnimationFrame(draw)
   }
 
@@ -35,19 +35,19 @@ export default function plotVoterRegistration (settings, precincts) {
 
   function drawPrecinct (precinct) {
     const { partyRegistration } = precinct.properties
-    // drawCircle(dotSketch, position, 1, 'rgba(20,20,20,0.1)')
+    // drawCircle(sketch, position, 1, 'rgba(20,20,20,0.1)')
     let points = []
     for (let party in partyRegistration) {
       if (!settings[party]) continue
       const count = Math.ceil(partyRegistration[party] / settings.countDivisor)
       const color = `rgba(${colors[party].join(', ')}, ${settings.alpha / 100})`
-      points = points.concat(generateRandomPointsInPolygon(dotSketch, precinct, count).map(pt => {
+      points = points.concat(generateRandomPointsInPolygon(sketch, precinct, count).map(pt => {
         const position = settings.projection(pt)
         return { position, color }
       }))
     }
     // draw all at the same time so one party doesn't completely cover another
-    d3.shuffle(points).forEach(({ position, color }) => drawCircle(dotSketch, position, 1, color))
+    d3.shuffle(points).forEach(({ position, color }) => drawCircle(sketch, position, 1, color))
   }
 
   function generateRandomPointsInPolygon (ctx, geoObject, count) {
@@ -64,7 +64,7 @@ export default function plotVoterRegistration (settings, precincts) {
         points.push(randPoint)
       }
       // protect against infinite loops
-      if (count * 20 < i) {
+      if (count * 30 < i) {
         console.log('uh oh - we might have an infinite loop', geoObject.properties.name)
         const position = settings.projection(geoObject.properties.centroid)
         drawCircle(ctx, position, 35, '#222')
