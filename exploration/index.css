@@ -4,6 +4,7 @@ html, body {
 }
 
 h2 {
+  font-size: 36px;
   padding: 4vw;
   position: absolute;
 }
