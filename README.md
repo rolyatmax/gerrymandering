@@ -12,6 +12,14 @@ an interactive look at gerrymandering
 
 ![gerrymandering](/img/charlotte.png?raw=true "Charlotte, NC with 2015 Congressional Districts")
 
+### Some other states in 2015
+
+![gerrymandering](/img/fl-districts-2015.png?raw=true "FL Congressional Districts 2015")
+
+![gerrymandering](/img/al-districts-2015.png?raw=true "AL Congressional Districts 2015")
+
+---
+
 getting good datas from https://dataverse.harvard.edu/dataverse/eda?q=&types=dataverses%3Adatasets
 
 Next steps:
@@ -23,4 +31,4 @@ Next steps:
  - [x] show outline of districts
  - [ ] calculate party ratios for arbitrary space
  - [ ] color district lines according to difference in distribution (talk with Gilad)
- - [ ] look at pre-2015 ruling district lines
+ - [x] look at pre-2015 ruling district lines

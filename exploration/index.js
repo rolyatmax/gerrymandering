@@ -8,17 +8,36 @@ import plotDistricts from './plot-congressional-districts'
 
 window.d3 = d3
 
+const STATE = 'nc'
+
+const states = {
+  fl: {
+    precincts: 'fl-precincts.json',
+    districts: 'fl-congressional-districts-2015-simplified.json'
+  },
+  nc: {
+    precincts: 'nc-precincts.json',
+    districts: 'nc-congressional-districts-2015-simplified.json'
+  },
+  al: {
+    precincts: 'al-precincts.json',
+    districts: 'al-congressional-districts-2015-simplified.json'
+  }
+}
+
+const filenames = states[STATE]
+
 Promise.all([
-  fetch('data/nc-precincts.json').then(res => res.json()),
-  fetch('data/nc-congressional-districts-2013-simplified.json').then(res => res.json())
+  fetch(`data/${filenames.precincts}`).then(res => res.json()),
+  fetch(`data/${filenames.districts}`).then(res => res.json())
 ]).then(start)
 
 function start ([precincts, districts]) {
   const scale = 8000
   const translate = [723, 691]
   const settings = {
-    countDivisor: 5,
-    alpha: 4,
+    countDivisor: 100,
+    alpha: 30,
     democrat: true,
     libertarian: true,
     republican: true,
@@ -45,12 +64,12 @@ function start ([precincts, districts]) {
   function getProjection (scale, translate) {
     return d3.geoConicConformal()
       .rotate([79, -33 - 45 / 60])
-      .fitSize([window.innerWidth, window.innerHeight], {
+      .fitExtent([[100, 200], [window.innerWidth - 100, window.innerHeight - 100]], {
         type: 'FeatureCollection',
         features: precincts
       })
-      .scale(scale)
-      .translate(translate)
+      // .scale(scale)
+      // .translate(translate)
   }
 
   function onChange () {
