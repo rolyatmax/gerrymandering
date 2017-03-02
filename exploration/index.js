@@ -2,6 +2,7 @@
 
 import {GUI} from 'dat-gui'
 import * as d3 from 'd3'
+import generatePoints from './generate-points'
 import plotVoterRegistration from './plot-voter-registration'
 import plotDistricts from './plot-congressional-districts'
 
@@ -13,44 +14,60 @@ Promise.all([
 ]).then(start)
 
 function start ([precincts, districts]) {
-  const geojson = {
-    type: 'FeatureCollection',
-    features: precincts
-  }
-  const width = window.innerWidth
-  const height = window.innerHeight
-  const padding = 50
-  const projection = d3.geoConicConformal()
-    .rotate([79, -33 - 45 / 60])
-    .fitExtent([[padding, padding], [width - padding, height - padding]], geojson)
-
+  const scale = 26360
+  const translate = [1244, 1113]
   const settings = {
-    countDivisor: 4,
-    alpha: 3,
+    countDivisor: 3,
+    alpha: 4,
     democrat: true,
     libertarian: true,
     republican: true,
     unaffiliated: true,
     container: document.querySelector('.container'),
-    projection: projection
+    scale: scale,
+    projection: getProjection(scale, translate),
+    translateX: translate[0],
+    translateY: translate[1]
+  }
+  window.settings = settings
+
+  const points = generatePoints(settings, precincts)
+  const drawVoterReg = plotVoterRegistration(settings, points)
+  const drawDistricts = plotDistricts(settings, districts, points)
+  const drawFns = [drawVoterReg, drawDistricts]
+
+  draw()
+  function draw () {
+    drawFns.forEach(fn => fn())
   }
 
-  const redrawVoterReg = plotVoterRegistration(settings, precincts)
-  const redrawDistricts = plotDistricts(settings, districts)
-  const redrawFns = [redrawVoterReg, redrawDistricts]
+  function getProjection (scale, translate) {
+    return d3.geoConicConformal()
+      .rotate([79, -33 - 45 / 60])
+      .fitSize([window.innerWidth, window.innerHeight], {
+        type: 'FeatureCollection',
+        features: precincts
+      })
+      .scale(scale)
+      .translate(translate)
+  }
 
-  function redraw () {
-    redrawFns.forEach(fn => fn())
+  function onChange () {
+    const translate = [settings.translateX, settings.translateY]
+    settings.projection = getProjection(settings.scale, translate)
+    draw()
   }
 
   const gui = new GUI()
-  gui.add(settings, 'countDivisor', 1, 1000).onFinishChange(redraw)
-  gui.add(settings, 'alpha', 0, 100).onFinishChange(redraw)
-  gui.add(settings, 'democrat').onFinishChange(redraw)
-  gui.add(settings, 'republican').onFinishChange(redraw)
-  gui.add(settings, 'libertarian').onFinishChange(redraw)
-  gui.add(settings, 'unaffiliated').onFinishChange(redraw)
-  gui.add({ redraw }, 'redraw')
+  gui.add(settings, 'alpha', 0, 100).onFinishChange(onChange)
+  gui.add(settings, 'scale', 8000, 30000).onFinishChange(onChange)
+  gui.add(settings, 'translateX', -1000, 2000).onFinishChange(onChange)
+  gui.add(settings, 'translateY', -1000, 2000).onFinishChange(onChange)
+  gui.add(settings, 'democrat').onFinishChange(onChange)
+  gui.add(settings, 'republican').onFinishChange(onChange)
+  gui.add(settings, 'libertarian').onFinishChange(onChange)
+  gui.add(settings, 'unaffiliated').onFinishChange(onChange)
+  gui.add({ redraw () { draw() } }, 'redraw')
 
   const affiliationTotals = precincts.reduce((totals, precinct) => {
     const registration = precinct.properties.partyRegistration

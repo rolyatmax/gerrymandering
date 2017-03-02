@@ -1,16 +1,15 @@
 import Sketch from 'sketch-js'
 
-export default function plotVoterRegistration (settings, districts) {
+export default function plotVoterRegistration (settings, districts, points) {
   const sketch = Sketch.create({
     container: settings.container,
     autostart: false,
     autoclear: false
   })
 
-  redraw()
-  return redraw
+  return draw
 
-  function redraw () {
+  function draw () {
     sketch.clear()
     districts.forEach(d => drawDistrict(sketch, d.geometry))
   }
