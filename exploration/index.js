@@ -10,15 +10,15 @@ window.d3 = d3
 
 Promise.all([
   fetch('data/nc-precincts.json').then(res => res.json()),
-  fetch('data/nc-congressional-districts-2016.json').then(res => res.json())
+  fetch('data/nc-congressional-districts-2013-simplified.json').then(res => res.json())
 ]).then(start)
 
 function start ([precincts, districts]) {
-  const scale = 26360
-  const translate = [1244, 1113]
+  const scale = 8000
+  const translate = [723, 691]
   const settings = {
-    countDivisor: 3,
-    alpha: 4,
+    countDivisor: 20,
+    alpha: 5,
     democrat: true,
     libertarian: true,
     republican: true,
@@ -30,6 +30,7 @@ function start ([precincts, districts]) {
     translateY: translate[1]
   }
   window.settings = settings
+  window.districts = districts
 
   const points = generatePoints(settings, precincts)
   const drawVoterReg = plotVoterRegistration(settings, points)

@@ -1,5 +1,5 @@
 try {
-  var geojson = require('./us-congressional-districts-2016.json')
+  var geojson = require('./us-congressional-districts-2013-simplified.json')
 } catch (e) {
   if (e.code === 'MODULE_NOT_FOUND') {
     console.warn('You might need to unzip "us-congressional-districts-2016.json.zip" first.')
