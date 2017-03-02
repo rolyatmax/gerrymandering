@@ -12,3 +12,9 @@ h2 {
 canvas {
   position: absolute;
 }
+
+.district-ratios {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}

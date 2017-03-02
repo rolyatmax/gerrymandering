@@ -1,6 +1,6 @@
 import Sketch from 'sketch-js'
 
-export default function plotVoterRegistration (settings, districts, points) {
+export default function plotDistricts (settings, districts, points) {
   const sketch = Sketch.create({
     container: settings.container,
     autostart: false,

@@ -5,6 +5,7 @@ import * as d3 from 'd3'
 import generatePoints from './generate-points'
 import plotVoterRegistration from './plot-voter-registration'
 import plotDistricts from './plot-congressional-districts'
+import calculateRatios from './calculate-district-ratios'
 
 window.d3 = d3
 
@@ -54,7 +55,8 @@ function start ([precincts, districts]) {
   const points = generatePoints(settings, precincts)
   const drawVoterReg = plotVoterRegistration(settings, points)
   const drawDistricts = plotDistricts(settings, districts, points)
-  const drawFns = [drawVoterReg, drawDistricts]
+  const renderDistrictRatios = calculateRatios(settings, districts, points)
+  const drawFns = [drawVoterReg, drawDistricts, renderDistrictRatios]
 
   draw()
   function draw () {
