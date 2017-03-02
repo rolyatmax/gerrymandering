@@ -17,8 +17,8 @@ function start ([precincts, districts]) {
   const scale = 8000
   const translate = [723, 691]
   const settings = {
-    countDivisor: 20,
-    alpha: 5,
+    countDivisor: 5,
+    alpha: 4,
     democrat: true,
     libertarian: true,
     republican: true,
