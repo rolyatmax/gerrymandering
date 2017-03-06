@@ -3,9 +3,11 @@ import extent from 'geojson-extent'
 import lerp from 'lerp'
 
 export default function generatePoints (settings, precincts) {
+  const start = performance.now()
   const points = precincts.reduce((points, precinct) => {
     return points.concat(generatePrecinctPoints(precinct))
   }, [])
+  console.log('generatePoints performance:', performance.now() - start)
 
   return points
 
@@ -13,7 +15,11 @@ export default function generatePoints (settings, precincts) {
     const { partyRegistration } = precinct.properties
     let pts = []
     for (let party in partyRegistration) {
-      const count = Math.ceil(partyRegistration[party] / settings.countDivisor)
+      let count = partyRegistration[party] / settings.countPerDot
+      // slice off the end and randomly add one more in proportion to the sliced off decimal
+      const decimal = count % 1
+      count = parseInt(count, 10)
+      count += Math.random() < decimal ? 1 : 0
       pts = pts.concat(generateRandomPointsInPolygon(precinct, count).map(location => {
         return { location, party }
       }))

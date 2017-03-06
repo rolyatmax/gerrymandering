@@ -3,14 +3,7 @@
 import Sketch from 'sketch-js'
 import * as d3 from 'd3'
 
-const colors = {
-  democrat: [0, 0, 250],
-  republican: [250, 0, 0],
-  libertarian: [0, 250, 0],
-  unaffiliated: [241, 244, 66]
-}
-
-export default function plotVoterRegistration (settings, points) {
+export default function plotVoterRegistration (settings) {
   const sketch = window.sketch = Sketch.create({
     container: settings.container,
     autostart: false,
@@ -19,16 +12,18 @@ export default function plotVoterRegistration (settings, points) {
 
   return draw
 
-  function draw () {
+  function draw (points) {
     sketch.clear()
     requestAnimationFrame(() => {
       console.log('drawing')
-      const visiblePoints = filterInvisiblePoints(points)
+      let visiblePoints = filterInvisiblePoints(points)
       // draw all at the same time so one party doesn't completely cover another
-      d3.shuffle(visiblePoints).forEach(({ location, party }) => {
+      visiblePoints = d3.shuffle(visiblePoints)
+
+      visiblePoints.forEach(({ location, party }) => {
         if (!settings[party]) return
         const position = settings.projection(location)
-        const color = `rgba(${colors[party].join(', ')}, ${settings.alpha / 100})`
+        const color = `rgba(${settings.colors[party].join(', ')}, ${settings.alpha / 100})`
         drawCircle(sketch, position, 1, color)
       })
     })

@@ -1,6 +1,6 @@
 import Sketch from 'sketch-js'
 
-export default function plotDistricts (settings, districts, points) {
+export default function plotDistricts (settings) {
   const sketch = Sketch.create({
     container: settings.container,
     autostart: false,
@@ -9,7 +9,7 @@ export default function plotDistricts (settings, districts, points) {
 
   return draw
 
-  function draw () {
+  function draw (districts) {
     sketch.clear()
     districts.forEach(d => drawDistrict(sketch, d.geometry))
   }

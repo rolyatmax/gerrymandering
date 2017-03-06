@@ -17,4 +17,33 @@ canvas {
   position: absolute;
   bottom: 40px;
   left: 40px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.district-ratios li {
+  margin: 10px;
+}
+
+.district-ratios li span {
+  display: inline-block;
+}
+
+.district-ratios li .district-name {
+  width: 200px;
+}
+
+.district-ratios li .count {
+  width: 80px;
+}
+
+.district-ratios .header {
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+}
+
+.district-ratios .total {
+  border: 1px solid #555;
+  margin-top: 15px;
+  padding: 8px;
 }
