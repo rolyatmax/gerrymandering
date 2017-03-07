@@ -54,9 +54,9 @@ function start ([precincts, ...districts]) {
   const scale = 8000
   const translate = [723, 691]
   const settings = {
-    countPerDot: 100, // 15
+    countPerDot: 15, // 15
     calculationSampleRate: 15, // 15
-    alpha: 15, // 8
+    alpha: 10, // 8
     district: 0,
     democrat: true,
     libertarian: false,
