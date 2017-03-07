@@ -10,9 +10,9 @@ export default function plotVoterRegistration (settings) {
     autoclear: false
   })
 
-  return draw
+  return { render, canvas: sketch.canvas }
 
-  function draw (points) {
+  function render (points) {
     sketch.clear()
     requestAnimationFrame(() => {
       console.log('drawing')

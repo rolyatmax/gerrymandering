@@ -5,7 +5,9 @@ import * as d3 from 'd3'
 import generatePoints from './generate-points'
 import plotVoterRegistration from './plot-voter-registration'
 import plotDistricts from './plot-congressional-districts'
-import calculateRatios from './calculate-district-ratios'
+import calculateDistrictWins from './calculate-district-wins'
+import renderDistrictWinsTable from './render-district-wins-table'
+import plotDistrictWins from './plot-district-wins'
 
 window.d3 = d3
 
@@ -14,40 +16,53 @@ const STATE = 'nc'
 const states = {
   fl: {
     precincts: 'fl-precincts.json',
-    districts: ['fl-congressional-districts-2015-simplified.json']
+    districts: [
+      { name: 'US Congress 2015', filename: 'fl-congressional-districts-2015-simplified.json' }
+    ]
   },
   'nc': {
     precincts: 'nc-precincts.json',
     districts: [
-      'nc-congressional-districts-2013-simplified.json',
-      'nc-congressional-districts-2015-simplified.json'
+      { name: 'US Congress 2013', filename: 'nc-congressional-districts-2013-simplified.json' },
+      { name: 'US Congress 2015', filename: 'nc-congressional-districts-2015-simplified.json' },
+      { name: 'NC State House 2010', filename: 'nc-state-house-districts-2010-simplified.json' },
+      { name: 'NC State House 2015', filename: 'nc-state-house-districts-2015-simplified.json' }
     ]
   },
   al: {
     precincts: 'al-precincts.json',
-    districts: ['al-congressional-districts-2015-simplified.json']
+    districts: [
+      { name: 'US Congress 2015', filename: 'al-congressional-districts-2015-simplified.json' }
+    ]
   }
 }
 
-const filenames = states[STATE]
+const stateSettings = states[STATE]
+const precinctRequest = fetch(`data/${stateSettings.precincts}`).then(res => res.json())
+const districtsRequests = stateSettings.districts
+  .map((d, i) => fetch(`data/${d.filename}`)
+    .then(res => res.json())
+    .then(districtData => ({
+      data: districtData,
+      name: stateSettings.districts[i].name
+    }))
+  )
 
-Promise.all([
-  fetch(`data/${filenames.precincts}`).then(res => res.json()),
-  ...filenames.districts.map(path => fetch(`data/${path}`).then(res => res.json()))
-]).then(start)
+Promise.all([precinctRequest, ...districtsRequests]).then(start)
 
 function start ([precincts, ...districts]) {
   const scale = 8000
   const translate = [723, 691]
   const settings = {
-    countPerDot: 30,
-    calculationSampleRate: 10,
-    alpha: 15,
+    countPerDot: 100, // 15
+    calculationSampleRate: 15, // 15
+    alpha: 15, // 8
     district: 0,
     democrat: true,
-    libertarian: true,
+    libertarian: false,
     republican: true,
-    unaffiliated: true,
+    unaffiliated: false,
+    districtWinsOpacity: 10,
     container: document.querySelector('.container'),
     scale: scale,
     projection: getProjection(scale, translate),
@@ -56,28 +71,31 @@ function start ([precincts, ...districts]) {
     colors: {
       democrat: [0, 0, 250],
       republican: [250, 0, 0],
-      libertarian: [0, 250, 0],
-      unaffiliated: [241, 244, 66]
+      libertarian: [241, 244, 66],
+      unaffiliated: [0, 250, 0]
     }
   }
 
   let points = generatePoints(settings, precincts)
-  const drawVoterReg = plotVoterRegistration(settings)
-  const drawDistricts = plotDistricts(settings)
-  const renderDistrictRatios = calculateRatios(settings)
+  const voterReg = plotVoterRegistration(settings)
+  const voterDistricts = plotDistricts(settings)
+  let districtTotals = calculateDistrictWins(settings, districts[settings.district].data, points)
+  const districtWinsTable = renderDistrictWinsTable(settings)
+  const districtWins = plotDistrictWins(settings)
 
   window.settings = settings
   window.districts = districts
   window.points = points
 
-  drawVoterReg(points)
-  drawDistricts(districts[settings.district])
-  renderDistrictRatios(districts[settings.district], points, precincts)
+  voterReg.render(points)
+  voterDistricts.render(districts[settings.district].data)
+  districtWins.render(districts[settings.district].data, districtTotals)
+  districtWinsTable.render(districts[settings.district].name, districtTotals, precincts)
 
   function getProjection (scale, translate) {
     return d3.geoConicConformal()
       .rotate([79, -33 - 45 / 60])
-      .fitExtent([[100, 200], [window.innerWidth - 100, window.innerHeight - 100]], {
+      .fitExtent([[100, 100], [window.innerWidth - 100, window.innerHeight - 100]], {
         type: 'FeatureCollection',
         features: precincts
       })
@@ -91,26 +109,24 @@ function start ([precincts, ...districts]) {
   // }
 
   function onChangeVoterPlot () {
-    drawVoterReg(points)
+    voterReg.render(points)
   }
 
   function onChangeDistricts () {
-    drawDistricts(districts[settings.district])
-    renderDistrictRatios(districts[settings.district], points, precincts)
+    districtTotals = calculateDistrictWins(settings, districts[settings.district].data, points, precincts)
+    voterDistricts.render(districts[settings.district].data)
+    districtWins.render(districts[settings.district].data, districtTotals)
+    districtWinsTable.render(districts[settings.district].name, districtTotals, precincts)
   }
 
-  function toggleDistrict () {
-    settings.district += 1
-    settings.district = settings.district % districts.length
-    onChangeDistricts()
+  function onChangeDistrictWinsOpacity () {
+    districtWins.canvas.style.opacity = settings.districtWinsOpacity / 100
   }
+
+  const districtMap = {}
+  districts.forEach((d, i) => { districtMap[d.name] = i })
 
   const gui = new GUI()
-  gui.add(settings, 'countPerDot', 1, 10000).step(1).onFinishChange(() => {
-    points = generatePoints(settings, precincts)
-    onChangeVoterPlot()
-    onChangeDistricts()
-  })
   gui.add(settings, 'alpha', 0, 100).onFinishChange(onChangeVoterPlot)
   // gui.add(settings, 'calculationSampleRate', 0, 100).step(1).onFinishChange(onChangeDistricts)
   // gui.add(settings, 'scale', 8000, 30000).onFinishChange(onChange)
@@ -120,5 +136,6 @@ function start ([precincts, ...districts]) {
   gui.add(settings, 'republican').onFinishChange(onChangeVoterPlot)
   gui.add(settings, 'libertarian').onFinishChange(onChangeVoterPlot)
   gui.add(settings, 'unaffiliated').onFinishChange(onChangeVoterPlot)
-  gui.add({ toggleDistrict }, 'toggleDistrict')
+  gui.add(settings, 'districtWinsOpacity', 0, 100).onFinishChange(onChangeDistrictWinsOpacity)
+  gui.add(settings, 'district', districtMap).onFinishChange(onChangeDistricts)
 }

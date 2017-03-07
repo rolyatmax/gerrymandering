@@ -1,19 +1,10 @@
-import * as d3 from 'd3'
 import sortBy from 'lodash/sortBy'
 import yo from 'yo-yo'
 
-const cache = new Map()
+export default function renderDistrictWinsTable (settings) {
+  return { render }
 
-export default function calculateRatios (settings) {
-  return function render (districts, points, precincts) {
-    cache.set(points, cache.get(points) || new Map())
-    const cachedTotals = cache.get(points).get(districts)
-
-    const start = performance.now()
-    const districtTotals = cachedTotals || calculateDistrictTotals(settings, points, districts)
-    cache.get(points).set(districts, districtTotals)
-    console.log('calculate district totals performance:', performance.now() - start)
-
+  function render (mapName, districtTotals, precincts) {
     const affiliationTotals = calculateAffiliationTotals(precincts)
     const sampledTotals = Object.values(districtTotals).reduce((memo, district) => {
       for (let party in district) {
@@ -25,54 +16,49 @@ export default function calculateRatios (settings) {
 
     const districtsWon = {}
     const districtNames = sortBy(Object.keys(districtTotals), (name) => {
-      return parseInt(name.split('Congressional District ')[1], 10)
+      if (name.includes('Congressional District ')) {
+        return parseInt(name.split('Congressional District ')[1], 10)
+      }
+      return name
     })
-    const districtEls = districtNames.map(dName => {
+    districtNames.forEach(dName => {
       const counts = districtTotals[dName]
-      const winner = counts.republican > counts.democrat ? 'republican' : 'democrat'
+      const winner = getWinner(counts)
       districtsWon[winner] = districtsWon[winner] || 0
       districtsWon[winner] += 1
-      const countEls = ['republican', 'democrat', 'libertarian', 'unaffiliated'].map(party => {
-        let className = `count ${party}`
-        let style
-        if (party === winner) {
-          className += ' winner'
-          style = `color: rgb(${settings.colors[party].join(', ')});`
-        }
-        return yo`
-          <span class="${className}" style="${style || ''}">${abbreviateNum(counts[party] || 0)}</span>
-        `
-      })
-
-      return yo`
-        <li>
-          <span class="district-name">${dName}</span>
-          ${countEls}
-        </li>
-      `
     })
 
     const existing = settings.container.querySelector('.district-ratios')
     if (existing) settings.container.removeChild(existing)
     settings.container.appendChild(yo`
       <div class="district-ratios">
+        <h3>${mapName}</h3>
         <ul>
           <li class="header">
-            <span class="district-name">Districts</span>
+            <span class="district-name"></span>
             <span class="count">Rep</span>
             <span class="count">Dem</span>
             <span class="count">Lib</span>
             <span class="count">None</span>
           </li>
-          ${districtEls}
-          <li class="total">
+          <li>
+            <span class="district-name">Districts Won</span>
+            <span class="count">${districtsWon.republican || 0}</span>
+            <span class="count">${districtsWon.democrat || 0}</span>
+            <span class="count">${districtsWon.libertarian || 0}</span>
+            <span class="count">${districtsWon.unaffiliated || 0}</span>
+          </li>
+        </ul>
+        <ul class="highlight">
+          <li style="color: red;">For Sampling Validation:</li>
+          <li>
             <span class="district-name">Sampled Totals</span>
             <span class="count">${abbreviateNum(sampledTotals.republican || 0)}</span>
             <span class="count">${abbreviateNum(sampledTotals.democrat || 0)}</span>
             <span class="count">${abbreviateNum(sampledTotals.libertarian || 0)}</span>
             <span class="count">${abbreviateNum(sampledTotals.unaffiliated || 0)}</span>
           </li>
-          <li class="total">
+          <li>
             <span class="district-name">Actual Totals</span>
             <span class="count">${abbreviateNum(affiliationTotals.republican || 0)}</span>
             <span class="count">${abbreviateNum(affiliationTotals.democrat || 0)}</span>
@@ -85,32 +71,15 @@ export default function calculateRatios (settings) {
   }
 }
 
-function calculateDistrictTotals (settings, points, districts) {
-  const districtTotals = {}
-  const sampleSize = 100 / settings.calculationSampleRate
-  for (let j = 0; j < points.length; j += sampleSize) {
-    const p = points[j | 0]
-    for (let i = 0; i < districts.length; i++) {
-      const district = districts[i]
-      const polygon = district.geometry.coordinates[0]
-      if (d3.polygonContains(polygon, p.location)) {
-        const districtName = district.properties['NAMELSAD']
-        districtTotals[districtName] = districtTotals[districtName] || {}
-        districtTotals[districtName][p.party] = districtTotals[districtName][p.party] || 0
-        districtTotals[districtName][p.party] += 1
-        break
-      }
+function getWinner (parties) {
+  if (!Object.keys(parties).length) throw new Error('no parties passed to getWinner')
+  let winner = null
+  for (let party in parties) {
+    if (!winner || parties[party] > winner.count) {
+      winner = { party, count: parties[party] }
     }
   }
-
-  Object.values(districtTotals).forEach((district) => {
-    for (let party in district) {
-      district[party] *= settings.countPerDot
-      district[party] /= settings.calculationSampleRate / 100
-      district[party] = (district[party] | 0) || 0
-    }
-  })
-  return districtTotals
+  return winner.party
 }
 
 function calculateAffiliationTotals (precincts) {

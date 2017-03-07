@@ -7,17 +7,19 @@ export default function plotDistricts (settings) {
     autoclear: false
   })
 
-  return draw
+  return { render, canvas: sketch.canvas }
 
-  function draw (districts) {
+  function render (districts) {
     sketch.clear()
     districts.forEach(d => drawDistrict(sketch, d.geometry))
   }
 
   function drawDistrict (ctx, geometry) {
-    const coords = geometry.coordinates[0]
-    const points = coords.map(settings.projection)
-    drawLine(ctx, points, 'rgba(50, 50, 50, 0.5)')
+    const polygons = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates
+    for (let poly of polygons) {
+      const points = poly[0].map(settings.projection)
+      drawLine(ctx, points, 'rgba(50, 50, 50, 0.5)')
+    }
   }
 }
 
@@ -29,13 +31,4 @@ function drawLine (ctx, points, color) {
   ctx.moveTo(start[0], start[1])
   points.slice(1).forEach(pt => ctx.lineTo(pt[0], pt[1]))
   ctx.stroke()
-
-  ctx.save()
-  const lastPt = points[points.length - 1]
-  ctx.beginPath()
-  ctx.setLineDash([15, 15])
-  ctx.moveTo(lastPt[0], lastPt[1])
-  ctx.lineTo(start[0], start[1])
-  ctx.stroke()
-  ctx.restore()
 }
