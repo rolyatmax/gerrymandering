@@ -45,4 +45,5 @@ Next steps:
  - [ ] change unaffiliated color to purple?
  - [ ] Find missing NC state house district!
  - [ ] zoom?
+ - [ ] visualize redistricting events as flows of people?
  - [ ] color district lines according to difference in distribution (talk with Gilad)

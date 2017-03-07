@@ -59,9 +59,9 @@ function start ([precincts, ...districts]) {
     alpha: 10, // 8
     district: 0,
     democrat: true,
-    libertarian: false,
+    libertarian: true,
     republican: true,
-    unaffiliated: false,
+    unaffiliated: true,
     districtWinsOpacity: 10,
     container: document.querySelector('.container'),
     scale: scale,
@@ -71,8 +71,8 @@ function start ([precincts, ...districts]) {
     colors: {
       democrat: [0, 0, 250],
       republican: [250, 0, 0],
-      libertarian: [241, 244, 66],
-      unaffiliated: [0, 250, 0]
+      libertarian: [0, 250, 0],
+      unaffiliated: [200, 0, 200]
     }
   }
 
