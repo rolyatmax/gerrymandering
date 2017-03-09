@@ -1,0 +1,9 @@
+node generate-points.js voterPartyAffiliation 2 > ../points/nc-voter-party-points-resolution2.csv
+node generate-points.js genPopEthnicity 2 > ../points/nc-gen-pop-ethnicity-points-resolution2.csv
+node generate-points.js genPopPrimaryRace 2 > ../points/nc-gen-pop-race-points-resolution2.csv
+node generate-points.js voterGender 2 > ../points/nc-voter-gender-points-resolution2.csv
+node generate-points.js voterAge 2 > ../points/nc-voter-age-points-resolution2.csv
+node generate-points.js electionPresident2008 2 > ../points/nc-pres-2008-points-resolution2.csv
+node generate-points.js electionUSSenate2008 2 > ../points/nc-us-senate-2008-points-resolution2.csv
+node generate-points.js electionUSSenate2010 2 > ../points/nc-us-senate-2010-points-resolution2.csv
+node generate-points.js electionGovernor2008 2 > ../points/nc-gov-2008-points-resolution2.csv

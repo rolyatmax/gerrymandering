@@ -34,7 +34,7 @@ export default function generatePoints (settings, precincts) {
         }
         // protect against infinite loops
         if (count * 20 < attempts) {
-          console.log('uh oh - we might have an infinite loop', precinct.properties.name)
+          console.log('uh oh - we might have an infinite loop', precinct.properties.precinctName)
           break
         }
         attempts += 1

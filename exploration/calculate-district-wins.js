@@ -50,6 +50,6 @@ function isPointInDistrict (district, point) {
       return true
     }
   }
-  console.warn('ACK!', district.properties.NAME)
+  // console.warn('ACK!', district.properties.NAME)
   return false
 }

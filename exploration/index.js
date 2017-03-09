@@ -54,25 +54,25 @@ function start ([precincts, ...districts]) {
   const scale = 8000
   const translate = [723, 691]
   const settings = {
-    countPerDot: 15, // 15
-    calculationSampleRate: 15, // 15
-    alpha: 10, // 8
+    countPerDot: 50, // 15
+    calculationSampleRate: 30, // 15
+    alpha: 5, // 8
     district: 0,
     democrat: true,
-    libertarian: true,
+    libertarian: false,
     republican: true,
-    unaffiliated: true,
-    districtWinsOpacity: 10,
+    unaffiliated: false,
+    districtWinsOpacity: 100,
     container: document.querySelector('.container'),
     scale: scale,
     projection: getProjection(scale, translate),
     translateX: translate[0],
     translateY: translate[1],
     colors: {
-      democrat: [0, 0, 250],
-      republican: [250, 0, 0],
-      libertarian: [0, 250, 0],
-      unaffiliated: [200, 0, 200]
+      democrat: [61, 94, 156],
+      republican: [195, 35, 44],
+      libertarian: [80, 220, 80],
+      unaffiliated: [200, 20, 200]
     }
   }
 
