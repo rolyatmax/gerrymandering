@@ -36,7 +36,11 @@ rl.on('line', (line) => {
     pastFirstLine = true
     return
   }
+
   lineCount += 1
+  if (lineCount % 100 === 0) console.log(lineCount)
+  if (lineCount > 530300) writeData(districtTotals)
+
   const [lon, lat, value] = line.split(',') // please let there be no commas in the data 😳
   for (let district of districts) {
     if (isPointInDistrict(district, [lon, lat])) {
@@ -47,7 +51,6 @@ rl.on('line', (line) => {
       break
     }
   }
-  // if (lineCount > 10000) writeData(districtTotals)
 }).on('close', () => {
   writeData(districtTotals)
 })
