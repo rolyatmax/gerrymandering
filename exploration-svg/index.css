@@ -1,0 +1,19 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+}
+
+h2 {
+  font-size: 36px;
+  padding: 4vw;
+  position: absolute;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 30px 0;
+}

@@ -4,8 +4,9 @@ const d3 = require('d3')
 if (process.argv[2] === '--help') help()
 
 function help () {
-  console.log('usage: node calculate-district-totals.js [POINTS FILE] [DISTRICTS FILE] [POINTS RESOLUTION]')
+  console.log('usage: node calculate-district-totals.js [POINTS FILE] [DISTRICTS FILE] [POINTS RESOLUTION] [SAMPLE SIZE]')
   console.log('    - POINTS FILE should be a csv')
+  console.log('    - SAMPLE SIZE is an integer that indicates that every Nth row should be counted (default is 1)')
   console.log('    - DISTRICTS FILE should be a json list of geojson features - i know, none of this makes sense, sorry')
   console.log('    - POINTS RESOLUTION is an integer representing the count-per-point resolution (default is 1)')
   console.log('outputs csv-formatted list of districts with aggregate counts for each value in the POINTS FILE')
@@ -17,6 +18,7 @@ const DISTRICT_NAME_KEY = 'NAMELSAD'
 let pointsFile = process.argv[2]
 let districtsFile = process.argv[3]
 const pointResolution = parseInt(process.argv[4], 10) || 1
+const sampleSize = parseInt(process.argv[5], 10) || 1
 
 if (!pointsFile || !districtsFile || !pointResolution) help()
 if (pointsFile[0] !== '.') pointsFile = `./${pointsFile}`
@@ -31,16 +33,18 @@ let pastFirstLine = false
 let lineCount = 0
 
 const rl = linebyline(pointsFile)
-rl.on('line', (line) => {
+rl.on('line', processLine).on('close', () => writeData(districtTotals))
+
+function processLine (line) {
   if (!pastFirstLine) {
     pastFirstLine = true
     return
   }
 
   lineCount += 1
-  if (lineCount % 100 === 0) console.log(lineCount)
-  if (lineCount > 530300) writeData(districtTotals)
+  if (lineCount % sampleSize !== 0) return
 
+  // if (lineCount % 100 === 0) console.log(lineCount)
   const [lon, lat, value] = line.split(',') // please let there be no commas in the data 😳
   for (let district of districts) {
     if (isPointInDistrict(district, [lon, lat])) {
@@ -51,14 +55,13 @@ rl.on('line', (line) => {
       break
     }
   }
-}).on('close', () => {
-  writeData(districtTotals)
-})
+}
 
 function writeData (districtTotals) {
   Object.values(districtTotals).forEach((district) => {
     for (let value in district) {
       district[value] *= pointResolution
+      district[value] /= 1 / sampleSize
       district[value] = (district[value] | 0) || 0
     }
   })
