@@ -58,7 +58,8 @@ function processLine (line) {
 }
 
 function writeData (districtTotals) {
-  Object.values(districtTotals).forEach((district) => {
+  Object.keys(districtTotals).forEach((key) => {
+    const district = districtTotals[key]
     for (let value in district) {
       district[value] *= pointResolution
       district[value] /= 1 / sampleSize

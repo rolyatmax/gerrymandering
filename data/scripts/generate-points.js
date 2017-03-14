@@ -1,12 +1,11 @@
 const d3 = require('d3')
 const extent = require('geojson-extent')
 const lerp = require('lerp')
-const precincts = require('../nc-precincts.json')
 
 const validPropGroups = [
   'voterPartyAffiliation', 'genPopEthnicity', 'genPopPrimaryRace', 'voterGender',
   'voterAge', 'electionPresident2008', 'electionUSSenate2008', 'electionUSSenate2010',
-  'electionGovernor2008'
+  'electionGovernor2008', 'electionGovernor2010', 'normalVotes'
 ]
 
 if (process.argv[2] === '--help') help()
@@ -19,9 +18,12 @@ function help () {
   process.exit()
 }
 
-const countPerDot = parseInt(process.argv[3], 10) || 1
-const propGroup = process.argv[2]
+const precinctsFilePath = process.argv[2]
+const propGroup = process.argv[3]
 if (!validPropGroups.includes(propGroup)) help()
+const countPerDot = parseInt(process.argv[4], 10) || 1
+
+const precincts = require(precinctsFilePath)
 
 process.stdout.write(`longitude,latitude,${propGroup}\n`)
 for (let precinct of precincts) {

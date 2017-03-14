@@ -23,14 +23,17 @@ export default class App extends React.Component {
   render () {
     const districtMap = {}
     this.props.districts.forEach((d, i) => { districtMap[d.name] = i })
+    // const dimensions = [
+    //   'age', 'ethnicity', 'gender', 'gov-2008', 'party-affiliation', 'pres-2008', 'race',
+    //   'us-senate-2008', 'us-senate-2010'
+    // ]
     const dimensions = [
-      'age', 'ethnicity', 'gender', 'gov-2008', 'party-affiliation', 'pres-2008', 'race',
-      'us-senate-2008', 'us-senate-2010'
+      'gov-2008', 'party-affiliation', 'pres-2008', 'us-senate-2008', 'us-senate-2010'
     ]
     const controls = {
       district: [districtMap],
       dimension: [dimensions],
-      showPrecincts: []
+      // showPrecincts: []
     }
 
     return (

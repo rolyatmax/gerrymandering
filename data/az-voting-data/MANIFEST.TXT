@@ -1,0 +1,9 @@
+az_final.dbf (application/octet-stream) 1883586 bytes.
+az_final.prj (text/plain; charset=US-ASCII) 145 bytes.
+az_final.sbn (application/octet-stream) 23052 bytes.
+az_final.sbx (application/octet-stream) 1212 bytes.
+az_final.shp (application/octet-stream) 17226504 bytes.
+az_final.shx (application/octet-stream) 17892 bytes.
+az_final.tab (text/tab-separated-values) 1029133 bytes.
+AZ_final_notes.rtf (text/plain; charset=US-ASCII) 5316 bytes.
+AZ_Shapefile.zip (application/zip) 10707860 bytes.
