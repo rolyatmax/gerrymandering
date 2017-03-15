@@ -43,7 +43,7 @@ function writeData (districtTotals) {
     counts: districtTotals[districtName]
   }))
   const uniqueValues = getUniqueValues(districtObjs, d => Object.keys(d.counts))
-  process.stdout.write(`districtName,${uniqueValues.join(',')}\n`)
+  process.stdout.write(`district-name,${uniqueValues.join(',')}\n`)
   districtObjs.forEach(d => {
     process.stdout.write(`"${d.name}",${uniqueValues.map(v => d.counts[v] || 0).join(',')}\n`)
   })

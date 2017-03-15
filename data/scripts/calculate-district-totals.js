@@ -1,6 +1,5 @@
 const fs = require('fs')
 const Parallel = require('paralleljs')
-// const d3 = require('d3')
 
 if (process.argv[2] === '--help') help()
 
@@ -75,7 +74,15 @@ function processBatch (batch) {
   const p = new Parallel([districts, DISTRICT_NAME_KEY, batch])
   return p.spawn(([districts, DISTRICT_NAME_KEY, lines]) => {
     const d3 = require('d3')
+    const extent = require('geojson-extent')
     const districtTotals = {}
+
+    // calculate extents up front to use when determining if a point is in a district
+    const extents = {}
+    for (let district of districts) {
+      const districtName = district.properties[DISTRICT_NAME_KEY]
+      extents[districtName] = extent(district)
+    }
 
     for (let line of lines) {
       processLine(line)
@@ -84,8 +91,9 @@ function processBatch (batch) {
     function processLine (line) {
       const [lon, lat, value] = line.split(',') // please let there be no commas in the data 😳
       for (let district of districts) {
-        if (isPointInDistrict(district, [lon, lat])) {
-          const districtName = district.properties[DISTRICT_NAME_KEY]
+        const districtName = district.properties[DISTRICT_NAME_KEY]
+        const districtExtent = extents[districtName]
+        if (isPointInDistrict(district, districtExtent, [lon, lat])) {
           districtTotals[districtName] = districtTotals[districtName] || {}
           districtTotals[districtName][value] = districtTotals[districtName][value] || 0
           districtTotals[districtName][value] += 1
@@ -94,7 +102,11 @@ function processBatch (batch) {
       }
     }
 
-    function isPointInDistrict (district, point) {
+    function isPointInDistrict (district, districtExtent, point) {
+      const [longA, latA, longB, latB] = districtExtent
+      if (point[0] < longA || point[0] > longB || point[1] < latA || point[1] > latB) {
+        return false
+      }
       if (district.geometry.type === 'Polygon') {
         return d3.polygonContains(district.geometry.coordinates[0], point)
       }
@@ -125,7 +137,7 @@ function writeData (districtTotals) {
   }))
 
   const uniqueValues = getUniqueValues(districtObjs, d => Object.keys(d.counts))
-  process.stdout.write(`districtName,${uniqueValues.join(',')}\n`)
+  process.stdout.write(`district-name,${uniqueValues.join(',')}\n`)
   districtObjs.forEach(d => {
     process.stdout.write(`"${d.name}",${uniqueValues.map(v => d.counts[v] || 0).join(',')}\n`)
   })

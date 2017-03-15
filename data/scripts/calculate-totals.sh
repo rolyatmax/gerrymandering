@@ -19,9 +19,19 @@
 # echo "completed job 9"
 
 # TX
-node calculate-district-totals.js ../points/tx-normal-votes-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json 2 5 > ../district-totals/tx-normal-votes-by-congressional-districts-2010.csv
+# node calculate-district-totals.js ../points/tx-normal-votes-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json 2 5 > ../district-totals/tx-normal-votes-by-congressional-districts-2010.csv
+# echo "completed job 1"
+# node calculate-district-totals.js ../points/tx-pres-2008-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json 2 5 > ../district-totals/tx-pres-2008-by-congressional-districts-2010.csv
+# echo "completed job 2"
+# node calculate-district-totals.js ../points/tx-gov-2010-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json 2 5 > ../district-totals/tx-gov-2010-by-congressional-districts-2010.csv
+# echo "completed job 3"
+
+# AZ
+node calculate-district-totals.js ../points/az-gov-2010-points-resolution2.csv ../az-congressional-districts-2015-simplified.json 2 5 > ../district-totals/az-gov-2010-by-congressional-districts-2015.csv
 echo "completed job 1"
-node calculate-district-totals.js ../points/tx-pres-2008-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json 2 5 > ../district-totals/tx-pres-2008-by-congressional-districts-2010.csv
+node calculate-district-totals.js ../points/az-normal-votes-points-resolution2.csv ../az-congressional-districts-2015-simplified.json 2 5 > ../district-totals/az-normal-votes-by-congressional-districts-2015.csv
 echo "completed job 2"
-node calculate-district-totals.js ../points/tx-gov-2010-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json 2 5 > ../district-totals/tx-gov-2010-by-congressional-districts-2010.csv
+node calculate-district-totals.js ../points/az-pres-2008-points-resolution2.csv ../az-congressional-districts-2015-simplified.json 2 5 > ../district-totals/az-pres-2008-by-congressional-districts-2015.csv
 echo "completed job 3"
+node calculate-district-totals.js ../points/az-us-senate-2010-points-resolution2.csv ../az-congressional-districts-2015-simplified.json 2 5 > ../district-totals/az-us-senate-2010-by-congressional-districts-2015.csv
+echo "completed job 4"
