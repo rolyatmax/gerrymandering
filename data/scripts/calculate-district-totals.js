@@ -1,5 +1,6 @@
-const linebyline = require('linebyline')
-const d3 = require('d3')
+const fs = require('fs')
+const Parallel = require('paralleljs')
+// const d3 = require('d3')
 
 if (process.argv[2] === '--help') help()
 
@@ -27,34 +28,85 @@ if (pointsFile[0] !== '.') pointsFile = `./${pointsFile}`
 if (districtsFile[0] !== '.') districtsFile = `./${districtsFile}`
 const districts = require(districtsFile)
 
-const districtTotals = {}
+fs.readFile(pointsFile, 'utf8', (err, data) => {
+  if (err) throw err
+  main(data)
+})
 
-let pastFirstLine = false
-let lineCount = 0
+function main (data) {
+  const rows = data.slice(1).split('\n')
 
-const rl = linebyline(pointsFile)
-rl.on('line', processLine).on('close', () => writeData(districtTotals))
+  const sampled = []
 
-function processLine (line) {
-  if (!pastFirstLine) {
-    pastFirstLine = true
-    return
+  for (let i = 0; i < rows.length; i += sampleSize) {
+    sampled.push(rows[i])
   }
 
-  lineCount += 1
-  if (lineCount % sampleSize !== 0) return
+  const promises = divideIntoBatches(sampled, 6).map(processBatch)
 
-  // if (lineCount % 100 === 0) console.log(lineCount)
-  const [lon, lat, value] = line.split(',') // please let there be no commas in the data 😳
-  for (let district of districts) {
-    if (isPointInDistrict(district, [lon, lat])) {
-      const districtName = district.properties[DISTRICT_NAME_KEY]
-      districtTotals[districtName] = districtTotals[districtName] || {}
-      districtTotals[districtName][value] = districtTotals[districtName][value] || 0
-      districtTotals[districtName][value] += 1
-      break
+  Promise.all(promises).then((batches) => {
+    const totals = batches.reduce((totals, districtTotals) => {
+      for (let districtName in districtTotals) {
+        totals[districtName] = totals[districtName] || {}
+        for (let dimension in districtTotals[districtName]) {
+          totals[districtName][dimension] = totals[districtName][dimension] || 0
+          totals[districtName][dimension] += districtTotals[districtName][dimension]
+        }
+      }
+      return totals
+    }, {})
+
+    writeData(totals)
+  })
+}
+
+function divideIntoBatches (list, batchCount) {
+  list = list.slice()
+  const itemsPerBatch = list.length / batchCount
+  const batches = []
+  while (list.length) {
+    batches.push(list.splice(0, itemsPerBatch))
+  }
+  return batches
+}
+
+function processBatch (batch) {
+  const p = new Parallel([districts, DISTRICT_NAME_KEY, batch])
+  return p.spawn(([districts, DISTRICT_NAME_KEY, lines]) => {
+    const d3 = require('d3')
+    const districtTotals = {}
+
+    for (let line of lines) {
+      processLine(line)
     }
-  }
+
+    function processLine (line) {
+      const [lon, lat, value] = line.split(',') // please let there be no commas in the data 😳
+      for (let district of districts) {
+        if (isPointInDistrict(district, [lon, lat])) {
+          const districtName = district.properties[DISTRICT_NAME_KEY]
+          districtTotals[districtName] = districtTotals[districtName] || {}
+          districtTotals[districtName][value] = districtTotals[districtName][value] || 0
+          districtTotals[districtName][value] += 1
+          break
+        }
+      }
+    }
+
+    function isPointInDistrict (district, point) {
+      if (district.geometry.type === 'Polygon') {
+        return d3.polygonContains(district.geometry.coordinates[0], point)
+      }
+      for (let poly of district.geometry.coordinates) {
+        if (d3.polygonContains(poly[0], point)) {
+          return true
+        }
+      }
+      return false
+    }
+
+    return districtTotals
+  })
 }
 
 function writeData (districtTotals) {
@@ -76,19 +128,6 @@ function writeData (districtTotals) {
   districtObjs.forEach(d => {
     process.stdout.write(`"${d.name}",${uniqueValues.map(v => d.counts[v] || 0).join(',')}\n`)
   })
-  process.exit()
-}
-
-function isPointInDistrict (district, point) {
-  if (district.geometry.type === 'Polygon') {
-    return d3.polygonContains(district.geometry.coordinates[0], point)
-  }
-  for (let poly of district.geometry.coordinates) {
-    if (d3.polygonContains(poly[0], point)) {
-      return true
-    }
-  }
-  return false
 }
 
 function getUniqueValues (collection, fn) {
