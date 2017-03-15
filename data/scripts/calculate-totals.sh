@@ -19,7 +19,7 @@
 # echo "completed job 9"
 
 # TX
-node calculate-district-totals.js ../points/tx-normal-votes-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json 2 100 > ../district-totals/tx-normal-votes-by-congressional-districts-2010.csv
+node calculate-district-totals.js ../points/tx-normal-votes-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json 2 5 > ../district-totals/tx-normal-votes-by-congressional-districts-2010.csv
 echo "completed job 1"
 node calculate-district-totals.js ../points/tx-pres-2008-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json 2 5 > ../district-totals/tx-pres-2008-by-congressional-districts-2010.csv
 echo "completed job 2"

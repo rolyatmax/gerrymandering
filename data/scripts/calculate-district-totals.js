@@ -15,6 +15,7 @@ function help () {
 }
 
 const DISTRICT_NAME_KEY = 'NAMELSAD'
+const BATCH_COUNT = 8
 
 let pointsFile = process.argv[2]
 let districtsFile = process.argv[3]
@@ -42,7 +43,7 @@ function main (data) {
     sampled.push(rows[i])
   }
 
-  const promises = divideIntoBatches(sampled, 6).map(processBatch)
+  const promises = divideIntoBatches(sampled, BATCH_COUNT).map(processBatch)
 
   Promise.all(promises).then((batches) => {
     const totals = batches.reduce((totals, districtTotals) => {
