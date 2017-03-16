@@ -7,11 +7,11 @@ export default function DistrictMargins ({settings, districts, totals, setSelect
   const district = districts[settings.district]
   const districtTotals = keyBy(totals[settings.district].data, 'district-name')
 
-  const sliderWidth = 400
-  const textWidth = 200
+  const sliderWidth = 250
+  const textWidth = 170
   const width = sliderWidth + textWidth
   const sliderHeight = 5
-  const padding = 20
+  const padding = 12
   const height = district.data.length * (sliderHeight + padding)
 
   const districtSVGs = sortBy(district.data, feat => {
@@ -31,7 +31,7 @@ export default function DistrictMargins ({settings, districts, totals, setSelect
         <g className='slider' transform='translate(0, -8)'>
           <rect x={sliderWidth / 2 + textWidth} y='0' width={sliderWidth / 2} height={sliderHeight} fill={red} />
           <rect x={textWidth} y='0' width={sliderWidth / 2} height={sliderHeight} fill={blue} />
-          <circle cx='0' cy={sliderHeight / 2} r={sliderHeight} style={{transform: `translate(${xPosition}px, 0)`, transition: 'transform 300ms cubic-bezier(0.17, 0.67, 0.53, 0.98)'}} />
+          <circle cx='0' cy={sliderHeight / 3} r={sliderHeight} style={{transform: `translate(${xPosition}px, 0)`, transition: 'transform 300ms cubic-bezier(0.17, 0.67, 0.53, 0.98)'}} />
         </g>
       </g>
     )

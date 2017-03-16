@@ -4,10 +4,11 @@ const Parallel = require('paralleljs')
 if (process.argv[2] === '--help') help()
 
 function help () {
-  console.log('usage: node calculate-district-totals.js [POINTS FILE] [DISTRICTS FILE] [POINTS RESOLUTION] [SAMPLE SIZE]')
+  console.log('usage: node calculate-district-totals.js [POINTS FILE] [DISTRICTS FILE] [DIMENSION PREFIX] [POINTS RESOLUTION] [SAMPLE SIZE]')
   console.log('    - POINTS FILE should be a csv')
   console.log('    - SAMPLE SIZE is an integer that indicates that every Nth row should be counted (default is 1)')
   console.log('    - DISTRICTS FILE should be a json list of geojson features - i know, none of this makes sense, sorry')
+  console.log('    - DIMENSION PREFIX is the prefix that will be prepended to each metric column in the output')
   console.log('    - POINTS RESOLUTION is an integer representing the count-per-point resolution (default is 1)')
   console.log('outputs csv-formatted list of districts with aggregate counts for each value in the POINTS FILE')
   process.exit()
@@ -18,10 +19,11 @@ const BATCH_COUNT = 8
 
 let pointsFile = process.argv[2]
 let districtsFile = process.argv[3]
-const pointResolution = parseInt(process.argv[4], 10) || 1
-const sampleSize = parseInt(process.argv[5], 10) || 1
+const dimensionPrefix = process.argv[4]
+const pointResolution = parseInt(process.argv[5], 10) || 1
+const sampleSize = parseInt(process.argv[6], 10) || 1
 
-if (!pointsFile || !districtsFile || !pointResolution) help()
+if (!pointsFile || !districtsFile || !pointResolution || !dimensionPrefix) help()
 if (pointsFile[0] !== '.') pointsFile = `./${pointsFile}`
 
 // prob don't do this?
@@ -137,7 +139,8 @@ function writeData (districtTotals) {
   }))
 
   const uniqueValues = getUniqueValues(districtObjs, d => Object.keys(d.counts))
-  process.stdout.write(`district-name,${uniqueValues.join(',')}\n`)
+  const columnNames = uniqueValues.map(v => `${dimensionPrefix}:${v.replace(/"/g, '')}`)
+  process.stdout.write(`district-name,${columnNames.join(',')}\n`)
   districtObjs.forEach(d => {
     process.stdout.write(`"${d.name}",${uniqueValues.map(v => d.counts[v] || 0).join(',')}\n`)
   })

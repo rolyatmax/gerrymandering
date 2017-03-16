@@ -1,0 +1,8 @@
+ia_final.dbf (application/octet-stream) 3176167 bytes.
+ia_final.sbn (application/octet-stream) 27508 bytes.
+ia_final.sbx (application/octet-stream) 3308 bytes.
+ia_final.shp (application/octet-stream) 9220268 bytes.
+ia_final.shx (application/octet-stream) 20300 bytes.
+ia_final.tab (text/tab-separated-values) 1184486 bytes.
+ia_notes.rtf (text/plain; charset=US-ASCII) 139105 bytes.
+ia_shapefile.zip (application/zip) 4977290 bytes.

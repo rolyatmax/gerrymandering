@@ -8,9 +8,10 @@ var ALABAMA_STATEFP = '01'
 var ARIZONA_STATEFP = '04'
 var FLORIDA_STATEFP = '12'
 var TEXAS_STATEFP = '48'
+var IOWA_STATEFP = '19'
 
 var districts = features
-  .filter(feat => feat.properties['STATEFP'] === TEXAS_STATEFP)
+  .filter(feat => feat.properties['STATEFP'] === FLORIDA_STATEFP)
   .map(feat => {
     // feat.properties['STATEFP'] = feat.properties['STATEFP10']
     // delete feat.properties['STATEFP10']

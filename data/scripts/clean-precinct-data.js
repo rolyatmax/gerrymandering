@@ -84,38 +84,97 @@ let customTransformation = () => {}
 //   feature.geometry.coordinates = coords
 // }
 
-// AZ
-const GEOJSON_FILE = '../az_final.json'
-const PRECINCT_NAME_KEY = 'PRECNAME'
+// // AZ
+// const GEOJSON_FILE = '../az_final.json'
+// const PRECINCT_NAME_KEY = 'PRECNAME'
+// const properties = {
+//   normalVotes: {
+//     democrat: 'NDV',
+//     republican: 'NRV'
+//   },
+//   electionPresident2008: {
+//     democrat: 'PRS08_DEM',
+//     republican: 'PRS08_REP',
+//     other: 'PRS08_OTH'
+//   },
+//   electionGovernor2010: {
+//     democrat: 'GOV10_DEM',
+//     republican: 'GOV10_REP',
+//     other: 'GOV10_OTH'
+//   },
+//   electionUSSenate2010: {
+//     democrat: 'USSEN10_DE',
+//     republican: 'USSEN10_RE',
+//     other: 'USSEN10_OT'
+//   }
+// }
+
+// AL
+// const GEOJSON_FILE = '../al_final.json'
+// const PRECINCT_NAME_KEY = 'NAME10'
+// const properties = {
+//   normalVotes: {
+//     democrat: 'NDV',
+//     republican: 'NRV'
+//   },
+//   electionPresident2008: {
+//     democrat: 'USP_D_08',
+//     republican: 'USP_R_08'
+//   },
+//   electionUSSenate2008: {
+//     democrat: 'USS_D_08',
+//     republican: 'USS_R_08'
+//   }
+// }
+
+// IA
+// const GEOJSON_FILE = '../ia_final.json'
+// const PRECINCT_NAME_KEY = 'NAME10'
+// const properties = {
+//   normalVotes: {
+//     democrat: 'NDV',
+//     republican: 'NRV'
+//   },
+//   electionPresident2008: {
+//     democrat: 'PRES_D_08',
+//     republican: 'PRES_R_08'
+//   },
+//   electionUSSenate2008: {
+//     democrat: 'USS_D_08',
+//     republican: 'USS_R_08'
+//   },
+//   electionUSHouse2008: {
+//     democrat: 'USH_D_08',
+//     republican: 'USH_R_08'
+//   }
+// }
+
+// FL - 2008 presidential votes
+// democrat: 'PRES_DEM_0'
+// republican: 'PRES_REP_0'
+
+// FL
+const GEOJSON_FILE = '../fl_final.json'
+const PRECINCT_NAME_KEY = 'PREC'
 const properties = {
   normalVotes: {
     democrat: 'NDV',
     republican: 'NRV'
   },
-  electionPresident2008: {
-    democrat: 'PRS08_DEM',
-    republican: 'PRS08_REP',
-    other: 'PRS08_OTH'
-  },
   electionGovernor2010: {
-    democrat: 'GOV10_DEM',
-    republican: 'GOV10_REP',
-    other: 'GOV10_OTH'
+    democrat: 'GOV_D_SINK',
+    republican: 'GOV_R_SCOT'
+  },
+  electionPresident2008: {
+    democrat: 'PRES_DEM_0',
+    republican: 'PRES_REP_0'
   },
   electionUSSenate2010: {
-    democrat: 'USSEN10_DE',
-    republican: 'USSEN10_RE',
-    other: 'USSEN10_OT'
+    democrat: 'SEN_D_MEEK',
+    republican: 'SEN_R_RUBI',
+    other: 'SEN_NPA_CR'
   }
 }
-
-// AL - 2008 presidential votes
-// democrat: 'USP_D_08'
-// republican: 'USP_R_08'
-
-// FL - 2008 presidential votes
-// democrat: 'PRES_DEM_0'
-// republican: 'PRES_REP_0'
 
 // WI - 2008 presidential votes
 // democrat: 'PRESDEM08'

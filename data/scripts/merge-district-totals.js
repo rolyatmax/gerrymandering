@@ -35,7 +35,7 @@ Promise.all(promises).then((files) => {
   }
 
   writeData(totals)
-})
+}).catch((err) => console.error(err))
 
 function writeData (districtTotals) {
   const districtObjs = Object.keys(districtTotals).map(districtName => ({

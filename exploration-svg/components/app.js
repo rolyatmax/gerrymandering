@@ -1,36 +1,81 @@
+/* global fetch  */
+
 import React from 'react'
+import * as d3 from 'd3'
 import Map from './district-map'
 import DistrictMargins from './district-margins'
 import Controls from './controls'
+import stateConfig from '../state-config'
+
+window.d3 = d3
 
 export default class App extends React.Component {
   constructor (props) {
     super()
+    const defaultState = 'tx'
+    const { dimensions } = stateConfig[defaultState]
     this.state = {
+      usState: defaultState,
+      dataLoaded: false,
+      precincts: null,
+      districts: null,
+      totals: null,
       district: 0,
-      dimension: 'us-senate-2008',
+      dimension: dimensions[0],
       showPrecincts: false,
       selectedDistrict: null,
       colors: {
         democrat: [61, 94, 156],
         republican: [195, 35, 44],
         libertarian: [80, 220, 80],
-        unaffiliated: [200, 20, 200]
+        unaffiliated: [200, 20, 200],
+        other: [200, 20, 200]
       }
     }
   }
 
+  componentWillMount () {
+    this.fetchData()
+  }
+
+  onChange (state) {
+    if (state.usState && state.usState !== this.state.usState) {
+      this.setState({
+        ...state,
+        dimension: stateConfig[state.usState].dimensions[0],
+        dataLoaded: false,
+        precincts: null,
+        districts: null,
+        totals: null
+      }, this.fetchData.bind(this))
+      return
+    }
+    this.setState(state)
+  }
+
+  fetchData () {
+    const { dataSources } = stateConfig[this.state.usState]
+    const precinctRequest = fetch(`data/${dataSources.precincts}`).then(res => res.json())
+    const districtsRequests = createRequests(dataSources.districts, (res) => res.json())
+    const totalsRequests = createRequests(dataSources.totals, (res) => res.text().then(text => d3.csvParse(text)))
+    const requests = [precinctRequest, ...districtsRequests, ...totalsRequests]
+    Promise.all(requests).then(([precincts, ...rest]) => {
+      const districts = rest.splice(0, districtsRequests.length)
+      const totals = rest.splice(0, totalsRequests.length)
+      this.setState({ dataLoaded: true, precincts, districts, totals })
+    })
+  }
+
   render () {
+    if (!this.state.dataLoaded) {
+      return <div>Loading!</div>
+    }
+
+    const { dimensions } = stateConfig[this.state.usState]
     const districtMap = {}
-    this.props.districts.forEach((d, i) => { districtMap[d.name] = i })
-    // const dimensions = [
-    //   'age', 'ethnicity', 'gender', 'gov-2008', 'party-affiliation', 'pres-2008', 'race',
-    //   'us-senate-2008', 'us-senate-2010'
-    // ]
-    const dimensions = [
-      'gov-2008', 'party-affiliation', 'pres-2008', 'us-senate-2008', 'us-senate-2010'
-    ]
+    this.state.districts.forEach((d, i) => { districtMap[d.name] = i })
     const controls = {
+      usState: [Object.keys(stateConfig)],
       district: [districtMap],
       dimension: [dimensions],
       // showPrecincts: []
@@ -38,11 +83,21 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <h2>North Carolina &amp; Its Voting Districts</h2>
-        <Map setSelectedDistrict={(name) => this.setState({ selectedDistrict: name })} precincts={this.props.precincts} districts={this.props.districts} totals={this.props.totals} settings={this.state} />
-        <DistrictMargins districts={this.props.districts} totals={this.props.totals} settings={this.state} />
-        <Controls controls={controls} settings={this.state} onChange={(settings) => this.setState(settings)} />
+        <Map setSelectedDistrict={(name) => this.onChange({ selectedDistrict: name })} precincts={this.state.precincts} districts={this.state.districts} totals={this.state.totals} settings={this.state} />
+        <DistrictMargins districts={this.state.districts} totals={this.state.totals} settings={this.state} />
+        <Controls controls={controls} settings={this.state} onChange={this.onChange.bind(this)} />
       </div>
     )
   }
+}
+
+function createRequests (resources, parse = (val) => val) {
+  return resources
+    .map((d, i) => fetch(`data/${d.filename}`)
+      .then(parse)
+      .then(data => ({
+        data: data,
+        name: resources[i].name
+      }))
+    )
 }

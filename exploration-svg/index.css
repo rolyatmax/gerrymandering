@@ -23,3 +23,8 @@ h3 {
   bottom: 50px;
   left: 50px;
 }
+
+g.district text {
+  font-size: 11px;
+  text-transform: uppercase;
+}

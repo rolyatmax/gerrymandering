@@ -5,7 +5,7 @@ const lerp = require('lerp')
 const validPropGroups = [
   'voterPartyAffiliation', 'genPopEthnicity', 'genPopPrimaryRace', 'voterGender',
   'voterAge', 'electionPresident2008', 'electionUSSenate2008', 'electionUSSenate2010',
-  'electionGovernor2008', 'electionGovernor2010', 'normalVotes'
+  'electionGovernor2008', 'electionGovernor2010', 'normalVotes', 'electionUSHouse2008'
 ]
 
 if (process.argv[2] === '--help') help()
@@ -34,6 +34,7 @@ for (let precinct of precincts) {
 
 function generatePoint (precinct) {
   const points = []
+  if (!precinct.geometry) return points
   // should prob fix this to evenly distribute dots in all polygons
   // fewer than 10 precincts are multipolygons, though, I believe
   const polygon = getLargestPolygon(precinct.geometry)
