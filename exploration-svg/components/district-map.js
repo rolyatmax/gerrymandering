@@ -5,30 +5,63 @@ import { getValuesForDimension, getWinnerMargin } from '../helpers'
 import stateConfig from '../state-config'
 
 export default class Map extends React.Component {
-  render () {
-    const { settings, districts, totals, setSelectedDistrict } = this.props
-    const viewport = [window.innerWidth, window.innerHeight]
-    const [width, height] = viewport
-    const padding = 100
-    const district = districts[settings.district]
-    const total = totals[settings.district]
-    const { projectionRotation } = stateConfig[settings.usState]
+  constructor () {
+    super()
+    this.onResize = this.onResize.bind(this)
+    this.state = {
+      projection: null
+    }
+  }
+
+  onResize () {
+    this.updateProjection()
+  }
+
+  updateProjection () {
+    const { width, height } = this.svgEl.parentElement.getBoundingClientRect(this.svgEl)
+    const viewport = [width, height]
+    const padding = 50
+    const { projectionRotation } = stateConfig[this.props.settings.usState]
+    const district = this.props.districts[this.props.settings['district-map']]
     const projection = d3.geoConicConformal()
       .rotate(projectionRotation)
       .fitExtent([[padding, padding], viewport.map(d => d - padding)], {
         type: 'FeatureCollection',
         features: district.data
       })
-    const path = d3.geoPath(projection)
-    const baseMapProps = { path, settings }
+    this.setState({ projection })
+  }
+
+  componentDidMount () {
+    this.updateProjection()
+    window.addEventListener('resize', this.onResize)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.onResize)
+  }
+
+  render () {
+    const { settings, districts, totals, setSelectedDistrict } = this.props
+    let map = null
+    if (this.state.projection) {
+      const district = districts[settings['district-map']]
+      const total = totals[settings['district-map']]
+      const path = d3.geoPath(this.state.projection)
+      map = (
+        <DistrictMap
+          path={path}
+          settings={settings}
+          districts={district.data}
+          totals={total.data}
+          setSelectedDistrict={setSelectedDistrict} />
+      )
+    }
 
     return (
-      <div>
-        <svg
-          width={width}
-          height={height}
-          style={{ position: 'absolute', transition: 'opacity 200ms linear' }}>
-          <DistrictMap {...baseMapProps} districts={district.data} totals={total.data} setSelectedDistrict={setSelectedDistrict} />
+      <div className='district-map'>
+        <svg ref={(el) => { this.svgEl = el }}>
+          {map}
         </svg>
       </div>
     )

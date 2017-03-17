@@ -1,22 +1,39 @@
 import React from 'react'
-import { GUI } from 'dat-gui'
 
 export default class Controls extends React.Component {
-  componentDidMount () {
-    const settings = {...this.props.settings}
-    const onChange = () => {
-      this.props.onChange(settings)
-    }
-    const gui = new GUI({ autoPlace: false })
-    for (let prop in this.props.controls) {
-      gui.add(settings, prop, ...this.props.controls[prop]).onFinishChange(onChange)
-    }
-    this.el.appendChild(gui.domElement)
-  }
-
   render () {
     return (
-      <div style={{position: 'absolute', right: 10}} ref={(el) => { this.el = el }} />
+      <div className='controls'>
+        {this.props.controls.map(({ label, settingsKey, values }) => {
+          const buttons = values.map((v) => {
+            const value = Array.isArray(v) ? v[0] : v
+            return {
+              value: value,
+              label: Array.isArray(v) ? v[1] : v,
+              selected: this.props.settings[settingsKey] === value
+            }
+          })
+          const onSelect = (val) => this.props.onChange({ [settingsKey]: val })
+          return (
+            <ButtonGroup label={label} buttons={buttons} onSelect={onSelect} />
+          )
+        })}
+      </div>
     )
   }
+}
+
+function ButtonGroup ({ label, buttons, onSelect }) {
+  return (
+    <div className='button-group'>
+      <div className='label'>{label}</div>
+      <div className='buttons'>
+        {buttons.map(({ label, value, selected }) => (
+          <div className={selected ? 'selected' : ''} onClick={() => onSelect(value)}>
+            {label}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }

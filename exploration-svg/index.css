@@ -4,7 +4,7 @@ html, body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Lora', serif;
+  /*font-family: 'Lora', serif;*/
 }
 
 h2 {
@@ -18,17 +18,127 @@ h3 {
   margin: 30px 0;
 }
 
-.district-margins {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
+.container {
+  padding-top: 20px;
+  width: 1200px;
+  margin: auto;
 }
 
-.district-margins g.district text {
-  font-size: 11px;
+.interactive {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 90vh;
+  padding-bottom: 100px;
+}
+
+.district-map {
+  width: 70%;
+  height: 100%;
+}
+
+.district-map svg {
+  height: 100%;
+  width: 100%;
+}
+
+.district-margins {
+  width: 25%;
+}
+
+.district-margins h3 {
+  font-size: 16px;
+}
+
+.district-margins li {
+  transition: opacity 100ms linear; /* , transform 300ms cubic-bezier(0.17, 0.67, 0.53, 0.98); */
+  /*border: 1px solid black;*/
+}
+
+.district-margins li span {
+  display: inline-block;
+  font-size: 12px;
+  opacity: 1;
+  transition: opacity 100ms linear;
+  width: 50px;
+}
+
+.district-margins li.fade {
+  opacity: 0.35;
+}
+
+.district-margins li.fade span {
+  opacity: 0;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 5px;
+}
+
+.slider .margin {
+  position: absolute;
+  height: 100%;
+  transition: width 300ms cubic-bezier(0.17, 0.67, 0.53, 0.98);
+}
+
+.slider .margin.background {
+  opacity: 0.1;
+  width: 50%;
+}
+
+.slider .margin.dem {
+  right: 50%;
+  background: rgba(61, 94, 156, 0.7);
+}
+
+.slider .margin.rep {
+  left: 50%;
+  background: rgba(195, 35, 44, 0.7);
+}
+
+.controls {
+  width: 100%;
+}
+
+.button-group {
+  display: inline-block;
+  margin: 15px;
+}
+
+.button-group .label {
+  margin-bottom: 8px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
-g path {
+.buttons {
+  display: inline-block;
+  border: 1px solid #9ea5b2;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.buttons div {
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #9ea5b2;
+}
+
+.buttons div.selected {
+  background: #9ea5b2;
+  color: white;
+}
+
+.buttons div:hover {
+  background: #bcc4d4;
+  color: white;
+}
+
+.buttons div:last-child {
+  border-right: 0;
 }

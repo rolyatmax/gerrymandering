@@ -4,7 +4,7 @@
   "description": "an interactive look at gerrymandering",
   "scripts": {
     "start": "serve",
-    "dev": "budo index.js:bundle.js --live --open",
+    "dev": "budo index.js:dist/bundle.js --live --open",
     "postinstall": "cp node_modules/standard/eslintrc.json .eslintrc || true",
     "lint": "standard",
     "build": "mkdir -p dist && browserify index.js > dist/bundle.js"

@@ -53,12 +53,12 @@ export default {
     dataSources: {
       // precincts: 'az-precincts.json',
       districts: [
-        { name: 'US Districts 2010', filename: 'fl-congressional-districts-2010-simplified.json' },
-        { name: 'US Districts 2015', filename: 'fl-congressional-districts-2015-simplified.json' }
+        { name: '2010', filename: 'fl-congressional-districts-2010-simplified.json' },
+        { name: '2015', filename: 'fl-congressional-districts-2015-simplified.json' }
       ],
       totals: [
-        { name: 'US Districts 2010', filename: 'district-totals/fl-congressional-districts-2010-totals.csv' },
-        { name: 'US Districts 2015', filename: 'district-totals/fl-congressional-districts-2015-totals.csv' }
+        { name: '2010', filename: 'district-totals/fl-congressional-districts-2010-totals.csv' },
+        { name: '2015', filename: 'district-totals/fl-congressional-districts-2015-totals.csv' }
       ]
     }
   },
@@ -69,30 +69,30 @@ export default {
     dataSources: {
       // precincts: 'nc-precincts.json',
       districts: [
-        { name: 'US Districts 2010', filename: 'nc-congressional-districts-2010-simplified.json' },
-        { name: 'US Districts 2013', filename: 'nc-congressional-districts-2013-simplified.json' },
-        { name: 'US Districts 2015', filename: 'nc-congressional-districts-2015-simplified.json' }
+        { name: '2010', filename: 'nc-congressional-districts-2010-simplified.json' },
+        { name: '2013', filename: 'nc-congressional-districts-2013-simplified.json' },
+        { name: '2015', filename: 'nc-congressional-districts-2015-simplified.json' }
       ],
       totals: [
-        { name: 'US Districts 2010', filename: 'district-totals/nc-congressional-districts-2010-totals.csv' },
-        { name: 'US Districts 2013', filename: 'district-totals/nc-congressional-districts-2013-totals.csv' },
-        { name: 'US Districts 2015', filename: 'district-totals/nc-congressional-districts-2015-totals.csv' }
+        { name: '2010', filename: 'district-totals/nc-congressional-districts-2010-totals.csv' },
+        { name: '2013', filename: 'district-totals/nc-congressional-districts-2013-totals.csv' },
+        { name: '2015', filename: 'district-totals/nc-congressional-districts-2015-totals.csv' }
       ]
     }
   },
 
   tx: {
     projectionRotation: [98.5, -31 - 45 / 60],
-    races: ['gov-2010', 'normal-votes', 'pres-2008'],
+    races: ['normal-votes', 'gov-2010', 'pres-2008'],
     dataSources: {
       // precincts: 'tx-precincts.json',
       districts: [
-        { name: 'US Districts 2010', filename: 'tx-congressional-districts-2010-simplified.json' },
-        { name: 'US Districts 2015', filename: 'tx-congressional-districts-2015-simplified.json' }
+        { name: '2010', filename: 'tx-congressional-districts-2010-simplified.json' },
+        { name: '2015', filename: 'tx-congressional-districts-2015-simplified.json' }
       ],
       totals: [
-        { name: 'US Districts 2010', filename: 'district-totals/tx-congressional-districts-2010-totals.csv' },
-        { name: 'US Districts 2015', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }
+        { name: '2010', filename: 'district-totals/tx-congressional-districts-2010-totals.csv' },
+        { name: '2015', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }
       ]
     }
   }
