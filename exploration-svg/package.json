@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "an interactive look at gerrymandering",
   "scripts": {
-    "start": "budo index.js:bundle.js --live --open",
+    "start": "serve",
+    "dev": "budo index.js:bundle.js --live --open",
     "postinstall": "cp node_modules/standard/eslintrc.json .eslintrc || true",
     "lint": "standard",
-    "build": "browserify index.js > dist/bundle.js"
+    "build": "mkdir -p dist && browserify index.js > dist/bundle.js"
   },
   "author": "Taylor Baldwin <taylorbaldwin@gmail.com> (https://tbaldw.in)",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "serve": "^5.0.3",
     "yo-yo": "^1.4.0"
   },
   "devDependencies": {

@@ -13,16 +13,14 @@ export default class App extends React.Component {
   constructor (props) {
     super()
     const defaultState = 'tx'
-    const { dimensions } = stateConfig[defaultState]
+    const { races } = stateConfig[defaultState]
     this.state = {
       usState: defaultState,
       dataLoaded: false,
-      precincts: null,
       districts: null,
       totals: null,
       district: 0,
-      dimension: dimensions[0],
-      showPrecincts: false,
+      race: races[0],
       selectedDistrict: null,
       colors: {
         democrat: [61, 94, 156],
@@ -42,9 +40,8 @@ export default class App extends React.Component {
     if (state.usState && state.usState !== this.state.usState) {
       this.setState({
         ...state,
-        dimension: stateConfig[state.usState].dimensions[0],
+        race: stateConfig[state.usState].races[0],
         dataLoaded: false,
-        precincts: null,
         districts: null,
         totals: null
       }, this.fetchData.bind(this))
@@ -55,14 +52,13 @@ export default class App extends React.Component {
 
   fetchData () {
     const { dataSources } = stateConfig[this.state.usState]
-    const precinctRequest = fetch(`data/${dataSources.precincts}`).then(res => res.json())
     const districtsRequests = createRequests(dataSources.districts, (res) => res.json())
     const totalsRequests = createRequests(dataSources.totals, (res) => res.text().then(text => d3.csvParse(text)))
-    const requests = [precinctRequest, ...districtsRequests, ...totalsRequests]
-    Promise.all(requests).then(([precincts, ...rest]) => {
-      const districts = rest.splice(0, districtsRequests.length)
-      const totals = rest.splice(0, totalsRequests.length)
-      this.setState({ dataLoaded: true, precincts, districts, totals })
+    const requests = [...districtsRequests, ...totalsRequests]
+    Promise.all(requests).then((responses) => {
+      const districts = responses.splice(0, districtsRequests.length)
+      const totals = responses.splice(0, totalsRequests.length)
+      this.setState({ dataLoaded: true, districts, totals })
     })
   }
 
@@ -71,19 +67,18 @@ export default class App extends React.Component {
       return <div>Loading!</div>
     }
 
-    const { dimensions } = stateConfig[this.state.usState]
+    const { races } = stateConfig[this.state.usState]
     const districtMap = {}
     this.state.districts.forEach((d, i) => { districtMap[d.name] = i })
     const controls = {
       usState: [Object.keys(stateConfig)],
       district: [districtMap],
-      dimension: [dimensions],
-      // showPrecincts: []
+      race: [races]
     }
 
     return (
       <div>
-        <Map setSelectedDistrict={(name) => this.onChange({ selectedDistrict: name })} precincts={this.state.precincts} districts={this.state.districts} totals={this.state.totals} settings={this.state} />
+        <Map setSelectedDistrict={(name) => this.onChange({ selectedDistrict: name })} districts={this.state.districts} totals={this.state.totals} settings={this.state} />
         <DistrictMargins districts={this.state.districts} totals={this.state.totals} settings={this.state} />
         <Controls controls={controls} settings={this.state} onChange={this.onChange.bind(this)} />
       </div>

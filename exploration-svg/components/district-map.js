@@ -17,19 +17,17 @@ export default class Map extends React.Component {
       .rotate(projectionRotation)
       .fitExtent([[padding, padding], viewport.map(d => d - padding)], {
         type: 'FeatureCollection',
-        features: district.data // could also be precinct.data
+        features: district.data
       })
     const path = d3.geoPath(projection)
     const baseMapProps = { path, settings }
-
-    const districtMapOpacity = settings.showPrecincts ? 0 : 1
 
     return (
       <div>
         <svg
           width={width}
           height={height}
-          style={{ position: 'absolute', opacity: districtMapOpacity, transition: 'opacity 200ms linear' }}>
+          style={{ position: 'absolute', transition: 'opacity 200ms linear' }}>
           <DistrictMap {...baseMapProps} districts={district.data} totals={total.data} setSelectedDistrict={setSelectedDistrict} />
         </svg>
       </div>

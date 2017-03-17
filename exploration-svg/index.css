@@ -24,7 +24,11 @@ h3 {
   left: 50px;
 }
 
-g.district text {
+.district-margins g.district text {
   font-size: 11px;
   text-transform: uppercase;
+}
+
+g path {
+  cursor: pointer;
 }

@@ -4,7 +4,7 @@ export function getValuesForDimension (counts, settings) {
   const values = {}
   for (let dim in counts) {
     const [dimName, val] = dim.split(':')
-    if (dimName === settings.dimension) {
+    if (dimName === settings.race) {
       values[val] = counts[dim]
     }
   }

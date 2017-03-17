@@ -37,8 +37,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
-
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -58,17 +56,15 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     var defaultState = 'tx';
-    var dimensions = _stateConfig2.default[defaultState].dimensions;
+    var races = _stateConfig2.default[defaultState].races;
 
     _this.state = {
       usState: defaultState,
       dataLoaded: false,
-      precincts: null,
       districts: null,
       totals: null,
       district: 0,
-      dimension: dimensions[0],
-      showPrecincts: false,
+      race: races[0],
       selectedDistrict: null,
       colors: {
         democrat: [61, 94, 156],
@@ -91,9 +87,8 @@ var App = function (_React$Component) {
     value: function onChange(state) {
       if (state.usState && state.usState !== this.state.usState) {
         this.setState(_extends({}, state, {
-          dimension: _stateConfig2.default[state.usState].dimensions[0],
+          race: _stateConfig2.default[state.usState].races[0],
           dataLoaded: false,
-          precincts: null,
           districts: null,
           totals: null
         }), this.fetchData.bind(this));
@@ -108,9 +103,6 @@ var App = function (_React$Component) {
 
       var dataSources = _stateConfig2.default[this.state.usState].dataSources;
 
-      var precinctRequest = fetch('data/' + dataSources.precincts).then(function (res) {
-        return res.json();
-      });
       var districtsRequests = createRequests(dataSources.districts, function (res) {
         return res.json();
       });
@@ -119,15 +111,11 @@ var App = function (_React$Component) {
           return d3.csvParse(text);
         });
       });
-      var requests = [precinctRequest].concat(_toConsumableArray(districtsRequests), _toConsumableArray(totalsRequests));
-      Promise.all(requests).then(function (_ref) {
-        var _ref2 = _toArray(_ref),
-            precincts = _ref2[0],
-            rest = _ref2.slice(1);
-
-        var districts = rest.splice(0, districtsRequests.length);
-        var totals = rest.splice(0, totalsRequests.length);
-        _this2.setState({ dataLoaded: true, precincts: precincts, districts: districts, totals: totals });
+      var requests = [].concat(_toConsumableArray(districtsRequests), _toConsumableArray(totalsRequests));
+      Promise.all(requests).then(function (responses) {
+        var districts = responses.splice(0, districtsRequests.length);
+        var totals = responses.splice(0, totalsRequests.length);
+        _this2.setState({ dataLoaded: true, districts: districts, totals: totals });
       });
     }
   }, {
@@ -143,7 +131,7 @@ var App = function (_React$Component) {
         );
       }
 
-      var dimensions = _stateConfig2.default[this.state.usState].dimensions;
+      var races = _stateConfig2.default[this.state.usState].races;
 
       var districtMap = {};
       this.state.districts.forEach(function (d, i) {
@@ -152,7 +140,7 @@ var App = function (_React$Component) {
       var controls = {
         usState: [Object.keys(_stateConfig2.default)],
         district: [districtMap],
-        dimension: [dimensions]
+        race: [races]
       };
 
       return _react2.default.createElement(
@@ -160,7 +148,7 @@ var App = function (_React$Component) {
         null,
         _react2.default.createElement(_districtMap2.default, { setSelectedDistrict: function setSelectedDistrict(name) {
             return _this3.onChange({ selectedDistrict: name });
-          }, precincts: this.state.precincts, districts: this.state.districts, totals: this.state.totals, settings: this.state }),
+          }, districts: this.state.districts, totals: this.state.totals, settings: this.state }),
         _react2.default.createElement(_districtMargins2.default, { districts: this.state.districts, totals: this.state.totals, settings: this.state }),
         _react2.default.createElement(_controls2.default, { controls: controls, settings: this.state, onChange: this.onChange.bind(this) })
       );
@@ -325,12 +313,10 @@ var Map = function (_React$Component) {
         return d - padding;
       })], {
         type: 'FeatureCollection',
-        features: district.data // could also be precinct.data
+        features: district.data
       });
       var path = d3.geoPath(projection);
       var baseMapProps = { path: path, settings: settings };
-
-      var districtMapOpacity = settings.showPrecincts ? 0 : 1;
 
       return _react2.default.createElement(
         'div',
@@ -340,7 +326,7 @@ var Map = function (_React$Component) {
           {
             width: width,
             height: height,
-            style: { position: 'absolute', opacity: districtMapOpacity, transition: 'opacity 200ms linear' } },
+            style: { position: 'absolute', transition: 'opacity 200ms linear' } },
           _react2.default.createElement(DistrictMap, _extends({}, baseMapProps, { districts: district.data, totals: total.data, setSelectedDistrict: setSelectedDistrict }))
         )
       );
@@ -526,7 +512,7 @@ function getValuesForDimension(counts, settings) {
         dimName = _dim$split2[0],
         val = _dim$split2[1];
 
-    if (dimName === settings.dimension) {
+    if (dimName === settings.race) {
       values[val] = counts[dim];
     }
   }
@@ -46049,9 +46035,9 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
   al: {
     projectionRotation: [86.5, -33 - 45 / 60],
-    dimensions: ['normal-votes', 'pres-2008', 'us-senate-2008'],
+    races: ['normal-votes', 'pres-2008', 'us-senate-2008'],
     dataSources: {
-      precincts: 'al-precincts.json',
+      // precincts: 'al-precincts.json',
       districts: [{ name: 'US Districts 2010', filename: 'al-congressional-districts-2010-simplified.json' }, { name: 'US Districts 2015', filename: 'al-congressional-districts-2015-simplified.json' }],
       totals: [{ name: 'US Districts 2010', filename: 'district-totals/al-congressional-districts-2010-totals.csv' }, { name: 'US Districts 2015', filename: 'district-totals/al-congressional-districts-2015-totals.csv' }]
     }
@@ -46059,9 +46045,9 @@ exports.default = {
 
   az: {
     projectionRotation: [111.5, -34.5 - 45 / 60],
-    dimensions: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
+    races: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
     dataSources: {
-      precincts: 'az-precincts.json',
+      // precincts: 'az-precincts.json',
       districts: [{ name: 'US Districts 2010', filename: 'az-congressional-districts-2010-simplified.json' }, { name: 'US Districts 2015', filename: 'az-congressional-districts-2015-simplified.json' }],
       totals: [{ name: 'US Districts 2010', filename: 'district-totals/az-congressional-districts-2010-totals.csv' }, { name: 'US Districts 2015', filename: 'district-totals/az-congressional-districts-2015-totals.csv' }]
     }
@@ -46069,9 +46055,9 @@ exports.default = {
 
   ia: {
     projectionRotation: [93.5, -42 - 45 / 60],
-    dimensions: ['normal-votes', 'us-house-2008', 'pres-2008', 'us-senate-2008'],
+    races: ['normal-votes', 'us-house-2008', 'pres-2008', 'us-senate-2008'],
     dataSources: {
-      precincts: 'ia-precincts.json',
+      // precincts: 'ia-precincts.json',
       districts: [{ name: 'US Districts 2010', filename: 'ia-congressional-districts-2010-simplified.json' }, { name: 'US Districts 2015', filename: 'ia-congressional-districts-2015-simplified.json' }],
       totals: [{ name: 'US Districts 2010', filename: 'district-totals/ia-congressional-districts-2010-totals.csv' }, { name: 'US Districts 2015', filename: 'district-totals/ia-congressional-districts-2015-totals.csv' }]
     }
@@ -46079,9 +46065,9 @@ exports.default = {
 
   fl: {
     projectionRotation: [84, -27.5 - 45 / 60],
-    dimensions: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
+    races: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
     dataSources: {
-      precincts: 'az-precincts.json',
+      // precincts: 'az-precincts.json',
       districts: [{ name: 'US Districts 2010', filename: 'fl-congressional-districts-2010-simplified.json' }, { name: 'US Districts 2015', filename: 'fl-congressional-districts-2015-simplified.json' }],
       totals: [{ name: 'US Districts 2010', filename: 'district-totals/fl-congressional-districts-2010-totals.csv' }, { name: 'US Districts 2015', filename: 'district-totals/fl-congressional-districts-2015-totals.csv' }]
     }
@@ -46089,9 +46075,9 @@ exports.default = {
 
   nc: {
     projectionRotation: [79, -33 - 45 / 60],
-    dimensions: ['gov-2008', 'party-affiliation', 'pres-2008', 'us-senate-2008', 'us-senate-2010'],
+    races: ['gov-2008', 'party-affiliation', 'pres-2008', 'us-senate-2008', 'us-senate-2010'],
     dataSources: {
-      precincts: 'nc-precincts.json',
+      // precincts: 'nc-precincts.json',
       districts: [{ name: 'US Districts 2010', filename: 'nc-congressional-districts-2010-simplified.json' }, { name: 'US Districts 2013', filename: 'nc-congressional-districts-2013-simplified.json' }, { name: 'US Districts 2015', filename: 'nc-congressional-districts-2015-simplified.json' }],
       totals: [{ name: 'US Districts 2010', filename: 'district-totals/nc-congressional-districts-2010-totals.csv' }, { name: 'US Districts 2013', filename: 'district-totals/nc-congressional-districts-2013-totals.csv' }, { name: 'US Districts 2015', filename: 'district-totals/nc-congressional-districts-2015-totals.csv' }]
     }
@@ -46099,9 +46085,9 @@ exports.default = {
 
   tx: {
     projectionRotation: [98.5, -31 - 45 / 60],
-    dimensions: ['gov-2010', 'normal-votes', 'pres-2008'],
+    races: ['gov-2010', 'normal-votes', 'pres-2008'],
     dataSources: {
-      precincts: 'tx-precincts.json',
+      // precincts: 'tx-precincts.json',
       districts: [{ name: 'US Districts 2010', filename: 'tx-congressional-districts-2010-simplified.json' }, { name: 'US Districts 2015', filename: 'tx-congressional-districts-2015-simplified.json' }],
       totals: [{ name: 'US Districts 2010', filename: 'district-totals/tx-congressional-districts-2010-totals.csv' }, { name: 'US Districts 2015', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }]
     }
