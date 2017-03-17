@@ -11,7 +11,8 @@ const validPropGroups = [
 if (process.argv[2] === '--help') help()
 
 function help () {
-  console.log('usage: node generate-points.js [PROP GROUP] [RESOLUTION]')
+  console.log('usage: node generate-points.js [PRECINCTS FILE] [PROP GROUP] [RESOLUTION]')
+  console.log('    - PRECINCTS FILE is geojson feature collection of precincts, duh')
   console.log('    - RESOLUTION is an integer which is how many people are represented by each dot (defaults to 1)')
   console.log(`    - PROP GROUP may be one of the following:\n        ${validPropGroups.join(',\n        ')}`)
   console.log('outputs csv-formatted list of points with longitude, latitude, and attribute from the selected PROP GROUP')
@@ -26,7 +27,7 @@ const countPerDot = parseInt(process.argv[4], 10) || 1
 const precincts = require(precinctsFilePath)
 
 process.stdout.write(`longitude,latitude,${propGroup}\n`)
-for (let precinct of precincts) {
+for (let precinct of precincts.features) {
   generatePoint(precinct).forEach(({ lat, lon, value }) => {
     process.stdout.write(`${lon},${lat},"${value}"\n`)
   })

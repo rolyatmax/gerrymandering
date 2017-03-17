@@ -7,7 +7,7 @@ function help () {
   console.log('usage: node calculate-district-totals.js [POINTS FILE] [DISTRICTS FILE] [DIMENSION PREFIX] [POINTS RESOLUTION] [SAMPLE SIZE]')
   console.log('    - POINTS FILE should be a csv')
   console.log('    - SAMPLE SIZE is an integer that indicates that every Nth row should be counted (default is 1)')
-  console.log('    - DISTRICTS FILE should be a json list of geojson features - i know, none of this makes sense, sorry')
+  console.log('    - DISTRICTS FILE should be a geojson feature collection')
   console.log('    - DIMENSION PREFIX is the prefix that will be prepended to each metric column in the output')
   console.log('    - POINTS RESOLUTION is an integer representing the count-per-point resolution (default is 1)')
   console.log('outputs csv-formatted list of districts with aggregate counts for each value in the POINTS FILE')
@@ -28,7 +28,7 @@ if (pointsFile[0] !== '.') pointsFile = `./${pointsFile}`
 
 // prob don't do this?
 if (districtsFile[0] !== '.') districtsFile = `./${districtsFile}`
-const districts = require(districtsFile)
+const districtsGeojson = require(districtsFile)
 
 fs.readFile(pointsFile, 'utf8', (err, data) => {
   if (err) throw err
@@ -73,7 +73,7 @@ function divideIntoBatches (list, batchCount) {
 }
 
 function processBatch (batch) {
-  const p = new Parallel([districts, DISTRICT_NAME_KEY, batch])
+  const p = new Parallel([districtsGeojson.features, DISTRICT_NAME_KEY, batch])
   return p.spawn(([districts, DISTRICT_NAME_KEY, lines]) => {
     const d3 = require('d3')
     const extent = require('geojson-extent')

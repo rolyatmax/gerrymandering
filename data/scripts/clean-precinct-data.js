@@ -182,9 +182,8 @@ const properties = {
 // libertarian: 'PRESLBR08'
 
 const geojson = require(GEOJSON_FILE)
-const features = geojson.features
 
-const precincts = features.map(feat => {
+geojson.features = geojson.features.map(feat => {
   const props = {}
   for (let propGroupName in properties) {
     props[propGroupName] = props[propGroupName] || {}
@@ -201,4 +200,4 @@ const precincts = features.map(feat => {
   return feat
 })
 
-process.stdout.write(JSON.stringify(precincts))
+process.stdout.write(JSON.stringify(geojson))

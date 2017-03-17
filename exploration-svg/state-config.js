@@ -5,12 +5,12 @@ export default {
     dataSources: {
       // precincts: 'al-precincts.json',
       districts: [
-        { name: 'US Districts 2010', filename: 'al-congressional-districts-2010-simplified.json' },
-        { name: 'US Districts 2015', filename: 'al-congressional-districts-2015-simplified.json' }
+        { name: '2010', filename: 'al-congressional-districts-2010-simplified.json' },
+        { name: '2015', filename: 'al-congressional-districts-2015-simplified.json' }
       ],
       totals: [
-        { name: 'US Districts 2010', filename: 'district-totals/al-congressional-districts-2010-totals.csv' },
-        { name: 'US Districts 2015', filename: 'district-totals/al-congressional-districts-2015-totals.csv' }
+        { name: '2010', filename: 'district-totals/al-congressional-districts-2010-totals.csv' },
+        { name: '2015', filename: 'district-totals/al-congressional-districts-2015-totals.csv' }
       ]
     }
   },
@@ -21,12 +21,12 @@ export default {
     dataSources: {
       // precincts: 'az-precincts.json',
       districts: [
-        { name: 'US Districts 2010', filename: 'az-congressional-districts-2010-simplified.json' },
-        { name: 'US Districts 2015', filename: 'az-congressional-districts-2015-simplified.json' }
+        { name: '2010', filename: 'az-congressional-districts-2010-simplified.json' },
+        { name: '2015', filename: 'az-congressional-districts-2015-simplified.json' }
       ],
       totals: [
-        { name: 'US Districts 2010', filename: 'district-totals/az-congressional-districts-2010-totals.csv' },
-        { name: 'US Districts 2015', filename: 'district-totals/az-congressional-districts-2015-totals.csv' }
+        { name: '2010', filename: 'district-totals/az-congressional-districts-2010-totals.csv' },
+        { name: '2015', filename: 'district-totals/az-congressional-districts-2015-totals.csv' }
       ]
     }
   },
@@ -37,12 +37,12 @@ export default {
     dataSources: {
       // precincts: 'ia-precincts.json',
       districts: [
-        { name: 'US Districts 2010', filename: 'ia-congressional-districts-2010-simplified.json' },
-        { name: 'US Districts 2015', filename: 'ia-congressional-districts-2015-simplified.json' }
+        { name: '2010', filename: 'ia-congressional-districts-2010-simplified.json' },
+        { name: '2015', filename: 'ia-congressional-districts-2015-simplified.json' }
       ],
       totals: [
-        { name: 'US Districts 2010', filename: 'district-totals/ia-congressional-districts-2010-totals.csv' },
-        { name: 'US Districts 2015', filename: 'district-totals/ia-congressional-districts-2015-totals.csv' }
+        { name: '2010', filename: 'district-totals/ia-congressional-districts-2010-totals.csv' },
+        { name: '2015', filename: 'district-totals/ia-congressional-districts-2015-totals.csv' }
       ]
     }
   },
