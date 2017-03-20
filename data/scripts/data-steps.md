@@ -1,4 +1,4 @@
-# Steps to get data for a new state:
+# Steps to get vote data for a new state:
 
 1. Download state precinct data from Harvard Dataverse
 2. Load into mapshaper and simplify geometry - save as `{state_abbrev}_final.json`
@@ -12,3 +12,14 @@
 7. Merge all the dimension totals by district year
 8. Delete the original district-totals files that have been merged
 9. Update state-config with paths to district-totals and a projection rotation
+
+# Steps to get demo data for 2010 census tract
+
+1. Down tract shapefile from [this page](https://www.census.gov/geo/maps-data/data/cbf/cbf_tracts.html)
+2. Use mapshaper to convert to geojson (and possibly simplify geometry)
+3. Download demo data from US Census API for the state and variables you want. For example:
+ ```shell
+  curl "http://api.census.gov/data/2010/sf1?key=[API_KEY]&get=P0040002,P0040003&in=state:48+county:*&for=tract:*" > tx-ethnicity-by-tract.json
+  ```
+4. Use `merge-tracts-with-demo.js` to stick all the demographic data on the geojson properties
+5. Use `rename-geojson-props.js` to rename the demographic props if you'd like
