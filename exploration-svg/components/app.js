@@ -12,7 +12,7 @@ window.d3 = d3
 export default class App extends React.Component {
   constructor (props) {
     super()
-    const defaultState = 'tx'
+    const defaultState = 'ia'
     const { races } = stateConfig[defaultState]
     this.state = {
       usState: defaultState,
@@ -24,6 +24,7 @@ export default class App extends React.Component {
       'district-map': 0,
       race: races[0],
       selectedDistrict: null,
+      showDemo: false,
       colors: {
         democrat: [61, 94, 156],
         republican: [195, 35, 44],
@@ -98,6 +99,14 @@ export default class App extends React.Component {
         values: [
           ['name', 'Name'],
           ['margin', 'Margin']
+        ]
+      },
+      {
+        label: 'Toggle Demographics',
+        settingsKey: 'showDemo',
+        values: [
+          [true, 'On'],
+          [false, 'Off']
         ]
       }
     ]

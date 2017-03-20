@@ -36,11 +36,21 @@ h3 {
 .district-map {
   width: 70%;
   height: 100%;
+  position: relative;
 }
 
 .district-map svg {
   height: 100%;
   width: 100%;
+  position: absolute;
+  /*display: none; /* TEMP */*/
+}
+
+.demo-map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
 }
 
 .district-margins {
