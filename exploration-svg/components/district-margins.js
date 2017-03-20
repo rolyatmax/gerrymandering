@@ -4,10 +4,9 @@ import sortBy from 'lodash/sortBy'
 import { getValuesForDimension, getWinnerMargin } from '../helpers'
 
 export default function DistrictMargins ({settings, districts, totals, setSelectedDistrict}) {
-  const district = districts[settings['district-map']]
-  const districtTotals = keyBy(totals[settings['district-map']].data, 'district-name')
+  const districtTotals = keyBy(totals.data, 'district-name')
 
-  let districtData = district.data.map((feat, i) => {
+  let districtData = districts.data.features.map((feat, i) => {
     const districtName = feat.properties.NAMELSAD
     const values = getValuesForDimension(districtTotals[districtName], settings)
     const { winner, margin } = getWinnerMargin(values, settings)

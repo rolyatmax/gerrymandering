@@ -22,13 +22,9 @@ export default class Map extends React.Component {
     const viewport = [width, height]
     const padding = 50
     const { projectionRotation } = stateConfig[this.props.settings.usState]
-    const district = this.props.districts[this.props.settings['district-map']]
     const projection = d3.geoConicConformal()
       .rotate(projectionRotation)
-      .fitExtent([[padding, padding], viewport.map(d => d - padding)], {
-        type: 'FeatureCollection',
-        features: district.data
-      })
+      .fitExtent([[padding, padding], viewport.map(d => d - padding)], this.props.districts.data)
     this.setState({ projection })
   }
 
@@ -42,26 +38,27 @@ export default class Map extends React.Component {
   }
 
   render () {
-    const { settings, districts, totals, setSelectedDistrict } = this.props
-    let map = null
+    const { settings, districts, tracts, totals, setSelectedDistrict } = this.props
+    let maps = null
     if (this.state.projection) {
-      const district = districts[settings['district-map']]
-      const total = totals[settings['district-map']]
       const path = d3.geoPath(this.state.projection)
-      map = (
-        <DistrictMap
-          path={path}
-          settings={settings}
-          districts={district.data}
-          totals={total.data}
-          setSelectedDistrict={setSelectedDistrict} />
-      )
+      maps = [
+        // <DistrictMap
+        //   path={path}
+        //   settings={settings}
+        //   districts={districts.data}
+        //   totals={totals.data}
+        //   setSelectedDistrict={setSelectedDistrict} />,
+        <DemographicMap
+          tracts={tracts}
+          path={path} />
+      ]
     }
 
     return (
       <div className='district-map'>
         <svg ref={(el) => { this.svgEl = el }}>
-          {map}
+          {maps}
         </svg>
       </div>
     )
@@ -74,8 +71,8 @@ class DistrictMap extends React.Component {
     const districtTotals = keyBy(totals, 'district-name')
 
     return (
-      <g ref={(el) => { this.mapSelection = d3.select(el) }}>
-        {districts.map((feat, i) => {
+      <g>
+        {districts.features.map((feat, i) => {
           const districtName = feat.properties.NAMELSAD
           const strokeWidth = settings.selectedDistrict === districtName ? 3 : 1
           const strokeColor = settings.selectedDistrict === districtName ? '#333' : '#999'
@@ -94,6 +91,24 @@ class DistrictMap extends React.Component {
           }
 
           return <path onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} strokeWidth={strokeWidth} key={districtName} d={path(feat)} fill={color} stroke={strokeColor} />
+        })}
+      </g>
+    )
+  }
+}
+
+class DemographicMap extends React.Component {
+  render () {
+    const { tracts, path } = this.props
+    window.tracts = tracts
+    return (
+      <g>
+        {tracts.features.map((feat, i) => {
+          const tractName = feat.properties.TRACT
+          const color = `rgba(20, 200, 20, 0)`
+          const strokeColor = `rgb(30, 30, 30)`
+          const strokeWidth = 1
+          return <path strokeWidth={strokeWidth} key={tractName} d={path(feat)} fill={color} stroke={strokeColor} />
         })}
       </g>
     )

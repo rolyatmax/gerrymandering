@@ -40,6 +40,10 @@ geojson.features.forEach((feat) => {
       console.warn(`skipping property: ${oldProp} not found in feature properties`)
     }
 
+    if (newProperties[newProp] && argv.dry) {
+      console.warn(`writing over property: ${newProp} found in feature properties`)
+    }
+
     newProperties[newProp] = feat.properties[oldProp]
     delete feat.properties[oldProp]
   })

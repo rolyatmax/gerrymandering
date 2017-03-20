@@ -25,19 +25,26 @@ const demographics = demographicFiles.map(path => require(path)).map(demo => {
   // create keyby'd object for demographics
   const header = demo.splice(0, 1)[0]
   return demo.map(row => zipObject(header, row))
-}).map(demoObjs => keyBy(demoObjs, 'tract'))
+}).map(demoObjs => keyBy(demoObjs, getTractID))
 
 tracts.features.forEach(({ properties }) => {
   demographics.forEach(demoByTracts => {
-    if (!demoByTracts[properties.TRACT] && argv.dry) {
-      console.warn(`tract ${properties.TRACT} not found in a demographics file`)
+    const demoData = demoByTracts[getTractID(properties)]
+    if (!demoData && argv.dry) {
+      console.warn(`tract ${properties.TRACT}, county ${properties.COUNTY} not found in a demographics file`)
     }
-    Object.keys(demoByTracts[properties.TRACT]).forEach(prop => {
+    Object.keys(demoData).forEach(prop => {
       if (properties[prop.toUpperCase()] === undefined && properties[prop] === undefined) {
-        properties[prop] = demoByTracts[properties.TRACT][prop]
+        properties[prop] = demoData[prop]
       }
     })
   })
 })
 
 if (!argv.dry) process.stdout.write(JSON.stringify(tracts))
+
+function getTractID (properties) {
+  const county = properties.county || properties.COUNTY
+  const tract = properties.tract || properties.TRACT
+  return `${county}|${tract}`
+}

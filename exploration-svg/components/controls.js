@@ -15,7 +15,7 @@ export default class Controls extends React.Component {
           })
           const onSelect = (val) => this.props.onChange({ [settingsKey]: val })
           return (
-            <ButtonGroup label={label} buttons={buttons} onSelect={onSelect} />
+            <ButtonGroup key={label} label={label} buttons={buttons} onSelect={onSelect} />
           )
         })}
       </div>
@@ -29,7 +29,7 @@ function ButtonGroup ({ label, buttons, onSelect }) {
       <div className='label'>{label}</div>
       <div className='buttons'>
         {buttons.map(({ label, value, selected }) => (
-          <div className={selected ? 'selected' : ''} onClick={() => onSelect(value)}>
+          <div key={label} className={selected ? 'selected' : ''} onClick={() => onSelect(value)}>
             {label}
           </div>
         ))}

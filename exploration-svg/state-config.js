@@ -3,7 +3,7 @@ export default {
     projectionRotation: [86.5, -33 - 45 / 60],
     races: ['normal-votes', 'pres-2008', 'us-senate-2008'],
     dataSources: {
-      // precincts: 'al-precincts.json',
+      tracts: 'al-census-tracts-2010.json',
       districts: [
         { name: '2010', filename: 'al-congressional-districts-2010-simplified.json' },
         { name: '2015', filename: 'al-congressional-districts-2015-simplified.json' }
@@ -19,7 +19,7 @@ export default {
     projectionRotation: [111.5, -34.5 - 45 / 60],
     races: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
     dataSources: {
-      // precincts: 'az-precincts.json',
+      tracts: 'az-census-tracts-2010.json',
       districts: [
         { name: '2010', filename: 'az-congressional-districts-2010-simplified.json' },
         { name: '2015', filename: 'az-congressional-districts-2015-simplified.json' }
@@ -35,7 +35,7 @@ export default {
     projectionRotation: [93.5, -42 - 45 / 60],
     races: ['normal-votes', 'us-house-2008', 'pres-2008', 'us-senate-2008'],
     dataSources: {
-      // precincts: 'ia-precincts.json',
+      tracts: 'ia-census-tracts-2010.json',
       districts: [
         { name: '2010', filename: 'ia-congressional-districts-2010-simplified.json' },
         { name: '2015', filename: 'ia-congressional-districts-2015-simplified.json' }
@@ -51,7 +51,7 @@ export default {
     projectionRotation: [84, -27.5 - 45 / 60],
     races: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
     dataSources: {
-      // precincts: 'az-precincts.json',
+      tracts: 'fl-census-tracts-2010.json',
       districts: [
         { name: '2010', filename: 'fl-congressional-districts-2010-simplified.json' },
         { name: '2015', filename: 'fl-congressional-districts-2015-simplified.json' }
@@ -67,7 +67,7 @@ export default {
     projectionRotation: [79, -33 - 45 / 60],
     races: ['gov-2008', 'party-affiliation', 'pres-2008', 'us-senate-2008', 'us-senate-2010'],
     dataSources: {
-      // precincts: 'nc-precincts.json',
+      tracts: 'nc-census-tracts-2010.json',
       districts: [
         { name: '2010', filename: 'nc-congressional-districts-2010-simplified.json' },
         { name: '2013', filename: 'nc-congressional-districts-2013-simplified.json' },
@@ -85,7 +85,7 @@ export default {
     projectionRotation: [98.5, -31 - 45 / 60],
     races: ['normal-votes', 'gov-2010', 'pres-2008'],
     dataSources: {
-      // precincts: 'tx-precincts.json',
+      tracts: 'tx-census-tracts-2010.json',
       districts: [
         { name: '2010', filename: 'tx-congressional-districts-2010-simplified.json' },
         { name: '2015', filename: 'tx-congressional-districts-2015-simplified.json' }

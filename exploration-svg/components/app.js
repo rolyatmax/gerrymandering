@@ -17,6 +17,7 @@ export default class App extends React.Component {
     this.state = {
       usState: defaultState,
       dataLoaded: false,
+      tracts: null,
       districts: null,
       totals: null,
       sort: 'name',
@@ -43,6 +44,7 @@ export default class App extends React.Component {
         ...state,
         race: stateConfig[state.usState].races[0],
         dataLoaded: false,
+        tracts: null,
         districts: null,
         totals: null
       }, this.fetchData.bind(this))
@@ -53,13 +55,15 @@ export default class App extends React.Component {
 
   fetchData () {
     const { dataSources } = stateConfig[this.state.usState]
+    const tractsRequest = fetch(`data/${dataSources.tracts}`).then((res) => res.json())
     const districtsRequests = createRequests(dataSources.districts, (res) => res.json())
     const totalsRequests = createRequests(dataSources.totals, (res) => res.text().then(text => d3.csvParse(text)))
-    const requests = [...districtsRequests, ...totalsRequests]
+    const requests = [tractsRequest, ...districtsRequests, ...totalsRequests]
     Promise.all(requests).then((responses) => {
+      const tracts = responses.splice(0, 1)[0]
       const districts = responses.splice(0, districtsRequests.length)
       const totals = responses.splice(0, totalsRequests.length)
-      this.setState({ dataLoaded: true, districts, totals })
+      this.setState({ dataLoaded: true, tracts, districts, totals })
     })
   }
 
@@ -99,12 +103,13 @@ export default class App extends React.Component {
     ]
 
     const setSelectedDistrict = (name) => this.onChange({ selectedDistrict: name })
-
+    const districtMap = this.state.districts[this.state['district-map']]
+    const totals = this.state.totals[this.state['district-map']]
     return (
       <div className='interactive'>
         <Controls controls={controls} settings={this.state} onChange={this.onChange.bind(this)} />
-        <DistrictMargins setSelectedDistrict={setSelectedDistrict} districts={this.state.districts} totals={this.state.totals} settings={this.state} />
-        <Map setSelectedDistrict={setSelectedDistrict} districts={this.state.districts} totals={this.state.totals} settings={this.state} />
+        <DistrictMargins setSelectedDistrict={setSelectedDistrict} districts={districtMap} totals={totals} settings={this.state} />
+        <Map setSelectedDistrict={setSelectedDistrict} tracts={this.state.tracts} districts={districtMap} totals={totals} settings={this.state} />
       </div>
     )
   }
