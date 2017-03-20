@@ -43,18 +43,18 @@ export default class Map extends React.Component {
     if (this.state.projection) {
       const path = d3.geoPath(this.state.projection)
       maps = [
+        <DemographicMap
+          key={`${settings.usState}-demo`}
+          settings={settings}
+          tracts={tracts}
+          projection={this.state.projection} />,
         <DistrictMap
           key={`${settings.usState}-districts`}
           path={path}
           settings={settings}
           districts={districts.data}
           totals={totals.data}
-          setSelectedDistrict={setSelectedDistrict} />,
-        <DemographicMap
-          key={`${settings.usState}-demo`}
-          settings={settings}
-          tracts={tracts}
-          projection={this.state.projection} />
+          setSelectedDistrict={setSelectedDistrict} />
       ]
     }
 
@@ -77,8 +77,8 @@ class DistrictMap extends React.Component {
           {districts.features.map((feat, i) => {
             const districtName = feat.properties.NAMELSAD
             const isSelected = settings.selectedDistrict === districtName
-            const strokeWidth = isSelected ? 3 : 1
-            const strokeColor = isSelected ? '#333' : '#999'
+            const strokeWidth = isSelected ? 3 : 1.5
+            const strokeColor = isSelected ? '#555' : '#999'
             const values = getValuesForDimension(districtTotals[districtName], settings)
             const { winner, margin } = getWinnerMargin(values, settings)
             const alpha = settings.showDemo ? 0 : margin / 50
@@ -120,9 +120,6 @@ class DemographicMap extends React.Component {
 
   renderMap () {
     this.container.innerHTML = ''
-    if (!this.props.settings.showDemo) {
-      return
-    }
     const canvas = document.createElement('canvas')
     const { clientWidth, clientHeight } = this.container
     canvas.height = clientHeight
@@ -132,16 +129,21 @@ class DemographicMap extends React.Component {
     const path = d3.geoPath(this.props.projection).context(ctx)
     this.props.tracts.features.forEach((feat) => {
       const hispanicCount = parseInt(feat.properties['ethnicity:hispanic'], 10)
-      const nonHispanicCount = parseInt(feat.properties['ethnicity:non-hispanic'], 10)
-      const opacity = hispanicCount / (hispanicCount + nonHispanicCount)
+      // const nonHispanicCount = parseInt(feat.properties['ethnicity:non-hispanic'], 10)
+      const nonWhiteCount = countNonWhite(feat.properties)
+      const area = feat.properties.CENSUSAREA
+      const opacity = nonWhiteCount / (area * 1000) // (hispanicCount + nonHispanicCount)
 
       ctx.beginPath()
       ctx.fillStyle = `rgba(20, 200, 20, ${opacity})`
       ctx.strokeStyle = `rgb(80, 80, 80)`
       ctx.lineWidth = 0.1
       path(feat)
-      ctx.stroke()
-      ctx.fill()
+      if (this.props.settings.showDemo) {
+        ctx.fill()
+      } else {
+        ctx.stroke()
+      }
     })
   }
 
@@ -150,4 +152,11 @@ class DemographicMap extends React.Component {
       <div className='demo-map' ref={(el) => { this.container = el }} />
     )
   }
+}
+
+function countNonWhite(properties) {
+  return Object.keys(properties).filter(prop => prop.slice(0, 5) === 'race:').reduce((tot, prop) => {
+    if (prop === 'race:white') return tot
+    return parseInt(properties[prop], 10) + tot
+  }, 0)
 }
