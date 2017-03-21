@@ -1,6 +1,7 @@
 import React from 'react'
 import * as d3 from 'd3'
 import keyBy from 'lodash/keyBy'
+import debounce from 'lodash/debounce'
 import { getValuesForDimension, getWinnerMargin } from '../helpers'
 import stateConfig from '../state-config'
 
@@ -8,9 +9,19 @@ export default class Map extends React.Component {
   constructor () {
     super()
     this.onResize = this.onResize.bind(this)
+    this.onZoom = this.onZoom.bind(this)
     this.state = {
-      projection: null
+      projection: null,
+      transform: { x: 0, y: 0, k: 1 }
     }
+  }
+
+  onZoom (e) {
+    const selection = d3.select(this.svg)
+    this.setState({
+      transform: d3.event.transform
+    })
+    console.log('zoomed!', selection)
   }
 
   onResize () {
@@ -31,10 +42,14 @@ export default class Map extends React.Component {
   componentDidMount () {
     this.updateProjection()
     window.addEventListener('resize', this.onResize)
+
+    const zoom = d3.zoom().scaleExtent([1, 8]).on('zoom', this.onZoom)
+    d3.select(this.container).call(zoom)
   }
 
   componentWillUnmount () {
     window.removeEventListener('resize', this.onResize)
+    d3.select(this.container).on('.zoom', null)
   }
 
   render () {
@@ -45,11 +60,13 @@ export default class Map extends React.Component {
       maps = [
         <DemographicMap
           key={`${settings.usState}-demo`}
+          transform={this.state.transform}
           settings={settings}
           tracts={tracts}
           projection={this.state.projection} />,
         <DistrictMap
           key={`${settings.usState}-districts`}
+          transform={this.state.transform}
           path={path}
           settings={settings}
           districts={districts.data}
@@ -70,15 +87,16 @@ class DistrictMap extends React.Component {
   render () {
     const { districts, totals, path, settings, setSelectedDistrict } = this.props
     const districtTotals = keyBy(totals, 'district-name')
+    const { x, y, k } = this.props.transform
 
     return (
-      <svg>
-        <g>
+      <svg ref={(el) => { this.svg = el }}>
+        <g transform={`scale(${k}, ${k}) translate(${x / k}, ${y / k})`}>
           {districts.features.map((feat, i) => {
             const districtName = feat.properties.NAMELSAD
             const isSelected = settings.selectedDistrict === districtName
-            const strokeWidth = isSelected ? 3 : 1.5
-            const strokeColor = isSelected ? '#555' : '#999'
+            const strokeWidth = (isSelected ? 3 : 1.5) / k
+            const strokeColor = isSelected ? '#555' : '#888'
             const values = getValuesForDimension(districtTotals[districtName], settings)
             const { winner, margin } = getWinnerMargin(values, settings)
             const alpha = settings.showDemo ? 0 : margin / 50
@@ -103,41 +121,66 @@ class DistrictMap extends React.Component {
 }
 
 class DemographicMap extends React.Component {
+  constructor () {
+    super()
+    this.renderMap = debounce(this.renderMap.bind(this), 10)
+  }
+
   componentDidMount () {
-    this.renderMap()
+    this.updateMap()
   }
 
-  componentDidUpdate () {
-    this.renderMap()
+  componentDidUpdate (prevProps) {
+    const isDemoChanged = this.props.settings.showDemo !== prevProps.settings.showDemo
+    const isProjectionChanged = this.props.projection !== prevProps.projection
+    const isTransformChanged = this.props.transform !== prevProps.transform
+    if (isDemoChanged || isProjectionChanged || isTransformChanged) {
+      this.updateMap()
+    } else if (isTransformChanged) {
+      // const canvas = this.container.querySelector('canvas')
+      // const { x, y, k } = this.props.transform
+      // // const transform = d3.zoomTransform(canvas)
+      // // console.log(transform)
+      // canvas.style.transform = `scale(${k}, ${k}) translate(${x}px, ${y}px)`
+    }
   }
 
-  shouldComponentUpdate (nextProps) {
-    return (
-      this.props.settings.showDemo !== nextProps.settings.showDemo ||
-      this.props.projection !== nextProps.projection
-    )
+  updateMap () {
+    this.container.innerHTML = ''
+    this.renderMap()
   }
 
   renderMap () {
-    this.container.innerHTML = ''
     const canvas = document.createElement('canvas')
     const { clientWidth, clientHeight } = this.container
     canvas.height = clientHeight
     canvas.width = clientWidth
     this.container.appendChild(canvas)
     const ctx = canvas.getContext('2d')
+    const { x, y, k } = this.props.transform
+    ctx.translate(x, y)
+    ctx.scale(k, k)
     const path = d3.geoPath(this.props.projection).context(ctx)
+
+    // console.log(
+    //   'census area extent, mean, median:',
+    //   d3.extent(this.props.tracts.features, (feat) => feat.properties.CENSUSAREA),
+    //   d3.mean(this.props.tracts.features, (feat) => feat.properties.CENSUSAREA),
+    //   d3.median(this.props.tracts.features, (feat) => feat.properties.CENSUSAREA),
+    //   this.props.tracts.features[0].properties
+    // )
+
     this.props.tracts.features.forEach((feat) => {
-      const hispanicCount = parseInt(feat.properties['ethnicity:hispanic'], 10)
+      // const hispanicCount = parseInt(feat.properties['ethnicity:hispanic'], 10)
       // const nonHispanicCount = parseInt(feat.properties['ethnicity:non-hispanic'], 10)
       const nonWhiteCount = countNonWhite(feat.properties)
       const area = feat.properties.CENSUSAREA
       const opacity = nonWhiteCount / (area * 1000) // (hispanicCount + nonHispanicCount)
 
       ctx.beginPath()
-      ctx.fillStyle = `rgba(20, 200, 20, ${opacity})`
+      ctx.fillStyle = `rgba(91, 186, 113, ${Math.pow(opacity, 0.35)})`
       ctx.strokeStyle = `rgb(80, 80, 80)`
-      ctx.lineWidth = 0.1
+      ctx.lineWidth = 0.1 / k
       path(feat)
       if (this.props.settings.showDemo) {
         ctx.fill()

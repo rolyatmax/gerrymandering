@@ -51,6 +51,7 @@ h3 {
   width: 100%;
   position: absolute;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .district-margins {
