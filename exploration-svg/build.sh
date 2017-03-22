@@ -1,9 +1,11 @@
-rm -rf ../docs
-mkdir -p ../docs
-node_modules/.bin/browserify index.js > ../docs/bundle.js
-cp index.css ../docs/
-cp reset.css ../docs/
-cp index.html ../docs/
-cp state-config.js ../docs/
-cp helpers.js ../docs/
-ln -s ../data ../docs/data
+rm -rf ../build
+mkdir -p ../build
+node_modules/.bin/browserify index.js > ../build/bundle.js
+gzip -9 ../build/bundle.js
+cp index.css ../build/
+cp reset.css ../build/
+cp index.html ../build/
+cp state-config.js ../build/
+cp helpers.js ../build/
+ln -s ../data ../build/data
+cp .now.json ../build/now.json

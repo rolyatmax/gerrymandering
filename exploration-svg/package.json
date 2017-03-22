@@ -3,21 +3,20 @@
   "version": "1.0.0",
   "description": "an interactive look at gerrymandering",
   "scripts": {
-    "start": "serve",
     "dev": "budo index.js:bundle.js --live --open",
     "postinstall": "cp node_modules/standard/eslintrc.json .eslintrc || true",
     "lint": "standard",
-    "build": "./build.sh"
+    "deploy": "./build.sh"
   },
   "author": "Taylor Baldwin <taylorbaldwin@gmail.com> (https://tbaldw.in)",
   "license": "ISC",
   "dependencies": {
+    "color-interpolate": "^1.0.2",
     "d3": "^4.6.0",
     "dat-gui": "^0.5.0",
     "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "serve": "^5.0.3",
     "yo-yo": "^1.4.0"
   },
   "devDependencies": {

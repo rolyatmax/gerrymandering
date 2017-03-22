@@ -2,6 +2,7 @@ import React from 'react'
 import * as d3 from 'd3'
 import keyBy from 'lodash/keyBy'
 import debounce from 'lodash/debounce'
+import colorInterp from 'color-interpolate'
 import { getValuesForDimension, getWinnerMargin } from '../helpers'
 import stateConfig from '../state-config'
 
@@ -174,12 +175,28 @@ class DemographicMap extends React.Component {
       // const hispanicCount = parseInt(feat.properties['ethnicity:hispanic'], 10)
       // const nonHispanicCount = parseInt(feat.properties['ethnicity:non-hispanic'], 10)
       const nonWhiteCount = countNonWhite(feat.properties)
+      const whiteCount = parseInt(feat.properties['race:white'], 10)
+
+      const colorMap = colorInterp([
+        [108, 131, 181],
+        [115, 174, 128]
+      ])
+
+      let color = [150, 150, 150]
+      const totalPop = whiteCount + nonWhiteCount
+      if (totalPop) {
+        const nonWhitenessDegree = nonWhiteCount / totalPop
+        color = colorMap(nonWhitenessDegree)
+        color = color.replace('rgb(', '').replace(')', '').split(',')
+      }
+
       const area = feat.properties.CENSUSAREA
-      const opacity = nonWhiteCount / (area * 1000) // (hispanicCount + nonHispanicCount)
+      const opacity = Math.pow(nonWhiteCount / (area * 800), 0.25) // (hispanicCount + nonHispanicCount)
+      color.push(opacity)
 
       ctx.beginPath()
-      ctx.fillStyle = `rgba(91, 186, 113, ${Math.pow(opacity, 0.35)})`
-      ctx.strokeStyle = `rgb(80, 80, 80)`
+      ctx.fillStyle = `rgba(${color.join(',')})`
+      ctx.strokeStyle = `rgb(60, 60, 60)`
       ctx.lineWidth = 0.1 / k
       path(feat)
       if (this.props.settings.showDemo) {

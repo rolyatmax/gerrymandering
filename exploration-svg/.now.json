@@ -1,0 +1,12 @@
+{
+  "name": "gerrymandering-exploration",
+  "alias": "gerrymandering-exploration",
+  "scripts": {
+    "start": "serve",
+    "build": "gzip -df ./data/*.gz && gzip -df ./bundle.js.gz"
+  },
+  "author": "Taylor Baldwin <taylorbaldwin@gmail.com> (https://tbaldw.in)",
+  "dependencies": {
+    "serve": "^5.0.3"
+  }
+}
