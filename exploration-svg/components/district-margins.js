@@ -8,7 +8,7 @@ export default function DistrictMargins ({settings, districts, totals, setSelect
 
   let districtData = districts.data.features.map((feat, i) => {
     const districtName = feat.properties.NAMELSAD
-    const values = getValuesForDimension(districtTotals[districtName], settings)
+    const values = getValuesForDimension(districtTotals[districtName], settings.race)
     const { winner, margin } = getWinnerMargin(values, settings)
     return {
       districtName: districtName,

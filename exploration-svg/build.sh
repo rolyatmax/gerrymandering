@@ -8,4 +8,4 @@ cp index.html ../build/
 cp state-config.js ../build/
 cp helpers.js ../build/
 ln -s ../data ../build/data
-cp .now.json ../build/now.json
+cp .now.json ../build/package.json

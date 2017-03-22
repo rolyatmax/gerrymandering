@@ -18,11 +18,9 @@ export default class Map extends React.Component {
   }
 
   onZoom (e) {
-    const selection = d3.select(this.svg)
     this.setState({
       transform: d3.event.transform
     })
-    console.log('zoomed!', selection)
   }
 
   onResize () {
@@ -90,6 +88,11 @@ class DistrictMap extends React.Component {
     const districtTotals = keyBy(totals, 'district-name')
     const { x, y, k } = this.props.transform
 
+    const colorMap = colorInterp([
+      settings.colors.democrat,
+      settings.colors.republican
+    ])
+
     return (
       <svg ref={(el) => { this.svg = el }}>
         <g transform={`scale(${k}, ${k}) translate(${x / k}, ${y / k})`}>
@@ -98,10 +101,20 @@ class DistrictMap extends React.Component {
             const isSelected = settings.selectedDistrict === districtName
             const strokeWidth = (isSelected ? 3 : 1.5) / k
             const strokeColor = isSelected ? '#555' : '#888'
-            const values = getValuesForDimension(districtTotals[districtName], settings)
+            const values = getValuesForDimension(districtTotals[districtName], settings.race)
+            const total = Object.keys(values).reduce((tot, dim) => parseInt(values[dim], 10) + tot, 0)
             const { winner, margin } = getWinnerMargin(values, settings)
-            const alpha = settings.showDemo ? 0 : margin / 50
-            const color = `rgba(${settings.colors[winner].join(', ')}, ${alpha})`
+
+            const nonWinnerCount = total - parseInt(values[winner], 10)
+            const winnerDegree = Math.pow(nonWinnerCount / total, 1.1)
+            const colorDegree = winner === 'democrat' ? winnerDegree : 1 - winnerDegree
+            let color = colorMap(colorDegree).replace('rgb(', '').replace(')', '').split(',')
+             // pushing the opacities down into the 0.1 - 0.9 range
+            color.push(settings.demographic ? 0 : margin / 50 * 0.8 + 0.1)
+            color = `rgba(${color.join(',')})`
+
+            // const alpha = settings.demographic ? 0 : margin / 50
+            // const color = `rgba(${settings.colors[winner].join(', ')}, ${alpha})`
 
             function onMouseEnter () {
               setSelectedDistrict(districtName)
@@ -132,7 +145,7 @@ class DemographicMap extends React.Component {
   }
 
   componentDidUpdate (prevProps) {
-    const isDemoChanged = this.props.settings.showDemo !== prevProps.settings.showDemo
+    const isDemoChanged = this.props.settings.demographic !== prevProps.settings.demographic
     const isProjectionChanged = this.props.projection !== prevProps.projection
     const isTransformChanged = this.props.transform !== prevProps.transform
     if (isDemoChanged || isProjectionChanged || isTransformChanged) {
@@ -172,34 +185,12 @@ class DemographicMap extends React.Component {
     // )
 
     this.props.tracts.features.forEach((feat) => {
-      // const hispanicCount = parseInt(feat.properties['ethnicity:hispanic'], 10)
-      // const nonHispanicCount = parseInt(feat.properties['ethnicity:non-hispanic'], 10)
-      const nonWhiteCount = countNonWhite(feat.properties)
-      const whiteCount = parseInt(feat.properties['race:white'], 10)
-
-      const colorMap = colorInterp([
-        [108, 131, 181],
-        [115, 174, 128]
-      ])
-
-      let color = [150, 150, 150]
-      const totalPop = whiteCount + nonWhiteCount
-      if (totalPop) {
-        const nonWhitenessDegree = nonWhiteCount / totalPop
-        color = colorMap(nonWhitenessDegree)
-        color = color.replace('rgb(', '').replace(')', '').split(',')
-      }
-
-      const area = feat.properties.CENSUSAREA
-      const opacity = Math.pow(nonWhiteCount / (area * 800), 0.25) // (hispanicCount + nonHispanicCount)
-      color.push(opacity)
-
       ctx.beginPath()
-      ctx.fillStyle = `rgba(${color.join(',')})`
+      ctx.fillStyle = getColor(feat.properties, this.props.settings.demographic)
       ctx.strokeStyle = `rgb(60, 60, 60)`
       ctx.lineWidth = 0.1 / k
       path(feat)
-      if (this.props.settings.showDemo) {
+      if (this.props.settings.demographic) {
         ctx.fill()
       } else {
         ctx.stroke()
@@ -214,9 +205,24 @@ class DemographicMap extends React.Component {
   }
 }
 
-function countNonWhite(properties) {
-  return Object.keys(properties).filter(prop => prop.slice(0, 5) === 'race:').reduce((tot, prop) => {
-    if (prop === 'race:white') return tot
-    return parseInt(properties[prop], 10) + tot
-  }, 0)
+function getColor (properties, demographic) {
+  const values = getValuesForDimension(properties, demographic)
+  const total = Object.keys(values).reduce((tot, dim) => parseInt(values[dim], 10) + tot, 0)
+  const whiteCount = parseInt(properties['race:white'], 10)
+  const nonWhiteCount = total - whiteCount
+  const hispanicCount = parseInt(properties['ethnicity:hispanic'], 10)
+
+  const colorMap = colorInterp([[108, 131, 181], [115, 174, 128]])
+
+  let color = [150, 150, 150]
+  if (total) {
+    const leftHandSideDegree = demographic === 'race' ? nonWhiteCount / total : demographic === 'ethnicity' ? hispanicCount / total : 0
+    color = colorMap(leftHandSideDegree)
+    color = color.replace('rgb(', '').replace(')', '').split(',')
+  }
+
+  const area = properties.CENSUSAREA
+  const opacity = Math.pow(total / (area * 800), 0.3)
+  color.push(opacity)
+  return `rgba(${color.join(',')})`
 }

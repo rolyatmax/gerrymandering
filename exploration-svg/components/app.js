@@ -24,7 +24,7 @@ export default class App extends React.Component {
       'district-map': 0,
       race: races[0],
       selectedDistrict: null,
-      showDemo: true,
+      demographic: 'race',
       colors: {
         democrat: [61, 94, 156],
         republican: [195, 35, 44],
@@ -102,11 +102,12 @@ export default class App extends React.Component {
         ]
       },
       {
-        label: 'Toggle Demographics',
-        settingsKey: 'showDemo',
+        label: 'Demographic',
+        settingsKey: 'demographic',
         values: [
-          [true, 'On'],
-          [false, 'Off']
+          ['race', 'Race'],
+          ['ethnicity', 'Ethnicity'],
+          [null, 'None']
         ]
       }
     ]
