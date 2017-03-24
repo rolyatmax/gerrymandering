@@ -88,26 +88,26 @@ export default class App extends React.Component {
         settingsKey: 'district-map',
         values: Object.keys(districtMaps).map(name => [districtMaps[name], name])
       },
+      // {
+      //   label: 'Races',
+      //   settingsKey: 'race',
+      //   values: races
+      // },
+      // {
+      //   label: 'Sort',
+      //   settingsKey: 'sort',
+      //   values: [
+      //     ['name', 'Name'],
+      //     ['margin', 'Margin']
+      //   ]
+      // },
       {
-        label: 'Races',
-        settingsKey: 'race',
-        values: races
-      },
-      {
-        label: 'Sort',
-        settingsKey: 'sort',
-        values: [
-          ['name', 'Name'],
-          ['margin', 'Margin']
-        ]
-      },
-      {
-        label: 'Demographic',
+        label: 'Overlay',
         settingsKey: 'demographic',
         values: [
           ['race', 'Race'],
           ['ethnicity', 'Ethnicity'],
-          [null, 'None']
+          [null, 'Vote Margins']
         ]
       }
     ]
@@ -118,8 +118,8 @@ export default class App extends React.Component {
     return (
       <div className='interactive'>
         <Controls controls={controls} settings={this.state} onChange={this.onChange.bind(this)} />
-        <DistrictMargins setSelectedDistrict={setSelectedDistrict} districts={districtMap} totals={totals} settings={this.state} />
         <Map setSelectedDistrict={setSelectedDistrict} tracts={this.state.tracts} districts={districtMap} totals={totals} settings={this.state} />
+        <DistrictMargins setSelectedDistrict={setSelectedDistrict} districts={districtMap} totals={totals} settings={this.state} />
       </div>
     )
   }

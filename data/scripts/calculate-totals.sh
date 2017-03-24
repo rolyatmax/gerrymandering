@@ -17,6 +17,8 @@
 # echo "completed job 8"
 # node calculate-district-totals.js ../points/nc-voter-party-points-resolution5.csv ../nc-congressional-districts-2010-simplified.json party-affiliation 5 2 > ../district-totals/nc-voter-party-by-congressional-districts-2010.csv
 # echo "completed job 9"
+node calculate-district-totals.js ../points/nc-normal-votes-points-resolution2.csv ../nc-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/nc-normal-votes-by-congressional-districts-2015.csv
+echo "completed job 10"
 
 # TX
 # node calculate-district-totals.js ../points/tx-normal-votes-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json normal-votes 2 5 > ../district-totals/tx-normal-votes-by-congressional-districts-2010.csv
@@ -55,11 +57,11 @@
 # echo "completed job 3"
 
 # FL
-node calculate-district-totals.js ../points/fl-normal-votes-points-resolution2.csv ../fl-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/fl-normal-votes-by-congressional-districts-2015.csv
-echo "completed job 1"
-node calculate-district-totals.js ../points/fl-pres-2008-points-resolution2.csv ../fl-congressional-districts-2015-simplified.json pres-2008 2 5 > ../district-totals/fl-pres-2008-by-congressional-districts-2015.csv
-echo "completed job 2"
-node calculate-district-totals.js ../points/fl-gov-2010-points-resolution2.csv ../fl-congressional-districts-2015-simplified.json gov-2010 2 5 > ../district-totals/fl-gov-2010-by-congressional-districts-2015.csv
-echo "completed job 3"
-node calculate-district-totals.js ../points/fl-us-senate-2010-points-resolution2.csv ../fl-congressional-districts-2015-simplified.json us-senate-2010 2 5 > ../district-totals/fl-us-senate-2010-by-congressional-districts-2015.csv
-echo "completed job 4"
+# node calculate-district-totals.js ../points/fl-normal-votes-points-resolution2.csv ../fl-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/fl-normal-votes-by-congressional-districts-2015.csv
+# echo "completed job 1"
+# node calculate-district-totals.js ../points/fl-pres-2008-points-resolution2.csv ../fl-congressional-districts-2015-simplified.json pres-2008 2 5 > ../district-totals/fl-pres-2008-by-congressional-districts-2015.csv
+# echo "completed job 2"
+# node calculate-district-totals.js ../points/fl-gov-2010-points-resolution2.csv ../fl-congressional-districts-2015-simplified.json gov-2010 2 5 > ../district-totals/fl-gov-2010-by-congressional-districts-2015.csv
+# echo "completed job 3"
+# node calculate-district-totals.js ../points/fl-us-senate-2010-points-resolution2.csv ../fl-congressional-districts-2015-simplified.json us-senate-2010 2 5 > ../district-totals/fl-us-senate-2010-by-congressional-districts-2015.csv
+# echo "completed job 4"

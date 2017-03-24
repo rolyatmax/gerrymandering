@@ -62,6 +62,17 @@ h3 {
   font-size: 16px;
 }
 
+.district-margins p {
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.district-margins .note {
+  color: #999;
+  font-style: italic;
+}
+
 .district-margins li {
   transition: opacity 100ms linear; /* , transform 300ms cubic-bezier(0.17, 0.67, 0.53, 0.98); */
   /*border: 1px solid black;*/

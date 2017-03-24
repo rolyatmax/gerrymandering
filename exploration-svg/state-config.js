@@ -65,7 +65,7 @@ export default {
 
   nc: {
     projectionRotation: [79, -33 - 45 / 60],
-    races: ['gov-2008', 'party-affiliation', 'pres-2008', 'us-senate-2008', 'us-senate-2010'],
+    races: ['normal-votes', 'gov-2008', 'party-affiliation', 'pres-2008', 'us-senate-2008', 'us-senate-2010'],
     dataSources: {
       tracts: 'nc-census-tracts-2010.json',
       districts: [
