@@ -44,7 +44,7 @@ tracts.features.forEach(({ properties }) => {
 if (!argv.dry) process.stdout.write(JSON.stringify(tracts))
 
 function getTractID (properties) {
-  const county = properties.county || properties.COUNTY
-  const tract = properties.tract || properties.TRACT
+  const county = properties.county || properties.COUNTY || properties.COUNTYFP
+  const tract = properties.tract || properties.TRACT || properties.TRACTCE
   return `${county}|${tract}`
 }

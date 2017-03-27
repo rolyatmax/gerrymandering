@@ -81,6 +81,22 @@ export default {
     }
   },
 
+  nj: {
+    projectionRotation: [74.5, -40 - 45 / 60],
+    races: ['normal-votes'],
+    dataSources: {
+      tracts: 'nj-census-tracts-2010.json',
+      districts: [
+        { name: '2010', filename: 'nj-congressional-districts-2010-simplified.json' },
+        { name: '2015', filename: 'nj-congressional-districts-2015-simplified.json' }
+      ],
+      totals: [
+        { name: '2010', filename: 'district-totals/nj-congressional-districts-2010-totals.csv' },
+        { name: '2015', filename: 'district-totals/nj-congressional-districts-2015-totals.csv' }
+      ]
+    }
+  },
+
   tx: {
     projectionRotation: [98.5, -31 - 45 / 60],
     races: ['normal-votes', 'gov-2010', 'pres-2008'],
@@ -93,6 +109,22 @@ export default {
       totals: [
         { name: '2010', filename: 'district-totals/tx-congressional-districts-2010-totals.csv' },
         { name: '2015', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }
+      ]
+    }
+  },
+
+  wa: {
+    projectionRotation: [120, -47 - 45 / 60],
+    races: ['normal-votes'],
+    dataSources: {
+      tracts: 'wa-census-tracts-2010.json',
+      districts: [
+        { name: '2010', filename: 'wa-congressional-districts-2010-simplified.json' },
+        { name: '2015', filename: 'wa-congressional-districts-2015-simplified.json' }
+      ],
+      totals: [
+        { name: '2010', filename: 'district-totals/wa-congressional-districts-2010-totals.csv' },
+        { name: '2015', filename: 'district-totals/wa-congressional-districts-2015-totals.csv' }
       ]
     }
   }

@@ -36,14 +36,5 @@ an interactive look at gerrymandering
 getting good datas from https://dataverse.harvard.edu/dataverse/eda?q=&types=dataverses%3Adatasets
 
 Next steps:
- - [ ] Mouse over districts for breakdown
- - [ ] Show "close" districts
- - [ ] Render table with % and counts
- - [ ] Clean district files (map NAME => name, etc)
- - [ ] Generate points on backend, send image + sampled set of points for calculations
- - [ ] visualize racial demo and voting outcomes from actual races
- - [ ] change unaffiliated color to purple?
- - [ ] Find missing NC state house district!
- - [ ] zoom?
  - [ ] visualize redistricting events as flows of people?
  - [ ] color district lines according to difference in distribution (talk with Gilad)

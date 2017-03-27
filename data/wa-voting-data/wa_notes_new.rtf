@@ -1,0 +1,484 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww7900\viewh9920\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 Washington Matching Notes - \
+Kyle Dropp\
+\
+\
+Files - \
+"wa_geo" - 2010 Census VTD\
+"wa_merge_final_1103 - merged 2008 and 2010 votes\
+"wa_08" - 2008 votes\
+"wa_10" - 2010 votes\
+\
+Matching summary: \
+\
+Matching 2008 precinct votes with 2010 precinct votes: \
+Overall, 6,759 out of 6,786 observations in the 2010 vote file were matched with a 2008 precinct vote observation. \
+\
+Only 15 Census voting districts with VAP>0 (6,762 out of  6,777) were not matched with a 2010 vote total. There are a few dozen voting districts that have low votes to voting age population ratios. \
+\
+\
+Variable Names: \
+-wa_geo_id - row identifier from raw Census VTD file\
+-wa_vote_id - row identifier from raw vote total file\
+-VAP - Voting Age Population from Census FTP\
+-Pop100 - full population from Census FTP\
+-STATEFP10 - state code from census\
+-COUNTYFP10 - county code from census\
+-VTDST10 - voting district code from census\
+-GEOID10 - geo identifier from census\
+-VTDI10 - voting code from census\
+-Name10 - voting district string - best description\
+-NameLSAD10 - voting district string, with ``voting district at end\
+-ALAND10 - land\
+-AWATER10 - water\
+-INTPLAT10 - latitude\
+-INTPTLON10 - longitude\
+-LogRecNo - Census FTP identifier\
+-wa_agg - cumulative VAP for precincts where totals were summed and allocated by VAP to VTDs\
+-fraction - VAP/pa_agg\
+-precinct - precinct name from vote file\
+-precinct_id - precinct code from vote file\
+-district - congressional district\
+-state_leg_district - state legislative district\
+-gov_dvote_08 - 2008 Governor, Democratic\
+-gov_rvote_08 - 2008 Governor, Republican       \
+-reg_08 - 2008 registered voters\
+-pres_dvote_08 - 2008 President, Democratic\
+-pres_rvote_08 - 2008 President, Republican\
+-ush_dvote_08 - 2008 U.S. House, Democratic      \
+-ush_rvote_08 - 2008 U.S. House, Republican  \
+-precinct_08 - 2008 precinct name     \
+-precinct_id_08 - 2008 precinct code\
+-fraction_0810 - fraction variable for combining 2008 and 2010 vote totals\
+-uss_dvote_10 - 2010 U.S. Senate, Democratic   \
+-uss_rvote_10 - 2010 U.S. Senate, Republican\
+-reg_10 - 2010 registered voters           \
+-ush_dvote_10 - 2010 U.S. House, Democratic  \
+-ush_ivote_10 - 2010 U.S. House, Independent      \
+-ush_rvote_10 - 2010 U.S. House, Republican\
+-uss_ivote_10 - 2010 U.S. Senate, Independent      \
+-precinct_10 - 2010 precinct name\
+-precinct_id_10 - 2010 precinct code\
+-oldprecinct1 through oldprecinct4 and newprecinct through newprecinct4 note precinct consolidation between 2008 and 2010, mainly in King County      \
+-gov_08 - 2008 Governor, Democratic percent\
+-p_08  - 2008 President, Democratic percent\
+-ush_08 - 2008 U.S. House, Democratic percent\
+-uss_10 - 2010 U.S. Senate, Democratic percent\
+-ush_10  - 2010 U.S. House, Democratic percent\
+\
+Adams: \
+\
+Asotin: \
+Rural Asotin not matched (ratio)\
+\
+Benton: \
+No match for 5620 in 2008 vote\
+No match for 5601 (2010 to VTD)\
+Kennewick 530, 645 (low ratio)\
+\
+Chelan: \
+\
+Clallam: \
+Sekiu (low ratio)\
+\
+\
+Clark: \
+425 to 423, 425\
+444, 445 to 444, 445\
+446 to 446 and 449 \
+500 to 500 and 502\
+\pard\pardeftab720\ql\qnatural
+\cf0 535 to 535 and 536\
+575 to 575 and 577\
+583 to 582 and 583\
+585 and 586 to 585 and 586\
+620 to 618 and 620\
+633 has too few RVs in 2008\
+675 to 673 and 675\
+685 to 685 and 686\
+693 has too many RVs in 08\
+690 to 690 and 696\
+698 to 698 and 699 \
+914 to 913 and 914\
+960 to 960 and 966\
+963 to 961 and 963\
+964 to 962 and 964\
+No match for 915\
+444, 500, 962 (high ratio)\
+\
+\
+Columbia: \
+\
+Cowlitz:\
+\
+Douglas: \
+\
+Ferry: \
+\
+Franklin: \
+94 precincts in 2008 versus 101 in 2010. Franklin County officials could not provide a correspondence file. The precinct vote totals were summed and allocated. \
+\
+Garfield:\
+\
+Grant: \
+Beverly, Mattawa, Royal City, Quincy 1 (low ratios)\
+\
+\
+Grays Harbor: \
+Ocosta (low ratio)\
+\
+\
+Island County:\
+Precinct vote totals were summed and allocated for the entire county.\
+ \
+Per county auditor. Precincts were changed between 2008 and 2010 by hand. Precincts with more than 800 RVs were split. There is no GIS or record of the exact changes. It went from 65 precincts in 2008 to 83 in 2010. \
+\
+Jefferson:\
+600HOH (low ratio)\
+\
+King: \
+Big Bend to Adair, Big Bend, Twinberry\
+Aub3455 to Aub3455 and Aub3591\
+Aub3456 to Aub3456 and Aub3585\
+Bel41-3370 to Bel41-3370 and Bel41-3583\
+Bel41-0198 to Bel41-0198 and Bel41-3593\
+Denver and Jefferson to Bingaman, Denver and Jefferson\
+Arbor lake and Juniper to Bur 11-0033\
+Glendale (1747), Jutland (1831), Margaret (2130), McCauley (2140), McKinley (2144), Meath (2148), Military Road (2162), Monterey (2169), So-Hi (3560), Roseburg (2402), Victory () TO Bur 11-0701, 0705, 0805, 0818, Glendale, Jutland\
+Bernice (1384), Patricia (2224), Plato to Bernice, Bur11-0900 and Bur11-0913\
+Evergreen (1632), Greene (1763), Wynona to Evergreen, Bur 34-0485 and Wynona\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Bernadette (1383), Salmon Creek to Bur 34-1047\
+Cov 47-1127 to Cov 47-1127 and Cov 47-3581\
+Cov 47-1145 to Cov 47-1145 and Cov 47-3597\
+Aldarra to Aldarra, Eagle\
+Fed 30-3043 to Fed 30-3043 and Fed 30-3599\
+Fed 30-3086 to Fed 30-3086 and Fed 30-3596\
+Fed 30-3044 to Fed 30-3044 and Fed 30-3582\
+Fed 30-3289 to Fed 30-3289 and Fed 30-3574\
+ISS 05-3504 to ISS 05-3504 and ISS 05-3572\
+ISS 41-3145 to ISS 41-3145 and ISS 41-3559\
+Antoine to Ken 33-0026\
+Benson to Ken 33-0229\
+Findley to Ken 33-0439\
+Frater to Ken 33-0453\
+Mardi Gras to Ken 33-0721\
+Orchard to Ken 33-0880\
+Rosemary to Ken 33-1170\
+Casa to Ken 33-2833\
+Stockton to Ken 33-3136\
+Apollo to Ken 47-0028\
+New Orleans to Ken 47-0842\
+Panther Lake to Ken 47-0893\
+Potlatch to Ken 47-0918\
+Twin Maples to Ken 47-1034\
+Shiloh to KEN 47-1076\
+Soos Creek to KEN 47-1102\
+Glencarin to KEN 47-2485\
+Glenmar to KEN 47-2708\
+Glenwood to KEN 47-2709\
+Crown to KEN 47-2836\
+Matheson to KEN 47-3300\
+Fargo to KEN 47-3331\
+Rush to  KEN 47-3403\
+Mist to KEN 47-3483\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 KEN 47-3184 to KEN 47-3184, KEN 47-3579\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Silver Spurs to Silver Spurs and Kir 48-3602\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 KMR 32-0695 to KMR 32-0695 and KMR 32-3592\
+KMR 32-0535 to KMR 32-0535 and KMR 32-3594\
+M-V 05-2857, M-V 05-3368 to M-V 05-2857, M-V 05-3368, M-V 05-3589\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Maple Ridge To M-V 47-3601, M-V 47-3600\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 NEW 41-3241 to NEW 41-3241 and NEW 41-3578\
+RED 45-2410 to RED 45-2410 and RED 45-3584\
+RNT 11-0354 to RNT 11-0354 and RNT 11-3588\
+RNT 11-0031 and RNT 11-0738 TO RNT 11-3590, RNT 11-0031 and RNT 11-0738\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Earlington and Langston to Earlington, Lansing, RNT 37-3603\
+Briar (1417), RNT 41-2475 (2389), RNT 41-3287 (2394) to Briar, RNT 41-2475, RNT 41-3287, RNT 41-3563, RNT 41-3564\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 RNT 41-2816 to RNT 41-2816 and RNT 41-3575\
+RNT 41-3404 to RNT 41-3404 and RNT 41-3604\
+SEA 11-1624 to SEA 11-1624 and SEA 11-3580\
+SEA 36-1772 to SEA 36-1772 and SEA 36-3566\
+SEA 36-1317 to SEA 36-1317 and SEA 36-3586\
+SEA 36-1704 to SEA 36-1704 and SEA 36-3587\
+SEA 36-1801 and SEA 36-2795 to SEA 36-1801 and SEA 36-2795 and SEA 36-3605\
+SEA 37-1637 to SEA 37-3567 and SEA 37-1637\
+SEA 37-1897 to SEA 37-1897 and SEA 37-3573\
+SEA 43-1842 to SEA 43-1842 and SEA 43-3595\
+SEA 43-2544, SEA 43-3320 to SEA 43-2544, SEA 43-3320, SEA 43-3570, SEA 43-3571\
+SEA 46-2217 and SEA 46-2218 to SEA 46-2217 and SEA 46-2218 and SEA 46-3568\
+SHL 32-0648 to SHL 32-0648 and SHL 32-3556\
+SNQ 05-3511 to SNQ 05-3511 and SNQ 05-3558\
+SNQ 05-3409 to SNQ 05-3409 and SNQ 05-3560\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Elsie (1614), Ridge (2316), Union Hill to Elsie, Steed, Union Hill \
+Renhill to Renhill and Sunset and Ridge\
+Juanita Crest to Juanita Crest and Terrace \
+Grandview to Grandview and TUK 33-2946\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 BEL 41-0111 and BEL 41-0115 to BEL 41-0111\
+BEL 48-2715, BEL 48-2557 to BEL 48-2715\
+BEL 48-0227 and BEL 48-2958 to BEL 48-0227 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Four Lakes and Francis to Four Lakes \
+Beverly and Glasgow to Glasgow\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 BUR 33-0729 and BUR 33-1155 to BUR 33-0729\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Grouse (1773), Sno Pass (3567), and Twin FAlls to Sno Pass and Twin Falls \
+KEN 33-0580 and KEN 33-0590 to KEN 33-0590\
+Kingston and Marian to Marian\
+KIR 45-2930 and KIR 45-3109 to KIR 45-3109\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 M-I 41-0789 and M-I 41-0783 to M-I 41-0789\
+MED 48-0746, 747, 750, 752 to MED 48- 750, 752\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Husky (1798) and Odonnell to Husky\
+SEA 34-1528 and SEA 34-1527 to SEA 34-1527\
+SEA 36-1337, SEA 36-1338, SEA 36-1335 to SEA 36-1335 an SEA 36-1338\
+SEA 36-1669 and SEA 36-1670 to SEA 36-1670\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 SEA 36-1673 and SEA 36-1681 to SEA 36-1673\
+SEA 36-1694, 1695 to SEA 36-1695\
+SEA 36-2162, 2168, 2169 to SEA 36-2162, 2168\
+SEA 43-2032, 2038 to SEA 43-2038\
+SEA 46-1957, 1958, 1959, 1960 to SEA 46-1957, 1959\
+SEA 46-2262, 2263 to SEA 46-2263\
+SET 33-3058, 3059 to SET 33-3059\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 \
+2008 v 2010 - No matches for Aquaview, Bel 41-0208, Brooks, MEAKIM, RNT 05-0404, RNT 05-3555, TANYA\
+\
+\
+2010 VTDs to 2010 votes - No match for Aquaview, Big Soos, RED 48-0946\
+\
+Bel 48-2716, Bel 48-0212, SEA 43-1976, Sea 43-2115, Sea 43-1975, Sea 43-2081, Ken 33-1055, Ken 33-0577, Ken 33-0582, Ken 47-2667, Tuk 11-2956, Bel 48-0178, Ken 33-3188, Aub 31-2703, Sea 37-1822, Red 48-0938, Aub 31-3476, Sea 37-3573, Sam 05-3454, Sea 36-2795, Black River, RNT 05-3555, Bel 41-3593, Red 48-2789 (low ratio)\
+Grizzly, Illahee, Lynn (high ratio)\
+\
+\
+Kitsap: \
+McCormick Woods to Port Orchard 205 \
+No match for Belfair Valley, Berry Lake, Drive In or Inlet View in 2008 votes\
+Bremerton 1, Trident, (low ratio) \
+\
+Kittitas:\
+The precinct numbering scheme in the vote file does not match up with the strings in the Census Voting District file. Per correspondence with Sylvia Newkirk in the county auditor's office\
+1 to cl\'e9 elum 1\
+2 to cl\'e9 elum 2\
+3 to cl\'e9 elum 3\
+4 to cl\'e9 elum 4\
+5 to denmark\
+6 to east sanders\
+7 to easton\
+8 to ellensburg 1\
+9 to ellensburg 2\
+10 to ellensburg 3\
+11 to ellensburg 4\
+12 to ellensburg 5\
+13 to ellensburg 6\
+14 to ellensburg 7\
+15 to ellensburg 8\
+16 to ellensburg 9\
+17 to ellensburg 10\
+18 to ellensburg 11\
+19 to ellensburg 12\
+20 to ellensburg 13\
+21 to ellensburg 14\
+22 to ellensburg 15\
+23 to ellensburg 16\
+24 to ellensburg 17\
+25 to ellensburg 18\
+26 to ellensburg 19\
+27 to ellensburg 20\
+28 to ellensburg 21\
+29 to ellensburg 22\
+30 to ellensburg 23\
+31 to ellensburg 24\
+32 to hyak\
+33 to kittitas 1\
+34 to manastash\
+35 to mountain\
+36 to north central\
+37 to north ellensburg\
+38 to park\
+39 to peoh point\
+40 to ridgeway\
+41 to rosyln 1\
+42 to rosyln 2\
+43 to dry creek\
+44 to westside\
+45 to rosyln outing\
+46 to sanders\
+47 to soute cl\'e9 elum\
+48 to south ellensburg\
+49 to canyon\
+50 to swauk\
+51 to teanaway\
+52 to thorp\
+53 to vantage\
+54 to fairview\
+55 to northeast fairview\
+56 to thrall\
+57 to cliffdell\
+58 to damman\
+59 to kachess\
+60 to kittitas 2\
+61 to ellensburg 25\
+62 to ronald \
+Ellensburg 18 (low ratio)\
+\
+Klickitat: \
+\
+Lewis: \
+Berwick has two vote totals. They were combined. \
+Napa 1 2 3 combined with Napa 1, Napa 2, and Napa 3. These consolidated precincts were allocated TO Napavine 1, Napavine 2, and Napavine 3.  \
+\
+Lincoln:\
+\
+Mason:\
+\
+Okanogan: \
+No match for 26 in 2008\
+0017-80 to vtd 17 and 80 (elmway and rodeo trail)\
+0046-26 to vtd 46 (monse 3)\
+0196-73 to south omak and handpick\
+Dayton, Brewster 4, Buffalo Lake, Owhi (low ratio)\
+\
+Pacific: \
+South Bend Rural 1 and 2 reversed\
+\
+Pierce: \
+No match for 203, 204, 231, 355 in 2010 file \
+25-149, 27-329, 28-461, 28-469, 29-519, 29-537, 29-538, 29-554,  (low ratio)\
+26-217, 27-358 (high ratio)\
+\
+San Juan: \
+\
+Skagit: \
+No match for Skagit County \
+\
+Skamania: \
+\
+Snohomish: \
+\
+No match for Lake Stevens ('10), marysville 55, West Fork\
+\
+Per County auditor - -\
+Rest and Arlington 9 to Arlington 9 \
+Maple and Lynnwood 21 to Lynnwood 21\
+Hillcrest to Lake Stevens 16\
+Ville to Ville and Lake Stevens 17\
+Crest, East Everett, Cavalero to Lake Stevens 18, 19, 21\
+Skyline to Lake Stevens 20\
+Wyatt Park to Lake Stevens 22\
+Summer to Lake Stevens 23\
+Swalwell to Lake Stevens 24\
+Stitch to Stitch and Lake Stevens 25\
+South Lake Stevens to South Lake Stevens and Lake Stevens\
+Estates to Marysville 35\
+Roncrest, Marysville 32, Alma to Roncrest, Alma and Marysville 36 and Marysville 32, Packwood \
+Howell to Marysville 37\
+Sparlin and Marysville 10 to Marysville 10 and 38 \
+Marysville 13 and Norm to Marysville 13 and 39 \
+Robinsville and Marysville 6 to Marysville 6 and 40\
+Scenic, Shoultes, Brookwood, Marysville 15, Marshall to Marysville 15, 41, 42, 43\
+Packwood and Otter to Marysville 44 and 45\
+Anderson, Bly, Krus, Marysville 7, and Quil to Marysville 7, 46, 47, 48, 49\
+Turk, Garden to Marysville 50 \
+Dry Creek to Marysville 51\
+Kellogg to Marysville 52\
+Timber, Brandi, Marysville 27 to Marysville 27, 53, 54, Timber\
+Lake Stevens 15 to 15 and 27\
+Lake to Lake and West Fork \
+Marysville 24 to 24 and 55\
+Fernwood and Brook to Fernwood and Brook \
+\
+\
+Per registered voter ratios between 2008 and 2010\
+Arlington 9 to 9 and 16\
+Arlington 11 to 11 and 15\
+Edmonds 4 to 4 and 11\
+\pard\pardeftab720\ql\qnatural
+\cf0 Everett 74 to 74 (450) and 94\
+Everett 64 to 64 (400) and 95\
+Everett 5 to 5 (400) and 93\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Mill Creek 11 to 11 and 22\
+Mill Creek 9 to 9 and 21\
+Mukilteo 3 to 3 and 21\
+Snohomish 1 to 1 and 10 \
+Stanwood 5 to 5 and 6\
+Stanwood 3 to 3 and 7\
+Sultan 1, 2, 3 to Sultan 1, 2, 3, 4\
+\
+Per Geoda - \
+Fairwood to Fairwood and Avalon\
+Elwood to Elwood and Crystal Creek \
+Freeway and Walnut to Freeway, Walnut, and Butternut\
+Jeff to Jeff and Jefferson\
+Manordale to manordale and dale\
+Kentish to Kentish and Poppy\
+North Creek to North Creek and Newton \
+Florence to Florence and Sunday Lake\
+Stanby to Stanby and Ketchum\
+Marysville 30 to marysville 30 and 34 \
+Windsong to Overlook and Windsong\
+Hilltop to Hilltop and Crawford \
+Cliff to Cliff and Rose\
+Bluff to Bluff and Sofie\
+\
+No match for Nile\
+Everett 55, Everett 92, Monroe 6 (low ratio)\
+Tulalip 4 (high ratio)\
+\
+Spokane: \
+4300, 4301 to 4300 through 4303\
+4410 to 4410 and 4442\
+4428 to 4428 and 4444\
+no match for 4443\
+\pard\pardeftab720\ql\qnatural
+\cf0 6105 to 6105 and 6154\
+6151 to 6151 and 6153\
+6116 to 6116 and 6152\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 3142, 4100, 4443, 7100 (low ratio)\
+\
+Stevens: \
+Precinct 27 not matched. Implausible vote to VAP ratio. \
+\
+Thurston: \
+Lacey 44, Trails End (low ratio)\
+Trailblazer (high ratio)\
+\
+Wahkiakum: \
+reg_10 was blank so it is the sum of total votes for US House. \
+\
+Walla Walla: \
+Eureka, Pine (low ratio)\
+\
+Whatcom: \
+No match for 157 in 2010 vote file\
+No match for Ross Lake National Recreation (VAP is only 42) \
+Bellingham 233, 237 (low ratio)\
+\
+Whitman: \
+Pullman 115, 124 through 134, 228, 234 (low ratio)\
+\
+Yakima: \
+187 to 187 and 189\
+No match for precinct 1 in vote file (13 voters); precinct 189, \
+Grandview 303, 305 & Sunnyside  (low ratio)\
+\
+\
+}

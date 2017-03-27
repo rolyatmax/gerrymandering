@@ -1,4 +1,4 @@
-node rename-geojson-props.js ../tx-census-tracts-2010.json \
+node rename-geojson-props.js ../wa-census-tracts-2010.json \
   -c P0030002=race:white \
   -c P0030003=race:black \
   -c P0030004=race:native-american \
@@ -7,4 +7,4 @@ node rename-geojson-props.js ../tx-census-tracts-2010.json \
   -c P0030007=race:other \
   -c P0030008=race:two-or-more \
   -c P0040002=ethnicity:non-hispanic \
-  -c P0040003=ethnicity:hispanic > tmp && mv tmp ../tx-census-tracts-2010.json
+  -c P0040003=ethnicity:hispanic > tmp && mv tmp ../wa-census-tracts-2010.json

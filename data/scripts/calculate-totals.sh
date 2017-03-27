@@ -17,8 +17,8 @@
 # echo "completed job 8"
 # node calculate-district-totals.js ../points/nc-voter-party-points-resolution5.csv ../nc-congressional-districts-2010-simplified.json party-affiliation 5 2 > ../district-totals/nc-voter-party-by-congressional-districts-2010.csv
 # echo "completed job 9"
-node calculate-district-totals.js ../points/nc-normal-votes-points-resolution2.csv ../nc-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/nc-normal-votes-by-congressional-districts-2015.csv
-echo "completed job 10"
+# node calculate-district-totals.js ../points/nc-normal-votes-points-resolution2.csv ../nc-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/nc-normal-votes-by-congressional-districts-2015.csv
+# echo "completed job 10"
 
 # TX
 # node calculate-district-totals.js ../points/tx-normal-votes-points-resolution2.csv ../tx-congressional-districts-2010-simplified.json normal-votes 2 5 > ../district-totals/tx-normal-votes-by-congressional-districts-2010.csv
@@ -65,3 +65,15 @@ echo "completed job 10"
 # echo "completed job 3"
 # node calculate-district-totals.js ../points/fl-us-senate-2010-points-resolution2.csv ../fl-congressional-districts-2015-simplified.json us-senate-2010 2 5 > ../district-totals/fl-us-senate-2010-by-congressional-districts-2015.csv
 # echo "completed job 4"
+
+# WA
+node calculate-district-totals.js ../points/wa-normal-votes-points-resolution2.csv ../wa-congressional-districts-2010-simplified.json normal-votes 2 5 > ../district-totals/wa-normal-votes-by-congressional-districts-2010.csv
+echo "completed job 1"
+# node calculate-district-totals.js ../points/wa-normal-votes-points-resolution2.csv ../wa-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/wa-normal-votes-by-congressional-districts-2015.csv
+# echo "completed job 2"
+
+# NJ
+node calculate-district-totals.js ../points/nj-normal-votes-points-resolution2.csv ../nj-congressional-districts-2010-simplified.json normal-votes 2 5 > ../district-totals/nj-normal-votes-by-congressional-districts-2010.csv
+echo "completed job 1"
+# node calculate-district-totals.js ../points/nj-normal-votes-points-resolution2.csv ../nj-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/nj-normal-votes-by-congressional-districts-2015.csv
+# echo "completed job 2"

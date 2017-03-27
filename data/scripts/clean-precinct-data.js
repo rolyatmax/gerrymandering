@@ -1,64 +1,64 @@
 let customTransformation = () => {}
 
 // NC
-const GEOJSON_FILE = '../nc_final.json'
-const PRECINCT_NAME_KEY = 'NAME10'
-const properties = {
-  voterPartyAffiliation: {
-    democrat: 'REG10G_D',
-    republican: 'REG10G_R',
-    libertarian: 'REG10G_L',
-    unaffiliated: 'REG10G_U'
-  },
-  genPopEthnicity: {
-    hispanic: 'PL10AA_HIS',
-    nonHispanic: 'PL10AA_NON'
-  },
-  genPopPrimaryRace: {
-    white: 'PL10AA_SR_',
-    black: 'PL10AA_SR0',
-    nativeAmerican: 'PL10AA_SR1',
-    asianPacificIslander: 'PL10AA_SR2',
-    other: 'PL10AA_SR3',
-    multirace: 'PL10AA_MR'
-  },
-  voterGender: {
-    male: 'REG10G_M',
-    female: 'REG10G_F',
-    undesignated: 'REG10G_UG'
-  },
-  voterAge: {
-    '18-25': 'REG10G_182',
-    '26-40': 'REG10G_264',
-    '41-65': 'REG10G_416',
-    '66+': 'REG10G_66U',
-    'undesignated': 'REG10G_UAG'
-  },
-  electionPresident2008: {
-    'democrat': 'EL08G_PR_D',
-    'republican': 'EL08G_PR_R',
-    'libertarian': 'EL08G_PR_L'
-  },
-  electionUSSenate2008: {
-    'democrat': 'EL08G_USS_',
-    'republican': 'EL08G_USS0',
-    'libertarian': 'EL08G_USS1'
-  },
-  electionUSSenate2010: {
-    'democrat': 'EL10G_USS_',
-    'republican': 'EL10G_USS0',
-    'libertarian': 'EL10G_USS1'
-  },
-  electionGovernor2008: {
-    'democrat': 'EL08G_GV_D',
-    'republican': 'EL08G_GV_R',
-    'libertarian': 'EL08G_GV_L'
-  },
-  normalVotes: {
-    'democrat': 'NDV',
-    'republican': 'NRV'
-  }
-}
+// const GEOJSON_FILE = '../nc_final.json'
+// const PRECINCT_NAME_KEY = 'NAME10'
+// const properties = {
+//   voterPartyAffiliation: {
+//     democrat: 'REG10G_D',
+//     republican: 'REG10G_R',
+//     libertarian: 'REG10G_L',
+//     unaffiliated: 'REG10G_U'
+//   },
+//   genPopEthnicity: {
+//     hispanic: 'PL10AA_HIS',
+//     nonHispanic: 'PL10AA_NON'
+//   },
+//   genPopPrimaryRace: {
+//     white: 'PL10AA_SR_',
+//     black: 'PL10AA_SR0',
+//     nativeAmerican: 'PL10AA_SR1',
+//     asianPacificIslander: 'PL10AA_SR2',
+//     other: 'PL10AA_SR3',
+//     multirace: 'PL10AA_MR'
+//   },
+//   voterGender: {
+//     male: 'REG10G_M',
+//     female: 'REG10G_F',
+//     undesignated: 'REG10G_UG'
+//   },
+//   voterAge: {
+//     '18-25': 'REG10G_182',
+//     '26-40': 'REG10G_264',
+//     '41-65': 'REG10G_416',
+//     '66+': 'REG10G_66U',
+//     'undesignated': 'REG10G_UAG'
+//   },
+//   electionPresident2008: {
+//     'democrat': 'EL08G_PR_D',
+//     'republican': 'EL08G_PR_R',
+//     'libertarian': 'EL08G_PR_L'
+//   },
+//   electionUSSenate2008: {
+//     'democrat': 'EL08G_USS_',
+//     'republican': 'EL08G_USS0',
+//     'libertarian': 'EL08G_USS1'
+//   },
+//   electionUSSenate2010: {
+//     'democrat': 'EL10G_USS_',
+//     'republican': 'EL10G_USS0',
+//     'libertarian': 'EL10G_USS1'
+//   },
+//   electionGovernor2008: {
+//     'democrat': 'EL08G_GV_D',
+//     'republican': 'EL08G_GV_R',
+//     'libertarian': 'EL08G_GV_L'
+//   },
+//   normalVotes: {
+//     'democrat': 'NDV',
+//     'republican': 'NRV'
+//   }
+// }
 
 // TX
 // const proj4 = require('proj4')
@@ -153,10 +153,6 @@ const properties = {
 //   }
 // }
 
-// FL - 2008 presidential votes
-// democrat: 'PRES_DEM_0'
-// republican: 'PRES_REP_0'
-
 // FL
 // const GEOJSON_FILE = '../fl_final.json'
 // const PRECINCT_NAME_KEY = 'PREC'
@@ -180,10 +176,30 @@ const properties = {
 //   }
 // }
 
+// NJ
+const GEOJSON_FILE = '../nj_final.json'
+const PRECINCT_NAME_KEY = 'NAME10'
+const properties = {
+  normalVotes: {
+    democrat: 'NDV',
+    republican: 'NRV'
+  }
+}
+
 // WI - 2008 presidential votes
 // democrat: 'PRESDEM08'
 // republican: 'PRESREP08'
 // libertarian: 'PRESLBR08'
+
+// WA
+// const GEOJSON_FILE = '../wa_final.json'
+// const PRECINCT_NAME_KEY = 'NAME10'
+// const properties = {
+//   normalVotes: {
+//     democrat: 'NDV_08',
+//     republican: 'NRV_08'
+//   }
+// }
 
 const geojson = require(GEOJSON_FILE)
 

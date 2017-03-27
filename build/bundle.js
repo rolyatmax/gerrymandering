@@ -494,6 +494,13 @@ var DistrictMap = function (_React$Component2) {
 
       var colorMap = (0, _colorInterpolate2.default)([settings.colors.democrat, settings.colors.republican]);
 
+      var orderedDistricts = districts.features.slice();
+      var selectedDistrictIndex = orderedDistricts.findIndex(function (feat) {
+        return settings.selectedDistrict === feat.properties.NAMELSAD;
+      });
+      var selectedDistrict = orderedDistricts.splice(selectedDistrictIndex, 1)[0];
+      orderedDistricts.push(selectedDistrict);
+
       return _react2.default.createElement(
         'svg',
         { ref: function ref(el) {
@@ -502,11 +509,11 @@ var DistrictMap = function (_React$Component2) {
         _react2.default.createElement(
           'g',
           { transform: 'scale(' + k + ', ' + k + ') translate(' + x / k + ', ' + y / k + ')' },
-          districts.features.map(function (feat, i) {
+          orderedDistricts.map(function (feat, i) {
             var districtName = feat.properties.NAMELSAD;
             var isSelected = settings.selectedDistrict === districtName;
-            var strokeWidth = (isSelected ? 3 : 1.5) / k;
-            var strokeColor = isSelected ? '#555' : '#888';
+            var strokeWidth = (isSelected ? 2 : 1.5) / k;
+            var strokeColor = isSelected ? '#444' : '#888';
             var values = (0, _helpers.getValuesForDimension)(districtTotals[districtName], settings.race);
             var total = Object.keys(values).reduce(function (tot, dim) {
               return parseInt(values[dim], 10) + tot;
@@ -537,7 +544,14 @@ var DistrictMap = function (_React$Component2) {
               }
             }
 
-            return _react2.default.createElement('path', { onMouseEnter: onMouseEnter, onMouseLeave: onMouseLeave, strokeWidth: strokeWidth, key: districtName, d: path(feat), fill: color, stroke: strokeColor });
+            return _react2.default.createElement('path', {
+              onMouseEnter: onMouseEnter,
+              onMouseLeave: onMouseLeave,
+              strokeWidth: strokeWidth,
+              key: districtName,
+              d: path(feat),
+              fill: color,
+              stroke: strokeColor });
           })
         )
       );
@@ -42981,6 +42995,16 @@ exports.default = {
     }
   },
 
+  nj: {
+    projectionRotation: [74.5, -40 - 45 / 60],
+    races: ['normal-votes'],
+    dataSources: {
+      tracts: 'nj-census-tracts-2010.json',
+      districts: [{ name: '2010', filename: 'nj-congressional-districts-2010-simplified.json' }, { name: '2015', filename: 'nj-congressional-districts-2015-simplified.json' }],
+      totals: [{ name: '2010', filename: 'district-totals/nj-congressional-districts-2010-totals.csv' }, { name: '2015', filename: 'district-totals/nj-congressional-districts-2015-totals.csv' }]
+    }
+  },
+
   tx: {
     projectionRotation: [98.5, -31 - 45 / 60],
     races: ['normal-votes', 'gov-2010', 'pres-2008'],
@@ -42988,6 +43012,16 @@ exports.default = {
       tracts: 'tx-census-tracts-2010.json',
       districts: [{ name: '2010', filename: 'tx-congressional-districts-2010-simplified.json' }, { name: '2015', filename: 'tx-congressional-districts-2015-simplified.json' }],
       totals: [{ name: '2010', filename: 'district-totals/tx-congressional-districts-2010-totals.csv' }, { name: '2015', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }]
+    }
+  },
+
+  wa: {
+    projectionRotation: [120, -47 - 45 / 60],
+    races: ['normal-votes'],
+    dataSources: {
+      tracts: 'wa-census-tracts-2010.json',
+      districts: [{ name: '2010', filename: 'wa-congressional-districts-2010-simplified.json' }, { name: '2015', filename: 'wa-congressional-districts-2015-simplified.json' }],
+      totals: [{ name: '2010', filename: 'district-totals/wa-congressional-districts-2010-totals.csv' }, { name: '2015', filename: 'district-totals/wa-congressional-districts-2015-totals.csv' }]
     }
   }
 };

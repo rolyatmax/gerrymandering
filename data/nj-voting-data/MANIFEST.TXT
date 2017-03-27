@@ -1,0 +1,9 @@
+nj_final.dbf (application/octet-stream) 7976906 bytes.
+nj_final.prj (text/plain; charset=US-ASCII) 145 bytes.
+nj_final.sbn (application/octet-stream) 61772 bytes.
+nj_final.sbx (application/octet-stream) 3108 bytes.
+nj_final.shp (application/octet-stream) 14871760 bytes.
+nj_final.shx (application/octet-stream) 50852 bytes.
+nj_geo_merge_0620.tab (text/tab-separated-values) 6903732 bytes.
+nj_notes.rtf (text/plain; charset=US-ASCII) 154258 bytes.
+NJ_Shapefile.zip (application/zip) 9971692 bytes.

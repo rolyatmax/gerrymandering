@@ -4,3 +4,5 @@ node merge-tracts-with-demo.js --tracts=../fl-census-tracts-2010.json ./fl-demo-
 node merge-tracts-with-demo.js --tracts=../ia-census-tracts-2010.json ./ia-demo-by-tract.json > tmp && mv tmp ../ia-census-tracts-2010.json
 node merge-tracts-with-demo.js --tracts=../nc-census-tracts-2010.json ./nc-demo-by-tract.json > tmp && mv tmp ../nc-census-tracts-2010.json
 node merge-tracts-with-demo.js --tracts=../tx-census-tracts-2010.json ./tx-demo-by-tract.json > tmp && mv tmp ../tx-census-tracts-2010.json
+node merge-tracts-with-demo.js --tracts=../wa-census-tracts-2010.json ./wa-demo-by-tract.json > tmp && mv tmp ../wa-census-tracts-2010.json
+node merge-tracts-with-demo.js --tracts=../nj-census-tracts-2010.json ./nj-demo-by-tract.json > tmp && mv tmp ../nj-census-tracts-2010.json
