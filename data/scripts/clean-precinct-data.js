@@ -177,7 +177,17 @@ let customTransformation = () => {}
 // }
 
 // NJ
-const GEOJSON_FILE = '../nj_final.json'
+// const GEOJSON_FILE = '../nj_final.json'
+// const PRECINCT_NAME_KEY = 'NAME10'
+// const properties = {
+//   normalVotes: {
+//     democrat: 'NDV',
+//     republican: 'NRV'
+//   }
+// }
+
+// NY
+const GEOJSON_FILE = '../ny_final.json'
 const PRECINCT_NAME_KEY = 'NAME10'
 const properties = {
   normalVotes: {

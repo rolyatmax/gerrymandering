@@ -39,7 +39,10 @@
 # node generate-points.js ../fl-precincts.json electionGovernor2010 2 > ../points/fl-gov-2010-points-resolution2.csv
 
 # WA
-node generate-points.js ../wa-precincts.json normalVotes 2 > ../points/wa-normal-votes-points-resolution2.csv
+# node generate-points.js ../wa-precincts.json normalVotes 2 > ../points/wa-normal-votes-points-resolution2.csv
 
 # NJ
-node generate-points.js ../nj-precincts.json normalVotes 2 > ../points/nj-normal-votes-points-resolution2.csv
+# node generate-points.js ../nj-precincts.json normalVotes 2 > ../points/nj-normal-votes-points-resolution2.csv
+
+# NY
+node generate-points.js ../ny-precincts.json normalVotes 2 > ../points/ny-normal-votes-points-resolution2.csv

@@ -67,13 +67,19 @@
 # echo "completed job 4"
 
 # WA
-node calculate-district-totals.js ../points/wa-normal-votes-points-resolution2.csv ../wa-congressional-districts-2010-simplified.json normal-votes 2 5 > ../district-totals/wa-normal-votes-by-congressional-districts-2010.csv
-echo "completed job 1"
+# node calculate-district-totals.js ../points/wa-normal-votes-points-resolution2.csv ../wa-congressional-districts-2010-simplified.json normal-votes 2 5 > ../district-totals/wa-normal-votes-by-congressional-districts-2010.csv
+# echo "completed job 1"
 # node calculate-district-totals.js ../points/wa-normal-votes-points-resolution2.csv ../wa-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/wa-normal-votes-by-congressional-districts-2015.csv
 # echo "completed job 2"
 
 # NJ
-node calculate-district-totals.js ../points/nj-normal-votes-points-resolution2.csv ../nj-congressional-districts-2010-simplified.json normal-votes 2 5 > ../district-totals/nj-normal-votes-by-congressional-districts-2010.csv
-echo "completed job 1"
+# node calculate-district-totals.js ../points/nj-normal-votes-points-resolution2.csv ../nj-congressional-districts-2010-simplified.json normal-votes 2 5 > ../district-totals/nj-normal-votes-by-congressional-districts-2010.csv
+# echo "completed job 1"
 # node calculate-district-totals.js ../points/nj-normal-votes-points-resolution2.csv ../nj-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/nj-normal-votes-by-congressional-districts-2015.csv
 # echo "completed job 2"
+
+# NY
+node calculate-district-totals.js ../points/ny-normal-votes-points-resolution2.csv ../ny-congressional-districts-2010-simplified.json normal-votes 2 5 > ../district-totals/ny-normal-votes-by-congressional-districts-2010.csv
+echo "completed job 1"
+node calculate-district-totals.js ../points/ny-normal-votes-points-resolution2.csv ../ny-congressional-districts-2015-simplified.json normal-votes 2 5 > ../district-totals/ny-normal-votes-by-congressional-districts-2015.csv
+echo "completed job 2"

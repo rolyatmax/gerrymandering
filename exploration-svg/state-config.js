@@ -97,6 +97,22 @@ export default {
     }
   },
 
+  ny: {
+    projectionRotation: [76, -43 - 45 / 60],
+    races: ['normal-votes'],
+    dataSources: {
+      tracts: 'ny-census-tracts-2010.json',
+      districts: [
+        { name: '2010', filename: 'ny-congressional-districts-2010-simplified.json' },
+        { name: '2015', filename: 'ny-congressional-districts-2015-simplified.json' }
+      ],
+      totals: [
+        { name: '2010', filename: 'district-totals/ny-congressional-districts-2010-totals.csv' },
+        { name: '2015', filename: 'district-totals/ny-congressional-districts-2015-totals.csv' }
+      ]
+    }
+  },
+
   tx: {
     projectionRotation: [98.5, -31 - 45 / 60],
     races: ['normal-votes', 'gov-2010', 'pres-2008'],
