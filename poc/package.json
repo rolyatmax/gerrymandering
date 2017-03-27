@@ -1,5 +1,5 @@
 {
-  "name": "poc",
+  "name": "bf-gerrymandering-proof-of-concept",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
