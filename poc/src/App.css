@@ -1,0 +1,103 @@
+.content-container {
+  padding-top: 70px;
+  max-width: 980px;
+  margin: auto;
+}
+
+header {
+  background: #f4f4f4;
+  padding: 7px;
+  height: 42px;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 980px;
+  margin: auto;
+  background: rgba(0, 100, 0, 0.2);
+}
+
+.logo {
+  width: 200px;
+  height: 30px;
+  background: url(/img/unified_sprite.png);
+  background-position: 0 -921px;
+  margin: 0;
+  position: relative;
+  top: 3px;
+  overflow: hidden;
+  float: left;
+  background-size: 178%;
+}
+
+.share-buttons {
+  float: right;
+}
+
+.circle-share {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+  margin: 5px 0 0 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: top;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: opacity 200ms linear;
+  opacity: 1;
+}
+
+.circle-share:hover {
+  opacity: 0.7;
+}
+
+.circle-share.facebook {
+  background: #3b5998;
+  font-size: 17px;
+}
+
+.circle-share.twitter {
+  background: #55acee;
+  font-size: 17px;
+}
+
+.circle-share.email {
+  background: #222;
+  font-size: 13px;
+}
+
+.circle-share .fa-facebook {
+  position: relative;
+  top: 1px;
+}
+
+.opener {
+  height: 600px;
+  background-color: lightblue;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.opener h1 {
+  font-size: 40px;
+  position: absolute;
+  bottom: 20px;
+  margin: 0;
+}
+
+.description {
+  width: 700px;
+  margin: auto;
+  font-family: 'Arvo';
+  color: #333;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.35em;
+}
