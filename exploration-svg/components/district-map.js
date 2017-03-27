@@ -93,14 +93,21 @@ class DistrictMap extends React.Component {
       settings.colors.republican
     ])
 
+    const orderedDistricts = districts.features.slice()
+    const selectedDistrictIndex = orderedDistricts.findIndex((feat) =>
+      settings.selectedDistrict === feat.properties.NAMELSAD
+    )
+    const selectedDistrict = orderedDistricts.splice(selectedDistrictIndex, 1)[0]
+    orderedDistricts.push(selectedDistrict)
+
     return (
       <svg ref={(el) => { this.svg = el }}>
         <g transform={`scale(${k}, ${k}) translate(${x / k}, ${y / k})`}>
-          {districts.features.map((feat, i) => {
+          {orderedDistricts.map((feat, i) => {
             const districtName = feat.properties.NAMELSAD
             const isSelected = settings.selectedDistrict === districtName
-            const strokeWidth = (isSelected ? 3 : 1.5) / k
-            const strokeColor = isSelected ? '#555' : '#888'
+            const strokeWidth = (isSelected ? 2 : 1.5) / k
+            const strokeColor = isSelected ? '#444' : '#888'
             const values = getValuesForDimension(districtTotals[districtName], settings.race)
             const total = Object.keys(values).reduce((tot, dim) => parseInt(values[dim], 10) + tot, 0)
             const { winner, margin } = getWinnerMargin(values, settings)
@@ -126,7 +133,16 @@ class DistrictMap extends React.Component {
               }
             }
 
-            return <path onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} strokeWidth={strokeWidth} key={districtName} d={path(feat)} fill={color} stroke={strokeColor} />
+            return (
+              <path
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+                strokeWidth={strokeWidth}
+                key={districtName}
+                d={path(feat)}
+                fill={color}
+                stroke={strokeColor} />
+            )
           })}
         </g>
       </svg>
