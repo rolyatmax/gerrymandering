@@ -2,8 +2,7 @@
   "name": "gerrymandering-exploration",
   "alias": "gerrymandering-exploration",
   "scripts": {
-    "start": "serve",
-    "build": "gzip -df ./data/*.gz && gzip -df ./bundle.js.gz"
+    "start": "serve"
   },
   "now": {
     "alias": "bf-gerrymandering"
