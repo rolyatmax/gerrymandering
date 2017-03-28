@@ -82,6 +82,14 @@ export default class Map extends React.Component {
   }
 }
 
+Map.propTypes = {
+  settings: React.PropTypes.object,
+  districts: React.PropTypes.object,
+  tracts: React.PropTypes.object,
+  totals: React.PropTypes.object,
+  setSelectedDistrict: React.PropTypes.func
+}
+
 class DistrictMap extends React.Component {
   render () {
     const { districts, totals, path, settings, setSelectedDistrict } = this.props
@@ -148,6 +156,15 @@ class DistrictMap extends React.Component {
       </svg>
     )
   }
+}
+
+DistrictMap.propTypes = {
+  transform: React.PropTypes.object,
+  settings: React.PropTypes.object,
+  districts: React.PropTypes.object,
+  path: React.PropTypes.func,
+  totals: React.PropTypes.object,
+  setSelectedDistrict: React.PropTypes.func
 }
 
 class DemographicMap extends React.Component {
@@ -219,6 +236,13 @@ class DemographicMap extends React.Component {
       <div className='demo-map' ref={(el) => { this.container = el }} />
     )
   }
+}
+
+DemographicMap.propTypes = {
+  transform: React.PropTypes.object,
+  settings: React.PropTypes.object,
+  tracts: React.PropTypes.object,
+  projection: React.PropTypes.func
 }
 
 function getColor (properties, demographic) {

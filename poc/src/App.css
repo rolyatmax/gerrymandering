@@ -5,8 +5,8 @@
 }
 
 header {
-  background: #f4f4f4;
-  padding: 7px;
+  background: #fefefe;
+  padding: 10px 0;
   height: 42px;
   width: 100vw;
   position: fixed;
@@ -16,24 +16,31 @@ header {
 .header-container {
   max-width: 980px;
   margin: auto;
-  background: rgba(0, 100, 0, 0.2);
+  text-align: center;
+}
+
+.news-section {
+  display: inline-block;
+  margin-left: 20px;
+  border-left: 1px solid #bbb;
+  padding: 10px 20px;
 }
 
 .logo {
-  width: 200px;
-  height: 30px;
+  display: inline-block;
+  width: 130px;
+  height: 19px;
   background: url(/img/unified_sprite.png);
-  background-position: 0 -921px;
-  margin: 0;
+  background-position: 0 -268px;
   position: relative;
-  top: 3px;
+  top: 1px;
   overflow: hidden;
-  float: left;
   background-size: 178%;
+  filter: saturate(75%);
 }
 
 .share-buttons {
-  float: right;
+  margin: 40px 0;
 }
 
 .circle-share {
@@ -41,7 +48,7 @@ header {
   width: 27px;
   height: 27px;
   line-height: 27px;
-  margin: 5px 0 0 10px;
+  margin-right: 10px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -78,26 +85,108 @@ header {
   top: 1px;
 }
 
-.opener {
-  height: 600px;
-  background-color: lightblue;
-  margin-bottom: 30px;
-  position: relative;
+.content {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 550px;
 }
 
-.opener h1 {
-  font-size: 40px;
+.above-fold {
+  height: 100vh;
+  min-height: 750px;
   position: absolute;
-  bottom: 20px;
-  margin: 0;
+  top: 0;
+}
+
+.below-fold {
+  margin-top: 100vh;
+  padding-top: 100px;
+}
+
+.headline {
+  font-size: 60px;
+  margin-top: 100px;
+}
+
+.authors {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.publish-time {
+  color: #999;
+  font-size: 12px;
 }
 
 .description {
-  width: 700px;
-  margin: auto;
+  position: absolute;
+  bottom: 40px;
   font-family: 'Arvo';
   color: #333;
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.35em;
+}
+
+.bylines {
+  height: 35px;
+  overflow: hidden;
+}
+
+.byline {
+  color: #666;
+  font-size: 15px;
+  height: 100%;
+  width: 260px;
+  float: left;
+}
+
+.byline__name {
+  color: #666;
+  transition: color 200ms linear;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.byline__name:hover {
+  color: #07e;
+}
+
+.byline img {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  vertical-align: top;
+  float: left;
+  filter: saturate(90%);
+}
+
+p {
+  margin: 7em 0;
+  font-size: 18px;
+  width: 75%;
+  padding: 30px 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+}
+
+.scroll-indicator {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.scroll-indicator .arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid #666;
+  border-right: 1px solid #666;
+  transform: rotate(45deg);
+  position: relative;
+  top: -5px;
 }

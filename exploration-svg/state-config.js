@@ -1,6 +1,6 @@
 export default {
   al: {
-    projectionRotation: [86.5, -33 - 45 / 60],
+    projectionRotation: [86.5, -33],
     races: ['normal-votes', 'pres-2008', 'us-senate-2008'],
     dataSources: {
       tracts: 'al-census-tracts-2010.json',
@@ -16,7 +16,7 @@ export default {
   },
 
   az: {
-    projectionRotation: [111.5, -34.5 - 45 / 60],
+    projectionRotation: [111.5, -34.5],
     races: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
     dataSources: {
       tracts: 'az-census-tracts-2010.json',
@@ -32,7 +32,7 @@ export default {
   },
 
   ia: {
-    projectionRotation: [93.5, -42 - 45 / 60],
+    projectionRotation: [93.5, -42],
     races: ['normal-votes', 'us-house-2008', 'pres-2008', 'us-senate-2008'],
     dataSources: {
       tracts: 'ia-census-tracts-2010.json',
@@ -48,7 +48,7 @@ export default {
   },
 
   fl: {
-    projectionRotation: [84, -27.5 - 45 / 60],
+    projectionRotation: [84, -27.5],
     races: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
     dataSources: {
       tracts: 'fl-census-tracts-2010.json',
@@ -64,7 +64,7 @@ export default {
   },
 
   nc: {
-    projectionRotation: [79, -33 - 45 / 60],
+    projectionRotation: [79, -33],
     races: ['normal-votes', 'gov-2008', 'party-affiliation', 'pres-2008', 'us-senate-2008', 'us-senate-2010'],
     dataSources: {
       tracts: 'nc-census-tracts-2010.json',
@@ -82,7 +82,7 @@ export default {
   },
 
   nj: {
-    projectionRotation: [74.5, -40 - 45 / 60],
+    projectionRotation: [74.5, -40],
     races: ['normal-votes'],
     dataSources: {
       tracts: 'nj-census-tracts-2010.json',
@@ -98,7 +98,7 @@ export default {
   },
 
   ny: {
-    projectionRotation: [76, -43 - 45 / 60],
+    projectionRotation: [76, -43],
     races: ['normal-votes'],
     dataSources: {
       tracts: 'ny-census-tracts-2010.json',
@@ -114,7 +114,7 @@ export default {
   },
 
   tx: {
-    projectionRotation: [98.5, -31 - 45 / 60],
+    projectionRotation: [98.5, -31],
     races: ['normal-votes', 'gov-2010', 'pres-2008'],
     dataSources: {
       tracts: 'tx-census-tracts-2010.json',
@@ -130,7 +130,7 @@ export default {
   },
 
   wa: {
-    projectionRotation: [120, -47 - 45 / 60],
+    projectionRotation: [120, -47],
     races: ['normal-votes'],
     dataSources: {
       tracts: 'wa-census-tracts-2010.json',
