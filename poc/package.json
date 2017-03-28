@@ -12,7 +12,8 @@
     "lodash": "^4.17.4",
     "lorem-ipsum": "^1.0.3",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "waypoints": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

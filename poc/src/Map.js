@@ -5,18 +5,20 @@ import colorInterp from 'color-interpolate'
 import './Map.css'
 
 export default class Map extends React.Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.onResize = this.onResize.bind(this)
     this.onZoom = this.onZoom.bind(this)
     this.state = {
       projection: null,
-      transform: { x: 0, y: 0, k: 1 }
+      transform: props.transform
     }
   }
 
   onZoom () {
-    console.log(d3.event.sourceEvent)
+    if (this.props.currentSection === 0) {
+      return
+    }
     this.setState({
       transform: d3.event.transform
     })
@@ -29,11 +31,11 @@ export default class Map extends React.Component {
   updateProjection () {
     const { clientWidth, clientHeight } = this.container
     const viewport = [clientWidth, clientHeight]
-    const { padding, tracts } = this.props
+    const { tracts } = this.props
     const rotation = d3.geoCentroid(tracts).map(val => val * -1)
     const projection = d3.geoConicConformal()
       .rotate(rotation)
-      .fitExtent([[padding[3], padding[0]], [viewport[0] - padding[1], viewport[1] - padding[2]]], tracts)
+      .fitExtent([[0, 0], viewport], tracts)
     this.setState({ projection })
   }
 
@@ -69,13 +71,13 @@ export default class Map extends React.Component {
 Map.propTypes = {
   demographic: React.PropTypes.string.isRequired,
   tracts: React.PropTypes.object.isRequired,
-  padding: React.PropTypes.arrayOf(React.PropTypes.number).isRequired
+  transform: React.PropTypes.object.isRequired
 }
 
 class DemographicMap extends React.Component {
   constructor () {
     super()
-    this.renderMap = throttle(this.renderMap.bind(this), 5)
+    this.renderMap = throttle(this.renderMap.bind(this), 3)
   }
 
   componentDidMount () {

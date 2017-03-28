@@ -10,7 +10,8 @@ export default class App extends Component {
   constructor () {
     super()
     this.state = {
-      tracts: null
+      tracts: null,
+      currentSection: 0
     }
   }
 
@@ -22,20 +23,22 @@ export default class App extends Component {
   }
 
   render () {
-    const { tracts } = this.state
+    const { tracts, currentSection } = this.state
     return (
       <div className='App'>
         <Header />
         <div className='content-container'>
-          {tracts ? <Map tracts={tracts} demographic='race' padding={[0, 0, 30, 200]} /> : null}
+          {tracts ? <Map currentSection={currentSection} tracts={tracts} demographic='race' transform={{ x: 100, y: 0, k: 1.2 }} /> : null}
           <div className='content'>
             <div className='above-fold'>
-              <h1 className='headline'>Local Headline Wins Heart of Pulitzer Board</h1>
-              <div className='authors'>By Chris Geidner and Taylor Baldwin</div>
-              <div className='publish-time'>April 14, 2017, 4:15 p.m.</div>
+              <section className='intro'>
+                <h1 className='headline'>Local Headline Wins Heart of Pulitzer Board</h1>
+                <div className='authors'>By Chris Geidner and Taylor Baldwin</div>
+                <div className='publish-time'>April 14, 2017, 4:15 p.m.</div>
+              </section>
               <section className='description'>
-                {lorem({count: 3, units: 'sentences'})}
-                <ScrollIndicator />
+                <span>Aliqua Lorem nulla esse occaecat fugiat aute. Consectetur anim esse amet labore ipsum fugiat magna proident irure veniam reprehenderit. Nulla aliquip aliqua cupidatat dolor culpa anim aliquip enim.</span>
+                <ScrollIndicator currentSection={currentSection} />
               </section>
             </div>
             <div className='below-fold'>
@@ -52,9 +55,10 @@ export default class App extends Component {
   }
 }
 
-function ScrollIndicator () {
+function ScrollIndicator ({ currentSection }) {
+  const className = `scroll-indicator ${currentSection !== 0 ? 'hidden' : ''}`
   return (
-    <div className='scroll-indicator'>
+    <div className={className}>
       <div>scroll</div>
       <div className='arrow' />
     </div>
