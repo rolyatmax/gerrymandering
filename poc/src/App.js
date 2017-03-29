@@ -24,11 +24,12 @@ export default class App extends Component {
 
   render () {
     const { tracts, currentSection } = this.state
+    const transform = { x: 0, y: 0, k: 1 } // { x: 100, y: 0, k: 1.2 } // { x: 0, y: 0, k: 1 }
     return (
       <div className='App'>
         <Header />
         <div className='content-container'>
-          {tracts ? <Map currentSection={currentSection} tracts={tracts} demographic='race' transform={{ x: 100, y: 0, k: 1.2 }} /> : null}
+          {tracts ? <Map currentSection={currentSection} tracts={tracts} demographic='race' transform={transform} /> : null}
           <div className='content'>
             <div className='above-fold'>
               <section className='intro'>

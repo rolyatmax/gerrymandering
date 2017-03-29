@@ -1,27 +1,72 @@
+/* global requestAnimationFrame cancelAnimationFrame */
+
 import React from 'react'
 import * as d3 from 'd3'
-import throttle from 'lodash/throttle'
 import colorInterp from 'color-interpolate'
+import cubicInOut from 'eases/cubic-in-out'
+import { lerp } from 'interpolation'
 import './Map.css'
+
+const viewCenter = [window.innerWidth / 2, window.innerHeight / 2] //  [900, 360]
+const duration = 1000
 
 export default class Map extends React.Component {
   constructor (props) {
     super(props)
     this.onResize = this.onResize.bind(this)
-    this.onZoom = this.onZoom.bind(this)
     this.state = {
       projection: null,
-      transform: props.transform
+      transform: { x: 0, y: 0, k: 1 },
+      canvasTransform: props.transform
     }
   }
 
-  onZoom () {
-    if (this.props.currentSection === 0) {
-      return
+  zoomTo ([lon, lat], zoomLevel) {
+    const start = Date.now()
+
+    const pt = this.state.projection([lon, lat])
+
+    const x = viewCenter[0] - pt[0]
+    const y = viewCenter[1] - pt[1]
+    const k = zoomLevel / this.state.canvasTransform.k
+
+    const renderFrame = () => {
+      const elapsed = Math.min(1, (Date.now() - start) / duration)
+      const t = cubicInOut(elapsed)
+      const transform = {
+        x: lerp(0, x, t),
+        y: lerp(0, y, t),
+        k: lerp(1, k, t)
+      }
+      this.setState(() => ({
+        transform: transform
+      }))
+      if (elapsed < 1) {
+        this.rafToken = requestAnimationFrame(renderFrame)
+      } else {
+        this.setState({
+          canvasTransform: { x: x, y: y, k: k },
+          transform: { x: 0, y: 0, k: 1 }
+        })
+      }
     }
-    this.setState({
-      transform: d3.event.transform
-    })
+    this.rafToken = requestAnimationFrame(renderFrame)
+  }
+
+  // onZoom (e) {
+  //   const x = viewCenter[0] - e.clientX
+  //   const y = viewCenter[1] - e.clientY
+  //   const k = this.state.transform.k
+  //   this.zoomTransition({ x, y, k })
+  // }
+
+  onDoubleClickMap (e) {
+    const { top, left } = e.target.getBoundingClientRect()
+    const x = e.clientX - left
+    const y = e.clientY - top
+    const latLon = this.state.projection.invert([x, y])
+    const zoomLevel = 1
+    this.zoomTo(latLon, zoomLevel)
   }
 
   onResize () {
@@ -42,27 +87,62 @@ export default class Map extends React.Component {
   componentDidMount () {
     this.updateProjection()
     window.addEventListener('resize', this.onResize)
-
-    const zoom = d3.zoom().scaleExtent([1, 16]).on('zoom', this.onZoom)
-    d3.select(this.container).call(zoom)
-    d3.select(this.container).on('wheel.zoom', null)
+    if (this.ctx) {
+      this.renderMap()
+    }
   }
 
   componentWillUnmount () {
     window.removeEventListener('resize', this.onResize)
-    d3.select(this.container).on('.zoom', null)
+    cancelAnimationFrame(this.rafToken)
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+    if (this.state.projection !== prevState.projection && this.ctx) {
+      this.renderMap()
+    }
+  }
+
+  renderMap () {
+    const { clientWidth, clientHeight } = this.ctx.canvas.parentElement
+    this.ctx.canvas.height = clientHeight
+    this.ctx.canvas.width = clientWidth
+    const { x, y, k } = this.state.canvasTransform
+    // this.ctx.scale(k, k)
+    this.ctx.translate(-x, -y)
+    const path = d3.geoPath(this.state.projection).context(this.ctx)
+
+    this.props.tracts.features.forEach((feat) => {
+      this.ctx.beginPath()
+      this.ctx.fillStyle = getColor(feat.properties, this.props.demographic)
+      this.ctx.strokeStyle = `rgb(60, 60, 60)`
+      this.ctx.lineWidth = 0.1 / k
+      path(feat)
+      if (this.props.demographic) {
+        this.ctx.fill()
+      } else {
+        this.ctx.stroke()
+      }
+    })
   }
 
   render () {
+    const { x, y, k } = this.state.transform
+    const style = {
+      transformOrigin: `${viewCenter[0]}px ${viewCenter[1]}px`,
+      transform: `scale(${k}, ${k}) translate(${x}px, ${y}px)`
+    }
+
     return (
-      <div className='Map' ref={(el) => { this.container = el }} >
+      <div
+        style={style}
+        className='Map'
+        ref={(el) => { this.container = el }} >
         {this.state.projection ? (
-          <DemographicMap
-            transform={this.state.transform}
-            demographic={this.props.demographic}
-            tracts={this.props.tracts}
-            projection={this.state.projection} />
-          ) : null}
+          <canvas
+            onDoubleClick={this.onDoubleClickMap.bind(this)}
+            ref={(el) => { this.ctx = el && el.getContext('2d') }} />
+        ) : null}
       </div>
     )
   }
@@ -72,76 +152,6 @@ Map.propTypes = {
   demographic: React.PropTypes.string.isRequired,
   tracts: React.PropTypes.object.isRequired,
   transform: React.PropTypes.object.isRequired
-}
-
-class DemographicMap extends React.Component {
-  constructor () {
-    super()
-    this.renderMap = throttle(this.renderMap.bind(this), 3)
-  }
-
-  componentDidMount () {
-    this.updateMap()
-  }
-
-  componentDidUpdate (prevProps) {
-    const isDemoChanged = this.props.demographic !== prevProps.demographic
-    const isProjectionChanged = this.props.projection !== prevProps.projection
-    const isTransformChanged = this.props.transform !== prevProps.transform
-    if (isDemoChanged || isProjectionChanged || isTransformChanged) {
-      this.updateMap()
-    } else if (isTransformChanged) {
-      // const canvas = this.container.querySelector('canvas')
-      // const { x, y, k } = this.props.transform
-      // // const transform = d3.zoomTransform(canvas)
-      // // console.log(transform)
-      // canvas.style.transform = `scale(${k}, ${k}) translate(${x}px, ${y}px)`
-    }
-  }
-
-  updateMap () {
-    this.container.innerHTML = ''
-    this.renderMap()
-  }
-
-  renderMap () {
-    const canvas = document.createElement('canvas')
-    const { clientWidth, clientHeight } = this.container
-    canvas.height = clientHeight
-    canvas.width = clientWidth
-    this.container.appendChild(canvas)
-    const ctx = canvas.getContext('2d')
-    const { x, y, k } = this.props.transform
-    ctx.translate(x, y)
-    ctx.scale(k, k)
-    const path = d3.geoPath(this.props.projection).context(ctx)
-
-    this.props.tracts.features.forEach((feat) => {
-      ctx.beginPath()
-      ctx.fillStyle = getColor(feat.properties, this.props.demographic)
-      ctx.strokeStyle = `rgb(60, 60, 60)`
-      ctx.lineWidth = 0.1 / k
-      path(feat)
-      if (this.props.demographic) {
-        ctx.fill()
-      } else {
-        ctx.stroke()
-      }
-    })
-  }
-
-  render () {
-    return (
-      <div className='demographic-map' ref={(el) => { this.container = el }} />
-    )
-  }
-}
-
-DemographicMap.propTypes = {
-  transform: React.PropTypes.object.isRequired,
-  demographic: React.PropTypes.string.isRequired,
-  tracts: React.PropTypes.object.isRequired,
-  projection: React.PropTypes.func.isRequired
 }
 
 function getColor (properties, demographic) {

@@ -1,12 +1,6 @@
 .Map {
   height: 100vh;
   width: 100%;
-  position: absolute;
-  right: 0;
-}
-
-.Map .demographic-map {
-  height: 100%;
-  width: 100%;
   position: fixed;
+  right: 0;
 }
