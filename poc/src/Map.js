@@ -48,25 +48,24 @@ export default class Map extends React.Component {
     const { tracts, focus, zoomLevel } = this.props
     const centroid = d3.geoCentroid(tracts)
     const rotation = centroid.map(val => -val)
-    let projection = d3.geoConicConformal()
+    const initialProjection = d3.geoConicConformal()
       .rotate(rotation)
       .fitExtent([[0, 0], viewport], tracts)
-      .translate(viewCenter)
-    const initialScale = projection.scale()
-    projection = this.getProjectionForTransform(focus, zoomLevel * initialScale, projection, viewCenter)
-    this.setState({ projection, viewCenter, initialScale })
+    const initialScale = initialProjection.scale()
+    const { projection, transform } = this.getProjectionForTransform(focus, zoomLevel * initialScale, initialProjection, viewCenter, this.state.transform)
+    this.setState({ projection, viewCenter, initialScale, transform })
   }
 
-  getProjectionForTransform ([lon, lat], zoomLevel, projection, viewCenter) {
+  getProjectionForTransform ([lon, lat], zoomLevel, projection, viewCenter, transform) {
     projection.scale(zoomLevel)
     const destinationPixels = projection([lon, lat])
-
-    const x = viewCenter[0] - destinationPixels[0]
-    const y = viewCenter[1] - destinationPixels[1]
-
-    const curTranslation = projection.translate()
-    projection.translate([curTranslation[0] + x, curTranslation[1] + y])
-    return cloneFn(projection)
+    console.log('destinationPixels', destinationPixels)
+    const x = destinationPixels[0] - viewCenter[0]
+    const y = destinationPixels[1] - viewCenter[1]
+    return {
+      projection: cloneFn(projection),
+      transform: { x: -x, y: -y, k: 1 }
+    }
   }
 
   zoomTo ([lon, lat], zoomLevel) {
@@ -80,22 +79,28 @@ export default class Map extends React.Component {
     const y = this.state.viewCenter[1] - pt[1]
     const k = zoomLevel / this.state.projection.scale()
 
+    const startX = this.state.transform.x
+    const startY = this.state.transform.y
+
     const renderFrame = () => {
       const elapsed = Math.min(1, (Date.now() - start) / this.props.transitionDuration)
       const t = this.props.transitionEasing(elapsed)
       const transform = {
-        x: lerp(0, x, t),
-        y: lerp(0, y, t),
+        x: lerp(startX, x, t),
+        y: lerp(startY, y, t),
         k: lerp(1, k, t)
       }
       this.setState(() => ({ transform }))
       if (elapsed < 1) {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
-        this.setState((prevState) => ({
-          projection: this.getProjectionForTransform([lon, lat], zoomLevel, prevState.projection, prevState.viewCenter),
-          transform: { x: 0, y: 0, k: 1 }
-        }))
+        this.setState((prevState) => {
+          const { projection, transform } = this.getProjectionForTransform([lon, lat], zoomLevel, prevState.projection, prevState.viewCenter, prevState.transform)
+          return {
+            projection: projection,
+            transform: transform
+          }
+        })
       }
     }
     this.rafToken = requestAnimationFrame(renderFrame)
@@ -131,7 +136,15 @@ export default class Map extends React.Component {
     const { top, left } = e.target.getBoundingClientRect()
     const x = e.clientX - left
     const y = e.clientY - top
-    return this.state.projection.invert([x, y])
+    return this.state.projection.invert([x, y]) // also account for translation here
+  }
+
+  // for debugging
+  onClick (e) {
+    const { top, left } = e.target.getBoundingClientRect()
+    const x = e.clientX - left
+    const y = e.clientY - top
+    console.log(this.getCoordinatesFromClickEvent(e), [x, y])
   }
 
   renderMap () {
@@ -168,7 +181,7 @@ export default class Map extends React.Component {
         ref={(el) => { this.container = el }} >
         {this.state.projection ? (
           <canvas
-            onClick={(e) => console.log(this.getCoordinatesFromClickEvent(e))}
+            onClick={this.onClick.bind(this)}
             // onMouseUp={this.onMouseUp.bind(this)}
             // onMouseMove={this.onMouseMove.bind(this)}
             // onMouseDown={this.onMouseDown.bind(this)}
