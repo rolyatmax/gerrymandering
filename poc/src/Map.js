@@ -7,8 +7,9 @@ import cubicInOut from 'eases/cubic-in-out'
 import { lerp } from 'interpolation'
 import './Map.css'
 
-const viewCenter = [window.innerWidth / 2, window.innerHeight / 2] //  [900, 360]
+const viewCenter = [900, 460] // [window.innerWidth / 2, window.innerHeight / 2]
 const duration = 1000
+const CORPUS_COORDS = [-97.3255, 27.7726]
 
 export default class Map extends React.Component {
   constructor (props) {
@@ -16,8 +17,7 @@ export default class Map extends React.Component {
     this.onResize = this.onResize.bind(this)
     this.state = {
       projection: null,
-      transform: { x: 0, y: 0, k: 1 },
-      canvasTransform: props.transform
+      transform: { x: 0, y: 0, k: 1 }
     }
   }
 
@@ -28,7 +28,7 @@ export default class Map extends React.Component {
 
     const x = viewCenter[0] - pt[0]
     const y = viewCenter[1] - pt[1]
-    const k = zoomLevel / this.state.canvasTransform.k
+    const k = zoomLevel / this.state.projection.scale()
 
     const renderFrame = () => {
       const elapsed = Math.min(1, (Date.now() - start) / duration)
@@ -44,52 +44,80 @@ export default class Map extends React.Component {
       if (elapsed < 1) {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
-        this.setState({
-          canvasTransform: { x: x, y: y, k: k },
-          transform: { x: 0, y: 0, k: 1 }
-        })
+        this.setState((prevState) => this.getProjectionForTransform([lon, lat], zoomLevel, prevState))
       }
     }
     this.rafToken = requestAnimationFrame(renderFrame)
   }
 
-  // onZoom (e) {
-  //   const x = viewCenter[0] - e.clientX
-  //   const y = viewCenter[1] - e.clientY
-  //   const k = this.state.transform.k
-  //   this.zoomTransition({ x, y, k })
-  // }
+  getProjectionForTransform ([lon, lat], zoomLevel, prevState) {
+    prevState.projection.scale(zoomLevel)
+    const destinationPixels = prevState.projection([lon, lat])
+
+    const x = viewCenter[0] - destinationPixels[0]
+    const y = viewCenter[1] - destinationPixels[1]
+
+    const curTranslation = prevState.projection.translate()
+    prevState.projection.translate([curTranslation[0] + x, curTranslation[1] + y])
+    return {
+      projection: cloneFn(prevState.projection),
+      transform: { x: 0, y: 0, k: 1 }
+    }
+  }
 
   onDoubleClickMap (e) {
-    const { top, left } = e.target.getBoundingClientRect()
-    const x = e.clientX - left
-    const y = e.clientY - top
-    const latLon = this.state.projection.invert([x, y])
-    const zoomLevel = 1
+    const latLon = this.getCoordinatesFromClickEvent(e)
+    const zoomLevel = this.state.projection.scale() * 2
     this.zoomTo(latLon, zoomLevel)
   }
 
-  onResize () {
-    this.updateProjection()
+  // onMouseUp (e) {
+  //   this.dragStartTranslation = null
+  //   this.dragStartMouse = null
+  // }
+  //
+  // onMouseDown (e) {
+  //   this.dragStartTranslation = this.state.projection.translate()
+  //   this.dragStartMouse = [e.clientX, e.clientY]
+  // }
+  //
+  // onMouseMove (e) {
+  //   if (!this.dragStartMouse) {
+  //     return
+  //   }
+  //
+  //   const x = e.clientX - this.dragStartMouse[0] + this.dragStartTranslation[0]
+  //   const y = e.clientY - this.dragStartMouse[1] + this.dragStartTranslation[1]
+  //   console.log(this.dragStartTranslation)
+  // }
+
+  getCoordinatesFromClickEvent (e) {
+    const { top, left } = e.target.getBoundingClientRect()
+    const x = e.clientX - left
+    const y = e.clientY - top
+    return this.state.projection.invert([x, y])
   }
 
-  updateProjection () {
+  onResize () {
+    this.setProjection()
+  }
+
+  setProjection () {
     const { clientWidth, clientHeight } = this.container
     const viewport = [clientWidth, clientHeight]
     const { tracts } = this.props
-    const rotation = d3.geoCentroid(tracts).map(val => val * -1)
+    const centroid = d3.geoCentroid(tracts)
+    const rotation = centroid.map(val => -val)
     const projection = d3.geoConicConformal()
       .rotate(rotation)
       .fitExtent([[0, 0], viewport], tracts)
+      .translate(viewCenter)
     this.setState({ projection })
   }
 
   componentDidMount () {
-    this.updateProjection()
+    this.setProjection()
     window.addEventListener('resize', this.onResize)
-    if (this.ctx) {
-      this.renderMap()
-    }
   }
 
   componentWillUnmount () {
@@ -104,19 +132,16 @@ export default class Map extends React.Component {
   }
 
   renderMap () {
-    const { clientWidth, clientHeight } = this.ctx.canvas.parentElement
+    const { clientWidth, clientHeight } = this.container
     this.ctx.canvas.height = clientHeight
     this.ctx.canvas.width = clientWidth
-    const { x, y, k } = this.state.canvasTransform
-    // this.ctx.scale(k, k)
-    this.ctx.translate(-x, -y)
     const path = d3.geoPath(this.state.projection).context(this.ctx)
 
     this.props.tracts.features.forEach((feat) => {
       this.ctx.beginPath()
       this.ctx.fillStyle = getColor(feat.properties, this.props.demographic)
       this.ctx.strokeStyle = `rgb(60, 60, 60)`
-      this.ctx.lineWidth = 0.1 / k
+      this.ctx.lineWidth = 0.1
       path(feat)
       if (this.props.demographic) {
         this.ctx.fill()
@@ -130,7 +155,7 @@ export default class Map extends React.Component {
     const { x, y, k } = this.state.transform
     const style = {
       transformOrigin: `${viewCenter[0]}px ${viewCenter[1]}px`,
-      transform: `scale(${k}, ${k}) translate(${x}px, ${y}px)`
+      transform: `scale(${k}, ${k}) translate(${x}px, ${y}px)` // css transforms are applied right-to-left
     }
 
     return (
@@ -140,6 +165,10 @@ export default class Map extends React.Component {
         ref={(el) => { this.container = el }} >
         {this.state.projection ? (
           <canvas
+            onClick={(e) => console.log(this.getCoordinatesFromClickEvent(e))}
+            // onMouseUp={this.onMouseUp.bind(this)}
+            // onMouseMove={this.onMouseMove.bind(this)}
+            // onMouseDown={this.onMouseDown.bind(this)}
             onDoubleClick={this.onDoubleClickMap.bind(this)}
             ref={(el) => { this.ctx = el && el.getContext('2d') }} />
         ) : null}
@@ -176,7 +205,7 @@ function getColor (properties, demographic) {
   return `rgba(${color.join(',')})`
 }
 
-export function getValuesForDimension (counts, dimension) {
+function getValuesForDimension (counts, dimension) {
   const values = {}
   for (let dim in counts) {
     const [dimName, val] = dim.split(':')
@@ -185,4 +214,14 @@ export function getValuesForDimension (counts, dimension) {
     }
   }
   return values
+}
+
+function cloneFn (fn, context = null) {
+  const clonedFn = fn.bind(context)
+  for (let prop in fn) {
+    if (fn.hasOwnProperty(prop)) {
+      clonedFn[prop] = fn[prop]
+    }
+  }
+  return clonedFn
 }
