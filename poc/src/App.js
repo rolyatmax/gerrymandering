@@ -3,8 +3,33 @@
 import React, { Component } from 'react'
 import Map from './Map'
 import lorem from 'lorem-ipsum'
+import quadInOut from 'eases/quad-in-out'
 import './App.css'
 import '../node_modules/font-awesome/css/font-awesome.min.css'
+
+const CENTRAL_TX_COORDS = [-99.1117, 31.7675]
+const SAN_ANTONIO_COORDS = [-98.5708, 29.6872]
+const CORPUS_COORDS = [-97.3255, 27.7726]
+const HOUSTON_COORDS = [-95.3765, 29.7556]
+
+const sections = [
+  {
+    focus: CENTRAL_TX_COORDS,
+    zoomLevel: 1.2
+  },
+  {
+    focus: HOUSTON_COORDS,
+    zoomLevel: 4
+  },
+  {
+    focus: SAN_ANTONIO_COORDS,
+    zoomLevel: 2
+  },
+  {
+    focus: CORPUS_COORDS,
+    zoomLevel: 8
+  }
+]
 
 export default class App extends Component {
   constructor () {
@@ -13,6 +38,7 @@ export default class App extends Component {
       tracts: null,
       currentSection: 0
     }
+    window.setSection = (i) => this.setState({ currentSection: i })
   }
 
   componentDidMount () {
@@ -24,12 +50,19 @@ export default class App extends Component {
 
   render () {
     const { tracts, currentSection } = this.state
-    const transform = { x: 0, y: 0, k: 1 } // { x: 100, y: 0, k: 1.2 } // { x: 0, y: 0, k: 1 }
     return (
       <div className='App'>
         <Header />
         <div className='content-container'>
-          {tracts ? <Map currentSection={currentSection} tracts={tracts} demographic='race' transform={transform} /> : null}
+          {tracts ? (
+            <Map
+              tracts={tracts}
+              demographic='race'
+              focus={sections[currentSection].focus}
+              zoomLevel={sections[currentSection].zoomLevel}
+              transitionEasing={quadInOut}
+              transitionDuration={500} />
+          ) : null}
           <div className='content'>
             <div className='above-fold'>
               <section className='intro'>

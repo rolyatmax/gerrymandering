@@ -3,13 +3,8 @@
 import React from 'react'
 import * as d3 from 'd3'
 import colorInterp from 'color-interpolate'
-import cubicInOut from 'eases/cubic-in-out'
 import { lerp } from 'interpolation'
 import './Map.css'
-
-const viewCenter = [900, 460] // [window.innerWidth / 2, window.innerHeight / 2]
-const duration = 1000
-const CORPUS_COORDS = [-97.3255, 27.7726]
 
 export default class Map extends React.Component {
   constructor (props) {
@@ -17,52 +12,93 @@ export default class Map extends React.Component {
     this.onResize = this.onResize.bind(this)
     this.state = {
       projection: null,
-      transform: { x: 0, y: 0, k: 1 }
+      transform: { x: 0, y: 0, k: 1 },
+      viewCenter: [0, 0],
+      initialScale: 150
     }
   }
 
+  componentDidMount () {
+    this.setProjection()
+    window.addEventListener('resize', this.onResize)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.onResize)
+    cancelAnimationFrame(this.rafToken)
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+    if (this.state.projection !== prevState.projection && this.ctx) {
+      this.renderMap()
+    }
+    if (prevProps.focus !== this.props.focus || prevProps.zoomLevel !== this.props.zoomLevel) {
+      this.zoomTo(this.props.focus, this.props.zoomLevel * this.state.initialScale)
+    }
+  }
+
+  onResize () {
+    this.setProjection()
+  }
+
+  setProjection () {
+    const { clientWidth, clientHeight } = this.container
+    const viewCenter = [clientWidth * 0.75, clientHeight * 0.5]
+    const viewport = [clientWidth, clientHeight]
+    const { tracts, focus, zoomLevel } = this.props
+    const centroid = d3.geoCentroid(tracts)
+    const rotation = centroid.map(val => -val)
+    let projection = d3.geoConicConformal()
+      .rotate(rotation)
+      .fitExtent([[0, 0], viewport], tracts)
+      .translate(viewCenter)
+    const initialScale = projection.scale()
+    projection = this.getProjectionForTransform(focus, zoomLevel * initialScale, projection, viewCenter)
+    this.setState({ projection, viewCenter, initialScale })
+  }
+
+  getProjectionForTransform ([lon, lat], zoomLevel, projection, viewCenter) {
+    projection.scale(zoomLevel)
+    const destinationPixels = projection([lon, lat])
+
+    const x = viewCenter[0] - destinationPixels[0]
+    const y = viewCenter[1] - destinationPixels[1]
+
+    const curTranslation = projection.translate()
+    projection.translate([curTranslation[0] + x, curTranslation[1] + y])
+    return cloneFn(projection)
+  }
+
   zoomTo ([lon, lat], zoomLevel) {
+    // FIXME: NEED TO ALSO CANCEL ANY OTHER ANIMATION
+
     const start = Date.now()
 
     const pt = this.state.projection([lon, lat])
 
-    const x = viewCenter[0] - pt[0]
-    const y = viewCenter[1] - pt[1]
+    const x = this.state.viewCenter[0] - pt[0]
+    const y = this.state.viewCenter[1] - pt[1]
     const k = zoomLevel / this.state.projection.scale()
 
     const renderFrame = () => {
-      const elapsed = Math.min(1, (Date.now() - start) / duration)
-      const t = cubicInOut(elapsed)
+      const elapsed = Math.min(1, (Date.now() - start) / this.props.transitionDuration)
+      const t = this.props.transitionEasing(elapsed)
       const transform = {
         x: lerp(0, x, t),
         y: lerp(0, y, t),
         k: lerp(1, k, t)
       }
-      this.setState(() => ({
-        transform: transform
-      }))
+      this.setState(() => ({ transform }))
       if (elapsed < 1) {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
-        this.setState((prevState) => this.getProjectionForTransform([lon, lat], zoomLevel, prevState))
+        this.setState((prevState) => ({
+          projection: this.getProjectionForTransform([lon, lat], zoomLevel, prevState.projection, prevState.viewCenter),
+          transform: { x: 0, y: 0, k: 1 }
+        }))
       }
     }
     this.rafToken = requestAnimationFrame(renderFrame)
-  }
-
-  getProjectionForTransform ([lon, lat], zoomLevel, prevState) {
-    prevState.projection.scale(zoomLevel)
-    const destinationPixels = prevState.projection([lon, lat])
-
-    const x = viewCenter[0] - destinationPixels[0]
-    const y = viewCenter[1] - destinationPixels[1]
-
-    const curTranslation = prevState.projection.translate()
-    prevState.projection.translate([curTranslation[0] + x, curTranslation[1] + y])
-    return {
-      projection: cloneFn(prevState.projection),
-      transform: { x: 0, y: 0, k: 1 }
-    }
   }
 
   onDoubleClickMap (e) {
@@ -98,43 +134,10 @@ export default class Map extends React.Component {
     return this.state.projection.invert([x, y])
   }
 
-  onResize () {
-    this.setProjection()
-  }
-
-  setProjection () {
-    const { clientWidth, clientHeight } = this.container
-    const viewport = [clientWidth, clientHeight]
-    const { tracts } = this.props
-    const centroid = d3.geoCentroid(tracts)
-    const rotation = centroid.map(val => -val)
-    const projection = d3.geoConicConformal()
-      .rotate(rotation)
-      .fitExtent([[0, 0], viewport], tracts)
-      .translate(viewCenter)
-    this.setState({ projection })
-  }
-
-  componentDidMount () {
-    this.setProjection()
-    window.addEventListener('resize', this.onResize)
-  }
-
-  componentWillUnmount () {
-    window.removeEventListener('resize', this.onResize)
-    cancelAnimationFrame(this.rafToken)
-  }
-
-  componentDidUpdate (prevProps, prevState) {
-    if (this.state.projection !== prevState.projection && this.ctx) {
-      this.renderMap()
-    }
-  }
-
   renderMap () {
     const { clientWidth, clientHeight } = this.container
-    this.ctx.canvas.height = clientHeight
-    this.ctx.canvas.width = clientWidth
+    this.ctx.canvas.height = clientHeight * this.state.projection.scale() / this.state.initialScale
+    this.ctx.canvas.width = clientWidth * this.state.projection.scale() / this.state.initialScale
     const path = d3.geoPath(this.state.projection).context(this.ctx)
 
     this.props.tracts.features.forEach((feat) => {
@@ -154,7 +157,7 @@ export default class Map extends React.Component {
   render () {
     const { x, y, k } = this.state.transform
     const style = {
-      transformOrigin: `${viewCenter[0]}px ${viewCenter[1]}px`,
+      transformOrigin: `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`,
       transform: `scale(${k}, ${k}) translate(${x}px, ${y}px)` // css transforms are applied right-to-left
     }
 
@@ -180,7 +183,10 @@ export default class Map extends React.Component {
 Map.propTypes = {
   demographic: React.PropTypes.string.isRequired,
   tracts: React.PropTypes.object.isRequired,
-  transform: React.PropTypes.object.isRequired
+  focus: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+  zoomLevel: React.PropTypes.number.isRequired,
+  transitionDuration: React.PropTypes.number.isRequired,
+  transitionEasing: React.PropTypes.func.isRequired
 }
 
 function getColor (properties, demographic) {
