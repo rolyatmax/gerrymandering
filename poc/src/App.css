@@ -92,12 +92,12 @@ header {
   width: 580px;
   box-sizing: border-box;
   padding: 0 40px;
-  background-color: rgba(255, 255, 255, 0);
-  transition: background-color 400ms linear;
+  /*background-color: rgba(255, 255, 255, 0);
+  transition: background-color 400ms linear;*/
 }
 
 .content.with-background {
-  background-color: rgba(255, 255, 255, 0.75);
+  /*background-color: rgba(255, 255, 255, 0.75);*/
 }
 
 .above-fold {
@@ -188,6 +188,9 @@ p {
 
 .below-fold section {
   margin-bottom: 20em;
+  padding: 10px 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
 }
 
 .scroll-indicator {

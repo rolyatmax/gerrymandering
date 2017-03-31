@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import '../node_modules/waypoints/lib/noframework.waypoints.js' // exposes Waypoint
 import Map from './Map'
 import lorem from 'lorem-ipsum'
-import quadInOut from 'eases/quad-in-out'
 import './App.css'
 import '../node_modules/font-awesome/css/font-awesome.min.css'
 
@@ -16,19 +15,27 @@ const HOUSTON_COORDS = [-95.3765, 29.7556]
 const sections = [
   {
     focus: CENTRAL_TX_COORDS,
-    zoomLevel: 1.15
+    zoomLevel: 1.15,
+    demographic: 'ethnicity',
+    showDistricts: false
   },
   {
     focus: HOUSTON_COORDS,
-    zoomLevel: 4
+    zoomLevel: 4,
+    demographic: 'race',
+    showDistricts: true
   },
   {
     focus: TX_35_COORDS,
-    zoomLevel: 3
+    zoomLevel: 3,
+    demographic: 'ethnicity',
+    showDistricts: true
   },
   {
     focus: DALLAS_COORDS,
-    zoomLevel: 4
+    zoomLevel: 4,
+    demographic: 'ethnicity',
+    showDistricts: true
   }
 ]
 
@@ -57,14 +64,19 @@ export default class App extends Component {
       })
     })
 
-    fetch('/data/tx-census-tracts-2010.json')
+    const tractsPromise = fetch('/data/tx-census-tracts-2010.json')
       .then(res => res.json())
+
+    const districtsPromise = fetch('/data/tx-congressional-districts-2015-simplified.json')
+      .then(res => res.json())
+
+    Promise.all([tractsPromise, districtsPromise])
       .catch((err) => { throw new Error(err) })
-      .then(tracts => this.setState(() => ({ tracts })))
+      .then(([tracts, districts]) => this.setState(() => ({ tracts, districts })))
   }
 
   render () {
-    const { tracts, currentSection } = this.state
+    const { tracts, districts, currentSection } = this.state
     return (
       <div className='App'>
         <Header />
@@ -72,11 +84,11 @@ export default class App extends Component {
           {tracts ? (
             <Map
               tracts={tracts}
-              demographic='race'
+              districts={districts}
+              showDistricts={sections[currentSection].showDistricts}
+              demographic={sections[currentSection].demographic}
               focus={sections[currentSection].focus}
-              zoomLevel={sections[currentSection].zoomLevel}
-              transitionEasing={quadInOut}
-              transitionDuration={800} />
+              zoomLevel={sections[currentSection].zoomLevel} />
           ) : null}
           <div className={`content ${currentSection > 0 ? 'with-background' : ''}`}>
             <div className='above-fold'>
@@ -109,8 +121,10 @@ export default class App extends Component {
                 <p>{texts[2]}</p>
                 <p>{texts[0]}</p>
               </section>
-              <ByLines />
-              <ShareButtons />
+              <div className='footer'>
+                <ByLines />
+                <ShareButtons />
+              </div>
             </div>
           </div>
         </div>
