@@ -6,7 +6,7 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
-    "color-interpolate": "^1.0.2",
+    "chroma-js": "^1.2.2",
     "d3": "^4.7.4",
     "eases": "^1.0.8",
     "font-awesome": "^4.7.0",

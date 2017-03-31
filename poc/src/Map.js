@@ -2,7 +2,7 @@
 
 import React from 'react'
 import * as d3 from 'd3'
-import colorInterp from 'color-interpolate'
+import chroma from 'chroma-js'
 import { lerp } from 'interpolation'
 import './Map.css'
 
@@ -73,7 +73,8 @@ export default class Map extends React.Component {
   }
 
   zoomTo ([lon, lat], scale) {
-    // FIXME: NEED TO ALSO CANCEL ANY OTHER ANIMATION
+    // TODO: Use spring forces to animate?
+    cancelAnimationFrame(this.rafToken)
 
     const start = Date.now()
 
@@ -100,7 +101,7 @@ export default class Map extends React.Component {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
         this.setState((prevState) => {
-          const { projection, transform, canvasSize } = this.getCanvasProperties([lon, lat], scale / this.state.initialScale, this.state.initialScale, prevState.projection, prevState.viewCenter)
+          const { projection, transform, canvasSize } = this.getCanvasProperties([lon, lat], scale / prevState.initialScale, prevState.initialScale, prevState.projection, prevState.viewCenter)
           return {
             projection: projection,
             transform: transform,
@@ -219,6 +220,7 @@ Map.propTypes = {
   transitionEasing: React.PropTypes.func.isRequired
 }
 
+const colorMap = chroma.scale([[108, 131, 181], [115, 174, 128]]).mode('lab')
 function getColor (properties, demographic) {
   const values = getValuesForDimension(properties, demographic)
   const total = Object.keys(values).reduce((tot, dim) => parseInt(values[dim], 10) + tot, 0)
@@ -226,18 +228,17 @@ function getColor (properties, demographic) {
   const nonWhiteCount = total - whiteCount
   const hispanicCount = parseInt(properties['ethnicity:hispanic'], 10)
 
-  const colorMap = colorInterp([[108, 131, 181], [115, 174, 128]])
-
   let color = [150, 150, 150]
   if (total) {
     const leftHandSideDegree = demographic === 'race' ? nonWhiteCount / total : demographic === 'ethnicity' ? hispanicCount / total : 0
-    color = colorMap(leftHandSideDegree)
-    color = color.replace('rgb(', '').replace(')', '').split(',')
+    // console.log(leftHandSideDegree)
+    color = colorMap(leftHandSideDegree).rgb()
   }
 
   const area = properties.CENSUSAREA
-  const opacity = Math.pow(total / (area * 800), 0.3)
+  const opacity = Math.max(0, Math.min(1, Math.pow(total / (area * 800), 0.3)))
   color.push(opacity)
+  // console.log('------------', color)
   return `rgba(${color.join(',')})`
 }
 

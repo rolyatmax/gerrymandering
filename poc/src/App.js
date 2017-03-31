@@ -1,6 +1,7 @@
-/* global fetch */
+/* global fetch Waypoint */
 
 import React, { Component } from 'react'
+import '../node_modules/waypoints/lib/noframework.waypoints.js' // exposes Waypoint
 import Map from './Map'
 import lorem from 'lorem-ipsum'
 import quadInOut from 'eases/quad-in-out'
@@ -8,28 +9,30 @@ import './App.css'
 import '../node_modules/font-awesome/css/font-awesome.min.css'
 
 const CENTRAL_TX_COORDS = [-99.1117, 31.7675]
-const SAN_ANTONIO_COORDS = [-98.5708, 29.6872]
-const CORPUS_COORDS = [-97.3255, 27.7726]
+const DALLAS_COORDS = [-96.9707, 32.6862]
+const TX_35_COORDS = [-97.9002, 29.8582]
 const HOUSTON_COORDS = [-95.3765, 29.7556]
 
 const sections = [
   {
     focus: CENTRAL_TX_COORDS,
-    zoomLevel: 1.2
+    zoomLevel: 1.15
   },
   {
     focus: HOUSTON_COORDS,
     zoomLevel: 4
   },
   {
-    focus: SAN_ANTONIO_COORDS,
-    zoomLevel: 2
+    focus: TX_35_COORDS,
+    zoomLevel: 3
   },
   {
-    focus: CORPUS_COORDS,
-    zoomLevel: 8
+    focus: DALLAS_COORDS,
+    zoomLevel: 4
   }
 ]
+
+const texts = sections.map(() => lorem({count: 3, units: 'sentences'}))
 
 export default class App extends Component {
   constructor () {
@@ -42,6 +45,18 @@ export default class App extends Component {
   }
 
   componentDidMount () {
+    sections.forEach((section, i) => {
+      new Waypoint({
+        element: document.querySelector(`[data-section="${i}"]`),
+        offset: '75%',
+        handler: (direction) => {
+          console.log('section', i, direction)
+          const section = direction === 'down' ? i : i - 1
+          this.setState({ currentSection: section })
+        }
+      })
+    })
+
     fetch('/data/tx-census-tracts-2010.json')
       .then(res => res.json())
       .catch((err) => { throw new Error(err) })
@@ -61,11 +76,11 @@ export default class App extends Component {
               focus={sections[currentSection].focus}
               zoomLevel={sections[currentSection].zoomLevel}
               transitionEasing={quadInOut}
-              transitionDuration={500} />
+              transitionDuration={800} />
           ) : null}
-          <div className='content'>
+          <div className={`content ${currentSection > 0 ? 'with-background' : ''}`}>
             <div className='above-fold'>
-              <section className='intro'>
+              <section className='intro' data-section={0}>
                 <h1 className='headline'>Local Headline Wins Heart of Pulitzer Board</h1>
                 <div className='authors'>By Chris Geidner and Taylor Baldwin</div>
                 <div className='publish-time'>April 14, 2017, 4:15 p.m.</div>
@@ -76,9 +91,24 @@ export default class App extends Component {
               </section>
             </div>
             <div className='below-fold'>
-              <p>{lorem({count: 3, units: 'sentences'})}</p>
-              <p>{lorem({count: 3, units: 'sentences'})}</p>
-              <p>{lorem({count: 3, units: 'sentences'})}</p>
+              <section data-section={1}>
+                <h2>Houston</h2>
+                <h3>TX-9, TX-18, & TX-29</h3>
+                <p>{texts[0]}</p>
+                <p>{texts[2]}</p>
+              </section>
+              <section data-section={2}>
+                <h2>I-35 Between Austin & San Antonio</h2>
+                <h3>TX-35</h3>
+                <p>{texts[1]}</p>
+                <p>{texts[3]}</p>
+              </section>
+              <section data-section={3}>
+                <h2>Dallas</h2>
+                <h3>TX-33</h3>
+                <p>{texts[2]}</p>
+                <p>{texts[0]}</p>
+              </section>
               <ByLines />
               <ShareButtons />
             </div>
