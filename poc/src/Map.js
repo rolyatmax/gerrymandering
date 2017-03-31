@@ -14,7 +14,8 @@ export default class Map extends React.Component {
       projection: null,
       transform: { x: 0, y: 0, k: 1 },
       viewCenter: [0, 0],
-      initialScale: 150
+      initialScale: 150,
+      canvasSize: [0, 0]
     }
   }
 
@@ -43,32 +44,38 @@ export default class Map extends React.Component {
 
   setProjection () {
     const { clientWidth, clientHeight } = this.container
-    const viewCenter = [clientWidth * 0.75, clientHeight * 0.5]
-    const viewport = [clientWidth, clientHeight]
     const { tracts, focus, zoomLevel } = this.props
+    const viewport = [clientWidth * zoomLevel, clientHeight * zoomLevel]
+    console.log(zoomLevel, viewport, clientWidth, clientHeight)
+    const viewCenter = [clientWidth * 0.75, clientHeight * 0.5]
     const centroid = d3.geoCentroid(tracts)
     const rotation = centroid.map(val => -val)
     const initialProjection = d3.geoConicConformal()
       .rotate(rotation)
       .fitExtent([[0, 0], viewport], tracts)
     const initialScale = initialProjection.scale()
-    const { projection, transform } = this.getProjectionForTransform(focus, zoomLevel * initialScale, initialProjection, viewCenter, this.state.transform)
-    this.setState({ projection, viewCenter, initialScale, transform })
+    const { projection, transform, canvasSize } = this.getCanvasProperties(focus, zoomLevel, initialScale, initialProjection, viewCenter)
+    this.setState({ projection, viewCenter, initialScale, transform, canvasSize })
   }
 
-  getProjectionForTransform ([lon, lat], zoomLevel, projection, viewCenter, transform) {
-    projection.scale(zoomLevel)
+  getCanvasProperties ([lon, lat], zoomLevel, initialScale, projection, viewCenter) {
+    const scale = zoomLevel * initialScale
+    const { clientWidth, clientHeight } = this.container
+    const canvasSize = [clientWidth * zoomLevel, clientHeight * zoomLevel]
+    const translate = [canvasSize[0] / 2, canvasSize[1] / 2]
+    projection = cloneFn(projection.scale(scale).translate(translate))
     const destinationPixels = projection([lon, lat])
     console.log('destinationPixels', destinationPixels)
     const x = destinationPixels[0] - viewCenter[0]
     const y = destinationPixels[1] - viewCenter[1]
     return {
-      projection: cloneFn(projection),
-      transform: { x: -x, y: -y, k: 1 }
+      projection: projection,
+      transform: { x: -x, y: -y, k: 1 },
+      canvasSize: canvasSize
     }
   }
 
-  zoomTo ([lon, lat], zoomLevel) {
+  zoomTo ([lon, lat], scale) {
     // FIXME: NEED TO ALSO CANCEL ANY OTHER ANIMATION
 
     const start = Date.now()
@@ -77,7 +84,7 @@ export default class Map extends React.Component {
 
     const x = this.state.viewCenter[0] - pt[0]
     const y = this.state.viewCenter[1] - pt[1]
-    const k = zoomLevel / this.state.projection.scale()
+    const k = scale / this.state.projection.scale()
 
     const startX = this.state.transform.x
     const startY = this.state.transform.y
@@ -85,20 +92,22 @@ export default class Map extends React.Component {
     const renderFrame = () => {
       const elapsed = Math.min(1, (Date.now() - start) / this.props.transitionDuration)
       const t = this.props.transitionEasing(elapsed)
-      const transform = {
-        x: lerp(startX, x, t),
-        y: lerp(startY, y, t),
-        k: lerp(1, k, t)
-      }
-      this.setState(() => ({ transform }))
+      this.setState(() => ({
+        transform: {
+          x: lerp(startX, x, t),
+          y: lerp(startY, y, t),
+          k: lerp(1, k, t)
+        }
+      }))
       if (elapsed < 1) {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
         this.setState((prevState) => {
-          const { projection, transform } = this.getProjectionForTransform([lon, lat], zoomLevel, prevState.projection, prevState.viewCenter, prevState.transform)
+          const { projection, transform, canvasSize } = this.getCanvasProperties([lon, lat], scale / this.state.initialScale, this.state.initialScale, prevState.projection, prevState.viewCenter)
           return {
             projection: projection,
-            transform: transform
+            transform: transform,
+            canvasSize: canvasSize
           }
         })
       }
@@ -108,8 +117,8 @@ export default class Map extends React.Component {
 
   onDoubleClickMap (e) {
     const latLon = this.getCoordinatesFromClickEvent(e)
-    const zoomLevel = this.state.projection.scale() * 2
-    this.zoomTo(latLon, zoomLevel)
+    const scale = this.state.projection.scale() * 2
+    this.zoomTo(latLon, scale)
   }
 
   // onMouseUp (e) {
@@ -148,9 +157,9 @@ export default class Map extends React.Component {
   }
 
   renderMap () {
-    const { clientWidth, clientHeight } = this.container
-    this.ctx.canvas.height = clientHeight * this.state.projection.scale() / this.state.initialScale
-    this.ctx.canvas.width = clientWidth * this.state.projection.scale() / this.state.initialScale
+    const [width, height] = this.state.canvasSize
+    this.ctx.canvas.height = height
+    this.ctx.canvas.width = width
     const path = d3.geoPath(this.state.projection).context(this.ctx)
 
     this.props.tracts.features.forEach((feat) => {
@@ -171,7 +180,9 @@ export default class Map extends React.Component {
     const { x, y, k } = this.state.transform
     const style = {
       transformOrigin: `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`,
-      transform: `scale(${k}, ${k}) translate(${x}px, ${y}px)` // css transforms are applied right-to-left
+      transform: `scale(${k}, ${k}) translate(${x}px, ${y}px)`, // css transforms are applied right-to-left
+      // transformStyle: 'preserve-3d',
+      backfaceVisibility: 'hidden'
     }
 
     return (
