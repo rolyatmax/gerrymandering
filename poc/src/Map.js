@@ -45,14 +45,12 @@ export default class Map extends React.Component {
   setProjection () {
     const { clientWidth, clientHeight } = this.container
     const { tracts, focus, zoomLevel } = this.props
-    const viewport = [clientWidth * zoomLevel, clientHeight * zoomLevel]
-    console.log(zoomLevel, viewport, clientWidth, clientHeight)
     const viewCenter = [clientWidth * 0.75, clientHeight * 0.5]
     const centroid = d3.geoCentroid(tracts)
     const rotation = centroid.map(val => -val)
     const initialProjection = d3.geoConicConformal()
       .rotate(rotation)
-      .fitExtent([[0, 0], viewport], tracts)
+      .fitExtent([[50, 50], [clientWidth - 50, clientHeight - 50]], tracts)
     const initialScale = initialProjection.scale()
     const { projection, transform, canvasSize } = this.getCanvasProperties(focus, zoomLevel, initialScale, initialProjection, viewCenter)
     this.setState({ projection, viewCenter, initialScale, transform, canvasSize })
@@ -65,7 +63,6 @@ export default class Map extends React.Component {
     const translate = [canvasSize[0] / 2, canvasSize[1] / 2]
     projection = cloneFn(projection.scale(scale).translate(translate))
     const destinationPixels = projection([lon, lat])
-    console.log('destinationPixels', destinationPixels)
     const x = destinationPixels[0] - viewCenter[0]
     const y = destinationPixels[1] - viewCenter[1]
     return {
@@ -121,25 +118,30 @@ export default class Map extends React.Component {
     this.zoomTo(latLon, scale)
   }
 
-  // onMouseUp (e) {
-  //   this.dragStartTranslation = null
-  //   this.dragStartMouse = null
-  // }
-  //
-  // onMouseDown (e) {
-  //   this.dragStartTranslation = this.state.projection.translate()
-  //   this.dragStartMouse = [e.clientX, e.clientY]
-  // }
-  //
-  // onMouseMove (e) {
-  //   if (!this.dragStartMouse) {
-  //     return
-  //   }
-  //
-  //   const x = e.clientX - this.dragStartMouse[0] + this.dragStartTranslation[0]
-  //   const y = e.clientY - this.dragStartMouse[1] + this.dragStartTranslation[1]
-  //   console.log(this.dragStartTranslation)
-  // }
+  onMouseUp (e) {
+    this.dragStartTranslation = null
+    this.dragStartMouse = null
+  }
+
+  onMouseDown (e) {
+    this.dragStartTranslation = [this.state.transform.x, this.state.transform.y]
+    this.dragStartMouse = [e.clientX, e.clientY]
+  }
+
+  onMouseMove (e) {
+    if (!this.dragStartMouse) {
+      return
+    }
+
+    const x = e.clientX - this.dragStartMouse[0] + this.dragStartTranslation[0]
+    const y = e.clientY - this.dragStartMouse[1] + this.dragStartTranslation[1]
+    const k = this.state.transform.k
+
+    this.setState({
+      transform: { x, y, k }
+    })
+    console.log(this.dragStartTranslation, x, y)
+  }
 
   getCoordinatesFromClickEvent (e) {
     const { top, left } = e.target.getBoundingClientRect()
@@ -154,6 +156,10 @@ export default class Map extends React.Component {
     const x = e.clientX - left
     const y = e.clientY - top
     console.log(this.getCoordinatesFromClickEvent(e), [x, y])
+
+    // const latLon = this.getCoordinatesFromClickEvent(e)
+    // const scale = this.state.projection.scale() * 0.5
+    // this.zoomTo(latLon, scale)
   }
 
   renderMap () {
@@ -193,9 +199,9 @@ export default class Map extends React.Component {
         {this.state.projection ? (
           <canvas
             onClick={this.onClick.bind(this)}
-            // onMouseUp={this.onMouseUp.bind(this)}
-            // onMouseMove={this.onMouseMove.bind(this)}
-            // onMouseDown={this.onMouseDown.bind(this)}
+            onMouseUp={this.onMouseUp.bind(this)}
+            onMouseMove={this.onMouseMove.bind(this)}
+            onMouseDown={this.onMouseDown.bind(this)}
             onDoubleClick={this.onDoubleClickMap.bind(this)}
             ref={(el) => { this.ctx = el && el.getContext('2d') }} />
         ) : null}
