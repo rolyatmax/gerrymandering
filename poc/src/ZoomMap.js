@@ -31,9 +31,6 @@ export default class ZoomMap extends React.PureComponent {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    if (this.state.projection && this.state.projection !== prevState.projection) {
-      this.props.draw(this.state.projection, this.state.dimensions)
-    }
     if (prevProps.focus !== this.props.focus || prevProps.zoomLevel !== this.props.zoomLevel) {
       this.zoomTo(this.props.focus, this.props.zoomLevel * this.state.initialScale)
     }
@@ -74,6 +71,8 @@ export default class ZoomMap extends React.PureComponent {
   }
 
   zoomTo ([lon, lat], scale) {
+    this.container.style['pointer-events'] = 'none'
+
     // TODO: Use spring forces to animate?
     cancelAnimationFrame(this.rafToken)
 
@@ -102,6 +101,7 @@ export default class ZoomMap extends React.PureComponent {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
         this.setState((prevState) => {
+          this.container.style['pointer-events'] = 'auto'
           const { projection, transform, dimensions } = this.getCanvasProperties([lon, lat], scale / prevState.initialScale, prevState.initialScale, prevState.projection, prevState.viewCenter)
           return {
             projection: projection,
@@ -114,6 +114,7 @@ export default class ZoomMap extends React.PureComponent {
     this.rafToken = requestAnimationFrame(renderFrame)
   }
 
+  // currently broken
   onDoubleClickMap (e) {
     const latLon = this.getCoordinatesFromClickEvent(e)
     const scale = this.state.projection.scale() * 2
@@ -177,21 +178,21 @@ export default class ZoomMap extends React.PureComponent {
         onMouseUp={this.onMouseUp.bind(this)}
         onMouseMove={this.onMouseMove.bind(this)}
         onMouseDown={this.onMouseDown.bind(this)}
-        onDoubleClick={this.onDoubleClickMap.bind(this)}
+        // onDoubleClick={this.onDoubleClickMap.bind(this)} // currently broken
         ref={(el) => { this.container = el }} >
         {this.state.projection ? (
           <PureComponent
             projection={this.state.projection}
-            dimensions={this.state.dimensions}>{this.props.children}</PureComponent>
+            dimensions={this.state.dimensions}
+            {...this.props}>{this.props.children}</PureComponent>
         ) : null}
       </div>
     )
   }
 }
 
-Map.propTypes = {
-  draw: React.PropTypes.func.isRequired,
-  geoJSON: React.PropTypes.arrayOf(React.PropTypes.number).isRequired, // really only need these to get the center and extent for fitting
+ZoomMap.propTypes = {
+  geoJSON: React.PropTypes.object.isRequired, // really only need these to get the center and extent for fitting
   focus: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
   zoomLevel: React.PropTypes.number.isRequired,
   transitionDuration: React.PropTypes.number.isRequired,
@@ -200,13 +201,17 @@ Map.propTypes = {
 
 class PureComponent extends React.PureComponent {
   shouldComponentUpdate (props) {
-    return (this.props.projection !== props.projection || this.props.dimensions !== props.dimensions)
+    return (
+      this.props.projection !== props.projection ||
+      this.props.dimensions !== props.dimensions
+    )
   }
 
   render () {
     return <this.props.children
       projection={this.props.projection}
-      dimensions={this.props.dimensions} />
+      dimensions={this.props.dimensions}
+      {...this.props} />
   }
 }
 

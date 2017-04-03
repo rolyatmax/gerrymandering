@@ -86,12 +86,11 @@ header {
 }
 
 .content {
-  position: absolute;
-  top: 0;
+  position: relative;
   z-index: 1;
   width: 580px;
   box-sizing: border-box;
-  padding: 0 40px;
+  pointer-events: none;
   /*background-color: rgba(255, 255, 255, 0);
   transition: background-color 400ms linear;*/
 }
@@ -100,21 +99,22 @@ header {
   /*background-color: rgba(255, 255, 255, 0.75);*/
 }
 
+section {
+  pointer-events: auto;
+}
+
 .above-fold {
   height: 100vh;
   min-height: 750px;
-  position: absolute;
-  top: 0;
+  position: relative;
 }
 
 .below-fold {
-  margin-top: 100vh;
   padding-top: 200px;
 }
 
 .headline {
   font-size: 60px;
-  margin-top: 100px;
 }
 
 .authors {
@@ -130,7 +130,7 @@ header {
 
 .description {
   position: absolute;
-  bottom: 40px;
+  bottom: 160px;
   font-family: 'Arvo';
   color: #333;
   font-size: 22px;
@@ -191,6 +191,19 @@ p {
   padding: 10px 40px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  background: white;
+  padding-top: 40px;
+}
+
+.footer section {
+  width: 980px;
+  margin: auto;
 }
 
 .scroll-indicator {

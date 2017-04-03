@@ -17,25 +17,29 @@ const sections = [
     focus: CENTRAL_TX_COORDS,
     zoomLevel: 1.15,
     demographic: 'ethnicity',
-    showDistricts: false
+    showDistricts: false,
+    highlightedDistricts: []
   },
   {
     focus: HOUSTON_COORDS,
     zoomLevel: 4,
     demographic: 'race',
-    showDistricts: true
+    showDistricts: true,
+    highlightedDistricts: ['TX-9', 'TX-18', 'TX-29']
   },
   {
     focus: TX_35_COORDS,
     zoomLevel: 3,
     demographic: 'ethnicity',
-    showDistricts: true
+    showDistricts: true,
+    highlightedDistricts: ['TX-35']
   },
   {
     focus: DALLAS_COORDS,
     zoomLevel: 4,
     demographic: 'ethnicity',
-    showDistricts: true
+    showDistricts: true,
+    highlightedDistricts: ['TX-33']
   }
 ]
 
@@ -88,7 +92,8 @@ export default class App extends Component {
               showDistricts={sections[currentSection].showDistricts}
               demographic={sections[currentSection].demographic}
               focus={sections[currentSection].focus}
-              zoomLevel={sections[currentSection].zoomLevel} />
+              zoomLevel={sections[currentSection].zoomLevel}
+              highlightedDistricts={sections[currentSection].highlightedDistricts} />
           ) : null}
           <div className={`content ${currentSection > 0 ? 'with-background' : ''}`}>
             <div className='above-fold'>
@@ -121,11 +126,13 @@ export default class App extends Component {
                 <p>{texts[2]}</p>
                 <p>{texts[0]}</p>
               </section>
-              <div className='footer'>
-                <ByLines />
-                <ShareButtons />
-              </div>
             </div>
+          </div>
+          <div className='footer'>
+            <section>
+              <ByLines />
+              <ShareButtons />
+            </section>
           </div>
         </div>
       </div>

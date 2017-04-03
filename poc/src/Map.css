@@ -8,7 +8,6 @@
 svg {
   position: absolute;
   top: 0;
-  pointer-events: none;
 }
 
 path.district {
@@ -18,7 +17,21 @@ path.district {
   transition: all linear 100ms;
 }
 
-path.district:hover {
-  stroke-width: 2;
+path.district.hidden {
+  stroke: rgba(255, 255, 255, 0);
+}
+
+path.district.highlighted {
+  stroke-width: 2.5;
+  stroke: rgba(255, 255, 255, 1);
+}
+
+path.district.faded {
+  stroke-width: 1;
+  stroke: rgba(255, 255, 255, 0.65);
+}
+
+path.district.hovered {
+  stroke-width: 1;
   stroke: rgba(50, 50, 50, 0.85);
 }
