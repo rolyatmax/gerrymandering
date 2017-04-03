@@ -203,7 +203,8 @@ class PureComponent extends React.PureComponent {
   shouldComponentUpdate (props) {
     return (
       this.props.projection !== props.projection ||
-      this.props.dimensions !== props.dimensions
+      this.props.dimensions !== props.dimensions ||
+      this.props.showDistricts !== props.showDistricts // BREAKS ENCAPSULATION FIXME
     )
   }
 

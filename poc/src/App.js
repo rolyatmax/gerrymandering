@@ -24,6 +24,13 @@ const sections = [
     focus: HOUSTON_COORDS,
     zoomLevel: 5.5,
     demographic: 'race',
+    showDistricts: false,
+    highlightedDistricts: []
+  },
+  {
+    focus: HOUSTON_COORDS,
+    zoomLevel: 5.5,
+    demographic: 'race',
     showDistricts: true,
     highlightedDistricts: ['TX-9', 'TX-18', 'TX-29']
   },
@@ -31,8 +38,22 @@ const sections = [
     focus: TX_35_COORDS,
     zoomLevel: 4.5,
     demographic: 'ethnicity',
+    showDistricts: false,
+    highlightedDistricts: []
+  },
+  {
+    focus: TX_35_COORDS,
+    zoomLevel: 4.5,
+    demographic: 'ethnicity',
     showDistricts: true,
     highlightedDistricts: ['TX-35']
+  },
+  {
+    focus: DALLAS_COORDS,
+    zoomLevel: 5.5,
+    demographic: 'ethnicity',
+    showDistricts: false,
+    highlightedDistricts: []
   },
   {
     focus: DALLAS_COORDS,
@@ -112,19 +133,19 @@ export default class App extends Component {
                 <h2>Houston</h2>
                 <h3>TX-9, TX-18, & TX-29</h3>
                 <p>{texts[0]}</p>
-                <p>{texts[2]}</p>
+                <p data-section={2}>{texts[2]}</p>
               </section>
-              <section data-section={2}>
+              <section data-section={3}>
                 <h2>I-35 Between Austin & San Antonio</h2>
                 <h3>TX-35</h3>
                 <p>{texts[1]}</p>
-                <p>{texts[3]}</p>
+                <p data-section={4}>{texts[3]}</p>
               </section>
-              <section data-section={3}>
+              <section data-section={5}>
                 <h2>Dallas</h2>
                 <h3>TX-33</h3>
                 <p>{texts[2]}</p>
-                <p>{texts[0]}</p>
+                <p data-section={6}>{texts[0]}</p>
               </section>
             </div>
           </div>
