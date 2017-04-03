@@ -15,28 +15,28 @@ const HOUSTON_COORDS = [-95.3765, 29.7556]
 const sections = [
   {
     focus: CENTRAL_TX_COORDS,
-    zoomLevel: 1.15,
+    zoomLevel: 1.25,
     demographic: 'ethnicity',
     showDistricts: false,
     highlightedDistricts: []
   },
   {
     focus: HOUSTON_COORDS,
-    zoomLevel: 4,
+    zoomLevel: 5.5,
     demographic: 'race',
     showDistricts: true,
     highlightedDistricts: ['TX-9', 'TX-18', 'TX-29']
   },
   {
     focus: TX_35_COORDS,
-    zoomLevel: 3,
+    zoomLevel: 4.5,
     demographic: 'ethnicity',
     showDistricts: true,
     highlightedDistricts: ['TX-35']
   },
   {
     focus: DALLAS_COORDS,
-    zoomLevel: 4,
+    zoomLevel: 5.5,
     demographic: 'ethnicity',
     showDistricts: true,
     highlightedDistricts: ['TX-33']

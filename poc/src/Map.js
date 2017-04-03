@@ -77,13 +77,13 @@ class Map extends React.PureComponent {
     const [width, height] = dimensions
 
     let orderedFeatures = districts.features.slice()
-    highlightedDistricts.forEach(id => {
-      orderedFeatures = findByIDAndMoveToEnd(orderedFeatures, id)
-    })
-
     if (this.state.hoveredDistrict) {
       orderedFeatures = findByIDAndMoveToEnd(orderedFeatures, this.state.hoveredDistrict)
     }
+
+    highlightedDistricts.forEach(id => {
+      orderedFeatures = findByIDAndMoveToEnd(orderedFeatures, id)
+    })
 
     const svgStyle = {
       width: `${width}px`,
@@ -154,4 +154,9 @@ function findByIDAndMoveToEnd (list, id) {
   const toMove = list.splice(idx, 1)[0]
   list.push(toMove)
   return list
+}
+
+// polyfill for Firefox
+Array.prototype.includes = Array.prototype.includes || function (item) {
+  return this.indexOf(item) > -1
 }
