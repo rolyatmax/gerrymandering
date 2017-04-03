@@ -4,3 +4,21 @@
   position: fixed;
   right: 0;
 }
+
+svg {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+
+path.district {
+  stroke: rgba(255, 255, 255, 0.85);
+  stroke-width: 1;
+  fill: transparent;
+  transition: all linear 100ms;
+}
+
+path.district:hover {
+  stroke-width: 2;
+  stroke: rgba(50, 50, 50, 0.85);
+}

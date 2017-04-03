@@ -7,7 +7,7 @@ import * as d3 from 'd3'
 import { lerp } from 'interpolation'
 import './Map.css'
 
-export default class ZoomMap extends React.Component {
+export default class ZoomMap extends React.PureComponent {
   constructor (props) {
     super(props)
     this.onResize = this.onResize.bind(this)
@@ -16,7 +16,7 @@ export default class ZoomMap extends React.Component {
       transform: { x: 0, y: 0, k: 1 },
       viewCenter: [0, 0],
       initialScale: 150,
-      canvasSize: [0, 0]
+      dimensions: [0, 0]
     }
   }
 
@@ -31,8 +31,8 @@ export default class ZoomMap extends React.Component {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    if (this.state.projection !== prevState.projection && this.ctx) {
-      this.renderMap()
+    if (this.state.projection && this.state.projection !== prevState.projection) {
+      this.props.draw(this.state.projection, this.state.dimensions)
     }
     if (prevProps.focus !== this.props.focus || prevProps.zoomLevel !== this.props.zoomLevel) {
       this.zoomTo(this.props.focus, this.props.zoomLevel * this.state.initialScale)
@@ -53,15 +53,15 @@ export default class ZoomMap extends React.Component {
       .rotate(rotation)
       .fitExtent([[50, 50], [clientWidth - 50, clientHeight - 50]], geoJSON)
     const initialScale = initialProjection.scale()
-    const { projection, transform, canvasSize } = this.getCanvasProperties(focus, zoomLevel, initialScale, initialProjection, viewCenter)
-    this.setState({ projection, viewCenter, initialScale, transform, canvasSize })
+    const { projection, transform, dimensions } = this.getCanvasProperties(focus, zoomLevel, initialScale, initialProjection, viewCenter)
+    this.setState({ projection, viewCenter, initialScale, transform, dimensions })
   }
 
   getCanvasProperties ([lon, lat], zoomLevel, initialScale, projection, viewCenter) {
     const scale = zoomLevel * initialScale
     const { clientWidth, clientHeight } = this.container
-    const canvasSize = [clientWidth * zoomLevel, clientHeight * zoomLevel]
-    const translate = [canvasSize[0] / 2, canvasSize[1] / 2]
+    const dimensions = [clientWidth * zoomLevel, clientHeight * zoomLevel]
+    const translate = [dimensions[0] / 2, dimensions[1] / 2]
     projection = cloneFn(projection.scale(scale).translate(translate))
     const destinationPixels = projection([lon, lat])
     const x = destinationPixels[0] - viewCenter[0]
@@ -69,7 +69,7 @@ export default class ZoomMap extends React.Component {
     return {
       projection: projection,
       transform: { x: -x, y: -y, k: 1 },
-      canvasSize: canvasSize
+      dimensions: dimensions
     }
   }
 
@@ -102,11 +102,11 @@ export default class ZoomMap extends React.Component {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
         this.setState((prevState) => {
-          const { projection, transform, canvasSize } = this.getCanvasProperties([lon, lat], scale / prevState.initialScale, prevState.initialScale, prevState.projection, prevState.viewCenter)
+          const { projection, transform, dimensions } = this.getCanvasProperties([lon, lat], scale / prevState.initialScale, prevState.initialScale, prevState.projection, prevState.viewCenter)
           return {
             projection: projection,
             transform: transform,
-            canvasSize: canvasSize
+            dimensions: dimensions
           }
         })
       }
@@ -145,13 +145,6 @@ export default class ZoomMap extends React.Component {
     console.log(this.dragStartTranslation, x, y)
   }
 
-  getCoordinatesFromClickEvent (e) {
-    const { top, left } = e.target.getBoundingClientRect()
-    const x = e.clientX - left
-    const y = e.clientY - top
-    return this.state.projection.invert([x, y]) // also account for translation here
-  }
-
   // for debugging
   onClick (e) {
     const { top, left } = e.target.getBoundingClientRect()
@@ -160,12 +153,11 @@ export default class ZoomMap extends React.Component {
     console.log(this.getCoordinatesFromClickEvent(e), [x, y])
   }
 
-  renderMap (ctx, projection) {
-    const [width, height] = this.state.canvasSize
-    this.ctx.canvas.height = height
-    this.ctx.canvas.width = width
-
-    this.props.draw(this.ctx, this.state.projection)
+  getCoordinatesFromClickEvent (e) {
+    const { top, left } = e.target.getBoundingClientRect()
+    const x = e.clientX - left
+    const y = e.clientY - top
+    return this.state.projection.invert([x, y]) // also account for translation here
   }
 
   render () {
@@ -181,15 +173,16 @@ export default class ZoomMap extends React.Component {
       <div
         style={style}
         className='Map'
+        onClick={this.onClick.bind(this)}
+        onMouseUp={this.onMouseUp.bind(this)}
+        onMouseMove={this.onMouseMove.bind(this)}
+        onMouseDown={this.onMouseDown.bind(this)}
+        onDoubleClick={this.onDoubleClickMap.bind(this)}
         ref={(el) => { this.container = el }} >
         {this.state.projection ? (
-          <canvas
-            onClick={this.onClick.bind(this)}
-            onMouseUp={this.onMouseUp.bind(this)}
-            onMouseMove={this.onMouseMove.bind(this)}
-            onMouseDown={this.onMouseDown.bind(this)}
-            onDoubleClick={this.onDoubleClickMap.bind(this)}
-            ref={(el) => { this.ctx = el && el.getContext('2d') }} />
+          <PureComponent
+            projection={this.state.projection}
+            dimensions={this.state.dimensions}>{this.props.children}</PureComponent>
         ) : null}
       </div>
     )
@@ -203,6 +196,18 @@ Map.propTypes = {
   zoomLevel: React.PropTypes.number.isRequired,
   transitionDuration: React.PropTypes.number.isRequired,
   transitionEasing: React.PropTypes.func.isRequired
+}
+
+class PureComponent extends React.PureComponent {
+  shouldComponentUpdate (props) {
+    return (this.props.projection !== props.projection || this.props.dimensions !== props.dimensions)
+  }
+
+  render () {
+    return <this.props.children
+      projection={this.props.projection}
+      dimensions={this.props.dimensions} />
+  }
 }
 
 function cloneFn (fn, context = null) {

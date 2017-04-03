@@ -5,57 +5,57 @@ import chroma from 'chroma-js'
 import quadInOut from 'eases/quad-in-out'
 import './Map.css'
 
-export default function Map ({ tracts, districts, showDistricts, demographic, focus, zoomLevel }) {
-  function drawMap (ctx, projection) {
-    const path = d3.geoPath(projection).context(ctx)
+export default class Map extends React.PureComponent {
+  drawMap (projection, [width, height]) {
+    const { tracts, demographic } = this.props
+    this.ctx.canvas.height = height
+    this.ctx.canvas.width = width
+    const path = d3.geoPath(projection).context(this.ctx)
     tracts.features.forEach((feat) => {
-      ctx.beginPath()
-      ctx.fillStyle = getColor(feat.properties, demographic)
-      ctx.strokeStyle = `rgb(60, 60, 60)`
-      ctx.lineWidth = 0.1
+      this.ctx.beginPath()
+      this.ctx.fillStyle = getColor(feat.properties, demographic)
+      this.ctx.strokeStyle = `rgb(60, 60, 60)`
+      this.ctx.lineWidth = 0.1
       path(feat)
       if (demographic) {
-        ctx.fill()
+        this.ctx.fill()
       } else {
-        ctx.stroke()
+        this.ctx.stroke()
       }
-    })
-
-    if (!showDistricts) return
-
-    let svg = ctx.canvas.parentElement.querySelector('svg')
-    const svgPath = d3.geoPath(projection)
-    if (!svg) {
-      svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-      ctx.canvas.parentElement.appendChild(svg)
-      svg.style.position = 'absolute'
-      svg.style.top = 0
-    }
-    svg.innerHTML = ''
-    svg.style['pointer-events'] = 'none'
-    svg.style.width = ctx.canvas.width + 'px'
-    svg.style.height = ctx.canvas.height + 'px'
-    svg.setAttribute('width', ctx.canvas.width)
-    svg.setAttribute('height', ctx.canvas.height)
-    districts.features.forEach(feat => {
-      const p = document.createElementNS('http://www.w3.org/2000/svg', 'path')
-      p.setAttribute('d', svgPath(feat))
-      p.setAttribute('stroke', 'white')
-      p.setAttribute('stroke-width', 1)
-      p.setAttribute('fill', 'transparent')
-      svg.appendChild(p)
     })
   }
 
-  return (
-    <ZoomMap
-      draw={drawMap}
-      geoJSON={tracts}
-      focus={focus}
-      zoomLevel={zoomLevel}
-      transitionEasing={quadInOut}
-      transitionDuration={800} />
-  )
+  render () {
+    const { tracts, focus, zoomLevel, districts } = this.props
+
+    return (
+      <ZoomMap
+        draw={this.drawMap.bind(this)}
+        geoJSON={tracts}
+        focus={focus}
+        zoomLevel={zoomLevel}
+        transitionEasing={quadInOut}
+        transitionDuration={800}>
+        {({ projection, dimensions }) => {
+          const svgStyle = {
+            width: `${dimensions.width}px`,
+            height: `${dimensions.height}px`
+          }
+          const svgPath = d3.geoPath(projection)
+          return (
+            <div>
+              <canvas ref={(el) => { this.ctx = el && el.getContext('2d') }} />
+              <svg width={dimensions.width} height={dimensions.height} style={svgStyle}>
+                {districts.features.map(feat => {
+                  return <path d={svgPath(feat)} className='district' key={feat.properties.NAMELSAD} />
+                })}
+              </svg>
+            </div>
+          )
+        }}
+      </ZoomMap>
+    )
+  }
 }
 
 Map.propTypes = {
