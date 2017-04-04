@@ -14,6 +14,7 @@
     "interpolation": "^1.0.0",
     "lodash": "^4.17.4",
     "lorem-ipsum": "^1.0.3",
+    "numeral": "^2.0.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "waypoints": "^4.0.1"

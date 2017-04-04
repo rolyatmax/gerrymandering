@@ -4,6 +4,7 @@ import * as d3 from 'd3'
 import chroma from 'chroma-js'
 import quadInOut from 'eases/quad-in-out'
 import classnames from 'classnames'
+import numeral from 'numeral'
 import './Map.css'
 
 export default class MapContainer extends React.PureComponent {
@@ -37,21 +38,35 @@ class Map extends React.PureComponent {
   constructor (props) {
     super(props)
     this.state = {
-      hoveredDistrict: null
+      hoveredDistrictID: null,
+      mouse: [0, 0]
     }
   }
 
   setHoveredDistrict (districtID) {
     this.setState({
-      hoveredDistrict: districtID
+      hoveredDistrictID: districtID
     })
+  }
+
+  mouseMove (e) {
+    const mouse = [e.clientX - this.left, e.clientY - this.top]
+    this.setState({ mouse })
+  }
+
+  setOffsets () {
+    const { top, left } = this.container.getBoundingClientRect()
+    this.top = top
+    this.left = left
   }
 
   componentDidMount () {
     this.drawMap()
+    this.setOffsets()
   }
 
   componentDidUpdate (prevProps) {
+    this.setOffsets()
     if (this.props.projection && this.props.projection !== prevProps.projection) {
       this.drawMap()
     }
@@ -73,17 +88,19 @@ class Map extends React.PureComponent {
   }
 
   render () {
-    const { projection, dimensions, districts, showDistricts, highlightedDistricts } = this.props
+    const { projection, dimensions, districts, showDistricts, highlightedDistricts, demographic } = this.props
     const [width, height] = dimensions
 
     let orderedFeatures = districts.features.slice()
-    if (this.state.hoveredDistrict) {
-      orderedFeatures = findByIDAndMoveToEnd(orderedFeatures, this.state.hoveredDistrict)
+    if (this.state.hoveredDistrictID) {
+      orderedFeatures = findByIDAndMoveToEnd(orderedFeatures, this.state.hoveredDistrictID)
     }
 
     highlightedDistricts.forEach(id => {
       orderedFeatures = findByIDAndMoveToEnd(orderedFeatures, id)
     })
+
+    const hoveredDistrict = districts.features.find(feat => feat.properties.id === this.state.hoveredDistrictID)
 
     const svgStyle = {
       width: `${width}px`,
@@ -91,7 +108,7 @@ class Map extends React.PureComponent {
     }
     const svgPath = d3.geoPath(projection)
     return (
-      <div>
+      <div ref={(el) => { this.container = el }}>
         <canvas ref={(el) => { this.ctx = el && el.getContext('2d') }} />
         <svg width={width} height={height} style={svgStyle}>
           {orderedFeatures.map(feat => {
@@ -100,21 +117,71 @@ class Map extends React.PureComponent {
               hidden: !showDistricts,
               faded: highlightedDistricts.length && !isHighlighted,
               highlighted: isHighlighted,
-              hovered: this.state.hoveredDistrict === feat.properties.id
+              hovered: this.state.hoveredDistrictID === feat.properties.id
             })
             return (
               <path
                 d={svgPath(feat)}
                 className={className}
                 key={feat.properties.id} // turn all these into IDs
+                onMouseMove={(e) => this.mouseMove(e)}
                 onMouseEnter={() => this.setHoveredDistrict(feat.properties.id)}
                 onMouseLeave={() => this.setHoveredDistrict(null)} />
             )
           })}
         </svg>
+        {/* <ToolTip demographic='ethnicity' district={districts.features[0]} mouse={[500, 500]} /> */}
+        {this.state.hoveredDistrictID ? (
+          <ToolTip demographic={demographic} district={hoveredDistrict} mouse={this.state.mouse} />
+        ) : null}
       </div>
     )
   }
+}
+
+function ToolTip ({ district, mouse, demographic }) {
+  const padding = 30
+  const style = {
+    top: mouse[1] + padding,
+    left: mouse[0] - padding - 200 // the width
+  }
+
+  const demographics = {
+    ethnicity: [
+      { label: 'Hispanic', prop: 'ethnicity:hispanic', color: [115, 174, 128] },
+      { label: 'Non-Hispanic', prop: 'ethnicity:non-hispanic', color: [108, 131, 181] }
+    ],
+    race: [
+      { label: 'Non-White', prop: 'race:non-white', color: [115, 174, 128] },
+      { label: 'White', prop: 'race:white', color: [108, 131, 181] }
+    ]
+  }
+
+  const counts = demographics[demographic].map(({ label, prop }) => (
+    <li key={label}>
+      <span>{label}</span>
+      <span>{numeral(district.properties[prop]).format('0.0a')}</span>
+    </li>
+  ))
+
+  const demoTotal = demographics[demographic].reduce((total, demo) => total + district.properties[demo.prop], 0)
+  const sliderStyles = demographics[demographic].map(({ color, prop }, i) => ({
+    backgroundColor: `rgba(${color.join(',')}, 0.8)`,
+    width: `${district.properties[prop] / demoTotal * 100 - 0.5}%`,
+    left: i === 0 ? 0 : 'auto',
+    right: i === 0 ? 'auto' : 0
+  }))
+
+  return (
+    <div className='tooltip' style={style}>
+      <h4>{district.properties.id}</h4>
+      <ul>{counts}</ul>
+      <div className='slider'>
+        <div className='slice' style={sliderStyles[0]} key={0} />
+        <div className='slice' style={sliderStyles[1]} key={1} />
+      </div>
+    </div>
+  )
 }
 
 const colorMap = chroma.scale([[108, 131, 181], [115, 174, 128]]).mode('lab')

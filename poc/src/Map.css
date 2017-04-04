@@ -35,3 +35,46 @@ path.district.hovered {
   stroke-width: 1;
   stroke: rgba(50, 50, 50, 0.9);
 }
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  width: 200px;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(20, 20, 20, 0.2);
+  padding: 0 10px;
+}
+
+.tooltip ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tooltip li {
+  padding: 0;
+}
+
+.tooltip h4 {
+  margin: 10px 0;
+}
+
+.tooltip span {
+  display: inline-block;
+  width: 85px;
+  text-align: right;
+}
+
+.tooltip .slider {
+  width: 100%;
+  height: 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.tooltip .slider .slice {
+  height: 100%;
+  position: absolute;
+  transition: width 250ms ease-in-out;
+}
