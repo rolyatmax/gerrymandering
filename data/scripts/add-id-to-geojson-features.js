@@ -5,7 +5,7 @@ if (argv.help) {
 }
 
 function help () {
-  console.log('usage: node rename-geojson-props.js GEOJSON FILE [--dry]')
+  console.log('usage: node add-id-to-geojson-features.js GEOJSON FILE [--dry]')
   console.log('    - GEOJSON FILE should be a geojson file you want')
   console.log('    - DRY does a dry run giving helpful warning output')
   console.log('outputs geojson with renamed properties')
