@@ -119,11 +119,13 @@ class Map extends React.PureComponent {
 
 const colorMap = chroma.scale([[108, 131, 181], [115, 174, 128]]).mode('lab')
 function getColor (properties, demographic) {
-  const values = getValuesForDimension(properties, demographic)
-  const total = Object.keys(values).reduce((tot, dim) => parseInt(values[dim], 10) + tot, 0)
-  const whiteCount = parseInt(properties['race:white'], 10)
-  const nonWhiteCount = total - whiteCount
-  const hispanicCount = parseInt(properties['ethnicity:hispanic'], 10)
+  const whiteCount = properties['race:white']
+  const nonWhiteCount = properties['race:non-white']
+  const raceTotal = whiteCount + nonWhiteCount
+  const hispanicCount = properties['ethnicity:hispanic']
+  const nonHispanicCount = properties['ethnicity:non-hispanic']
+  const ethnicityTotal = hispanicCount + nonHispanicCount
+  const total = demographic === 'race' ? raceTotal : ethnicityTotal
 
   let color = [180, 180, 180]
   if (total) {
@@ -135,17 +137,6 @@ function getColor (properties, demographic) {
   const opacity = Math.max(0, Math.min(1, Math.pow(total / (area * 800), 0.3)))
   color.push(opacity)
   return `rgba(${color.join(',')})`
-}
-
-function getValuesForDimension (counts, dimension) {
-  const values = {}
-  for (let dim in counts) {
-    const [dimName, val] = dim.split(':')
-    if (dimName === dimension) {
-      values[val] = counts[dim]
-    }
-  }
-  return values
 }
 
 function findByIDAndMoveToEnd (list, id) {

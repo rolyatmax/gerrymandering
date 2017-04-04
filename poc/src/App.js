@@ -80,7 +80,7 @@ export default class App extends Component {
     sections.forEach((section, i) => {
       new Waypoint({
         element: document.querySelector(`[data-section="${i}"]`),
-        offset: '75%',
+        offset: '60%',
         handler: (direction) => {
           console.log('section', i, direction)
           const section = direction === 'down' ? i : i - 1

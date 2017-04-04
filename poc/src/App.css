@@ -189,8 +189,9 @@ p {
 .below-fold section {
   margin-bottom: 20em;
   padding: 10px 40px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
+  box-shadow: 0 0 5px rgba(30, 30, 30, 0.3);
 }
 
 .footer {
