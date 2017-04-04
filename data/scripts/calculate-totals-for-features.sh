@@ -7,14 +7,14 @@
 # node calculate-totals-for-features.js ../tx-congressional-districts-2010-simplified.json ../points/tx-race-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../tx-congressional-districts-2010-simplified.json
 # echo "Completed Job 4"
 
-node calculate-totals-for-features.js ../az-congressional-districts-2015-simplified.json ../points/az-ethnicity-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../az-congressional-districts-2015-simplified.json
-echo "Completed Job 5"
-node calculate-totals-for-features.js ../az-congressional-districts-2010-simplified.json ../points/az-ethnicity-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../az-congressional-districts-2010-simplified.json
-echo "Completed Job 6"
-node calculate-totals-for-features.js ../az-congressional-districts-2015-simplified.json ../points/az-race-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../az-congressional-districts-2015-simplified.json
-echo "Completed Job 7"
-node calculate-totals-for-features.js ../az-congressional-districts-2010-simplified.json ../points/az-race-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../az-congressional-districts-2010-simplified.json
-echo "Completed Job 8"
+# node calculate-totals-for-features.js ../az-congressional-districts-2015-simplified.json ../points/az-ethnicity-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../az-congressional-districts-2015-simplified.json
+# echo "Completed Job 5"
+# node calculate-totals-for-features.js ../az-congressional-districts-2010-simplified.json ../points/az-ethnicity-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../az-congressional-districts-2010-simplified.json
+# echo "Completed Job 6"
+# node calculate-totals-for-features.js ../az-congressional-districts-2015-simplified.json ../points/az-race-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../az-congressional-districts-2015-simplified.json
+# echo "Completed Job 7"
+# node calculate-totals-for-features.js ../az-congressional-districts-2010-simplified.json ../points/az-race-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../az-congressional-districts-2010-simplified.json
+# echo "Completed Job 8"
 
 # node calculate-totals-for-features.js ../al-congressional-districts-2015-simplified.json ../points/al-race-points-resolution10.csv --resolution=10 --sample-size=5 > tmp && mv tmp ../al-congressional-districts-2015-simplified.json
 # echo "Completed Job 11"

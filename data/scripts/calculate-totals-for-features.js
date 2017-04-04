@@ -58,8 +58,8 @@ function divideIntoBatches (list, batchCount) {
 }
 
 function processBatch (batch) {
-  const p = new Parallel([geojson.features, batch])
-  return p.spawn(([features, lines]) => {
+  const p = new Parallel([geojson.features, batch, argv])
+  return p.spawn(([features, lines, argv]) => {
     const d3 = require('d3')
     const extent = require('geojson-extent')
     const totals = {}
@@ -76,7 +76,9 @@ function processBatch (batch) {
     }
 
     function processLine (line) {
+      if (!line) return
       let [lon, lat, value] = line.split(',') // please let there be no commas in the data 😳
+      if (!value && argv.dry) console.log(`something's wrong: value is undefined for line:`, line, typeof line, line.length)
       value = value.replace(/"/g, '') // strip out any quotation marks
       for (let feature of features) {
         const featureID = feature.properties.id
@@ -138,5 +140,5 @@ function combineBatchesAndWrite (batches) {
     Object.assign(feat.properties, newProperties)
   })
 
-  process.stdout.write(JSON.stringify(geojson))
+  if (!argv.dry) process.stdout.write(JSON.stringify(geojson))
 }
