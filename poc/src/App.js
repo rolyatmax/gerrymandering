@@ -131,26 +131,26 @@ export default class App extends Component {
             <div className='below-fold'>
               <section data-section={1}>
                 <h2>Houston</h2>
-                <h3>TX-9, TX-18, & TX-29</h3>
                 <p>{texts[0]}</p>
               </section>
               <section data-section={2}>
+                <h3>TX-9, TX-18, & TX-29</h3>
                 <p>{texts[2]}</p>
               </section>
               <section data-section={3}>
                 <h2>I-35 Between Austin & San Antonio</h2>
-                <h3>TX-35</h3>
                 <p>{texts[1]}</p>
               </section>
               <section data-section={4}>
+                <h3>TX-20 & TX-35</h3>
                 <p>{texts[3]}</p>
               </section>
               <section data-section={5}>
                 <h2>Dallas</h2>
-                <h3>TX-33</h3>
                 <p>{texts[2]}</p>
               </section>
               <section data-section={6}>
+                <h3>TX-33</h3>
                 <p>{texts[0]}</p>
               </section>
             </div>
