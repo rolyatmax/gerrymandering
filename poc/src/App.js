@@ -32,7 +32,7 @@ const sections = [
     zoomLevel: 5.5,
     demographic: 'race',
     showDistricts: true,
-    highlightedDistricts: ['TX-9', 'TX-18', 'TX-29']
+    highlightedDistricts: ['TX-9', 'TX-18']
   },
   {
     focus: SAN_ANTONIO_COORDS,
@@ -134,7 +134,7 @@ export default class App extends Component {
                 <p>{texts[0]}</p>
               </section>
               <section data-section={2}>
-                <h3>TX-9, TX-18, & TX-29</h3>
+                <h3>TX-9 & TX-18</h3>
                 <p>{texts[2]}</p>
               </section>
               <section data-section={3}>

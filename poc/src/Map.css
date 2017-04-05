@@ -7,7 +7,7 @@ path.district {
   stroke: rgba(255, 255, 255, 0.85);
   stroke-width: 1;
   fill: transparent;
-  transition: all linear 200ms;
+  transition: stroke linear 200ms;
 }
 
 path.district.hidden {
@@ -26,7 +26,7 @@ path.district.faded {
 
 path.district.hovered {
   stroke-width: 1;
-  stroke: rgba(50, 50, 50, 0.9);
+  stroke: rgba(80, 80, 80, 0.9);
 }
 
 .tooltip {
@@ -44,6 +44,7 @@ path.district.hovered {
 .tooltip ul {
   list-style: none;
   padding: 0;
+  margin: 10px 0;
 }
 
 .tooltip li {
@@ -51,12 +52,27 @@ path.district.hovered {
 }
 
 .tooltip h4 {
-  margin: 10px 0;
+  margin: 14px 0 10px;
+}
+
+.tooltip .color-box {
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  display: inline-block;
+  margin-right: 8px;
 }
 
 .tooltip span {
   display: inline-block;
-  width: 85px;
+}
+
+.tooltip .label {
+  width: 100px;
+}
+
+.tooltip .count {
+  width: 50px;
   text-align: right;
 }
 

@@ -125,14 +125,15 @@ class Map extends React.PureComponent {
               <path
                 d={svgPath(feat)}
                 className={className}
-                key={feat.properties.id} // turn all these into IDs
+                key={feat.properties.id}
                 onMouseMove={(e) => this.mouseMove(e)}
                 onMouseEnter={() => this.setHoveredDistrict(feat.properties.id)}
-                onMouseLeave={() => this.setHoveredDistrict(null)} />
+                onMouseLeave={() => this.setHoveredDistrict(null)}
+              />
             )
           })}
         </svg>
-        {/* <ToolTip demographic='ethnicity' district={districts.features[0]} mouse={[500, 500]} /> */}
+        {/* <ToolTip demographic={demographic} district={districts.features[0]} mouse={[900, 500]} /> */}
         {this.state.hoveredDistrictID ? (
           <ToolTip demographic={demographic} district={hoveredDistrict} mouse={this.state.mouse} />
         ) : null}
@@ -160,10 +161,11 @@ function ToolTip ({ district, mouse, demographic }) {
     ]
   }
 
-  const counts = demographics[demographic].map(({ label, prop }) => (
+  const counts = demographics[demographic].map(({ label, prop, color }) => (
     <li key={label}>
-      <span>{label}</span>
-      <span>{numeral(district.properties[prop]).format('0.0a')}</span>
+      <div className='color-box' style={{ backgroundColor: `rgba(${color.join(',')}, 0.8)` }} />
+      <span className='label'>{label}</span>
+      <span className='count'>{numeral(district.properties[prop]).format('0.0a')}</span>
     </li>
   ))
 

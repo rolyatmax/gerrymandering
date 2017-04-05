@@ -101,13 +101,14 @@ export default class ZoomMap extends React.PureComponent {
     const renderFrame = () => {
       const elapsed = Math.min(1, (Date.now() - start) / this.props.transitionDuration)
       const t = this.props.transitionEasing(elapsed)
-      this.setState(() => ({
-        transform: {
-          x: lerp(startX, x, t),
-          y: lerp(startY, y, t),
-          k: lerp(1, k, t)
-        }
-      }))
+
+      const curX = lerp(startX, x, t)
+      const curY = lerp(startY, y, t)
+      const curK = lerp(1, k, t)
+
+      this.container.style['transform-origin'] = `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`
+      this.container.style['transform'] = `scale(${curK}, ${curK}) translate(${curX}px, ${curY}px)` // css transforms are applied right-to-left
+
       if (elapsed < 1) {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
@@ -185,7 +186,7 @@ export default class ZoomMap extends React.PureComponent {
     const style = {
       transformOrigin: `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`,
       transform: `scale(${k}, ${k}) translate(${x}px, ${y}px)`, // css transforms are applied right-to-left
-      transformStyle: 'preserve-3d',
+      // transformStyle: 'preserve-3d',
       backfaceVisibility: 'hidden'
     }
 

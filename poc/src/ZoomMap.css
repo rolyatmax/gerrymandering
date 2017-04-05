@@ -10,6 +10,8 @@
 .ZoomMap {
   height: 100%;
   width: 100%;
+  position: fixed;
+  backface-visibility: hidden;
 }
 
 .Controls {
@@ -35,6 +37,7 @@
   color: #888;
   cursor: pointer;
   transition: background-color linear 100ms;
+  outline: none;
 }
 
 .Controls button:hover {
