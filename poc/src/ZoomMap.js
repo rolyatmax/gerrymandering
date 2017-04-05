@@ -5,7 +5,7 @@
 import React from 'react'
 import * as d3 from 'd3'
 import { lerp } from 'interpolation'
-import './Map.css'
+import './ZoomMap.css'
 
 export default class ZoomMap extends React.PureComponent {
   constructor (props) {
@@ -32,8 +32,13 @@ export default class ZoomMap extends React.PureComponent {
 
   componentDidUpdate (prevProps, prevState) {
     if (prevProps.focus !== this.props.focus || prevProps.zoomLevel !== this.props.zoomLevel) {
-      this.zoomTo(this.props.focus, this.props.zoomLevel * this.state.initialScale)
+      this.zoomTo(this.props.focus, this.getScale(this.props.zoomLevel))
     }
+  }
+
+  getScale (zoomLevel) {
+    zoomLevel = Math.max(this.props.minZoom, Math.min(this.props.maxZoom, zoomLevel))
+    return zoomLevel * this.state.initialScale
   }
 
   onResize () {
@@ -117,7 +122,8 @@ export default class ZoomMap extends React.PureComponent {
   // currently broken
   onDoubleClickMap (e) {
     const latLon = this.getCoordinatesFromClickEvent(e)
-    const scale = this.state.projection.scale() * 2
+    const zoomLevel = this.state.projection.scale() / this.state.initialScale
+    const scale = this.getScale(zoomLevel * 2)
     this.zoomTo(latLon, scale)
   }
 
@@ -143,22 +149,18 @@ export default class ZoomMap extends React.PureComponent {
     this.setState({
       transform: { x, y, k }
     })
-    console.log(this.dragStartTranslation, x, y)
   }
 
   // for debugging
   onClick (e) {
-    const { top, left } = e.target.getBoundingClientRect()
-    const x = e.clientX - left
-    const y = e.clientY - top
-    console.log(this.getCoordinatesFromClickEvent(e), [x, y])
+    console.log(this.getCoordinatesFromClickEvent(e))
   }
 
   getCoordinatesFromClickEvent (e) {
-    const { top, left } = e.target.getBoundingClientRect()
+    const { top, left } = e.currentTarget.getBoundingClientRect()
     const x = e.clientX - left
     const y = e.clientY - top
-    return this.state.projection.invert([x, y]) // also account for translation here
+    return this.state.projection.invert([x, y])
   }
 
   render () {
@@ -166,19 +168,19 @@ export default class ZoomMap extends React.PureComponent {
     const style = {
       transformOrigin: `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`,
       transform: `scale(${k}, ${k}) translate(${x}px, ${y}px)`, // css transforms are applied right-to-left
-      // transformStyle: 'preserve-3d', // disabling for now since it makes everything look less sharp
+      transformStyle: 'preserve-3d',
       backfaceVisibility: 'hidden'
     }
 
     return (
       <div
         style={style}
-        className='Map'
+        className='ZoomMap'
         onClick={this.onClick.bind(this)}
         onMouseUp={this.onMouseUp.bind(this)}
         onMouseMove={this.onMouseMove.bind(this)}
         onMouseDown={this.onMouseDown.bind(this)}
-        // onDoubleClick={this.onDoubleClickMap.bind(this)} // currently broken
+        onDoubleClick={this.onDoubleClickMap.bind(this)}
         ref={(el) => { this.container = el }} >
         {this.state.projection ? (
           <PureComponent
@@ -196,7 +198,9 @@ ZoomMap.propTypes = {
   focus: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
   zoomLevel: React.PropTypes.number.isRequired,
   transitionDuration: React.PropTypes.number.isRequired,
-  transitionEasing: React.PropTypes.func.isRequired
+  transitionEasing: React.PropTypes.func.isRequired,
+  minZoom: React.PropTypes.number.isRequired,
+  maxZoom: React.PropTypes.number.isRequired
 }
 
 class PureComponent extends React.PureComponent {

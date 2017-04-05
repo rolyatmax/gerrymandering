@@ -17,6 +17,8 @@ export default class MapContainer extends React.PureComponent {
         zoomLevel={zoomLevel}
         transitionEasing={quadInOut}
         transitionDuration={800}
+        minZoom={1}
+        maxZoom={8}
         {...this.props}>
         {Map}
       </ZoomMap>
