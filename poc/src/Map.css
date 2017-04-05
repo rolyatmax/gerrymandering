@@ -38,6 +38,7 @@ path.district.hovered {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(20, 20, 20, 0.2);
   padding: 0 10px;
+  z-index: 10;
 }
 
 .tooltip ul {

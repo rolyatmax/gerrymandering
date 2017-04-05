@@ -1,6 +1,46 @@
-.ZoomMap {
+.ZoomMap-container {
   height: 100vh;
   width: 100%;
   position: fixed;
   right: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.ZoomMap {
+  height: 100%;
+  width: 100%;
+}
+
+.Controls {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  padding: 0;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(20, 20, 20, 0.3);
+}
+
+.Controls button {
+  display: block;
+  text-align: center;
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border: 0;
+  margin: 0;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  transition: background-color linear 100ms;
+}
+
+.Controls button:hover {
+  background-color: #fafafa;
+}
+
+.Controls button:first-of-type {
+  border-bottom: 1px solid #eee;
 }

@@ -11,6 +11,8 @@ export default class ZoomMap extends React.PureComponent {
   constructor (props) {
     super(props)
     this.onResize = this.onResize.bind(this)
+    this.onMouseUp = this.onMouseUp.bind(this)
+    this.onMouseMove = this.onMouseMove.bind(this)
     this.state = {
       projection: null,
       transform: { x: 0, y: 0, k: 1 },
@@ -23,10 +25,14 @@ export default class ZoomMap extends React.PureComponent {
   componentDidMount () {
     this.setProjection()
     window.addEventListener('resize', this.onResize)
+    window.addEventListener('mouseup', this.onMouseUp)
+    window.addEventListener('mousemove', this.onMouseMove)
   }
 
   componentWillUnmount () {
     window.removeEventListener('resize', this.onResize)
+    window.removeEventListener('mouseup', this.onMouseUp)
+    window.removeEventListener('mousemove', this.onMouseMove)
     cancelAnimationFrame(this.rafToken)
   }
 
@@ -156,6 +162,17 @@ export default class ZoomMap extends React.PureComponent {
     console.log(this.getCoordinatesFromClickEvent(e))
   }
 
+  zoom (inOrOut) {
+    const zoomLevel = this.state.projection.scale() / this.state.initialScale
+    const scale = inOrOut === 'in' ? this.getScale(zoomLevel * 2) : this.getScale(zoomLevel / 2)
+    const x = this.state.viewCenter[0] - this.state.transform.x
+    const y = this.state.viewCenter[1] - this.state.transform.y
+    const latLon = this.state.projection.invert([x, y])
+    // console.log(latLon)
+    // return
+    this.zoomTo(latLon, scale)
+  }
+
   getCoordinatesFromClickEvent (e) {
     const { top, left } = e.currentTarget.getBoundingClientRect()
     const x = e.clientX - left
@@ -173,21 +190,23 @@ export default class ZoomMap extends React.PureComponent {
     }
 
     return (
-      <div
-        style={style}
-        className='ZoomMap'
-        onClick={this.onClick.bind(this)}
-        onMouseUp={this.onMouseUp.bind(this)}
-        onMouseMove={this.onMouseMove.bind(this)}
-        onMouseDown={this.onMouseDown.bind(this)}
-        onDoubleClick={this.onDoubleClickMap.bind(this)}
-        ref={(el) => { this.container = el }} >
-        {this.state.projection ? (
-          <PureComponent
-            projection={this.state.projection}
-            dimensions={this.state.dimensions}
-            {...this.props}>{this.props.children}</PureComponent>
-        ) : null}
+      <div className='ZoomMap-container'>
+        <div
+          style={style}
+          className='ZoomMap'
+          onClick={this.onClick.bind(this)}
+          // onMouseMove={this.onMouseMove.bind(this)}
+          onMouseDown={this.onMouseDown.bind(this)}
+          onDoubleClick={this.onDoubleClickMap.bind(this)}
+          ref={(el) => { this.container = el }} >
+          {this.state.projection ? (
+            <PureComponent
+              projection={this.state.projection}
+              dimensions={this.state.dimensions}
+              {...this.props}>{this.props.children}</PureComponent>
+          ) : null}
+        </div>
+        <Controls zoomIn={this.zoom.bind(this, 'in')} zoomOut={this.zoom.bind(this, 'out')} />
       </div>
     )
   }
@@ -201,6 +220,17 @@ ZoomMap.propTypes = {
   transitionEasing: React.PropTypes.func.isRequired,
   minZoom: React.PropTypes.number.isRequired,
   maxZoom: React.PropTypes.number.isRequired
+}
+
+class Controls extends React.PureComponent {
+  render () {
+    return (
+      <div className='Controls'>
+        <button onClick={this.props.zoomIn.bind(this)}>+</button>
+        <button onClick={this.props.zoomOut.bind(this)}>–</button>
+      </div>
+    )
+  }
 }
 
 class PureComponent extends React.PureComponent {

@@ -150,6 +150,7 @@ function ToolTip ({ district, mouse, demographic }) {
 
   const demographics = {
     ethnicity: [
+      // TODO: pull these color defs out
       { label: 'Hispanic', prop: 'ethnicity:hispanic', color: [115, 174, 128] },
       { label: 'Non-Hispanic', prop: 'ethnicity:non-hispanic', color: [108, 131, 181] }
     ],
