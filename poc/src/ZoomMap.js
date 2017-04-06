@@ -1,10 +1,8 @@
 /* global requestAnimationFrame cancelAnimationFrame */
 
-// make this just a container that handles translations etc
-
 import React from 'react'
 import * as d3 from 'd3'
-import { lerp } from 'interpolation'
+import { squaredDistance, add, subtract, length, normalize, scale } from 'gl-vec2'
 import './ZoomMap.css'
 
 export default class ZoomMap extends React.PureComponent {
@@ -84,10 +82,7 @@ export default class ZoomMap extends React.PureComponent {
   zoomTo ([lon, lat], scale) {
     this.container.style['pointer-events'] = 'none'
 
-    // TODO: Use spring forces to animate?
     cancelAnimationFrame(this.rafToken)
-
-    const start = Date.now()
 
     const pt = this.state.projection([lon, lat])
 
@@ -98,20 +93,45 @@ export default class ZoomMap extends React.PureComponent {
     const startX = this.state.transform.x
     const startY = this.state.transform.y
 
-    const renderFrame = () => {
-      const elapsed = Math.min(1, (Date.now() - start) / this.props.transitionDuration)
-      const t = this.props.transitionEasing(elapsed)
+    this.animatingTranslationPosition = this.animatingTranslationPosition || [startX, startY]
+    this.animatingTranslationDestination = [x, y]
+    this.animatingScalePosition = this.animatingScalePosition || [1, 0] // fix this to not use a vec2
+    this.animatingScaleDestination = [k, 0] // fix this to not use a vec2
 
-      const curX = lerp(startX, x, t)
-      const curY = lerp(startY, y, t)
-      const curK = lerp(1, k, t)
+    const renderFrame = () => {
+      this.animatingTranslationVelocity = this.animatingTranslationVelocity || [0, 0]
+      this.animatingScaleVelocity = this.animatingScaleVelocity || [0, 0]
+
+      const translationAcceleration = getSpringForceVec2(
+        this.animatingTranslationPosition, this.animatingTranslationVelocity, this.animatingTranslationDestination,
+        this.props.transitionSpringForces
+      )
+      const scaleAcceleration = getSpringForceVec2(
+        this.animatingScalePosition, this.animatingScaleVelocity, this.animatingScaleDestination,
+        this.props.transitionSpringForces
+      )
+
+      add(this.animatingTranslationVelocity, this.animatingTranslationVelocity, translationAcceleration)
+      add(this.animatingTranslationPosition, this.animatingTranslationPosition, this.animatingTranslationVelocity)
+
+      add(this.animatingScaleVelocity, this.animatingScaleVelocity, scaleAcceleration)
+      add(this.animatingScalePosition, this.animatingScalePosition, this.animatingScaleVelocity)
+
+      const [curX, curY] = this.animatingTranslationPosition
+      const [curK] = this.animatingScalePosition
 
       this.container.style['transform-origin'] = `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`
       this.container.style['transform'] = `scale(${curK}, ${curK}) translate(${curX}px, ${curY}px)` // css transforms are applied right-to-left
-
-      if (elapsed < 1) {
+      const translationDistance = squaredDistance(this.animatingTranslationPosition, this.animatingTranslationDestination)
+      if (translationDistance > 2) {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
+        this.animatingTranslationPosition = null
+        this.animatingTranslationVelocity = null
+        this.animatingTranslationDestination = null
+        this.animatingScalePosition = null
+        this.animatingScaleVelocity = null
+        this.animatingScaleDestination = null
         this.setState((prevState) => {
           this.container.style['pointer-events'] = 'auto'
           const { projection, transform, dimensions } = this.getCanvasProperties([lon, lat], scale / prevState.initialScale, prevState.initialScale, prevState.projection, prevState.viewCenter)
@@ -169,8 +189,6 @@ export default class ZoomMap extends React.PureComponent {
     const x = this.state.viewCenter[0] - this.state.transform.x
     const y = this.state.viewCenter[1] - this.state.transform.y
     const latLon = this.state.projection.invert([x, y])
-    // console.log(latLon)
-    // return
     this.zoomTo(latLon, scale)
   }
 
@@ -217,10 +235,14 @@ ZoomMap.propTypes = {
   geoJSON: React.PropTypes.object.isRequired, // really only need these to get the center and extent for fitting
   focus: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
   zoomLevel: React.PropTypes.number.isRequired,
-  transitionDuration: React.PropTypes.number.isRequired,
-  transitionEasing: React.PropTypes.func.isRequired,
-  minZoom: React.PropTypes.number.isRequired,
+  transitionSpringForces: React.PropTypes.arrayOf(React.PropTypes.number),
+  minZoom: React.PropTypes.number,
   maxZoom: React.PropTypes.number.isRequired
+}
+
+ZoomMap.defaultProps = {
+  transitionSpringForces: [0.058, 0.4],
+  minZoom: 1
 }
 
 class Controls extends React.PureComponent {
@@ -259,4 +281,17 @@ function cloneFn (fn, context = null) {
     }
   }
   return clonedFn
+}
+
+function getSpringForceVec2 (position, velocity, anchor, springForces) {
+  const [stiffness, dampening] = springForces
+  const dir = subtract([], position, anchor)
+  let spring = [0, 0]
+  const x = length(dir)
+  if (x) {
+    spring = normalize([], dir)
+    spring = scale(spring, spring, x * -stiffness)
+  }
+  const damper = scale([], velocity, -dampening)
+  return add([], damper, spring)
 }

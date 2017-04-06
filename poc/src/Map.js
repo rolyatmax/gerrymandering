@@ -2,7 +2,6 @@ import React from 'react'
 import ZoomMap from './ZoomMap'
 import * as d3 from 'd3'
 import chroma from 'chroma-js'
-import quadInOut from 'eases/quad-in-out'
 import classnames from 'classnames'
 import numeral from 'numeral'
 import './Map.css'
@@ -15,9 +14,6 @@ export default class MapContainer extends React.PureComponent {
         geoJSON={tracts}
         focus={focus}
         zoomLevel={zoomLevel}
-        transitionEasing={quadInOut}
-        transitionDuration={800}
-        minZoom={1}
         maxZoom={8}
         {...this.props}>
         {Map}
