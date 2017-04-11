@@ -106,30 +106,32 @@ class Map extends React.PureComponent {
     }
     const svgPath = d3.geoPath(projection)
     return (
-      <div ref={(el) => { this.container = el }}>
-        <canvas ref={(el) => { this.ctx = el && el.getContext('2d') }} />
-        <svg width={width} height={height} style={svgStyle}>
-          {orderedFeatures.map(feat => {
-            const isHighlighted = highlightedDistricts.includes(feat.properties.id)
-            const className = classnames('district', {
-              hidden: !showDistricts,
-              faded: highlightedDistricts.length && !isHighlighted,
-              highlighted: isHighlighted,
-              hovered: this.state.hoveredDistrictID === feat.properties.id
-            })
-            return (
-              <path
-                d={svgPath(feat)}
-                className={className}
-                key={feat.properties.id}
-                onMouseMove={(e) => this.mouseMove(e)}
-                onMouseEnter={() => this.setHoveredDistrict(feat.properties.id)}
-                onMouseLeave={() => this.setHoveredDistrict(null)}
-              />
-            )
-          })}
-        </svg>
-        {/* <ToolTip demographic={demographic} district={districts.features[0]} mouse={[900, 500]} /> */}
+      <div>
+        <div ref={(el) => { this.container = el }}>
+          <canvas ref={(el) => { this.ctx = el && el.getContext('2d') }} />
+          <svg width={width} height={height} style={svgStyle}>
+            {orderedFeatures.map(feat => {
+              const isHighlighted = highlightedDistricts.includes(feat.properties.id)
+              const className = classnames('district', {
+                hidden: !showDistricts,
+                faded: highlightedDistricts.length && !isHighlighted,
+                highlighted: isHighlighted,
+                hovered: this.state.hoveredDistrictID === feat.properties.id
+              })
+              return (
+                <path
+                  d={svgPath(feat)}
+                  className={className}
+                  key={feat.properties.id}
+                  onMouseMove={(e) => this.mouseMove(e)}
+                  onMouseEnter={() => this.setHoveredDistrict(feat.properties.id)}
+                  onMouseLeave={() => this.setHoveredDistrict(null)}
+                />
+              )
+            })}
+          </svg>
+          {/* <ToolTip demographic={demographic} district={districts.features[0]} mouse={[900, 500]} /> */}
+        </div>
         {this.state.hoveredDistrictID ? (
           <ToolTip demographic={demographic} district={hoveredDistrict} mouse={this.state.mouse} />
         ) : null}

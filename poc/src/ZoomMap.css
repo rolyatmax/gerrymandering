@@ -16,6 +16,7 @@
 
 .Controls {
   position: absolute;
+  user-select: none;
   top: 100px;
   right: 50px;
   padding: 0;

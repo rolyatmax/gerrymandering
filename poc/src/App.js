@@ -9,7 +9,7 @@ import '../node_modules/font-awesome/css/font-awesome.min.css'
 
 const CENTRAL_TX_COORDS = [-99.1117, 31.7675]
 const DALLAS_COORDS = [-96.9707, 32.6862]
-const SAN_ANTONIO_COORDS = [-97.9002, 29.8582]
+const SAN_ANTONIO_COORDS = [-98.1577, 29.8747]
 const HOUSTON_COORDS = [-95.3765, 29.7556]
 
 const sections = [

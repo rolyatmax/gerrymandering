@@ -146,12 +146,16 @@ export default class ZoomMap extends React.PureComponent {
     this.rafToken = requestAnimationFrame(renderFrame)
   }
 
-  // currently broken
   onDoubleClickMap (e) {
+    if (window.getSelection) {
+      window.getSelection().empty() // double clicking causes text to be highlighted in many browsers
+    }
+    e.preventDefault()
     const latLon = this.getCoordinatesFromClickEvent(e)
     const zoomLevel = this.state.projection.scale() / this.state.initialScale
     const scale = this.getScale(zoomLevel * 2)
     this.zoomTo(latLon, scale)
+    return false
   }
 
   onMouseUp (e) {
