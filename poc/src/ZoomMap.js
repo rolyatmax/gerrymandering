@@ -2,7 +2,6 @@
 
 import React from 'react'
 import * as d3 from 'd3'
-import { squaredDistance, add, subtract, length, normalize, scale } from 'gl-vec2'
 import { createSpring } from 'spring-animator'
 import './ZoomMap.css'
 
@@ -22,7 +21,7 @@ export default class ZoomMap extends React.PureComponent {
   }
 
   componentDidMount () {
-    this.setProjection()
+    this.setProjectionAndCreateSprings()
     window.addEventListener('resize', this.onResize)
     window.addEventListener('mouseup', this.onMouseUp)
     window.addEventListener('mousemove', this.onMouseMove)
@@ -47,10 +46,10 @@ export default class ZoomMap extends React.PureComponent {
   }
 
   onResize () {
-    this.setProjection()
+    this.setProjectionAndCreateSprings()
   }
 
-  setProjection () {
+  setProjectionAndCreateSprings () {
     const { clientWidth, clientHeight } = this.container
     const { geoJSON, focus, zoomLevel } = this.props
     const viewCenter = [clientWidth * 0.75, clientHeight * 0.5]
@@ -61,6 +60,12 @@ export default class ZoomMap extends React.PureComponent {
       .fitExtent([[50, 50], [clientWidth - 50, clientHeight - 50]], geoJSON)
     const initialScale = initialProjection.scale()
     const { projection, transform, dimensions } = this.getCanvasProperties(focus, zoomLevel, initialScale, initialProjection, viewCenter)
+
+    const [stiffness, dampening] = this.props.transitionSpringForces
+    this.xAnimator = createSpring(stiffness, dampening, transform.x)
+    this.yAnimator = createSpring(stiffness, dampening, transform.y)
+    this.kAnimator = createSpring(stiffness, dampening, 1)
+
     this.setState({ projection, viewCenter, initialScale, transform, dimensions })
   }
 
@@ -83,49 +88,57 @@ export default class ZoomMap extends React.PureComponent {
   zoomTo ([lon, lat], scale) {
     this.container.style['pointer-events'] = 'none'
 
+    const isAnimationComplete = (
+      this.xAnimator.isAtDestination(1) &&
+      this.yAnimator.isAtDestination(1) &&
+      this.kAnimator.isAtDestination(0.1)
+    )
+
     cancelAnimationFrame(this.rafToken)
 
     const pt = this.state.projection([lon, lat])
-
     const x = this.state.viewCenter[0] - pt[0]
     const y = this.state.viewCenter[1] - pt[1]
     const k = scale / this.state.projection.scale()
 
-    const xAnimator = createSpring(0.03, 0.28, this.state.transform.x)
-    const yAnimator = createSpring(0.03, 0.28, this.state.transform.y)
-    const kAnimator = createSpring(0.03, 0.28, 1)
+    // TODO: i think that if this thing isn't animating, we'll need to set new start values
+    // because the canvas will have rerendered and oriented - i thiiiiiiink
+    // if (isAnimationComplete) {
+    //   this.
+    // }
 
-    xAnimator.updateValue(x)
-    yAnimator.updateValue(y)
-    kAnimator.updateValue(k)
+    this.xAnimator.updateValue(x)
+    this.yAnimator.updateValue(y)
+    this.kAnimator.updateValue(k)
 
     let framesCount = 0
 
-    const renderFrame = () => {
+    this.rafToken = requestAnimationFrame(renderFrame.bind(this))
+
+    function renderFrame () {
       framesCount += 1
 
-      // clean this up
-      // lets do 30 fps to see if that helps some of the jank
-      if (framesCount % 2 === 0) {
-        this.rafToken = requestAnimationFrame(renderFrame)
-        return
+      // FIXME! Animation isn't quite completing right now - prob need to change these values
+      const isAnimationComplete = (
+        this.xAnimator.isAtDestination(0.4) &&
+        this.yAnimator.isAtDestination(0.4) &&
+        this.kAnimator.isAtDestination(0.01)
+      )
+
+      if (!isAnimationComplete) {
+        this.rafToken = requestAnimationFrame(renderFrame.bind(this))
       }
 
-      const curX = xAnimator.tick()
-      const curY = yAnimator.tick()
-      const curK = kAnimator.tick()
+      if (framesCount % 2 === 0) return
+
+      const curX = this.xAnimator.tick()
+      const curY = this.yAnimator.tick()
+      const curK = this.kAnimator.tick()
 
       this.container.style['transform-origin'] = `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`
       this.container.style['transform'] = `scale(${curK}, ${curK}) translate(${curX}px, ${curY}px)` // css transforms are applied right-to-left
 
-      const isAnimationComplete = (
-        Math.abs(x - curX) < 0.4 &&
-        Math.abs(y - curY) < 0.4 &&
-        Math.abs(k - curK) < 0.01
-      )
-      if (!isAnimationComplete) {
-        this.rafToken = requestAnimationFrame(renderFrame)
-      } else {
+      if (isAnimationComplete) {
         this.setState((prevState) => {
           this.container.style['pointer-events'] = 'auto'
           const { projection, transform, dimensions } = this.getCanvasProperties([lon, lat], scale / prevState.initialScale, prevState.initialScale, prevState.projection, prevState.viewCenter)
@@ -137,7 +150,6 @@ export default class ZoomMap extends React.PureComponent {
         })
       }
     }
-    this.rafToken = requestAnimationFrame(renderFrame)
   }
 
   onDoubleClickMap (e) {
@@ -239,7 +251,7 @@ ZoomMap.propTypes = {
 }
 
 ZoomMap.defaultProps = {
-  transitionSpringForces: [0.1, 0.6],
+  transitionSpringForces: [0.03, 0.28],
   minZoom: 1
 }
 
@@ -279,17 +291,4 @@ function cloneFn (fn, context = null) {
     }
   }
   return clonedFn
-}
-
-function getSpringForceVec2 (position, velocity, anchor, springForces) {
-  const [stiffness, dampening] = springForces
-  const dir = subtract([], position, anchor)
-  let spring = [0, 0]
-  const x = length(dir)
-  if (x) {
-    spring = normalize([], dir)
-    spring = scale(spring, spring, x * -stiffness)
-  }
-  const damper = scale([], velocity, -dampening)
-  return add([], damper, spring)
 }
