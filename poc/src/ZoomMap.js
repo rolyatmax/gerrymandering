@@ -3,6 +3,7 @@
 import React from 'react'
 import * as d3 from 'd3'
 import { squaredDistance, add, subtract, length, normalize, scale } from 'gl-vec2'
+import { createSpring } from 'spring-animator'
 import './ZoomMap.css'
 
 export default class ZoomMap extends React.PureComponent {
@@ -90,48 +91,41 @@ export default class ZoomMap extends React.PureComponent {
     const y = this.state.viewCenter[1] - pt[1]
     const k = scale / this.state.projection.scale()
 
-    const startX = this.state.transform.x
-    const startY = this.state.transform.y
+    const xAnimator = createSpring(0.03, 0.28, this.state.transform.x)
+    const yAnimator = createSpring(0.03, 0.28, this.state.transform.y)
+    const kAnimator = createSpring(0.03, 0.28, 1)
 
-    this.animatingTranslationPosition = this.animatingTranslationPosition || [startX, startY]
-    this.animatingTranslationDestination = [x, y]
-    this.animatingScalePosition = this.animatingScalePosition || [1, 0] // fix this to not use a vec2
-    this.animatingScaleDestination = [k, 0] // fix this to not use a vec2
+    xAnimator.updateValue(x)
+    yAnimator.updateValue(y)
+    kAnimator.updateValue(k)
+
+    let framesCount = 0
 
     const renderFrame = () => {
-      this.animatingTranslationVelocity = this.animatingTranslationVelocity || [0, 0]
-      this.animatingScaleVelocity = this.animatingScaleVelocity || [0, 0]
+      framesCount += 1
 
-      const translationAcceleration = getSpringForceVec2(
-        this.animatingTranslationPosition, this.animatingTranslationVelocity, this.animatingTranslationDestination,
-        this.props.transitionSpringForces
-      )
-      const scaleAcceleration = getSpringForceVec2(
-        this.animatingScalePosition, this.animatingScaleVelocity, this.animatingScaleDestination,
-        this.props.transitionSpringForces
-      )
+      // clean this up
+      // lets do 30 fps to see if that helps some of the jank
+      if (framesCount % 2 === 0) {
+        this.rafToken = requestAnimationFrame(renderFrame)
+        return
+      }
 
-      add(this.animatingTranslationVelocity, this.animatingTranslationVelocity, translationAcceleration)
-      add(this.animatingTranslationPosition, this.animatingTranslationPosition, this.animatingTranslationVelocity)
-
-      add(this.animatingScaleVelocity, this.animatingScaleVelocity, scaleAcceleration)
-      add(this.animatingScalePosition, this.animatingScalePosition, this.animatingScaleVelocity)
-
-      const [curX, curY] = this.animatingTranslationPosition
-      const [curK] = this.animatingScalePosition
+      const curX = xAnimator.tick()
+      const curY = yAnimator.tick()
+      const curK = kAnimator.tick()
 
       this.container.style['transform-origin'] = `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`
       this.container.style['transform'] = `scale(${curK}, ${curK}) translate(${curX}px, ${curY}px)` // css transforms are applied right-to-left
-      const translationDistance = squaredDistance(this.animatingTranslationPosition, this.animatingTranslationDestination)
-      if (translationDistance > 2) {
+
+      const isAnimationComplete = (
+        Math.abs(x - curX) < 0.4 &&
+        Math.abs(y - curY) < 0.4 &&
+        Math.abs(k - curK) < 0.01
+      )
+      if (!isAnimationComplete) {
         this.rafToken = requestAnimationFrame(renderFrame)
       } else {
-        this.animatingTranslationPosition = null
-        this.animatingTranslationVelocity = null
-        this.animatingTranslationDestination = null
-        this.animatingScalePosition = null
-        this.animatingScaleVelocity = null
-        this.animatingScaleDestination = null
         this.setState((prevState) => {
           this.container.style['pointer-events'] = 'auto'
           const { projection, transform, dimensions } = this.getCanvasProperties([lon, lat], scale / prevState.initialScale, prevState.initialScale, prevState.projection, prevState.viewCenter)
@@ -245,7 +239,7 @@ ZoomMap.propTypes = {
 }
 
 ZoomMap.defaultProps = {
-  transitionSpringForces: [0.058, 0.4],
+  transitionSpringForces: [0.1, 0.6],
   minZoom: 1
 }
 
