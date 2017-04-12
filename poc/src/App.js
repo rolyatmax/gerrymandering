@@ -8,6 +8,7 @@ import './App.css'
 import '../node_modules/font-awesome/css/font-awesome.min.css'
 
 const CENTRAL_TX_COORDS = [-99.1117, 31.7675]
+const EAST_TX_COORDS = [-97.1452, 31.8932]
 const DALLAS_COORDS = [-96.9707, 32.6862]
 const SAN_ANTONIO_COORDS = [-98.1577, 29.8747]
 const HOUSTON_COORDS = [-95.3765, 29.7556]
@@ -15,37 +16,50 @@ const HOUSTON_COORDS = [-95.3765, 29.7556]
 const sections = [
   {
     focus: CENTRAL_TX_COORDS,
-    zoomLevel: 1.25,
+    zoomLevel: 1.35,
     demographic: 'ethnicity',
     showDistricts: false,
+    districtYear: 2015,
     highlightedDistricts: []
   },
   {
-    focus: CENTRAL_TX_COORDS,
+    focus: EAST_TX_COORDS,
     zoomLevel: 2,
     demographic: 'ethnicity',
     showDistricts: true,
+    districtYear: 2015,
     highlightedDistricts: []
   },
   {
     focus: HOUSTON_COORDS,
     zoomLevel: 5,
-    demographic: 'race',
+    demographic: 'ethnicity',
     showDistricts: false,
+    districtYear: 2015,
     highlightedDistricts: []
   },
   {
     focus: HOUSTON_COORDS,
     zoomLevel: 5,
-    demographic: 'race',
+    demographic: 'ethnicity',
     showDistricts: true,
-    highlightedDistricts: ['TX-9', 'TX-18']
+    districtYear: 2010,
+    highlightedDistricts: ['TX-29']
+  },
+  {
+    focus: HOUSTON_COORDS,
+    zoomLevel: 5,
+    demographic: 'ethnicity',
+    showDistricts: true,
+    districtYear: 2015,
+    highlightedDistricts: ['TX-29']
   },
   {
     focus: SAN_ANTONIO_COORDS,
     zoomLevel: 4.5,
     demographic: 'ethnicity',
     showDistricts: false,
+    districtYear: 2015,
     highlightedDistricts: []
   },
   {
@@ -53,6 +67,7 @@ const sections = [
     zoomLevel: 4.5,
     demographic: 'ethnicity',
     showDistricts: true,
+    districtYear: 2015,
     highlightedDistricts: ['TX-20', 'TX-35']
   },
   {
@@ -60,6 +75,7 @@ const sections = [
     zoomLevel: 5.5,
     demographic: 'ethnicity',
     showDistricts: false,
+    districtYear: 2015,
     highlightedDistricts: []
   },
   {
@@ -67,6 +83,7 @@ const sections = [
     zoomLevel: 5.5,
     demographic: 'ethnicity',
     showDistricts: true,
+    districtYear: 2015,
     highlightedDistricts: ['TX-33']
   }
 ]
@@ -98,12 +115,21 @@ export default class App extends Component {
     const tractsPromise = fetch('/data/tx-census-tracts-2010.json')
       .then(res => res.json())
 
-    const districtsPromise = fetch('/data/tx-congressional-districts-2015-simplified.json')
+    const districts2010Promise = fetch('/data/tx-congressional-districts-2010-simplified.json')
       .then(res => res.json())
 
-    Promise.all([tractsPromise, districtsPromise])
+    const districts2015Promise = fetch('/data/tx-congressional-districts-2015-simplified.json')
+      .then(res => res.json())
+
+    Promise.all([tractsPromise, districts2010Promise, districts2015Promise])
       .catch((err) => { throw new Error(err) })
-      .then(([tracts, districts]) => this.setState(() => ({ tracts, districts })))
+      .then(([tracts, districts2010, districts2015]) => this.setState(() => ({
+        tracts,
+        districts: {
+          2010: districts2010,
+          2015: districts2015
+        }
+      })))
   }
 
   render () {
@@ -115,7 +141,7 @@ export default class App extends Component {
           {tracts ? (
             <Map
               tracts={tracts}
-              districts={districts}
+              districts={districts[sections[currentSection].districtYear]}
               showDistricts={sections[currentSection].showDistricts}
               demographic={sections[currentSection].demographic}
               focus={sections[currentSection].focus}
@@ -144,22 +170,26 @@ export default class App extends Component {
                 <p>{texts[0]}</p>
               </section>
               <section data-section={3}>
-                <h3>TX-9 & TX-18</h3>
+                <h3>TX-29 in 2010</h3>
                 <p>{texts[2]}</p>
               </section>
               <section data-section={4}>
+                <h3>TX-29 in 2015</h3>
+                <p>{texts[2]}</p>
+              </section>
+              <section data-section={5}>
                 <h2>I-35 Between Austin & San Antonio</h2>
                 <p>{texts[1]}</p>
               </section>
-              <section data-section={5}>
+              <section data-section={6}>
                 <h3>TX-20 & TX-35</h3>
                 <p>{texts[3]}</p>
               </section>
-              <section data-section={6}>
+              <section data-section={7}>
                 <h2>Dallas</h2>
                 <p>{texts[2]}</p>
               </section>
-              <section data-section={7}>
+              <section data-section={8}>
                 <h3>TX-33</h3>
                 <p>{texts[0]}</p>
               </section>

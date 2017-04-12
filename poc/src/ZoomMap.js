@@ -267,7 +267,8 @@ class PureComponent extends React.PureComponent {
     return (
       this.props.projection !== props.projection ||
       this.props.dimensions !== props.dimensions ||
-      this.props.showDistricts !== props.showDistricts // BREAKS ENCAPSULATION FIXME
+      this.props.showDistricts !== props.showDistricts || // BREAKS ENCAPSULATION FIXME
+      this.props.districts !== props.districts // BREAKS ENCAPSULATION FIXME
     )
   }
 
