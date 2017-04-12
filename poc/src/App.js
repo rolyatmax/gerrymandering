@@ -21,15 +21,22 @@ const sections = [
     highlightedDistricts: []
   },
   {
+    focus: CENTRAL_TX_COORDS,
+    zoomLevel: 2,
+    demographic: 'ethnicity',
+    showDistricts: true,
+    highlightedDistricts: []
+  },
+  {
     focus: HOUSTON_COORDS,
-    zoomLevel: 5.5,
+    zoomLevel: 5,
     demographic: 'race',
     showDistricts: false,
     highlightedDistricts: []
   },
   {
     focus: HOUSTON_COORDS,
-    zoomLevel: 5.5,
+    zoomLevel: 5,
     demographic: 'race',
     showDistricts: true,
     highlightedDistricts: ['TX-9', 'TX-18']
@@ -129,26 +136,30 @@ export default class App extends Component {
             </div>
             <div className='below-fold'>
               <section data-section={1}>
+                <h2>Districts</h2>
+                <p>{texts[3]}</p>
+              </section>
+              <section data-section={2}>
                 <h2>Houston</h2>
                 <p>{texts[0]}</p>
               </section>
-              <section data-section={2}>
+              <section data-section={3}>
                 <h3>TX-9 & TX-18</h3>
                 <p>{texts[2]}</p>
               </section>
-              <section data-section={3}>
+              <section data-section={4}>
                 <h2>I-35 Between Austin & San Antonio</h2>
                 <p>{texts[1]}</p>
               </section>
-              <section data-section={4}>
+              <section data-section={5}>
                 <h3>TX-20 & TX-35</h3>
                 <p>{texts[3]}</p>
               </section>
-              <section data-section={5}>
+              <section data-section={6}>
                 <h2>Dallas</h2>
                 <p>{texts[2]}</p>
               </section>
-              <section data-section={6}>
+              <section data-section={7}>
                 <h3>TX-33</h3>
                 <p>{texts[0]}</p>
               </section>

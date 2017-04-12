@@ -67,6 +67,7 @@ class Map extends React.PureComponent {
   componentDidUpdate (prevProps) {
     this.setOffsets()
     if (this.props.projection && this.props.projection !== prevProps.projection) {
+      this.setHoveredDistrict(null)
       this.drawMap()
     }
   }
