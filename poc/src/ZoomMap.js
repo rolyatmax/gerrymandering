@@ -1,6 +1,7 @@
 /* global requestAnimationFrame cancelAnimationFrame */
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as d3 from 'd3'
 import { createSpring } from 'spring-animator'
 import './ZoomMap.css'
@@ -85,14 +86,16 @@ export default class ZoomMap extends React.PureComponent {
     }
   }
 
+  isAnimating () {
+    return !(
+      this.xAnimator.isAtDestination(0.5) &&
+      this.yAnimator.isAtDestination(0.5) &&
+      this.kAnimator.isAtDestination(0.01)
+    )
+  }
+
   zoomTo ([lon, lat], scale) {
     this.container.style['pointer-events'] = 'none'
-
-    const isAnimationComplete = (
-      this.xAnimator.isAtDestination(1) &&
-      this.yAnimator.isAtDestination(1) &&
-      this.kAnimator.isAtDestination(0.1)
-    )
 
     cancelAnimationFrame(this.rafToken)
 
@@ -103,9 +106,11 @@ export default class ZoomMap extends React.PureComponent {
 
     // TODO: i think that if this thing isn't animating, we'll need to set new start values
     // because the canvas will have rerendered and oriented - i thiiiiiiink
-    // if (isAnimationComplete) {
-    //   this.
-    // }
+    if (!this.isAnimating()) {
+      this.xAnimator.updateValue(this.state.transform.x, false)
+      this.yAnimator.updateValue(this.state.transform.y, false)
+      this.kAnimator.updateValue(this.state.transform.k, false)
+    }
 
     this.xAnimator.updateValue(x)
     this.yAnimator.updateValue(y)
@@ -118,27 +123,9 @@ export default class ZoomMap extends React.PureComponent {
     function renderFrame () {
       framesCount += 1
 
-      // FIXME! Animation isn't quite completing right now - prob need to change these values
-      const isAnimationComplete = (
-        this.xAnimator.isAtDestination(0.4) &&
-        this.yAnimator.isAtDestination(0.4) &&
-        this.kAnimator.isAtDestination(0.01)
-      )
-
-      if (!isAnimationComplete) {
+      if (this.isAnimating()) {
         this.rafToken = requestAnimationFrame(renderFrame.bind(this))
-      }
-
-      if (framesCount % 2 === 0) return
-
-      const curX = this.xAnimator.tick()
-      const curY = this.yAnimator.tick()
-      const curK = this.kAnimator.tick()
-
-      this.container.style['transform-origin'] = `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`
-      this.container.style['transform'] = `scale(${curK}, ${curK}) translate(${curX}px, ${curY}px)` // css transforms are applied right-to-left
-
-      if (isAnimationComplete) {
+      } else {
         this.setState((prevState) => {
           this.container.style['pointer-events'] = 'auto'
           const { projection, transform, dimensions } = this.getCanvasProperties([lon, lat], scale / prevState.initialScale, prevState.initialScale, prevState.projection, prevState.viewCenter)
@@ -149,6 +136,15 @@ export default class ZoomMap extends React.PureComponent {
           }
         })
       }
+
+      if (framesCount % 2 === 0) return
+
+      const curX = this.xAnimator.tick(2)
+      const curY = this.yAnimator.tick(2)
+      const curK = this.kAnimator.tick(2)
+
+      this.container.style['transform-origin'] = `${this.state.viewCenter[0]}px ${this.state.viewCenter[1]}px`
+      this.container.style['transform'] = `scale(${curK}, ${curK}) translate(${curX}px, ${curY}px)` // css transforms are applied right-to-left
     }
   }
 
@@ -242,16 +238,16 @@ export default class ZoomMap extends React.PureComponent {
 }
 
 ZoomMap.propTypes = {
-  geoJSON: React.PropTypes.object.isRequired, // really only need these to get the center and extent for fitting
-  focus: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-  zoomLevel: React.PropTypes.number.isRequired,
-  transitionSpringForces: React.PropTypes.arrayOf(React.PropTypes.number),
-  minZoom: React.PropTypes.number,
-  maxZoom: React.PropTypes.number.isRequired
+  geoJSON: PropTypes.object.isRequired, // really only need these to get the center and extent for fitting
+  focus: PropTypes.arrayOf(PropTypes.number).isRequired,
+  zoomLevel: PropTypes.number.isRequired,
+  transitionSpringForces: PropTypes.arrayOf(PropTypes.number),
+  minZoom: PropTypes.number,
+  maxZoom: PropTypes.number.isRequired
 }
 
 ZoomMap.defaultProps = {
-  transitionSpringForces: [0.03, 0.28],
+  transitionSpringForces: [0.02, 0.3],
   minZoom: 1
 }
 

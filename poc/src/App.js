@@ -82,7 +82,6 @@ export default class App extends Component {
         element: document.querySelector(`[data-section="${i}"]`),
         offset: '60%',
         handler: (direction) => {
-          console.log('section', i, direction)
           const section = direction === 'down' ? i : i - 1
           this.setState({ currentSection: section })
         }

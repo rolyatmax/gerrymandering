@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ZoomMap from './ZoomMap'
 import * as d3 from 'd3'
 import chroma from 'chroma-js'
@@ -23,13 +24,13 @@ export default class MapContainer extends React.PureComponent {
 }
 
 MapContainer.propTypes = {
-  demographic: React.PropTypes.string.isRequired,
-  tracts: React.PropTypes.object.isRequired,
-  districts: React.PropTypes.object.isRequired,
-  focus: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-  zoomLevel: React.PropTypes.number.isRequired,
-  showDistricts: React.PropTypes.bool.isRequired,
-  highlightedDistricts: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+  demographic: PropTypes.string.isRequired,
+  tracts: PropTypes.object.isRequired,
+  districts: PropTypes.object.isRequired,
+  focus: PropTypes.arrayOf(PropTypes.number).isRequired,
+  zoomLevel: PropTypes.number.isRequired,
+  showDistricts: PropTypes.bool.isRequired,
+  highlightedDistricts: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 class Map extends React.PureComponent {
