@@ -10,8 +10,9 @@ import '../node_modules/font-awesome/css/font-awesome.min.css'
 const CENTRAL_TX_COORDS = [-99.1117, 31.7675]
 const EAST_TX_COORDS = [-97.1452, 31.8932]
 const DALLAS_COORDS = [-96.9707, 32.6862]
-const SAN_ANTONIO_COORDS = [-98.1577, 29.8747]
-const HOUSTON_COORDS = [-95.3765, 29.7556]
+const TX_35_COORDS = [-98.1577, 29.8747]
+const TX_27_COORDS = [-97.2133, 29.5320]
+const TX_23_COORDS = [-100.6815, 30.8048]
 
 const sections = [
   {
@@ -20,7 +21,8 @@ const sections = [
     demographic: 'ethnicity',
     showDistricts: false,
     districtYear: 2015,
-    highlightedDistricts: []
+    highlightedDistricts: [],
+    showTooltips: false
   },
   {
     focus: EAST_TX_COORDS,
@@ -28,63 +30,71 @@ const sections = [
     demographic: 'ethnicity',
     showDistricts: true,
     districtYear: 2015,
-    highlightedDistricts: []
+    highlightedDistricts: [],
+    showTooltips: true
   },
   {
-    focus: HOUSTON_COORDS,
-    zoomLevel: 5,
+    focus: TX_35_COORDS,
+    zoomLevel: 4,
     demographic: 'ethnicity',
     showDistricts: false,
     districtYear: 2015,
-    highlightedDistricts: []
+    highlightedDistricts: [],
+    showTooltips: true
   },
   {
-    focus: HOUSTON_COORDS,
-    zoomLevel: 5,
+    focus: TX_35_COORDS,
+    zoomLevel: 4,
     demographic: 'ethnicity',
     showDistricts: true,
     districtYear: 2010,
-    highlightedDistricts: ['TX-29']
+    highlightedDistricts: ['TX-20', 'TX-28', 'TX-25'],
+    showTooltips: true
   },
   {
-    focus: HOUSTON_COORDS,
-    zoomLevel: 5,
+    focus: TX_35_COORDS,
+    zoomLevel: 4,
     demographic: 'ethnicity',
     showDistricts: true,
     districtYear: 2015,
-    highlightedDistricts: ['TX-29']
-  },
-  {
-    focus: SAN_ANTONIO_COORDS,
-    zoomLevel: 4.5,
-    demographic: 'ethnicity',
-    showDistricts: false,
-    districtYear: 2015,
-    highlightedDistricts: []
-  },
-  {
-    focus: SAN_ANTONIO_COORDS,
-    zoomLevel: 4.5,
-    demographic: 'ethnicity',
-    showDistricts: true,
-    districtYear: 2015,
-    highlightedDistricts: ['TX-20', 'TX-35']
+    highlightedDistricts: ['TX-20', 'TX-35', 'TX-27'],
+    showTooltips: true
   },
   {
     focus: DALLAS_COORDS,
     zoomLevel: 5.5,
-    demographic: 'ethnicity',
+    demographic: 'race',
     showDistricts: false,
     districtYear: 2015,
-    highlightedDistricts: []
+    highlightedDistricts: [],
+    showTooltips: true
   },
   {
     focus: DALLAS_COORDS,
     zoomLevel: 5.5,
-    demographic: 'ethnicity',
+    demographic: 'race',
+    showDistricts: true,
+    districtYear: 2010,
+    highlightedDistricts: ['TX-26'],
+    showTooltips: true
+  },
+  {
+    focus: DALLAS_COORDS,
+    zoomLevel: 5.5,
+    demographic: 'race',
     showDistricts: true,
     districtYear: 2015,
-    highlightedDistricts: ['TX-33']
+    highlightedDistricts: ['TX-26'],
+    showTooltips: true
+  },
+  {
+    focus: EAST_TX_COORDS,
+    zoomLevel: 1.25,
+    demographic: 'ethnicity',
+    showDistricts: true,
+    districtYear: 2010,
+    highlightedDistricts: [],
+    showTooltips: true
   }
 ]
 
@@ -146,7 +156,8 @@ export default class App extends Component {
               demographic={sections[currentSection].demographic}
               focus={sections[currentSection].focus}
               zoomLevel={sections[currentSection].zoomLevel}
-              highlightedDistricts={sections[currentSection].highlightedDistricts} />
+              highlightedDistricts={sections[currentSection].highlightedDistricts}
+              showTooltips={sections[currentSection].showTooltips} />
           ) : null}
           <div className={`content ${currentSection > 0 ? 'with-background' : ''}`}>
             <div className='above-fold'>
@@ -166,32 +177,31 @@ export default class App extends Component {
                 <p>{texts[3]}</p>
               </section>
               <section data-section={2}>
-                <h2>Houston</h2>
+                <h2>San Antonio</h2>
                 <p>{texts[0]}</p>
               </section>
               <section data-section={3}>
-                <h3>TX-29 in 2010</h3>
+                <h3>TX-27 in 2010</h3>
                 <p>{texts[2]}</p>
               </section>
               <section data-section={4}>
-                <h3>TX-29 in 2015</h3>
+                <h3>TX-27 in 2015</h3>
                 <p>{texts[2]}</p>
               </section>
               <section data-section={5}>
-                <h2>I-35 Between Austin & San Antonio</h2>
-                <p>{texts[1]}</p>
-              </section>
-              <section data-section={6}>
-                <h3>TX-20 & TX-35</h3>
-                <p>{texts[3]}</p>
-              </section>
-              <section data-section={7}>
                 <h2>Dallas</h2>
                 <p>{texts[2]}</p>
               </section>
-              <section data-section={8}>
-                <h3>TX-33</h3>
+              <section data-section={6}>
+                <h3>TX-26 in 2010</h3>
                 <p>{texts[0]}</p>
+              </section>
+              <section data-section={7}>
+                <h3>TX-26 in 2015</h3>
+                <p>{texts[3]}</p>
+              </section>
+              <section data-section={8}>
+                <h3>Sandbox</h3>
               </section>
             </div>
           </div>

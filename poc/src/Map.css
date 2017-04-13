@@ -25,12 +25,12 @@ path.district.faded {
 }
 
 path.district.hovered {
-  stroke-width: 1;
+  stroke-width: 2;
   stroke: rgba(80, 80, 80, 0.9);
 }
 
 .tooltip {
-  position: absolute;
+  position: fixed;
   user-select: none;
   pointer-events: none;
   width: 200px;

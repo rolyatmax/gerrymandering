@@ -200,6 +200,7 @@ p {
   position: absolute;
   left: 0;
   width: 100vw;
+  max-width: 100%;
   background: white;
   padding-top: 40px;
 }

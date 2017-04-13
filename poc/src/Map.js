@@ -8,17 +8,45 @@ import numeral from 'numeral'
 import './Map.css'
 
 export default class MapContainer extends React.PureComponent {
+  constructor (props) {
+    super(props)
+    this.state = {
+      hoveredDistrictID: null,
+      mouse: [0, 0]
+    }
+  }
+
+  setHoveredDistrict (districtID) {
+    this.setState({
+      hoveredDistrictID: this.props.showTooltips ? districtID : null
+    })
+  }
+
+  mouseMove (e) {
+    const mouse = [e.clientX, e.clientY]
+    this.setState({ mouse })
+  }
+
   render () {
-    const { tracts, focus, zoomLevel } = this.props
+    const { tracts, focus, zoomLevel, demographic, districts } = this.props
+    const hoveredDistrict = districts.features.find(feat => feat.properties.id === this.state.hoveredDistrictID)
     return (
-      <ZoomMap
-        geoJSON={tracts}
-        focus={focus}
-        zoomLevel={zoomLevel}
-        maxZoom={8}
-        {...this.props}>
-        {Map}
-      </ZoomMap>
+      <div onMouseMove={(e) => this.mouseMove(e)}>
+        <ZoomMap
+          geoJSON={tracts}
+          focus={focus}
+          zoomLevel={zoomLevel}
+          maxZoom={8}
+          minZoom={1.1}
+          hoveredDistrict={hoveredDistrict}
+          setHoveredDistrict={this.setHoveredDistrict.bind(this)}
+          {...this.props}>
+          {Map}
+        </ZoomMap>
+        {hoveredDistrict ? (
+          <ToolTip demographic={demographic} district={hoveredDistrict} mouse={this.state.mouse} />
+        ) : null}
+      </div>
     )
   }
 }
@@ -30,44 +58,17 @@ MapContainer.propTypes = {
   focus: PropTypes.arrayOf(PropTypes.number).isRequired,
   zoomLevel: PropTypes.number.isRequired,
   showDistricts: PropTypes.bool.isRequired,
-  highlightedDistricts: PropTypes.arrayOf(PropTypes.string).isRequired
+  highlightedDistricts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  showTooltips: PropTypes.bool.isRequired
 }
 
 class Map extends React.PureComponent {
-  constructor (props) {
-    super(props)
-    this.state = {
-      hoveredDistrictID: null,
-      mouse: [0, 0]
-    }
-  }
-
-  setHoveredDistrict (districtID) {
-    this.setState({
-      hoveredDistrictID: districtID
-    })
-  }
-
-  mouseMove (e) {
-    const mouse = [e.clientX - this.left, e.clientY - this.top]
-    this.setState({ mouse })
-  }
-
-  setOffsets () {
-    const { top, left } = this.container.getBoundingClientRect()
-    this.top = top
-    this.left = left
-  }
-
   componentDidMount () {
     this.drawMap()
-    this.setOffsets()
   }
 
   componentDidUpdate (prevProps) {
-    this.setOffsets()
     if (this.props.projection && this.props.projection !== prevProps.projection || this.props.districts !== prevProps.districts) {
-      this.setHoveredDistrict(null)
       this.drawMap()
     }
   }
@@ -88,19 +89,18 @@ class Map extends React.PureComponent {
   }
 
   render () {
-    const { projection, dimensions, districts, showDistricts, highlightedDistricts, demographic } = this.props
+    const { projection, dimensions, districts, showDistricts, highlightedDistricts } = this.props
     const [width, height] = dimensions
 
     let orderedFeatures = districts.features.slice()
-    if (this.state.hoveredDistrictID) {
-      orderedFeatures = findByIDAndMoveToEnd(orderedFeatures, this.state.hoveredDistrictID)
-    }
 
     highlightedDistricts.forEach(id => {
-      orderedFeatures = findByIDAndMoveToEnd(orderedFeatures, id)
+      orderedFeatures = findAndMoveToEnd(orderedFeatures, feat => feat.properties.id === id)
     })
 
-    const hoveredDistrict = districts.features.find(feat => feat.properties.id === this.state.hoveredDistrictID)
+    if (this.props.hoveredDistrict) {
+      orderedFeatures = findAndMoveToEnd(orderedFeatures, feat => feat === this.props.hoveredDistrict)
+    }
 
     const svgStyle = {
       width: `${width}px`,
@@ -118,25 +118,20 @@ class Map extends React.PureComponent {
                 hidden: !showDistricts,
                 faded: highlightedDistricts.length && !isHighlighted,
                 highlighted: isHighlighted,
-                hovered: this.state.hoveredDistrictID === feat.properties.id
+                hovered: this.props.hoveredDistrict === feat
               })
               return (
                 <path
                   d={svgPath(feat)}
                   className={className}
                   key={feat.properties.id}
-                  onMouseMove={(e) => this.mouseMove(e)}
-                  onMouseEnter={() => this.setHoveredDistrict(feat.properties.id)}
-                  onMouseLeave={() => this.setHoveredDistrict(null)}
+                  onMouseEnter={() => this.props.setHoveredDistrict(feat.properties.id)}
+                  onMouseLeave={() => this.props.setHoveredDistrict(null)}
                 />
               )
             })}
           </svg>
-          {/* <ToolTip demographic={demographic} district={districts.features[0]} mouse={[900, 500]} /> */}
         </div>
-        {this.state.hoveredDistrictID ? (
-          <ToolTip demographic={demographic} district={hoveredDistrict} mouse={this.state.mouse} />
-        ) : null}
       </div>
     )
   }
@@ -144,8 +139,11 @@ class Map extends React.PureComponent {
 
 function ToolTip ({ district, mouse, demographic }) {
   const padding = 30
+  const tooltipHeight = 100
+  const maxTooltipTop = window.innerHeight - tooltipHeight - padding
+  const top = Math.min(mouse[1] + padding, maxTooltipTop)
   const style = {
-    top: mouse[1] + padding,
+    top: top,
     left: mouse[0] - padding - 200 // the width
   }
 
@@ -211,9 +209,9 @@ function getColor (properties, demographic) {
   return `rgba(${color.join(',')})`
 }
 
-function findByIDAndMoveToEnd (list, id) {
+function findAndMoveToEnd (list, finder) {
   list = list.slice()
-  const idx = list.findIndex(feat => feat.properties.id === id)
+  const idx = list.findIndex(finder)
   const toMove = list.splice(idx, 1)[0]
   list.push(toMove)
   return list
