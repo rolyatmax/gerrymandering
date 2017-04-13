@@ -22,7 +22,8 @@ const sections = [
     showDistricts: false,
     districtYear: 2015,
     highlightedDistricts: [],
-    showTooltips: false
+    showTooltips: false,
+    fadeRest: false
   },
   {
     focus: EAST_TX_COORDS,
@@ -31,7 +32,8 @@ const sections = [
     showDistricts: true,
     districtYear: 2015,
     highlightedDistricts: [],
-    showTooltips: true
+    showTooltips: true,
+    fadeRest: true
   },
   {
     focus: TX_35_COORDS,
@@ -40,7 +42,8 @@ const sections = [
     showDistricts: false,
     districtYear: 2015,
     highlightedDistricts: [],
-    showTooltips: true
+    showTooltips: false,
+    fadeRest: true
   },
   {
     focus: TX_35_COORDS,
@@ -49,7 +52,8 @@ const sections = [
     showDistricts: true,
     districtYear: 2010,
     highlightedDistricts: ['TX-20', 'TX-28', 'TX-25'],
-    showTooltips: true
+    showTooltips: false,
+    fadeRest: true
   },
   {
     focus: TX_35_COORDS,
@@ -58,43 +62,48 @@ const sections = [
     showDistricts: true,
     districtYear: 2015,
     highlightedDistricts: ['TX-20', 'TX-35', 'TX-27'],
-    showTooltips: true
+    showTooltips: false,
+    fadeRest: true
   },
   {
     focus: DALLAS_COORDS,
-    zoomLevel: 5.5,
+    zoomLevel: 5,
     demographic: 'race',
     showDistricts: false,
     districtYear: 2015,
     highlightedDistricts: [],
-    showTooltips: true
+    showTooltips: false,
+    fadeRest: true
   },
   {
     focus: DALLAS_COORDS,
-    zoomLevel: 5.5,
+    zoomLevel: 5,
     demographic: 'race',
     showDistricts: true,
     districtYear: 2010,
     highlightedDistricts: ['TX-26'],
-    showTooltips: true
+    showTooltips: false,
+    fadeRest: true
   },
   {
     focus: DALLAS_COORDS,
-    zoomLevel: 5.5,
+    zoomLevel: 5,
     demographic: 'race',
     showDistricts: true,
     districtYear: 2015,
     highlightedDistricts: ['TX-26'],
-    showTooltips: true
+    showTooltips: false,
+    fadeRest: true
   },
   {
     focus: EAST_TX_COORDS,
-    zoomLevel: 1.25,
+    zoomLevel: 1.85,
     demographic: 'ethnicity',
     showDistricts: true,
     districtYear: 2010,
     highlightedDistricts: [],
-    showTooltips: true
+    showTooltips: true,
+    fadeRest: false
   }
 ]
 
@@ -107,7 +116,6 @@ export default class App extends Component {
       tracts: null,
       currentSection: 0
     }
-    window.setSection = (i) => this.setState({ currentSection: i })
   }
 
   componentDidMount () {
@@ -144,6 +152,11 @@ export default class App extends Component {
 
   render () {
     const { tracts, districts, currentSection } = this.state
+    const getStyle = (sectionIdx) => ({
+      pointerEvents: sections[currentSection].fadeRest && currentSection !== sectionIdx ? 'none' : 'auto',
+      opacity: sections[currentSection].fadeRest && currentSection !== sectionIdx ? 0.2 : 1,
+      transition: 'opacity linear 500ms'
+    })
     return (
       <div className='App'>
         <Header />
@@ -172,35 +185,35 @@ export default class App extends Component {
               </section>
             </div>
             <div className='below-fold'>
-              <section data-section={1}>
+              <section data-section={1} style={getStyle(1)}>
                 <h2>Districts</h2>
                 <p>{texts[3]}</p>
               </section>
-              <section data-section={2}>
+              <section data-section={2} style={getStyle(2)}>
                 <h2>San Antonio</h2>
                 <p>{texts[0]}</p>
               </section>
-              <section data-section={3}>
+              <section data-section={3} style={getStyle(3)}>
                 <h3>TX-27 in 2010</h3>
                 <p>{texts[2]}</p>
               </section>
-              <section data-section={4}>
+              <section data-section={4} style={getStyle(4)}>
                 <h3>TX-27 in 2015</h3>
                 <p>{texts[2]}</p>
               </section>
-              <section data-section={5}>
+              <section data-section={5} style={getStyle(5)}>
                 <h2>Dallas</h2>
                 <p>{texts[2]}</p>
               </section>
-              <section data-section={6}>
+              <section data-section={6} style={getStyle(6)}>
                 <h3>TX-26 in 2010</h3>
                 <p>{texts[0]}</p>
               </section>
-              <section data-section={7}>
+              <section data-section={7} style={getStyle(7)}>
                 <h3>TX-26 in 2015</h3>
                 <p>{texts[3]}</p>
               </section>
-              <section data-section={8}>
+              <section data-section={8} style={getStyle(8)}>
                 <h3>Sandbox</h3>
               </section>
             </div>

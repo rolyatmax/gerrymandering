@@ -247,7 +247,7 @@ ZoomMap.propTypes = {
 }
 
 ZoomMap.defaultProps = {
-  transitionSpringForces: [0.02, 0.3],
+  transitionSpringForces: [0.05, 0.45],
   minZoom: 1
 }
 
