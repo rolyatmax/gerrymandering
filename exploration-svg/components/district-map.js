@@ -163,7 +163,7 @@ DistrictMap.propTypes = {
   settings: React.PropTypes.object,
   districts: React.PropTypes.object,
   path: React.PropTypes.func,
-  totals: React.PropTypes.object,
+  totals: React.PropTypes.array,
   setSelectedDistrict: React.PropTypes.func
 }
 
@@ -183,12 +183,6 @@ class DemographicMap extends React.Component {
     const isTransformChanged = this.props.transform !== prevProps.transform
     if (isDemoChanged || isProjectionChanged || isTransformChanged) {
       this.updateMap()
-    } else if (isTransformChanged) {
-      // const canvas = this.container.querySelector('canvas')
-      // const { x, y, k } = this.props.transform
-      // // const transform = d3.zoomTransform(canvas)
-      // // console.log(transform)
-      // canvas.style.transform = `scale(${k}, ${k}) translate(${x}px, ${y}px)`
     }
   }
 

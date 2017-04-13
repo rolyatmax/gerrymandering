@@ -16,8 +16,14 @@ export default function DistrictMargins ({settings, districts, totals, setSelect
 
   let districtData = districts.data.features.map((feat, i) => {
     const districtName = feat.properties.NAMELSAD
-    const values = getValuesForDimension(districtTotals[districtName], settings.race)
+    // tmp: remove me
+    const hispanic = feat.properties['ethnicity:hispanic']
+    const nonHispanic = feat.properties['ethnicity:non-hispanic']
+    const values = { hispanic, nonHispanic }
+    // const values = getValuesForDimension(districtTotals[districtName], settings.race)
+    // tmp ^^^^
     const { winner, margin } = getWinnerMargin(values, settings)
+    // debugger;
     return {
       districtName: districtName,
       districtNumber: parseInt(districtName.match(/\d+/)[0], 10),
@@ -26,12 +32,7 @@ export default function DistrictMargins ({settings, districts, totals, setSelect
     }
   })
 
-  districtData = sortBy(districtData, ({ winner, margin, districtNumber }) => {
-    if (settings.sort === 'name') {
-      return districtNumber
-    }
-    return winner === 'democrat' ? margin * -1 : margin
-  })
+  districtData = sortBy(districtData, ({ districtNumber }) => districtNumber)
 
   let style = {}
   if (settings.demographic) {
@@ -63,8 +64,8 @@ export default function DistrictMargins ({settings, districts, totals, setSelect
             <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} key={districtName} className={`district ${isFaded ? 'fade' : ''}`}>
               <span>{`${settings.usState.toUpperCase()}-${districtNumber}`}</span>
               <div className='slider'>
-                <div className='margin dem' style={{ width: winner === 'democrat' ? `${margin / 2}%` : 0 }} />
-                <div className='margin rep' style={{ width: winner === 'republican' ? `${margin / 2}%` : 0 }} />
+                <div className='margin dem' style={{ width: winner === 'hispanic' ? `${margin / 2}%` : 0 }} />
+                <div className='margin rep' style={{ width: winner === 'nonHispanic' ? `${margin / 2}%` : 0 }} />
                 <div className='margin dem background' />
                 <div className='margin rep background' />
               </div>
@@ -93,7 +94,7 @@ class PieChart extends React.Component {
       return margin <= TOSSUP_MARGIN ? 'toss-up' : margin <= LEAN_MARGIN ? `lean-${winner}` : winner
     })
     let curAngle = Math.PI * 1.5
-    return ['democrat', 'lean-democrat', 'toss-up', 'lean-republican', 'republican'].map(group => {
+    return ['hispanic', 'lean-hispanic', 'toss-up', 'lean-nonHispanic', 'nonHispanic'].map(group => {
       const name = group
       const count = groups[group] ? groups[group].length : 0
       const startAngle = curAngle
@@ -133,14 +134,12 @@ class PieChart extends React.Component {
   render () {
     const { settings } = this.props
     const colors = {
-      'democrat': [...settings.colors.democrat, 1],
-      'lean-democrat': [...settings.colors.democrat, 0.7],
+      'hispanic': [...settings.colors.democrat, 1],
+      'lean-hispanic': [...settings.colors.democrat, 0.7],
       'toss-up': [...averageColors(settings.colors.democrat, settings.colors.republican), 0.2],
-      'lean-republican': [...settings.colors.republican, 0.7],
-      'republican': [...settings.colors.republican, 1]
+      'lean-nonHispanic': [...settings.colors.republican, 0.7],
+      'nonHispanic': [...settings.colors.republican, 1]
     }
-
-    console.log(colors['toss-up'])
 
     const width = 300
     const height = 150

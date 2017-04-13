@@ -73,7 +73,6 @@ export default class App extends React.Component {
       return <div>Loading!</div>
     }
 
-    const { races } = stateConfig[this.state.usState]
     const districtMaps = {}
     this.state.districts.forEach((d, i) => { districtMaps[d.name] = i })
 
