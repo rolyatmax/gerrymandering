@@ -53,7 +53,8 @@ export default class ZoomMap extends React.PureComponent {
   setProjectionAndCreateSprings () {
     const { clientWidth, clientHeight } = this.container
     const { geoJSON, focus, zoomLevel } = this.props
-    const viewCenter = [clientWidth * 0.75, clientHeight * 0.5]
+    const isMobile = window.innerWidth <= 768
+    const viewCenter = isMobile ? [clientWidth * 0.5, clientHeight * 0.8] : [clientWidth * 0.75, clientHeight * 0.5]
     const centroid = d3.geoCentroid(geoJSON)
     const rotation = centroid.map(val => -val)
     const initialProjection = d3.geoConicConformal()
