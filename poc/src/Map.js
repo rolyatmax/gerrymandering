@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ZoomMap from './ZoomMap'
 import ToolTip from './ToolTip'
+import Annotation from './Annotation'
 import * as d3 from 'd3'
 import chroma from 'chroma-js'
 import classnames from 'classnames'
@@ -59,7 +60,8 @@ MapContainer.propTypes = {
   zoomLevel: PropTypes.number.isRequired,
   showDistricts: PropTypes.bool.isRequired,
   highlightedDistricts: PropTypes.arrayOf(PropTypes.string).isRequired,
-  showTooltips: PropTypes.bool.isRequired
+  showTooltips: PropTypes.bool.isRequired,
+  annotations: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 class Map extends React.PureComponent {
@@ -89,7 +91,7 @@ class Map extends React.PureComponent {
   }
 
   render () {
-    const { projection, dimensions, districts, showDistricts, highlightedDistricts } = this.props
+    const { projection, dimensions, districts, annotations, showDistricts, highlightedDistricts, hoveredDistrict, setHoveredDistrict } = this.props
     const [width, height] = dimensions
 
     let orderedFeatures = districts.features.slice()
@@ -98,8 +100,8 @@ class Map extends React.PureComponent {
       orderedFeatures = findAndMoveToEnd(orderedFeatures, feat => feat.properties.id === id)
     })
 
-    if (this.props.hoveredDistrict) {
-      orderedFeatures = findAndMoveToEnd(orderedFeatures, feat => feat === this.props.hoveredDistrict)
+    if (hoveredDistrict) {
+      orderedFeatures = findAndMoveToEnd(orderedFeatures, feat => feat === hoveredDistrict)
     }
 
     const svgStyle = {
@@ -107,6 +109,7 @@ class Map extends React.PureComponent {
       height: `${height}px`
     }
     const svgPath = d3.geoPath(projection)
+
     return (
       <div>
         <div ref={(el) => { this.container = el }}>
@@ -118,16 +121,31 @@ class Map extends React.PureComponent {
                 hidden: !showDistricts,
                 faded: highlightedDistricts.length && !isHighlighted,
                 highlighted: isHighlighted,
-                hovered: this.props.hoveredDistrict === feat
+                hovered: hoveredDistrict === feat
               })
               return (
                 <path
                   d={svgPath(feat)}
                   className={className}
                   key={feat.properties.id}
-                  onMouseEnter={() => this.props.setHoveredDistrict(feat.properties.id)}
-                  onMouseLeave={() => this.props.setHoveredDistrict(null)}
+                  onMouseEnter={() => setHoveredDistrict(feat.properties.id)}
+                  onMouseLeave={() => setHoveredDistrict(null)}
                 />
+              )
+            })}
+            {annotations.map(({ text, subject, size }) => {
+              const position = projection(subject)
+              return (
+                <Annotation
+                  key={subject.join(',')}
+                  x={position[0]}
+                  y={position[1]}
+                  dx={80}
+                  dy={130}
+                  text={text}
+                  textWrap={150}
+                  // textStyle={{ color: 'white', textShadow: '0 0 5px rgba(255, 255, 255, 0.5)' }}
+                  circleSize={size} />
               )
             })}
           </svg>

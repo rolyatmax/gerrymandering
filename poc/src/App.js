@@ -23,7 +23,8 @@ const sections = [
     districtYear: 2015,
     highlightedDistricts: [],
     showTooltips: false,
-    fadeRest: false
+    fadeRest: false,
+    annotations: []
   },
   {
     focus: EAST_TX_COORDS,
@@ -33,7 +34,8 @@ const sections = [
     districtYear: 2015,
     highlightedDistricts: [],
     showTooltips: true,
-    fadeRest: true
+    fadeRest: true,
+    annotations: []
   },
   {
     focus: TX_35_COORDS,
@@ -43,7 +45,8 @@ const sections = [
     districtYear: 2015,
     highlightedDistricts: [],
     showTooltips: false,
-    fadeRest: true
+    fadeRest: true,
+    annotations: []
   },
   {
     focus: TX_35_COORDS,
@@ -53,7 +56,8 @@ const sections = [
     districtYear: 2010,
     highlightedDistricts: ['TX-20', 'TX-28', 'TX-25'],
     showTooltips: false,
-    fadeRest: true
+    fadeRest: true,
+    annotations: []
   },
   {
     focus: TX_35_COORDS,
@@ -63,7 +67,8 @@ const sections = [
     districtYear: 2015,
     highlightedDistricts: ['TX-20', 'TX-35', 'TX-27'],
     showTooltips: false,
-    fadeRest: true
+    fadeRest: true,
+    annotations: []
   },
   {
     focus: DALLAS_COORDS,
@@ -73,7 +78,14 @@ const sections = [
     districtYear: 2015,
     highlightedDistricts: [],
     showTooltips: false,
-    fadeRest: true
+    fadeRest: true,
+    annotations: [
+      {
+        subject: [-97.272, 32.691],
+        text: `This minority population's influence is reduced across the region's congressional districts due to "demographic packing".`,
+        size: 50
+      }
+    ]
   },
   {
     focus: DALLAS_COORDS,
@@ -83,7 +95,14 @@ const sections = [
     districtYear: 2010,
     highlightedDistricts: ['TX-26'],
     showTooltips: false,
-    fadeRest: true
+    fadeRest: true,
+    annotations: [
+      {
+        subject: [-97.272, 32.691],
+        text: `This minority population's influence is reduced across the region's congressional districts due to "demographic packing".`,
+        size: 50
+      }
+    ]
   },
   {
     focus: DALLAS_COORDS,
@@ -91,9 +110,16 @@ const sections = [
     demographic: 'race',
     showDistricts: true,
     districtYear: 2015,
-    highlightedDistricts: ['TX-26'],
+    highlightedDistricts: ['TX-26', 'TX-33'],
     showTooltips: false,
-    fadeRest: true
+    fadeRest: true,
+    annotations: [
+      {
+        subject: [-97.272, 32.691],
+        text: `This minority population's influence is reduced across the region's congressional districts due to "demographic packing".`,
+        size: 50
+      }
+    ]
   },
   {
     focus: EAST_TX_COORDS,
@@ -103,7 +129,8 @@ const sections = [
     districtYear: 2010,
     highlightedDistricts: [],
     showTooltips: true,
-    fadeRest: false
+    fadeRest: false,
+    annotations: []
   }
 ]
 
@@ -170,7 +197,8 @@ export default class App extends Component {
               focus={sections[currentSection].focus}
               zoomLevel={sections[currentSection].zoomLevel}
               highlightedDistricts={sections[currentSection].highlightedDistricts}
-              showTooltips={sections[currentSection].showTooltips} />
+              showTooltips={sections[currentSection].showTooltips}
+              annotations={sections[currentSection].annotations} />
           ) : null}
           <div className={`content ${currentSection > 0 ? 'with-background' : ''}`}>
             <div className='above-fold'>

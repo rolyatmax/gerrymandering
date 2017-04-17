@@ -187,7 +187,9 @@ export default class ZoomMap extends React.PureComponent {
 
   // for debugging
   onClick (e) {
-    console.log(this.getCoordinatesFromClickEvent(e))
+    const coords = this.getCoordinatesFromClickEvent(e)
+    console.log(coords.join(', '))
+    console.log(this.state.projection(coords).map(v => v | 0).join(', '))
   }
 
   zoom (inOrOut) {
@@ -221,7 +223,6 @@ export default class ZoomMap extends React.PureComponent {
           style={style}
           className='ZoomMap'
           onClick={this.onClick.bind(this)}
-          // onMouseMove={this.onMouseMove.bind(this)}
           onMouseDown={this.onMouseDown.bind(this)}
           onDoubleClick={this.onDoubleClickMap.bind(this)}
           ref={(el) => { this.container = el }} >
