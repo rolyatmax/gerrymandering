@@ -2,7 +2,7 @@ import React from 'react'
 import * as d3 from 'd3'
 import keyBy from 'lodash/keyBy'
 import debounce from 'lodash/debounce'
-import colorInterp from 'color-interpolate'
+import chroma from 'chroma-js'
 import { getValuesForDimension, getWinnerMargin } from '../helpers'
 import stateConfig from '../state-config'
 
@@ -96,10 +96,10 @@ class DistrictMap extends React.Component {
     const districtTotals = keyBy(totals, 'district-name')
     const { x, y, k } = this.props.transform
 
-    const colorMap = colorInterp([
+    const colorMap = chroma.scale([
       settings.colors.democrat,
       settings.colors.republican
-    ])
+    ]).mode('lab')
 
     const orderedDistricts = districts.features.slice()
     const selectedDistrictIndex = orderedDistricts.findIndex((feat) =>
@@ -115,7 +115,7 @@ class DistrictMap extends React.Component {
             const districtName = feat.properties.NAMELSAD
             const isSelected = settings.selectedDistrict === districtName
             const strokeWidth = (isSelected ? 2 : 1.5) / k
-            const strokeColor = isSelected ? '#444' : '#888'
+            const strokeColor = isSelected ? '#444' : '#fdfdfd'
             const values = getValuesForDimension(districtTotals[districtName], settings.race)
             const total = Object.keys(values).reduce((tot, dim) => parseInt(values[dim], 10) + tot, 0)
             const { winner, margin } = getWinnerMargin(values, settings)
@@ -123,7 +123,7 @@ class DistrictMap extends React.Component {
             const nonWinnerCount = total - parseInt(values[winner], 10)
             const winnerDegree = Math.pow(nonWinnerCount / total, 1.1)
             const colorDegree = winner === 'democrat' ? winnerDegree : 1 - winnerDegree
-            let color = colorMap(colorDegree).replace('rgb(', '').replace(')', '').split(',')
+            let color = colorMap(colorDegree).rgb()
              // pushing the opacities down into the 0.1 - 0.9 range
             color.push(settings.demographic ? 0 : margin / 50 * 0.8 + 0.1)
             color = `rgba(${color.join(',')})`
@@ -210,10 +210,10 @@ class DemographicMap extends React.Component {
     //   d3.median(this.props.tracts.features, (feat) => feat.properties.CENSUSAREA),
     //   this.props.tracts.features[0].properties
     // )
-
+    const getColor = getColorFns[this.props.settings.demographic] || (() => `rgba(255, 255, 255, 0)`)
     this.props.tracts.features.forEach((feat) => {
       ctx.beginPath()
-      ctx.fillStyle = getColor(feat.properties, this.props.settings.demographic)
+      ctx.fillStyle = getColor(feat.properties)
       ctx.strokeStyle = `rgb(60, 60, 60)`
       ctx.lineWidth = 0.1 / k
       path(feat)
@@ -239,24 +239,64 @@ DemographicMap.propTypes = {
   projection: React.PropTypes.func
 }
 
-function getColor (properties, demographic) {
-  const values = getValuesForDimension(properties, demographic)
-  const total = Object.keys(values).reduce((tot, dim) => parseInt(values[dim], 10) + tot, 0)
-  const whiteCount = parseInt(properties['race:white'], 10)
-  const nonWhiteCount = total - whiteCount
-  const hispanicCount = parseInt(properties['ethnicity:hispanic'], 10)
+const getColorFns = {
+  race: (properties) => {
+    const whiteCount = parseInt(properties['race:white'], 10)
+    const raceValues = getValuesForDimension(properties, 'race')
+    const total = Object.keys(raceValues).reduce((tot, key) => tot + parseInt(raceValues[key], 10), 0)
+    const nonWhiteCount = total - whiteCount
+    const colorMap = chroma.scale([[108, 131, 181], [115, 174, 128]]).mode('lab')
+    const color = total ? colorMap(nonWhiteCount / total).rgb() : [150, 150, 150]
+    const area = properties.CENSUSAREA
+    const opacity = Math.pow(total / (area * 800), 0.3)
+    color.push(opacity)
+    return `rgba(${color.join(',')})`
+  },
+  ethnicity: (properties) => {
+    const hispanicCount = parseInt(properties['ethnicity:hispanic'], 10)
+    const nonHispanicCount = parseInt(properties['ethnicity:non-hispanic'], 10)
+    const total = hispanicCount + nonHispanicCount
+    const colorMap = chroma.scale([[108, 131, 181], [115, 174, 128]]).mode('lab')
+    const color = total ? colorMap(hispanicCount / total).rgb() : [150, 150, 150]
+    const area = properties.CENSUSAREA
+    const opacity = Math.pow(total / (area * 800), 0.3)
+    color.push(opacity)
+    return `rgba(${color.join(',')})`
+  },
+  minorities: (() => {
+    const ethnicity1ColorMap = chroma.scale([[255, 255, 255], [239, 147, 205]]).mode('lab')
+    const erBlendedColor = chroma.scale([[239, 147, 205], [98, 224, 160]]).mode('lab')(0.5).rgb()
+    return (properties) => {
+      const nonHispanicCount = parseInt(properties['ethnicity:non-hispanic'], 10)
+      const hispanicCount = parseInt(properties['ethnicity:hispanic'], 10)
+      const ethnicityTotal = nonHispanicCount + hispanicCount
+      const blackCount = parseInt(properties['race:black'], 10)
+      const raceValues = getValuesForDimension(properties, 'race')
+      const raceTotal = Object.keys(raceValues).reduce((tot, key) => tot + parseInt(raceValues[key], 10), 0)
 
-  const colorMap = colorInterp([[108, 131, 181], [115, 174, 128]])
-
-  let color = [150, 150, 150]
-  if (total) {
-    const leftHandSideDegree = demographic === 'race' ? nonWhiteCount / total : demographic === 'ethnicity' ? hispanicCount / total : 0
-    color = colorMap(leftHandSideDegree)
-    color = color.replace('rgb(', '').replace(')', '').split(',')
-  }
-
-  const area = properties.CENSUSAREA
-  const opacity = Math.pow(total / (area * 800), 0.3)
-  color.push(opacity)
-  return `rgba(${color.join(',')})`
+      const e1Color = ethnicityTotal ? ethnicity1ColorMap(hispanicCount / ethnicityTotal).rgb() : [240, 240, 240]
+      const ethnicity2ColorMap = chroma.scale([[98, 224, 160], erBlendedColor]).mode('lab')
+      const e2Color = ethnicityTotal ? ethnicity2ColorMap(hispanicCount / ethnicityTotal).rgb() : [240, 240, 240]
+      const color = raceTotal ? chroma.scale([e1Color, e2Color]).mode('lab')(blackCount / raceTotal).rgb() : [240, 240, 240]
+      return `rgb(${color.join(',')})`
+    }
+  })()
+  // minorities: (properties) => {
+  //   const nonHispanicCount = parseInt(properties['ethnicity:non-hispanic'], 10)
+  //   const hispanicCount = parseInt(properties['ethnicity:hispanic'], 10)
+  //   const ethnicityTotal = nonHispanicCount + hispanicCount
+  //   const blackCount = parseInt(properties['race:black'], 10)
+  //   const raceValues = getValuesForDimension(properties, 'race')
+  //   const raceCount = Object.keys(raceValues).reduce((tot, key) => tot + parseInt(raceValues[key], 10), 0)
+  //   const total = (ethnicityTotal + raceCount) / 2
+  //   // just looking at black and hispanic minorities for this one
+  //   const minoritiesCount = blackCount + hispanicCount
+  //   // const colorMap = chroma.scale([[239, 147, 205], [98, 224, 160]]).mode('lab')
+  //   const colorMap = chroma.scale([[108, 131, 181], [115, 174, 128]]).mode('lab')
+  //   const color = total ? colorMap(minoritiesCount / total).rgb() : [150, 150, 150]
+  //   const area = properties.CENSUSAREA
+  //   const opacity = Math.pow(total / (area * 800), 0.3)
+  //   color.push(opacity)
+  //   return `rgba(${color.join(',')})`
+  // }
 }

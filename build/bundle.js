@@ -139,8 +139,6 @@ var App = function (_React$Component) {
         );
       }
 
-      var races = _stateConfig2.default[this.state.usState].races;
-
       var districtMaps = {};
       this.state.districts.forEach(function (d, i) {
         districtMaps[d.name] = i;
@@ -175,7 +173,7 @@ var App = function (_React$Component) {
       {
         label: 'Overlay',
         settingsKey: 'demographic',
-        values: [['race', 'Race'], ['ethnicity', 'Ethnicity'], [null, 'Vote Margins']]
+        values: [['race', 'Race'], ['ethnicity', 'Ethnicity'], ['minorities', 'Black + Hispanic'], [null, 'Vote Margins']]
       }];
 
       var setSelectedDistrict = function setSelectedDistrict(name) {
@@ -214,7 +212,7 @@ function createRequests(resources) {
   });
 }
 
-},{"../state-config":338,"./controls":2,"./district-map":3,"./district-margins":4,"d3":12,"react":337}],2:[function(require,module,exports){
+},{"../state-config":331,"./controls":2,"./district-map":3,"./district-margins":4,"d3":8,"react":330}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -314,7 +312,7 @@ function ButtonGroup(_ref2) {
   );
 }
 
-},{"react":337}],3:[function(require,module,exports){
+},{"react":330}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -339,9 +337,9 @@ var _debounce = require('lodash/debounce');
 
 var _debounce2 = _interopRequireDefault(_debounce);
 
-var _colorInterpolate = require('color-interpolate');
+var _chromaJs = require('chroma-js');
 
-var _colorInterpolate2 = _interopRequireDefault(_colorInterpolate);
+var _chromaJs2 = _interopRequireDefault(_chromaJs);
 
 var _helpers = require('../helpers');
 
@@ -464,6 +462,15 @@ var Map = function (_React$Component) {
 
 exports.default = Map;
 
+
+Map.propTypes = {
+  settings: _react2.default.PropTypes.object,
+  districts: _react2.default.PropTypes.object,
+  tracts: _react2.default.PropTypes.object,
+  totals: _react2.default.PropTypes.object,
+  setSelectedDistrict: _react2.default.PropTypes.func
+};
+
 var DistrictMap = function (_React$Component2) {
   _inherits(DistrictMap, _React$Component2);
 
@@ -492,7 +499,7 @@ var DistrictMap = function (_React$Component2) {
           k = _props$transform.k;
 
 
-      var colorMap = (0, _colorInterpolate2.default)([settings.colors.democrat, settings.colors.republican]);
+      var colorMap = _chromaJs2.default.scale([settings.colors.democrat, settings.colors.republican]).mode('lab');
 
       var orderedDistricts = districts.features.slice();
       var selectedDistrictIndex = orderedDistricts.findIndex(function (feat) {
@@ -513,7 +520,7 @@ var DistrictMap = function (_React$Component2) {
             var districtName = feat.properties.NAMELSAD;
             var isSelected = settings.selectedDistrict === districtName;
             var strokeWidth = (isSelected ? 2 : 1.5) / k;
-            var strokeColor = isSelected ? '#444' : '#888';
+            var strokeColor = isSelected ? '#444' : '#fdfdfd';
             var values = (0, _helpers.getValuesForDimension)(districtTotals[districtName], settings.race);
             var total = Object.keys(values).reduce(function (tot, dim) {
               return parseInt(values[dim], 10) + tot;
@@ -526,7 +533,7 @@ var DistrictMap = function (_React$Component2) {
             var nonWinnerCount = total - parseInt(values[winner], 10);
             var winnerDegree = Math.pow(nonWinnerCount / total, 1.1);
             var colorDegree = winner === 'democrat' ? winnerDegree : 1 - winnerDegree;
-            var color = colorMap(colorDegree).replace('rgb(', '').replace(')', '').split(',');
+            var color = colorMap(colorDegree).rgb();
             // pushing the opacities down into the 0.1 - 0.9 range
             color.push(settings.demographic ? 0 : margin / 50 * 0.8 + 0.1);
             color = 'rgba(' + color.join(',') + ')';
@@ -561,6 +568,15 @@ var DistrictMap = function (_React$Component2) {
   return DistrictMap;
 }(_react2.default.Component);
 
+DistrictMap.propTypes = {
+  transform: _react2.default.PropTypes.object,
+  settings: _react2.default.PropTypes.object,
+  districts: _react2.default.PropTypes.object,
+  path: _react2.default.PropTypes.func,
+  totals: _react2.default.PropTypes.array,
+  setSelectedDistrict: _react2.default.PropTypes.func
+};
+
 var DemographicMap = function (_React$Component3) {
   _inherits(DemographicMap, _React$Component3);
 
@@ -586,12 +602,6 @@ var DemographicMap = function (_React$Component3) {
       var isTransformChanged = this.props.transform !== prevProps.transform;
       if (isDemoChanged || isProjectionChanged || isTransformChanged) {
         this.updateMap();
-      } else if (isTransformChanged) {
-        // const canvas = this.container.querySelector('canvas')
-        // const { x, y, k } = this.props.transform
-        // // const transform = d3.zoomTransform(canvas)
-        // // console.log(transform)
-        // canvas.style.transform = `scale(${k}, ${k}) translate(${x}px, ${y}px)`
       }
     }
   }, {
@@ -630,10 +640,12 @@ var DemographicMap = function (_React$Component3) {
       //   d3.median(this.props.tracts.features, (feat) => feat.properties.CENSUSAREA),
       //   this.props.tracts.features[0].properties
       // )
-
+      var getColor = getColorFns[this.props.settings.demographic] || function () {
+        return 'rgba(255, 255, 255, 0)';
+      };
       this.props.tracts.features.forEach(function (feat) {
         ctx.beginPath();
-        ctx.fillStyle = getColor(feat.properties, _this6.props.settings.demographic);
+        ctx.fillStyle = getColor(feat.properties);
         ctx.strokeStyle = 'rgb(60, 60, 60)';
         ctx.lineWidth = 0.1 / k;
         path(feat);
@@ -658,31 +670,80 @@ var DemographicMap = function (_React$Component3) {
   return DemographicMap;
 }(_react2.default.Component);
 
-function getColor(properties, demographic) {
-  var values = (0, _helpers.getValuesForDimension)(properties, demographic);
-  var total = Object.keys(values).reduce(function (tot, dim) {
-    return parseInt(values[dim], 10) + tot;
-  }, 0);
-  var whiteCount = parseInt(properties['race:white'], 10);
-  var nonWhiteCount = total - whiteCount;
-  var hispanicCount = parseInt(properties['ethnicity:hispanic'], 10);
+DemographicMap.propTypes = {
+  transform: _react2.default.PropTypes.object,
+  settings: _react2.default.PropTypes.object,
+  tracts: _react2.default.PropTypes.object,
+  projection: _react2.default.PropTypes.func
+};
 
-  var colorMap = (0, _colorInterpolate2.default)([[108, 131, 181], [115, 174, 128]]);
+var getColorFns = {
+  race: function race(properties) {
+    var whiteCount = parseInt(properties['race:white'], 10);
+    var raceValues = (0, _helpers.getValuesForDimension)(properties, 'race');
+    var total = Object.keys(raceValues).reduce(function (tot, key) {
+      return tot + parseInt(raceValues[key], 10);
+    }, 0);
+    var nonWhiteCount = total - whiteCount;
+    var colorMap = _chromaJs2.default.scale([[108, 131, 181], [115, 174, 128]]).mode('lab');
+    var color = total ? colorMap(nonWhiteCount / total).rgb() : [150, 150, 150];
+    var area = properties.CENSUSAREA;
+    var opacity = Math.pow(total / (area * 800), 0.3);
+    color.push(opacity);
+    return 'rgba(' + color.join(',') + ')';
+  },
+  ethnicity: function ethnicity(properties) {
+    var hispanicCount = parseInt(properties['ethnicity:hispanic'], 10);
+    var nonHispanicCount = parseInt(properties['ethnicity:non-hispanic'], 10);
+    var total = hispanicCount + nonHispanicCount;
+    var colorMap = _chromaJs2.default.scale([[108, 131, 181], [115, 174, 128]]).mode('lab');
+    var color = total ? colorMap(hispanicCount / total).rgb() : [150, 150, 150];
+    var area = properties.CENSUSAREA;
+    var opacity = Math.pow(total / (area * 800), 0.3);
+    color.push(opacity);
+    return 'rgba(' + color.join(',') + ')';
+  },
+  minorities: function () {
+    var ethnicity1ColorMap = _chromaJs2.default.scale([[255, 255, 255], [239, 147, 205]]).mode('lab');
+    var erBlendedColor = _chromaJs2.default.scale([[239, 147, 205], [98, 224, 160]]).mode('lab')(0.5).rgb();
+    return function (properties) {
+      var nonHispanicCount = parseInt(properties['ethnicity:non-hispanic'], 10);
+      var hispanicCount = parseInt(properties['ethnicity:hispanic'], 10);
+      var ethnicityTotal = nonHispanicCount + hispanicCount;
+      var blackCount = parseInt(properties['race:black'], 10);
+      var raceValues = (0, _helpers.getValuesForDimension)(properties, 'race');
+      var raceTotal = Object.keys(raceValues).reduce(function (tot, key) {
+        return tot + parseInt(raceValues[key], 10);
+      }, 0);
 
-  var color = [150, 150, 150];
-  if (total) {
-    var leftHandSideDegree = demographic === 'race' ? nonWhiteCount / total : demographic === 'ethnicity' ? hispanicCount / total : 0;
-    color = colorMap(leftHandSideDegree);
-    color = color.replace('rgb(', '').replace(')', '').split(',');
-  }
+      var e1Color = ethnicityTotal ? ethnicity1ColorMap(hispanicCount / ethnicityTotal).rgb() : [240, 240, 240];
+      var ethnicity2ColorMap = _chromaJs2.default.scale([[98, 224, 160], erBlendedColor]).mode('lab');
+      var e2Color = ethnicityTotal ? ethnicity2ColorMap(hispanicCount / ethnicityTotal).rgb() : [240, 240, 240];
+      var color = raceTotal ? _chromaJs2.default.scale([e1Color, e2Color]).mode('lab')(blackCount / raceTotal).rgb() : [240, 240, 240];
+      return 'rgb(' + color.join(',') + ')';
+    };
+  }()
+  // minorities: (properties) => {
+  //   const nonHispanicCount = parseInt(properties['ethnicity:non-hispanic'], 10)
+  //   const hispanicCount = parseInt(properties['ethnicity:hispanic'], 10)
+  //   const ethnicityTotal = nonHispanicCount + hispanicCount
+  //   const blackCount = parseInt(properties['race:black'], 10)
+  //   const raceValues = getValuesForDimension(properties, 'race')
+  //   const raceCount = Object.keys(raceValues).reduce((tot, key) => tot + parseInt(raceValues[key], 10), 0)
+  //   const total = (ethnicityTotal + raceCount) / 2
+  //   // just looking at black and hispanic minorities for this one
+  //   const minoritiesCount = blackCount + hispanicCount
+  //   // const colorMap = chroma.scale([[239, 147, 205], [98, 224, 160]]).mode('lab')
+  //   const colorMap = chroma.scale([[108, 131, 181], [115, 174, 128]]).mode('lab')
+  //   const color = total ? colorMap(minoritiesCount / total).rgb() : [150, 150, 150]
+  //   const area = properties.CENSUSAREA
+  //   const opacity = Math.pow(total / (area * 800), 0.3)
+  //   color.push(opacity)
+  //   return `rgba(${color.join(',')})`
+  // }
+};
 
-  var area = properties.CENSUSAREA;
-  var opacity = Math.pow(total / (area * 800), 0.3);
-  color.push(opacity);
-  return 'rgba(' + color.join(',') + ')';
-}
-
-},{"../helpers":5,"../state-config":338,"color-interpolate":7,"d3":12,"lodash/debounce":157,"lodash/keyBy":173,"react":337}],4:[function(require,module,exports){
+},{"../helpers":5,"../state-config":331,"chroma-js":7,"d3":8,"lodash/debounce":151,"lodash/keyBy":167,"react":330}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -750,6 +811,8 @@ function DistrictMargins(_ref) {
     var _getWinnerMargin = (0, _helpers.getWinnerMargin)(values, settings),
         winner = _getWinnerMargin.winner,
         margin = _getWinnerMargin.margin;
+    // debugger;
+
 
     return {
       districtName: districtName,
@@ -760,14 +823,8 @@ function DistrictMargins(_ref) {
   });
 
   districtData = (0, _sortBy2.default)(districtData, function (_ref2) {
-    var winner = _ref2.winner,
-        margin = _ref2.margin,
-        districtNumber = _ref2.districtNumber;
-
-    if (settings.sort === 'name') {
-      return districtNumber;
-    }
-    return winner === 'democrat' ? margin * -1 : margin;
+    var districtNumber = _ref2.districtNumber;
+    return districtNumber;
   });
 
   var style = {};
@@ -917,8 +974,6 @@ var PieChart = function (_React$Component) {
         'republican': [].concat(_toConsumableArray(settings.colors.republican), [1])
       };
 
-      console.log(colors['toss-up']);
-
       var width = 300;
       var height = 150;
       var arc = d3.arc().innerRadius(50).outerRadius(Math.min(height, width / 2) - 20);
@@ -961,7 +1016,7 @@ function averageColors(color1, color2) {
   return [(r1 + r2) / 2 | 0, (g1 + g2) / 2 | 0, (b1 + b2) / 2 | 0];
 }
 
-},{"../helpers":5,"d3":12,"lodash/groupBy":160,"lodash/keyBy":173,"lodash/sortBy":178,"react":337}],5:[function(require,module,exports){
+},{"../helpers":5,"d3":8,"lodash/groupBy":154,"lodash/keyBy":167,"lodash/sortBy":172,"react":330}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1021,7 +1076,7 @@ function getWinnerMargin(dimensionCounts, settings) {
   return { winner: winner, margin: margin };
 }
 
-},{"lodash/sortBy":178}],6:[function(require,module,exports){
+},{"lodash/sortBy":172}],6:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -1040,508 +1095,2708 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _reactDom2.default.render(_react2.default.createElement(_app2.default, null), document.querySelector('.container'));
 
-},{"./components/app":1,"react":337,"react-dom":186}],7:[function(require,module,exports){
-/**
- * @module  color-interpolate
- * Pick color from palette by index
- */
-
-const parse = require('color-parse');
-const hsl = require('color-space/hsl');
-const lerp = require('lerp');
-const clamp = require('mumath/clamp');
-
-module.exports = interpolate;
-
-function interpolate (palette) {
-	palette = palette.map(c => {
-		c = parse(c);
-		if (c.space != 'rgb') {
-			if (c.space != 'hsl') throw `${c.space} space is not supported.`;
-			c.values = hsl.rgb(c.values);
-		}
-		c.values.push(c.alpha);
-		return c.values;
-	});
-
-	return (t, mix = lerp) => {
-		t = clamp(t, 0, 1);
-
-		let idx = ( palette.length - 1 ) * t,
-			lIdx = Math.floor( idx ),
-			rIdx = Math.ceil( idx );
-
-		t = idx - lIdx;
-
-		let lColor = palette[lIdx], rColor = palette[rIdx];
-
-		let result = lColor.map((v, i) => {
-			v = mix(v, rColor[i], t);
-			if (i < 3) v = Math.round(v);
-			return v;
-		});
-
-		if (result[3] === 1) {
-			return `rgb(${result.slice(0,3)})`;
-		}
-		return `rgba(${result})`;
-	};
-}
-
-},{"color-parse":9,"color-space/hsl":10,"lerp":37,"mumath/clamp":183}],8:[function(require,module,exports){
-module.exports = {
-	"aliceblue": [240, 248, 255],
-	"antiquewhite": [250, 235, 215],
-	"aqua": [0, 255, 255],
-	"aquamarine": [127, 255, 212],
-	"azure": [240, 255, 255],
-	"beige": [245, 245, 220],
-	"bisque": [255, 228, 196],
-	"black": [0, 0, 0],
-	"blanchedalmond": [255, 235, 205],
-	"blue": [0, 0, 255],
-	"blueviolet": [138, 43, 226],
-	"brown": [165, 42, 42],
-	"burlywood": [222, 184, 135],
-	"cadetblue": [95, 158, 160],
-	"chartreuse": [127, 255, 0],
-	"chocolate": [210, 105, 30],
-	"coral": [255, 127, 80],
-	"cornflowerblue": [100, 149, 237],
-	"cornsilk": [255, 248, 220],
-	"crimson": [220, 20, 60],
-	"cyan": [0, 255, 255],
-	"darkblue": [0, 0, 139],
-	"darkcyan": [0, 139, 139],
-	"darkgoldenrod": [184, 134, 11],
-	"darkgray": [169, 169, 169],
-	"darkgreen": [0, 100, 0],
-	"darkgrey": [169, 169, 169],
-	"darkkhaki": [189, 183, 107],
-	"darkmagenta": [139, 0, 139],
-	"darkolivegreen": [85, 107, 47],
-	"darkorange": [255, 140, 0],
-	"darkorchid": [153, 50, 204],
-	"darkred": [139, 0, 0],
-	"darksalmon": [233, 150, 122],
-	"darkseagreen": [143, 188, 143],
-	"darkslateblue": [72, 61, 139],
-	"darkslategray": [47, 79, 79],
-	"darkslategrey": [47, 79, 79],
-	"darkturquoise": [0, 206, 209],
-	"darkviolet": [148, 0, 211],
-	"deeppink": [255, 20, 147],
-	"deepskyblue": [0, 191, 255],
-	"dimgray": [105, 105, 105],
-	"dimgrey": [105, 105, 105],
-	"dodgerblue": [30, 144, 255],
-	"firebrick": [178, 34, 34],
-	"floralwhite": [255, 250, 240],
-	"forestgreen": [34, 139, 34],
-	"fuchsia": [255, 0, 255],
-	"gainsboro": [220, 220, 220],
-	"ghostwhite": [248, 248, 255],
-	"gold": [255, 215, 0],
-	"goldenrod": [218, 165, 32],
-	"gray": [128, 128, 128],
-	"green": [0, 128, 0],
-	"greenyellow": [173, 255, 47],
-	"grey": [128, 128, 128],
-	"honeydew": [240, 255, 240],
-	"hotpink": [255, 105, 180],
-	"indianred": [205, 92, 92],
-	"indigo": [75, 0, 130],
-	"ivory": [255, 255, 240],
-	"khaki": [240, 230, 140],
-	"lavender": [230, 230, 250],
-	"lavenderblush": [255, 240, 245],
-	"lawngreen": [124, 252, 0],
-	"lemonchiffon": [255, 250, 205],
-	"lightblue": [173, 216, 230],
-	"lightcoral": [240, 128, 128],
-	"lightcyan": [224, 255, 255],
-	"lightgoldenrodyellow": [250, 250, 210],
-	"lightgray": [211, 211, 211],
-	"lightgreen": [144, 238, 144],
-	"lightgrey": [211, 211, 211],
-	"lightpink": [255, 182, 193],
-	"lightsalmon": [255, 160, 122],
-	"lightseagreen": [32, 178, 170],
-	"lightskyblue": [135, 206, 250],
-	"lightslategray": [119, 136, 153],
-	"lightslategrey": [119, 136, 153],
-	"lightsteelblue": [176, 196, 222],
-	"lightyellow": [255, 255, 224],
-	"lime": [0, 255, 0],
-	"limegreen": [50, 205, 50],
-	"linen": [250, 240, 230],
-	"magenta": [255, 0, 255],
-	"maroon": [128, 0, 0],
-	"mediumaquamarine": [102, 205, 170],
-	"mediumblue": [0, 0, 205],
-	"mediumorchid": [186, 85, 211],
-	"mediumpurple": [147, 112, 219],
-	"mediumseagreen": [60, 179, 113],
-	"mediumslateblue": [123, 104, 238],
-	"mediumspringgreen": [0, 250, 154],
-	"mediumturquoise": [72, 209, 204],
-	"mediumvioletred": [199, 21, 133],
-	"midnightblue": [25, 25, 112],
-	"mintcream": [245, 255, 250],
-	"mistyrose": [255, 228, 225],
-	"moccasin": [255, 228, 181],
-	"navajowhite": [255, 222, 173],
-	"navy": [0, 0, 128],
-	"oldlace": [253, 245, 230],
-	"olive": [128, 128, 0],
-	"olivedrab": [107, 142, 35],
-	"orange": [255, 165, 0],
-	"orangered": [255, 69, 0],
-	"orchid": [218, 112, 214],
-	"palegoldenrod": [238, 232, 170],
-	"palegreen": [152, 251, 152],
-	"paleturquoise": [175, 238, 238],
-	"palevioletred": [219, 112, 147],
-	"papayawhip": [255, 239, 213],
-	"peachpuff": [255, 218, 185],
-	"peru": [205, 133, 63],
-	"pink": [255, 192, 203],
-	"plum": [221, 160, 221],
-	"powderblue": [176, 224, 230],
-	"purple": [128, 0, 128],
-	"rebeccapurple": [102, 51, 153],
-	"red": [255, 0, 0],
-	"rosybrown": [188, 143, 143],
-	"royalblue": [65, 105, 225],
-	"saddlebrown": [139, 69, 19],
-	"salmon": [250, 128, 114],
-	"sandybrown": [244, 164, 96],
-	"seagreen": [46, 139, 87],
-	"seashell": [255, 245, 238],
-	"sienna": [160, 82, 45],
-	"silver": [192, 192, 192],
-	"skyblue": [135, 206, 235],
-	"slateblue": [106, 90, 205],
-	"slategray": [112, 128, 144],
-	"slategrey": [112, 128, 144],
-	"snow": [255, 250, 250],
-	"springgreen": [0, 255, 127],
-	"steelblue": [70, 130, 180],
-	"tan": [210, 180, 140],
-	"teal": [0, 128, 128],
-	"thistle": [216, 191, 216],
-	"tomato": [255, 99, 71],
-	"turquoise": [64, 224, 208],
-	"violet": [238, 130, 238],
-	"wheat": [245, 222, 179],
-	"white": [255, 255, 255],
-	"whitesmoke": [245, 245, 245],
-	"yellow": [255, 255, 0],
-	"yellowgreen": [154, 205, 50]
-};
-},{}],9:[function(require,module,exports){
-/**
- * @module color-parse
- */
-
-'use strict'
-
-
-module.exports = parse;
-
-
-var names = require('color-name');
-var isObject = require('is-plain-obj');
-
+},{"./components/app":1,"react":330,"react-dom":179}],7:[function(require,module,exports){
 
 /**
- * Base hues
- * http://dev.w3.org/csswg/css-color/#typedef-named-hue
- */
-//FIXME: use external hue detector
-var baseHues = {
-	red: 0,
-	orange: 60,
-	yellow: 120,
-	green: 180,
-	blue: 240,
-	purple: 300
-};
-
-
-/**
- * Parse color from the string passed
+ * @license
  *
- * @return {Object} A space indicator `space`, an array `values` and `alpha`
- */
-function parse (cstr) {
-	var m, parts = [], alpha = 1, space;
-
-	if (typeof cstr === 'string') {
-		//keyword
-		if (names[cstr]) {
-			parts = names[cstr].slice();
-			space = 'rgb'
-		}
-
-		//reserved words
-		else if (cstr === 'transparent') {
-			alpha = 0;
-			space = 'rgb'
-			parts = [0,0,0]
-		}
-
-		//hex
-		else if (/^#[A-Fa-f0-9]+$/.test(cstr)) {
-			var base = cstr.slice(1);
-			var size = base.length;
-			var isShort = size <= 4;
-			alpha = 1;
-
-			if (isShort) {
-				parts = [
-					parseInt(base[0] + base[0], 16),
-					parseInt(base[1] + base[1], 16),
-					parseInt(base[2] + base[2], 16)
-				]
-				if (size === 4) {
-					alpha = parseInt(base[3] + base[3], 16) / 255
-				}
-			}
-			else {
-				parts = [
-					parseInt(base[0] + base[1], 16),
-					parseInt(base[2] + base[3], 16),
-					parseInt(base[4] + base[5], 16)
-				]
-				if (size === 8) {
-					alpha = parseInt(base[6] + base[7], 16) / 255
-				}
-			}
-
-			if (!parts[0]) parts[0] = 0;
-			if (!parts[1]) parts[1] = 0;
-			if (!parts[2]) parts[2] = 0;
-
-			space = 'rgb'
-		}
-
-		//color space
-		else if (m = /^((?:rgb|hs[lvb]|hwb|cmyk?|xy[zy]|gray|lab|lchu?v?|[ly]uv|lms)a?)\s*\(([^\)]*)\)/.exec(cstr)) {
-			var name = m[1];
-			var base = name.replace(/a$/, '');
-			space = base;
-			var size = base === 'cmyk' ? 4 : base === 'gray' ? 1 : 3;
-			parts = m[2].trim()
-				.split(/\s*,\s*/)
-				.map(function (x, i) {
-					//<percentage>
-					if (/%$/.test(x)) {
-						//alpha
-						if (i === size)	return parseFloat(x) / 100;
-						//rgb
-						if (base === 'rgb') return parseFloat(x) * 255 / 100;
-						return parseFloat(x);
-					}
-					//hue
-					else if (base[i] === 'h') {
-						//<deg>
-						if (/deg$/.test(x)) {
-							return parseFloat(x);
-						}
-						//<base-hue>
-						else if (baseHues[x] !== undefined) {
-							return baseHues[x];
-						}
-					}
-					return parseFloat(x);
-				});
-
-			if (name === base) parts.push(1);
-			alpha = parts[size] === undefined ? 1 : parts[size];
-			parts = parts.slice(0, size);
-		}
-
-		//named channels case
-		else if (cstr.length > 10 && /[0-9](?:\s|\/)/.test(cstr)) {
-			parts = cstr.match(/([0-9]+)/g).map(function (value) {
-				return parseFloat(value);
-			});
-
-			space = cstr.match(/([a-z])/ig).join('').toLowerCase();
-		}
-	}
-
-	//numeric case
-	else if (typeof cstr === 'number') {
-		space = 'rgb'
-		parts = [cstr >>> 16, (cstr & 0x00ff00) >>> 8, cstr & 0x0000ff];
-	}
-
-	//object case - detects css cases of rgb and hsl
-	else if (isObject(cstr)) {
-		if (cstr.r != null) {
-			parts = [cstr.r, cstr.g, cstr.b];
-			space = 'rgb'
-		}
-		else if (cstr.red != null) {
-			parts = [cstr.red, cstr.green, cstr.blue];
-			space = 'rgb'
-		}
-		else if (cstr.h != null) {
-			parts = [cstr.h, cstr.s, cstr.l];
-			space = 'hsl';
-		}
-		else if (cstr.hue != null) {
-			parts = [cstr.hue, cstr.saturation, cstr.lightness];
-			space = 'hsl';
-		}
-
-		if (cstr.a != null) alpha = cstr.a;
-		else if (cstr.alpha != null) alpha = cstr.alpha;
-		else if (cstr.opacity != null) alpha = cstr.opacity / 100;
-	}
-
-	//array
-	else if (Array.isArray(cstr) || ArrayBuffer.isView(cstr)) {
-		parts = [cstr[0], cstr[1], cstr[2]];
-		space = 'rgb'
-		alpha = cstr.length === 4 ? cstr[3] : 1;
-	}
-
-	return {
-		space: space,
-		values: parts,
-		alpha: alpha
-	};
-}
-
-},{"color-name":8,"is-plain-obj":36}],10:[function(require,module,exports){
-/**
- * @module color-space/hsl
- */
-'use strict'
-
-var rgb = require('./rgb');
-
-module.exports = {
-	name: 'hsl',
-	min: [0,0,0],
-	max: [360,100,100],
-	channel: ['hue', 'saturation', 'lightness'],
-	alias: ['HSL'],
-
-	rgb: function(hsl) {
-		var h = hsl[0] / 360,
-				s = hsl[1] / 100,
-				l = hsl[2] / 100,
-				t1, t2, t3, rgb, val;
-
-		if (s === 0) {
-			val = l * 255;
-			return [val, val, val];
-		}
-
-		if (l < 0.5) {
-			t2 = l * (1 + s);
-		}
-		else {
-			t2 = l + s - l * s;
-		}
-		t1 = 2 * l - t2;
-
-		rgb = [0, 0, 0];
-		for (var i = 0; i < 3; i++) {
-			t3 = h + 1 / 3 * - (i - 1);
-			if (t3 < 0) {
-				t3++;
-			}
-			else if (t3 > 1) {
-				t3--;
-			}
-
-			if (6 * t3 < 1) {
-				val = t1 + (t2 - t1) * 6 * t3;
-			}
-			else if (2 * t3 < 1) {
-				val = t2;
-			}
-			else if (3 * t3 < 2) {
-				val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
-			}
-			else {
-				val = t1;
-			}
-
-			rgb[i] = val * 255;
-		}
-
-		return rgb;
-	}
-};
-
-
-//extend rgb
-rgb.hsl = function(rgb) {
-	var r = rgb[0]/255,
-			g = rgb[1]/255,
-			b = rgb[2]/255,
-			min = Math.min(r, g, b),
-			max = Math.max(r, g, b),
-			delta = max - min,
-			h, s, l;
-
-	if (max === min) {
-		h = 0;
-	}
-	else if (r === max) {
-		h = (g - b) / delta;
-	}
-	else if (g === max) {
-		h = 2 + (b - r) / delta;
-	}
-	else if (b === max) {
-		h = 4 + (r - g)/ delta;
-	}
-
-	h = Math.min(h * 60, 360);
-
-	if (h < 0) {
-		h += 360;
-	}
-
-	l = (min + max) / 2;
-
-	if (max === min) {
-		s = 0;
-	}
-	else if (l <= 0.5) {
-		s = delta / (max + min);
-	}
-	else {
-		s = delta / (2 - max - min);
-	}
-
-	return [h, s * 100, l * 100];
-};
-
-},{"./rgb":11}],11:[function(require,module,exports){
-/**
- * RGB space.
+ * chroma.js - JavaScript library for color conversions
+ * 
+ * Copyright (c) 2011-2017, Gregor Aisch
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ * 
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ * 
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ * 
+ * 3. The name Gregor Aisch may not be used to endorse or promote products
+ *    derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL GREGOR AISCH OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * @module  color-space/rgb
  */
-'use strict'
 
-module.exports = {
-	name: 'rgb',
-	min: [0,0,0],
-	max: [255,255,255],
-	channel: ['red', 'green', 'blue'],
-	alias: ['RGB']
-};
+(function() {
+  var Color, DEG2RAD, LAB_CONSTANTS, PI, PITHIRD, RAD2DEG, TWOPI, _guess_formats, _guess_formats_sorted, _input, _interpolators, abs, atan2, bezier, blend, blend_f, brewer, burn, chroma, clip_rgb, cmyk2rgb, colors, cos, css2rgb, darken, dodge, each, floor, hcg2rgb, hex2rgb, hsi2rgb, hsl2css, hsl2rgb, hsv2rgb, interpolate, interpolate_hsx, interpolate_lab, interpolate_num, interpolate_rgb, lab2lch, lab2rgb, lab_xyz, lch2lab, lch2rgb, lighten, limit, log, luminance_x, m, max, multiply, normal, num2rgb, overlay, pow, rgb2cmyk, rgb2css, rgb2hcg, rgb2hex, rgb2hsi, rgb2hsl, rgb2hsv, rgb2lab, rgb2lch, rgb2luminance, rgb2num, rgb2temperature, rgb2xyz, rgb_xyz, rnd, root, round, screen, sin, sqrt, temperature2rgb, type, unpack, w3cx11, xyz_lab, xyz_rgb,
+    slice = [].slice;
 
-},{}],12:[function(require,module,exports){
+  type = (function() {
+
+    /*
+    for browser-safe type checking+
+    ported from jQuery's $.type
+     */
+    var classToType, len, name, o, ref;
+    classToType = {};
+    ref = "Boolean Number String Function Array Date RegExp Undefined Null".split(" ");
+    for (o = 0, len = ref.length; o < len; o++) {
+      name = ref[o];
+      classToType["[object " + name + "]"] = name.toLowerCase();
+    }
+    return function(obj) {
+      var strType;
+      strType = Object.prototype.toString.call(obj);
+      return classToType[strType] || "object";
+    };
+  })();
+
+  limit = function(x, min, max) {
+    if (min == null) {
+      min = 0;
+    }
+    if (max == null) {
+      max = 1;
+    }
+    if (x < min) {
+      x = min;
+    }
+    if (x > max) {
+      x = max;
+    }
+    return x;
+  };
+
+  unpack = function(args) {
+    if (args.length >= 3) {
+      return [].slice.call(args);
+    } else {
+      return args[0];
+    }
+  };
+
+  clip_rgb = function(rgb) {
+    var i, o;
+    rgb._clipped = false;
+    rgb._unclipped = rgb.slice(0);
+    for (i = o = 0; o < 3; i = ++o) {
+      if (i < 3) {
+        if (rgb[i] < 0 || rgb[i] > 255) {
+          rgb._clipped = true;
+        }
+        if (rgb[i] < 0) {
+          rgb[i] = 0;
+        }
+        if (rgb[i] > 255) {
+          rgb[i] = 255;
+        }
+      } else if (i === 3) {
+        if (rgb[i] < 0) {
+          rgb[i] = 0;
+        }
+        if (rgb[i] > 1) {
+          rgb[i] = 1;
+        }
+      }
+    }
+    if (!rgb._clipped) {
+      delete rgb._unclipped;
+    }
+    return rgb;
+  };
+
+  PI = Math.PI, round = Math.round, cos = Math.cos, floor = Math.floor, pow = Math.pow, log = Math.log, sin = Math.sin, sqrt = Math.sqrt, atan2 = Math.atan2, max = Math.max, abs = Math.abs;
+
+  TWOPI = PI * 2;
+
+  PITHIRD = PI / 3;
+
+  DEG2RAD = PI / 180;
+
+  RAD2DEG = 180 / PI;
+
+  chroma = function() {
+    if (arguments[0] instanceof Color) {
+      return arguments[0];
+    }
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, arguments, function(){});
+  };
+
+  _interpolators = [];
+
+  if ((typeof module !== "undefined" && module !== null) && (module.exports != null)) {
+    module.exports = chroma;
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], function() {
+      return chroma;
+    });
+  } else {
+    root = typeof exports !== "undefined" && exports !== null ? exports : this;
+    root.chroma = chroma;
+  }
+
+  chroma.version = '1.3.3';
+
+  _input = {};
+
+  _guess_formats = [];
+
+  _guess_formats_sorted = false;
+
+  Color = (function() {
+    function Color() {
+      var arg, args, chk, len, len1, me, mode, o, w;
+      me = this;
+      args = [];
+      for (o = 0, len = arguments.length; o < len; o++) {
+        arg = arguments[o];
+        if (arg != null) {
+          args.push(arg);
+        }
+      }
+      mode = args[args.length - 1];
+      if (_input[mode] != null) {
+        me._rgb = clip_rgb(_input[mode](unpack(args.slice(0, -1))));
+      } else {
+        if (!_guess_formats_sorted) {
+          _guess_formats = _guess_formats.sort(function(a, b) {
+            return b.p - a.p;
+          });
+          _guess_formats_sorted = true;
+        }
+        for (w = 0, len1 = _guess_formats.length; w < len1; w++) {
+          chk = _guess_formats[w];
+          mode = chk.test.apply(chk, args);
+          if (mode) {
+            break;
+          }
+        }
+        if (mode) {
+          me._rgb = clip_rgb(_input[mode].apply(_input, args));
+        }
+      }
+      if (me._rgb == null) {
+        console.warn('unknown format: ' + args);
+      }
+      if (me._rgb == null) {
+        me._rgb = [0, 0, 0];
+      }
+      if (me._rgb.length === 3) {
+        me._rgb.push(1);
+      }
+    }
+
+    Color.prototype.toString = function() {
+      return this.hex();
+    };
+
+    return Color;
+
+  })();
+
+  chroma._input = _input;
+
+
+  /**
+  	ColorBrewer colors for chroma.js
+  
+  	Copyright (c) 2002 Cynthia Brewer, Mark Harrower, and The 
+  	Pennsylvania State University.
+  
+  	Licensed under the Apache License, Version 2.0 (the "License"); 
+  	you may not use this file except in compliance with the License.
+  	You may obtain a copy of the License at	
+  	http://www.apache.org/licenses/LICENSE-2.0
+  
+  	Unless required by applicable law or agreed to in writing, software distributed
+  	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+  	CONDITIONS OF ANY KIND, either express or implied. See the License for the
+  	specific language governing permissions and limitations under the License.
+  
+      @preserve
+   */
+
+  chroma.brewer = brewer = {
+    OrRd: ['#fff7ec', '#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
+    PuBu: ['#fff7fb', '#ece7f2', '#d0d1e6', '#a6bddb', '#74a9cf', '#3690c0', '#0570b0', '#045a8d', '#023858'],
+    BuPu: ['#f7fcfd', '#e0ecf4', '#bfd3e6', '#9ebcda', '#8c96c6', '#8c6bb1', '#88419d', '#810f7c', '#4d004b'],
+    Oranges: ['#fff5eb', '#fee6ce', '#fdd0a2', '#fdae6b', '#fd8d3c', '#f16913', '#d94801', '#a63603', '#7f2704'],
+    BuGn: ['#f7fcfd', '#e5f5f9', '#ccece6', '#99d8c9', '#66c2a4', '#41ae76', '#238b45', '#006d2c', '#00441b'],
+    YlOrBr: ['#ffffe5', '#fff7bc', '#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02', '#993404', '#662506'],
+    YlGn: ['#ffffe5', '#f7fcb9', '#d9f0a3', '#addd8e', '#78c679', '#41ab5d', '#238443', '#006837', '#004529'],
+    Reds: ['#fff5f0', '#fee0d2', '#fcbba1', '#fc9272', '#fb6a4a', '#ef3b2c', '#cb181d', '#a50f15', '#67000d'],
+    RdPu: ['#fff7f3', '#fde0dd', '#fcc5c0', '#fa9fb5', '#f768a1', '#dd3497', '#ae017e', '#7a0177', '#49006a'],
+    Greens: ['#f7fcf5', '#e5f5e0', '#c7e9c0', '#a1d99b', '#74c476', '#41ab5d', '#238b45', '#006d2c', '#00441b'],
+    YlGnBu: ['#ffffd9', '#edf8b1', '#c7e9b4', '#7fcdbb', '#41b6c4', '#1d91c0', '#225ea8', '#253494', '#081d58'],
+    Purples: ['#fcfbfd', '#efedf5', '#dadaeb', '#bcbddc', '#9e9ac8', '#807dba', '#6a51a3', '#54278f', '#3f007d'],
+    GnBu: ['#f7fcf0', '#e0f3db', '#ccebc5', '#a8ddb5', '#7bccc4', '#4eb3d3', '#2b8cbe', '#0868ac', '#084081'],
+    Greys: ['#ffffff', '#f0f0f0', '#d9d9d9', '#bdbdbd', '#969696', '#737373', '#525252', '#252525', '#000000'],
+    YlOrRd: ['#ffffcc', '#ffeda0', '#fed976', '#feb24c', '#fd8d3c', '#fc4e2a', '#e31a1c', '#bd0026', '#800026'],
+    PuRd: ['#f7f4f9', '#e7e1ef', '#d4b9da', '#c994c7', '#df65b0', '#e7298a', '#ce1256', '#980043', '#67001f'],
+    Blues: ['#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b'],
+    PuBuGn: ['#fff7fb', '#ece2f0', '#d0d1e6', '#a6bddb', '#67a9cf', '#3690c0', '#02818a', '#016c59', '#014636'],
+    Viridis: ['#440154', '#482777', '#3f4a8a', '#31678e', '#26838f', '#1f9d8a', '#6cce5a', '#b6de2b', '#fee825'],
+    Spectral: ['#9e0142', '#d53e4f', '#f46d43', '#fdae61', '#fee08b', '#ffffbf', '#e6f598', '#abdda4', '#66c2a5', '#3288bd', '#5e4fa2'],
+    RdYlGn: ['#a50026', '#d73027', '#f46d43', '#fdae61', '#fee08b', '#ffffbf', '#d9ef8b', '#a6d96a', '#66bd63', '#1a9850', '#006837'],
+    RdBu: ['#67001f', '#b2182b', '#d6604d', '#f4a582', '#fddbc7', '#f7f7f7', '#d1e5f0', '#92c5de', '#4393c3', '#2166ac', '#053061'],
+    PiYG: ['#8e0152', '#c51b7d', '#de77ae', '#f1b6da', '#fde0ef', '#f7f7f7', '#e6f5d0', '#b8e186', '#7fbc41', '#4d9221', '#276419'],
+    PRGn: ['#40004b', '#762a83', '#9970ab', '#c2a5cf', '#e7d4e8', '#f7f7f7', '#d9f0d3', '#a6dba0', '#5aae61', '#1b7837', '#00441b'],
+    RdYlBu: ['#a50026', '#d73027', '#f46d43', '#fdae61', '#fee090', '#ffffbf', '#e0f3f8', '#abd9e9', '#74add1', '#4575b4', '#313695'],
+    BrBG: ['#543005', '#8c510a', '#bf812d', '#dfc27d', '#f6e8c3', '#f5f5f5', '#c7eae5', '#80cdc1', '#35978f', '#01665e', '#003c30'],
+    RdGy: ['#67001f', '#b2182b', '#d6604d', '#f4a582', '#fddbc7', '#ffffff', '#e0e0e0', '#bababa', '#878787', '#4d4d4d', '#1a1a1a'],
+    PuOr: ['#7f3b08', '#b35806', '#e08214', '#fdb863', '#fee0b6', '#f7f7f7', '#d8daeb', '#b2abd2', '#8073ac', '#542788', '#2d004b'],
+    Set2: ['#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854', '#ffd92f', '#e5c494', '#b3b3b3'],
+    Accent: ['#7fc97f', '#beaed4', '#fdc086', '#ffff99', '#386cb0', '#f0027f', '#bf5b17', '#666666'],
+    Set1: ['#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00', '#ffff33', '#a65628', '#f781bf', '#999999'],
+    Set3: ['#8dd3c7', '#ffffb3', '#bebada', '#fb8072', '#80b1d3', '#fdb462', '#b3de69', '#fccde5', '#d9d9d9', '#bc80bd', '#ccebc5', '#ffed6f'],
+    Dark2: ['#1b9e77', '#d95f02', '#7570b3', '#e7298a', '#66a61e', '#e6ab02', '#a6761d', '#666666'],
+    Paired: ['#a6cee3', '#1f78b4', '#b2df8a', '#33a02c', '#fb9a99', '#e31a1c', '#fdbf6f', '#ff7f00', '#cab2d6', '#6a3d9a', '#ffff99', '#b15928'],
+    Pastel2: ['#b3e2cd', '#fdcdac', '#cbd5e8', '#f4cae4', '#e6f5c9', '#fff2ae', '#f1e2cc', '#cccccc'],
+    Pastel1: ['#fbb4ae', '#b3cde3', '#ccebc5', '#decbe4', '#fed9a6', '#ffffcc', '#e5d8bd', '#fddaec', '#f2f2f2']
+  };
+
+  (function() {
+    var key, results;
+    results = [];
+    for (key in brewer) {
+      results.push(brewer[key.toLowerCase()] = brewer[key]);
+    }
+    return results;
+  })();
+
+
+  /**
+  	X11 color names
+  
+  	http://www.w3.org/TR/css3-color/#svg-color
+   */
+
+  w3cx11 = {
+    aliceblue: '#f0f8ff',
+    antiquewhite: '#faebd7',
+    aqua: '#00ffff',
+    aquamarine: '#7fffd4',
+    azure: '#f0ffff',
+    beige: '#f5f5dc',
+    bisque: '#ffe4c4',
+    black: '#000000',
+    blanchedalmond: '#ffebcd',
+    blue: '#0000ff',
+    blueviolet: '#8a2be2',
+    brown: '#a52a2a',
+    burlywood: '#deb887',
+    cadetblue: '#5f9ea0',
+    chartreuse: '#7fff00',
+    chocolate: '#d2691e',
+    coral: '#ff7f50',
+    cornflower: '#6495ed',
+    cornflowerblue: '#6495ed',
+    cornsilk: '#fff8dc',
+    crimson: '#dc143c',
+    cyan: '#00ffff',
+    darkblue: '#00008b',
+    darkcyan: '#008b8b',
+    darkgoldenrod: '#b8860b',
+    darkgray: '#a9a9a9',
+    darkgreen: '#006400',
+    darkgrey: '#a9a9a9',
+    darkkhaki: '#bdb76b',
+    darkmagenta: '#8b008b',
+    darkolivegreen: '#556b2f',
+    darkorange: '#ff8c00',
+    darkorchid: '#9932cc',
+    darkred: '#8b0000',
+    darksalmon: '#e9967a',
+    darkseagreen: '#8fbc8f',
+    darkslateblue: '#483d8b',
+    darkslategray: '#2f4f4f',
+    darkslategrey: '#2f4f4f',
+    darkturquoise: '#00ced1',
+    darkviolet: '#9400d3',
+    deeppink: '#ff1493',
+    deepskyblue: '#00bfff',
+    dimgray: '#696969',
+    dimgrey: '#696969',
+    dodgerblue: '#1e90ff',
+    firebrick: '#b22222',
+    floralwhite: '#fffaf0',
+    forestgreen: '#228b22',
+    fuchsia: '#ff00ff',
+    gainsboro: '#dcdcdc',
+    ghostwhite: '#f8f8ff',
+    gold: '#ffd700',
+    goldenrod: '#daa520',
+    gray: '#808080',
+    green: '#008000',
+    greenyellow: '#adff2f',
+    grey: '#808080',
+    honeydew: '#f0fff0',
+    hotpink: '#ff69b4',
+    indianred: '#cd5c5c',
+    indigo: '#4b0082',
+    ivory: '#fffff0',
+    khaki: '#f0e68c',
+    laserlemon: '#ffff54',
+    lavender: '#e6e6fa',
+    lavenderblush: '#fff0f5',
+    lawngreen: '#7cfc00',
+    lemonchiffon: '#fffacd',
+    lightblue: '#add8e6',
+    lightcoral: '#f08080',
+    lightcyan: '#e0ffff',
+    lightgoldenrod: '#fafad2',
+    lightgoldenrodyellow: '#fafad2',
+    lightgray: '#d3d3d3',
+    lightgreen: '#90ee90',
+    lightgrey: '#d3d3d3',
+    lightpink: '#ffb6c1',
+    lightsalmon: '#ffa07a',
+    lightseagreen: '#20b2aa',
+    lightskyblue: '#87cefa',
+    lightslategray: '#778899',
+    lightslategrey: '#778899',
+    lightsteelblue: '#b0c4de',
+    lightyellow: '#ffffe0',
+    lime: '#00ff00',
+    limegreen: '#32cd32',
+    linen: '#faf0e6',
+    magenta: '#ff00ff',
+    maroon: '#800000',
+    maroon2: '#7f0000',
+    maroon3: '#b03060',
+    mediumaquamarine: '#66cdaa',
+    mediumblue: '#0000cd',
+    mediumorchid: '#ba55d3',
+    mediumpurple: '#9370db',
+    mediumseagreen: '#3cb371',
+    mediumslateblue: '#7b68ee',
+    mediumspringgreen: '#00fa9a',
+    mediumturquoise: '#48d1cc',
+    mediumvioletred: '#c71585',
+    midnightblue: '#191970',
+    mintcream: '#f5fffa',
+    mistyrose: '#ffe4e1',
+    moccasin: '#ffe4b5',
+    navajowhite: '#ffdead',
+    navy: '#000080',
+    oldlace: '#fdf5e6',
+    olive: '#808000',
+    olivedrab: '#6b8e23',
+    orange: '#ffa500',
+    orangered: '#ff4500',
+    orchid: '#da70d6',
+    palegoldenrod: '#eee8aa',
+    palegreen: '#98fb98',
+    paleturquoise: '#afeeee',
+    palevioletred: '#db7093',
+    papayawhip: '#ffefd5',
+    peachpuff: '#ffdab9',
+    peru: '#cd853f',
+    pink: '#ffc0cb',
+    plum: '#dda0dd',
+    powderblue: '#b0e0e6',
+    purple: '#800080',
+    purple2: '#7f007f',
+    purple3: '#a020f0',
+    rebeccapurple: '#663399',
+    red: '#ff0000',
+    rosybrown: '#bc8f8f',
+    royalblue: '#4169e1',
+    saddlebrown: '#8b4513',
+    salmon: '#fa8072',
+    sandybrown: '#f4a460',
+    seagreen: '#2e8b57',
+    seashell: '#fff5ee',
+    sienna: '#a0522d',
+    silver: '#c0c0c0',
+    skyblue: '#87ceeb',
+    slateblue: '#6a5acd',
+    slategray: '#708090',
+    slategrey: '#708090',
+    snow: '#fffafa',
+    springgreen: '#00ff7f',
+    steelblue: '#4682b4',
+    tan: '#d2b48c',
+    teal: '#008080',
+    thistle: '#d8bfd8',
+    tomato: '#ff6347',
+    turquoise: '#40e0d0',
+    violet: '#ee82ee',
+    wheat: '#f5deb3',
+    white: '#ffffff',
+    whitesmoke: '#f5f5f5',
+    yellow: '#ffff00',
+    yellowgreen: '#9acd32'
+  };
+
+  chroma.colors = colors = w3cx11;
+
+  lab2rgb = function() {
+    var a, args, b, g, l, r, x, y, z;
+    args = unpack(arguments);
+    l = args[0], a = args[1], b = args[2];
+    y = (l + 16) / 116;
+    x = isNaN(a) ? y : y + a / 500;
+    z = isNaN(b) ? y : y - b / 200;
+    y = LAB_CONSTANTS.Yn * lab_xyz(y);
+    x = LAB_CONSTANTS.Xn * lab_xyz(x);
+    z = LAB_CONSTANTS.Zn * lab_xyz(z);
+    r = xyz_rgb(3.2404542 * x - 1.5371385 * y - 0.4985314 * z);
+    g = xyz_rgb(-0.9692660 * x + 1.8760108 * y + 0.0415560 * z);
+    b = xyz_rgb(0.0556434 * x - 0.2040259 * y + 1.0572252 * z);
+    return [r, g, b, args.length > 3 ? args[3] : 1];
+  };
+
+  xyz_rgb = function(r) {
+    return 255 * (r <= 0.00304 ? 12.92 * r : 1.055 * pow(r, 1 / 2.4) - 0.055);
+  };
+
+  lab_xyz = function(t) {
+    if (t > LAB_CONSTANTS.t1) {
+      return t * t * t;
+    } else {
+      return LAB_CONSTANTS.t2 * (t - LAB_CONSTANTS.t0);
+    }
+  };
+
+  LAB_CONSTANTS = {
+    Kn: 18,
+    Xn: 0.950470,
+    Yn: 1,
+    Zn: 1.088830,
+    t0: 0.137931034,
+    t1: 0.206896552,
+    t2: 0.12841855,
+    t3: 0.008856452
+  };
+
+  rgb2lab = function() {
+    var b, g, r, ref, ref1, x, y, z;
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    ref1 = rgb2xyz(r, g, b), x = ref1[0], y = ref1[1], z = ref1[2];
+    return [116 * y - 16, 500 * (x - y), 200 * (y - z)];
+  };
+
+  rgb_xyz = function(r) {
+    if ((r /= 255) <= 0.04045) {
+      return r / 12.92;
+    } else {
+      return pow((r + 0.055) / 1.055, 2.4);
+    }
+  };
+
+  xyz_lab = function(t) {
+    if (t > LAB_CONSTANTS.t3) {
+      return pow(t, 1 / 3);
+    } else {
+      return t / LAB_CONSTANTS.t2 + LAB_CONSTANTS.t0;
+    }
+  };
+
+  rgb2xyz = function() {
+    var b, g, r, ref, x, y, z;
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    r = rgb_xyz(r);
+    g = rgb_xyz(g);
+    b = rgb_xyz(b);
+    x = xyz_lab((0.4124564 * r + 0.3575761 * g + 0.1804375 * b) / LAB_CONSTANTS.Xn);
+    y = xyz_lab((0.2126729 * r + 0.7151522 * g + 0.0721750 * b) / LAB_CONSTANTS.Yn);
+    z = xyz_lab((0.0193339 * r + 0.1191920 * g + 0.9503041 * b) / LAB_CONSTANTS.Zn);
+    return [x, y, z];
+  };
+
+  chroma.lab = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['lab']), function(){});
+  };
+
+  _input.lab = lab2rgb;
+
+  Color.prototype.lab = function() {
+    return rgb2lab(this._rgb);
+  };
+
+  bezier = function(colors) {
+    var I, I0, I1, c, lab0, lab1, lab2, lab3, ref, ref1, ref2;
+    colors = (function() {
+      var len, o, results;
+      results = [];
+      for (o = 0, len = colors.length; o < len; o++) {
+        c = colors[o];
+        results.push(chroma(c));
+      }
+      return results;
+    })();
+    if (colors.length === 2) {
+      ref = (function() {
+        var len, o, results;
+        results = [];
+        for (o = 0, len = colors.length; o < len; o++) {
+          c = colors[o];
+          results.push(c.lab());
+        }
+        return results;
+      })(), lab0 = ref[0], lab1 = ref[1];
+      I = function(t) {
+        var i, lab;
+        lab = (function() {
+          var o, results;
+          results = [];
+          for (i = o = 0; o <= 2; i = ++o) {
+            results.push(lab0[i] + t * (lab1[i] - lab0[i]));
+          }
+          return results;
+        })();
+        return chroma.lab.apply(chroma, lab);
+      };
+    } else if (colors.length === 3) {
+      ref1 = (function() {
+        var len, o, results;
+        results = [];
+        for (o = 0, len = colors.length; o < len; o++) {
+          c = colors[o];
+          results.push(c.lab());
+        }
+        return results;
+      })(), lab0 = ref1[0], lab1 = ref1[1], lab2 = ref1[2];
+      I = function(t) {
+        var i, lab;
+        lab = (function() {
+          var o, results;
+          results = [];
+          for (i = o = 0; o <= 2; i = ++o) {
+            results.push((1 - t) * (1 - t) * lab0[i] + 2 * (1 - t) * t * lab1[i] + t * t * lab2[i]);
+          }
+          return results;
+        })();
+        return chroma.lab.apply(chroma, lab);
+      };
+    } else if (colors.length === 4) {
+      ref2 = (function() {
+        var len, o, results;
+        results = [];
+        for (o = 0, len = colors.length; o < len; o++) {
+          c = colors[o];
+          results.push(c.lab());
+        }
+        return results;
+      })(), lab0 = ref2[0], lab1 = ref2[1], lab2 = ref2[2], lab3 = ref2[3];
+      I = function(t) {
+        var i, lab;
+        lab = (function() {
+          var o, results;
+          results = [];
+          for (i = o = 0; o <= 2; i = ++o) {
+            results.push((1 - t) * (1 - t) * (1 - t) * lab0[i] + 3 * (1 - t) * (1 - t) * t * lab1[i] + 3 * (1 - t) * t * t * lab2[i] + t * t * t * lab3[i]);
+          }
+          return results;
+        })();
+        return chroma.lab.apply(chroma, lab);
+      };
+    } else if (colors.length === 5) {
+      I0 = bezier(colors.slice(0, 3));
+      I1 = bezier(colors.slice(2, 5));
+      I = function(t) {
+        if (t < 0.5) {
+          return I0(t * 2);
+        } else {
+          return I1((t - 0.5) * 2);
+        }
+      };
+    }
+    return I;
+  };
+
+  chroma.bezier = function(colors) {
+    var f;
+    f = bezier(colors);
+    f.scale = function() {
+      return chroma.scale(f);
+    };
+    return f;
+  };
+
+
+  /*
+      chroma.js
+  
+      Copyright (c) 2011-2013, Gregor Aisch
+      All rights reserved.
+  
+      Redistribution and use in source and binary forms, with or without
+      modification, are permitted provided that the following conditions are met:
+  
+      * Redistributions of source code must retain the above copyright notice, this
+        list of conditions and the following disclaimer.
+  
+      * Redistributions in binary form must reproduce the above copyright notice,
+        this list of conditions and the following disclaimer in the documentation
+        and/or other materials provided with the distribution.
+  
+      * The name Gregor Aisch may not be used to endorse or promote products
+        derived from this software without specific prior written permission.
+  
+      THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+      AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+      IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+      DISCLAIMED. IN NO EVENT SHALL GREGOR AISCH OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+      INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+      BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+      DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+      OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+      NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+      EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+      @source: https://github.com/gka/chroma.js
+   */
+
+  chroma.cubehelix = function(start, rotations, hue, gamma, lightness) {
+    var dh, dl, f;
+    if (start == null) {
+      start = 300;
+    }
+    if (rotations == null) {
+      rotations = -1.5;
+    }
+    if (hue == null) {
+      hue = 1;
+    }
+    if (gamma == null) {
+      gamma = 1;
+    }
+    if (lightness == null) {
+      lightness = [0, 1];
+    }
+    dh = 0;
+    if (type(lightness) === 'array') {
+      dl = lightness[1] - lightness[0];
+    } else {
+      dl = 0;
+      lightness = [lightness, lightness];
+    }
+    f = function(fract) {
+      var a, amp, b, cos_a, g, h, l, r, sin_a;
+      a = TWOPI * ((start + 120) / 360 + rotations * fract);
+      l = pow(lightness[0] + dl * fract, gamma);
+      h = dh !== 0 ? hue[0] + fract * dh : hue;
+      amp = h * l * (1 - l) / 2;
+      cos_a = cos(a);
+      sin_a = sin(a);
+      r = l + amp * (-0.14861 * cos_a + 1.78277 * sin_a);
+      g = l + amp * (-0.29227 * cos_a - 0.90649 * sin_a);
+      b = l + amp * (+1.97294 * cos_a);
+      return chroma(clip_rgb([r * 255, g * 255, b * 255]));
+    };
+    f.start = function(s) {
+      if (s == null) {
+        return start;
+      }
+      start = s;
+      return f;
+    };
+    f.rotations = function(r) {
+      if (r == null) {
+        return rotations;
+      }
+      rotations = r;
+      return f;
+    };
+    f.gamma = function(g) {
+      if (g == null) {
+        return gamma;
+      }
+      gamma = g;
+      return f;
+    };
+    f.hue = function(h) {
+      if (h == null) {
+        return hue;
+      }
+      hue = h;
+      if (type(hue) === 'array') {
+        dh = hue[1] - hue[0];
+        if (dh === 0) {
+          hue = hue[1];
+        }
+      } else {
+        dh = 0;
+      }
+      return f;
+    };
+    f.lightness = function(h) {
+      if (h == null) {
+        return lightness;
+      }
+      if (type(h) === 'array') {
+        lightness = h;
+        dl = h[1] - h[0];
+      } else {
+        lightness = [h, h];
+        dl = 0;
+      }
+      return f;
+    };
+    f.scale = function() {
+      return chroma.scale(f);
+    };
+    f.hue(hue);
+    return f;
+  };
+
+  chroma.random = function() {
+    var code, digits, i, o;
+    digits = '0123456789abcdef';
+    code = '#';
+    for (i = o = 0; o < 6; i = ++o) {
+      code += digits.charAt(floor(Math.random() * 16));
+    }
+    return new Color(code);
+  };
+
+  chroma.average = function(colors, mode) {
+    var A, alpha, c, cnt, dx, dy, first, i, l, len, o, xyz, xyz2;
+    if (mode == null) {
+      mode = 'rgb';
+    }
+    l = colors.length;
+    colors = colors.map(function(c) {
+      return chroma(c);
+    });
+    first = colors.splice(0, 1)[0];
+    xyz = first.get(mode);
+    cnt = [];
+    dx = 0;
+    dy = 0;
+    for (i in xyz) {
+      xyz[i] = xyz[i] || 0;
+      cnt.push(!isNaN(xyz[i]) ? 1 : 0);
+      if (mode.charAt(i) === 'h' && !isNaN(xyz[i])) {
+        A = xyz[i] / 180 * PI;
+        dx += cos(A);
+        dy += sin(A);
+      }
+    }
+    alpha = first.alpha();
+    for (o = 0, len = colors.length; o < len; o++) {
+      c = colors[o];
+      xyz2 = c.get(mode);
+      alpha += c.alpha();
+      for (i in xyz) {
+        if (!isNaN(xyz2[i])) {
+          xyz[i] += xyz2[i];
+          cnt[i] += 1;
+          if (mode.charAt(i) === 'h') {
+            A = xyz[i] / 180 * PI;
+            dx += cos(A);
+            dy += sin(A);
+          }
+        }
+      }
+    }
+    for (i in xyz) {
+      xyz[i] = xyz[i] / cnt[i];
+      if (mode.charAt(i) === 'h') {
+        A = atan2(dy / cnt[i], dx / cnt[i]) / PI * 180;
+        while (A < 0) {
+          A += 360;
+        }
+        while (A >= 360) {
+          A -= 360;
+        }
+        xyz[i] = A;
+      }
+    }
+    return chroma(xyz, mode).alpha(alpha / l);
+  };
+
+  _input.rgb = function() {
+    var k, ref, results, v;
+    ref = unpack(arguments);
+    results = [];
+    for (k in ref) {
+      v = ref[k];
+      results.push(v);
+    }
+    return results;
+  };
+
+  chroma.rgb = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['rgb']), function(){});
+  };
+
+  Color.prototype.rgb = function(round) {
+    if (round == null) {
+      round = true;
+    }
+    if (round) {
+      return this._rgb.map(Math.round).slice(0, 3);
+    } else {
+      return this._rgb.slice(0, 3);
+    }
+  };
+
+  Color.prototype.rgba = function(round) {
+    if (round == null) {
+      round = true;
+    }
+    if (!round) {
+      return this._rgb.slice(0);
+    }
+    return [Math.round(this._rgb[0]), Math.round(this._rgb[1]), Math.round(this._rgb[2]), this._rgb[3]];
+  };
+
+  _guess_formats.push({
+    p: 3,
+    test: function(n) {
+      var a;
+      a = unpack(arguments);
+      if (type(a) === 'array' && a.length === 3) {
+        return 'rgb';
+      }
+      if (a.length === 4 && type(a[3]) === "number" && a[3] >= 0 && a[3] <= 1) {
+        return 'rgb';
+      }
+    }
+  });
+
+  hex2rgb = function(hex) {
+    var a, b, g, r, rgb, u;
+    if (hex.match(/^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/)) {
+      if (hex.length === 4 || hex.length === 7) {
+        hex = hex.substr(1);
+      }
+      if (hex.length === 3) {
+        hex = hex.split("");
+        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+      }
+      u = parseInt(hex, 16);
+      r = u >> 16;
+      g = u >> 8 & 0xFF;
+      b = u & 0xFF;
+      return [r, g, b, 1];
+    }
+    if (hex.match(/^#?([A-Fa-f0-9]{8})$/)) {
+      if (hex.length === 9) {
+        hex = hex.substr(1);
+      }
+      u = parseInt(hex, 16);
+      r = u >> 24 & 0xFF;
+      g = u >> 16 & 0xFF;
+      b = u >> 8 & 0xFF;
+      a = round((u & 0xFF) / 0xFF * 100) / 100;
+      return [r, g, b, a];
+    }
+    if ((_input.css != null) && (rgb = _input.css(hex))) {
+      return rgb;
+    }
+    throw "unknown color: " + hex;
+  };
+
+  rgb2hex = function(channels, mode) {
+    var a, b, g, hxa, r, str, u;
+    if (mode == null) {
+      mode = 'rgb';
+    }
+    r = channels[0], g = channels[1], b = channels[2], a = channels[3];
+    r = Math.round(r);
+    g = Math.round(g);
+    b = Math.round(b);
+    u = r << 16 | g << 8 | b;
+    str = "000000" + u.toString(16);
+    str = str.substr(str.length - 6);
+    hxa = '0' + round(a * 255).toString(16);
+    hxa = hxa.substr(hxa.length - 2);
+    return "#" + (function() {
+      switch (mode.toLowerCase()) {
+        case 'rgba':
+          return str + hxa;
+        case 'argb':
+          return hxa + str;
+        default:
+          return str;
+      }
+    })();
+  };
+
+  _input.hex = function(h) {
+    return hex2rgb(h);
+  };
+
+  chroma.hex = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['hex']), function(){});
+  };
+
+  Color.prototype.hex = function(mode) {
+    if (mode == null) {
+      mode = 'rgb';
+    }
+    return rgb2hex(this._rgb, mode);
+  };
+
+  _guess_formats.push({
+    p: 4,
+    test: function(n) {
+      if (arguments.length === 1 && type(n) === "string") {
+        return 'hex';
+      }
+    }
+  });
+
+  hsl2rgb = function() {
+    var args, b, c, g, h, i, l, o, r, ref, s, t1, t2, t3;
+    args = unpack(arguments);
+    h = args[0], s = args[1], l = args[2];
+    if (s === 0) {
+      r = g = b = l * 255;
+    } else {
+      t3 = [0, 0, 0];
+      c = [0, 0, 0];
+      t2 = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      t1 = 2 * l - t2;
+      h /= 360;
+      t3[0] = h + 1 / 3;
+      t3[1] = h;
+      t3[2] = h - 1 / 3;
+      for (i = o = 0; o <= 2; i = ++o) {
+        if (t3[i] < 0) {
+          t3[i] += 1;
+        }
+        if (t3[i] > 1) {
+          t3[i] -= 1;
+        }
+        if (6 * t3[i] < 1) {
+          c[i] = t1 + (t2 - t1) * 6 * t3[i];
+        } else if (2 * t3[i] < 1) {
+          c[i] = t2;
+        } else if (3 * t3[i] < 2) {
+          c[i] = t1 + (t2 - t1) * ((2 / 3) - t3[i]) * 6;
+        } else {
+          c[i] = t1;
+        }
+      }
+      ref = [round(c[0] * 255), round(c[1] * 255), round(c[2] * 255)], r = ref[0], g = ref[1], b = ref[2];
+    }
+    if (args.length > 3) {
+      return [r, g, b, args[3]];
+    } else {
+      return [r, g, b];
+    }
+  };
+
+  rgb2hsl = function(r, g, b) {
+    var h, l, min, ref, s;
+    if (r !== void 0 && r.length >= 3) {
+      ref = r, r = ref[0], g = ref[1], b = ref[2];
+    }
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    min = Math.min(r, g, b);
+    max = Math.max(r, g, b);
+    l = (max + min) / 2;
+    if (max === min) {
+      s = 0;
+      h = Number.NaN;
+    } else {
+      s = l < 0.5 ? (max - min) / (max + min) : (max - min) / (2 - max - min);
+    }
+    if (r === max) {
+      h = (g - b) / (max - min);
+    } else if (g === max) {
+      h = 2 + (b - r) / (max - min);
+    } else if (b === max) {
+      h = 4 + (r - g) / (max - min);
+    }
+    h *= 60;
+    if (h < 0) {
+      h += 360;
+    }
+    return [h, s, l];
+  };
+
+  chroma.hsl = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['hsl']), function(){});
+  };
+
+  _input.hsl = hsl2rgb;
+
+  Color.prototype.hsl = function() {
+    return rgb2hsl(this._rgb);
+  };
+
+  hsv2rgb = function() {
+    var args, b, f, g, h, i, p, q, r, ref, ref1, ref2, ref3, ref4, ref5, s, t, v;
+    args = unpack(arguments);
+    h = args[0], s = args[1], v = args[2];
+    v *= 255;
+    if (s === 0) {
+      r = g = b = v;
+    } else {
+      if (h === 360) {
+        h = 0;
+      }
+      if (h > 360) {
+        h -= 360;
+      }
+      if (h < 0) {
+        h += 360;
+      }
+      h /= 60;
+      i = floor(h);
+      f = h - i;
+      p = v * (1 - s);
+      q = v * (1 - s * f);
+      t = v * (1 - s * (1 - f));
+      switch (i) {
+        case 0:
+          ref = [v, t, p], r = ref[0], g = ref[1], b = ref[2];
+          break;
+        case 1:
+          ref1 = [q, v, p], r = ref1[0], g = ref1[1], b = ref1[2];
+          break;
+        case 2:
+          ref2 = [p, v, t], r = ref2[0], g = ref2[1], b = ref2[2];
+          break;
+        case 3:
+          ref3 = [p, q, v], r = ref3[0], g = ref3[1], b = ref3[2];
+          break;
+        case 4:
+          ref4 = [t, p, v], r = ref4[0], g = ref4[1], b = ref4[2];
+          break;
+        case 5:
+          ref5 = [v, p, q], r = ref5[0], g = ref5[1], b = ref5[2];
+      }
+    }
+    return [r, g, b, args.length > 3 ? args[3] : 1];
+  };
+
+  rgb2hsv = function() {
+    var b, delta, g, h, min, r, ref, s, v;
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    min = Math.min(r, g, b);
+    max = Math.max(r, g, b);
+    delta = max - min;
+    v = max / 255.0;
+    if (max === 0) {
+      h = Number.NaN;
+      s = 0;
+    } else {
+      s = delta / max;
+      if (r === max) {
+        h = (g - b) / delta;
+      }
+      if (g === max) {
+        h = 2 + (b - r) / delta;
+      }
+      if (b === max) {
+        h = 4 + (r - g) / delta;
+      }
+      h *= 60;
+      if (h < 0) {
+        h += 360;
+      }
+    }
+    return [h, s, v];
+  };
+
+  chroma.hsv = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['hsv']), function(){});
+  };
+
+  _input.hsv = hsv2rgb;
+
+  Color.prototype.hsv = function() {
+    return rgb2hsv(this._rgb);
+  };
+
+  num2rgb = function(num) {
+    var b, g, r;
+    if (type(num) === "number" && num >= 0 && num <= 0xFFFFFF) {
+      r = num >> 16;
+      g = (num >> 8) & 0xFF;
+      b = num & 0xFF;
+      return [r, g, b, 1];
+    }
+    console.warn("unknown num color: " + num);
+    return [0, 0, 0, 1];
+  };
+
+  rgb2num = function() {
+    var b, g, r, ref;
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    return (r << 16) + (g << 8) + b;
+  };
+
+  chroma.num = function(num) {
+    return new Color(num, 'num');
+  };
+
+  Color.prototype.num = function(mode) {
+    if (mode == null) {
+      mode = 'rgb';
+    }
+    return rgb2num(this._rgb, mode);
+  };
+
+  _input.num = num2rgb;
+
+  _guess_formats.push({
+    p: 1,
+    test: function(n) {
+      if (arguments.length === 1 && type(n) === "number" && n >= 0 && n <= 0xFFFFFF) {
+        return 'num';
+      }
+    }
+  });
+
+  hcg2rgb = function() {
+    var _c, _g, args, b, c, f, g, h, i, p, q, r, ref, ref1, ref2, ref3, ref4, ref5, t, v;
+    args = unpack(arguments);
+    h = args[0], c = args[1], _g = args[2];
+    c = c / 100;
+    g = g / 100 * 255;
+    _c = c * 255;
+    if (c === 0) {
+      r = g = b = _g;
+    } else {
+      if (h === 360) {
+        h = 0;
+      }
+      if (h > 360) {
+        h -= 360;
+      }
+      if (h < 0) {
+        h += 360;
+      }
+      h /= 60;
+      i = floor(h);
+      f = h - i;
+      p = _g * (1 - c);
+      q = p + _c * (1 - f);
+      t = p + _c * f;
+      v = p + _c;
+      switch (i) {
+        case 0:
+          ref = [v, t, p], r = ref[0], g = ref[1], b = ref[2];
+          break;
+        case 1:
+          ref1 = [q, v, p], r = ref1[0], g = ref1[1], b = ref1[2];
+          break;
+        case 2:
+          ref2 = [p, v, t], r = ref2[0], g = ref2[1], b = ref2[2];
+          break;
+        case 3:
+          ref3 = [p, q, v], r = ref3[0], g = ref3[1], b = ref3[2];
+          break;
+        case 4:
+          ref4 = [t, p, v], r = ref4[0], g = ref4[1], b = ref4[2];
+          break;
+        case 5:
+          ref5 = [v, p, q], r = ref5[0], g = ref5[1], b = ref5[2];
+      }
+    }
+    return [r, g, b, args.length > 3 ? args[3] : 1];
+  };
+
+  rgb2hcg = function() {
+    var _g, b, c, delta, g, h, min, r, ref;
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    min = Math.min(r, g, b);
+    max = Math.max(r, g, b);
+    delta = max - min;
+    c = delta * 100 / 255;
+    _g = min / (255 - delta) * 100;
+    if (delta === 0) {
+      h = Number.NaN;
+    } else {
+      if (r === max) {
+        h = (g - b) / delta;
+      }
+      if (g === max) {
+        h = 2 + (b - r) / delta;
+      }
+      if (b === max) {
+        h = 4 + (r - g) / delta;
+      }
+      h *= 60;
+      if (h < 0) {
+        h += 360;
+      }
+    }
+    return [h, c, _g];
+  };
+
+  chroma.hcg = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['hcg']), function(){});
+  };
+
+  _input.hcg = hcg2rgb;
+
+  Color.prototype.hcg = function() {
+    return rgb2hcg(this._rgb);
+  };
+
+  css2rgb = function(css) {
+    var aa, ab, hsl, i, m, o, rgb, w;
+    css = css.toLowerCase();
+    if ((chroma.colors != null) && chroma.colors[css]) {
+      return hex2rgb(chroma.colors[css]);
+    }
+    if (m = css.match(/rgb\(\s*(\-?\d+),\s*(\-?\d+)\s*,\s*(\-?\d+)\s*\)/)) {
+      rgb = m.slice(1, 4);
+      for (i = o = 0; o <= 2; i = ++o) {
+        rgb[i] = +rgb[i];
+      }
+      rgb[3] = 1;
+    } else if (m = css.match(/rgba\(\s*(\-?\d+),\s*(\-?\d+)\s*,\s*(\-?\d+)\s*,\s*([01]|[01]?\.\d+)\)/)) {
+      rgb = m.slice(1, 5);
+      for (i = w = 0; w <= 3; i = ++w) {
+        rgb[i] = +rgb[i];
+      }
+    } else if (m = css.match(/rgb\(\s*(\-?\d+(?:\.\d+)?)%,\s*(\-?\d+(?:\.\d+)?)%\s*,\s*(\-?\d+(?:\.\d+)?)%\s*\)/)) {
+      rgb = m.slice(1, 4);
+      for (i = aa = 0; aa <= 2; i = ++aa) {
+        rgb[i] = round(rgb[i] * 2.55);
+      }
+      rgb[3] = 1;
+    } else if (m = css.match(/rgba\(\s*(\-?\d+(?:\.\d+)?)%,\s*(\-?\d+(?:\.\d+)?)%\s*,\s*(\-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)/)) {
+      rgb = m.slice(1, 5);
+      for (i = ab = 0; ab <= 2; i = ++ab) {
+        rgb[i] = round(rgb[i] * 2.55);
+      }
+      rgb[3] = +rgb[3];
+    } else if (m = css.match(/hsl\(\s*(\-?\d+(?:\.\d+)?),\s*(\-?\d+(?:\.\d+)?)%\s*,\s*(\-?\d+(?:\.\d+)?)%\s*\)/)) {
+      hsl = m.slice(1, 4);
+      hsl[1] *= 0.01;
+      hsl[2] *= 0.01;
+      rgb = hsl2rgb(hsl);
+      rgb[3] = 1;
+    } else if (m = css.match(/hsla\(\s*(\-?\d+(?:\.\d+)?),\s*(\-?\d+(?:\.\d+)?)%\s*,\s*(\-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)/)) {
+      hsl = m.slice(1, 4);
+      hsl[1] *= 0.01;
+      hsl[2] *= 0.01;
+      rgb = hsl2rgb(hsl);
+      rgb[3] = +m[4];
+    }
+    return rgb;
+  };
+
+  rgb2css = function(rgba) {
+    var mode;
+    mode = rgba[3] < 1 ? 'rgba' : 'rgb';
+    if (mode === 'rgb') {
+      return mode + '(' + rgba.slice(0, 3).map(round).join(',') + ')';
+    } else if (mode === 'rgba') {
+      return mode + '(' + rgba.slice(0, 3).map(round).join(',') + ',' + rgba[3] + ')';
+    } else {
+
+    }
+  };
+
+  rnd = function(a) {
+    return round(a * 100) / 100;
+  };
+
+  hsl2css = function(hsl, alpha) {
+    var mode;
+    mode = alpha < 1 ? 'hsla' : 'hsl';
+    hsl[0] = rnd(hsl[0] || 0);
+    hsl[1] = rnd(hsl[1] * 100) + '%';
+    hsl[2] = rnd(hsl[2] * 100) + '%';
+    if (mode === 'hsla') {
+      hsl[3] = alpha;
+    }
+    return mode + '(' + hsl.join(',') + ')';
+  };
+
+  _input.css = function(h) {
+    return css2rgb(h);
+  };
+
+  chroma.css = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['css']), function(){});
+  };
+
+  Color.prototype.css = function(mode) {
+    if (mode == null) {
+      mode = 'rgb';
+    }
+    if (mode.slice(0, 3) === 'rgb') {
+      return rgb2css(this._rgb);
+    } else if (mode.slice(0, 3) === 'hsl') {
+      return hsl2css(this.hsl(), this.alpha());
+    }
+  };
+
+  _input.named = function(name) {
+    return hex2rgb(w3cx11[name]);
+  };
+
+  _guess_formats.push({
+    p: 5,
+    test: function(n) {
+      if (arguments.length === 1 && (w3cx11[n] != null)) {
+        return 'named';
+      }
+    }
+  });
+
+  Color.prototype.name = function(n) {
+    var h, k;
+    if (arguments.length) {
+      if (w3cx11[n]) {
+        this._rgb = hex2rgb(w3cx11[n]);
+      }
+      this._rgb[3] = 1;
+      this;
+    }
+    h = this.hex();
+    for (k in w3cx11) {
+      if (h === w3cx11[k]) {
+        return k;
+      }
+    }
+    return h;
+  };
+
+  lch2lab = function() {
+
+    /*
+    Convert from a qualitative parameter h and a quantitative parameter l to a 24-bit pixel.
+    These formulas were invented by David Dalrymple to obtain maximum contrast without going
+    out of gamut if the parameters are in the range 0-1.
+    
+    A saturation multiplier was added by Gregor Aisch
+     */
+    var c, h, l, ref;
+    ref = unpack(arguments), l = ref[0], c = ref[1], h = ref[2];
+    h = h * DEG2RAD;
+    return [l, cos(h) * c, sin(h) * c];
+  };
+
+  lch2rgb = function() {
+    var L, a, args, b, c, g, h, l, r, ref, ref1;
+    args = unpack(arguments);
+    l = args[0], c = args[1], h = args[2];
+    ref = lch2lab(l, c, h), L = ref[0], a = ref[1], b = ref[2];
+    ref1 = lab2rgb(L, a, b), r = ref1[0], g = ref1[1], b = ref1[2];
+    return [r, g, b, args.length > 3 ? args[3] : 1];
+  };
+
+  lab2lch = function() {
+    var a, b, c, h, l, ref;
+    ref = unpack(arguments), l = ref[0], a = ref[1], b = ref[2];
+    c = sqrt(a * a + b * b);
+    h = (atan2(b, a) * RAD2DEG + 360) % 360;
+    if (round(c * 10000) === 0) {
+      h = Number.NaN;
+    }
+    return [l, c, h];
+  };
+
+  rgb2lch = function() {
+    var a, b, g, l, r, ref, ref1;
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    ref1 = rgb2lab(r, g, b), l = ref1[0], a = ref1[1], b = ref1[2];
+    return lab2lch(l, a, b);
+  };
+
+  chroma.lch = function() {
+    var args;
+    args = unpack(arguments);
+    return new Color(args, 'lch');
+  };
+
+  chroma.hcl = function() {
+    var args;
+    args = unpack(arguments);
+    return new Color(args, 'hcl');
+  };
+
+  _input.lch = lch2rgb;
+
+  _input.hcl = function() {
+    var c, h, l, ref;
+    ref = unpack(arguments), h = ref[0], c = ref[1], l = ref[2];
+    return lch2rgb([l, c, h]);
+  };
+
+  Color.prototype.lch = function() {
+    return rgb2lch(this._rgb);
+  };
+
+  Color.prototype.hcl = function() {
+    return rgb2lch(this._rgb).reverse();
+  };
+
+  rgb2cmyk = function(mode) {
+    var b, c, f, g, k, m, r, ref, y;
+    if (mode == null) {
+      mode = 'rgb';
+    }
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    r = r / 255;
+    g = g / 255;
+    b = b / 255;
+    k = 1 - Math.max(r, Math.max(g, b));
+    f = k < 1 ? 1 / (1 - k) : 0;
+    c = (1 - r - k) * f;
+    m = (1 - g - k) * f;
+    y = (1 - b - k) * f;
+    return [c, m, y, k];
+  };
+
+  cmyk2rgb = function() {
+    var alpha, args, b, c, g, k, m, r, y;
+    args = unpack(arguments);
+    c = args[0], m = args[1], y = args[2], k = args[3];
+    alpha = args.length > 4 ? args[4] : 1;
+    if (k === 1) {
+      return [0, 0, 0, alpha];
+    }
+    r = c >= 1 ? 0 : 255 * (1 - c) * (1 - k);
+    g = m >= 1 ? 0 : 255 * (1 - m) * (1 - k);
+    b = y >= 1 ? 0 : 255 * (1 - y) * (1 - k);
+    return [r, g, b, alpha];
+  };
+
+  _input.cmyk = function() {
+    return cmyk2rgb(unpack(arguments));
+  };
+
+  chroma.cmyk = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['cmyk']), function(){});
+  };
+
+  Color.prototype.cmyk = function() {
+    return rgb2cmyk(this._rgb);
+  };
+
+  _input.gl = function() {
+    var i, k, o, rgb, v;
+    rgb = (function() {
+      var ref, results;
+      ref = unpack(arguments);
+      results = [];
+      for (k in ref) {
+        v = ref[k];
+        results.push(v);
+      }
+      return results;
+    }).apply(this, arguments);
+    for (i = o = 0; o <= 2; i = ++o) {
+      rgb[i] *= 255;
+    }
+    return rgb;
+  };
+
+  chroma.gl = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['gl']), function(){});
+  };
+
+  Color.prototype.gl = function() {
+    var rgb;
+    rgb = this._rgb;
+    return [rgb[0] / 255, rgb[1] / 255, rgb[2] / 255, rgb[3]];
+  };
+
+  rgb2luminance = function(r, g, b) {
+    var ref;
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    r = luminance_x(r);
+    g = luminance_x(g);
+    b = luminance_x(b);
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+
+  luminance_x = function(x) {
+    x /= 255;
+    if (x <= 0.03928) {
+      return x / 12.92;
+    } else {
+      return pow((x + 0.055) / 1.055, 2.4);
+    }
+  };
+
+  _interpolators = [];
+
+  interpolate = function(col1, col2, f, m) {
+    var interpol, len, o, res;
+    if (f == null) {
+      f = 0.5;
+    }
+    if (m == null) {
+      m = 'rgb';
+    }
+
+    /*
+    interpolates between colors
+    f = 0 --> me
+    f = 1 --> col
+     */
+    if (type(col1) !== 'object') {
+      col1 = chroma(col1);
+    }
+    if (type(col2) !== 'object') {
+      col2 = chroma(col2);
+    }
+    for (o = 0, len = _interpolators.length; o < len; o++) {
+      interpol = _interpolators[o];
+      if (m === interpol[0]) {
+        res = interpol[1](col1, col2, f, m);
+        break;
+      }
+    }
+    if (res == null) {
+      throw "color mode " + m + " is not supported";
+    }
+    return res.alpha(col1.alpha() + f * (col2.alpha() - col1.alpha()));
+  };
+
+  chroma.interpolate = interpolate;
+
+  Color.prototype.interpolate = function(col2, f, m) {
+    return interpolate(this, col2, f, m);
+  };
+
+  chroma.mix = interpolate;
+
+  Color.prototype.mix = Color.prototype.interpolate;
+
+  interpolate_rgb = function(col1, col2, f, m) {
+    var xyz0, xyz1;
+    xyz0 = col1._rgb;
+    xyz1 = col2._rgb;
+    return new Color(xyz0[0] + f * (xyz1[0] - xyz0[0]), xyz0[1] + f * (xyz1[1] - xyz0[1]), xyz0[2] + f * (xyz1[2] - xyz0[2]), m);
+  };
+
+  _interpolators.push(['rgb', interpolate_rgb]);
+
+  Color.prototype.luminance = function(lum, mode) {
+    var cur_lum, eps, max_iter, test;
+    if (mode == null) {
+      mode = 'rgb';
+    }
+    if (!arguments.length) {
+      return rgb2luminance(this._rgb);
+    }
+    if (lum === 0) {
+      this._rgb = [0, 0, 0, this._rgb[3]];
+    } else if (lum === 1) {
+      this._rgb = [255, 255, 255, this._rgb[3]];
+    } else {
+      eps = 1e-7;
+      max_iter = 20;
+      test = function(l, h) {
+        var lm, m;
+        m = l.interpolate(h, 0.5, mode);
+        lm = m.luminance();
+        if (Math.abs(lum - lm) < eps || !max_iter--) {
+          return m;
+        }
+        if (lm > lum) {
+          return test(l, m);
+        }
+        return test(m, h);
+      };
+      cur_lum = rgb2luminance(this._rgb);
+      this._rgb = (cur_lum > lum ? test(chroma('black'), this) : test(this, chroma('white'))).rgba();
+    }
+    return this;
+  };
+
+  temperature2rgb = function(kelvin) {
+    var b, g, r, temp;
+    temp = kelvin / 100;
+    if (temp < 66) {
+      r = 255;
+      g = -155.25485562709179 - 0.44596950469579133 * (g = temp - 2) + 104.49216199393888 * log(g);
+      b = temp < 20 ? 0 : -254.76935184120902 + 0.8274096064007395 * (b = temp - 10) + 115.67994401066147 * log(b);
+    } else {
+      r = 351.97690566805693 + 0.114206453784165 * (r = temp - 55) - 40.25366309332127 * log(r);
+      g = 325.4494125711974 + 0.07943456536662342 * (g = temp - 50) - 28.0852963507957 * log(g);
+      b = 255;
+    }
+    return [r, g, b];
+  };
+
+  rgb2temperature = function() {
+    var b, eps, g, maxTemp, minTemp, r, ref, rgb, temp;
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    minTemp = 1000;
+    maxTemp = 40000;
+    eps = 0.4;
+    while (maxTemp - minTemp > eps) {
+      temp = (maxTemp + minTemp) * 0.5;
+      rgb = temperature2rgb(temp);
+      if ((rgb[2] / rgb[0]) >= (b / r)) {
+        maxTemp = temp;
+      } else {
+        minTemp = temp;
+      }
+    }
+    return round(temp);
+  };
+
+  chroma.temperature = chroma.kelvin = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['temperature']), function(){});
+  };
+
+  _input.temperature = _input.kelvin = _input.K = temperature2rgb;
+
+  Color.prototype.temperature = function() {
+    return rgb2temperature(this._rgb);
+  };
+
+  Color.prototype.kelvin = Color.prototype.temperature;
+
+  chroma.contrast = function(a, b) {
+    var l1, l2, ref, ref1;
+    if ((ref = type(a)) === 'string' || ref === 'number') {
+      a = new Color(a);
+    }
+    if ((ref1 = type(b)) === 'string' || ref1 === 'number') {
+      b = new Color(b);
+    }
+    l1 = a.luminance();
+    l2 = b.luminance();
+    if (l1 > l2) {
+      return (l1 + 0.05) / (l2 + 0.05);
+    } else {
+      return (l2 + 0.05) / (l1 + 0.05);
+    }
+  };
+
+  chroma.distance = function(a, b, mode) {
+    var d, i, l1, l2, ref, ref1, sum_sq;
+    if (mode == null) {
+      mode = 'lab';
+    }
+    if ((ref = type(a)) === 'string' || ref === 'number') {
+      a = new Color(a);
+    }
+    if ((ref1 = type(b)) === 'string' || ref1 === 'number') {
+      b = new Color(b);
+    }
+    l1 = a.get(mode);
+    l2 = b.get(mode);
+    sum_sq = 0;
+    for (i in l1) {
+      d = (l1[i] || 0) - (l2[i] || 0);
+      sum_sq += d * d;
+    }
+    return Math.sqrt(sum_sq);
+  };
+
+  chroma.deltaE = function(a, b, L, C) {
+    var L1, L2, a1, a2, b1, b2, c1, c2, c4, dH2, delA, delB, delC, delL, f, h1, ref, ref1, ref2, ref3, sc, sh, sl, t, v1, v2, v3;
+    if (L == null) {
+      L = 1;
+    }
+    if (C == null) {
+      C = 1;
+    }
+    if ((ref = type(a)) === 'string' || ref === 'number') {
+      a = new Color(a);
+    }
+    if ((ref1 = type(b)) === 'string' || ref1 === 'number') {
+      b = new Color(b);
+    }
+    ref2 = a.lab(), L1 = ref2[0], a1 = ref2[1], b1 = ref2[2];
+    ref3 = b.lab(), L2 = ref3[0], a2 = ref3[1], b2 = ref3[2];
+    c1 = sqrt(a1 * a1 + b1 * b1);
+    c2 = sqrt(a2 * a2 + b2 * b2);
+    sl = L1 < 16.0 ? 0.511 : (0.040975 * L1) / (1.0 + 0.01765 * L1);
+    sc = (0.0638 * c1) / (1.0 + 0.0131 * c1) + 0.638;
+    h1 = c1 < 0.000001 ? 0.0 : (atan2(b1, a1) * 180.0) / PI;
+    while (h1 < 0) {
+      h1 += 360;
+    }
+    while (h1 >= 360) {
+      h1 -= 360;
+    }
+    t = (h1 >= 164.0) && (h1 <= 345.0) ? 0.56 + abs(0.2 * cos((PI * (h1 + 168.0)) / 180.0)) : 0.36 + abs(0.4 * cos((PI * (h1 + 35.0)) / 180.0));
+    c4 = c1 * c1 * c1 * c1;
+    f = sqrt(c4 / (c4 + 1900.0));
+    sh = sc * (f * t + 1.0 - f);
+    delL = L1 - L2;
+    delC = c1 - c2;
+    delA = a1 - a2;
+    delB = b1 - b2;
+    dH2 = delA * delA + delB * delB - delC * delC;
+    v1 = delL / (L * sl);
+    v2 = delC / (C * sc);
+    v3 = sh;
+    return sqrt(v1 * v1 + v2 * v2 + (dH2 / (v3 * v3)));
+  };
+
+  Color.prototype.get = function(modechan) {
+    var channel, i, me, mode, ref, src;
+    me = this;
+    ref = modechan.split('.'), mode = ref[0], channel = ref[1];
+    src = me[mode]();
+    if (channel) {
+      i = mode.indexOf(channel);
+      if (i > -1) {
+        return src[i];
+      } else {
+        return console.warn('unknown channel ' + channel + ' in mode ' + mode);
+      }
+    } else {
+      return src;
+    }
+  };
+
+  Color.prototype.set = function(modechan, value) {
+    var channel, i, me, mode, ref, src;
+    me = this;
+    ref = modechan.split('.'), mode = ref[0], channel = ref[1];
+    if (channel) {
+      src = me[mode]();
+      i = mode.indexOf(channel);
+      if (i > -1) {
+        if (type(value) === 'string') {
+          switch (value.charAt(0)) {
+            case '+':
+              src[i] += +value;
+              break;
+            case '-':
+              src[i] += +value;
+              break;
+            case '*':
+              src[i] *= +(value.substr(1));
+              break;
+            case '/':
+              src[i] /= +(value.substr(1));
+              break;
+            default:
+              src[i] = +value;
+          }
+        } else {
+          src[i] = value;
+        }
+      } else {
+        console.warn('unknown channel ' + channel + ' in mode ' + mode);
+      }
+    } else {
+      src = value;
+    }
+    return chroma(src, mode).alpha(me.alpha());
+  };
+
+  Color.prototype.clipped = function() {
+    return this._rgb._clipped || false;
+  };
+
+  Color.prototype.alpha = function(a) {
+    if (arguments.length) {
+      return chroma.rgb([this._rgb[0], this._rgb[1], this._rgb[2], a]);
+    }
+    return this._rgb[3];
+  };
+
+  Color.prototype.darken = function(amount) {
+    var lab, me;
+    if (amount == null) {
+      amount = 1;
+    }
+    me = this;
+    lab = me.lab();
+    lab[0] -= LAB_CONSTANTS.Kn * amount;
+    return chroma.lab(lab).alpha(me.alpha());
+  };
+
+  Color.prototype.brighten = function(amount) {
+    if (amount == null) {
+      amount = 1;
+    }
+    return this.darken(-amount);
+  };
+
+  Color.prototype.darker = Color.prototype.darken;
+
+  Color.prototype.brighter = Color.prototype.brighten;
+
+  Color.prototype.saturate = function(amount) {
+    var lch, me;
+    if (amount == null) {
+      amount = 1;
+    }
+    me = this;
+    lch = me.lch();
+    lch[1] += amount * LAB_CONSTANTS.Kn;
+    if (lch[1] < 0) {
+      lch[1] = 0;
+    }
+    return chroma.lch(lch).alpha(me.alpha());
+  };
+
+  Color.prototype.desaturate = function(amount) {
+    if (amount == null) {
+      amount = 1;
+    }
+    return this.saturate(-amount);
+  };
+
+  Color.prototype.premultiply = function() {
+    var a, rgb;
+    rgb = this.rgb();
+    a = this.alpha();
+    return chroma(rgb[0] * a, rgb[1] * a, rgb[2] * a, a);
+  };
+
+  blend = function(bottom, top, mode) {
+    if (!blend[mode]) {
+      throw 'unknown blend mode ' + mode;
+    }
+    return blend[mode](bottom, top);
+  };
+
+  blend_f = function(f) {
+    return function(bottom, top) {
+      var c0, c1;
+      c0 = chroma(top).rgb();
+      c1 = chroma(bottom).rgb();
+      return chroma(f(c0, c1), 'rgb');
+    };
+  };
+
+  each = function(f) {
+    return function(c0, c1) {
+      var i, o, out;
+      out = [];
+      for (i = o = 0; o <= 3; i = ++o) {
+        out[i] = f(c0[i], c1[i]);
+      }
+      return out;
+    };
+  };
+
+  normal = function(a, b) {
+    return a;
+  };
+
+  multiply = function(a, b) {
+    return a * b / 255;
+  };
+
+  darken = function(a, b) {
+    if (a > b) {
+      return b;
+    } else {
+      return a;
+    }
+  };
+
+  lighten = function(a, b) {
+    if (a > b) {
+      return a;
+    } else {
+      return b;
+    }
+  };
+
+  screen = function(a, b) {
+    return 255 * (1 - (1 - a / 255) * (1 - b / 255));
+  };
+
+  overlay = function(a, b) {
+    if (b < 128) {
+      return 2 * a * b / 255;
+    } else {
+      return 255 * (1 - 2 * (1 - a / 255) * (1 - b / 255));
+    }
+  };
+
+  burn = function(a, b) {
+    return 255 * (1 - (1 - b / 255) / (a / 255));
+  };
+
+  dodge = function(a, b) {
+    if (a === 255) {
+      return 255;
+    }
+    a = 255 * (b / 255) / (1 - a / 255);
+    if (a > 255) {
+      return 255;
+    } else {
+      return a;
+    }
+  };
+
+  blend.normal = blend_f(each(normal));
+
+  blend.multiply = blend_f(each(multiply));
+
+  blend.screen = blend_f(each(screen));
+
+  blend.overlay = blend_f(each(overlay));
+
+  blend.darken = blend_f(each(darken));
+
+  blend.lighten = blend_f(each(lighten));
+
+  blend.dodge = blend_f(each(dodge));
+
+  blend.burn = blend_f(each(burn));
+
+  chroma.blend = blend;
+
+  chroma.analyze = function(data) {
+    var len, o, r, val;
+    r = {
+      min: Number.MAX_VALUE,
+      max: Number.MAX_VALUE * -1,
+      sum: 0,
+      values: [],
+      count: 0
+    };
+    for (o = 0, len = data.length; o < len; o++) {
+      val = data[o];
+      if ((val != null) && !isNaN(val)) {
+        r.values.push(val);
+        r.sum += val;
+        if (val < r.min) {
+          r.min = val;
+        }
+        if (val > r.max) {
+          r.max = val;
+        }
+        r.count += 1;
+      }
+    }
+    r.domain = [r.min, r.max];
+    r.limits = function(mode, num) {
+      return chroma.limits(r, mode, num);
+    };
+    return r;
+  };
+
+  chroma.scale = function(colors, positions) {
+    var _classes, _colorCache, _colors, _correctLightness, _domain, _fixed, _max, _min, _mode, _nacol, _out, _padding, _pos, _spread, _useCache, classifyValue, f, getClass, getColor, resetCache, setColors, tmap;
+    _mode = 'rgb';
+    _nacol = chroma('#ccc');
+    _spread = 0;
+    _fixed = false;
+    _domain = [0, 1];
+    _pos = [];
+    _padding = [0, 0];
+    _classes = false;
+    _colors = [];
+    _out = false;
+    _min = 0;
+    _max = 1;
+    _correctLightness = false;
+    _colorCache = {};
+    _useCache = true;
+    setColors = function(colors) {
+      var c, col, o, ref, ref1, w;
+      if (colors == null) {
+        colors = ['#fff', '#000'];
+      }
+      if ((colors != null) && type(colors) === 'string' && (chroma.brewer != null)) {
+        colors = chroma.brewer[colors] || chroma.brewer[colors.toLowerCase()] || colors;
+      }
+      if (type(colors) === 'array') {
+        colors = colors.slice(0);
+        for (c = o = 0, ref = colors.length - 1; 0 <= ref ? o <= ref : o >= ref; c = 0 <= ref ? ++o : --o) {
+          col = colors[c];
+          if (type(col) === "string") {
+            colors[c] = chroma(col);
+          }
+        }
+        _pos.length = 0;
+        for (c = w = 0, ref1 = colors.length - 1; 0 <= ref1 ? w <= ref1 : w >= ref1; c = 0 <= ref1 ? ++w : --w) {
+          _pos.push(c / (colors.length - 1));
+        }
+      }
+      resetCache();
+      return _colors = colors;
+    };
+    getClass = function(value) {
+      var i, n;
+      if (_classes != null) {
+        n = _classes.length - 1;
+        i = 0;
+        while (i < n && value >= _classes[i]) {
+          i++;
+        }
+        return i - 1;
+      }
+      return 0;
+    };
+    tmap = function(t) {
+      return t;
+    };
+    classifyValue = function(value) {
+      var i, maxc, minc, n, val;
+      val = value;
+      if (_classes.length > 2) {
+        n = _classes.length - 1;
+        i = getClass(value);
+        minc = _classes[0] + (_classes[1] - _classes[0]) * (0 + _spread * 0.5);
+        maxc = _classes[n - 1] + (_classes[n] - _classes[n - 1]) * (1 - _spread * 0.5);
+        val = _min + ((_classes[i] + (_classes[i + 1] - _classes[i]) * 0.5 - minc) / (maxc - minc)) * (_max - _min);
+      }
+      return val;
+    };
+    getColor = function(val, bypassMap) {
+      var c, col, i, k, o, p, ref, t;
+      if (bypassMap == null) {
+        bypassMap = false;
+      }
+      if (isNaN(val)) {
+        return _nacol;
+      }
+      if (!bypassMap) {
+        if (_classes && _classes.length > 2) {
+          c = getClass(val);
+          t = c / (_classes.length - 2);
+          t = _padding[0] + (t * (1 - _padding[0] - _padding[1]));
+        } else if (_max !== _min) {
+          t = (val - _min) / (_max - _min);
+          t = _padding[0] + (t * (1 - _padding[0] - _padding[1]));
+          t = Math.min(1, Math.max(0, t));
+        } else {
+          t = 1;
+        }
+      } else {
+        t = val;
+      }
+      if (!bypassMap) {
+        t = tmap(t);
+      }
+      k = Math.floor(t * 10000);
+      if (_useCache && _colorCache[k]) {
+        col = _colorCache[k];
+      } else {
+        if (type(_colors) === 'array') {
+          for (i = o = 0, ref = _pos.length - 1; 0 <= ref ? o <= ref : o >= ref; i = 0 <= ref ? ++o : --o) {
+            p = _pos[i];
+            if (t <= p) {
+              col = _colors[i];
+              break;
+            }
+            if (t >= p && i === _pos.length - 1) {
+              col = _colors[i];
+              break;
+            }
+            if (t > p && t < _pos[i + 1]) {
+              t = (t - p) / (_pos[i + 1] - p);
+              col = chroma.interpolate(_colors[i], _colors[i + 1], t, _mode);
+              break;
+            }
+          }
+        } else if (type(_colors) === 'function') {
+          col = _colors(t);
+        }
+        if (_useCache) {
+          _colorCache[k] = col;
+        }
+      }
+      return col;
+    };
+    resetCache = function() {
+      return _colorCache = {};
+    };
+    setColors(colors);
+    f = function(v) {
+      var c;
+      c = chroma(getColor(v));
+      if (_out && c[_out]) {
+        return c[_out]();
+      } else {
+        return c;
+      }
+    };
+    f.classes = function(classes) {
+      var d;
+      if (classes != null) {
+        if (type(classes) === 'array') {
+          _classes = classes;
+          _domain = [classes[0], classes[classes.length - 1]];
+        } else {
+          d = chroma.analyze(_domain);
+          if (classes === 0) {
+            _classes = [d.min, d.max];
+          } else {
+            _classes = chroma.limits(d, 'e', classes);
+          }
+        }
+        return f;
+      }
+      return _classes;
+    };
+    f.domain = function(domain) {
+      var c, d, k, len, o, ref, w;
+      if (!arguments.length) {
+        return _domain;
+      }
+      _min = domain[0];
+      _max = domain[domain.length - 1];
+      _pos = [];
+      k = _colors.length;
+      if (domain.length === k && _min !== _max) {
+        for (o = 0, len = domain.length; o < len; o++) {
+          d = domain[o];
+          _pos.push((d - _min) / (_max - _min));
+        }
+      } else {
+        for (c = w = 0, ref = k - 1; 0 <= ref ? w <= ref : w >= ref; c = 0 <= ref ? ++w : --w) {
+          _pos.push(c / (k - 1));
+        }
+      }
+      _domain = [_min, _max];
+      return f;
+    };
+    f.mode = function(_m) {
+      if (!arguments.length) {
+        return _mode;
+      }
+      _mode = _m;
+      resetCache();
+      return f;
+    };
+    f.range = function(colors, _pos) {
+      setColors(colors, _pos);
+      return f;
+    };
+    f.out = function(_o) {
+      _out = _o;
+      return f;
+    };
+    f.spread = function(val) {
+      if (!arguments.length) {
+        return _spread;
+      }
+      _spread = val;
+      return f;
+    };
+    f.correctLightness = function(v) {
+      if (v == null) {
+        v = true;
+      }
+      _correctLightness = v;
+      resetCache();
+      if (_correctLightness) {
+        tmap = function(t) {
+          var L0, L1, L_actual, L_diff, L_ideal, max_iter, pol, t0, t1;
+          L0 = getColor(0, true).lab()[0];
+          L1 = getColor(1, true).lab()[0];
+          pol = L0 > L1;
+          L_actual = getColor(t, true).lab()[0];
+          L_ideal = L0 + (L1 - L0) * t;
+          L_diff = L_actual - L_ideal;
+          t0 = 0;
+          t1 = 1;
+          max_iter = 20;
+          while (Math.abs(L_diff) > 1e-2 && max_iter-- > 0) {
+            (function() {
+              if (pol) {
+                L_diff *= -1;
+              }
+              if (L_diff < 0) {
+                t0 = t;
+                t += (t1 - t) * 0.5;
+              } else {
+                t1 = t;
+                t += (t0 - t) * 0.5;
+              }
+              L_actual = getColor(t, true).lab()[0];
+              return L_diff = L_actual - L_ideal;
+            })();
+          }
+          return t;
+        };
+      } else {
+        tmap = function(t) {
+          return t;
+        };
+      }
+      return f;
+    };
+    f.padding = function(p) {
+      if (p != null) {
+        if (type(p) === 'number') {
+          p = [p, p];
+        }
+        _padding = p;
+        return f;
+      } else {
+        return _padding;
+      }
+    };
+    f.colors = function(numColors, out) {
+      var dd, dm, i, o, ref, results, samples, w;
+      if (out == null) {
+        out = 'hex';
+      }
+      if (arguments.length === 0) {
+        return _colors.map(function(c) {
+          return c[out]();
+        });
+      }
+      if (numColors) {
+        if (numColors === 1) {
+          return f(0.5)[out]();
+        }
+        dm = _domain[0];
+        dd = _domain[1] - dm;
+        return (function() {
+          results = [];
+          for (var o = 0; 0 <= numColors ? o < numColors : o > numColors; 0 <= numColors ? o++ : o--){ results.push(o); }
+          return results;
+        }).apply(this).map(function(i) {
+          return f(dm + i / (numColors - 1) * dd)[out]();
+        });
+      }
+      colors = [];
+      samples = [];
+      if (_classes && _classes.length > 2) {
+        for (i = w = 1, ref = _classes.length; 1 <= ref ? w < ref : w > ref; i = 1 <= ref ? ++w : --w) {
+          samples.push((_classes[i - 1] + _classes[i]) * 0.5);
+        }
+      } else {
+        samples = _domain;
+      }
+      return samples.map(function(v) {
+        return f(v)[out]();
+      });
+    };
+    f.cache = function(c) {
+      if (c != null) {
+        return _useCache = c;
+      } else {
+        return _useCache;
+      }
+    };
+    return f;
+  };
+
+  if (chroma.scales == null) {
+    chroma.scales = {};
+  }
+
+  chroma.scales.cool = function() {
+    return chroma.scale([chroma.hsl(180, 1, .9), chroma.hsl(250, .7, .4)]);
+  };
+
+  chroma.scales.hot = function() {
+    return chroma.scale(['#000', '#f00', '#ff0', '#fff'], [0, .25, .75, 1]).mode('rgb');
+  };
+
+  chroma.analyze = function(data, key, filter) {
+    var add, k, len, o, r, val, visit;
+    r = {
+      min: Number.MAX_VALUE,
+      max: Number.MAX_VALUE * -1,
+      sum: 0,
+      values: [],
+      count: 0
+    };
+    if (filter == null) {
+      filter = function() {
+        return true;
+      };
+    }
+    add = function(val) {
+      if ((val != null) && !isNaN(val)) {
+        r.values.push(val);
+        r.sum += val;
+        if (val < r.min) {
+          r.min = val;
+        }
+        if (val > r.max) {
+          r.max = val;
+        }
+        r.count += 1;
+      }
+    };
+    visit = function(val, k) {
+      if (filter(val, k)) {
+        if ((key != null) && type(key) === 'function') {
+          return add(key(val));
+        } else if ((key != null) && type(key) === 'string' || type(key) === 'number') {
+          return add(val[key]);
+        } else {
+          return add(val);
+        }
+      }
+    };
+    if (type(data) === 'array') {
+      for (o = 0, len = data.length; o < len; o++) {
+        val = data[o];
+        visit(val);
+      }
+    } else {
+      for (k in data) {
+        val = data[k];
+        visit(val, k);
+      }
+    }
+    r.domain = [r.min, r.max];
+    r.limits = function(mode, num) {
+      return chroma.limits(r, mode, num);
+    };
+    return r;
+  };
+
+  chroma.limits = function(data, mode, num) {
+    var aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, assignments, best, centroids, cluster, clusterSizes, dist, i, j, kClusters, limits, max_log, min, min_log, mindist, n, nb_iters, newCentroids, o, p, pb, pr, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, repeat, sum, tmpKMeansBreaks, v, value, values, w;
+    if (mode == null) {
+      mode = 'equal';
+    }
+    if (num == null) {
+      num = 7;
+    }
+    if (type(data) === 'array') {
+      data = chroma.analyze(data);
+    }
+    min = data.min;
+    max = data.max;
+    sum = data.sum;
+    values = data.values.sort(function(a, b) {
+      return a - b;
+    });
+    if (num === 1) {
+      return [min, max];
+    }
+    limits = [];
+    if (mode.substr(0, 1) === 'c') {
+      limits.push(min);
+      limits.push(max);
+    }
+    if (mode.substr(0, 1) === 'e') {
+      limits.push(min);
+      for (i = o = 1, ref = num - 1; 1 <= ref ? o <= ref : o >= ref; i = 1 <= ref ? ++o : --o) {
+        limits.push(min + (i / num) * (max - min));
+      }
+      limits.push(max);
+    } else if (mode.substr(0, 1) === 'l') {
+      if (min <= 0) {
+        throw 'Logarithmic scales are only possible for values > 0';
+      }
+      min_log = Math.LOG10E * log(min);
+      max_log = Math.LOG10E * log(max);
+      limits.push(min);
+      for (i = w = 1, ref1 = num - 1; 1 <= ref1 ? w <= ref1 : w >= ref1; i = 1 <= ref1 ? ++w : --w) {
+        limits.push(pow(10, min_log + (i / num) * (max_log - min_log)));
+      }
+      limits.push(max);
+    } else if (mode.substr(0, 1) === 'q') {
+      limits.push(min);
+      for (i = aa = 1, ref2 = num - 1; 1 <= ref2 ? aa <= ref2 : aa >= ref2; i = 1 <= ref2 ? ++aa : --aa) {
+        p = (values.length - 1) * i / num;
+        pb = floor(p);
+        if (pb === p) {
+          limits.push(values[pb]);
+        } else {
+          pr = p - pb;
+          limits.push(values[pb] * (1 - pr) + values[pb + 1] * pr);
+        }
+      }
+      limits.push(max);
+    } else if (mode.substr(0, 1) === 'k') {
+
+      /*
+      implementation based on
+      http://code.google.com/p/figue/source/browse/trunk/figue.js#336
+      simplified for 1-d input values
+       */
+      n = values.length;
+      assignments = new Array(n);
+      clusterSizes = new Array(num);
+      repeat = true;
+      nb_iters = 0;
+      centroids = null;
+      centroids = [];
+      centroids.push(min);
+      for (i = ab = 1, ref3 = num - 1; 1 <= ref3 ? ab <= ref3 : ab >= ref3; i = 1 <= ref3 ? ++ab : --ab) {
+        centroids.push(min + (i / num) * (max - min));
+      }
+      centroids.push(max);
+      while (repeat) {
+        for (j = ac = 0, ref4 = num - 1; 0 <= ref4 ? ac <= ref4 : ac >= ref4; j = 0 <= ref4 ? ++ac : --ac) {
+          clusterSizes[j] = 0;
+        }
+        for (i = ad = 0, ref5 = n - 1; 0 <= ref5 ? ad <= ref5 : ad >= ref5; i = 0 <= ref5 ? ++ad : --ad) {
+          value = values[i];
+          mindist = Number.MAX_VALUE;
+          for (j = ae = 0, ref6 = num - 1; 0 <= ref6 ? ae <= ref6 : ae >= ref6; j = 0 <= ref6 ? ++ae : --ae) {
+            dist = abs(centroids[j] - value);
+            if (dist < mindist) {
+              mindist = dist;
+              best = j;
+            }
+          }
+          clusterSizes[best]++;
+          assignments[i] = best;
+        }
+        newCentroids = new Array(num);
+        for (j = af = 0, ref7 = num - 1; 0 <= ref7 ? af <= ref7 : af >= ref7; j = 0 <= ref7 ? ++af : --af) {
+          newCentroids[j] = null;
+        }
+        for (i = ag = 0, ref8 = n - 1; 0 <= ref8 ? ag <= ref8 : ag >= ref8; i = 0 <= ref8 ? ++ag : --ag) {
+          cluster = assignments[i];
+          if (newCentroids[cluster] === null) {
+            newCentroids[cluster] = values[i];
+          } else {
+            newCentroids[cluster] += values[i];
+          }
+        }
+        for (j = ah = 0, ref9 = num - 1; 0 <= ref9 ? ah <= ref9 : ah >= ref9; j = 0 <= ref9 ? ++ah : --ah) {
+          newCentroids[j] *= 1 / clusterSizes[j];
+        }
+        repeat = false;
+        for (j = ai = 0, ref10 = num - 1; 0 <= ref10 ? ai <= ref10 : ai >= ref10; j = 0 <= ref10 ? ++ai : --ai) {
+          if (newCentroids[j] !== centroids[i]) {
+            repeat = true;
+            break;
+          }
+        }
+        centroids = newCentroids;
+        nb_iters++;
+        if (nb_iters > 200) {
+          repeat = false;
+        }
+      }
+      kClusters = {};
+      for (j = aj = 0, ref11 = num - 1; 0 <= ref11 ? aj <= ref11 : aj >= ref11; j = 0 <= ref11 ? ++aj : --aj) {
+        kClusters[j] = [];
+      }
+      for (i = ak = 0, ref12 = n - 1; 0 <= ref12 ? ak <= ref12 : ak >= ref12; i = 0 <= ref12 ? ++ak : --ak) {
+        cluster = assignments[i];
+        kClusters[cluster].push(values[i]);
+      }
+      tmpKMeansBreaks = [];
+      for (j = al = 0, ref13 = num - 1; 0 <= ref13 ? al <= ref13 : al >= ref13; j = 0 <= ref13 ? ++al : --al) {
+        tmpKMeansBreaks.push(kClusters[j][0]);
+        tmpKMeansBreaks.push(kClusters[j][kClusters[j].length - 1]);
+      }
+      tmpKMeansBreaks = tmpKMeansBreaks.sort(function(a, b) {
+        return a - b;
+      });
+      limits.push(tmpKMeansBreaks[0]);
+      for (i = am = 1, ref14 = tmpKMeansBreaks.length - 1; am <= ref14; i = am += 2) {
+        v = tmpKMeansBreaks[i];
+        if (!isNaN(v) && limits.indexOf(v) === -1) {
+          limits.push(v);
+        }
+      }
+    }
+    return limits;
+  };
+
+  hsi2rgb = function(h, s, i) {
+
+    /*
+    borrowed from here:
+    http://hummer.stanford.edu/museinfo/doc/examples/humdrum/keyscape2/hsi2rgb.cpp
+     */
+    var args, b, g, r;
+    args = unpack(arguments);
+    h = args[0], s = args[1], i = args[2];
+    if (isNaN(h)) {
+      h = 0;
+    }
+    h /= 360;
+    if (h < 1 / 3) {
+      b = (1 - s) / 3;
+      r = (1 + s * cos(TWOPI * h) / cos(PITHIRD - TWOPI * h)) / 3;
+      g = 1 - (b + r);
+    } else if (h < 2 / 3) {
+      h -= 1 / 3;
+      r = (1 - s) / 3;
+      g = (1 + s * cos(TWOPI * h) / cos(PITHIRD - TWOPI * h)) / 3;
+      b = 1 - (r + g);
+    } else {
+      h -= 2 / 3;
+      g = (1 - s) / 3;
+      b = (1 + s * cos(TWOPI * h) / cos(PITHIRD - TWOPI * h)) / 3;
+      r = 1 - (g + b);
+    }
+    r = limit(i * r * 3);
+    g = limit(i * g * 3);
+    b = limit(i * b * 3);
+    return [r * 255, g * 255, b * 255, args.length > 3 ? args[3] : 1];
+  };
+
+  rgb2hsi = function() {
+
+    /*
+    borrowed from here:
+    http://hummer.stanford.edu/museinfo/doc/examples/humdrum/keyscape2/rgb2hsi.cpp
+     */
+    var b, g, h, i, min, r, ref, s;
+    ref = unpack(arguments), r = ref[0], g = ref[1], b = ref[2];
+    TWOPI = Math.PI * 2;
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    min = Math.min(r, g, b);
+    i = (r + g + b) / 3;
+    s = 1 - min / i;
+    if (s === 0) {
+      h = 0;
+    } else {
+      h = ((r - g) + (r - b)) / 2;
+      h /= Math.sqrt((r - g) * (r - g) + (r - b) * (g - b));
+      h = Math.acos(h);
+      if (b > g) {
+        h = TWOPI - h;
+      }
+      h /= TWOPI;
+    }
+    return [h * 360, s, i];
+  };
+
+  chroma.hsi = function() {
+    return (function(func, args, ctor) {
+      ctor.prototype = func.prototype;
+      var child = new ctor, result = func.apply(child, args);
+      return Object(result) === result ? result : child;
+    })(Color, slice.call(arguments).concat(['hsi']), function(){});
+  };
+
+  _input.hsi = hsi2rgb;
+
+  Color.prototype.hsi = function() {
+    return rgb2hsi(this._rgb);
+  };
+
+  interpolate_hsx = function(col1, col2, f, m) {
+    var dh, hue, hue0, hue1, lbv, lbv0, lbv1, res, sat, sat0, sat1, xyz0, xyz1;
+    if (m === 'hsl') {
+      xyz0 = col1.hsl();
+      xyz1 = col2.hsl();
+    } else if (m === 'hsv') {
+      xyz0 = col1.hsv();
+      xyz1 = col2.hsv();
+    } else if (m === 'hcg') {
+      xyz0 = col1.hcg();
+      xyz1 = col2.hcg();
+    } else if (m === 'hsi') {
+      xyz0 = col1.hsi();
+      xyz1 = col2.hsi();
+    } else if (m === 'lch' || m === 'hcl') {
+      m = 'hcl';
+      xyz0 = col1.hcl();
+      xyz1 = col2.hcl();
+    }
+    if (m.substr(0, 1) === 'h') {
+      hue0 = xyz0[0], sat0 = xyz0[1], lbv0 = xyz0[2];
+      hue1 = xyz1[0], sat1 = xyz1[1], lbv1 = xyz1[2];
+    }
+    if (!isNaN(hue0) && !isNaN(hue1)) {
+      if (hue1 > hue0 && hue1 - hue0 > 180) {
+        dh = hue1 - (hue0 + 360);
+      } else if (hue1 < hue0 && hue0 - hue1 > 180) {
+        dh = hue1 + 360 - hue0;
+      } else {
+        dh = hue1 - hue0;
+      }
+      hue = hue0 + f * dh;
+    } else if (!isNaN(hue0)) {
+      hue = hue0;
+      if ((lbv1 === 1 || lbv1 === 0) && m !== 'hsv') {
+        sat = sat0;
+      }
+    } else if (!isNaN(hue1)) {
+      hue = hue1;
+      if ((lbv0 === 1 || lbv0 === 0) && m !== 'hsv') {
+        sat = sat1;
+      }
+    } else {
+      hue = Number.NaN;
+    }
+    if (sat == null) {
+      sat = sat0 + f * (sat1 - sat0);
+    }
+    lbv = lbv0 + f * (lbv1 - lbv0);
+    return res = chroma[m](hue, sat, lbv);
+  };
+
+  _interpolators = _interpolators.concat((function() {
+    var len, o, ref, results;
+    ref = ['hsv', 'hsl', 'hsi', 'hcl', 'lch', 'hcg'];
+    results = [];
+    for (o = 0, len = ref.length; o < len; o++) {
+      m = ref[o];
+      results.push([m, interpolate_hsx]);
+    }
+    return results;
+  })());
+
+  interpolate_num = function(col1, col2, f, m) {
+    var n1, n2;
+    n1 = col1.num();
+    n2 = col2.num();
+    return chroma.num(n1 + (n2 - n1) * f, 'num');
+  };
+
+  _interpolators.push(['num', interpolate_num]);
+
+  interpolate_lab = function(col1, col2, f, m) {
+    var res, xyz0, xyz1;
+    xyz0 = col1.lab();
+    xyz1 = col2.lab();
+    return res = new Color(xyz0[0] + f * (xyz1[0] - xyz0[0]), xyz0[1] + f * (xyz1[1] - xyz0[1]), xyz0[2] + f * (xyz1[2] - xyz0[2]), m);
+  };
+
+  _interpolators.push(['lab', interpolate_lab]);
+
+}).call(this);
+
+},{}],8:[function(require,module,exports){
 // https://d3js.org Version 4.7.2. Copyright 2017 Mike Bostock.
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
@@ -18102,7 +20357,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
 
-},{}],13:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -18188,7 +20443,7 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
-},{"./emptyFunction":20,"_process":185}],14:[function(require,module,exports){
+},{"./emptyFunction":16,"_process":178}],10:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18224,7 +20479,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],15:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 /**
@@ -18256,7 +20511,7 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-},{}],16:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18296,7 +20551,7 @@ function camelizeStyleName(string) {
 }
 
 module.exports = camelizeStyleName;
-},{"./camelize":15}],17:[function(require,module,exports){
+},{"./camelize":11}],13:[function(require,module,exports){
 'use strict';
 
 /**
@@ -18336,7 +20591,7 @@ function containsNode(outerNode, innerNode) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":30}],18:[function(require,module,exports){
+},{"./isTextNode":26}],14:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -18465,7 +20720,7 @@ function createArrayFromMixed(obj) {
 
 module.exports = createArrayFromMixed;
 }).call(this,require('_process'))
-},{"./invariant":28,"_process":185}],19:[function(require,module,exports){
+},{"./invariant":24,"_process":178}],15:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -18551,7 +20806,7 @@ function createNodesFromMarkup(markup, handleScript) {
 
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":14,"./createArrayFromMixed":18,"./getMarkupWrap":24,"./invariant":28,"_process":185}],20:[function(require,module,exports){
+},{"./ExecutionEnvironment":10,"./createArrayFromMixed":14,"./getMarkupWrap":20,"./invariant":24,"_process":178}],16:[function(require,module,exports){
 "use strict";
 
 /**
@@ -18590,7 +20845,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-},{}],21:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -18612,7 +20867,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
-},{"_process":185}],22:[function(require,module,exports){
+},{"_process":178}],18:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18639,7 +20894,7 @@ function focusNode(node) {
 }
 
 module.exports = focusNode;
-},{}],23:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 'use strict';
 
 /**
@@ -18674,7 +20929,7 @@ function getActiveElement() /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-},{}],24:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -18771,7 +21026,7 @@ function getMarkupWrap(nodeName) {
 
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":14,"./invariant":28,"_process":185}],25:[function(require,module,exports){
+},{"./ExecutionEnvironment":10,"./invariant":24,"_process":178}],21:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18810,7 +21065,7 @@ function getUnboundedScrollPosition(scrollable) {
 }
 
 module.exports = getUnboundedScrollPosition;
-},{}],26:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 'use strict';
 
 /**
@@ -18843,7 +21098,7 @@ function hyphenate(string) {
 }
 
 module.exports = hyphenate;
-},{}],27:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18882,7 +21137,7 @@ function hyphenateStyleName(string) {
 }
 
 module.exports = hyphenateStyleName;
-},{"./hyphenate":26}],28:[function(require,module,exports){
+},{"./hyphenate":22}],24:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -18940,7 +21195,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":185}],29:[function(require,module,exports){
+},{"_process":178}],25:[function(require,module,exports){
 'use strict';
 
 /**
@@ -18963,7 +21218,7 @@ function isNode(object) {
 }
 
 module.exports = isNode;
-},{}],30:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 'use strict';
 
 /**
@@ -18988,7 +21243,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":29}],31:[function(require,module,exports){
+},{"./isNode":25}],27:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19018,7 +21273,7 @@ function memoizeStringOnly(callback) {
 }
 
 module.exports = memoizeStringOnly;
-},{}],32:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19041,7 +21296,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = performance || {};
-},{"./ExecutionEnvironment":14}],33:[function(require,module,exports){
+},{"./ExecutionEnvironment":10}],29:[function(require,module,exports){
 'use strict';
 
 /**
@@ -19075,7 +21330,7 @@ if (performance.now) {
 }
 
 module.exports = performanceNow;
-},{"./performance":32}],34:[function(require,module,exports){
+},{"./performance":28}],30:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19143,7 +21398,7 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
-},{}],35:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -19212,21 +21467,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
-},{"./emptyFunction":20,"_process":185}],36:[function(require,module,exports){
-'use strict';
-var toString = Object.prototype.toString;
-
-module.exports = function (x) {
-	var prototype;
-	return toString.call(x) === '[object Object]' && (prototype = Object.getPrototypeOf(x), prototype === null || prototype === Object.getPrototypeOf({}));
-};
-
-},{}],37:[function(require,module,exports){
-function lerp(v0, v1, t) {
-    return v0*(1-t)+v1*t
-}
-module.exports = lerp
-},{}],38:[function(require,module,exports){
+},{"./emptyFunction":16,"_process":178}],32:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -19235,7 +21476,7 @@ var DataView = getNative(root, 'DataView');
 
 module.exports = DataView;
 
-},{"./_getNative":104,"./_root":142}],39:[function(require,module,exports){
+},{"./_getNative":98,"./_root":136}],33:[function(require,module,exports){
 var hashClear = require('./_hashClear'),
     hashDelete = require('./_hashDelete'),
     hashGet = require('./_hashGet'),
@@ -19269,7 +21510,7 @@ Hash.prototype.set = hashSet;
 
 module.exports = Hash;
 
-},{"./_hashClear":110,"./_hashDelete":111,"./_hashGet":112,"./_hashHas":113,"./_hashSet":114}],40:[function(require,module,exports){
+},{"./_hashClear":104,"./_hashDelete":105,"./_hashGet":106,"./_hashHas":107,"./_hashSet":108}],34:[function(require,module,exports){
 var listCacheClear = require('./_listCacheClear'),
     listCacheDelete = require('./_listCacheDelete'),
     listCacheGet = require('./_listCacheGet'),
@@ -19303,7 +21544,7 @@ ListCache.prototype.set = listCacheSet;
 
 module.exports = ListCache;
 
-},{"./_listCacheClear":123,"./_listCacheDelete":124,"./_listCacheGet":125,"./_listCacheHas":126,"./_listCacheSet":127}],41:[function(require,module,exports){
+},{"./_listCacheClear":117,"./_listCacheDelete":118,"./_listCacheGet":119,"./_listCacheHas":120,"./_listCacheSet":121}],35:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -19312,7 +21553,7 @@ var Map = getNative(root, 'Map');
 
 module.exports = Map;
 
-},{"./_getNative":104,"./_root":142}],42:[function(require,module,exports){
+},{"./_getNative":98,"./_root":136}],36:[function(require,module,exports){
 var mapCacheClear = require('./_mapCacheClear'),
     mapCacheDelete = require('./_mapCacheDelete'),
     mapCacheGet = require('./_mapCacheGet'),
@@ -19346,7 +21587,7 @@ MapCache.prototype.set = mapCacheSet;
 
 module.exports = MapCache;
 
-},{"./_mapCacheClear":128,"./_mapCacheDelete":129,"./_mapCacheGet":130,"./_mapCacheHas":131,"./_mapCacheSet":132}],43:[function(require,module,exports){
+},{"./_mapCacheClear":122,"./_mapCacheDelete":123,"./_mapCacheGet":124,"./_mapCacheHas":125,"./_mapCacheSet":126}],37:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -19355,7 +21596,7 @@ var Promise = getNative(root, 'Promise');
 
 module.exports = Promise;
 
-},{"./_getNative":104,"./_root":142}],44:[function(require,module,exports){
+},{"./_getNative":98,"./_root":136}],38:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -19364,7 +21605,7 @@ var Set = getNative(root, 'Set');
 
 module.exports = Set;
 
-},{"./_getNative":104,"./_root":142}],45:[function(require,module,exports){
+},{"./_getNative":98,"./_root":136}],39:[function(require,module,exports){
 var MapCache = require('./_MapCache'),
     setCacheAdd = require('./_setCacheAdd'),
     setCacheHas = require('./_setCacheHas');
@@ -19393,7 +21634,7 @@ SetCache.prototype.has = setCacheHas;
 
 module.exports = SetCache;
 
-},{"./_MapCache":42,"./_setCacheAdd":143,"./_setCacheHas":144}],46:[function(require,module,exports){
+},{"./_MapCache":36,"./_setCacheAdd":137,"./_setCacheHas":138}],40:[function(require,module,exports){
 var ListCache = require('./_ListCache'),
     stackClear = require('./_stackClear'),
     stackDelete = require('./_stackDelete'),
@@ -19422,7 +21663,7 @@ Stack.prototype.set = stackSet;
 
 module.exports = Stack;
 
-},{"./_ListCache":40,"./_stackClear":148,"./_stackDelete":149,"./_stackGet":150,"./_stackHas":151,"./_stackSet":152}],47:[function(require,module,exports){
+},{"./_ListCache":34,"./_stackClear":142,"./_stackDelete":143,"./_stackGet":144,"./_stackHas":145,"./_stackSet":146}],41:[function(require,module,exports){
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -19430,7 +21671,7 @@ var Symbol = root.Symbol;
 
 module.exports = Symbol;
 
-},{"./_root":142}],48:[function(require,module,exports){
+},{"./_root":136}],42:[function(require,module,exports){
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -19438,7 +21679,7 @@ var Uint8Array = root.Uint8Array;
 
 module.exports = Uint8Array;
 
-},{"./_root":142}],49:[function(require,module,exports){
+},{"./_root":136}],43:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -19447,7 +21688,7 @@ var WeakMap = getNative(root, 'WeakMap');
 
 module.exports = WeakMap;
 
-},{"./_getNative":104,"./_root":142}],50:[function(require,module,exports){
+},{"./_getNative":98,"./_root":136}],44:[function(require,module,exports){
 /**
  * A faster alternative to `Function#apply`, this function invokes `func`
  * with the `this` binding of `thisArg` and the arguments of `args`.
@@ -19470,7 +21711,7 @@ function apply(func, thisArg, args) {
 
 module.exports = apply;
 
-},{}],51:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 /**
  * A specialized version of `baseAggregator` for arrays.
  *
@@ -19494,7 +21735,7 @@ function arrayAggregator(array, setter, iteratee, accumulator) {
 
 module.exports = arrayAggregator;
 
-},{}],52:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 /**
  * A specialized version of `_.filter` for arrays without support for
  * iteratee shorthands.
@@ -19521,7 +21762,7 @@ function arrayFilter(array, predicate) {
 
 module.exports = arrayFilter;
 
-},{}],53:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 var baseTimes = require('./_baseTimes'),
     isArguments = require('./isArguments'),
     isArray = require('./isArray'),
@@ -19572,7 +21813,7 @@ function arrayLikeKeys(value, inherited) {
 
 module.exports = arrayLikeKeys;
 
-},{"./_baseTimes":85,"./_isIndex":116,"./isArguments":163,"./isArray":164,"./isBuffer":166,"./isTypedArray":172}],54:[function(require,module,exports){
+},{"./_baseTimes":79,"./_isIndex":110,"./isArguments":157,"./isArray":158,"./isBuffer":160,"./isTypedArray":166}],48:[function(require,module,exports){
 /**
  * A specialized version of `_.map` for arrays without support for iteratee
  * shorthands.
@@ -19595,7 +21836,7 @@ function arrayMap(array, iteratee) {
 
 module.exports = arrayMap;
 
-},{}],55:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 /**
  * Appends the elements of `values` to `array`.
  *
@@ -19617,7 +21858,7 @@ function arrayPush(array, values) {
 
 module.exports = arrayPush;
 
-},{}],56:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 /**
  * A specialized version of `_.some` for arrays without support for iteratee
  * shorthands.
@@ -19642,7 +21883,7 @@ function arraySome(array, predicate) {
 
 module.exports = arraySome;
 
-},{}],57:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 var eq = require('./eq');
 
 /**
@@ -19665,7 +21906,7 @@ function assocIndexOf(array, key) {
 
 module.exports = assocIndexOf;
 
-},{"./eq":158}],58:[function(require,module,exports){
+},{"./eq":152}],52:[function(require,module,exports){
 var baseEach = require('./_baseEach');
 
 /**
@@ -19688,7 +21929,7 @@ function baseAggregator(collection, setter, iteratee, accumulator) {
 
 module.exports = baseAggregator;
 
-},{"./_baseEach":60}],59:[function(require,module,exports){
+},{"./_baseEach":54}],53:[function(require,module,exports){
 var defineProperty = require('./_defineProperty');
 
 /**
@@ -19715,7 +21956,7 @@ function baseAssignValue(object, key, value) {
 
 module.exports = baseAssignValue;
 
-},{"./_defineProperty":96}],60:[function(require,module,exports){
+},{"./_defineProperty":90}],54:[function(require,module,exports){
 var baseForOwn = require('./_baseForOwn'),
     createBaseEach = require('./_createBaseEach');
 
@@ -19731,7 +21972,7 @@ var baseEach = createBaseEach(baseForOwn);
 
 module.exports = baseEach;
 
-},{"./_baseForOwn":63,"./_createBaseEach":94}],61:[function(require,module,exports){
+},{"./_baseForOwn":57,"./_createBaseEach":88}],55:[function(require,module,exports){
 var arrayPush = require('./_arrayPush'),
     isFlattenable = require('./_isFlattenable');
 
@@ -19771,7 +22012,7 @@ function baseFlatten(array, depth, predicate, isStrict, result) {
 
 module.exports = baseFlatten;
 
-},{"./_arrayPush":55,"./_isFlattenable":115}],62:[function(require,module,exports){
+},{"./_arrayPush":49,"./_isFlattenable":109}],56:[function(require,module,exports){
 var createBaseFor = require('./_createBaseFor');
 
 /**
@@ -19789,7 +22030,7 @@ var baseFor = createBaseFor();
 
 module.exports = baseFor;
 
-},{"./_createBaseFor":95}],63:[function(require,module,exports){
+},{"./_createBaseFor":89}],57:[function(require,module,exports){
 var baseFor = require('./_baseFor'),
     keys = require('./keys');
 
@@ -19807,7 +22048,7 @@ function baseForOwn(object, iteratee) {
 
 module.exports = baseForOwn;
 
-},{"./_baseFor":62,"./keys":174}],64:[function(require,module,exports){
+},{"./_baseFor":56,"./keys":168}],58:[function(require,module,exports){
 var castPath = require('./_castPath'),
     toKey = require('./_toKey');
 
@@ -19833,7 +22074,7 @@ function baseGet(object, path) {
 
 module.exports = baseGet;
 
-},{"./_castPath":89,"./_toKey":154}],65:[function(require,module,exports){
+},{"./_castPath":83,"./_toKey":148}],59:[function(require,module,exports){
 var arrayPush = require('./_arrayPush'),
     isArray = require('./isArray');
 
@@ -19855,7 +22096,7 @@ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
 
 module.exports = baseGetAllKeys;
 
-},{"./_arrayPush":55,"./isArray":164}],66:[function(require,module,exports){
+},{"./_arrayPush":49,"./isArray":158}],60:[function(require,module,exports){
 var Symbol = require('./_Symbol'),
     getRawTag = require('./_getRawTag'),
     objectToString = require('./_objectToString');
@@ -19885,7 +22126,7 @@ function baseGetTag(value) {
 
 module.exports = baseGetTag;
 
-},{"./_Symbol":47,"./_getRawTag":105,"./_objectToString":139}],67:[function(require,module,exports){
+},{"./_Symbol":41,"./_getRawTag":99,"./_objectToString":133}],61:[function(require,module,exports){
 /**
  * The base implementation of `_.hasIn` without support for deep paths.
  *
@@ -19900,7 +22141,7 @@ function baseHasIn(object, key) {
 
 module.exports = baseHasIn;
 
-},{}],68:[function(require,module,exports){
+},{}],62:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     isObjectLike = require('./isObjectLike');
 
@@ -19920,7 +22161,7 @@ function baseIsArguments(value) {
 
 module.exports = baseIsArguments;
 
-},{"./_baseGetTag":66,"./isObjectLike":170}],69:[function(require,module,exports){
+},{"./_baseGetTag":60,"./isObjectLike":164}],63:[function(require,module,exports){
 var baseIsEqualDeep = require('./_baseIsEqualDeep'),
     isObjectLike = require('./isObjectLike');
 
@@ -19950,7 +22191,7 @@ function baseIsEqual(value, other, bitmask, customizer, stack) {
 
 module.exports = baseIsEqual;
 
-},{"./_baseIsEqualDeep":70,"./isObjectLike":170}],70:[function(require,module,exports){
+},{"./_baseIsEqualDeep":64,"./isObjectLike":164}],64:[function(require,module,exports){
 var Stack = require('./_Stack'),
     equalArrays = require('./_equalArrays'),
     equalByTag = require('./_equalByTag'),
@@ -20035,7 +22276,7 @@ function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
 
 module.exports = baseIsEqualDeep;
 
-},{"./_Stack":46,"./_equalArrays":97,"./_equalByTag":98,"./_equalObjects":99,"./_getTag":107,"./isArray":164,"./isBuffer":166,"./isTypedArray":172}],71:[function(require,module,exports){
+},{"./_Stack":40,"./_equalArrays":91,"./_equalByTag":92,"./_equalObjects":93,"./_getTag":101,"./isArray":158,"./isBuffer":160,"./isTypedArray":166}],65:[function(require,module,exports){
 var Stack = require('./_Stack'),
     baseIsEqual = require('./_baseIsEqual');
 
@@ -20099,7 +22340,7 @@ function baseIsMatch(object, source, matchData, customizer) {
 
 module.exports = baseIsMatch;
 
-},{"./_Stack":46,"./_baseIsEqual":69}],72:[function(require,module,exports){
+},{"./_Stack":40,"./_baseIsEqual":63}],66:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isMasked = require('./_isMasked'),
     isObject = require('./isObject'),
@@ -20148,7 +22389,7 @@ function baseIsNative(value) {
 
 module.exports = baseIsNative;
 
-},{"./_isMasked":120,"./_toSource":155,"./isFunction":167,"./isObject":169}],73:[function(require,module,exports){
+},{"./_isMasked":114,"./_toSource":149,"./isFunction":161,"./isObject":163}],67:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     isLength = require('./isLength'),
     isObjectLike = require('./isObjectLike');
@@ -20210,7 +22451,7 @@ function baseIsTypedArray(value) {
 
 module.exports = baseIsTypedArray;
 
-},{"./_baseGetTag":66,"./isLength":168,"./isObjectLike":170}],74:[function(require,module,exports){
+},{"./_baseGetTag":60,"./isLength":162,"./isObjectLike":164}],68:[function(require,module,exports){
 var baseMatches = require('./_baseMatches'),
     baseMatchesProperty = require('./_baseMatchesProperty'),
     identity = require('./identity'),
@@ -20243,7 +22484,7 @@ function baseIteratee(value) {
 
 module.exports = baseIteratee;
 
-},{"./_baseMatches":77,"./_baseMatchesProperty":78,"./identity":162,"./isArray":164,"./property":177}],75:[function(require,module,exports){
+},{"./_baseMatches":71,"./_baseMatchesProperty":72,"./identity":156,"./isArray":158,"./property":171}],69:[function(require,module,exports){
 var isPrototype = require('./_isPrototype'),
     nativeKeys = require('./_nativeKeys');
 
@@ -20275,7 +22516,7 @@ function baseKeys(object) {
 
 module.exports = baseKeys;
 
-},{"./_isPrototype":121,"./_nativeKeys":137}],76:[function(require,module,exports){
+},{"./_isPrototype":115,"./_nativeKeys":131}],70:[function(require,module,exports){
 var baseEach = require('./_baseEach'),
     isArrayLike = require('./isArrayLike');
 
@@ -20299,7 +22540,7 @@ function baseMap(collection, iteratee) {
 
 module.exports = baseMap;
 
-},{"./_baseEach":60,"./isArrayLike":165}],77:[function(require,module,exports){
+},{"./_baseEach":54,"./isArrayLike":159}],71:[function(require,module,exports){
 var baseIsMatch = require('./_baseIsMatch'),
     getMatchData = require('./_getMatchData'),
     matchesStrictComparable = require('./_matchesStrictComparable');
@@ -20323,7 +22564,7 @@ function baseMatches(source) {
 
 module.exports = baseMatches;
 
-},{"./_baseIsMatch":71,"./_getMatchData":103,"./_matchesStrictComparable":134}],78:[function(require,module,exports){
+},{"./_baseIsMatch":65,"./_getMatchData":97,"./_matchesStrictComparable":128}],72:[function(require,module,exports){
 var baseIsEqual = require('./_baseIsEqual'),
     get = require('./get'),
     hasIn = require('./hasIn'),
@@ -20358,7 +22599,7 @@ function baseMatchesProperty(path, srcValue) {
 
 module.exports = baseMatchesProperty;
 
-},{"./_baseIsEqual":69,"./_isKey":118,"./_isStrictComparable":122,"./_matchesStrictComparable":134,"./_toKey":154,"./get":159,"./hasIn":161}],79:[function(require,module,exports){
+},{"./_baseIsEqual":63,"./_isKey":112,"./_isStrictComparable":116,"./_matchesStrictComparable":128,"./_toKey":148,"./get":153,"./hasIn":155}],73:[function(require,module,exports){
 var arrayMap = require('./_arrayMap'),
     baseIteratee = require('./_baseIteratee'),
     baseMap = require('./_baseMap'),
@@ -20394,7 +22635,7 @@ function baseOrderBy(collection, iteratees, orders) {
 
 module.exports = baseOrderBy;
 
-},{"./_arrayMap":54,"./_baseIteratee":74,"./_baseMap":76,"./_baseSortBy":84,"./_baseUnary":87,"./_compareMultiple":91,"./identity":162}],80:[function(require,module,exports){
+},{"./_arrayMap":48,"./_baseIteratee":68,"./_baseMap":70,"./_baseSortBy":78,"./_baseUnary":81,"./_compareMultiple":85,"./identity":156}],74:[function(require,module,exports){
 /**
  * The base implementation of `_.property` without support for deep paths.
  *
@@ -20410,7 +22651,7 @@ function baseProperty(key) {
 
 module.exports = baseProperty;
 
-},{}],81:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 var baseGet = require('./_baseGet');
 
 /**
@@ -20428,7 +22669,7 @@ function basePropertyDeep(path) {
 
 module.exports = basePropertyDeep;
 
-},{"./_baseGet":64}],82:[function(require,module,exports){
+},{"./_baseGet":58}],76:[function(require,module,exports){
 var identity = require('./identity'),
     overRest = require('./_overRest'),
     setToString = require('./_setToString');
@@ -20447,7 +22688,7 @@ function baseRest(func, start) {
 
 module.exports = baseRest;
 
-},{"./_overRest":141,"./_setToString":146,"./identity":162}],83:[function(require,module,exports){
+},{"./_overRest":135,"./_setToString":140,"./identity":156}],77:[function(require,module,exports){
 var constant = require('./constant'),
     defineProperty = require('./_defineProperty'),
     identity = require('./identity');
@@ -20471,7 +22712,7 @@ var baseSetToString = !defineProperty ? identity : function(func, string) {
 
 module.exports = baseSetToString;
 
-},{"./_defineProperty":96,"./constant":156,"./identity":162}],84:[function(require,module,exports){
+},{"./_defineProperty":90,"./constant":150,"./identity":156}],78:[function(require,module,exports){
 /**
  * The base implementation of `_.sortBy` which uses `comparer` to define the
  * sort order of `array` and replaces criteria objects with their corresponding
@@ -20494,7 +22735,7 @@ function baseSortBy(array, comparer) {
 
 module.exports = baseSortBy;
 
-},{}],85:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
 /**
  * The base implementation of `_.times` without support for iteratee shorthands
  * or max array length checks.
@@ -20516,7 +22757,7 @@ function baseTimes(n, iteratee) {
 
 module.exports = baseTimes;
 
-},{}],86:[function(require,module,exports){
+},{}],80:[function(require,module,exports){
 var Symbol = require('./_Symbol'),
     arrayMap = require('./_arrayMap'),
     isArray = require('./isArray'),
@@ -20555,7 +22796,7 @@ function baseToString(value) {
 
 module.exports = baseToString;
 
-},{"./_Symbol":47,"./_arrayMap":54,"./isArray":164,"./isSymbol":171}],87:[function(require,module,exports){
+},{"./_Symbol":41,"./_arrayMap":48,"./isArray":158,"./isSymbol":165}],81:[function(require,module,exports){
 /**
  * The base implementation of `_.unary` without support for storing metadata.
  *
@@ -20571,7 +22812,7 @@ function baseUnary(func) {
 
 module.exports = baseUnary;
 
-},{}],88:[function(require,module,exports){
+},{}],82:[function(require,module,exports){
 /**
  * Checks if a `cache` value for `key` exists.
  *
@@ -20586,7 +22827,7 @@ function cacheHas(cache, key) {
 
 module.exports = cacheHas;
 
-},{}],89:[function(require,module,exports){
+},{}],83:[function(require,module,exports){
 var isArray = require('./isArray'),
     isKey = require('./_isKey'),
     stringToPath = require('./_stringToPath'),
@@ -20609,7 +22850,7 @@ function castPath(value, object) {
 
 module.exports = castPath;
 
-},{"./_isKey":118,"./_stringToPath":153,"./isArray":164,"./toString":182}],90:[function(require,module,exports){
+},{"./_isKey":112,"./_stringToPath":147,"./isArray":158,"./toString":176}],84:[function(require,module,exports){
 var isSymbol = require('./isSymbol');
 
 /**
@@ -20652,7 +22893,7 @@ function compareAscending(value, other) {
 
 module.exports = compareAscending;
 
-},{"./isSymbol":171}],91:[function(require,module,exports){
+},{"./isSymbol":165}],85:[function(require,module,exports){
 var compareAscending = require('./_compareAscending');
 
 /**
@@ -20698,7 +22939,7 @@ function compareMultiple(object, other, orders) {
 
 module.exports = compareMultiple;
 
-},{"./_compareAscending":90}],92:[function(require,module,exports){
+},{"./_compareAscending":84}],86:[function(require,module,exports){
 var root = require('./_root');
 
 /** Used to detect overreaching core-js shims. */
@@ -20706,7 +22947,7 @@ var coreJsData = root['__core-js_shared__'];
 
 module.exports = coreJsData;
 
-},{"./_root":142}],93:[function(require,module,exports){
+},{"./_root":136}],87:[function(require,module,exports){
 var arrayAggregator = require('./_arrayAggregator'),
     baseAggregator = require('./_baseAggregator'),
     baseIteratee = require('./_baseIteratee'),
@@ -20731,7 +22972,7 @@ function createAggregator(setter, initializer) {
 
 module.exports = createAggregator;
 
-},{"./_arrayAggregator":51,"./_baseAggregator":58,"./_baseIteratee":74,"./isArray":164}],94:[function(require,module,exports){
+},{"./_arrayAggregator":45,"./_baseAggregator":52,"./_baseIteratee":68,"./isArray":158}],88:[function(require,module,exports){
 var isArrayLike = require('./isArrayLike');
 
 /**
@@ -20765,7 +23006,7 @@ function createBaseEach(eachFunc, fromRight) {
 
 module.exports = createBaseEach;
 
-},{"./isArrayLike":165}],95:[function(require,module,exports){
+},{"./isArrayLike":159}],89:[function(require,module,exports){
 /**
  * Creates a base function for methods like `_.forIn` and `_.forOwn`.
  *
@@ -20792,7 +23033,7 @@ function createBaseFor(fromRight) {
 
 module.exports = createBaseFor;
 
-},{}],96:[function(require,module,exports){
+},{}],90:[function(require,module,exports){
 var getNative = require('./_getNative');
 
 var defineProperty = (function() {
@@ -20805,7 +23046,7 @@ var defineProperty = (function() {
 
 module.exports = defineProperty;
 
-},{"./_getNative":104}],97:[function(require,module,exports){
+},{"./_getNative":98}],91:[function(require,module,exports){
 var SetCache = require('./_SetCache'),
     arraySome = require('./_arraySome'),
     cacheHas = require('./_cacheHas');
@@ -20890,7 +23131,7 @@ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
 
 module.exports = equalArrays;
 
-},{"./_SetCache":45,"./_arraySome":56,"./_cacheHas":88}],98:[function(require,module,exports){
+},{"./_SetCache":39,"./_arraySome":50,"./_cacheHas":82}],92:[function(require,module,exports){
 var Symbol = require('./_Symbol'),
     Uint8Array = require('./_Uint8Array'),
     eq = require('./eq'),
@@ -21004,7 +23245,7 @@ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
 
 module.exports = equalByTag;
 
-},{"./_Symbol":47,"./_Uint8Array":48,"./_equalArrays":97,"./_mapToArray":133,"./_setToArray":145,"./eq":158}],99:[function(require,module,exports){
+},{"./_Symbol":41,"./_Uint8Array":42,"./_equalArrays":91,"./_mapToArray":127,"./_setToArray":139,"./eq":152}],93:[function(require,module,exports){
 var getAllKeys = require('./_getAllKeys');
 
 /** Used to compose bitmasks for value comparisons. */
@@ -21095,7 +23336,7 @@ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
 
 module.exports = equalObjects;
 
-},{"./_getAllKeys":101}],100:[function(require,module,exports){
+},{"./_getAllKeys":95}],94:[function(require,module,exports){
 (function (global){
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
@@ -21103,7 +23344,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 module.exports = freeGlobal;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],101:[function(require,module,exports){
+},{}],95:[function(require,module,exports){
 var baseGetAllKeys = require('./_baseGetAllKeys'),
     getSymbols = require('./_getSymbols'),
     keys = require('./keys');
@@ -21121,7 +23362,7 @@ function getAllKeys(object) {
 
 module.exports = getAllKeys;
 
-},{"./_baseGetAllKeys":65,"./_getSymbols":106,"./keys":174}],102:[function(require,module,exports){
+},{"./_baseGetAllKeys":59,"./_getSymbols":100,"./keys":168}],96:[function(require,module,exports){
 var isKeyable = require('./_isKeyable');
 
 /**
@@ -21141,7 +23382,7 @@ function getMapData(map, key) {
 
 module.exports = getMapData;
 
-},{"./_isKeyable":119}],103:[function(require,module,exports){
+},{"./_isKeyable":113}],97:[function(require,module,exports){
 var isStrictComparable = require('./_isStrictComparable'),
     keys = require('./keys');
 
@@ -21167,7 +23408,7 @@ function getMatchData(object) {
 
 module.exports = getMatchData;
 
-},{"./_isStrictComparable":122,"./keys":174}],104:[function(require,module,exports){
+},{"./_isStrictComparable":116,"./keys":168}],98:[function(require,module,exports){
 var baseIsNative = require('./_baseIsNative'),
     getValue = require('./_getValue');
 
@@ -21186,7 +23427,7 @@ function getNative(object, key) {
 
 module.exports = getNative;
 
-},{"./_baseIsNative":72,"./_getValue":108}],105:[function(require,module,exports){
+},{"./_baseIsNative":66,"./_getValue":102}],99:[function(require,module,exports){
 var Symbol = require('./_Symbol');
 
 /** Used for built-in method references. */
@@ -21234,7 +23475,7 @@ function getRawTag(value) {
 
 module.exports = getRawTag;
 
-},{"./_Symbol":47}],106:[function(require,module,exports){
+},{"./_Symbol":41}],100:[function(require,module,exports){
 var arrayFilter = require('./_arrayFilter'),
     stubArray = require('./stubArray');
 
@@ -21266,7 +23507,7 @@ var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
 
 module.exports = getSymbols;
 
-},{"./_arrayFilter":52,"./stubArray":179}],107:[function(require,module,exports){
+},{"./_arrayFilter":46,"./stubArray":173}],101:[function(require,module,exports){
 var DataView = require('./_DataView'),
     Map = require('./_Map'),
     Promise = require('./_Promise'),
@@ -21326,7 +23567,7 @@ if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
 
 module.exports = getTag;
 
-},{"./_DataView":38,"./_Map":41,"./_Promise":43,"./_Set":44,"./_WeakMap":49,"./_baseGetTag":66,"./_toSource":155}],108:[function(require,module,exports){
+},{"./_DataView":32,"./_Map":35,"./_Promise":37,"./_Set":38,"./_WeakMap":43,"./_baseGetTag":60,"./_toSource":149}],102:[function(require,module,exports){
 /**
  * Gets the value at `key` of `object`.
  *
@@ -21341,7 +23582,7 @@ function getValue(object, key) {
 
 module.exports = getValue;
 
-},{}],109:[function(require,module,exports){
+},{}],103:[function(require,module,exports){
 var castPath = require('./_castPath'),
     isArguments = require('./isArguments'),
     isArray = require('./isArray'),
@@ -21382,7 +23623,7 @@ function hasPath(object, path, hasFunc) {
 
 module.exports = hasPath;
 
-},{"./_castPath":89,"./_isIndex":116,"./_toKey":154,"./isArguments":163,"./isArray":164,"./isLength":168}],110:[function(require,module,exports){
+},{"./_castPath":83,"./_isIndex":110,"./_toKey":148,"./isArguments":157,"./isArray":158,"./isLength":162}],104:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /**
@@ -21399,7 +23640,7 @@ function hashClear() {
 
 module.exports = hashClear;
 
-},{"./_nativeCreate":136}],111:[function(require,module,exports){
+},{"./_nativeCreate":130}],105:[function(require,module,exports){
 /**
  * Removes `key` and its value from the hash.
  *
@@ -21418,7 +23659,7 @@ function hashDelete(key) {
 
 module.exports = hashDelete;
 
-},{}],112:[function(require,module,exports){
+},{}],106:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /** Used to stand-in for `undefined` hash values. */
@@ -21450,7 +23691,7 @@ function hashGet(key) {
 
 module.exports = hashGet;
 
-},{"./_nativeCreate":136}],113:[function(require,module,exports){
+},{"./_nativeCreate":130}],107:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /** Used for built-in method references. */
@@ -21475,7 +23716,7 @@ function hashHas(key) {
 
 module.exports = hashHas;
 
-},{"./_nativeCreate":136}],114:[function(require,module,exports){
+},{"./_nativeCreate":130}],108:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /** Used to stand-in for `undefined` hash values. */
@@ -21500,7 +23741,7 @@ function hashSet(key, value) {
 
 module.exports = hashSet;
 
-},{"./_nativeCreate":136}],115:[function(require,module,exports){
+},{"./_nativeCreate":130}],109:[function(require,module,exports){
 var Symbol = require('./_Symbol'),
     isArguments = require('./isArguments'),
     isArray = require('./isArray');
@@ -21522,7 +23763,7 @@ function isFlattenable(value) {
 
 module.exports = isFlattenable;
 
-},{"./_Symbol":47,"./isArguments":163,"./isArray":164}],116:[function(require,module,exports){
+},{"./_Symbol":41,"./isArguments":157,"./isArray":158}],110:[function(require,module,exports){
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -21546,7 +23787,7 @@ function isIndex(value, length) {
 
 module.exports = isIndex;
 
-},{}],117:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 var eq = require('./eq'),
     isArrayLike = require('./isArrayLike'),
     isIndex = require('./_isIndex'),
@@ -21578,7 +23819,7 @@ function isIterateeCall(value, index, object) {
 
 module.exports = isIterateeCall;
 
-},{"./_isIndex":116,"./eq":158,"./isArrayLike":165,"./isObject":169}],118:[function(require,module,exports){
+},{"./_isIndex":110,"./eq":152,"./isArrayLike":159,"./isObject":163}],112:[function(require,module,exports){
 var isArray = require('./isArray'),
     isSymbol = require('./isSymbol');
 
@@ -21609,7 +23850,7 @@ function isKey(value, object) {
 
 module.exports = isKey;
 
-},{"./isArray":164,"./isSymbol":171}],119:[function(require,module,exports){
+},{"./isArray":158,"./isSymbol":165}],113:[function(require,module,exports){
 /**
  * Checks if `value` is suitable for use as unique object key.
  *
@@ -21626,7 +23867,7 @@ function isKeyable(value) {
 
 module.exports = isKeyable;
 
-},{}],120:[function(require,module,exports){
+},{}],114:[function(require,module,exports){
 var coreJsData = require('./_coreJsData');
 
 /** Used to detect methods masquerading as native. */
@@ -21648,7 +23889,7 @@ function isMasked(func) {
 
 module.exports = isMasked;
 
-},{"./_coreJsData":92}],121:[function(require,module,exports){
+},{"./_coreJsData":86}],115:[function(require,module,exports){
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -21668,7 +23909,7 @@ function isPrototype(value) {
 
 module.exports = isPrototype;
 
-},{}],122:[function(require,module,exports){
+},{}],116:[function(require,module,exports){
 var isObject = require('./isObject');
 
 /**
@@ -21685,7 +23926,7 @@ function isStrictComparable(value) {
 
 module.exports = isStrictComparable;
 
-},{"./isObject":169}],123:[function(require,module,exports){
+},{"./isObject":163}],117:[function(require,module,exports){
 /**
  * Removes all key-value entries from the list cache.
  *
@@ -21700,7 +23941,7 @@ function listCacheClear() {
 
 module.exports = listCacheClear;
 
-},{}],124:[function(require,module,exports){
+},{}],118:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /** Used for built-in method references. */
@@ -21737,7 +23978,7 @@ function listCacheDelete(key) {
 
 module.exports = listCacheDelete;
 
-},{"./_assocIndexOf":57}],125:[function(require,module,exports){
+},{"./_assocIndexOf":51}],119:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -21758,7 +23999,7 @@ function listCacheGet(key) {
 
 module.exports = listCacheGet;
 
-},{"./_assocIndexOf":57}],126:[function(require,module,exports){
+},{"./_assocIndexOf":51}],120:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -21776,7 +24017,7 @@ function listCacheHas(key) {
 
 module.exports = listCacheHas;
 
-},{"./_assocIndexOf":57}],127:[function(require,module,exports){
+},{"./_assocIndexOf":51}],121:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -21804,7 +24045,7 @@ function listCacheSet(key, value) {
 
 module.exports = listCacheSet;
 
-},{"./_assocIndexOf":57}],128:[function(require,module,exports){
+},{"./_assocIndexOf":51}],122:[function(require,module,exports){
 var Hash = require('./_Hash'),
     ListCache = require('./_ListCache'),
     Map = require('./_Map');
@@ -21827,7 +24068,7 @@ function mapCacheClear() {
 
 module.exports = mapCacheClear;
 
-},{"./_Hash":39,"./_ListCache":40,"./_Map":41}],129:[function(require,module,exports){
+},{"./_Hash":33,"./_ListCache":34,"./_Map":35}],123:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -21847,7 +24088,7 @@ function mapCacheDelete(key) {
 
 module.exports = mapCacheDelete;
 
-},{"./_getMapData":102}],130:[function(require,module,exports){
+},{"./_getMapData":96}],124:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -21865,7 +24106,7 @@ function mapCacheGet(key) {
 
 module.exports = mapCacheGet;
 
-},{"./_getMapData":102}],131:[function(require,module,exports){
+},{"./_getMapData":96}],125:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -21883,7 +24124,7 @@ function mapCacheHas(key) {
 
 module.exports = mapCacheHas;
 
-},{"./_getMapData":102}],132:[function(require,module,exports){
+},{"./_getMapData":96}],126:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -21907,7 +24148,7 @@ function mapCacheSet(key, value) {
 
 module.exports = mapCacheSet;
 
-},{"./_getMapData":102}],133:[function(require,module,exports){
+},{"./_getMapData":96}],127:[function(require,module,exports){
 /**
  * Converts `map` to its key-value pairs.
  *
@@ -21927,7 +24168,7 @@ function mapToArray(map) {
 
 module.exports = mapToArray;
 
-},{}],134:[function(require,module,exports){
+},{}],128:[function(require,module,exports){
 /**
  * A specialized version of `matchesProperty` for source values suitable
  * for strict equality comparisons, i.e. `===`.
@@ -21949,7 +24190,7 @@ function matchesStrictComparable(key, srcValue) {
 
 module.exports = matchesStrictComparable;
 
-},{}],135:[function(require,module,exports){
+},{}],129:[function(require,module,exports){
 var memoize = require('./memoize');
 
 /** Used as the maximum memoize cache size. */
@@ -21977,7 +24218,7 @@ function memoizeCapped(func) {
 
 module.exports = memoizeCapped;
 
-},{"./memoize":175}],136:[function(require,module,exports){
+},{"./memoize":169}],130:[function(require,module,exports){
 var getNative = require('./_getNative');
 
 /* Built-in method references that are verified to be native. */
@@ -21985,7 +24226,7 @@ var nativeCreate = getNative(Object, 'create');
 
 module.exports = nativeCreate;
 
-},{"./_getNative":104}],137:[function(require,module,exports){
+},{"./_getNative":98}],131:[function(require,module,exports){
 var overArg = require('./_overArg');
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -21993,7 +24234,7 @@ var nativeKeys = overArg(Object.keys, Object);
 
 module.exports = nativeKeys;
 
-},{"./_overArg":140}],138:[function(require,module,exports){
+},{"./_overArg":134}],132:[function(require,module,exports){
 var freeGlobal = require('./_freeGlobal');
 
 /** Detect free variable `exports`. */
@@ -22017,7 +24258,7 @@ var nodeUtil = (function() {
 
 module.exports = nodeUtil;
 
-},{"./_freeGlobal":100}],139:[function(require,module,exports){
+},{"./_freeGlobal":94}],133:[function(require,module,exports){
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -22041,7 +24282,7 @@ function objectToString(value) {
 
 module.exports = objectToString;
 
-},{}],140:[function(require,module,exports){
+},{}],134:[function(require,module,exports){
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
  *
@@ -22058,7 +24299,7 @@ function overArg(func, transform) {
 
 module.exports = overArg;
 
-},{}],141:[function(require,module,exports){
+},{}],135:[function(require,module,exports){
 var apply = require('./_apply');
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -22096,7 +24337,7 @@ function overRest(func, start, transform) {
 
 module.exports = overRest;
 
-},{"./_apply":50}],142:[function(require,module,exports){
+},{"./_apply":44}],136:[function(require,module,exports){
 var freeGlobal = require('./_freeGlobal');
 
 /** Detect free variable `self`. */
@@ -22107,7 +24348,7 @@ var root = freeGlobal || freeSelf || Function('return this')();
 
 module.exports = root;
 
-},{"./_freeGlobal":100}],143:[function(require,module,exports){
+},{"./_freeGlobal":94}],137:[function(require,module,exports){
 /** Used to stand-in for `undefined` hash values. */
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
 
@@ -22128,7 +24369,7 @@ function setCacheAdd(value) {
 
 module.exports = setCacheAdd;
 
-},{}],144:[function(require,module,exports){
+},{}],138:[function(require,module,exports){
 /**
  * Checks if `value` is in the array cache.
  *
@@ -22144,7 +24385,7 @@ function setCacheHas(value) {
 
 module.exports = setCacheHas;
 
-},{}],145:[function(require,module,exports){
+},{}],139:[function(require,module,exports){
 /**
  * Converts `set` to an array of its values.
  *
@@ -22164,7 +24405,7 @@ function setToArray(set) {
 
 module.exports = setToArray;
 
-},{}],146:[function(require,module,exports){
+},{}],140:[function(require,module,exports){
 var baseSetToString = require('./_baseSetToString'),
     shortOut = require('./_shortOut');
 
@@ -22180,7 +24421,7 @@ var setToString = shortOut(baseSetToString);
 
 module.exports = setToString;
 
-},{"./_baseSetToString":83,"./_shortOut":147}],147:[function(require,module,exports){
+},{"./_baseSetToString":77,"./_shortOut":141}],141:[function(require,module,exports){
 /** Used to detect hot functions by number of calls within a span of milliseconds. */
 var HOT_COUNT = 800,
     HOT_SPAN = 16;
@@ -22219,7 +24460,7 @@ function shortOut(func) {
 
 module.exports = shortOut;
 
-},{}],148:[function(require,module,exports){
+},{}],142:[function(require,module,exports){
 var ListCache = require('./_ListCache');
 
 /**
@@ -22236,7 +24477,7 @@ function stackClear() {
 
 module.exports = stackClear;
 
-},{"./_ListCache":40}],149:[function(require,module,exports){
+},{"./_ListCache":34}],143:[function(require,module,exports){
 /**
  * Removes `key` and its value from the stack.
  *
@@ -22256,7 +24497,7 @@ function stackDelete(key) {
 
 module.exports = stackDelete;
 
-},{}],150:[function(require,module,exports){
+},{}],144:[function(require,module,exports){
 /**
  * Gets the stack value for `key`.
  *
@@ -22272,7 +24513,7 @@ function stackGet(key) {
 
 module.exports = stackGet;
 
-},{}],151:[function(require,module,exports){
+},{}],145:[function(require,module,exports){
 /**
  * Checks if a stack value for `key` exists.
  *
@@ -22288,7 +24529,7 @@ function stackHas(key) {
 
 module.exports = stackHas;
 
-},{}],152:[function(require,module,exports){
+},{}],146:[function(require,module,exports){
 var ListCache = require('./_ListCache'),
     Map = require('./_Map'),
     MapCache = require('./_MapCache');
@@ -22324,7 +24565,7 @@ function stackSet(key, value) {
 
 module.exports = stackSet;
 
-},{"./_ListCache":40,"./_Map":41,"./_MapCache":42}],153:[function(require,module,exports){
+},{"./_ListCache":34,"./_Map":35,"./_MapCache":36}],147:[function(require,module,exports){
 var memoizeCapped = require('./_memoizeCapped');
 
 /** Used to match property names within property paths. */
@@ -22354,7 +24595,7 @@ var stringToPath = memoizeCapped(function(string) {
 
 module.exports = stringToPath;
 
-},{"./_memoizeCapped":135}],154:[function(require,module,exports){
+},{"./_memoizeCapped":129}],148:[function(require,module,exports){
 var isSymbol = require('./isSymbol');
 
 /** Used as references for various `Number` constants. */
@@ -22377,7 +24618,7 @@ function toKey(value) {
 
 module.exports = toKey;
 
-},{"./isSymbol":171}],155:[function(require,module,exports){
+},{"./isSymbol":165}],149:[function(require,module,exports){
 /** Used for built-in method references. */
 var funcProto = Function.prototype;
 
@@ -22405,7 +24646,7 @@ function toSource(func) {
 
 module.exports = toSource;
 
-},{}],156:[function(require,module,exports){
+},{}],150:[function(require,module,exports){
 /**
  * Creates a function that returns `value`.
  *
@@ -22433,7 +24674,7 @@ function constant(value) {
 
 module.exports = constant;
 
-},{}],157:[function(require,module,exports){
+},{}],151:[function(require,module,exports){
 var isObject = require('./isObject'),
     now = require('./now'),
     toNumber = require('./toNumber');
@@ -22623,7 +24864,7 @@ function debounce(func, wait, options) {
 
 module.exports = debounce;
 
-},{"./isObject":169,"./now":176,"./toNumber":181}],158:[function(require,module,exports){
+},{"./isObject":163,"./now":170,"./toNumber":175}],152:[function(require,module,exports){
 /**
  * Performs a
  * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
@@ -22662,7 +24903,7 @@ function eq(value, other) {
 
 module.exports = eq;
 
-},{}],159:[function(require,module,exports){
+},{}],153:[function(require,module,exports){
 var baseGet = require('./_baseGet');
 
 /**
@@ -22697,7 +24938,7 @@ function get(object, path, defaultValue) {
 
 module.exports = get;
 
-},{"./_baseGet":64}],160:[function(require,module,exports){
+},{"./_baseGet":58}],154:[function(require,module,exports){
 var baseAssignValue = require('./_baseAssignValue'),
     createAggregator = require('./_createAggregator');
 
@@ -22740,7 +24981,7 @@ var groupBy = createAggregator(function(result, value, key) {
 
 module.exports = groupBy;
 
-},{"./_baseAssignValue":59,"./_createAggregator":93}],161:[function(require,module,exports){
+},{"./_baseAssignValue":53,"./_createAggregator":87}],155:[function(require,module,exports){
 var baseHasIn = require('./_baseHasIn'),
     hasPath = require('./_hasPath');
 
@@ -22776,7 +25017,7 @@ function hasIn(object, path) {
 
 module.exports = hasIn;
 
-},{"./_baseHasIn":67,"./_hasPath":109}],162:[function(require,module,exports){
+},{"./_baseHasIn":61,"./_hasPath":103}],156:[function(require,module,exports){
 /**
  * This method returns the first argument it receives.
  *
@@ -22799,7 +25040,7 @@ function identity(value) {
 
 module.exports = identity;
 
-},{}],163:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 var baseIsArguments = require('./_baseIsArguments'),
     isObjectLike = require('./isObjectLike');
 
@@ -22837,7 +25078,7 @@ var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsAr
 
 module.exports = isArguments;
 
-},{"./_baseIsArguments":68,"./isObjectLike":170}],164:[function(require,module,exports){
+},{"./_baseIsArguments":62,"./isObjectLike":164}],158:[function(require,module,exports){
 /**
  * Checks if `value` is classified as an `Array` object.
  *
@@ -22865,7 +25106,7 @@ var isArray = Array.isArray;
 
 module.exports = isArray;
 
-},{}],165:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isLength = require('./isLength');
 
@@ -22900,7 +25141,7 @@ function isArrayLike(value) {
 
 module.exports = isArrayLike;
 
-},{"./isFunction":167,"./isLength":168}],166:[function(require,module,exports){
+},{"./isFunction":161,"./isLength":162}],160:[function(require,module,exports){
 var root = require('./_root'),
     stubFalse = require('./stubFalse');
 
@@ -22940,7 +25181,7 @@ var isBuffer = nativeIsBuffer || stubFalse;
 
 module.exports = isBuffer;
 
-},{"./_root":142,"./stubFalse":180}],167:[function(require,module,exports){
+},{"./_root":136,"./stubFalse":174}],161:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     isObject = require('./isObject');
 
@@ -22979,7 +25220,7 @@ function isFunction(value) {
 
 module.exports = isFunction;
 
-},{"./_baseGetTag":66,"./isObject":169}],168:[function(require,module,exports){
+},{"./_baseGetTag":60,"./isObject":163}],162:[function(require,module,exports){
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -23016,7 +25257,7 @@ function isLength(value) {
 
 module.exports = isLength;
 
-},{}],169:[function(require,module,exports){
+},{}],163:[function(require,module,exports){
 /**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
@@ -23049,7 +25290,7 @@ function isObject(value) {
 
 module.exports = isObject;
 
-},{}],170:[function(require,module,exports){
+},{}],164:[function(require,module,exports){
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -23080,7 +25321,7 @@ function isObjectLike(value) {
 
 module.exports = isObjectLike;
 
-},{}],171:[function(require,module,exports){
+},{}],165:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     isObjectLike = require('./isObjectLike');
 
@@ -23111,7 +25352,7 @@ function isSymbol(value) {
 
 module.exports = isSymbol;
 
-},{"./_baseGetTag":66,"./isObjectLike":170}],172:[function(require,module,exports){
+},{"./_baseGetTag":60,"./isObjectLike":164}],166:[function(require,module,exports){
 var baseIsTypedArray = require('./_baseIsTypedArray'),
     baseUnary = require('./_baseUnary'),
     nodeUtil = require('./_nodeUtil');
@@ -23140,7 +25381,7 @@ var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedA
 
 module.exports = isTypedArray;
 
-},{"./_baseIsTypedArray":73,"./_baseUnary":87,"./_nodeUtil":138}],173:[function(require,module,exports){
+},{"./_baseIsTypedArray":67,"./_baseUnary":81,"./_nodeUtil":132}],167:[function(require,module,exports){
 var baseAssignValue = require('./_baseAssignValue'),
     createAggregator = require('./_createAggregator');
 
@@ -23178,7 +25419,7 @@ var keyBy = createAggregator(function(result, value, key) {
 
 module.exports = keyBy;
 
-},{"./_baseAssignValue":59,"./_createAggregator":93}],174:[function(require,module,exports){
+},{"./_baseAssignValue":53,"./_createAggregator":87}],168:[function(require,module,exports){
 var arrayLikeKeys = require('./_arrayLikeKeys'),
     baseKeys = require('./_baseKeys'),
     isArrayLike = require('./isArrayLike');
@@ -23217,7 +25458,7 @@ function keys(object) {
 
 module.exports = keys;
 
-},{"./_arrayLikeKeys":53,"./_baseKeys":75,"./isArrayLike":165}],175:[function(require,module,exports){
+},{"./_arrayLikeKeys":47,"./_baseKeys":69,"./isArrayLike":159}],169:[function(require,module,exports){
 var MapCache = require('./_MapCache');
 
 /** Error message constants. */
@@ -23292,7 +25533,7 @@ memoize.Cache = MapCache;
 
 module.exports = memoize;
 
-},{"./_MapCache":42}],176:[function(require,module,exports){
+},{"./_MapCache":36}],170:[function(require,module,exports){
 var root = require('./_root');
 
 /**
@@ -23317,7 +25558,7 @@ var now = function() {
 
 module.exports = now;
 
-},{"./_root":142}],177:[function(require,module,exports){
+},{"./_root":136}],171:[function(require,module,exports){
 var baseProperty = require('./_baseProperty'),
     basePropertyDeep = require('./_basePropertyDeep'),
     isKey = require('./_isKey'),
@@ -23351,7 +25592,7 @@ function property(path) {
 
 module.exports = property;
 
-},{"./_baseProperty":80,"./_basePropertyDeep":81,"./_isKey":118,"./_toKey":154}],178:[function(require,module,exports){
+},{"./_baseProperty":74,"./_basePropertyDeep":75,"./_isKey":112,"./_toKey":148}],172:[function(require,module,exports){
 var baseFlatten = require('./_baseFlatten'),
     baseOrderBy = require('./_baseOrderBy'),
     baseRest = require('./_baseRest'),
@@ -23401,7 +25642,7 @@ var sortBy = baseRest(function(collection, iteratees) {
 
 module.exports = sortBy;
 
-},{"./_baseFlatten":61,"./_baseOrderBy":79,"./_baseRest":82,"./_isIterateeCall":117}],179:[function(require,module,exports){
+},{"./_baseFlatten":55,"./_baseOrderBy":73,"./_baseRest":76,"./_isIterateeCall":111}],173:[function(require,module,exports){
 /**
  * This method returns a new empty array.
  *
@@ -23426,7 +25667,7 @@ function stubArray() {
 
 module.exports = stubArray;
 
-},{}],180:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 /**
  * This method returns `false`.
  *
@@ -23446,7 +25687,7 @@ function stubFalse() {
 
 module.exports = stubFalse;
 
-},{}],181:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 var isObject = require('./isObject'),
     isSymbol = require('./isSymbol');
 
@@ -23514,7 +25755,7 @@ function toNumber(value) {
 
 module.exports = toNumber;
 
-},{"./isObject":169,"./isSymbol":171}],182:[function(require,module,exports){
+},{"./isObject":163,"./isSymbol":165}],176:[function(require,module,exports){
 var baseToString = require('./_baseToString');
 
 /**
@@ -23544,23 +25785,7 @@ function toString(value) {
 
 module.exports = toString;
 
-},{"./_baseToString":86}],183:[function(require,module,exports){
-/**
- * Clamp value.
- * Detects proper clamp min/max.
- *
- * @param {number} a Current value to cut off
- * @param {number} min One side limit
- * @param {number} max Other side limit
- *
- * @return {number} Clamped value
- */
-'use strict';
-module.exports = function(a, min, max){
-	return max > min ? Math.max(Math.min(a,max),min) : Math.max(Math.min(a,min),max);
-};
-
-},{}],184:[function(require,module,exports){
+},{"./_baseToString":80}],177:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -23652,7 +25877,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],185:[function(require,module,exports){
+},{}],178:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -23834,12 +26059,12 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],186:[function(require,module,exports){
+},{}],179:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/ReactDOM');
 
-},{"./lib/ReactDOM":216}],187:[function(require,module,exports){
+},{"./lib/ReactDOM":209}],180:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -23913,7 +26138,7 @@ var ARIADOMPropertyConfig = {
 };
 
 module.exports = ARIADOMPropertyConfig;
-},{}],188:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -23937,7 +26162,7 @@ var AutoFocusUtils = {
 };
 
 module.exports = AutoFocusUtils;
-},{"./ReactDOMComponentTree":219,"fbjs/lib/focusNode":22}],189:[function(require,module,exports){
+},{"./ReactDOMComponentTree":212,"fbjs/lib/focusNode":18}],182:[function(require,module,exports){
 /**
  * Copyright 2013-present Facebook, Inc.
  * All rights reserved.
@@ -24322,7 +26547,7 @@ var BeforeInputEventPlugin = {
 };
 
 module.exports = BeforeInputEventPlugin;
-},{"./EventPropagators":205,"./FallbackCompositionState":206,"./SyntheticCompositionEvent":270,"./SyntheticInputEvent":274,"fbjs/lib/ExecutionEnvironment":14}],190:[function(require,module,exports){
+},{"./EventPropagators":198,"./FallbackCompositionState":199,"./SyntheticCompositionEvent":263,"./SyntheticInputEvent":267,"fbjs/lib/ExecutionEnvironment":10}],183:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -24470,7 +26695,7 @@ var CSSProperty = {
 };
 
 module.exports = CSSProperty;
-},{}],191:[function(require,module,exports){
+},{}],184:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -24681,7 +26906,7 @@ var CSSPropertyOperations = {
 
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
-},{"./CSSProperty":190,"./ReactInstrumentation":248,"./dangerousStyleValue":287,"_process":185,"fbjs/lib/ExecutionEnvironment":14,"fbjs/lib/camelizeStyleName":16,"fbjs/lib/hyphenateStyleName":27,"fbjs/lib/memoizeStringOnly":31,"fbjs/lib/warning":35}],192:[function(require,module,exports){
+},{"./CSSProperty":183,"./ReactInstrumentation":241,"./dangerousStyleValue":280,"_process":178,"fbjs/lib/ExecutionEnvironment":10,"fbjs/lib/camelizeStyleName":12,"fbjs/lib/hyphenateStyleName":23,"fbjs/lib/memoizeStringOnly":27,"fbjs/lib/warning":31}],185:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -24802,7 +27027,7 @@ var CallbackQueue = function () {
 
 module.exports = PooledClass.addPoolingTo(CallbackQueue);
 }).call(this,require('_process'))
-},{"./PooledClass":210,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],193:[function(require,module,exports){
+},{"./PooledClass":203,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],186:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -25123,7 +27348,7 @@ var ChangeEventPlugin = {
 };
 
 module.exports = ChangeEventPlugin;
-},{"./EventPluginHub":202,"./EventPropagators":205,"./ReactDOMComponentTree":219,"./ReactUpdates":263,"./SyntheticEvent":272,"./getEventTarget":295,"./isEventSupported":303,"./isTextInputElement":304,"fbjs/lib/ExecutionEnvironment":14}],194:[function(require,module,exports){
+},{"./EventPluginHub":195,"./EventPropagators":198,"./ReactDOMComponentTree":212,"./ReactUpdates":256,"./SyntheticEvent":265,"./getEventTarget":288,"./isEventSupported":296,"./isTextInputElement":297,"fbjs/lib/ExecutionEnvironment":10}],187:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -25350,7 +27575,7 @@ var DOMChildrenOperations = {
 
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":195,"./Danger":199,"./ReactDOMComponentTree":219,"./ReactInstrumentation":248,"./createMicrosoftUnsafeLocalFunction":286,"./setInnerHTML":308,"./setTextContent":309,"_process":185}],195:[function(require,module,exports){
+},{"./DOMLazyTree":188,"./Danger":192,"./ReactDOMComponentTree":212,"./ReactInstrumentation":241,"./createMicrosoftUnsafeLocalFunction":279,"./setInnerHTML":301,"./setTextContent":302,"_process":178}],188:[function(require,module,exports){
 /**
  * Copyright 2015-present, Facebook, Inc.
  * All rights reserved.
@@ -25468,7 +27693,7 @@ DOMLazyTree.queueHTML = queueHTML;
 DOMLazyTree.queueText = queueText;
 
 module.exports = DOMLazyTree;
-},{"./DOMNamespaces":196,"./createMicrosoftUnsafeLocalFunction":286,"./setInnerHTML":308,"./setTextContent":309}],196:[function(require,module,exports){
+},{"./DOMNamespaces":189,"./createMicrosoftUnsafeLocalFunction":279,"./setInnerHTML":301,"./setTextContent":302}],189:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -25488,7 +27713,7 @@ var DOMNamespaces = {
 };
 
 module.exports = DOMNamespaces;
-},{}],197:[function(require,module,exports){
+},{}],190:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -25700,7 +27925,7 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],198:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],191:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -25939,7 +28164,7 @@ var DOMPropertyOperations = {
 
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
-},{"./DOMProperty":197,"./ReactDOMComponentTree":219,"./ReactInstrumentation":248,"./quoteAttributeValueForBrowser":305,"_process":185,"fbjs/lib/warning":35}],199:[function(require,module,exports){
+},{"./DOMProperty":190,"./ReactDOMComponentTree":212,"./ReactInstrumentation":241,"./quoteAttributeValueForBrowser":298,"_process":178,"fbjs/lib/warning":31}],192:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -25989,7 +28214,7 @@ var Danger = {
 
 module.exports = Danger;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":195,"./reactProdInvariant":306,"_process":185,"fbjs/lib/ExecutionEnvironment":14,"fbjs/lib/createNodesFromMarkup":19,"fbjs/lib/emptyFunction":20,"fbjs/lib/invariant":28}],200:[function(require,module,exports){
+},{"./DOMLazyTree":188,"./reactProdInvariant":299,"_process":178,"fbjs/lib/ExecutionEnvironment":10,"fbjs/lib/createNodesFromMarkup":15,"fbjs/lib/emptyFunction":16,"fbjs/lib/invariant":24}],193:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -26015,7 +28240,7 @@ module.exports = Danger;
 var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'TapEventPlugin', 'EnterLeaveEventPlugin', 'ChangeEventPlugin', 'SelectEventPlugin', 'BeforeInputEventPlugin'];
 
 module.exports = DefaultEventPluginOrder;
-},{}],201:[function(require,module,exports){
+},{}],194:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -26115,7 +28340,7 @@ var EnterLeaveEventPlugin = {
 };
 
 module.exports = EnterLeaveEventPlugin;
-},{"./EventPropagators":205,"./ReactDOMComponentTree":219,"./SyntheticMouseEvent":276}],202:[function(require,module,exports){
+},{"./EventPropagators":198,"./ReactDOMComponentTree":212,"./SyntheticMouseEvent":269}],195:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -26395,7 +28620,7 @@ var EventPluginHub = {
 
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":203,"./EventPluginUtils":204,"./ReactErrorUtils":239,"./accumulateInto":283,"./forEachAccumulated":291,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],203:[function(require,module,exports){
+},{"./EventPluginRegistry":196,"./EventPluginUtils":197,"./ReactErrorUtils":232,"./accumulateInto":276,"./forEachAccumulated":284,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],196:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -26652,7 +28877,7 @@ var EventPluginRegistry = {
 
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],204:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],197:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -26880,7 +29105,7 @@ var EventPluginUtils = {
 
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
-},{"./ReactErrorUtils":239,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35}],205:[function(require,module,exports){
+},{"./ReactErrorUtils":232,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31}],198:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -27016,7 +29241,7 @@ var EventPropagators = {
 
 module.exports = EventPropagators;
 }).call(this,require('_process'))
-},{"./EventPluginHub":202,"./EventPluginUtils":204,"./accumulateInto":283,"./forEachAccumulated":291,"_process":185,"fbjs/lib/warning":35}],206:[function(require,module,exports){
+},{"./EventPluginHub":195,"./EventPluginUtils":197,"./accumulateInto":276,"./forEachAccumulated":284,"_process":178,"fbjs/lib/warning":31}],199:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -27111,7 +29336,7 @@ _assign(FallbackCompositionState.prototype, {
 PooledClass.addPoolingTo(FallbackCompositionState);
 
 module.exports = FallbackCompositionState;
-},{"./PooledClass":210,"./getTextContentAccessor":300,"object-assign":184}],207:[function(require,module,exports){
+},{"./PooledClass":203,"./getTextContentAccessor":293,"object-assign":177}],200:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -27323,7 +29548,7 @@ var HTMLDOMPropertyConfig = {
 };
 
 module.exports = HTMLDOMPropertyConfig;
-},{"./DOMProperty":197}],208:[function(require,module,exports){
+},{"./DOMProperty":190}],201:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -27382,7 +29607,7 @@ var KeyEscapeUtils = {
 };
 
 module.exports = KeyEscapeUtils;
-},{}],209:[function(require,module,exports){
+},{}],202:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -27519,7 +29744,7 @@ var LinkedValueUtils = {
 
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
-},{"./ReactPropTypesSecret":256,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"react/lib/React":315}],210:[function(require,module,exports){
+},{"./ReactPropTypesSecret":249,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"react/lib/React":308}],203:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -27633,7 +29858,7 @@ var PooledClass = {
 
 module.exports = PooledClass;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],211:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],204:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -27961,7 +30186,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 });
 
 module.exports = ReactBrowserEventEmitter;
-},{"./EventPluginRegistry":203,"./ReactEventEmitterMixin":240,"./ViewportMetrics":282,"./getVendorPrefixedEventName":301,"./isEventSupported":303,"object-assign":184}],212:[function(require,module,exports){
+},{"./EventPluginRegistry":196,"./ReactEventEmitterMixin":233,"./ViewportMetrics":275,"./getVendorPrefixedEventName":294,"./isEventSupported":296,"object-assign":177}],205:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -28117,7 +30342,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":208,"./ReactReconciler":258,"./instantiateReactComponent":302,"./shouldUpdateReactComponent":310,"./traverseAllChildren":311,"_process":185,"fbjs/lib/warning":35,"react/lib/ReactComponentTreeHook":319}],213:[function(require,module,exports){
+},{"./KeyEscapeUtils":201,"./ReactReconciler":251,"./instantiateReactComponent":295,"./shouldUpdateReactComponent":303,"./traverseAllChildren":304,"_process":178,"fbjs/lib/warning":31,"react/lib/ReactComponentTreeHook":312}],206:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -28147,7 +30372,7 @@ var ReactComponentBrowserEnvironment = {
 };
 
 module.exports = ReactComponentBrowserEnvironment;
-},{"./DOMChildrenOperations":194,"./ReactDOMIDOperations":223}],214:[function(require,module,exports){
+},{"./DOMChildrenOperations":187,"./ReactDOMIDOperations":216}],207:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -28195,7 +30420,7 @@ var ReactComponentEnvironment = {
 
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],215:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],208:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -29099,7 +31324,7 @@ var ReactCompositeComponent = {
 
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
-},{"./ReactComponentEnvironment":214,"./ReactErrorUtils":239,"./ReactInstanceMap":247,"./ReactInstrumentation":248,"./ReactNodeTypes":253,"./ReactReconciler":258,"./checkReactTypeSpec":285,"./reactProdInvariant":306,"./shouldUpdateReactComponent":310,"_process":185,"fbjs/lib/emptyObject":21,"fbjs/lib/invariant":28,"fbjs/lib/shallowEqual":34,"fbjs/lib/warning":35,"object-assign":184,"react/lib/React":315,"react/lib/ReactCurrentOwner":320}],216:[function(require,module,exports){
+},{"./ReactComponentEnvironment":207,"./ReactErrorUtils":232,"./ReactInstanceMap":240,"./ReactInstrumentation":241,"./ReactNodeTypes":246,"./ReactReconciler":251,"./checkReactTypeSpec":278,"./reactProdInvariant":299,"./shouldUpdateReactComponent":303,"_process":178,"fbjs/lib/emptyObject":17,"fbjs/lib/invariant":24,"fbjs/lib/shallowEqual":30,"fbjs/lib/warning":31,"object-assign":177,"react/lib/React":308,"react/lib/ReactCurrentOwner":313}],209:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -29212,7 +31437,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactDOM;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":219,"./ReactDOMInvalidARIAHook":225,"./ReactDOMNullInputValuePropHook":226,"./ReactDOMUnknownPropertyHook":233,"./ReactDefaultInjection":236,"./ReactInstrumentation":248,"./ReactMount":251,"./ReactReconciler":258,"./ReactUpdates":263,"./ReactVersion":264,"./findDOMNode":289,"./getHostComponentFromComposite":296,"./renderSubtreeIntoContainer":307,"_process":185,"fbjs/lib/ExecutionEnvironment":14,"fbjs/lib/warning":35}],217:[function(require,module,exports){
+},{"./ReactDOMComponentTree":212,"./ReactDOMInvalidARIAHook":218,"./ReactDOMNullInputValuePropHook":219,"./ReactDOMUnknownPropertyHook":226,"./ReactDefaultInjection":229,"./ReactInstrumentation":241,"./ReactMount":244,"./ReactReconciler":251,"./ReactUpdates":256,"./ReactVersion":257,"./findDOMNode":282,"./getHostComponentFromComposite":289,"./renderSubtreeIntoContainer":300,"_process":178,"fbjs/lib/ExecutionEnvironment":10,"fbjs/lib/warning":31}],210:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -30215,7 +32440,7 @@ _assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mi
 
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
-},{"./AutoFocusUtils":188,"./CSSPropertyOperations":191,"./DOMLazyTree":195,"./DOMNamespaces":196,"./DOMProperty":197,"./DOMPropertyOperations":198,"./EventPluginHub":202,"./EventPluginRegistry":203,"./ReactBrowserEventEmitter":211,"./ReactDOMComponentFlags":218,"./ReactDOMComponentTree":219,"./ReactDOMInput":224,"./ReactDOMOption":227,"./ReactDOMSelect":228,"./ReactDOMTextarea":231,"./ReactInstrumentation":248,"./ReactMultiChild":252,"./ReactServerRenderingTransaction":260,"./escapeTextContentForBrowser":288,"./isEventSupported":303,"./reactProdInvariant":306,"./validateDOMNesting":312,"_process":185,"fbjs/lib/emptyFunction":20,"fbjs/lib/invariant":28,"fbjs/lib/shallowEqual":34,"fbjs/lib/warning":35,"object-assign":184}],218:[function(require,module,exports){
+},{"./AutoFocusUtils":181,"./CSSPropertyOperations":184,"./DOMLazyTree":188,"./DOMNamespaces":189,"./DOMProperty":190,"./DOMPropertyOperations":191,"./EventPluginHub":195,"./EventPluginRegistry":196,"./ReactBrowserEventEmitter":204,"./ReactDOMComponentFlags":211,"./ReactDOMComponentTree":212,"./ReactDOMInput":217,"./ReactDOMOption":220,"./ReactDOMSelect":221,"./ReactDOMTextarea":224,"./ReactInstrumentation":241,"./ReactMultiChild":245,"./ReactServerRenderingTransaction":253,"./escapeTextContentForBrowser":281,"./isEventSupported":296,"./reactProdInvariant":299,"./validateDOMNesting":305,"_process":178,"fbjs/lib/emptyFunction":16,"fbjs/lib/invariant":24,"fbjs/lib/shallowEqual":30,"fbjs/lib/warning":31,"object-assign":177}],211:[function(require,module,exports){
 /**
  * Copyright 2015-present, Facebook, Inc.
  * All rights reserved.
@@ -30233,7 +32458,7 @@ var ReactDOMComponentFlags = {
 };
 
 module.exports = ReactDOMComponentFlags;
-},{}],219:[function(require,module,exports){
+},{}],212:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -30430,7 +32655,7 @@ var ReactDOMComponentTree = {
 
 module.exports = ReactDOMComponentTree;
 }).call(this,require('_process'))
-},{"./DOMProperty":197,"./ReactDOMComponentFlags":218,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],220:[function(require,module,exports){
+},{"./DOMProperty":190,"./ReactDOMComponentFlags":211,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],213:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -30465,7 +32690,7 @@ function ReactDOMContainerInfo(topLevelWrapper, node) {
 
 module.exports = ReactDOMContainerInfo;
 }).call(this,require('_process'))
-},{"./validateDOMNesting":312,"_process":185}],221:[function(require,module,exports){
+},{"./validateDOMNesting":305,"_process":178}],214:[function(require,module,exports){
 /**
  * Copyright 2014-present, Facebook, Inc.
  * All rights reserved.
@@ -30525,7 +32750,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 });
 
 module.exports = ReactDOMEmptyComponent;
-},{"./DOMLazyTree":195,"./ReactDOMComponentTree":219,"object-assign":184}],222:[function(require,module,exports){
+},{"./DOMLazyTree":188,"./ReactDOMComponentTree":212,"object-assign":177}],215:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -30544,7 +32769,7 @@ var ReactDOMFeatureFlags = {
 };
 
 module.exports = ReactDOMFeatureFlags;
-},{}],223:[function(require,module,exports){
+},{}],216:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -30578,7 +32803,7 @@ var ReactDOMIDOperations = {
 };
 
 module.exports = ReactDOMIDOperations;
-},{"./DOMChildrenOperations":194,"./ReactDOMComponentTree":219}],224:[function(require,module,exports){
+},{"./DOMChildrenOperations":187,"./ReactDOMComponentTree":212}],217:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -30858,7 +33083,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
-},{"./DOMPropertyOperations":198,"./LinkedValueUtils":209,"./ReactDOMComponentTree":219,"./ReactUpdates":263,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"object-assign":184}],225:[function(require,module,exports){
+},{"./DOMPropertyOperations":191,"./LinkedValueUtils":202,"./ReactDOMComponentTree":212,"./ReactUpdates":256,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"object-assign":177}],218:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -30953,7 +33178,7 @@ var ReactDOMInvalidARIAHook = {
 
 module.exports = ReactDOMInvalidARIAHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":197,"_process":185,"fbjs/lib/warning":35,"react/lib/ReactComponentTreeHook":319}],226:[function(require,module,exports){
+},{"./DOMProperty":190,"_process":178,"fbjs/lib/warning":31,"react/lib/ReactComponentTreeHook":312}],219:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -30998,7 +33223,7 @@ var ReactDOMNullInputValuePropHook = {
 
 module.exports = ReactDOMNullInputValuePropHook;
 }).call(this,require('_process'))
-},{"_process":185,"fbjs/lib/warning":35,"react/lib/ReactComponentTreeHook":319}],227:[function(require,module,exports){
+},{"_process":178,"fbjs/lib/warning":31,"react/lib/ReactComponentTreeHook":312}],220:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -31123,7 +33348,7 @@ var ReactDOMOption = {
 
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":219,"./ReactDOMSelect":228,"_process":185,"fbjs/lib/warning":35,"object-assign":184,"react/lib/React":315}],228:[function(require,module,exports){
+},{"./ReactDOMComponentTree":212,"./ReactDOMSelect":221,"_process":178,"fbjs/lib/warning":31,"object-assign":177,"react/lib/React":308}],221:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -31325,7 +33550,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":209,"./ReactDOMComponentTree":219,"./ReactUpdates":263,"_process":185,"fbjs/lib/warning":35,"object-assign":184}],229:[function(require,module,exports){
+},{"./LinkedValueUtils":202,"./ReactDOMComponentTree":212,"./ReactUpdates":256,"_process":178,"fbjs/lib/warning":31,"object-assign":177}],222:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -31537,7 +33762,7 @@ var ReactDOMSelection = {
 };
 
 module.exports = ReactDOMSelection;
-},{"./getNodeForCharacterOffset":299,"./getTextContentAccessor":300,"fbjs/lib/ExecutionEnvironment":14}],230:[function(require,module,exports){
+},{"./getNodeForCharacterOffset":292,"./getTextContentAccessor":293,"fbjs/lib/ExecutionEnvironment":10}],223:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -31703,7 +33928,7 @@ _assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
-},{"./DOMChildrenOperations":194,"./DOMLazyTree":195,"./ReactDOMComponentTree":219,"./escapeTextContentForBrowser":288,"./reactProdInvariant":306,"./validateDOMNesting":312,"_process":185,"fbjs/lib/invariant":28,"object-assign":184}],231:[function(require,module,exports){
+},{"./DOMChildrenOperations":187,"./DOMLazyTree":188,"./ReactDOMComponentTree":212,"./escapeTextContentForBrowser":281,"./reactProdInvariant":299,"./validateDOMNesting":305,"_process":178,"fbjs/lib/invariant":24,"object-assign":177}],224:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -31865,7 +34090,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":209,"./ReactDOMComponentTree":219,"./ReactUpdates":263,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"object-assign":184}],232:[function(require,module,exports){
+},{"./LinkedValueUtils":202,"./ReactDOMComponentTree":212,"./ReactUpdates":256,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"object-assign":177}],225:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -32003,7 +34228,7 @@ module.exports = {
   traverseEnterLeave: traverseEnterLeave
 };
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],233:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],226:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -32117,7 +34342,7 @@ var ReactDOMUnknownPropertyHook = {
 
 module.exports = ReactDOMUnknownPropertyHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":197,"./EventPluginRegistry":203,"_process":185,"fbjs/lib/warning":35,"react/lib/ReactComponentTreeHook":319}],234:[function(require,module,exports){
+},{"./DOMProperty":190,"./EventPluginRegistry":196,"_process":178,"fbjs/lib/warning":31,"react/lib/ReactComponentTreeHook":312}],227:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2016-present, Facebook, Inc.
@@ -32480,7 +34705,7 @@ if (/[?&]react_perf\b/.test(url)) {
 
 module.exports = ReactDebugTool;
 }).call(this,require('_process'))
-},{"./ReactHostOperationHistoryHook":244,"./ReactInvalidSetStateWarningHook":249,"_process":185,"fbjs/lib/ExecutionEnvironment":14,"fbjs/lib/performanceNow":33,"fbjs/lib/warning":35,"react/lib/ReactComponentTreeHook":319}],235:[function(require,module,exports){
+},{"./ReactHostOperationHistoryHook":237,"./ReactInvalidSetStateWarningHook":242,"_process":178,"fbjs/lib/ExecutionEnvironment":10,"fbjs/lib/performanceNow":29,"fbjs/lib/warning":31,"react/lib/ReactComponentTreeHook":312}],228:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -32548,7 +34773,7 @@ var ReactDefaultBatchingStrategy = {
 };
 
 module.exports = ReactDefaultBatchingStrategy;
-},{"./ReactUpdates":263,"./Transaction":281,"fbjs/lib/emptyFunction":20,"object-assign":184}],236:[function(require,module,exports){
+},{"./ReactUpdates":256,"./Transaction":274,"fbjs/lib/emptyFunction":16,"object-assign":177}],229:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -32634,7 +34859,7 @@ function inject() {
 module.exports = {
   inject: inject
 };
-},{"./ARIADOMPropertyConfig":187,"./BeforeInputEventPlugin":189,"./ChangeEventPlugin":193,"./DefaultEventPluginOrder":200,"./EnterLeaveEventPlugin":201,"./HTMLDOMPropertyConfig":207,"./ReactComponentBrowserEnvironment":213,"./ReactDOMComponent":217,"./ReactDOMComponentTree":219,"./ReactDOMEmptyComponent":221,"./ReactDOMTextComponent":230,"./ReactDOMTreeTraversal":232,"./ReactDefaultBatchingStrategy":235,"./ReactEventListener":241,"./ReactInjection":245,"./ReactReconcileTransaction":257,"./SVGDOMPropertyConfig":265,"./SelectEventPlugin":266,"./SimpleEventPlugin":267}],237:[function(require,module,exports){
+},{"./ARIADOMPropertyConfig":180,"./BeforeInputEventPlugin":182,"./ChangeEventPlugin":186,"./DefaultEventPluginOrder":193,"./EnterLeaveEventPlugin":194,"./HTMLDOMPropertyConfig":200,"./ReactComponentBrowserEnvironment":206,"./ReactDOMComponent":210,"./ReactDOMComponentTree":212,"./ReactDOMEmptyComponent":214,"./ReactDOMTextComponent":223,"./ReactDOMTreeTraversal":225,"./ReactDefaultBatchingStrategy":228,"./ReactEventListener":234,"./ReactInjection":238,"./ReactReconcileTransaction":250,"./SVGDOMPropertyConfig":258,"./SelectEventPlugin":259,"./SimpleEventPlugin":260}],230:[function(require,module,exports){
 /**
  * Copyright 2014-present, Facebook, Inc.
  * All rights reserved.
@@ -32654,7 +34879,7 @@ module.exports = {
 var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol['for']('react.element') || 0xeac7;
 
 module.exports = REACT_ELEMENT_TYPE;
-},{}],238:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 /**
  * Copyright 2014-present, Facebook, Inc.
  * All rights reserved.
@@ -32684,7 +34909,7 @@ var ReactEmptyComponent = {
 ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 
 module.exports = ReactEmptyComponent;
-},{}],239:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -32763,7 +34988,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
-},{"_process":185}],240:[function(require,module,exports){
+},{"_process":178}],233:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -32796,7 +35021,7 @@ var ReactEventEmitterMixin = {
 };
 
 module.exports = ReactEventEmitterMixin;
-},{"./EventPluginHub":202}],241:[function(require,module,exports){
+},{"./EventPluginHub":195}],234:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -32951,7 +35176,7 @@ var ReactEventListener = {
 };
 
 module.exports = ReactEventListener;
-},{"./PooledClass":210,"./ReactDOMComponentTree":219,"./ReactUpdates":263,"./getEventTarget":295,"fbjs/lib/EventListener":13,"fbjs/lib/ExecutionEnvironment":14,"fbjs/lib/getUnboundedScrollPosition":25,"object-assign":184}],242:[function(require,module,exports){
+},{"./PooledClass":203,"./ReactDOMComponentTree":212,"./ReactUpdates":256,"./getEventTarget":288,"fbjs/lib/EventListener":9,"fbjs/lib/ExecutionEnvironment":10,"fbjs/lib/getUnboundedScrollPosition":21,"object-assign":177}],235:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -32973,7 +35198,7 @@ var ReactFeatureFlags = {
 };
 
 module.exports = ReactFeatureFlags;
-},{}],243:[function(require,module,exports){
+},{}],236:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -33043,7 +35268,7 @@ var ReactHostComponent = {
 
 module.exports = ReactHostComponent;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],244:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],237:[function(require,module,exports){
 /**
  * Copyright 2016-present, Facebook, Inc.
  * All rights reserved.
@@ -33077,7 +35302,7 @@ var ReactHostOperationHistoryHook = {
 };
 
 module.exports = ReactHostOperationHistoryHook;
-},{}],245:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -33111,7 +35336,7 @@ var ReactInjection = {
 };
 
 module.exports = ReactInjection;
-},{"./DOMProperty":197,"./EventPluginHub":202,"./EventPluginUtils":204,"./ReactBrowserEventEmitter":211,"./ReactComponentEnvironment":214,"./ReactEmptyComponent":238,"./ReactHostComponent":243,"./ReactUpdates":263}],246:[function(require,module,exports){
+},{"./DOMProperty":190,"./EventPluginHub":195,"./EventPluginUtils":197,"./ReactBrowserEventEmitter":204,"./ReactComponentEnvironment":207,"./ReactEmptyComponent":231,"./ReactHostComponent":236,"./ReactUpdates":256}],239:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -33235,7 +35460,7 @@ var ReactInputSelection = {
 };
 
 module.exports = ReactInputSelection;
-},{"./ReactDOMSelection":229,"fbjs/lib/containsNode":17,"fbjs/lib/focusNode":22,"fbjs/lib/getActiveElement":23}],247:[function(require,module,exports){
+},{"./ReactDOMSelection":222,"fbjs/lib/containsNode":13,"fbjs/lib/focusNode":18,"fbjs/lib/getActiveElement":19}],240:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -33283,7 +35508,7 @@ var ReactInstanceMap = {
 };
 
 module.exports = ReactInstanceMap;
-},{}],248:[function(require,module,exports){
+},{}],241:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2016-present, Facebook, Inc.
@@ -33309,7 +35534,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = { debugTool: debugTool };
 }).call(this,require('_process'))
-},{"./ReactDebugTool":234,"_process":185}],249:[function(require,module,exports){
+},{"./ReactDebugTool":227,"_process":178}],242:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2016-present, Facebook, Inc.
@@ -33348,7 +35573,7 @@ var ReactInvalidSetStateWarningHook = {
 
 module.exports = ReactInvalidSetStateWarningHook;
 }).call(this,require('_process'))
-},{"_process":185,"fbjs/lib/warning":35}],250:[function(require,module,exports){
+},{"_process":178,"fbjs/lib/warning":31}],243:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -33398,7 +35623,7 @@ var ReactMarkupChecksum = {
 };
 
 module.exports = ReactMarkupChecksum;
-},{"./adler32":284}],251:[function(require,module,exports){
+},{"./adler32":277}],244:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -33938,7 +36163,7 @@ var ReactMount = {
 
 module.exports = ReactMount;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":195,"./DOMProperty":197,"./ReactBrowserEventEmitter":211,"./ReactDOMComponentTree":219,"./ReactDOMContainerInfo":220,"./ReactDOMFeatureFlags":222,"./ReactFeatureFlags":242,"./ReactInstanceMap":247,"./ReactInstrumentation":248,"./ReactMarkupChecksum":250,"./ReactReconciler":258,"./ReactUpdateQueue":262,"./ReactUpdates":263,"./instantiateReactComponent":302,"./reactProdInvariant":306,"./setInnerHTML":308,"./shouldUpdateReactComponent":310,"_process":185,"fbjs/lib/emptyObject":21,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"react/lib/React":315,"react/lib/ReactCurrentOwner":320}],252:[function(require,module,exports){
+},{"./DOMLazyTree":188,"./DOMProperty":190,"./ReactBrowserEventEmitter":204,"./ReactDOMComponentTree":212,"./ReactDOMContainerInfo":213,"./ReactDOMFeatureFlags":215,"./ReactFeatureFlags":235,"./ReactInstanceMap":240,"./ReactInstrumentation":241,"./ReactMarkupChecksum":243,"./ReactReconciler":251,"./ReactUpdateQueue":255,"./ReactUpdates":256,"./instantiateReactComponent":295,"./reactProdInvariant":299,"./setInnerHTML":301,"./shouldUpdateReactComponent":303,"_process":178,"fbjs/lib/emptyObject":17,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"react/lib/React":308,"react/lib/ReactCurrentOwner":313}],245:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -34390,7 +36615,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
-},{"./ReactChildReconciler":212,"./ReactComponentEnvironment":214,"./ReactInstanceMap":247,"./ReactInstrumentation":248,"./ReactReconciler":258,"./flattenChildren":290,"./reactProdInvariant":306,"_process":185,"fbjs/lib/emptyFunction":20,"fbjs/lib/invariant":28,"react/lib/ReactCurrentOwner":320}],253:[function(require,module,exports){
+},{"./ReactChildReconciler":205,"./ReactComponentEnvironment":207,"./ReactInstanceMap":240,"./ReactInstrumentation":241,"./ReactReconciler":251,"./flattenChildren":283,"./reactProdInvariant":299,"_process":178,"fbjs/lib/emptyFunction":16,"fbjs/lib/invariant":24,"react/lib/ReactCurrentOwner":313}],246:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -34432,7 +36657,7 @@ var ReactNodeTypes = {
 
 module.exports = ReactNodeTypes;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"react/lib/React":315}],254:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"react/lib/React":308}],247:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -34528,7 +36753,7 @@ var ReactOwner = {
 
 module.exports = ReactOwner;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],255:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],248:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -34555,7 +36780,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
-},{"_process":185}],256:[function(require,module,exports){
+},{"_process":178}],249:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -34572,7 +36797,7 @@ module.exports = ReactPropTypeLocationNames;
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
-},{}],257:[function(require,module,exports){
+},{}],250:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -34752,7 +36977,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 }).call(this,require('_process'))
-},{"./CallbackQueue":192,"./PooledClass":210,"./ReactBrowserEventEmitter":211,"./ReactInputSelection":246,"./ReactInstrumentation":248,"./ReactUpdateQueue":262,"./Transaction":281,"_process":185,"object-assign":184}],258:[function(require,module,exports){
+},{"./CallbackQueue":185,"./PooledClass":203,"./ReactBrowserEventEmitter":204,"./ReactInputSelection":239,"./ReactInstrumentation":241,"./ReactUpdateQueue":255,"./Transaction":274,"_process":178,"object-assign":177}],251:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -34922,7 +37147,7 @@ var ReactReconciler = {
 
 module.exports = ReactReconciler;
 }).call(this,require('_process'))
-},{"./ReactInstrumentation":248,"./ReactRef":259,"_process":185,"fbjs/lib/warning":35}],259:[function(require,module,exports){
+},{"./ReactInstrumentation":241,"./ReactRef":252,"_process":178,"fbjs/lib/warning":31}],252:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -35011,7 +37236,7 @@ ReactRef.detachRefs = function (instance, element) {
 };
 
 module.exports = ReactRef;
-},{"./ReactOwner":254}],260:[function(require,module,exports){
+},{"./ReactOwner":247}],253:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -35103,7 +37328,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 }).call(this,require('_process'))
-},{"./PooledClass":210,"./ReactInstrumentation":248,"./ReactServerUpdateQueue":261,"./Transaction":281,"_process":185,"object-assign":184}],261:[function(require,module,exports){
+},{"./PooledClass":203,"./ReactInstrumentation":241,"./ReactServerUpdateQueue":254,"./Transaction":274,"_process":178,"object-assign":177}],254:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -35244,7 +37469,7 @@ var ReactServerUpdateQueue = function () {
 
 module.exports = ReactServerUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactUpdateQueue":262,"_process":185,"fbjs/lib/warning":35}],262:[function(require,module,exports){
+},{"./ReactUpdateQueue":255,"_process":178,"fbjs/lib/warning":31}],255:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -35472,7 +37697,7 @@ var ReactUpdateQueue = {
 
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactInstanceMap":247,"./ReactInstrumentation":248,"./ReactUpdates":263,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"react/lib/ReactCurrentOwner":320}],263:[function(require,module,exports){
+},{"./ReactInstanceMap":240,"./ReactInstrumentation":241,"./ReactUpdates":256,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"react/lib/ReactCurrentOwner":313}],256:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -35725,7 +37950,7 @@ var ReactUpdates = {
 
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
-},{"./CallbackQueue":192,"./PooledClass":210,"./ReactFeatureFlags":242,"./ReactReconciler":258,"./Transaction":281,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"object-assign":184}],264:[function(require,module,exports){
+},{"./CallbackQueue":185,"./PooledClass":203,"./ReactFeatureFlags":235,"./ReactReconciler":251,"./Transaction":274,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"object-assign":177}],257:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -35739,7 +37964,7 @@ module.exports = ReactUpdates;
 'use strict';
 
 module.exports = '15.4.2';
-},{}],265:[function(require,module,exports){
+},{}],258:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -36041,7 +38266,7 @@ Object.keys(ATTRS).forEach(function (key) {
 });
 
 module.exports = SVGDOMPropertyConfig;
-},{}],266:[function(require,module,exports){
+},{}],259:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -36232,7 +38457,7 @@ var SelectEventPlugin = {
 };
 
 module.exports = SelectEventPlugin;
-},{"./EventPropagators":205,"./ReactDOMComponentTree":219,"./ReactInputSelection":246,"./SyntheticEvent":272,"./isTextInputElement":304,"fbjs/lib/ExecutionEnvironment":14,"fbjs/lib/getActiveElement":23,"fbjs/lib/shallowEqual":34}],267:[function(require,module,exports){
+},{"./EventPropagators":198,"./ReactDOMComponentTree":212,"./ReactInputSelection":239,"./SyntheticEvent":265,"./isTextInputElement":297,"fbjs/lib/ExecutionEnvironment":10,"fbjs/lib/getActiveElement":19,"fbjs/lib/shallowEqual":30}],260:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -36462,7 +38687,7 @@ var SimpleEventPlugin = {
 
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
-},{"./EventPropagators":205,"./ReactDOMComponentTree":219,"./SyntheticAnimationEvent":268,"./SyntheticClipboardEvent":269,"./SyntheticDragEvent":271,"./SyntheticEvent":272,"./SyntheticFocusEvent":273,"./SyntheticKeyboardEvent":275,"./SyntheticMouseEvent":276,"./SyntheticTouchEvent":277,"./SyntheticTransitionEvent":278,"./SyntheticUIEvent":279,"./SyntheticWheelEvent":280,"./getEventCharCode":292,"./reactProdInvariant":306,"_process":185,"fbjs/lib/EventListener":13,"fbjs/lib/emptyFunction":20,"fbjs/lib/invariant":28}],268:[function(require,module,exports){
+},{"./EventPropagators":198,"./ReactDOMComponentTree":212,"./SyntheticAnimationEvent":261,"./SyntheticClipboardEvent":262,"./SyntheticDragEvent":264,"./SyntheticEvent":265,"./SyntheticFocusEvent":266,"./SyntheticKeyboardEvent":268,"./SyntheticMouseEvent":269,"./SyntheticTouchEvent":270,"./SyntheticTransitionEvent":271,"./SyntheticUIEvent":272,"./SyntheticWheelEvent":273,"./getEventCharCode":285,"./reactProdInvariant":299,"_process":178,"fbjs/lib/EventListener":9,"fbjs/lib/emptyFunction":16,"fbjs/lib/invariant":24}],261:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -36501,7 +38726,7 @@ function SyntheticAnimationEvent(dispatchConfig, dispatchMarker, nativeEvent, na
 SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 
 module.exports = SyntheticAnimationEvent;
-},{"./SyntheticEvent":272}],269:[function(require,module,exports){
+},{"./SyntheticEvent":265}],262:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -36539,7 +38764,7 @@ function SyntheticClipboardEvent(dispatchConfig, dispatchMarker, nativeEvent, na
 SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 
 module.exports = SyntheticClipboardEvent;
-},{"./SyntheticEvent":272}],270:[function(require,module,exports){
+},{"./SyntheticEvent":265}],263:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -36575,7 +38800,7 @@ function SyntheticCompositionEvent(dispatchConfig, dispatchMarker, nativeEvent, 
 SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface);
 
 module.exports = SyntheticCompositionEvent;
-},{"./SyntheticEvent":272}],271:[function(require,module,exports){
+},{"./SyntheticEvent":265}],264:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -36611,7 +38836,7 @@ function SyntheticDragEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeE
 SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
-},{"./SyntheticMouseEvent":276}],272:[function(require,module,exports){
+},{"./SyntheticMouseEvent":269}],265:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -36881,7 +39106,7 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
   }
 }
 }).call(this,require('_process'))
-},{"./PooledClass":210,"_process":185,"fbjs/lib/emptyFunction":20,"fbjs/lib/warning":35,"object-assign":184}],273:[function(require,module,exports){
+},{"./PooledClass":203,"_process":178,"fbjs/lib/emptyFunction":16,"fbjs/lib/warning":31,"object-assign":177}],266:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -36917,7 +39142,7 @@ function SyntheticFocusEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
-},{"./SyntheticUIEvent":279}],274:[function(require,module,exports){
+},{"./SyntheticUIEvent":272}],267:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -36954,7 +39179,7 @@ function SyntheticInputEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 
 module.exports = SyntheticInputEvent;
-},{"./SyntheticEvent":272}],275:[function(require,module,exports){
+},{"./SyntheticEvent":265}],268:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -37038,7 +39263,7 @@ function SyntheticKeyboardEvent(dispatchConfig, dispatchMarker, nativeEvent, nat
 SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
-},{"./SyntheticUIEvent":279,"./getEventCharCode":292,"./getEventKey":293,"./getEventModifierState":294}],276:[function(require,module,exports){
+},{"./SyntheticUIEvent":272,"./getEventCharCode":285,"./getEventKey":286,"./getEventModifierState":287}],269:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -37110,7 +39335,7 @@ function SyntheticMouseEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
-},{"./SyntheticUIEvent":279,"./ViewportMetrics":282,"./getEventModifierState":294}],277:[function(require,module,exports){
+},{"./SyntheticUIEvent":272,"./ViewportMetrics":275,"./getEventModifierState":287}],270:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -37155,7 +39380,7 @@ function SyntheticTouchEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
-},{"./SyntheticUIEvent":279,"./getEventModifierState":294}],278:[function(require,module,exports){
+},{"./SyntheticUIEvent":272,"./getEventModifierState":287}],271:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -37194,7 +39419,7 @@ function SyntheticTransitionEvent(dispatchConfig, dispatchMarker, nativeEvent, n
 SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 
 module.exports = SyntheticTransitionEvent;
-},{"./SyntheticEvent":272}],279:[function(require,module,exports){
+},{"./SyntheticEvent":265}],272:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -37253,7 +39478,7 @@ function SyntheticUIEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEve
 SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
-},{"./SyntheticEvent":272,"./getEventTarget":295}],280:[function(require,module,exports){
+},{"./SyntheticEvent":265,"./getEventTarget":288}],273:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -37307,7 +39532,7 @@ function SyntheticWheelEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
-},{"./SyntheticMouseEvent":276}],281:[function(require,module,exports){
+},{"./SyntheticMouseEvent":269}],274:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -37534,7 +39759,7 @@ var TransactionImpl = {
 
 module.exports = TransactionImpl;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],282:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],275:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -37561,7 +39786,7 @@ var ViewportMetrics = {
 };
 
 module.exports = ViewportMetrics;
-},{}],283:[function(require,module,exports){
+},{}],276:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -37621,7 +39846,7 @@ function accumulateInto(current, next) {
 
 module.exports = accumulateInto;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28}],284:[function(require,module,exports){
+},{"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24}],277:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -37665,7 +39890,7 @@ function adler32(data) {
 }
 
 module.exports = adler32;
-},{}],285:[function(require,module,exports){
+},{}],278:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -37754,7 +39979,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactPropTypeLocationNames":255,"./ReactPropTypesSecret":256,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"react/lib/ReactComponentTreeHook":319}],286:[function(require,module,exports){
+},{"./ReactPropTypeLocationNames":248,"./ReactPropTypesSecret":249,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"react/lib/ReactComponentTreeHook":312}],279:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -37786,7 +40011,7 @@ var createMicrosoftUnsafeLocalFunction = function (func) {
 };
 
 module.exports = createMicrosoftUnsafeLocalFunction;
-},{}],287:[function(require,module,exports){
+},{}],280:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -37867,7 +40092,7 @@ function dangerousStyleValue(name, value, component) {
 
 module.exports = dangerousStyleValue;
 }).call(this,require('_process'))
-},{"./CSSProperty":190,"_process":185,"fbjs/lib/warning":35}],288:[function(require,module,exports){
+},{"./CSSProperty":183,"_process":178,"fbjs/lib/warning":31}],281:[function(require,module,exports){
 /**
  * Copyright 2016-present, Facebook, Inc.
  * All rights reserved.
@@ -37990,7 +40215,7 @@ function escapeTextContentForBrowser(text) {
 }
 
 module.exports = escapeTextContentForBrowser;
-},{}],289:[function(require,module,exports){
+},{}],282:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -38052,7 +40277,7 @@ function findDOMNode(componentOrElement) {
 
 module.exports = findDOMNode;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":219,"./ReactInstanceMap":247,"./getHostComponentFromComposite":296,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"react/lib/ReactCurrentOwner":320}],290:[function(require,module,exports){
+},{"./ReactDOMComponentTree":212,"./ReactInstanceMap":240,"./getHostComponentFromComposite":289,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"react/lib/ReactCurrentOwner":313}],283:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -38130,7 +40355,7 @@ function flattenChildren(children, selfDebugID) {
 
 module.exports = flattenChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":208,"./traverseAllChildren":311,"_process":185,"fbjs/lib/warning":35,"react/lib/ReactComponentTreeHook":319}],291:[function(require,module,exports){
+},{"./KeyEscapeUtils":201,"./traverseAllChildren":304,"_process":178,"fbjs/lib/warning":31,"react/lib/ReactComponentTreeHook":312}],284:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38161,7 +40386,7 @@ function forEachAccumulated(arr, cb, scope) {
 }
 
 module.exports = forEachAccumulated;
-},{}],292:[function(require,module,exports){
+},{}],285:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38211,7 +40436,7 @@ function getEventCharCode(nativeEvent) {
 }
 
 module.exports = getEventCharCode;
-},{}],293:[function(require,module,exports){
+},{}],286:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38313,7 +40538,7 @@ function getEventKey(nativeEvent) {
 }
 
 module.exports = getEventKey;
-},{"./getEventCharCode":292}],294:[function(require,module,exports){
+},{"./getEventCharCode":285}],287:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38356,7 +40581,7 @@ function getEventModifierState(nativeEvent) {
 }
 
 module.exports = getEventModifierState;
-},{}],295:[function(require,module,exports){
+},{}],288:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38391,7 +40616,7 @@ function getEventTarget(nativeEvent) {
 }
 
 module.exports = getEventTarget;
-},{}],296:[function(require,module,exports){
+},{}],289:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38421,7 +40646,7 @@ function getHostComponentFromComposite(inst) {
 }
 
 module.exports = getHostComponentFromComposite;
-},{"./ReactNodeTypes":253}],297:[function(require,module,exports){
+},{"./ReactNodeTypes":246}],290:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38462,7 +40687,7 @@ function getIteratorFn(maybeIterable) {
 }
 
 module.exports = getIteratorFn;
-},{}],298:[function(require,module,exports){
+},{}],291:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38483,7 +40708,7 @@ function getNextDebugID() {
 }
 
 module.exports = getNextDebugID;
-},{}],299:[function(require,module,exports){
+},{}],292:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38557,7 +40782,7 @@ function getNodeForCharacterOffset(root, offset) {
 }
 
 module.exports = getNodeForCharacterOffset;
-},{}],300:[function(require,module,exports){
+},{}],293:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38590,7 +40815,7 @@ function getTextContentAccessor() {
 }
 
 module.exports = getTextContentAccessor;
-},{"fbjs/lib/ExecutionEnvironment":14}],301:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":10}],294:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38691,7 +40916,7 @@ function getVendorPrefixedEventName(eventName) {
 }
 
 module.exports = getVendorPrefixedEventName;
-},{"fbjs/lib/ExecutionEnvironment":14}],302:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":10}],295:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -38821,7 +41046,7 @@ function instantiateReactComponent(node, shouldHaveDebugID) {
 
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
-},{"./ReactCompositeComponent":215,"./ReactEmptyComponent":238,"./ReactHostComponent":243,"./getNextDebugID":298,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"object-assign":184}],303:[function(require,module,exports){
+},{"./ReactCompositeComponent":208,"./ReactEmptyComponent":231,"./ReactHostComponent":236,"./getNextDebugID":291,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"object-assign":177}],296:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38881,7 +41106,7 @@ function isEventSupported(eventNameSuffix, capture) {
 }
 
 module.exports = isEventSupported;
-},{"fbjs/lib/ExecutionEnvironment":14}],304:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":10}],297:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38932,7 +41157,7 @@ function isTextInputElement(elem) {
 }
 
 module.exports = isTextInputElement;
-},{}],305:[function(require,module,exports){
+},{}],298:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38958,7 +41183,7 @@ function quoteAttributeValueForBrowser(value) {
 }
 
 module.exports = quoteAttributeValueForBrowser;
-},{"./escapeTextContentForBrowser":288}],306:[function(require,module,exports){
+},{"./escapeTextContentForBrowser":281}],299:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -38997,7 +41222,7 @@ function reactProdInvariant(code) {
 }
 
 module.exports = reactProdInvariant;
-},{}],307:[function(require,module,exports){
+},{}],300:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -39013,7 +41238,7 @@ module.exports = reactProdInvariant;
 var ReactMount = require('./ReactMount');
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
-},{"./ReactMount":251}],308:[function(require,module,exports){
+},{"./ReactMount":244}],301:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -39111,7 +41336,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = setInnerHTML;
-},{"./DOMNamespaces":196,"./createMicrosoftUnsafeLocalFunction":286,"fbjs/lib/ExecutionEnvironment":14}],309:[function(require,module,exports){
+},{"./DOMNamespaces":189,"./createMicrosoftUnsafeLocalFunction":279,"fbjs/lib/ExecutionEnvironment":10}],302:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -39163,7 +41388,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = setTextContent;
-},{"./escapeTextContentForBrowser":288,"./setInnerHTML":308,"fbjs/lib/ExecutionEnvironment":14}],310:[function(require,module,exports){
+},{"./escapeTextContentForBrowser":281,"./setInnerHTML":301,"fbjs/lib/ExecutionEnvironment":10}],303:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -39205,7 +41430,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 }
 
 module.exports = shouldUpdateReactComponent;
-},{}],311:[function(require,module,exports){
+},{}],304:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -39383,7 +41608,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":208,"./ReactElementSymbol":237,"./getIteratorFn":297,"./reactProdInvariant":306,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"react/lib/ReactCurrentOwner":320}],312:[function(require,module,exports){
+},{"./KeyEscapeUtils":201,"./ReactElementSymbol":230,"./getIteratorFn":290,"./reactProdInvariant":299,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"react/lib/ReactCurrentOwner":313}],305:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -39767,11 +41992,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
-},{"_process":185,"fbjs/lib/emptyFunction":20,"fbjs/lib/warning":35,"object-assign":184}],313:[function(require,module,exports){
-arguments[4][208][0].apply(exports,arguments)
-},{"dup":208}],314:[function(require,module,exports){
-arguments[4][210][0].apply(exports,arguments)
-},{"./reactProdInvariant":335,"_process":185,"dup":210,"fbjs/lib/invariant":28}],315:[function(require,module,exports){
+},{"_process":178,"fbjs/lib/emptyFunction":16,"fbjs/lib/warning":31,"object-assign":177}],306:[function(require,module,exports){
+arguments[4][201][0].apply(exports,arguments)
+},{"dup":201}],307:[function(require,module,exports){
+arguments[4][203][0].apply(exports,arguments)
+},{"./reactProdInvariant":328,"_process":178,"dup":203,"fbjs/lib/invariant":24}],308:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -39862,7 +42087,7 @@ var React = {
 
 module.exports = React;
 }).call(this,require('_process'))
-},{"./ReactChildren":316,"./ReactClass":317,"./ReactComponent":318,"./ReactDOMFactories":321,"./ReactElement":322,"./ReactElementValidator":324,"./ReactPropTypes":327,"./ReactPureComponent":329,"./ReactVersion":330,"./onlyChild":334,"_process":185,"fbjs/lib/warning":35,"object-assign":184}],316:[function(require,module,exports){
+},{"./ReactChildren":309,"./ReactClass":310,"./ReactComponent":311,"./ReactDOMFactories":314,"./ReactElement":315,"./ReactElementValidator":317,"./ReactPropTypes":320,"./ReactPureComponent":322,"./ReactVersion":323,"./onlyChild":327,"_process":178,"fbjs/lib/warning":31,"object-assign":177}],309:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -40053,7 +42278,7 @@ var ReactChildren = {
 };
 
 module.exports = ReactChildren;
-},{"./PooledClass":314,"./ReactElement":322,"./traverseAllChildren":336,"fbjs/lib/emptyFunction":20}],317:[function(require,module,exports){
+},{"./PooledClass":307,"./ReactElement":315,"./traverseAllChildren":329,"fbjs/lib/emptyFunction":16}],310:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -40772,7 +42997,7 @@ var ReactClass = {
 
 module.exports = ReactClass;
 }).call(this,require('_process'))
-},{"./ReactComponent":318,"./ReactElement":322,"./ReactNoopUpdateQueue":325,"./ReactPropTypeLocationNames":326,"./reactProdInvariant":335,"_process":185,"fbjs/lib/emptyObject":21,"fbjs/lib/invariant":28,"fbjs/lib/warning":35,"object-assign":184}],318:[function(require,module,exports){
+},{"./ReactComponent":311,"./ReactElement":315,"./ReactNoopUpdateQueue":318,"./ReactPropTypeLocationNames":319,"./reactProdInvariant":328,"_process":178,"fbjs/lib/emptyObject":17,"fbjs/lib/invariant":24,"fbjs/lib/warning":31,"object-assign":177}],311:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -40892,7 +43117,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactComponent;
 }).call(this,require('_process'))
-},{"./ReactNoopUpdateQueue":325,"./canDefineProperty":331,"./reactProdInvariant":335,"_process":185,"fbjs/lib/emptyObject":21,"fbjs/lib/invariant":28,"fbjs/lib/warning":35}],319:[function(require,module,exports){
+},{"./ReactNoopUpdateQueue":318,"./canDefineProperty":324,"./reactProdInvariant":328,"_process":178,"fbjs/lib/emptyObject":17,"fbjs/lib/invariant":24,"fbjs/lib/warning":31}],312:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2016-present, Facebook, Inc.
@@ -41228,7 +43453,7 @@ var ReactComponentTreeHook = {
 
 module.exports = ReactComponentTreeHook;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":320,"./reactProdInvariant":335,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35}],320:[function(require,module,exports){
+},{"./ReactCurrentOwner":313,"./reactProdInvariant":328,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31}],313:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -41259,7 +43484,7 @@ var ReactCurrentOwner = {
 };
 
 module.exports = ReactCurrentOwner;
-},{}],321:[function(require,module,exports){
+},{}],314:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -41431,7 +43656,7 @@ var ReactDOMFactories = {
 
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
-},{"./ReactElement":322,"./ReactElementValidator":324,"_process":185}],322:[function(require,module,exports){
+},{"./ReactElement":315,"./ReactElementValidator":317,"_process":178}],315:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -41774,9 +43999,9 @@ ReactElement.isValidElement = function (object) {
 
 module.exports = ReactElement;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":320,"./ReactElementSymbol":323,"./canDefineProperty":331,"_process":185,"fbjs/lib/warning":35,"object-assign":184}],323:[function(require,module,exports){
-arguments[4][237][0].apply(exports,arguments)
-},{"dup":237}],324:[function(require,module,exports){
+},{"./ReactCurrentOwner":313,"./ReactElementSymbol":316,"./canDefineProperty":324,"_process":178,"fbjs/lib/warning":31,"object-assign":177}],316:[function(require,module,exports){
+arguments[4][230][0].apply(exports,arguments)
+},{"dup":230}],317:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -42012,7 +44237,7 @@ var ReactElementValidator = {
 
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":319,"./ReactCurrentOwner":320,"./ReactElement":322,"./canDefineProperty":331,"./checkReactTypeSpec":332,"./getIteratorFn":333,"_process":185,"fbjs/lib/warning":35}],325:[function(require,module,exports){
+},{"./ReactComponentTreeHook":312,"./ReactCurrentOwner":313,"./ReactElement":315,"./canDefineProperty":324,"./checkReactTypeSpec":325,"./getIteratorFn":326,"_process":178,"fbjs/lib/warning":31}],318:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -42110,9 +44335,9 @@ var ReactNoopUpdateQueue = {
 
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
-},{"_process":185,"fbjs/lib/warning":35}],326:[function(require,module,exports){
-arguments[4][255][0].apply(exports,arguments)
-},{"_process":185,"dup":255}],327:[function(require,module,exports){
+},{"_process":178,"fbjs/lib/warning":31}],319:[function(require,module,exports){
+arguments[4][248][0].apply(exports,arguments)
+},{"_process":178,"dup":248}],320:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -42548,9 +44773,9 @@ function getClassName(propValue) {
 
 module.exports = ReactPropTypes;
 }).call(this,require('_process'))
-},{"./ReactElement":322,"./ReactPropTypeLocationNames":326,"./ReactPropTypesSecret":328,"./getIteratorFn":333,"_process":185,"fbjs/lib/emptyFunction":20,"fbjs/lib/warning":35}],328:[function(require,module,exports){
-arguments[4][256][0].apply(exports,arguments)
-},{"dup":256}],329:[function(require,module,exports){
+},{"./ReactElement":315,"./ReactPropTypeLocationNames":319,"./ReactPropTypesSecret":321,"./getIteratorFn":326,"_process":178,"fbjs/lib/emptyFunction":16,"fbjs/lib/warning":31}],321:[function(require,module,exports){
+arguments[4][249][0].apply(exports,arguments)
+},{"dup":249}],322:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -42592,9 +44817,9 @@ _assign(ReactPureComponent.prototype, ReactComponent.prototype);
 ReactPureComponent.prototype.isPureReactComponent = true;
 
 module.exports = ReactPureComponent;
-},{"./ReactComponent":318,"./ReactNoopUpdateQueue":325,"fbjs/lib/emptyObject":21,"object-assign":184}],330:[function(require,module,exports){
-arguments[4][264][0].apply(exports,arguments)
-},{"dup":264}],331:[function(require,module,exports){
+},{"./ReactComponent":311,"./ReactNoopUpdateQueue":318,"fbjs/lib/emptyObject":17,"object-assign":177}],323:[function(require,module,exports){
+arguments[4][257][0].apply(exports,arguments)
+},{"dup":257}],324:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -42622,7 +44847,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
-},{"_process":185}],332:[function(require,module,exports){
+},{"_process":178}],325:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -42711,9 +44936,9 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":319,"./ReactPropTypeLocationNames":326,"./ReactPropTypesSecret":328,"./reactProdInvariant":335,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35}],333:[function(require,module,exports){
-arguments[4][297][0].apply(exports,arguments)
-},{"dup":297}],334:[function(require,module,exports){
+},{"./ReactComponentTreeHook":312,"./ReactPropTypeLocationNames":319,"./ReactPropTypesSecret":321,"./reactProdInvariant":328,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31}],326:[function(require,module,exports){
+arguments[4][290][0].apply(exports,arguments)
+},{"dup":290}],327:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -42753,9 +44978,9 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 }).call(this,require('_process'))
-},{"./ReactElement":322,"./reactProdInvariant":335,"_process":185,"fbjs/lib/invariant":28}],335:[function(require,module,exports){
-arguments[4][306][0].apply(exports,arguments)
-},{"dup":306}],336:[function(require,module,exports){
+},{"./ReactElement":315,"./reactProdInvariant":328,"_process":178,"fbjs/lib/invariant":24}],328:[function(require,module,exports){
+arguments[4][299][0].apply(exports,arguments)
+},{"dup":299}],329:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -42933,12 +45158,12 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":313,"./ReactCurrentOwner":320,"./ReactElementSymbol":323,"./getIteratorFn":333,"./reactProdInvariant":335,"_process":185,"fbjs/lib/invariant":28,"fbjs/lib/warning":35}],337:[function(require,module,exports){
+},{"./KeyEscapeUtils":306,"./ReactCurrentOwner":313,"./ReactElementSymbol":316,"./getIteratorFn":326,"./reactProdInvariant":328,"_process":178,"fbjs/lib/invariant":24,"fbjs/lib/warning":31}],330:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/React');
 
-},{"./lib/React":315}],338:[function(require,module,exports){
+},{"./lib/React":308}],331:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -42946,7 +45171,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
   al: {
-    projectionRotation: [86.5, -33 - 45 / 60],
+    projectionRotation: [86.5, -33],
     races: ['normal-votes', 'pres-2008', 'us-senate-2008'],
     dataSources: {
       tracts: 'al-census-tracts-2010.json',
@@ -42956,7 +45181,7 @@ exports.default = {
   },
 
   az: {
-    projectionRotation: [111.5, -34.5 - 45 / 60],
+    projectionRotation: [111.5, -34.5],
     races: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
     dataSources: {
       tracts: 'az-census-tracts-2010.json',
@@ -42966,7 +45191,7 @@ exports.default = {
   },
 
   ia: {
-    projectionRotation: [93.5, -42 - 45 / 60],
+    projectionRotation: [93.5, -42],
     races: ['normal-votes', 'us-house-2008', 'pres-2008', 'us-senate-2008'],
     dataSources: {
       tracts: 'ia-census-tracts-2010.json',
@@ -42976,7 +45201,7 @@ exports.default = {
   },
 
   fl: {
-    projectionRotation: [84, -27.5 - 45 / 60],
+    projectionRotation: [84, -27.5],
     races: ['normal-votes', 'gov-2010', 'pres-2008', 'us-senate-2010'],
     dataSources: {
       tracts: 'fl-census-tracts-2010.json',
@@ -42986,7 +45211,7 @@ exports.default = {
   },
 
   nc: {
-    projectionRotation: [79, -33 - 45 / 60],
+    projectionRotation: [79, -33],
     races: ['normal-votes', 'gov-2008', 'party-affiliation', 'pres-2008', 'us-senate-2008', 'us-senate-2010'],
     dataSources: {
       tracts: 'nc-census-tracts-2010.json',
@@ -42996,7 +45221,7 @@ exports.default = {
   },
 
   nj: {
-    projectionRotation: [74.5, -40 - 45 / 60],
+    projectionRotation: [74.5, -40],
     races: ['normal-votes'],
     dataSources: {
       tracts: 'nj-census-tracts-2010.json',
@@ -43006,7 +45231,7 @@ exports.default = {
   },
 
   ny: {
-    projectionRotation: [76, -43 - 45 / 60],
+    projectionRotation: [76, -43],
     races: ['normal-votes'],
     dataSources: {
       tracts: 'ny-census-tracts-2010.json',
@@ -43016,7 +45241,7 @@ exports.default = {
   },
 
   tx: {
-    projectionRotation: [98.5, -31 - 45 / 60],
+    projectionRotation: [98.5, -31],
     races: ['normal-votes', 'gov-2010', 'pres-2008'],
     dataSources: {
       tracts: 'tx-census-tracts-2010.json',
@@ -43026,7 +45251,7 @@ exports.default = {
   },
 
   wa: {
-    projectionRotation: [120, -47 - 45 / 60],
+    projectionRotation: [120, -47],
     races: ['normal-votes'],
     dataSources: {
       tracts: 'wa-census-tracts-2010.json',

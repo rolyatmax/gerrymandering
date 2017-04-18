@@ -106,6 +106,7 @@ export default class App extends React.Component {
         values: [
           ['race', 'Race'],
           ['ethnicity', 'Ethnicity'],
+          ['minorities', 'Black + Hispanic'],
           [null, 'Vote Margins']
         ]
       }

@@ -16,12 +16,7 @@ export default function DistrictMargins ({settings, districts, totals, setSelect
 
   let districtData = districts.data.features.map((feat, i) => {
     const districtName = feat.properties.NAMELSAD
-    // tmp: remove me
-    const hispanic = feat.properties['ethnicity:hispanic']
-    const nonHispanic = feat.properties['ethnicity:non-hispanic']
-    const values = { hispanic, nonHispanic }
-    // const values = getValuesForDimension(districtTotals[districtName], settings.race)
-    // tmp ^^^^
+    const values = getValuesForDimension(districtTotals[districtName], settings.race)
     const { winner, margin } = getWinnerMargin(values, settings)
     // debugger;
     return {
@@ -64,8 +59,8 @@ export default function DistrictMargins ({settings, districts, totals, setSelect
             <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} key={districtName} className={`district ${isFaded ? 'fade' : ''}`}>
               <span>{`${settings.usState.toUpperCase()}-${districtNumber}`}</span>
               <div className='slider'>
-                <div className='margin dem' style={{ width: winner === 'hispanic' ? `${margin / 2}%` : 0 }} />
-                <div className='margin rep' style={{ width: winner === 'nonHispanic' ? `${margin / 2}%` : 0 }} />
+                <div className='margin dem' style={{ width: winner === 'democrat' ? `${margin / 2}%` : 0 }} />
+                <div className='margin rep' style={{ width: winner === 'republican' ? `${margin / 2}%` : 0 }} />
                 <div className='margin dem background' />
                 <div className='margin rep background' />
               </div>
@@ -94,7 +89,7 @@ class PieChart extends React.Component {
       return margin <= TOSSUP_MARGIN ? 'toss-up' : margin <= LEAN_MARGIN ? `lean-${winner}` : winner
     })
     let curAngle = Math.PI * 1.5
-    return ['hispanic', 'lean-hispanic', 'toss-up', 'lean-nonHispanic', 'nonHispanic'].map(group => {
+    return ['democrat', 'lean-democrat', 'toss-up', 'lean-republican', 'republican'].map(group => {
       const name = group
       const count = groups[group] ? groups[group].length : 0
       const startAngle = curAngle
@@ -134,11 +129,11 @@ class PieChart extends React.Component {
   render () {
     const { settings } = this.props
     const colors = {
-      'hispanic': [...settings.colors.democrat, 1],
-      'lean-hispanic': [...settings.colors.democrat, 0.7],
+      'democrat': [...settings.colors.democrat, 1],
+      'lean-democrat': [...settings.colors.democrat, 0.7],
       'toss-up': [...averageColors(settings.colors.democrat, settings.colors.republican), 0.2],
-      'lean-nonHispanic': [...settings.colors.republican, 0.7],
-      'nonHispanic': [...settings.colors.republican, 1]
+      'lean-republican': [...settings.colors.republican, 0.7],
+      'republican': [...settings.colors.republican, 1]
     }
 
     const width = 300
