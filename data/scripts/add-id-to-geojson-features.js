@@ -18,7 +18,7 @@ if (!geojsonPath) help()
 
 // edit this function
 function getID (props) {
-  // guessing the state abbreviatino based on the geojson filename
+  // guessing the state abbreviation based on the geojson filename
   const pathBits = geojsonPath.split('/')
   const stateAbbreviation = pathBits[pathBits.length - 1].slice(0, 2).toUpperCase()
   if (argv.dry) console.log('Using state abbreviation:', stateAbbreviation)
@@ -30,7 +30,7 @@ const geojson = require(geojsonPath)
 
 geojson.features.forEach((feat) => {
   const id = getID(feat.properties)
-  feat.properties.id = id
+  feat.properties.NAMELSAD = id
   if (argv.dry) console.log('id:', id)
 })
 

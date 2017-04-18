@@ -173,7 +173,7 @@ var App = function (_React$Component) {
       {
         label: 'Overlay',
         settingsKey: 'demographic',
-        values: [['race', 'Race'], ['ethnicity', 'Ethnicity'], ['minorities', 'Black + Hispanic'], [null, 'Vote Margins']]
+        values: [['race', 'Race'], ['ethnicity', 'Ethnicity'], ['minorities', 'Black + Hispanic']]
       }];
 
       var setSelectedDistrict = function setSelectedDistrict(name) {
@@ -520,7 +520,7 @@ var DistrictMap = function (_React$Component2) {
             var districtName = feat.properties.NAMELSAD;
             var isSelected = settings.selectedDistrict === districtName;
             var strokeWidth = (isSelected ? 2 : 1.5) / k;
-            var strokeColor = isSelected ? '#444' : '#fdfdfd';
+            var strokeColor = isSelected ? '#444' : settings.demographic === 'minorities' ? '#999' : '#fdfdfd';
             var values = (0, _helpers.getValuesForDimension)(districtTotals[districtName], settings.race);
             var total = Object.keys(values).reduce(function (tot, dim) {
               return parseInt(values[dim], 10) + tot;
@@ -45245,8 +45245,8 @@ exports.default = {
     races: ['normal-votes', 'gov-2010', 'pres-2008'],
     dataSources: {
       tracts: 'tx-census-tracts-2010.json',
-      districts: [{ name: '2010', filename: 'tx-congressional-districts-2010-simplified.json' }, { name: '2015', filename: 'tx-congressional-districts-2015-simplified.json' }],
-      totals: [{ name: '2010', filename: 'district-totals/tx-congressional-districts-2010-totals.csv' }, { name: '2015', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }]
+      districts: [{ name: '2007 - 2013', filename: 'tx-congressional-districts-2010-simplified.json' }, { name: 'C185 (proposed 2011)', filename: 'tx-congressional-districts-2011-simplified.json' }, { name: '2013 - 2018', filename: 'tx-congressional-districts-2015-simplified.json' }],
+      totals: [{ name: '2010', filename: 'district-totals/tx-congressional-districts-2010-totals.csv' }, { name: '2015', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }, { name: '--', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }]
     }
   },
 

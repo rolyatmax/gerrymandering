@@ -119,12 +119,14 @@ export default {
     dataSources: {
       tracts: 'tx-census-tracts-2010.json',
       districts: [
-        { name: '2010', filename: 'tx-congressional-districts-2010-simplified.json' },
-        { name: '2015', filename: 'tx-congressional-districts-2015-simplified.json' }
+        { name: '2007 - 2013', filename: 'tx-congressional-districts-2010-simplified.json' },
+        { name: 'C185 (proposed 2011)', filename: 'tx-congressional-districts-2011-simplified.json' },
+        { name: '2013 - 2018', filename: 'tx-congressional-districts-2015-simplified.json' }
       ],
       totals: [
         { name: '2010', filename: 'district-totals/tx-congressional-districts-2010-totals.csv' },
-        { name: '2015', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }
+        { name: '2015', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' },
+        { name: '--', filename: 'district-totals/tx-congressional-districts-2015-totals.csv' }
       ]
     }
   },

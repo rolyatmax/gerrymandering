@@ -79,7 +79,7 @@ export default class Annotation extends React.PureComponent {
       <g className='annotation'>
         <circle cx={x} cy={y} r={circleSize} fill='transparent' stroke={annotationColor} />
         <path d={d} fill='transparent' stroke={annotationColor} />
-        <text ref={(el) => { this.textEl = el }} x={noteX} y={noteY}>{textEls}</text>
+        <div ref={(el) => { this.textEl = el }} x={noteX} y={noteY}>{textEls}</div>
       </g>
     )
   }

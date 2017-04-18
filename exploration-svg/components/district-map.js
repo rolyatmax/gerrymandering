@@ -115,7 +115,7 @@ class DistrictMap extends React.Component {
             const districtName = feat.properties.NAMELSAD
             const isSelected = settings.selectedDistrict === districtName
             const strokeWidth = (isSelected ? 2 : 1.5) / k
-            const strokeColor = isSelected ? '#444' : '#fdfdfd'
+            const strokeColor = isSelected ? '#444' : settings.demographic === 'minorities' ? '#999' : '#fdfdfd'
             const values = getValuesForDimension(districtTotals[districtName], settings.race)
             const total = Object.keys(values).reduce((tot, dim) => parseInt(values[dim], 10) + tot, 0)
             const { winner, margin } = getWinnerMargin(values, settings)
