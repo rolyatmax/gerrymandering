@@ -1,29 +1,43 @@
 import React from 'react'
 
 // TODO: should notePosition be determined programatically?
-export default class Annotation extends React.Component {
-  constructor () {
-    super()
+
+const CHARACTER_WRAP = 35
+export default class Annotation extends React.PureComponent {
+  constructor (props) {
+    super(props)
     this.state = {
       textHeight: 100,
-      textWidth: 100
+      textWidth: 100,
+      tspanHeight: 20
     }
   }
 
   componentDidMount () {
+    this.setTextDimensions()
+  }
+
+  componentDidUpdate () {
+    this.setTextDimensions()
+  }
+
+  setTextDimensions () {
     const { width, height } = this.textEl.getBoundingClientRect()
+    const lineCount = wrapAtMaxCharLength(this.props.text, CHARACTER_WRAP).length
+    const tspanHeight = height / lineCount
     this.setState({
       textHeight: height,
-      textWidth: width
+      textWidth: width,
+      tspanHeight: tspanHeight
     })
   }
 
   render () {
     const { x, y, dx, dy, text, circleSize } = this.props
-    const noteX = x + dx
-    const noteY = y + dy
-    const isNoteBelowSubject = noteY > y
-    const isNoteRightOfSubject = noteX > x
+    const isNoteBelowSubject = dy > 0
+    const isNoteRightOfSubject = dx > 0
+    const noteX = x + dx - (isNoteRightOfSubject ? 0 : this.state.textWidth)
+    const noteY = y + dy - (isNoteBelowSubject ? 0 : this.state.textHeight + this.state.tspanHeight)
     const TWO_PI = Math.PI * 2
 
     // find pointA, the point closest to the subject
@@ -42,7 +56,7 @@ export default class Annotation extends React.Component {
     // find pointC, the point closest to the annotation text
     const pointC = [
       noteX + (isNoteRightOfSubject ? this.state.textWidth : 0),
-      noteY + (isNoteBelowSubject ? -this.state.textHeight - 5 : 5)
+      noteY - this.state.tspanHeight + (isNoteBelowSubject ? -5 : 10 + this.state.textHeight)
     ]
 
     // find pointB, the intersection of the two lines using y = mx + b formula
@@ -58,27 +72,8 @@ export default class Annotation extends React.Component {
     const annotationColor = 'rgba(30, 30, 30, 0.7)'
 
     // figure out text wrapping here
-    const lines = wrapAtMaxCharLength(text, 30)
-    const textEls = lines.map((line, i) => <tspan key={i}>{line}</tspan>)
-
-    function wrapAtMaxCharLength (text, maxChars) {
-      const words = text.split(' ')
-      const lines = []
-      let curLine = []
-
-      while (words.length) {
-        const word = words.shift()
-        curLine.push(word)
-        if (curLine.join(' ').length > maxChars) {
-          curLine.pop()
-          lines.push(curLine)
-          curLine = [word]
-        }
-      }
-
-      if (curLine.length) lines.push(curLine)
-      return lines.map(line => line.join(' '))
-    }
+    const lines = wrapAtMaxCharLength(text, CHARACTER_WRAP)
+    const textEls = lines.map((line, i) => <tspan key={i} x={noteX} dy={i === 0 ? 0 : '1.2em'}>{line}</tspan>)
 
     return (
       <g className='annotation'>
@@ -88,4 +83,23 @@ export default class Annotation extends React.Component {
       </g>
     )
   }
+}
+
+function wrapAtMaxCharLength (text, maxChars) {
+  const words = text.split(' ')
+  const lines = []
+  let curLine = []
+
+  while (words.length) {
+    const word = words.shift()
+    curLine.push(word)
+    if (curLine.join(' ').length > maxChars) {
+      curLine.pop()
+      lines.push(curLine)
+      curLine = [word]
+    }
+  }
+
+  if (curLine.length) lines.push(curLine)
+  return lines.map(line => line.join(' '))
 }
