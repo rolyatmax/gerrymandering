@@ -1,5 +1,6 @@
 import React from 'react'
 import * as d3 from 'd3'
+import ToolTip from './tooltip'
 import keyBy from 'lodash/keyBy'
 import debounce from 'lodash/debounce'
 import chroma from 'chroma-js'
@@ -13,7 +14,8 @@ export default class Map extends React.Component {
     this.onZoom = this.onZoom.bind(this)
     this.state = {
       projection: null,
-      transform: { x: 0, y: 0, k: 1 }
+      transform: { x: 0, y: 0, k: 1 },
+      mouse: [0, 0]
     }
   }
 
@@ -25,6 +27,11 @@ export default class Map extends React.Component {
 
   onResize () {
     this.updateProjection()
+  }
+
+  mouseMove (e) {
+    const mouse = [e.clientX, e.clientY]
+    this.setState({ mouse })
   }
 
   updateProjection () {
@@ -53,6 +60,9 @@ export default class Map extends React.Component {
 
   render () {
     const { settings, districts, tracts, totals, setSelectedDistrict } = this.props
+    const selectedDistrict = districts.data.features.find((feat) =>
+      settings.selectedDistrict === feat.properties.NAMELSAD
+    )
     let maps = null
     if (this.state.projection) {
       const path = d3.geoPath(this.state.projection)
@@ -75,8 +85,11 @@ export default class Map extends React.Component {
     }
 
     return (
-      <div className='district-map' ref={(el) => { this.container = el }} >
+      <div onMouseMove={this.mouseMove.bind(this)} className='district-map' ref={(el) => { this.container = el }} >
         {maps}
+        {settings.selectedDistrict ? (
+          <ToolTip demographic={settings.demographic} district={selectedDistrict} position={this.state.mouse} />
+        ) : null}
       </div>
     )
   }
